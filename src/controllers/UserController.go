@@ -1,9 +1,10 @@
 package controllers
 
 import (
-	"encoding/json"
 	"log"
 	"net/http"
+
+	"github.com/gofiber/fiber"
 
 	"github.com/cognitive-neuroscience/neuron/src/middleware"
 	"github.com/cognitive-neuroscience/neuron/src/models"
@@ -11,48 +12,41 @@ import (
 )
 
 // UserController represents the entry point for the User API
-func UserController(res http.ResponseWriter, req *http.Request) {
+func UserController(c *fiber.Ctx) {
 	log.Println("User API")
+	middleware.AddHeaders(c)
 
-	switch req.Method {
-	case "GET":
-		getUser(res, req)
-		break
+	switch c.Method() {
 	case "POST":
-		saveUser(res, req)
-		break
-	case "PATCH":
-		updateUser(res, req)
+		saveUser(c)
 		break
 	default:
-		res.WriteHeader(http.StatusMethodNotAllowed)
+		c.SendStatus(http.StatusMethodNotAllowed)
 		break
 	}
 }
 
-func getUser(res http.ResponseWriter, req *http.Request) {
+func getUser(c *fiber.Ctx) {
 	log.Println("Get User")
-	middleware.VerifyToken(res, req)
-	res.Write([]byte("OK"))
+	middleware.VerifyToken(c)
+	c.Write([]byte("OK"))
 }
 
-func saveUser(res http.ResponseWriter, req *http.Request) {
+func saveUser(c *fiber.Ctx) {
 	log.Println("Save User")
 
-	var user models.User
-	err := json.NewDecoder(req.Body).Decode(&user)
-	if err != nil {
-		http.Error(res, err.Error(), http.StatusBadRequest)
+	user := new(models.User)
+	if err := c.BodyParser(user); err != nil {
+		c.Status(503).Send(err)
 		return
 	}
 
 	result := services.SaveUser(user)
-	res.WriteHeader(result.Status)
-	res.Write([]byte(result.Error))
+	c.Status(result.Status).Send(result.Message)
 }
 
-func updateUser(res http.ResponseWriter, req *http.Request) {
+func updateUser(c *fiber.Ctx) {
 	log.Println("Update User")
-	middleware.VerifyToken(res, req)
-	res.Write([]byte("OK"))
+	middleware.VerifyToken(c)
+	c.Write([]byte("OK"))
 }
