@@ -1,9 +1,10 @@
 package server
 
 import (
-	"log"
-	"net/http"
 	"os"
+
+	"github.com/cognitive-neuroscience/neuron/src/router"
+	"github.com/gofiber/fiber"
 )
 
 // CreateServer creates a HTTP server
@@ -12,6 +13,7 @@ func CreateServer() {
 	if port == "" {
 		port = "8181"
 	}
-	log.Printf("Go HTTP Server running on port %v\n", ":"+port)
-	log.Fatal(http.ListenAndServe(":"+port, nil))
+	app := fiber.New()
+	router.RegisterRoutes(app)
+	app.Listen(port)
 }

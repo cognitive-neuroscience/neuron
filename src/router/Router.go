@@ -1,17 +1,12 @@
 package router
 
 import (
-	"github.com/gorilla/mux"
 	"github.com/cognitive-neuroscience/neuron/src/controllers"
-	"net/http"
+	"github.com/gofiber/fiber"
 )
 
 // RegisterRoutes registers all API routes for the application
-func RegisterRoutes() {
-	r := mux.NewRouter().StrictSlash(true)
-
-	// Users route
-	r.HandleFunc("/users", controllers.UserController)
-
-	http.Handle("/", r)
+func RegisterRoutes(app *fiber.App) {
+	app.Group("/api/users", controllers.UserController)
+	app.Group("/api/login", controllers.LoginController)
 }
