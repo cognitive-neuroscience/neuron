@@ -1,14 +1,16 @@
 package middleware
 
-import "net/http"
+import (
+	"github.com/gofiber/fiber"
+)
 
 // VerifyToken verifies if the token present in the authorization header is valid
-func VerifyToken(res http.ResponseWriter, req *http.Request) {
-	token := req.Header.Get("Authorization")
+func VerifyToken(c *fiber.Ctx) {
+	token := c.Get("Authorization")
 
 	if token == "" {
-		res.WriteHeader(401)
-	} else {
-
+		c.SendStatus(401)
+		return
 	}
+	c.Next()
 }
