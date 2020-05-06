@@ -27,5 +27,5 @@ func DoesUserExistByEmailAndPassword(email string, password string) models.HTTPE
 	if user.Email == email && user.Password == password {
 		return models.HTTPErrorStatus{Status: http.StatusOK, Message: http.StatusText(http.StatusOK)}
 	}
-	return models.HTTPErrorStatus{Status: http.StatusForbidden, Message: http.StatusText(http.StatusForbidden)}
+	return models.HTTPErrorStatus{Status: http.StatusUnauthorized, Message: http.StatusText(http.StatusUnauthorized)}
 }
