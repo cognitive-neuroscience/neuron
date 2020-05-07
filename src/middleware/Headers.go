@@ -1,6 +1,8 @@
 package middleware
 
-import "github.com/gofiber/fiber"
+import (
+	"github.com/gofiber/fiber"
+)
 
 // AddHeaders adds cors headers for the request
 func AddHeaders(c *fiber.Ctx) {
