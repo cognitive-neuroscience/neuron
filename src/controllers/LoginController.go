@@ -39,7 +39,7 @@ func doLogin(c *fiber.Ctx) {
 
 	result := services.DoLogin(user.Email, user.Password)
 	if result.Status == http.StatusOK {
-		tokenString, err := middleware.GetToken(user.Email)
+		tokenString, err := middleware.CreateToken(user.Email)
 		if err != nil {
 			c.Status(http.StatusInternalServerError).Send(err)
 			return
