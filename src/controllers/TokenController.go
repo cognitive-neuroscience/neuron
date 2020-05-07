@@ -19,7 +19,7 @@ func TokenController(c *fiber.Ctx) {
 		validateToken(c)
 		break
 	case "OPTIONS":
-		c.SendStatus(200)
+		c.SendStatus(http.StatusOK)
 		break
 	default:
 		c.Status(http.StatusMethodNotAllowed).JSON(&models.HTTPErrorStatus{Status: http.StatusMethodNotAllowed, Message: http.StatusText(http.StatusMethodNotAllowed)})
