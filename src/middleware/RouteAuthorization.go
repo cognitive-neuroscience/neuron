@@ -1,6 +1,8 @@
 package middleware
 
 import (
+	"log"
+	"net/http"
 	"os"
 	"time"
 
@@ -9,12 +11,14 @@ import (
 	"github.com/gofiber/fiber"
 )
 
+var key = os.Getenv("NEURON_TOKEN_KEY")
+
 // VerifyToken verifies if the token present in the authorization header is valid
 func VerifyToken(c *fiber.Ctx) {
 	token := c.Get("Authorization")
 
 	if token == "" {
-		c.SendStatus(401)
+		c.Status(http.StatusUnauthorized).JSON(&models.HTTPErrorStatus{Status: http.StatusUnauthorized, Message: http.StatusText(http.StatusUnauthorized)})
 		return
 	}
 	c.Next()
@@ -22,7 +26,6 @@ func VerifyToken(c *fiber.Ctx) {
 
 // CreateToken returns the token and error after signing with HS256
 func CreateToken(email string) (string, error) {
-	key := os.Getenv("NEURON_TOKEN_KEY")
 	if key == "" {
 		key = "neuron"
 	}

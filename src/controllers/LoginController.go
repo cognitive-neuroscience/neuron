@@ -23,7 +23,7 @@ func LoginController(c *fiber.Ctx) {
 		c.SendStatus(200)
 		break
 	default:
-		c.SendStatus(http.StatusMethodNotAllowed)
+		c.Status(http.StatusMethodNotAllowed).JSON(&models.HTTPErrorStatus{Status: http.StatusMethodNotAllowed, Message: http.StatusText(http.StatusMethodNotAllowed)})
 		break
 	}
 }

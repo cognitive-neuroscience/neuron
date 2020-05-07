@@ -21,7 +21,7 @@ func UserController(c *fiber.Ctx) {
 		saveUser(c)
 		break
 	default:
-		c.SendStatus(http.StatusMethodNotAllowed)
+		c.Status(http.StatusMethodNotAllowed).JSON(&models.HTTPErrorStatus{Status: http.StatusMethodNotAllowed, Message: http.StatusText(http.StatusMethodNotAllowed)})
 		break
 	}
 }
@@ -37,7 +37,7 @@ func saveUser(c *fiber.Ctx) {
 
 	user := new(models.User)
 	if err := c.BodyParser(user); err != nil {
-		c.Status(503).Send(err)
+		c.Status(http.StatusBadRequest).JSON(&models.HTTPErrorStatus{Status: http.StatusBadRequest, Message: http.StatusText(http.StatusBadRequest)})
 		return
 	}
 
