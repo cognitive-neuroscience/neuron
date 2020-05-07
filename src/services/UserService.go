@@ -15,11 +15,3 @@ func SaveUser(user *models.User) models.HTTPErrorStatus {
 	user.Password = hex.EncodeToString(hash.Sum(nil))
 	return database.SaveUser(user)
 }
-
-// DoLogin hashes the password and queries the database
-func DoLogin(email string, password string) models.HTTPErrorStatus {
-	hash := md5.New()
-	hash.Write([]byte(password))
-	password = hex.EncodeToString(hash.Sum(nil))
-	return database.DoesUserExistByEmailAndPassword(email, password)
-}
