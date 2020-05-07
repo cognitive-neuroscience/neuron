@@ -36,3 +36,25 @@ func CreateToken(email string) (string, error) {
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
 	return token.SignedString([]byte(key))
 }
+
+// ValidateToken validates a token payload
+func ValidateToken(tokenString string) int {
+	if key == "" {
+		key = "neuron"
+	}
+	claims := &models.Claims{}
+	token, err := jwt.ParseWithClaims(tokenString, claims, func(token *jwt.Token) (interface{}, error) {
+		return []byte(key), nil
+	})
+	if err != nil {
+		log.Println(err)
+		if err == jwt.ErrSignatureInvalid {
+			return http.StatusUnauthorized
+		}
+		return http.StatusBadRequest
+	}
+	if !token.Valid {
+		return http.StatusUnauthorized
+	}
+	return http.StatusOK
+}
