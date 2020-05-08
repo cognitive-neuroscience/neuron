@@ -1,7 +1,6 @@
 package controllers
 
 import (
-	"log"
 	"net/http"
 
 	"github.com/gofiber/fiber"
@@ -13,7 +12,6 @@ import (
 
 // UserController represents the entry point for the User API
 func UserController(c *fiber.Ctx) {
-	log.Println("User API")
 	middleware.AddHeaders(c)
 
 	switch c.Method() {
@@ -27,13 +25,11 @@ func UserController(c *fiber.Ctx) {
 }
 
 func getUser(c *fiber.Ctx) {
-	log.Println("Get User")
 	middleware.VerifyToken(c)
 	c.Write([]byte("OK"))
 }
 
 func saveUser(c *fiber.Ctx) {
-	log.Println("Save User")
 
 	user := new(models.User)
 	if err := c.BodyParser(user); err != nil {
@@ -46,7 +42,6 @@ func saveUser(c *fiber.Ctx) {
 }
 
 func updateUser(c *fiber.Ctx) {
-	log.Println("Update User")
 	middleware.VerifyToken(c)
 	c.Write([]byte("OK"))
 }

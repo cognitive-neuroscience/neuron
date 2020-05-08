@@ -1,7 +1,6 @@
 package controllers
 
 import (
-	"log"
 	"net/http"
 
 	"github.com/cognitive-neuroscience/neuron/src/middleware"
@@ -11,7 +10,6 @@ import (
 
 // TokenController represents the entry point for the Token API
 func TokenController(c *fiber.Ctx) {
-	log.Println("Token API")
 	middleware.AddHeaders(c)
 
 	switch c.Method() {
@@ -28,7 +26,6 @@ func TokenController(c *fiber.Ctx) {
 }
 
 func validateToken(c *fiber.Ctx) {
-	log.Println("Do Validate Token")
 
 	token := new(models.TokenPayload)
 	if err := c.BodyParser(token); err != nil {

@@ -1,7 +1,6 @@
 package middleware
 
 import (
-	"log"
 	"net/http"
 	"os"
 	"time"
@@ -50,7 +49,6 @@ func ValidateToken(tokenString string) int {
 		return []byte(key), nil
 	})
 	if err != nil {
-		log.Println(err)
 		if err == jwt.ErrSignatureInvalid {
 			return http.StatusUnauthorized
 		}
