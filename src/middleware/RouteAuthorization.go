@@ -20,7 +20,14 @@ func VerifyToken(c *fiber.Ctx) {
 		c.Status(http.StatusUnauthorized).JSON(&models.HTTPErrorStatus{Status: http.StatusUnauthorized, Message: http.StatusText(http.StatusUnauthorized)})
 		return
 	}
-	c.Next()
+
+	status := ValidateToken(token)
+
+	if status == http.StatusOK {
+		c.Next()
+	} else {
+		c.SendStatus(status)
+	}
 }
 
 // CreateToken returns the token and error after signing with HS256
