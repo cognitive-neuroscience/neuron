@@ -10,4 +10,5 @@ func RegisterRoutes(app *fiber.App) {
 	app.Group("/api/users", controllers.UserController)
 	app.Group("/api/login", controllers.LoginController)
 	app.Group("/api/token", controllers.TokenController)
+	app.Group("/api/upload", controllers.UploadController)
 }
