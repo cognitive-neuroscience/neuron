@@ -9,3 +9,5 @@ coverage.txt
 go.sum
 
 .bin
+.vscode
+src/main/__debug_bin
