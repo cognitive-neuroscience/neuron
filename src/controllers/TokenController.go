@@ -14,7 +14,7 @@ func TokenController(c *fiber.Ctx) {
 
 	switch c.Method() {
 	case "POST":
-		validateToken(c)
+		ValidateToken(c)
 		break
 	case "OPTIONS":
 		c.SendStatus(http.StatusOK)
@@ -25,7 +25,8 @@ func TokenController(c *fiber.Ctx) {
 	}
 }
 
-func validateToken(c *fiber.Ctx) {
+// ValidateToken validates a token
+func ValidateToken(c *fiber.Ctx) {
 
 	token := new(models.TokenPayload)
 	if err := c.BodyParser(token); err != nil {
