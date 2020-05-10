@@ -33,14 +33,25 @@ func doLogin(c *fiber.Ctx) {
 		return
 	}
 
-	result := services.DoLogin(user.Email, user.Password)
-	if result.Status == http.StatusOK {
-		tokenString, err := middleware.CreateToken(user.Email)
+	dbUser, err := services.DoLogin(user.Email, user.Password)
+	if err != nil {
+		c.Status(http.StatusUnauthorized).JSON(fiber.Map{
+			"status": http.StatusUnauthorized,
+			"error":  err.Error(),
+		})
+	} else {
+		tokenString, err := middleware.CreateToken(dbUser.ID, dbUser.Email)
 		if err != nil {
-			c.Status(http.StatusInternalServerError).Send(err)
+			c.Status(http.StatusInternalServerError).JSON(fiber.Map{
+				"status": http.StatusInternalServerError,
+				"error":  err.Error(),
+			})
 			return
 		}
 		c.Set("Authorization", "Bearer "+tokenString)
+		c.Status(http.StatusOK).JSON(fiber.Map{
+			"message": "OK",
+			"userID":  dbUser.ID,
+		})
 	}
-	c.Status(result.Status).JSON(result)
 }
