@@ -3,6 +3,7 @@ package middleware
 import (
 	"net/http"
 	"os"
+	"strconv"
 	"time"
 
 	"github.com/cognitive-neuroscience/neuron/src/models"
@@ -21,7 +22,7 @@ func VerifyToken(c *fiber.Ctx) {
 		return
 	}
 
-	status := ValidateToken(token)
+	status := ValidateToken(c, token)
 
 	if status == http.StatusOK {
 		c.Next()
@@ -31,13 +32,14 @@ func VerifyToken(c *fiber.Ctx) {
 }
 
 // CreateToken returns the token and error after signing with HS256
-func CreateToken(email string) (string, error) {
+func CreateToken(id uint, email string) (string, error) {
 	if key == "" {
 		key = "neuron"
 	}
 	expirationTime := time.Now().Add(24 * time.Hour)
 	claims := &models.Claims{
-		Email: email,
+		UserID: id,
+		Email:  email,
 		StandardClaims: jwt.StandardClaims{
 			ExpiresAt: expirationTime.Unix(),
 		},
@@ -47,7 +49,7 @@ func CreateToken(email string) (string, error) {
 }
 
 // ValidateToken validates a token payload
-func ValidateToken(tokenString string) int {
+func ValidateToken(c *fiber.Ctx, tokenString string) int {
 	if key == "" {
 		key = "neuron"
 	}
@@ -56,13 +58,14 @@ func ValidateToken(tokenString string) int {
 		return []byte(key), nil
 	})
 	if err != nil {
-		if err == jwt.ErrSignatureInvalid {
-			return http.StatusUnauthorized
-		}
-		return http.StatusBadRequest
+		return http.StatusUnauthorized
 	}
 	if !token.Valid {
 		return http.StatusUnauthorized
 	}
+	c.Fasthttp.Request.Header.Add("UserID", strconv.FormatUint(uint64(claims.UserID), 16))
+	c.Fasthttp.Request.Header.Add("Email", string(claims.Email))
+	c.Set("UserID", strconv.FormatUint(uint64(claims.UserID), 16))
+	c.Set("Email", string(claims.Email))
 	return http.StatusOK
 }
