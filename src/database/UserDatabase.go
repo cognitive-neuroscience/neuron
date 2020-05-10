@@ -1,6 +1,7 @@
 package database
 
 import (
+	"errors"
 	"net/http"
 
 	"github.com/cognitive-neuroscience/neuron/src/models"
@@ -20,12 +21,15 @@ func SaveUser(user *models.User) models.HTTPErrorStatus {
 }
 
 // DoesUserExistByEmailAndPassword searches for a user, given the email and password
-func DoesUserExistByEmailAndPassword(email string, password string) models.HTTPErrorStatus {
+func DoesUserExistByEmailAndPassword(email string, password string) (models.User, error) {
 	db := DBConn
 	var user models.User
+	var err error
 	db.Where(&models.User{Email: email, Password: password}).First(&user)
 	if user.Email == email && user.Password == password {
-		return models.HTTPErrorStatus{Status: http.StatusOK, Message: http.StatusText(http.StatusOK)}
+		err = nil
+	} else {
+		err = errors.New("No such user")
 	}
-	return models.HTTPErrorStatus{Status: http.StatusUnauthorized, Message: http.StatusText(http.StatusUnauthorized)}
+	return user, err
 }
