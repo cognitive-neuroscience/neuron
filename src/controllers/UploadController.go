@@ -45,7 +45,15 @@ func doUpload(c *fiber.Ctx) {
 			return
 		}
 		services.SaveTSData(experiment, c.Get("UserID"), data)
-		c.JSON(data)
+		break
+
+	case "dst":
+		var data []models.DemandSelectionData
+		if err := c.BodyParser(&data); err != nil {
+			c.Status(http.StatusBadRequest).JSON(fiber.Map{"error": err.Error()})
+			return
+		}
+		services.SaveDSTData(experiment, c.Get("UserID"), data)
 		break
 
 	default:
