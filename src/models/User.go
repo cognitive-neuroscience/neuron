@@ -6,5 +6,6 @@ import "github.com/jinzhu/gorm"
 type User struct {
 	gorm.Model
 	Email    string `gorm:"unique;not null"`
-	Password string
+	Password string `gorm:"not null"`
+	Role     int    `gorm:"not null;default:1"`
 }
