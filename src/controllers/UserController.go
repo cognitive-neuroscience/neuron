@@ -13,15 +13,19 @@ import (
 // UserController represents the entry point for the User API
 func UserController(c *fiber.Ctx) {
 	middleware.AddHeaders(c)
-
-	switch c.Method() {
-	case "POST":
-		saveUser(c)
-		break
-	default:
-		c.Status(http.StatusMethodNotAllowed).JSON(&models.HTTPErrorStatus{Status: http.StatusMethodNotAllowed, Message: http.StatusText(http.StatusMethodNotAllowed)})
-		break
+	if c.Method() != "OPTIONS" {
+		switch c.Method() {
+		case "POST":
+			saveUser(c)
+			break
+		default:
+			c.Status(http.StatusMethodNotAllowed).JSON(&models.HTTPErrorStatus{Status: http.StatusMethodNotAllowed, Message: http.StatusText(http.StatusMethodNotAllowed)})
+			break
+		}
+	} else {
+		c.SendStatus(http.StatusOK)
 	}
+
 }
 
 func getUser(c *fiber.Ctx) {
@@ -38,7 +42,7 @@ func saveUser(c *fiber.Ctx) {
 	}
 
 	result := services.SaveUser(user)
-	c.Status(result.Status).Send(result.Message)
+	c.Status(result.Status).JSON(result)
 }
 
 func updateUser(c *fiber.Ctx) {
