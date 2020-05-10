@@ -10,5 +10,5 @@ func AddHeaders(c *fiber.Ctx) {
 	c.Set("Access-Control-Allow-Methods", "GET, POST, PATCH, PUT, DELETE, HEAD")
 	c.Set("Access-Control-Allow-Headers", "Authorization, Content-Type")
 	c.Set("Access-Control-Allow-Credentials", "true")
-	c.Set("Access-Control-Expose-Headers", "Authorization")
+	c.Set("Access-Control-Expose-Headers", "Authorization, UserID, Email")
 }
