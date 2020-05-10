@@ -33,6 +33,6 @@ func ValidateToken(c *fiber.Ctx) {
 		c.SendStatus(http.StatusBadRequest)
 		return
 	}
-	status := middleware.ValidateToken(token.Token)
+	status := middleware.ValidateToken(c, token.Token)
 	c.Status(status).JSON(&models.HTTPErrorStatus{Status: status, Message: http.StatusText(status)})
 }
