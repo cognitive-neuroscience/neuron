@@ -9,7 +9,7 @@ import (
 )
 
 // DoLogin hashes the password and queries the database
-func DoLogin(email string, password string) models.HTTPErrorStatus {
+func DoLogin(email string, password string) (models.User, error) {
 	hash := md5.New()
 	hash.Write([]byte(password))
 	password = hex.EncodeToString(hash.Sum(nil))
