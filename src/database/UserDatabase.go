@@ -29,7 +29,7 @@ func DoesUserExistByEmailAndPassword(email string, password string) (models.User
 	if user.Email == email && user.Password == password {
 		err = nil
 	} else {
-		err = errors.New("No such user")
+		err = errors.New("Invalid Email or Password")
 	}
 	return user, err
 }
