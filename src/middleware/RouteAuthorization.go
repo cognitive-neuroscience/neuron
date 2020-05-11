@@ -38,7 +38,7 @@ func CreateToken(id uint, email string) (string, error) {
 	}
 	expirationTime := time.Now().Add(24 * time.Hour)
 	claims := &models.Claims{
-		UserID: id,
+		UserID: strconv.FormatUint(uint64(id), 16),
 		Email:  email,
 		StandardClaims: jwt.StandardClaims{
 			ExpiresAt: expirationTime.Unix(),
@@ -63,9 +63,9 @@ func ValidateToken(c *fiber.Ctx, tokenString string) int {
 	if !token.Valid {
 		return http.StatusUnauthorized
 	}
-	c.Fasthttp.Request.Header.Add("UserID", strconv.FormatUint(uint64(claims.UserID), 16))
-	c.Fasthttp.Request.Header.Add("Email", string(claims.Email))
-	c.Set("UserID", strconv.FormatUint(uint64(claims.UserID), 16))
-	c.Set("Email", string(claims.Email))
+	c.Fasthttp.Request.Header.Add("UserID", claims.UserID)
+	c.Fasthttp.Request.Header.Add("Email", claims.Email)
+	c.Set("UserID", claims.UserID)
+	c.Set("Email", claims.Email)
 	return http.StatusOK
 }
