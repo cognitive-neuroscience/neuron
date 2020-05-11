@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"net/http"
+	"strconv"
 
 	"github.com/cognitive-neuroscience/neuron/src/middleware"
 	"github.com/cognitive-neuroscience/neuron/src/models"
@@ -49,9 +50,12 @@ func doLogin(c *fiber.Ctx) {
 			return
 		}
 		c.Set("Authorization", "Bearer "+tokenString)
+		c.Set("UserID", strconv.FormatUint(uint64(dbUser.ID), 16))
+		c.Set("Email", string(dbUser.Email))
 		c.Status(http.StatusOK).JSON(fiber.Map{
 			"message": "OK",
 			"userID":  dbUser.ID,
+			"email":   dbUser.Email,
 		})
 	}
 }
