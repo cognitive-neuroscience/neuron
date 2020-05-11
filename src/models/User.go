@@ -7,5 +7,6 @@ type User struct {
 	gorm.Model
 	Email    string `gorm:"unique;not null"`
 	Password string `gorm:"not null"`
-	Role     int    `gorm:"not null;default:1"`
+	Role     string `gorm:"not null;default:'PARTICIPANT'"`
+	SetCode  string `gorm:"not null;default:'DEFAULT'"`
 }
