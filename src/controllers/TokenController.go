@@ -8,22 +8,22 @@ import (
 	"github.com/gofiber/fiber"
 )
 
-// TokenController represents the entry point for the Token API
-func TokenController(c *fiber.Ctx) {
-	middleware.AddHeaders(c)
+// // TokenController represents the entry point for the Token API
+// func TokenController(c *fiber.Ctx) {
+// 	middleware.AddHeaders(c)
 
-	switch c.Method() {
-	case "POST":
-		ValidateToken(c)
-		break
-	case "OPTIONS":
-		c.SendStatus(http.StatusOK)
-		break
-	default:
-		c.Status(http.StatusMethodNotAllowed).JSON(&models.HTTPErrorStatus{Status: http.StatusMethodNotAllowed, Message: http.StatusText(http.StatusMethodNotAllowed)})
-		break
-	}
-}
+// 	switch c.Method() {
+// 	case "POST":
+// 		ValidateToken(c)
+// 		break
+// 	case "OPTIONS":
+// 		c.SendStatus(http.StatusOK)
+// 		break
+// 	default:
+// 		c.Status(http.StatusMethodNotAllowed).JSON(&models.HTTPErrorStatus{Status: http.StatusMethodNotAllowed, Message: http.StatusText(http.StatusMethodNotAllowed)})
+// 		break
+// 	}
+// }
 
 // ValidateToken validates a token
 func ValidateToken(c *fiber.Ctx) {

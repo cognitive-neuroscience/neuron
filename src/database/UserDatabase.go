@@ -33,3 +33,14 @@ func DoesUserExistByEmailAndPassword(email string, password string) (models.User
 	}
 	return user, err
 }
+
+// GetAllUsers returns all users in DB
+func GetAllUsers() ([]models.User, error) {
+	db := DBConn
+	var err error
+	users := []models.User{}
+	if err := db.Find(&users).Error; err != nil {
+		err = errors.New("Could not fetch users")
+	}
+	return users, err
+}

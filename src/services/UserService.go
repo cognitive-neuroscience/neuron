@@ -15,3 +15,12 @@ func SaveUser(user *models.User) models.HTTPErrorStatus {
 	user.Password = hex.EncodeToString(hash.Sum(nil))
 	return database.SaveUser(user)
 }
+
+// GetUsers returns all users
+func GetUsers() []models.User {
+	users, err := database.GetAllUsers()
+	if err != nil {
+		return []models.User{}
+	}
+	return users
+}

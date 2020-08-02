@@ -3,38 +3,20 @@ package controllers
 import (
 	"net/http"
 
-	"github.com/gofiber/fiber"
-
 	"github.com/cognitive-neuroscience/neuron/src/middleware"
 	"github.com/cognitive-neuroscience/neuron/src/models"
 	"github.com/cognitive-neuroscience/neuron/src/services"
+	"github.com/gofiber/fiber"
 )
 
-// UserController represents the entry point for the User API
-func UserController(c *fiber.Ctx) {
-	middleware.AddHeaders(c)
-	if c.Method() != "OPTIONS" {
-		switch c.Method() {
-		case "POST":
-			saveUser(c)
-			break
-		default:
-			c.Status(http.StatusMethodNotAllowed).JSON(&models.HTTPErrorStatus{Status: http.StatusMethodNotAllowed, Message: http.StatusText(http.StatusMethodNotAllowed)})
-			break
-		}
-	} else {
-		c.SendStatus(http.StatusOK)
-	}
-
-}
-
-func getUser(c *fiber.Ctx) {
+// GetAllUsers calls the service and gets all users from DB. For debug purposes, will be removed.
+func GetAllUsers(c *fiber.Ctx) {
 	middleware.VerifyToken(c)
 	c.Write([]byte("OK"))
 }
 
-func saveUser(c *fiber.Ctx) {
-
+// SaveUser saves a given user in the DB
+func SaveUser(c *fiber.Ctx) {
 	user := new(models.User)
 	if err := c.BodyParser(user); err != nil {
 		c.Status(http.StatusBadRequest).JSON(&models.HTTPErrorStatus{Status: http.StatusBadRequest, Message: http.StatusText(http.StatusBadRequest)})
@@ -45,7 +27,8 @@ func saveUser(c *fiber.Ctx) {
 	c.Status(result.Status).JSON(result)
 }
 
-func updateUser(c *fiber.Ctx) {
+// UpdateUser updates a given user in the DB
+func UpdateUser(c *fiber.Ctx) {
 	middleware.VerifyToken(c)
 	c.Write([]byte("OK"))
 }

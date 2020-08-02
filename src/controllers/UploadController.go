@@ -2,38 +2,37 @@ package controllers
 
 import (
 	"net/http"
-	"strings"
 
-	"github.com/cognitive-neuroscience/neuron/src/middleware"
 	"github.com/cognitive-neuroscience/neuron/src/models"
 	"github.com/cognitive-neuroscience/neuron/src/services"
 	"github.com/gofiber/fiber"
 )
 
-// UploadController represents the entry point for the Upload API
-func UploadController(c *fiber.Ctx) {
-	middleware.AddHeaders(c)
+// // UploadController represents the entry point for the Upload API
+// func UploadController(c *fiber.Ctx) {
+// 	middleware.AddHeaders(c)
 
-	if c.Method() != "OPTIONS" {
-		status := middleware.ValidateToken(c, strings.ReplaceAll(c.Get("Authorization"), "Bearer ", ""))
-		if status != http.StatusOK {
-			c.SendStatus(status)
-			return
-		}
-		switch c.Method() {
-		case "POST":
-			doUpload(c)
-			break
-		default:
-			c.Status(http.StatusMethodNotAllowed).JSON(&models.HTTPErrorStatus{Status: http.StatusMethodNotAllowed, Message: http.StatusText(http.StatusMethodNotAllowed)})
-			break
-		}
-	} else {
-		c.SendStatus(http.StatusOK)
-	}
-}
+// 	if c.Method() != "OPTIONS" {
+// 		status := middleware.ValidateToken(c, strings.ReplaceAll(c.Get("Authorization"), "Bearer ", ""))
+// 		if status != http.StatusOK {
+// 			c.SendStatus(status)
+// 			return
+// 		}
+// 		switch c.Method() {
+// 		case "POST":
+// 			doUpload(c)
+// 			break
+// 		default:
+// 			c.Status(http.StatusMethodNotAllowed).JSON(&models.HTTPErrorStatus{Status: http.StatusMethodNotAllowed, Message: http.StatusText(http.StatusMethodNotAllowed)})
+// 			break
+// 		}
+// 	} else {
+// 		c.SendStatus(http.StatusOK)
+// 	}
+// }
 
-func doUpload(c *fiber.Ctx) {
+// DoUpload uploads the data
+func DoUpload(c *fiber.Ctx) {
 	experiment := c.Query("experiment")
 
 	switch experiment {
