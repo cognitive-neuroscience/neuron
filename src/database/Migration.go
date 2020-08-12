@@ -9,6 +9,7 @@ import (
 // AutoMigrate will start mysql db migration
 func AutoMigrate() {
 	log.Println("Starting MySQL migrations")
-	DBConn.AutoMigrate(&models.User{}, &models.Experiment{})
+	DBConn.DropTableIfExists(&models.Task{})
+	DBConn.AutoMigrate(&models.User{}, &models.Experiment{}, &models.Task{})
 	log.Println("MySQL migrations complete")
 }

@@ -1,62 +1,53 @@
 package router
 
 import (
+	"net/http"
+
 	"github.com/cognitive-neuroscience/neuron/src/controllers"
+	"github.com/cognitive-neuroscience/neuron/src/middleware"
 	"github.com/gofiber/fiber"
 )
 
 // RegisterRoutes registers all API routes for the application
 func RegisterRoutes(app *fiber.App) {
+	app.Use(middleware.AddHeaders)
+
 	api := app.Group("/api")
 
-	users := api.Group("/users")
-	setupUserControllerRoutes(users)
+	api.Group("/users", controllers.UserController)
 
-	experiments := api.Group("/experiments")
-	setupExperimentControllerRoutes(experiments)
+	setUpExperimentRoutes(api)
 
-	login := api.Group("/login")
-	setupLoginControllerRoutes(login)
-
-	token := api.Group("/token")
-	setUpTokenControllerRoutes(token)
-
-	upload := api.Group("/upload")
-	setUpUploadControllerRoutes(upload)
-
-	app.Use(func(c *fiber.Ctx) {
-		c.SendStatus(404)
-	})
+	// api.Group("/experiments", controllers.ExperimentController)
+	api.Group("/login", controllers.LoginController)
+	api.Group("/token", controllers.TokenController)
+	api.Group("/upload", controllers.UploadController)
 }
 
-func setupUserControllerRoutes(group *fiber.Group) {
-	group.Get("/", controllers.GetAllUsers)
-	group.Post("/", controllers.SaveUser)
-	group.Use(forbiddenHandler)
+// func setupUserRoutes() {
+
+// }
+
+func setUpExperimentRoutes(group *fiber.Group) {
+	experiments := group.Group("/experiments")
+	experiments.Get("/", controllers.GetAllExperiments)
+	experiments.Post("/", controllers.SaveExperiment)
+	experiments.Delete("/:code", controllers.DeleteExperiment)
+	experiments.Options("/*", handleOptions)
 }
 
-func setupExperimentControllerRoutes(group *fiber.Group) {
-	group.Get("/", controllers.GetAllExperiments)
-	group.Post("/", controllers.SaveExperiment)
-	group.Use(forbiddenHandler)
-}
+// func setUpLoginRoutes() {
 
-func setupLoginControllerRoutes(group *fiber.Group) {
-	group.Post("/", controllers.DoLogin)
-	group.Use(forbiddenHandler)
-}
+// }
 
-func setUpTokenControllerRoutes(group *fiber.Group) {
-	group.Post("/", controllers.ValidateToken)
-	group.Use(forbiddenHandler)
-}
+// func setUpTokenRoutes() {
 
-func setUpUploadControllerRoutes(group *fiber.Group) {
-	group.Post("/", controllers.DoUpload)
-	group.Use(forbiddenHandler)
-}
+// }
 
-// Give forbidden error if any other HTTP methods are used
-func forbiddenHandler(c *fiber.Ctx) {
-	c.SendStatus(403)
+// func setUpUploadRoutes() {
+
+// }
+
+func handleOptions(c *fiber.Ctx) {
+	c.SendStatus(http.StatusOK)
 }

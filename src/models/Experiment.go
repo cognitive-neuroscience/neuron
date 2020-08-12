@@ -9,10 +9,10 @@ import (
 // Experiment represents a model for a set which contains tasks
 type Experiment struct {
 	gorm.Model
+	Code        string `json:"code" gorm:"not null;"`
 	Name        string `json:"name" gorm:"not null;default:''"`
 	Description string `json:"description" gorm:"not null;default:''"`
-	Code        string `json:"code" gorm:"unique;not null;default:''"`
-	Tasks       string `json:"tasks" gorm:"not null;default:''"`
+	Tasks       []Task `json:"tasks" gorm:"many2many:experiments_tasks;"`
 }
 
 // Validate method validates a given model

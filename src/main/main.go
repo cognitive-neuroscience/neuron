@@ -8,5 +8,6 @@ import (
 func main() {
 	database.ConnectDB()
 	database.AutoMigrate()
+	database.AutoPopulate()
 	server.CreateServer()
 }

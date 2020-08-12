@@ -10,8 +10,24 @@ import (
 	"github.com/gofiber/fiber"
 )
 
-// DoLogin handles login
-func DoLogin(c *fiber.Ctx) {
+// LoginController represents the entry point for the Login API
+func LoginController(c *fiber.Ctx) {
+	middleware.AddHeaders(c)
+
+	switch c.Method() {
+	case "OPTIONS":
+		c.SendStatus(http.StatusOK)
+		break
+	case "POST":
+		doLogin(c)
+		break
+	default:
+		c.Status(http.StatusMethodNotAllowed).JSON(&models.HTTPErrorStatus{Status: http.StatusMethodNotAllowed, Message: http.StatusText(http.StatusMethodNotAllowed)})
+		break
+	}
+}
+
+func doLogin(c *fiber.Ctx) {
 	user := new(models.User)
 	if err := c.BodyParser(user); err != nil {
 		c.SendStatus(http.StatusBadRequest)
