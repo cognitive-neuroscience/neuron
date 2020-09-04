@@ -12,7 +12,7 @@ import (
 func RegisterRoutes(app *fiber.App) {
 	app.Use(middleware.AddHeaders)
 
-	api := app.Group("/api")
+	var api = app.Group("/api")
 
 	api.Group("/users", controllers.UserController)
 
@@ -28,7 +28,7 @@ func RegisterRoutes(app *fiber.App) {
 
 // }
 
-func setUpExperimentRoutes(group *fiber.Group) {
+func setUpExperimentRoutes(group fiber.Router) {
 	experiments := group.Group("/experiments")
 	experiments.Get("/", controllers.GetAllExperiments)
 	experiments.Post("/", controllers.SaveExperiment)

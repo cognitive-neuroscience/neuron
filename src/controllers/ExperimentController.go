@@ -17,6 +17,7 @@ func DeleteExperiment(c *fiber.Ctx) {
 }
 
 // SaveExperiment is the experiment api entry point for saving an experiment given the json
+// Note that "code" in Experiment is not a required field as it gets overwritten anyways
 func SaveExperiment(c *fiber.Ctx) {
 	experiment := new(models.Experiment)
 	if err := c.BodyParser(experiment); err != nil {

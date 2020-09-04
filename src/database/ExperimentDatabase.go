@@ -8,7 +8,14 @@ import (
 	"github.com/cognitive-neuroscience/neuron/src/models"
 )
 
-// DeleteExperiment deletes the experiment with the given code
+// SQL statements
+
+/* inner join between experiment_tasks and tasks. This gets all records relating to a specific experiment
+ * and then returns them ordered as a task struct.
+ */
+var getOrderedTasks string = "SELECT ID as id, title, description, type FROM experiment_tasks LEFT JOIN tasks ON task_id = ID WHERE experiment_code = ? ORDER BY place ASC"
+
+// DeleteExperiment deletes the experiment with the given code. It also deletes all references in the ExperimentTask join table
 func DeleteExperiment(code string) models.HTTPErrorStatus {
 	db := DBConn
 	var experiment models.Experiment
@@ -22,6 +29,9 @@ func DeleteExperiment(code string) models.HTTPErrorStatus {
 		log.Printf("Could not delete Experiment %+v", experiment)
 		return models.HTTPErrorStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)}
 	}
+	if err := db.Where("code = ?", code).Delete(&models.ExperimentTask{}); err != nil {
+		log.Printf("Deletion successful, but could not delete code %s from join table", code)
+	}
 	return models.HTTPErrorStatus{Status: http.StatusOK, Message: http.StatusText(http.StatusOK)}
 }
 
@@ -30,47 +40,50 @@ func GetAllExperiments() ([]models.Experiment, error) {
 	db := DBConn
 	var err error
 	experiments := []models.Experiment{}
-	if err := db.Preload("Tasks").Find(&experiments).Error; err != nil {
+	if err := db.Find(&experiments).Error; err != nil {
 		err = errors.New("Could not fetch experiments")
 	}
+
+	for index, experiment := range experiments {
+		db.Raw(getOrderedTasks, experiment.Code).Scan(&experiments[index].Tasks)
+	}
+
 	return experiments, err
 }
 
 // SaveExperiment saves the given experiment into the db
 func SaveExperiment(experiment *models.Experiment) models.HTTPErrorStatus {
 	db := DBConn
-	// checks if record is new/unique with given primary key
-	if db.NewRecord(experiment) {
-		// get all tasks
-		tasks := []models.Task{}
-		db.Find(&tasks)
 
-		// iterate through and map the received task to the one that exists in the DB.
-		for i := 0; i < len(experiment.Tasks); i++ {
-			givenTask := experiment.Tasks[i]
-			mappedTask, err := mapTask(givenTask, tasks)
-			if err != nil {
-				// if the task does not exist, remove it
-				experiment.Tasks = append(experiment.Tasks[:i], experiment.Tasks[i+1:]...)
-			} else {
-				experiment.Tasks[i] = mappedTask
-			}
-		}
+	// get all tasks
+	tasks := []models.Task{}
+	db.Find(&tasks)
 
-		errors := db.Create(&experiment).GetErrors()
-		if len(errors) == 0 {
-			return models.HTTPErrorStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)}
-		}
+	// create the experiment
+	errors := db.Create(&experiment).GetErrors()
+	if len(errors) > 0 {
 		return models.HTTPErrorStatus{Status: http.StatusBadRequest, Message: errors[0].Error()}
 	}
-	return models.HTTPErrorStatus{Status: http.StatusConflict, Message: "Experiment already exists"}
-}
 
-func mapTask(task models.Task, tasks []models.Task) (models.Task, error) {
-	for i, t := range tasks {
-		if task.Title == t.Title {
-			return tasks[i], nil
+	// create an ExperimentTask record for each task to preserve the order
+	adjustment := 0
+	for index, task := range experiment.Tasks {
+
+		// TODO: validate that the given task is correct with the same name and type
+		// ...
+
+		experimentTaskObj := models.ExperimentTask{
+			ExperimentCode: experiment.Code,
+			TaskID:         task.ID,
+			Place:          index - adjustment,
+		}
+		errors := db.Create(&experimentTaskObj).GetErrors()
+		// if there is an error creating, then skip adding this ExperimentTask
+		// and make sure the next one maintains the correct chronological order
+		if len(errors) > 0 {
+			adjustment++
 		}
 	}
-	return models.Task{}, errors.New("Task does not exist")
+
+	return models.HTTPErrorStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)}
 }
