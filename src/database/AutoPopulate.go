@@ -22,6 +22,8 @@ func AutoPopulate() {
 	log.Println("MySQL AutoPopulation complete")
 }
 
+// NOTE: These IDs are hardcoded in two places: here and in the frontend assets/data folder.
+// If you update the IDs here, you must update the frontend IDs as well.
 var tasks = []models.Task{
 	models.Task{
 		ID:          1,

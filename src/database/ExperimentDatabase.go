@@ -29,7 +29,7 @@ func DeleteExperiment(code string) models.HTTPErrorStatus {
 		log.Printf("Could not delete Experiment %+v", experiment)
 		return models.HTTPErrorStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)}
 	}
-	if err := db.Where("code = ?", code).Delete(&models.ExperimentTask{}); err != nil {
+	if err := db.Where("experiment_code = ?", code).Delete(&models.ExperimentTask{}).Error; err != nil {
 		log.Printf("Deletion successful, but could not delete code %s from join table", code)
 	}
 	return models.HTTPErrorStatus{Status: http.StatusOK, Message: http.StatusText(http.StatusOK)}

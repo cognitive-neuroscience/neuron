@@ -9,7 +9,7 @@ import (
 
 // Experiment represents a model for a set which contains tasks
 type Experiment struct {
-	Code        string `json:"code" gorm:"primaryKey;not null;unique"`
+	Code        string `json:"code" gorm:"primary_key;not null;unique"`
 	Name        string `json:"name" gorm:"not null;default:''"`
 	Description string `json:"description" gorm:"not null;default:''"`
 	Tasks       []Task `json:"tasks"`

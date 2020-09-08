@@ -1,7 +1,6 @@
 package controllers
 
 import (
-	"log"
 	"net/http"
 
 	"github.com/cognitive-neuroscience/neuron/src/models"
@@ -24,7 +23,6 @@ func SaveExperiment(c *fiber.Ctx) {
 		c.Status(http.StatusBadRequest).JSON(models.HTTPErrorStatus{Status: http.StatusBadRequest, Message: http.StatusText(http.StatusBadRequest)})
 		return
 	}
-	log.Println(experiment)
 	result := services.SaveExperiment(experiment)
 	c.Status(result.Status).JSON(result)
 }
