@@ -18,6 +18,8 @@ func RegisterRoutes(app *fiber.App) {
 
 	setUpExperimentRoutes(api)
 
+	setUpTaskRoutes(api)
+
 	// api.Group("/experiments", controllers.ExperimentController)
 	api.Group("/login", controllers.LoginController)
 	api.Group("/token", controllers.TokenController)
@@ -34,6 +36,11 @@ func setUpExperimentRoutes(group fiber.Router) {
 	experiments.Post("/", controllers.SaveExperiment)
 	experiments.Delete("/:code", controllers.DeleteExperiment)
 	experiments.Options("/*", handleOptions)
+}
+
+func setUpTaskRoutes(group fiber.Router) {
+	tasks := group.Group("/tasks")
+	tasks.Get("/", controllers.GetAllTasks)
 }
 
 // func setUpLoginRoutes() {
