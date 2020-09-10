@@ -20,7 +20,7 @@ require (
 	github.com/qor/qor v0.0.0-20200729071734-d587cffbbb93 // indirect
 	github.com/qor/validations v0.0.0-20171228122639-f364bca61b46
 	github.com/valyala/fasttemplate v1.2.1 // indirect
-	golang.org/x/crypto v0.0.0-20200820211705-5c72a883971a // indirect
+	golang.org/x/crypto v0.0.0-20200820211705-5c72a883971a
 	golang.org/x/sys v0.0.0-20200831180312-196b9ba8737a // indirect
 	google.golang.org/appengine v1.4.0 // indirect
 )

@@ -36,7 +36,7 @@ func CreateToken(id uint, email string) (string, error) {
 	if key == "" {
 		key = "neuron"
 	}
-	expirationTime := time.Now().Add(24 * time.Hour)
+	expirationTime := time.Now().Add(3 * time.Hour)
 	claims := &models.Claims{
 		UserID: strconv.FormatUint(uint64(id), 16),
 		Email:  email,
