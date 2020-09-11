@@ -2,7 +2,6 @@ package controllers
 
 import (
 	"net/http"
-	"strings"
 
 	"github.com/cognitive-neuroscience/neuron/src/middleware"
 	"github.com/cognitive-neuroscience/neuron/src/models"
@@ -15,11 +14,11 @@ func UploadController(c *fiber.Ctx) {
 	middleware.AddHeaders(c)
 
 	if c.Method() != "OPTIONS" {
-		status := middleware.ValidateToken(c, strings.ReplaceAll(c.Get("Authorization"), "Bearer ", ""))
-		if status != http.StatusOK {
-			c.SendStatus(status)
-			return
-		}
+		// status := services.ValidateToken(c, strings.ReplaceAll(c.Get("Authorization"), "Bearer ", ""))
+		// if status != http.StatusOK {
+		// 	c.SendStatus(status)
+		// 	return
+		// }
 		switch c.Method() {
 		case "POST":
 			doUpload(c)

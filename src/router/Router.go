@@ -19,8 +19,8 @@ func RegisterRoutes(app *fiber.App) {
 	setUpUserRoutes(api)
 	setUpExperimentRoutes(api)
 	setUpTaskRoutes(api)
+	setUpLoginRoutes(api)
 
-	api.Group("/login", controllers.LoginController)
 	api.Group("/token", controllers.TokenController)
 	api.Group("/upload", controllers.UploadController)
 }
@@ -49,9 +49,12 @@ func setUpTaskRoutes(group fiber.Router) {
 	tasks.All("/*", handleForbidden)
 }
 
-// func setUpLoginRoutes() {
-
-// }
+func setUpLoginRoutes(group fiber.Router) {
+	login := group.Group("/login")
+	login.Post("/", controllers.Login)
+	login.Options("/*", handleOptions)
+	login.All("/*", handleForbidden)
+}
 
 // func setUpTokenRoutes() {
 
@@ -61,11 +64,13 @@ func setUpTaskRoutes(group fiber.Router) {
 
 // }
 
+// returns MethodNotAllowed when client tries to access unsupported HTTP request
 func handleForbidden(c *fiber.Ctx) {
 	log.Println("FORBIDDEN!")
 	c.Status(http.StatusMethodNotAllowed).JSON(&models.HTTPErrorStatus{Status: http.StatusMethodNotAllowed, Message: http.StatusText(http.StatusMethodNotAllowed)})
 }
 
+// returns StatusOK when options are sent
 func handleOptions(c *fiber.Ctx) {
 	c.SendStatus(http.StatusOK)
 }

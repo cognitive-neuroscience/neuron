@@ -20,16 +20,16 @@ func SaveUser(user *models.User) models.HTTPErrorStatus {
 	return models.HTTPErrorStatus{Status: http.StatusConflict, Message: "Primary field present in body"}
 }
 
-// DoesUserExistByEmailAndPassword searches for a user, given the email and password
-func DoesUserExistByEmailAndPassword(email string, password string) (models.User, error) {
+// GetUserByEmail searches for a user given the email
+func GetUserByEmail(email string) (models.User, error) {
 	db := DBConn
 	var user models.User
 	var err error
-	db.Where(&models.User{Email: email, Password: password}).First(&user)
-	if user.Email == email && user.Password == password {
+	db.Where(&models.User{Email: email}).First(&user)
+	if user.Email == email {
 		err = nil
 	} else {
-		err = errors.New("Invalid Email or Password")
+		err = errors.New("Email does not exist in database")
 	}
 	return user, err
 }

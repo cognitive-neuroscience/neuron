@@ -1,9 +1,9 @@
 package controllers
 
 import (
+	"log"
 	"net/http"
 
-	"github.com/cognitive-neuroscience/neuron/src/middleware"
 	"github.com/cognitive-neuroscience/neuron/src/models"
 	"github.com/cognitive-neuroscience/neuron/src/services"
 	"github.com/gofiber/fiber"
@@ -12,9 +12,20 @@ import (
 // GetAllUsers is the users api entry point for returning all existing experiments
 // only for dev purposes, delete later!
 func GetAllUsers(c *fiber.Ctx) {
-	middleware.VerifyToken(c)
-	c.Write([]byte("OK"))
-	c.Next()
+	tokenIsValid := services.VerifyToken(c)
+	if tokenIsValid {
+		tasks, err := services.GetAllTasks()
+		if err != nil {
+			log.Println("there was an err")
+		}
+		c.JSON(tasks)
+	} else {
+		sendForbidden(c)
+	}
+}
+
+func sendForbidden(c *fiber.Ctx) {
+	c.Status(http.StatusUnauthorized).JSON(&models.HTTPErrorStatus{Status: http.StatusUnauthorized, Message: http.StatusText(http.StatusUnauthorized)})
 }
 
 // SaveUser saves a given user in the DB
@@ -30,6 +41,6 @@ func SaveUser(c *fiber.Ctx) {
 
 // UpdateUser updates a given user in the DB
 func UpdateUser(c *fiber.Ctx) {
-	middleware.VerifyToken(c)
+	services.VerifyToken(c)
 	c.Write([]byte("OK"))
 }

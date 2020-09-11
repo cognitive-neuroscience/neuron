@@ -2,60 +2,54 @@ package controllers
 
 import (
 	"net/http"
-	"strconv"
+	"time"
 
-	"github.com/cognitive-neuroscience/neuron/src/middleware"
 	"github.com/cognitive-neuroscience/neuron/src/models"
 	"github.com/cognitive-neuroscience/neuron/src/services"
 	"github.com/gofiber/fiber"
 )
 
-// LoginController represents the entry point for the Login API
-func LoginController(c *fiber.Ctx) {
-	middleware.AddHeaders(c)
-
-	switch c.Method() {
-	case "OPTIONS":
-		c.SendStatus(http.StatusOK)
-		break
-	case "POST":
-		doLogin(c)
-		break
-	default:
-		c.Status(http.StatusMethodNotAllowed).JSON(&models.HTTPErrorStatus{Status: http.StatusMethodNotAllowed, Message: http.StatusText(http.StatusMethodNotAllowed)})
-		break
-	}
-}
-
-func doLogin(c *fiber.Ctx) {
+// Login is the login api entry point for logging in an existing user and attaching a JWT
+func Login(c *fiber.Ctx) {
 	user := new(models.User)
 	if err := c.BodyParser(user); err != nil {
+		c.Status(http.StatusBadRequest).JSON(models.HTTPErrorStatus{Status: http.StatusBadRequest, Message: http.StatusText(http.StatusBadRequest)})
+		return
+	}
+
+	if user.Email == "" || user.Password == "" {
 		c.SendStatus(http.StatusBadRequest)
+		c.Status(http.StatusBadRequest).JSON(models.HTTPErrorStatus{Status: http.StatusBadRequest, Message: "Username or password cannot be empty"})
 		return
 	}
 
 	dbUser, err := services.DoLogin(user.Email, user.Password)
 	if err != nil {
-		c.Status(http.StatusUnauthorized).JSON(fiber.Map{
-			"status": http.StatusUnauthorized,
-			"error":  err.Error(),
-		})
+		c.Status(http.StatusUnauthorized).JSON(models.HTTPErrorStatus{Status: http.StatusUnauthorized, Message: err.Error()})
 	} else {
-		tokenString, err := middleware.CreateToken(dbUser.ID, dbUser.Email)
+		tokenString, err := services.CreateToken(dbUser.ID, dbUser.Email)
+
 		if err != nil {
-			c.Status(http.StatusInternalServerError).JSON(fiber.Map{
-				"status": http.StatusInternalServerError,
-				"error":  err.Error(),
-			})
+			c.Status(http.StatusInternalServerError).JSON(models.HTTPErrorStatus{Status: http.StatusInternalServerError, Message: err.Error()})
 			return
 		}
-		c.Set("Authorization", "Bearer "+tokenString)
-		c.Set("UserID", strconv.FormatUint(uint64(dbUser.ID), 16))
-		c.Set("Email", string(dbUser.Email))
+		cookie := new(fiber.Cookie)
+		cookie.HTTPOnly = true
+		cookie.Value = "Bearer " + tokenString
+		cookie.Expires = time.Now().Add(12 * time.Hour)
+		c.Cookie(cookie)
 		c.Status(http.StatusOK).JSON(fiber.Map{
-			"message": "OK",
-			"userID":  dbUser.ID,
+			"message": http.StatusText(http.StatusOK),
+			"userId":  dbUser.ID,
 			"email":   dbUser.Email,
 		})
+		// c.Set("Authorization", "Bearer "+tokenString)
+		// c.Set("UserID", strconv.FormatUint(uint64(dbUser.ID), 16))
+		// c.Set("Email", dbUser.Email)
+		// c.Status(http.StatusOK).JSON(fiber.Map{
+		// 	"message": http.StatusText(http.StatusOK),
+		// 	"userID":  dbUser.ID,
+		// 	"email":   dbUser.Email,
+		// })
 	}
 }
