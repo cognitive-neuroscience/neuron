@@ -6,5 +6,6 @@ import jwt "github.com/dgrijalva/jwt-go"
 type Claims struct {
 	UserID string
 	Email  string
+	Role   string
 	jwt.StandardClaims
 }

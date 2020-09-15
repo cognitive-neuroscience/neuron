@@ -3,6 +3,8 @@ package controllers
 import (
 	"net/http"
 
+	"github.com/cognitive-neuroscience/neuron/src/common"
+
 	"github.com/cognitive-neuroscience/neuron/src/models"
 	"github.com/cognitive-neuroscience/neuron/src/services"
 	"github.com/gofiber/fiber"
@@ -10,9 +12,13 @@ import (
 
 // DeleteExperiment is the experiment api entry point for deleting given the experiment code
 func DeleteExperiment(c *fiber.Ctx) {
-	code := c.Params("code")
-	result := services.DeleteExperiment(code)
-	c.Status(result.Status).JSON(result)
+	authorizedRoles := []string{"ADMIN"}
+	if common.IsAllowed(c, authorizedRoles) {
+		code := c.Params("code")
+		result := services.DeleteExperiment(code)
+		c.Status(result.Status).JSON(result)
+	}
+	common.SendHTTPForbidden(c)
 }
 
 // SaveExperiment is the experiment api entry point for saving an experiment given the json
@@ -20,11 +26,15 @@ func DeleteExperiment(c *fiber.Ctx) {
 func SaveExperiment(c *fiber.Ctx) {
 	experiment := new(models.Experiment)
 	if err := c.BodyParser(experiment); err != nil {
-		c.Status(http.StatusBadRequest).JSON(models.HTTPErrorStatus{Status: http.StatusBadRequest, Message: http.StatusText(http.StatusBadRequest)})
+		common.SendHTTPBadRequest(c)
 		return
 	}
 	result := services.SaveExperiment(experiment)
-	c.Status(result.Status).JSON(result)
+
+	if result.Status == http.StatusCreated {
+		common.SendHTTPStatusCreated(c)
+	}
+	common.SendHTTPStatusServiceUnavailable(c)
 }
 
 // GetAllExperiments is the experiment api entry point for returning all existing experiments

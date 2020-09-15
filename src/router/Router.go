@@ -20,8 +20,8 @@ func RegisterRoutes(app *fiber.App) {
 	setUpExperimentRoutes(api)
 	setUpTaskRoutes(api)
 	setUpLoginRoutes(api)
+	setUpTokenRoutes(api)
 
-	api.Group("/token", controllers.TokenController)
 	api.Group("/upload", controllers.UploadController)
 }
 
@@ -56,9 +56,10 @@ func setUpLoginRoutes(group fiber.Router) {
 	login.All("/*", handleForbidden)
 }
 
-// func setUpTokenRoutes() {
-
-// }
+func setUpTokenRoutes(group fiber.Router) {
+	token := group.Group("/token")
+	token.Post("/", controllers.ValidateToken)
+}
 
 // func setUpUploadRoutes() {
 

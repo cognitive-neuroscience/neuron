@@ -12,7 +12,7 @@ import (
 // GetAllUsers is the users api entry point for returning all existing experiments
 // only for dev purposes, delete later!
 func GetAllUsers(c *fiber.Ctx) {
-	tokenIsValid := services.VerifyToken(c)
+	tokenIsValid := services.AuthenticateToken(c)
 	if tokenIsValid {
 		tasks, err := services.GetAllTasks()
 		if err != nil {
@@ -41,6 +41,6 @@ func SaveUser(c *fiber.Ctx) {
 
 // UpdateUser updates a given user in the DB
 func UpdateUser(c *fiber.Ctx) {
-	services.VerifyToken(c)
+	services.AuthenticateToken(c)
 	c.Write([]byte("OK"))
 }

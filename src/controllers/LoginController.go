@@ -2,7 +2,6 @@ package controllers
 
 import (
 	"net/http"
-	"time"
 
 	"github.com/cognitive-neuroscience/neuron/src/models"
 	"github.com/cognitive-neuroscience/neuron/src/services"
@@ -18,7 +17,6 @@ func Login(c *fiber.Ctx) {
 	}
 
 	if user.Email == "" || user.Password == "" {
-		c.SendStatus(http.StatusBadRequest)
 		c.Status(http.StatusBadRequest).JSON(models.HTTPErrorStatus{Status: http.StatusBadRequest, Message: "Username or password cannot be empty"})
 		return
 	}
@@ -27,29 +25,18 @@ func Login(c *fiber.Ctx) {
 	if err != nil {
 		c.Status(http.StatusUnauthorized).JSON(models.HTTPErrorStatus{Status: http.StatusUnauthorized, Message: err.Error()})
 	} else {
-		tokenString, err := services.CreateToken(dbUser.ID, dbUser.Email)
+		tokenString, err := services.CreateToken(dbUser.ID, dbUser.Email, dbUser.Role)
 
 		if err != nil {
 			c.Status(http.StatusInternalServerError).JSON(models.HTTPErrorStatus{Status: http.StatusInternalServerError, Message: err.Error()})
 			return
 		}
-		cookie := new(fiber.Cookie)
-		cookie.HTTPOnly = true
-		cookie.Value = "Bearer " + tokenString
-		cookie.Expires = time.Now().Add(12 * time.Hour)
-		c.Cookie(cookie)
+		c.Set("Authorization", "Bearer "+tokenString)
 		c.Status(http.StatusOK).JSON(fiber.Map{
 			"message": http.StatusText(http.StatusOK),
 			"userId":  dbUser.ID,
 			"email":   dbUser.Email,
+			"role":    dbUser.Role,
 		})
-		// c.Set("Authorization", "Bearer "+tokenString)
-		// c.Set("UserID", strconv.FormatUint(uint64(dbUser.ID), 16))
-		// c.Set("Email", dbUser.Email)
-		// c.Status(http.StatusOK).JSON(fiber.Map{
-		// 	"message": http.StatusText(http.StatusOK),
-		// 	"userID":  dbUser.ID,
-		// 	"email":   dbUser.Email,
-		// })
 	}
 }
