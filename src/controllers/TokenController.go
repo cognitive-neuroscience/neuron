@@ -1,24 +1,20 @@
 package controllers
 
 import (
-	"net/http"
-	"strconv"
+	"github.com/cognitive-neuroscience/neuron/src/common"
 
 	"github.com/cognitive-neuroscience/neuron/src/models"
-	"github.com/cognitive-neuroscience/neuron/src/services"
 	"github.com/gofiber/fiber"
 )
 
-// TokenController represents the entry point for the Token API
-
 // ValidateToken represents the entry point for the Token API, validating a given token
 func ValidateToken(c *fiber.Ctx) {
+	authorizedRoles := []string{common.ADMIN, common.PARTICIPANT}
 	token := new(models.TokenPayload)
 	if err := c.BodyParser(token); err != nil {
-		c.SendStatus(http.StatusBadRequest)
+		common.SendHTTPBadRequest(c)
 		return
 	}
-
-	isAuthentic := services.AuthenticateToken(c)
-	c.Status(http.StatusOK).JSON(models.HTTPErrorStatus{Status: http.StatusOK, Message: strconv.FormatBool(isAuthentic)})
+	allowed := common.IsAllowed(c, authorizedRoles)
+	c.JSON(allowed)
 }

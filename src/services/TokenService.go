@@ -16,26 +16,30 @@ import (
 var key = os.Getenv("NEURON_TOKEN_KEY")
 
 // AuthenticateToken verifies if the token present in the authorization header is valid
-func AuthenticateToken(c *fiber.Ctx) bool {
+func AuthenticateToken(c *fiber.Ctx) (*models.Claims, error) {
+
+	claims := &models.Claims{}
+	var err error
+
 	// 1. check that token is present
 	token := c.Get("Authorization")
 	if token == "" {
-		return false
+		return claims, errors.New("No token present")
 	}
 
 	// 2. check that token string is extractable and get it
 	extractedToken, err := extractToken(token)
 	if err != nil {
-		log.Println(err)
-		return false
+		return claims, err
 	}
 
 	// 3. check that token is valid
-	if !ValidateToken(extractedToken) {
-		return false
+	claims, err = ValidateToken(extractedToken)
+	if err != nil {
+		return claims, err
 	}
 
-	return true
+	return claims, nil
 }
 
 func extractToken(t string) (string, error) {
@@ -66,7 +70,7 @@ func CreateToken(id uint, email string, role string) (string, error) {
 }
 
 // ValidateToken makes sure a given token is valid (acceptable, can be parsed, not expired)
-func ValidateToken(tokenString string) bool {
+func ValidateToken(tokenString string) (*models.Claims, error) {
 	if key == "" {
 		key = "neuron"
 	}
@@ -77,34 +81,36 @@ func ValidateToken(tokenString string) bool {
 	if err != nil {
 		log.Println("Error when calling ParseWithClaims on token!")
 		log.Println(err)
-		return false
+		return claims, err
 	}
 
 	if !token.Valid {
-		return false
+		return claims, errors.New("Token is not valid")
 	}
 
-	return true
-}
-
-// ExtractClaims extracts the data from the JWT
-func ExtractClaims(c *fiber.Ctx) (models.Claims, error) {
-	claims := models.Claims{}
-	token := c.Get("Authorization")
-
-	// 2. check that token string is extractable and get it
-	extractedToken, err := extractToken(token)
-	if err != nil {
-		log.Println(err)
-		return claims, err
-	}
-
-	aToken, err := jwt.ParseWithClaims(extractedToken, claims, func(token *jwt.Token) (interface{}, error) {
-		return []byte(key), nil
-	})
-
-	if err != nil || !aToken.Valid {
-		return claims, err
-	}
 	return claims, nil
 }
+
+// // ExtractClaims extracts the data from the JWT
+// func ExtractClaims(c *fiber.Ctx) (models.Claims, error) {
+// 	claims := models.Claims{}
+// 	token := c.Get("Authorization")
+
+// 	// 2. check that token string is extractable and get it
+// 	extractedToken, err := extractToken(token)
+// 	if err != nil {
+// 		log.Println("Token is not extractable. Error:")
+// 		log.Println(err)
+// 		return claims, err
+// 	}
+
+// 	aToken, err := jwt.ParseWithClaims(extractedToken, claims, func(token *jwt.Token) (interface{}, error) {
+// 		return []byte(key), nil
+// 	})
+
+// 	if err != nil || !aToken.Valid {
+// 		log.Println(err)
+// 		return claims, err
+// 	}
+// 	return claims, nil
+// }

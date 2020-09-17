@@ -1,9 +1,7 @@
 package controllers
 
 import (
-	"net/http"
-
-	"github.com/cognitive-neuroscience/neuron/src/models"
+	"github.com/cognitive-neuroscience/neuron/src/common"
 	"github.com/cognitive-neuroscience/neuron/src/services"
 
 	"github.com/gofiber/fiber"
@@ -11,15 +9,15 @@ import (
 
 // GetAllTasks is the task api entry point for returning all existing tasks
 func GetAllTasks(c *fiber.Ctx) {
-	tokenIsValid := services.AuthenticateToken(c)
-	// log.Println(tokenIsValid)
-	if tokenIsValid {
+	authorizedRoles := []string{common.ADMIN}
+	if common.IsAllowed(c, authorizedRoles) {
 		tasks, err := services.GetAllTasks()
 		if err != nil {
-			c.Status(http.StatusServiceUnavailable).JSON(models.HTTPErrorStatus{Status: http.StatusServiceUnavailable, Message: http.StatusText(http.StatusServiceUnavailable)})
+			common.SendHTTPStatusServiceUnavailable(c)
+			return
 		}
 		c.JSON(tasks)
-	} else {
-		c.Status(http.StatusForbidden).JSON(models.HTTPErrorStatus{Status: http.StatusForbidden, Message: http.StatusText(http.StatusForbidden)})
+		return
 	}
+	common.SendHTTPForbidden(c)
 }

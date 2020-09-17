@@ -1,8 +1,7 @@
 package controllers
 
 import (
-	"log"
-	"net/http"
+	"github.com/cognitive-neuroscience/neuron/src/common"
 
 	"github.com/cognitive-neuroscience/neuron/src/models"
 	"github.com/cognitive-neuroscience/neuron/src/services"
@@ -12,31 +11,28 @@ import (
 // GetAllUsers is the users api entry point for returning all existing experiments
 // only for dev purposes, delete later!
 func GetAllUsers(c *fiber.Ctx) {
-	tokenIsValid := services.AuthenticateToken(c)
-	if tokenIsValid {
+	authorizedRoles := []string{common.ADMIN}
+	if common.IsAllowed(c, authorizedRoles) {
 		tasks, err := services.GetAllTasks()
 		if err != nil {
-			log.Println("there was an err")
+			common.SendHTTPStatusServiceUnavailable(c)
+			return
 		}
 		c.JSON(tasks)
-	} else {
-		sendForbidden(c)
+		return
 	}
-}
-
-func sendForbidden(c *fiber.Ctx) {
-	c.Status(http.StatusUnauthorized).JSON(&models.HTTPErrorStatus{Status: http.StatusUnauthorized, Message: http.StatusText(http.StatusUnauthorized)})
+	common.SendHTTPForbidden(c)
 }
 
 // SaveUser saves a given user in the DB
+// this route does not require a JWT as users may be creating an account
 func SaveUser(c *fiber.Ctx) {
 	user := new(models.User)
 	if err := c.BodyParser(user); err != nil {
-		c.Status(http.StatusBadRequest).JSON(&models.HTTPErrorStatus{Status: http.StatusBadRequest, Message: http.StatusText(http.StatusBadRequest)})
+		common.SendHTTPBadRequest(c)
 	}
-
 	result := services.SaveUser(user)
-	c.Status(result.Status).JSON(result)
+	common.SendGenericHTTPModel(c, result)
 }
 
 // UpdateUser updates a given user in the DB

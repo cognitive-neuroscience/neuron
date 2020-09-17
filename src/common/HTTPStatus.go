@@ -36,3 +36,8 @@ func SendHTTPStatusCreated(c *fiber.Ctx) {
 func SendHTTPStatusServiceUnavailable(c *fiber.Ctx) {
 	c.Status(http.StatusServiceUnavailable).JSON(models.HTTPErrorStatus{Status: http.StatusServiceUnavailable, Message: http.StatusText(http.StatusServiceUnavailable)})
 }
+
+// SendGenericHTTPModel send the given http status code depending on the given HTTPErrorStatus model
+func SendGenericHTTPModel(c *fiber.Ctx, model models.HTTPErrorStatus) {
+	c.Status(model.Status).JSON(model)
+}
