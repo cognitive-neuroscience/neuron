@@ -59,6 +59,8 @@ func setUpLoginRoutes(group fiber.Router) {
 func setUpTokenRoutes(group fiber.Router) {
 	token := group.Group("/token")
 	token.Post("/", controllers.ValidateToken)
+	token.Options("/*", handleOptions)
+	token.All("/*", handleForbidden)
 }
 
 // func setUpUploadRoutes() {
