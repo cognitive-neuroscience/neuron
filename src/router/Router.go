@@ -21,6 +21,7 @@ func RegisterRoutes(app *fiber.App) {
 	setUpTaskRoutes(api)
 	setUpLoginRoutes(api)
 	setUpTokenRoutes(api)
+	setUpTurkerRoutes(api)
 
 	api.Group("/upload", controllers.UploadController)
 }
@@ -61,6 +62,13 @@ func setUpTokenRoutes(group fiber.Router) {
 	token.Post("/", controllers.ValidateToken)
 	token.Options("/*", handleOptions)
 	token.All("/*", handleForbidden)
+}
+
+func setUpTurkerRoutes(group fiber.Router) {
+	turker := group.Group("/turker")
+	turker.Post("/", controllers.SaveTurker)
+	turker.Options("/*", handleOptions)
+	turker.All("/*", handleForbidden)
 }
 
 // func setUpUploadRoutes() {
