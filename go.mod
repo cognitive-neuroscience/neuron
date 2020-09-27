@@ -13,6 +13,7 @@ require (
 	github.com/gofiber/recover v0.1.2
 	github.com/gorilla/schema v1.2.0 // indirect
 	github.com/jinzhu/gorm v1.9.16
+	github.com/joho/godotenv v1.3.0
 	github.com/json-iterator/go v1.1.9 // indirect
 	github.com/klauspost/compress v1.10.11 // indirect
 	github.com/klauspost/cpuid v1.2.1 // indirect

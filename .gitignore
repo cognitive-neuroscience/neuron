@@ -8,6 +8,7 @@ coverage.txt
 
 go.sum
 
+.env
 .bin
 .vscode
 src/main/__debug_bin

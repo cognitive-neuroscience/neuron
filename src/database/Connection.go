@@ -1,22 +1,67 @@
 package database
 
 import (
+	"errors"
 	"log"
+	"os"
 
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql" // MySQL Dialect for GORM
 	"github.com/qor/validations"
 )
 
+// ENV holds the environment we are using
+var ENV string
+
+var mySQL string = "mysql"
+
+// SetEnvironment reads the loaded .env file and sets the environment
+func SetEnvironment() {
+	env, exists := os.LookupEnv("ENV")
+
+	// default environment to dev
+	if !exists {
+		ENV = "DEV"
+	}
+	ENV = env
+	log.Printf("Starting up %s environment", ENV)
+}
+
 // ConnectDB instantiates a mongoDB connection
 func ConnectDB() {
-	var err error
-	DBConn, err = gorm.Open("mysql", "root:nico1005@tcp(127.0.0.1:3306)/sharplab?charset=utf8mb4&parseTime=True&loc=Local")
-	// DBConn, err = gorm.Open("mysql", "sharplab:sharplab@tcp(127.0.0.1:3306)/sharplab?charset=utf8mb4&parseTime=True&loc=Local")
-	// DBConn, err = gorm.Open("mysql", "sharplab:sharplab@(192.168.1.117)/sharplab?charset=utf8mb4&parseTime=True&loc=Local")
+
+	dbConnectionDetails, err := getDBConnectionDetails()
+	if err != nil {
+		panic("No DB connection details available")
+	}
+
+	DBConn, err = gorm.Open(mySQL, dbConnectionDetails)
 	if err != nil {
 		log.Fatalln(err.Error())
 	}
+
 	validations.RegisterCallbacks(DBConn)
 	log.Println("Connected to database")
+}
+
+func getDBConnectionDetails() (string, error) {
+	switch ENV {
+	case "DEV":
+		return getConnectionDetailsFromOs("DEVDB")
+	case "UAT":
+		return getConnectionDetailsFromOs("UATDB")
+	case "PROD":
+		return getConnectionDetailsFromOs("PRODDB")
+	default:
+		// realistically we should never reach here because we default to dev
+		return "", errors.New("Unrecognized environment")
+	}
+}
+
+func getConnectionDetailsFromOs(envStr string) (string, error) {
+	env, exists := os.LookupEnv(envStr)
+	if !exists {
+		return "", errors.New("No dev connection details")
+	}
+	return env, nil
 }
