@@ -4,6 +4,7 @@ import (
 	"errors"
 	"log"
 	"net/http"
+	"strings"
 
 	"github.com/cognitive-neuroscience/neuron/src/models"
 )
@@ -55,6 +56,11 @@ func GetAllExperiments() ([]models.Experiment, error) {
 func SaveExperiment(experiment *models.Experiment) models.HTTPErrorStatus {
 	db := DBConn
 
+	err := createTables(experiment.Code, experiment.Tasks)
+	if err != nil {
+		return models.HTTPErrorStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)}
+	}
+
 	// get all tasks
 	tasks := []models.Task{}
 	db.Find(&tasks)
@@ -86,4 +92,23 @@ func SaveExperiment(experiment *models.Experiment) models.HTTPErrorStatus {
 	}
 
 	return models.HTTPErrorStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)}
+}
+
+// experimentCode - taskName
+func createTables(code string, tasks []models.Task) error {
+	for _, task := range tasks {
+		tableName := "EXPERIMENT_" + code + "_TASK_" + removeWhiteSpace(task.Title)
+		dbErrors := DBConn.Table(tableName).CreateTable(&models.TaskSwitchingData{}).GetErrors()
+
+		if len(dbErrors) > 0 {
+			log.Println(dbErrors)
+			return errors.New("cold not create table " + tableName)
+		}
+	}
+	return nil
+}
+
+func removeWhiteSpace(str string) string {
+	// replace " " with "" for all instances (hence -1)
+	return strings.Replace(str, " ", "", -1)
 }

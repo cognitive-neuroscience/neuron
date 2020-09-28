@@ -15,6 +15,6 @@ func AutoMigrate() {
 	// DBConn.DropTableIfExists(&models.Experiment{})
 	// DBConn.DropTableIfExists(&models.Task{})
 
-	DBConn.AutoMigrate(&models.ExperimentTask{}, &models.User{}, &models.Experiment{}, &models.Task{})
+	DBConn.AutoMigrate(&models.ExperimentTask{}, &models.User{}, &models.Experiment{}, &models.Task{}, &models.Turker{})
 	log.Println("MySQL migrations complete")
 }
