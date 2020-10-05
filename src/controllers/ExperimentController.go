@@ -50,3 +50,20 @@ func GetAllExperiments(c *fiber.Ctx) {
 	}
 	common.SendHTTPForbidden(c)
 }
+
+// GetExperiment gets a specific experiment based on the experiment code
+func GetExperiment(c *fiber.Ctx) {
+	authorizedRoles := []string{common.ADMIN, common.PARTICIPANT}
+	if common.IsAllowed(c, authorizedRoles) {
+		code := c.Params("code")
+		experiment, err := services.GetExperiment(code)
+		if err != nil {
+			common.SendHTTPStatusServiceUnavailable(c)
+			return
+		}
+		c.JSON(experiment)
+		return
+	}
+	common.SendHTTPForbidden(c)
+	return
+}

@@ -8,13 +8,15 @@ import (
 	"golang.org/x/crypto/bcrypt"
 )
 
-// DoLogin hashes the password and queries the database
-func DoLogin(email string, password string) (models.User, error) {
+// ValidateCredentials checks to see if the email and password match by querying the db
+// for the correct email and then comparing
+func ValidateCredentials(email string, password string) (models.User, error) {
 
 	user, err := database.GetUserByEmail(email)
 	if err != nil {
 		return user, err
 	}
+	// check if their password matches
 	if !passwordIsCorrect(user.Password, password) {
 		return user, errors.New("Password is invalid")
 	}

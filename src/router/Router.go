@@ -21,15 +21,15 @@ func RegisterRoutes(app *fiber.App) {
 	setUpTaskRoutes(api)
 	setUpLoginRoutes(api)
 	setUpTokenRoutes(api)
-	setUpTurkerRoutes(api)
-
-	api.Group("/upload", controllers.UploadController)
+	setUpUploadRoutes(api)
 }
 
 func setUpUserRoutes(group fiber.Router) {
 	users := group.Group("/users")
 	users.Get("/", controllers.GetAllUsers)
 	users.Post("/", controllers.SaveUser)
+	users.Post("/complete", controllers.MarkAsComplete)
+	users.Get("/:userid/:code", controllers.GetCompletionCode)
 	users.Options("/*", handleOptions)
 	users.All("/*", handleForbidden)
 }
@@ -37,6 +37,7 @@ func setUpUserRoutes(group fiber.Router) {
 func setUpExperimentRoutes(group fiber.Router) {
 	experiments := group.Group("/experiments")
 	experiments.Get("/", controllers.GetAllExperiments)
+	experiments.Get("/:code", controllers.GetExperiment)
 	experiments.Post("/", controllers.SaveExperiment)
 	experiments.Delete("/:code", controllers.DeleteExperiment)
 	experiments.Options("/*", handleOptions)
@@ -53,6 +54,7 @@ func setUpTaskRoutes(group fiber.Router) {
 func setUpLoginRoutes(group fiber.Router) {
 	login := group.Group("/login")
 	login.Post("/", controllers.Login)
+	login.Post("/turker", controllers.LoginTurker)
 	login.Options("/*", handleOptions)
 	login.All("/*", handleForbidden)
 }
@@ -64,21 +66,17 @@ func setUpTokenRoutes(group fiber.Router) {
 	token.All("/*", handleForbidden)
 }
 
-func setUpTurkerRoutes(group fiber.Router) {
-	turker := group.Group("/turker")
-	turker.Post("/", controllers.SaveTurker)
-	turker.Options("/*", handleOptions)
-	turker.All("/*", handleForbidden)
+func setUpUploadRoutes(group fiber.Router) {
+	upload := group.Group("/upload")
+	upload.Post("/:code/:taskName", controllers.UploadTaskData)
+	upload.Options("/*", handleOptions)
+	upload.All("/*", handleForbidden)
 }
-
-// func setUpUploadRoutes() {
-
-// }
 
 // returns MethodNotAllowed when client tries to access unsupported HTTP request
 func handleForbidden(c *fiber.Ctx) {
 	log.Println("FORBIDDEN!")
-	c.Status(http.StatusMethodNotAllowed).JSON(&models.HTTPErrorStatus{Status: http.StatusMethodNotAllowed, Message: http.StatusText(http.StatusMethodNotAllowed)})
+	c.Status(http.StatusMethodNotAllowed).JSON(&models.HTTPStatus{Status: http.StatusMethodNotAllowed, Message: http.StatusText(http.StatusMethodNotAllowed)})
 }
 
 // returns StatusOK when options are sent

@@ -11,20 +11,21 @@ import (
 	"github.com/cognitive-neuroscience/neuron/src/models"
 )
 
-var code string = "bcdfghjklmnpqrstvwxyz0123456789"
+// CodeCharacters represents the atomic characters that make up a short code
+var CodeCharacters string = "bcdfghjklmnpqrstvwxyz0123456789"
 
 // DeleteExperiment calls the db and deletes the experiment with the given code
-func DeleteExperiment(code string) models.HTTPErrorStatus {
+func DeleteExperiment(code string) models.HTTPStatus {
 	return database.DeleteExperiment(code)
 }
 
 // SaveExperiment calls the DB and passes the given experiment data
-func SaveExperiment(experiment *models.Experiment) models.HTTPErrorStatus {
+func SaveExperiment(experiment *models.Experiment) models.HTTPStatus {
 
 	code, err := getNewCode()
 
 	if err != nil {
-		return models.HTTPErrorStatus{Status: http.StatusInternalServerError, Message: "Error Creating Experiment Shortcode"}
+		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "Error Creating Experiment Shortcode"}
 	}
 	experiment.Code = code
 
@@ -37,11 +38,11 @@ func getNewCode() (string, error) {
 	if err != nil {
 		return "", errors.New("Could not get experiments")
 	}
-	code := generateCode()
+	code := GenerateCode(6)
 
 	// generate a code and loop through until you get a unique one
 	for containsCode(code, &experiments) {
-		code = generateCode()
+		code = GenerateCode(6)
 	}
 	return code, nil
 }
@@ -55,13 +56,14 @@ func containsCode(code string, experiments *[]models.Experiment) bool {
 	return false
 }
 
-func generateCode() string {
+// GenerateCode creates a code using the CharacterCode string of x size
+func GenerateCode(size int) string {
 	rand.Seed(time.Now().UnixNano())
 	var str strings.Builder
 
-	for i := 0; i < 6; i++ {
-		randIndex := rand.Intn(len(code))
-		str.WriteString(string(code[randIndex]))
+	for i := 0; i < size; i++ {
+		randIndex := rand.Intn(len(CodeCharacters))
+		str.WriteString(string(CodeCharacters[randIndex]))
 	}
 	return str.String()
 }
@@ -69,4 +71,9 @@ func generateCode() string {
 // GetAllExperiments calls the DB and returns all experiments
 func GetAllExperiments() ([]models.Experiment, error) {
 	return database.GetAllExperiments()
+}
+
+// GetExperiment gets the experiment based on the given code
+func GetExperiment(code string) (models.Experiment, error) {
+	return database.GetExperiment(code)
 }

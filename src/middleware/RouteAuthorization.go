@@ -17,7 +17,7 @@ var key = os.Getenv("NEURON_TOKEN_KEY")
 // 	token := c.Get("Authorization")
 
 // 	if token == "" {
-// 		c.Status(http.StatusUnauthorized).JSON(&models.HTTPErrorStatus{Status: http.StatusUnauthorized, Message: http.StatusText(http.StatusUnauthorized)})
+// 		c.Status(http.StatusUnauthorized).JSON(&models.HTTPStatus{Status: http.StatusUnauthorized, Message: http.StatusText(http.StatusUnauthorized)})
 // 		return
 // 	}
 

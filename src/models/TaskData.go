@@ -13,3 +13,15 @@ type TaskSwitchingData struct {
 	Score        int     `json:"score"`
 	ColorMapping string  `json:"colorMapping"`
 }
+
+// StroopTask represents a model for the data received from the Stroop Task
+type StroopTask struct {
+	UserID       string  `json:"userID"`
+	Trial        int     `json:"trial"`
+	ActualAnswer string  `json:"actualAnswer"`
+	UserAnswer   string  `json:"userAnswer"`
+	IsCongruent  bool    `json:"isCongruent"`
+	ResponseTime float32 `json:"responseTime"`
+	Score        int     `json:"score"`
+	Set          int     `json:"set"`
+}

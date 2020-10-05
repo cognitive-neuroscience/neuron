@@ -1,7 +1,7 @@
 package models
 
-// HTTPErrorStatus represents the model for a HTTP response
-type HTTPErrorStatus struct {
+// HTTPStatus represents the model for a HTTP response
+type HTTPStatus struct {
 	Status  int    `json:"status"`
 	Message string `json:"message"`
 }

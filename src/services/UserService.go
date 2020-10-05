@@ -2,6 +2,7 @@ package services
 
 import (
 	"errors"
+	"log"
 	"net"
 	"net/http"
 	"regexp"
@@ -17,21 +18,40 @@ var cost = 13
 
 var emailRegex = regexp.MustCompile("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$")
 
+// SaveExperimentAndParticipant saves user into ExperimentUser database and records if experiment has been complete
+// as well as the completion string for turkers
+func SaveExperimentAndParticipant(experimentUser models.ExperimentUser) models.HTTPStatus {
+	code := GenerateCode(10)
+	log.Println(code)
+	experimentUser.CompletionCode = code
+	return database.SaveExperimentAndParticipant(experimentUser)
+}
+
 // SaveUser saves the user
-func SaveUser(user *models.User) models.HTTPErrorStatus {
+func SaveUser(user *models.User) models.HTTPStatus {
 	if user.Password == "" {
-		return models.HTTPErrorStatus{Status: http.StatusBadRequest, Message: "Password cannot be empty"}
+		return models.HTTPStatus{Status: http.StatusBadRequest, Message: "Password cannot be empty"}
 	}
 	if !isEmailValid(user.Email) {
-		return models.HTTPErrorStatus{Status: http.StatusBadRequest, Message: "Email is not valid"}
+		return models.HTTPStatus{Status: http.StatusBadRequest, Message: "Email is not valid"}
 	}
 
 	hashedPassword, err := hashAndSalt(user.Password)
 	if err != nil {
-		return models.HTTPErrorStatus{Status: http.StatusBadGateway, Message: http.StatusText(http.StatusBadGateway)}
+		return models.HTTPStatus{Status: http.StatusBadGateway, Message: http.StatusText(http.StatusBadGateway)}
 	}
 	user.Password = hashedPassword
 	return database.SaveUser(user)
+}
+
+// MarkAsComplete updates the given experimentUser as complete
+func MarkAsComplete(experimentUser models.ExperimentUser) models.HTTPStatus {
+	return database.MarkAsComplete(experimentUser)
+}
+
+// GetCompletionCode return the completion code of the given experimentUser
+func GetCompletionCode(userID string, code string) (string, error) {
+	return database.GetCompletionCode(userID, code)
 }
 
 func isEmailValid(email string) bool {

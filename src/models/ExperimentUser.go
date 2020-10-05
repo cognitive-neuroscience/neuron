@@ -2,8 +2,8 @@ package models
 
 // ExperimentUser represents a join table between experiments and users
 type ExperimentUser struct {
-	ID             string
-	Code           string
-	Complete       bool
-	CompletionCode string
+	Code           string `json:"code" gorm:"primary_key;not null"`
+	ID             string `json:"id" gorm:"primary_key;not null"`
+	Complete       bool   `gorm:"default:false"`
+	CompletionCode string `gorm:"default:''"`
 }

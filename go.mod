@@ -18,6 +18,7 @@ require (
 	github.com/klauspost/compress v1.10.11 // indirect
 	github.com/klauspost/cpuid v1.2.1 // indirect
 	github.com/mattn/go-sqlite3 v2.0.3+incompatible // indirect
+	github.com/mitchellh/mapstructure v1.3.3
 	github.com/qor/qor v0.0.0-20200729071734-d587cffbbb93 // indirect
 	github.com/qor/validations v0.0.0-20171228122639-f364bca61b46
 	github.com/valyala/fasttemplate v1.2.1 // indirect

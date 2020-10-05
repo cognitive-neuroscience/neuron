@@ -4,7 +4,6 @@ import (
 	"errors"
 	"log"
 	"os"
-	"strconv"
 	"strings"
 	"time"
 
@@ -13,7 +12,7 @@ import (
 	"github.com/gofiber/fiber"
 )
 
-var key = os.Getenv("NEURON_TOKEN_KEY")
+var key = os.Getenv("NEURON_SECRET")
 
 // AuthenticateToken verifies if the token present in the authorization header is valid
 func AuthenticateToken(c *fiber.Ctx) (*models.Claims, error) {
@@ -51,14 +50,16 @@ func extractToken(t string) (string, error) {
 }
 
 // CreateToken returns the token and error after signing with HS256
-func CreateToken(id uint, email string, role string) (string, error) {
+func CreateToken(id string, email string, role string) (string, error) {
 	if key == "" {
+		log.Println("Using insecure DEV JWT key")
 		key = "neuron"
 	}
+	log.Println("Using secure JWT key")
 	// 4 hours before JWT expires
 	expirationTime := time.Now().Add(4 * time.Hour)
 	claims := &models.Claims{
-		UserID: strconv.FormatUint(uint64(id), 16),
+		UserID: id,
 		Email:  email,
 		Role:   role,
 		StandardClaims: jwt.StandardClaims{
