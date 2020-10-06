@@ -2,7 +2,6 @@ package services
 
 import (
 	"errors"
-	"log"
 	"net"
 	"net/http"
 	"regexp"
@@ -21,9 +20,6 @@ var emailRegex = regexp.MustCompile("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-
 // SaveExperimentAndParticipant saves user into ExperimentUser database and records if experiment has been complete
 // as well as the completion string for turkers
 func SaveExperimentAndParticipant(experimentUser models.ExperimentUser) models.HTTPStatus {
-	code := GenerateCode(10)
-	log.Println(code)
-	experimentUser.CompletionCode = code
 	return database.SaveExperimentAndParticipant(experimentUser)
 }
 
@@ -46,6 +42,9 @@ func SaveUser(user *models.User) models.HTTPStatus {
 
 // MarkAsComplete updates the given experimentUser as complete
 func MarkAsComplete(experimentUser models.ExperimentUser) models.HTTPStatus {
+	code := GenerateCode(10)
+	experimentUser.CompletionCode = code
+	experimentUser.Complete = true
 	return database.MarkAsComplete(experimentUser)
 }
 

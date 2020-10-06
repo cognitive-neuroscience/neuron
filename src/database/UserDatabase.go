@@ -40,7 +40,8 @@ func MarkAsComplete(experimentUser models.ExperimentUser) models.HTTPStatus {
 		return models.HTTPStatus{Status: http.StatusServiceUnavailable, Message: http.StatusText(http.StatusServiceUnavailable)}
 	}
 	if expUserFromDB.ID != "" {
-		expUserFromDB.Complete = true
+		expUserFromDB.Complete = experimentUser.Complete
+		expUserFromDB.Code = experimentUser.CompletionCode
 		db.Save(&expUserFromDB)
 		return models.HTTPStatus{Status: http.StatusOK, Message: http.StatusText(http.StatusOK)}
 	}
