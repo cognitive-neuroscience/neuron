@@ -136,6 +136,8 @@ func GetModel(task string) (interface{}, error) {
 	switch task {
 	case "Stroop Task", "strooptask":
 		return &models.StroopTask{}, nil
+	case "NBack", "nback":
+		return &models.NBack{}, nil
 	default:
 		return nil, errors.New("Could not get model from task name")
 	}

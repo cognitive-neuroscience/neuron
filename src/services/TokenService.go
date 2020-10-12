@@ -12,8 +12,6 @@ import (
 	"github.com/gofiber/fiber"
 )
 
-var key = os.Getenv("NEURON_SECRET")
-
 // AuthenticateToken verifies if the token present in the authorization header is valid
 func AuthenticateToken(c *fiber.Ctx) (*models.Claims, error) {
 
@@ -51,11 +49,7 @@ func extractToken(t string) (string, error) {
 
 // CreateToken returns the token and error after signing with HS256
 func CreateToken(id string, email string, role string) (string, error) {
-	if key == "" {
-		log.Println("Using insecure DEV JWT key")
-		key = "neuron"
-	}
-	log.Println("Using secure JWT key")
+	key := getKey()
 	// 4 hours before JWT expires
 	expirationTime := time.Now().Add(4 * time.Hour)
 	claims := &models.Claims{
@@ -72,9 +66,7 @@ func CreateToken(id string, email string, role string) (string, error) {
 
 // ValidateToken makes sure a given token is valid (acceptable, can be parsed, not expired)
 func ValidateToken(tokenString string) (*models.Claims, error) {
-	if key == "" {
-		key = "neuron"
-	}
+	key := getKey()
 	claims := &models.Claims{}
 	token, err := jwt.ParseWithClaims(tokenString, claims, func(token *jwt.Token) (interface{}, error) {
 		return []byte(key), nil
@@ -90,6 +82,17 @@ func ValidateToken(tokenString string) (*models.Claims, error) {
 	}
 
 	return claims, nil
+}
+
+func getKey() string {
+	key, exists := os.LookupEnv("NEURON_SECRET")
+	if exists {
+		log.Println("Using secure JWT key")
+		return key
+	}
+	log.Println("Using insecure DEV key")
+	// return simple dev key if env is absent
+	return "neuron"
 }
 
 // // ExtractClaims extracts the data from the JWT
