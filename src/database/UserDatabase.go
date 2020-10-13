@@ -33,16 +33,21 @@ func SaveExperimentAndParticipant(expUser models.ExperimentUser) models.HTTPStat
 
 // MarkAsComplete gets the record with the associated userID and experiment code, setting completion to true (or 1)
 func MarkAsComplete(experimentUser models.ExperimentUser) models.HTTPStatus {
+	log.Println("MarkAsComplete")
+	log.Println(experimentUser)
 	db := DBConn
 	var expUserFromDB models.ExperimentUser
-	if errs := db.Where(&experimentUser).First(&expUserFromDB).GetErrors(); len(errs) > 0 {
+	if errs := db.Where(models.ExperimentUser{Code: experimentUser.Code, ID: experimentUser.ID}).First(&expUserFromDB).GetErrors(); len(errs) > 0 {
 		log.Println(errs)
 		return models.HTTPStatus{Status: http.StatusServiceUnavailable, Message: http.StatusText(http.StatusServiceUnavailable)}
 	}
 	if expUserFromDB.ID != "" {
 		expUserFromDB.Complete = experimentUser.Complete
-		expUserFromDB.Code = experimentUser.CompletionCode
-		db.Save(&expUserFromDB)
+		expUserFromDB.CompletionCode = experimentUser.CompletionCode
+		if errs := db.Save(&expUserFromDB).GetErrors(); len(errs) > 0 {
+			log.Println(errs)
+			return models.HTTPStatus{Status: http.StatusServiceUnavailable, Message: http.StatusText(http.StatusServiceUnavailable)}
+		}
 		return models.HTTPStatus{Status: http.StatusOK, Message: http.StatusText(http.StatusOK)}
 	}
 	return models.HTTPStatus{Status: http.StatusServiceUnavailable, Message: http.StatusText(http.StatusServiceUnavailable)}
