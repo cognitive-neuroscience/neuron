@@ -21,8 +21,11 @@ func main() {
 }
 
 func loadEnv() {
+	// check for current directory, and if no env, check for prod path
 	if err := godotenv.Load(); err != nil {
-		log.Print("No .env file")
-		panic(".env file required")
+		if err := godotenv.Load("/usr/sbin/sharplab/.env"); err != nil {
+			log.Print("No .env file")
+			panic(".env file required")
+		}
 	}
 }
