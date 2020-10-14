@@ -21,7 +21,7 @@ func UploadTaskData(c *fiber.Ctx) {
 		}
 		experimentCode := c.Params("code")
 		taskName := c.Params("taskName")
-		httpStatus := services.SaveTaskData(experimentCode, taskName, taskData)
+		httpStatus := services.UploadTaskData(experimentCode, taskName, taskData)
 		common.SendGenericHTTPModel(c, httpStatus)
 		return
 	}

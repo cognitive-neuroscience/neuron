@@ -22,6 +22,7 @@ func RegisterRoutes(app *fiber.App) {
 	setUpLoginRoutes(api)
 	setUpTokenRoutes(api)
 	setUpUploadRoutes(api)
+	setUpDownloadRoutes(api)
 }
 
 func setUpUserRoutes(group fiber.Router) {
@@ -71,6 +72,14 @@ func setUpUploadRoutes(group fiber.Router) {
 	upload.Post("/:code/:taskName", controllers.UploadTaskData)
 	upload.Options("/*", handleOptions)
 	upload.All("/*", handleForbidden)
+}
+
+func setUpDownloadRoutes(group fiber.Router) {
+	download := group.Group("/download")
+	download.Get("/", controllers.GetTableNames)
+	download.Get("/:code/:taskName", controllers.GetTableData)
+	download.Options("/*", handleOptions)
+	download.All("/*", handleForbidden)
 }
 
 // returns MethodNotAllowed when client tries to access unsupported HTTP request

@@ -115,13 +115,14 @@ func ExperimentExists(code string) (bool, error) {
 // experimentCode - taskName
 func createTables(code string, tasks []models.Task) error {
 	for _, task := range tasks {
-		tableName := "experiment_" + code + "_task_" + strings.ToLower(RemoveWhiteSpace(task.Title))
-		tableModel, err := GetModel(task.Title)
+		taskName := strings.ToLower(RemoveWhiteSpace(task.Title))
+		tableName := "experiment_" + code + "_task_" + taskName
+		tableModel, err := GetModel(taskName)
 		if err != nil {
 			log.Println(err)
 			return err
 		}
-		dbErrors := DBConn.Table(tableName).CreateTable(tableModel).GetErrors()
+		dbErrors := DBConn.Table(tableName).CreateTable(&tableModel).GetErrors()
 
 		if len(dbErrors) > 0 {
 			log.Println(dbErrors)
@@ -134,10 +135,10 @@ func createTables(code string, tasks []models.Task) error {
 // GetModel receives the given task, and gets the model for that task
 func GetModel(task string) (interface{}, error) {
 	switch task {
-	case "Stroop Task", "strooptask":
-		return &models.StroopTask{}, nil
-	case "NBack", "nback":
-		return &models.NBack{}, nil
+	case "strooptask":
+		return models.StroopTask{}, nil
+	case "nback":
+		return models.NBack{}, nil
 	default:
 		return nil, errors.New("Could not get model from task name")
 	}
@@ -145,7 +146,8 @@ func GetModel(task string) (interface{}, error) {
 
 // RemoveWhiteSpace removes white space from a name
 func RemoveWhiteSpace(str string) string {
-	// replace " " with "" for all instances (hence -1)
+	// replace " " with "" for all instances
+	// replace "%20" with "" (%20 is space encoding)
 	replacer := strings.NewReplacer(" ", "", "%20", "")
 	return replacer.Replace(str)
 }

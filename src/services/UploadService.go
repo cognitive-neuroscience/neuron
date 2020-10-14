@@ -5,9 +5,9 @@ import (
 	"github.com/cognitive-neuroscience/neuron/src/models"
 )
 
-// SaveTaskData saves the given experiment data into a table
-func SaveTaskData(experimentCode string, taskName string, data interface{}) models.HTTPStatus {
-	return database.SaveTaskData(experimentCode, taskName, data)
+// UploadTaskData saves the given experiment data into a table
+func UploadTaskData(experimentCode string, taskName string, data interface{}) models.HTTPStatus {
+	return database.UploadTaskData(experimentCode, taskName, data)
 }
 
 // // SaveTSData creates a table and save experiment data in the database
