@@ -25,6 +25,8 @@ func GetTableNames() ([]string, error) {
 			filteredTableNames = append(filteredTableNames, tableNames[index])
 		}
 	}
+	// manually add experiment_users table as we will always want to see this
+	filteredTableNames = append(filteredTableNames, "experiment_users")
 	return filteredTableNames, nil
 }
 
