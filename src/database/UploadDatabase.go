@@ -28,7 +28,7 @@ func UploadTaskData(experimentCode string, taskName string, taskData interface{}
 			// decode the given json map and parse it into the table model
 			mapstructure.Decode(trial, &tableModel)
 			// create the record
-			errs := db.Table(tableName).Create(&tableModel).GetErrors()
+			errs := db.Table(tableName).Create(tableModel).GetErrors()
 			if len(errs) > 0 {
 				return models.HTTPStatus{Status: http.StatusServiceUnavailable, Message: http.StatusText(http.StatusServiceUnavailable)}
 			}

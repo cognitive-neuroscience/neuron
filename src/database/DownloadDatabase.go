@@ -45,7 +45,10 @@ func retrieveDataFromTable(tableName string, taskName string) (interface{}, erro
 		slice := []models.StroopTask{}
 		err = db.Table(tableName).Order("user_id, trial").Find(&slice).Error
 		return slice, err
-	// case "nback":
+	case "nback":
+		slice := []models.NBack{}
+		err = db.Table(tableName).Order("user_id, trial").Find(&slice).Error
+		return slice, err
 	default:
 		return nil, errors.New("Could not get model from task name")
 	}

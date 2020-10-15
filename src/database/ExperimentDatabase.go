@@ -69,6 +69,7 @@ func SaveExperiment(experiment *models.Experiment) models.HTTPStatus {
 	// create the experiment
 	errors := db.Create(&experiment).GetErrors()
 	if len(errors) > 0 {
+		log.Println(errors)
 		return models.HTTPStatus{Status: http.StatusBadRequest, Message: errors[0].Error()}
 	}
 
@@ -88,6 +89,7 @@ func SaveExperiment(experiment *models.Experiment) models.HTTPStatus {
 		// if there is an error creating, then skip adding this ExperimentTask
 		// and make sure the next one maintains the correct chronological order
 		if len(errors) > 0 {
+			log.Println(errors)
 			adjustment++
 		}
 	}
@@ -122,9 +124,10 @@ func createTables(code string, tasks []models.Task) error {
 			log.Println(err)
 			return err
 		}
-		dbErrors := DBConn.Table(tableName).CreateTable(&tableModel).GetErrors()
+		dbErrors := DBConn.Table(tableName).CreateTable(tableModel).GetErrors()
 
 		if len(dbErrors) > 0 {
+			log.Println("Error when creating table: " + tableName)
 			log.Println(dbErrors)
 			return errors.New("could not create table " + tableName)
 		}
@@ -148,7 +151,7 @@ func GetModel(task string) (interface{}, error) {
 func RemoveWhiteSpace(str string) string {
 	// replace " " with "" for all instances
 	// replace "%20" with "" (%20 is space encoding)
-	replacer := strings.NewReplacer(" ", "", "%20", "")
+	replacer := strings.NewReplacer(" ", "", "%20", "", "-", "")
 	return replacer.Replace(str)
 }
 
