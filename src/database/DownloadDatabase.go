@@ -25,8 +25,10 @@ func GetTableNames() ([]string, error) {
 			filteredTableNames = append(filteredTableNames, tableNames[index])
 		}
 	}
-	// manually add experiment_users table as we will always want to see this
+	// manually add experiment_users and mturk_questionnaire_responses tables as we will always
+	// want to see this
 	filteredTableNames = append(filteredTableNames, "experiment_users")
+	filteredTableNames = append(filteredTableNames, "mturk_questionnaire_responses")
 	return filteredTableNames, nil
 }
 
@@ -35,6 +37,8 @@ func GetTableNames() ([]string, error) {
 func GetTableData(experimentCode string, taskName string) (interface{}, error) {
 	if experimentCode == "experiment" && taskName == "users" {
 		return retrieveDataFromTable("experiment_users", "experiment_users")
+	} else if experimentCode == "mturk" && taskName == "questionnaire" {
+		return retrieveDataFromTable("mturk_questionnaire_responses", "mturk_questionnaire_responses")
 	} else {
 		task := strings.ToLower(RemoveWhiteSpace(taskName))
 		tableName := "experiment_" + experimentCode + "_task_" + task
@@ -56,6 +60,10 @@ func retrieveDataFromTable(tableName string, taskName string) (interface{}, erro
 		return slice, err
 	case "experiment_users":
 		slice := []models.ExperimentUser{}
+		err = db.Table(tableName).Find(&slice).Error
+		return slice, err
+	case "mturk_questionnaire_responses":
+		slice := []models.MturkQuestionnaireResponse{}
 		err = db.Table(tableName).Find(&slice).Error
 		return slice, err
 	default:
