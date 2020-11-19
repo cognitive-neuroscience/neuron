@@ -16,7 +16,6 @@ func main() {
 	database.SetEnvironment()
 	database.ConnectDB()
 	database.AutoMigrate()
-	database.AutoPopulate()
 	server.CreateServer()
 }
 

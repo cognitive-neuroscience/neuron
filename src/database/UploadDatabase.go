@@ -2,7 +2,6 @@ package database
 
 import (
 	"net/http"
-	"strings"
 
 	"github.com/cognitive-neuroscience/neuron/src/models"
 	"github.com/mitchellh/mapstructure"
@@ -12,11 +11,11 @@ import (
 // EXPERIMENT_<experimentCode>_TASK_<taskName>
 func UploadTaskData(experimentCode string, taskName string, taskData interface{}) models.HTTPStatus {
 	db := DBConn
-	taskName = strings.ToLower(RemoveWhiteSpace(taskName))
-	tableName := "experiment_" + experimentCode + "_task_" + strings.ToLower(RemoveWhiteSpace(taskName))
+	formattedTaskName := Format(taskName)
+	tableName := "experiment_" + experimentCode + "_task_" + formattedTaskName
 
 	// get the model based off of the table name
-	tableModel, err := GetModel(taskName)
+	tableModel, err := GetModel(formattedTaskName)
 	if err != nil {
 		return models.HTTPStatus{Status: http.StatusServiceUnavailable, Message: http.StatusText(http.StatusServiceUnavailable)}
 	}

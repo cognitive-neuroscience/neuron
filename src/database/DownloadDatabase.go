@@ -1,11 +1,8 @@
 package database
 
 import (
-	"errors"
 	"log"
 	"strings"
-
-	"github.com/cognitive-neuroscience/neuron/src/models"
 )
 
 var getTableNames string = "SHOW TABLES"
@@ -40,7 +37,7 @@ func GetTableData(experimentCode string, taskName string) (interface{}, error) {
 	} else if experimentCode == "mturk" && taskName == "questionnaire" {
 		return retrieveDataFromTable("mturk_questionnaire_responses", "mturk_questionnaire_responses")
 	} else {
-		task := strings.ToLower(RemoveWhiteSpace(taskName))
+		task := Format(taskName)
 		tableName := "experiment_" + experimentCode + "_task_" + task
 		return retrieveDataFromTable(tableName, task)
 	}
@@ -49,24 +46,17 @@ func GetTableData(experimentCode string, taskName string) (interface{}, error) {
 func retrieveDataFromTable(tableName string, taskName string) (interface{}, error) {
 	db := DBConn
 	var err error = nil
-	switch taskName {
-	case "strooptask":
-		slice := []models.StroopTask{}
-		err = db.Table(tableName).Order("user_id, trial").Find(&slice).Error
-		return slice, err
-	case "nback":
-		slice := []models.NBack{}
-		err = db.Table(tableName).Order("user_id, trial").Find(&slice).Error
-		return slice, err
-	case "experiment_users":
-		slice := []models.ExperimentUser{}
-		err = db.Table(tableName).Find(&slice).Error
-		return slice, err
-	case "mturk_questionnaire_responses":
-		slice := []models.MturkQuestionnaireResponse{}
-		err = db.Table(tableName).Find(&slice).Error
-		return slice, err
-	default:
-		return nil, errors.New("Could not get model from task name")
+
+	slice, err := GetModelSlice(taskName)
+	if err != nil {
+		return nil, err
 	}
+
+	if taskName == "experiment_users" || taskName == "mturk_questionnaire_responses" {
+		err = db.Table(tableName).Find(&slice).Error
+		return slice, err
+	}
+	err = db.Table(tableName).Order("user_id, trial").Find(&slice).Error
+	return slice, err
+
 }

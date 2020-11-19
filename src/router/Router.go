@@ -18,7 +18,6 @@ func RegisterRoutes(app *fiber.App) {
 
 	setUpUserRoutes(api)
 	setUpExperimentRoutes(api)
-	setUpTaskRoutes(api)
 	setUpLoginRoutes(api)
 	setUpTokenRoutes(api)
 	setUpUploadRoutes(api)
@@ -28,7 +27,6 @@ func RegisterRoutes(app *fiber.App) {
 
 func setUpUserRoutes(group fiber.Router) {
 	users := group.Group("/users")
-	users.Get("/", controllers.GetAllUsers)
 	users.Post("/", controllers.SaveUser)
 	users.Post("/complete", controllers.MarkAsComplete)
 	users.Get("/:userid/:code", controllers.GetCompletionCode)
@@ -44,13 +42,6 @@ func setUpExperimentRoutes(group fiber.Router) {
 	experiments.Delete("/:code", controllers.DeleteExperiment)
 	experiments.Options("/*", handleOptions)
 	experiments.All("/*", handleForbidden)
-}
-
-func setUpTaskRoutes(group fiber.Router) {
-	tasks := group.Group("/tasks")
-	tasks.Get("/", controllers.GetAllTasks)
-	tasks.Options("/*", handleOptions)
-	tasks.All("/*", handleForbidden)
 }
 
 func setUpLoginRoutes(group fiber.Router) {

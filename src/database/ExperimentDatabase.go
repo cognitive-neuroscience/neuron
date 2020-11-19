@@ -4,7 +4,6 @@ import (
 	"errors"
 	"log"
 	"net/http"
-	"strings"
 
 	"github.com/cognitive-neuroscience/neuron/src/models"
 )
@@ -14,7 +13,7 @@ import (
 /* inner join between experiment_tasks and tasks. This gets all records relating to a specific experiment
  * and then returns them ordered as a task struct.
  */
-var getOrderedTasks string = "SELECT ID as id, title, description, type FROM experiment_tasks LEFT JOIN tasks ON task_id = ID WHERE experiment_code = ? ORDER BY place ASC"
+var getOrderedTasks string = "SELECT task_id as Tasks FROM experiment_tasks WHERE experiment_code = ? ORDER BY place ASC;"
 
 // DeleteExperiment deletes the experiment with the given code. It also deletes all references in the ExperimentTask join table
 func DeleteExperiment(code string) models.HTTPStatus {
@@ -47,7 +46,12 @@ func GetAllExperiments() ([]models.Experiment, error) {
 
 	for index, experiment := range experiments {
 		// for each experiment, make an SQL query to get all tasks
-		db.Raw(getOrderedTasks, experiment.Code).Scan(&experiments[index].Tasks)
+
+		err := db.Raw(getOrderedTasks, experiment.Code).Pluck("Tasks", &experiments[index].Tasks).Error
+		if err != nil {
+			log.Println("There was an error getting tasks")
+			return nil, err
+		}
 	}
 
 	return experiments, err
@@ -61,10 +65,6 @@ func SaveExperiment(experiment *models.Experiment) models.HTTPStatus {
 	if err != nil {
 		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)}
 	}
-
-	// get all tasks
-	tasks := []models.Task{}
-	db.Find(&tasks)
 
 	// create the experiment
 	errors := db.Create(&experiment).GetErrors()
@@ -82,7 +82,7 @@ func SaveExperiment(experiment *models.Experiment) models.HTTPStatus {
 
 		experimentTaskObj := models.ExperimentTask{
 			ExperimentCode: experiment.Code,
-			TaskID:         task.ID,
+			TaskID:         task,
 			Place:          index - adjustment,
 		}
 		errors := db.Create(&experimentTaskObj).GetErrors()
@@ -115,9 +115,9 @@ func ExperimentExists(code string) (bool, error) {
 }
 
 // experimentCode - taskName
-func createTables(code string, tasks []models.Task) error {
+func createTables(code string, tasks []string) error {
 	for _, task := range tasks {
-		taskName := strings.ToLower(RemoveWhiteSpace(task.Title))
+		taskName := Format(task)
 		tableName := "experiment_" + code + "_task_" + taskName
 		tableModel, err := GetModel(taskName)
 		if err != nil {
@@ -135,26 +135,6 @@ func createTables(code string, tasks []models.Task) error {
 	return nil
 }
 
-// GetModel receives the given task, and gets the model for that task
-func GetModel(task string) (interface{}, error) {
-	switch task {
-	case "strooptask":
-		return models.StroopTask{}, nil
-	case "nback":
-		return models.NBack{}, nil
-	default:
-		return nil, errors.New("Could not get model from task name")
-	}
-}
-
-// RemoveWhiteSpace removes white space from a name
-func RemoveWhiteSpace(str string) string {
-	// replace " " with "" for all instances
-	// replace "%20" with "" (%20 is space encoding)
-	replacer := strings.NewReplacer(" ", "", "%20", "", "-", "")
-	return replacer.Replace(str)
-}
-
 // GetExperiment gets the experiment based on the given code
 func GetExperiment(code string) (models.Experiment, error) {
 	db := DBConn
@@ -163,6 +143,6 @@ func GetExperiment(code string) (models.Experiment, error) {
 		log.Println(err.Error())
 		return experiment, errors.New(err.Error())
 	}
-	db.Raw(getOrderedTasks, experiment.Code).Scan(&experiment.Tasks)
+	db.Raw(getOrderedTasks, experiment.Code).Pluck("Tasks", &experiment.Tasks)
 	return experiment, nil
 }

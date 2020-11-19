@@ -10,16 +10,10 @@ import (
 func AutoMigrate() {
 	log.Println("Starting MySQL migrations")
 
-	// remove this later
-	// DBConn.DropTableIfExists(&models.ExperimentTask{})
-	// DBConn.DropTableIfExists(&models.Experiment{})
-	// DBConn.DropTableIfExists(&models.Task{})
-
 	DBConn.AutoMigrate(
 		&models.ExperimentTask{},
 		&models.User{},
 		&models.Experiment{},
-		&models.Task{},
 		&models.ExperimentUser{},
 		&models.MturkQuestionnaireResponse{},
 	)

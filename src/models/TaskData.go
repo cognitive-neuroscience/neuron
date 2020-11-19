@@ -14,8 +14,8 @@ package models
 // 	ColorMapping string  `json:"colorMapping"`
 // }
 
-// StroopTask represents a model for the data received from the Stroop Task
-type StroopTask struct {
+// Stroop represents a model for the data received from the Stroop Task
+type Stroop struct {
 	UserID       string  `json:"userID"`
 	Trial        int     `json:"trial"`
 	ActualAnswer string  `json:"actualAnswer"`

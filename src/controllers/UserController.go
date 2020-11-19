@@ -10,22 +10,6 @@ import (
 	"github.com/gofiber/fiber"
 )
 
-// GetAllUsers is the users api entry point for returning all existing experiments
-// only for dev purposes, delete later!
-func GetAllUsers(c *fiber.Ctx) {
-	authorizedRoles := []string{common.ADMIN}
-	if common.IsAllowed(c, authorizedRoles) {
-		tasks, err := services.GetAllTasks()
-		if err != nil {
-			common.SendHTTPStatusServiceUnavailable(c)
-			return
-		}
-		c.JSON(tasks)
-		return
-	}
-	common.SendHTTPForbidden(c)
-}
-
 // SaveUser saves a given user in the DB
 // this route does not require a JWT as users may be creating an account
 func SaveUser(c *fiber.Ctx) {

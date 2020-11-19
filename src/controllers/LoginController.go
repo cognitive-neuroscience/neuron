@@ -94,6 +94,7 @@ func LoginTurker(c *fiber.Ctx) {
 			"userId":  experimentUser.ID,
 			"role":    common.PARTICIPANT,
 		})
+		log.Println(experimentUser.ID + " logged in")
 		return
 	}
 
