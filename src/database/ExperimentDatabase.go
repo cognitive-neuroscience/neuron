@@ -143,6 +143,7 @@ func GetExperiment(code string) (models.Experiment, error) {
 		log.Println(err.Error())
 		return experiment, errors.New(err.Error())
 	}
+	// use pluck to get the specific column
 	db.Raw(getOrderedTasks, experiment.Code).Pluck("Tasks", &experiment.Tasks)
 	return experiment, nil
 }
