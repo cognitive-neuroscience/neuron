@@ -87,7 +87,6 @@ func ValidateToken(tokenString string) (*models.Claims, error) {
 func getKey() string {
 	key, exists := os.LookupEnv("NEURON_SECRET")
 	if exists {
-		log.Println("Using secure JWT key")
 		return key
 	}
 	log.Println("Using insecure DEV key")
