@@ -7,13 +7,32 @@ import (
 	"github.com/cognitive-neuroscience/neuron/src/models"
 )
 
+/*
+ * This file is for common methods shared within the database module
+ */
+
+// exported task names
+const (
+	STROOP          = "stroop"
+	NBACK           = "nback"
+	TASKSWITCHING   = "taskswitching"
+	TRAILMAKING     = "trailmaking"
+	DEMANDSELECTION = "demandselection"
+)
+
 // GetModel receives the given task, and gets the model for that task
 func GetModel(task string) (interface{}, error) {
 	switch task {
-	case "stroop":
+	case STROOP:
 		return models.Stroop{}, nil
-	case "nback":
+	case NBACK:
 		return models.NBack{}, nil
+	case TASKSWITCHING:
+		return models.TaskSwitching{}, nil
+	case TRAILMAKING:
+		return models.TrailMaking{}, nil
+	case DEMANDSELECTION:
+		return models.DemandSelection{}, nil
 	default:
 		return nil, errors.New("Could not get model from task name: " + task)
 	}
@@ -29,7 +48,7 @@ func GetModelSlice(modelName string) (interface{}, error) {
 	case "experiment_users":
 		return []models.ExperimentUser{}, nil
 	case "mturk_questionnaire_responses":
-		return []models.MturkQuestionnaireResponse{}, nil
+		return []models.DemographicsQuestionnaireResponse{}, nil
 	default:
 		return nil, errors.New("Could not get model slice from model name")
 	}

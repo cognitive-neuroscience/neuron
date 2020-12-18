@@ -8,6 +8,10 @@ import (
 	"github.com/cognitive-neuroscience/neuron/src/models"
 )
 
+/*
+ * This file is for saving/deleting/retrieving user data
+ */
+
 // SaveUser saves a user in the database
 func SaveUser(user *models.User) models.HTTPStatus {
 	db := DBConn

@@ -10,6 +10,10 @@ import (
 	"github.com/qor/validations"
 )
 
+/*
+ * Database file that deals with config. Looks for a .env file to set the env, and connect to the right DB
+ */
+
 // ENV holds the environment we are using
 var ENV string
 

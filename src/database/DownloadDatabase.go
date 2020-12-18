@@ -5,6 +5,10 @@ import (
 	"strings"
 )
 
+/*
+ * This file is for getting data so that the admin can download it onto excel spreadsheets.
+ */
+
 var getTableNames string = "SHOW TABLES"
 
 // GetTableNames returns a list of tables that data can be retrieved from

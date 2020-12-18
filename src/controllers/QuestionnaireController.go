@@ -11,7 +11,7 @@ import (
 func SaveQuestionnaireResponse(c *fiber.Ctx) {
 	authorizedRoles := []string{common.ADMIN, common.PARTICIPANT}
 	if common.IsAllowed(c, authorizedRoles) {
-		response := new(models.MturkQuestionnaireResponse)
+		response := new(models.DemographicsQuestionnaireResponse)
 		if err := c.BodyParser(response); err != nil {
 			common.SendHTTPBadRequest(c)
 			return

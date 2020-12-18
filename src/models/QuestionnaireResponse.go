@@ -1,7 +1,7 @@
 package models
 
-// MturkQuestionnaireResponse represents the questionnaire responses completed by Mturk participants
-type MturkQuestionnaireResponse struct {
+// DemographicsQuestionnaireResponse represents the questionnaire responses completed by Mturk participants
+type DemographicsQuestionnaireResponse struct {
 	ExperimentCode     string `json:"experimentCode"`
 	ID                 string `json:"userID"`
 	Age                int    `json:"age"`

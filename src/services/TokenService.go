@@ -93,27 +93,3 @@ func getKey() string {
 	// return simple dev key if env is absent
 	return "neuron"
 }
-
-// // ExtractClaims extracts the data from the JWT
-// func ExtractClaims(c *fiber.Ctx) (models.Claims, error) {
-// 	claims := models.Claims{}
-// 	token := c.Get("Authorization")
-
-// 	// 2. check that token string is extractable and get it
-// 	extractedToken, err := extractToken(token)
-// 	if err != nil {
-// 		log.Println("Token is not extractable. Error:")
-// 		log.Println(err)
-// 		return claims, err
-// 	}
-
-// 	aToken, err := jwt.ParseWithClaims(extractedToken, claims, func(token *jwt.Token) (interface{}, error) {
-// 		return []byte(key), nil
-// 	})
-
-// 	if err != nil || !aToken.Valid {
-// 		log.Println(err)
-// 		return claims, err
-// 	}
-// 	return claims, nil
-// }

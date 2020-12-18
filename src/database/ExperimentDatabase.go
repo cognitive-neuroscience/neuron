@@ -8,6 +8,10 @@ import (
 	"github.com/cognitive-neuroscience/neuron/src/models"
 )
 
+/*
+ * This file is for saving/deleting/retrieving data involving experiments (studies)
+ */
+
 // SQL statements
 
 /* inner join between experiment_tasks and tasks. This gets all records relating to a specific experiment

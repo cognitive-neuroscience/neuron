@@ -7,7 +7,11 @@ import (
 	"github.com/mitchellh/mapstructure"
 )
 
-// UploadTaskData saves the given taskData into the correct database. The database is of the name
+/*
+ * This file is for uploading participant task data to the correct table
+ */
+
+// UploadTaskData saves the given GENERIC taskData into the correct database. The database is of the name
 // EXPERIMENT_<experimentCode>_TASK_<taskName>
 func UploadTaskData(experimentCode string, taskName string, taskData interface{}) models.HTTPStatus {
 	db := DBConn

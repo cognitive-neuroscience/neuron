@@ -6,6 +6,6 @@ import (
 )
 
 // SaveQuestionnaireResponse calls the database to save the response
-func SaveQuestionnaireResponse(response *models.MturkQuestionnaireResponse) models.HTTPStatus {
+func SaveQuestionnaireResponse(response *models.DemographicsQuestionnaireResponse) models.HTTPStatus {
 	return database.SaveQuestionnaireResponse(response)
 }

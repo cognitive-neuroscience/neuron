@@ -7,8 +7,12 @@ import (
 	"github.com/cognitive-neuroscience/neuron/src/models"
 )
 
+/*
+ * This file is for saving questionnaire responses to the db
+ */
+
 // SaveQuestionnaireResponse saves the given questionnaire response in to the database
-func SaveQuestionnaireResponse(response *models.MturkQuestionnaireResponse) models.HTTPStatus {
+func SaveQuestionnaireResponse(response *models.DemographicsQuestionnaireResponse) models.HTTPStatus {
 	db := DBConn
 	errors := db.Create(&response).GetErrors()
 	if len(errors) > 0 {
