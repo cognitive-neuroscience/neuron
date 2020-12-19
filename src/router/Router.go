@@ -76,7 +76,8 @@ func setUpDownloadRoutes(group fiber.Router) {
 
 func setUpQuestionnaireRoutes(group fiber.Router) {
 	questionnaire := group.Group("/questionnaire")
-	questionnaire.Post("/", controllers.SaveQuestionnaireResponse)
+	questionnaire.Post("/demographics", controllers.SaveDemographicsQuestionnaireResponse)
+	questionnaire.Post("/feedback", controllers.SaveFeedbackQuestionnaireResponse)
 	questionnaire.Options("/*", handleOptions)
 	questionnaire.All("/*", handleForbidden)
 }

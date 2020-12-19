@@ -11,3 +11,11 @@ type DemographicsQuestionnaireResponse struct {
 	HasNeuroConditions bool   `json:"hasNeuroConditions"`
 	HasPsychConditions bool   `json:"hasPsychConditions"`
 }
+
+// FeedbackQuestionnaireResponse represents the feedback given by participants about the experiment
+type FeedbackQuestionnaireResponse struct {
+	ExperimentCode     string `json:"experimentCode"`
+	ID                 string `json:"userID"`
+	IssuesEncountered  string `json:"issuesEncountered"`
+	AdditionalFeedback string `json:"additionalFeedback"`
+}

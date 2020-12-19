@@ -7,8 +7,8 @@ import (
 	"github.com/gofiber/fiber"
 )
 
-// SaveQuestionnaireResponse is the questionnaire api entry point for saving a given questionnaire response
-func SaveQuestionnaireResponse(c *fiber.Ctx) {
+// SaveDemographicsQuestionnaireResponse is the questionnaire api entry point for saving a given questionnaire response
+func SaveDemographicsQuestionnaireResponse(c *fiber.Ctx) {
 	authorizedRoles := []string{common.ADMIN, common.PARTICIPANT}
 	if common.IsAllowed(c, authorizedRoles) {
 		response := new(models.DemographicsQuestionnaireResponse)
@@ -16,7 +16,23 @@ func SaveQuestionnaireResponse(c *fiber.Ctx) {
 			common.SendHTTPBadRequest(c)
 			return
 		}
-		result := services.SaveQuestionnaireResponse(response)
+		result := services.SaveDemographicsQuestionnaireResponse(response)
+		common.SendGenericHTTPModel(c, result)
+		return
+	}
+	common.SendHTTPStatusServiceUnavailable(c)
+}
+
+// SaveFeedbackQuestionnaireResponse is the questionnaire api entry point for saving a feedback questionnaire response
+func SaveFeedbackQuestionnaireResponse(c *fiber.Ctx) {
+	authorizedRoles := []string{common.ADMIN, common.PARTICIPANT}
+	if common.IsAllowed(c, authorizedRoles) {
+		response := new(models.FeedbackQuestionnaireResponse)
+		if err := c.BodyParser(response); err != nil {
+			common.SendHTTPBadRequest(c)
+			return
+		}
+		result := services.SaveFeedbackQuestionnaireResponse(response)
 		common.SendGenericHTTPModel(c, result)
 		return
 	}

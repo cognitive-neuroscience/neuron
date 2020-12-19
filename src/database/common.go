@@ -13,11 +13,13 @@ import (
 
 // exported task names
 const (
-	STROOP          = "stroop"
-	NBACK           = "nback"
-	TASKSWITCHING   = "taskswitching"
-	TRAILMAKING     = "trailmaking"
-	DEMANDSELECTION = "demandselection"
+	STROOP                    = "stroop"
+	NBACK                     = "nback"
+	TASKSWITCHING             = "taskswitching"
+	TRAILMAKING               = "trailmaking"
+	DEMANDSELECTION           = "demandselection"
+	EXPERIMENTUSERS           = "experiment_users"
+	DEMOGRAPHICSQUESTIONNAIRE = "mturk_questionnaire_responses"
 )
 
 // GetModel receives the given task, and gets the model for that task
@@ -35,22 +37,6 @@ func GetModel(task string) (interface{}, error) {
 		return models.DemandSelection{}, nil
 	default:
 		return nil, errors.New("Could not get model from task name: " + task)
-	}
-}
-
-// GetModelSlice receives the given model name nad returns a slice of the model
-func GetModelSlice(modelName string) (interface{}, error) {
-	switch modelName {
-	case "stroop":
-		return []models.Stroop{}, nil
-	case "nback":
-		return []models.NBack{}, nil
-	case "experiment_users":
-		return []models.ExperimentUser{}, nil
-	case "mturk_questionnaire_responses":
-		return []models.DemographicsQuestionnaireResponse{}, nil
-	default:
-		return nil, errors.New("Could not get model slice from model name")
 	}
 }
 

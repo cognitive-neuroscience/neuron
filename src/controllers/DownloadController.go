@@ -14,7 +14,12 @@ func GetTableData(c *fiber.Ctx) {
 	if common.IsAllowed(c, authorizedRoles) {
 		experimentCode := c.Params("code")
 		task := c.Params("taskName")
-		data, _ := services.GetTableData(experimentCode, task)
+		data, err := services.GetTableData(experimentCode, task)
+		log.Println(err)
+		if err != nil {
+			common.SendHTTPStatusServiceUnavailable(c)
+			return
+		}
 		c.JSON(data)
 		return
 	}

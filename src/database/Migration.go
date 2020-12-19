@@ -20,6 +20,7 @@ func AutoMigrate() {
 		&models.Experiment{},
 		&models.ExperimentUser{},
 		&models.DemographicsQuestionnaireResponse{},
+		&models.FeedbackQuestionnaireResponse{},
 	)
 	log.Println("MySQL migrations complete")
 }

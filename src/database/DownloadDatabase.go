@@ -1,8 +1,10 @@
 package database
 
 import (
+	"errors"
 	"log"
-	"strings"
+
+	"github.com/cognitive-neuroscience/neuron/src/models"
 )
 
 /*
@@ -10,6 +12,7 @@ import (
  */
 
 var getTableNames string = "SHOW TABLES"
+var excludedTableNames = []string{"users", "experiments", "experiment_tasks"}
 
 // GetTableNames returns a list of tables that data can be retrieved from
 func GetTableNames() ([]string, error) {
@@ -19,18 +22,25 @@ func GetTableNames() ([]string, error) {
 		log.Println(err)
 		return tableNames, err
 	}
-	filteredTableNames := []string{}
-	for index, name := range tableNames {
-		newStr := strings.Split(name, "_")
-		if len(newStr) == 4 && newStr[0] == "experiment" && newStr[2] == "task" {
-			filteredTableNames = append(filteredTableNames, tableNames[index])
+	counter := 0
+	for _, name := range tableNames {
+		// keep all table names we want, and remove the ones we don't want
+		if !contains(excludedTableNames, name) {
+			tableNames[counter] = name
+			counter++
 		}
 	}
-	// manually add experiment_users and mturk_questionnaire_responses tables as we will always
-	// want to see this
-	filteredTableNames = append(filteredTableNames, "experiment_users")
-	filteredTableNames = append(filteredTableNames, "mturk_questionnaire_responses")
-	return filteredTableNames, nil
+
+	return tableNames[:counter], nil
+}
+
+func contains(stringSlice []string, val string) bool {
+	for _, element := range stringSlice {
+		if element == val {
+			return true
+		}
+	}
+	return false
 }
 
 // GetTableData receives the experimentCode and taskName, retrieving the data from the assoc table
@@ -49,18 +59,37 @@ func GetTableData(experimentCode string, taskName string) (interface{}, error) {
 
 func retrieveDataFromTable(tableName string, taskName string) (interface{}, error) {
 	db := DBConn
-	var err error = nil
 
-	slice, err := GetModelSlice(taskName)
-	if err != nil {
-		return nil, err
-	}
-
-	if taskName == "experiment_users" || taskName == "mturk_questionnaire_responses" {
-		err = db.Table(tableName).Find(&slice).Error
+	switch taskName {
+	case STROOP:
+		slice := []models.Stroop{}
+		err := db.Table(tableName).Order("user_id, trial").Find(&slice).Error
 		return slice, err
+	case NBACK:
+		slice := []models.NBack{}
+		err := db.Table(tableName).Order("user_id, trial").Find(&slice).Error
+		return slice, err
+	case EXPERIMENTUSERS:
+		slice := []models.ExperimentUser{}
+		err := db.Table(tableName).Find(&slice).Error
+		return slice, err
+	case DEMANDSELECTION:
+		slice := []models.DemandSelection{}
+		err := db.Table(tableName).Find(&slice).Error
+		return slice, err
+	case TASKSWITCHING:
+		slice := []models.TaskSwitching{}
+		err := db.Table(tableName).Find(&slice).Error
+		return slice, err
+	case TRAILMAKING:
+		slice := []models.TrailMaking{}
+		err := db.Table(tableName).Find(&slice).Error
+		return slice, err
+	case DEMOGRAPHICSQUESTIONNAIRE:
+		slice := []models.DemographicsQuestionnaireResponse{}
+		err := db.Table(tableName).Find(&slice).Error
+		return slice, err
+	default:
+		return nil, errors.New("Could not get model slice from model name")
 	}
-	err = db.Table(tableName).Order("user_id, trial").Find(&slice).Error
-	return slice, err
-
 }

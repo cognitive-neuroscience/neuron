@@ -10,7 +10,7 @@ type TaskSwitching struct {
 	ActualAnswer string  `json:"actualAnswer"`
 	UserAnswer   string  `json:"userAnswer"`
 	ResponseTime float64 `json:"responseTime"`
-	IsCorrect    int     `json:"isCorrect"`
+	IsCorrect    bool    `json:"isCorrect"`
 }
 
 // DemandSelection represents a model for the data received from the Demand Selection Task
@@ -36,7 +36,7 @@ type TrailMaking struct {
 	Trial             int    `json:"trial"`
 	Score             int    `json:"score"`
 	TrialType         string `json:"trialType"`
-	ActualAnswer      string `json:"ActualAnswer"`
+	ActualAnswer      string `json:"actualAnswer"`
 	UserAnswer        string `json:"userAnswer"`
 	TimeFromLastClick int    `json:"timeFromLastClick"`
 	IsCorrect         bool   `json:"isCorrect"`
