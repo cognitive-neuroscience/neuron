@@ -48,8 +48,8 @@ func contains(stringSlice []string, val string) bool {
 func GetTableData(experimentCode string, taskName string) (interface{}, error) {
 	if experimentCode == "experiment" && taskName == "users" {
 		return retrieveDataFromTable("experiment_users", "experiment_users")
-	} else if experimentCode == "mturk" && taskName == "questionnaire" {
-		return retrieveDataFromTable("mturk_questionnaire_responses", "mturk_questionnaire_responses")
+	} else if experimentCode == "demographics" && taskName == "questionnaire" {
+		return retrieveDataFromTable("demographics_questionnaire_responses", "demographics_questionnaire_responses")
 	} else {
 		task := Format(taskName)
 		tableName := "experiment_" + experimentCode + "_task_" + task

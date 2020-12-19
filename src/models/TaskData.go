@@ -28,6 +28,7 @@ type DemandSelection struct {
 	ResponseTime        int    `json:"responseTime"`
 	IsCorrect           bool   `json:"isCorrect"`
 	Block               int    `json:"block"`
+	Rotation            int    `json:"rotation"`
 }
 
 // TrailMaking represents a model for the data received from the TrailMaking Task

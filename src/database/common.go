@@ -19,7 +19,7 @@ const (
 	TRAILMAKING               = "trailmaking"
 	DEMANDSELECTION           = "demandselection"
 	EXPERIMENTUSERS           = "experiment_users"
-	DEMOGRAPHICSQUESTIONNAIRE = "mturk_questionnaire_responses"
+	DEMOGRAPHICSQUESTIONNAIRE = "demographics_questionnaire_responses"
 )
 
 // GetModel receives the given task, and gets the model for that task
