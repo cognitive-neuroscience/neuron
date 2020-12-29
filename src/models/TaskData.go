@@ -13,7 +13,7 @@ type TaskSwitching struct {
 	Digit        int       `json:"digit"`
 	ActualAnswer string    `json:"actualAnswer"`
 	UserAnswer   string    `json:"userAnswer"`
-	ResponseTime float64   `json:"responseTime"`
+	ResponseTime int       `json:"responseTime"`
 	IsCorrect    bool      `json:"isCorrect"`
 	IsPractice   bool      `json:"isPractice"`
 	Submitted    time.Time `json:"submitted"`
@@ -65,7 +65,7 @@ type Stroop struct {
 	UserAnswer   string    `json:"userAnswer"`
 	IsCorrect    bool      `json:"isCorrect"`
 	IsCongruent  bool      `json:"isCongruent"`
-	ResponseTime float32   `json:"responseTime"`
+	ResponseTime int       `json:"responseTime"`
 	Set          int       `json:"set"` // A participant is presented with 1 out of 4 potential data sets
 	Submitted    time.Time `json:"submitted"`
 	IsPractice   bool      `json:"isPractice"`
@@ -79,7 +79,7 @@ type NBack struct {
 	ActualAnswer string    `json:"actualAnswer"`
 	UserAnswer   string    `json:"userAnswer"`
 	IsCorrect    bool      `json:"isCorrect"`
-	ResponseTime float32   `json:"responseTime"`
+	ResponseTime int       `json:"responseTime"`
 	Set          int       `json:"set"` // A participant is presented with 1 out of 4 potentail data sets
 	Submitted    time.Time `json:"submitted"`
 	IsPractice   bool      `json:"isPractice"`
