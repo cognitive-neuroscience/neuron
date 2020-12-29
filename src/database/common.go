@@ -20,6 +20,7 @@ const (
 	DEMANDSELECTION           = "demandselection"
 	EXPERIMENTUSERS           = "experiment_users"
 	DEMOGRAPHICSQUESTIONNAIRE = "demographics_questionnaire_responses"
+	FEEDBACKQUESTIONNAIRE     = "feedback_questionnaire_responses"
 )
 
 // GetModel receives the given task, and gets the model for that task
@@ -37,6 +38,28 @@ func GetModel(task string) (interface{}, error) {
 		return models.DemandSelection{}, nil
 	default:
 		return nil, errors.New("Could not get model from task name: " + task)
+	}
+}
+
+// GetModelSlice receives the given task and returns the model slice for that task
+func GetModelSlice(task string) (interface{}, error) {
+	switch task {
+	case STROOP:
+		return []models.Stroop{}, nil
+	case NBACK:
+		return []models.NBack{}, nil
+	case EXPERIMENTUSERS:
+		return []models.ExperimentUser{}, nil
+	case DEMANDSELECTION:
+		return []models.DemandSelection{}, nil
+	case TASKSWITCHING:
+		return []models.TaskSwitching{}, nil
+	case TRAILMAKING:
+		return []models.TrailMaking{}, nil
+	case DEMOGRAPHICSQUESTIONNAIRE:
+		return []models.DemographicsQuestionnaireResponse{}, nil
+	default:
+		return nil, errors.New("Could not get model slice from task name: " + task)
 	}
 }
 

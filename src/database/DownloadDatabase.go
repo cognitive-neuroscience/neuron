@@ -12,7 +12,12 @@ import (
  */
 
 var getTableNames string = "SHOW TABLES"
+
+// table that we don't want to show to the user
 var excludedTableNames = []string{"users", "experiments", "experiment_tasks"}
+
+// tables that
+var specialTable = []string{}
 
 // GetTableNames returns a list of tables that data can be retrieved from
 func GetTableNames() ([]string, error) {
@@ -46,10 +51,14 @@ func contains(stringSlice []string, val string) bool {
 // GetTableData receives the experimentCode and taskName, retrieving the data from the assoc table
 // from the database
 func GetTableData(experimentCode string, taskName string) (interface{}, error) {
+	log.Println(experimentCode)
+	log.Println(taskName)
 	if experimentCode == "experiment" && taskName == "users" {
 		return retrieveDataFromTable("experiment_users", "experiment_users")
 	} else if experimentCode == "demographics" && taskName == "questionnaire" {
 		return retrieveDataFromTable("demographics_questionnaire_responses", "demographics_questionnaire_responses")
+	} else if experimentCode == "feedback" && taskName == "questionnaire" {
+		return retrieveDataFromTable("feedback_questionnaire_responses", "feedback_questionnaire_responses")
 	} else {
 		task := Format(taskName)
 		tableName := "experiment_" + experimentCode + "_task_" + task
@@ -89,7 +98,11 @@ func retrieveDataFromTable(tableName string, taskName string) (interface{}, erro
 		slice := []models.DemographicsQuestionnaireResponse{}
 		err := db.Table(tableName).Find(&slice).Error
 		return slice, err
+	case FEEDBACKQUESTIONNAIRE:
+		slice := []models.FeedbackQuestionnaireResponse{}
+		err := db.Table(tableName).Find(&slice).Error
+		return slice, err
 	default:
-		return nil, errors.New("Could not get model slice from model name")
+		return nil, errors.New("Could not get model slice from model name. Taskname is: " + taskName)
 	}
 }

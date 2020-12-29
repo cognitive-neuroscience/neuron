@@ -18,4 +18,5 @@ type FeedbackQuestionnaireResponse struct {
 	UserID             string `json:"userID"`
 	IssuesEncountered  string `json:"issuesEncountered"`
 	AdditionalFeedback string `json:"additionalFeedback"`
+	Browser            string `json:"browser"`
 }
