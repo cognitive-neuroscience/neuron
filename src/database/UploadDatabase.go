@@ -49,6 +49,7 @@ func populateRows(taskName string, tableName string, taskData interface{}) []err
 			// decode the given json map and parse it into the table model
 			decoder.Decode(trial)
 			// create the record
+			// TODO: we currently don't check to see if the given table exists.
 			errs := db.Table(tableName).Create(model).GetErrors()
 			if len(errs) > 0 {
 				log.Println(errs)
