@@ -36,7 +36,7 @@ func CreateServer() {
 
 	// Use API rate limiter
 	limiterConf := limiter.Config{
-		Max:     10,
+		Max:     40,
 		Timeout: 5,
 	}
 	app.Use(limiter.New(limiterConf))
