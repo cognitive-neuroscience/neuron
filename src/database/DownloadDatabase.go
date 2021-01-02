@@ -51,56 +51,45 @@ func contains(stringSlice []string, val string) bool {
 // GetTableData receives the experimentCode and taskName, retrieving the data from the assoc table
 // from the database
 func GetTableData(experimentCode string, taskName string) (interface{}, error) {
-	log.Println(experimentCode)
-	log.Println(taskName)
-	if experimentCode == "experiment" && taskName == "users" {
-		return retrieveDataFromTable("experiment_users", "experiment_users")
-	} else if experimentCode == "demographics" && taskName == "questionnaire" {
-		return retrieveDataFromTable("demographics_questionnaire_responses", "demographics_questionnaire_responses")
-	} else if experimentCode == "feedback" && taskName == "questionnaire" {
-		return retrieveDataFromTable("feedback_questionnaire_responses", "feedback_questionnaire_responses")
-	} else {
-		task := Format(taskName)
-		tableName := "experiment_" + experimentCode + "_task_" + task
-		return retrieveDataFromTable(tableName, task)
-	}
+	return retrieveDataFromTable(experimentCode, Format(taskName))
 }
 
-func retrieveDataFromTable(tableName string, taskName string) (interface{}, error) {
+func retrieveDataFromTable(experimentCode string, taskName string) (interface{}, error) {
 	db := DBConn
 
 	switch taskName {
 	case STROOP:
 		slice := []models.Stroop{}
-		err := db.Table(tableName).Order("user_id, trial").Find(&slice).Error
+		err := db.Where("experiment_code = ?", experimentCode).Find(&slice).Order("user_id, trial").Error
 		return slice, err
 	case NBACK:
 		slice := []models.NBack{}
-		err := db.Table(tableName).Order("user_id, trial").Find(&slice).Error
+		err := db.Where("experiment_code = ?", experimentCode).Find(&slice).Order("user_id, trial").Error
 		return slice, err
 	case EXPERIMENTUSERS:
+		// TODO: refactor - change this to experiment_code
 		slice := []models.ExperimentUser{}
-		err := db.Table(tableName).Find(&slice).Error
+		err := db.Where("code = ?", experimentCode).Find(&slice).Error
 		return slice, err
 	case DEMANDSELECTION:
 		slice := []models.DemandSelection{}
-		err := db.Table(tableName).Find(&slice).Error
+		err := db.Where("experiment_code = ?", experimentCode).Find(&slice).Order("user_id, trial").Error
 		return slice, err
 	case TASKSWITCHING:
 		slice := []models.TaskSwitching{}
-		err := db.Table(tableName).Find(&slice).Error
+		err := db.Where("experiment_code = ?", experimentCode).Find(&slice).Order("user_id, trial").Error
 		return slice, err
 	case TRAILMAKING:
 		slice := []models.TrailMaking{}
-		err := db.Table(tableName).Find(&slice).Error
+		err := db.Where("experiment_code = ?", experimentCode).Find(&slice).Order("user_id, trial").Error
 		return slice, err
 	case DEMOGRAPHICSQUESTIONNAIRE:
 		slice := []models.DemographicsQuestionnaireResponse{}
-		err := db.Table(tableName).Find(&slice).Error
+		err := db.Where("experiment_code = ?", experimentCode).Find(&slice).Error
 		return slice, err
 	case FEEDBACKQUESTIONNAIRE:
 		slice := []models.FeedbackQuestionnaireResponse{}
-		err := db.Table(tableName).Find(&slice).Error
+		err := db.Where("experiment_code = ?", experimentCode).Find(&slice).Error
 		return slice, err
 	default:
 		return nil, errors.New("Could not get model slice from model name. Taskname is: " + taskName)

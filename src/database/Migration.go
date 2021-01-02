@@ -21,6 +21,12 @@ func AutoMigrate() {
 		&models.ExperimentUser{},
 		&models.DemographicsQuestionnaireResponse{},
 		&models.FeedbackQuestionnaireResponse{},
+		// Task databases
+		&models.Stroop{},
+		&models.NBack{},
+		&models.TaskSwitching{},
+		&models.TrailMaking{},
+		&models.DemandSelection{},
 	)
 	log.Println("MySQL migrations complete")
 }

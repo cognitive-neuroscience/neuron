@@ -67,11 +67,6 @@ func GetAllExperiments() ([]models.Experiment, error) {
 func SaveExperiment(experiment *models.Experiment) models.HTTPStatus {
 	db := DBConn
 
-	err := createTables(experiment.Code, experiment.Tasks)
-	if err != nil {
-		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)}
-	}
-
 	// create the experiment
 	errors := db.Create(&experiment).GetErrors()
 	if len(errors) > 0 {
@@ -120,26 +115,26 @@ func ExperimentExists(code string) (bool, error) {
 	return false, nil
 }
 
-// experimentCode - taskName
-func createTables(code string, tasks []string) error {
-	for _, task := range tasks {
-		taskName := Format(task)
-		tableName := "experiment_" + code + "_task_" + taskName
-		tableModel, err := GetModel(taskName)
-		if err != nil {
-			log.Println(err)
-			return err
-		}
-		dbErrors := DBConn.Table(tableName).CreateTable(tableModel).GetErrors()
+// // experimentCode - taskName
+// func createTables(code string, tasks []string) error {
+// 	for _, task := range tasks {
+// 		taskName := Format(task)
+// 		tableName := "experiment_" + code + "_task_" + taskName
+// 		tableModel, err := GetModel(taskName)
+// 		if err != nil {
+// 			log.Println(err)
+// 			return err
+// 		}
+// 		dbErrors := DBConn.Table(tableName).CreateTable(tableModel).GetErrors()
 
-		if len(dbErrors) > 0 {
-			log.Println("Error when creating table: " + tableName)
-			log.Println(dbErrors)
-			return errors.New("could not create table " + tableName)
-		}
-	}
-	return nil
-}
+// 		if len(dbErrors) > 0 {
+// 			log.Println("Error when creating table: " + tableName)
+// 			log.Println(dbErrors)
+// 			return errors.New("could not create table " + tableName)
+// 		}
+// 	}
+// 	return nil
+// }
 
 // GetExperiment gets the experiment based on the given code
 func GetExperiment(code string) (models.Experiment, error) {

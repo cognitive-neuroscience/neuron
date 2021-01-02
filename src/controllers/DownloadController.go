@@ -15,8 +15,8 @@ func GetTableData(c *fiber.Ctx) {
 		experimentCode := c.Params("code")
 		task := c.Params("taskName")
 		data, err := services.GetTableData(experimentCode, task)
-		log.Println(err)
 		if err != nil {
+			log.Println(err)
 			common.SendHTTPStatusServiceUnavailable(c)
 			return
 		}

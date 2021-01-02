@@ -50,7 +50,7 @@ func populateRows(taskName string, tableName string, taskData interface{}) []err
 			decoder.Decode(trial)
 			// create the record
 			// TODO: we currently don't check to see if the given table exists.
-			errs := db.Table(tableName).Create(model).GetErrors()
+			errs := db.Model(&model).Create(model).GetErrors()
 			if len(errs) > 0 {
 				log.Println(errs)
 				return errs

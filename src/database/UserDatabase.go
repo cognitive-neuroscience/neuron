@@ -37,8 +37,6 @@ func SaveExperimentAndParticipant(expUser models.ExperimentUser) models.HTTPStat
 
 // MarkAsComplete gets the record with the associated userID and experiment code, setting completion to true (or 1)
 func MarkAsComplete(experimentUser models.ExperimentUser) models.HTTPStatus {
-	log.Println("MarkAsComplete")
-	log.Println(experimentUser)
 	db := DBConn
 	var expUserFromDB models.ExperimentUser
 	if errs := db.Where(models.ExperimentUser{Code: experimentUser.Code, ID: experimentUser.ID}).First(&expUserFromDB).GetErrors(); len(errs) > 0 {
