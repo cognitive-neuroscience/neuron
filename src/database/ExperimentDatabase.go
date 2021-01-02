@@ -29,13 +29,15 @@ func DeleteExperiment(code string) models.HTTPStatus {
 		log.Printf("Experiment with code %s does not exist", code)
 		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)}
 	}
-	if err := db.Delete(&experiment).Error; err != nil {
+
+	if err := db.First(&experiment).Update("deleted", true).Error; err != nil {
 		log.Printf("Could not delete Experiment %+v", experiment)
 		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)}
 	}
-	if err := db.Where("experiment_code = ?", code).Delete(&models.ExperimentTask{}).Error; err != nil {
-		log.Printf("Deletion successful, but could not delete code %s from join table", code)
-	}
+	// code to remove experiment_tasks: Remove this as we want all memory of experiments
+	// if err := db.Where("experiment_code = ?", code).Delete(&models.ExperimentTask{}).Error; err != nil {
+	// 	log.Printf("Deletion successful, but could not delete code %s from join table", code)
+	// }
 	return models.HTTPStatus{Status: http.StatusOK, Message: http.StatusText(http.StatusOK)}
 }
 
