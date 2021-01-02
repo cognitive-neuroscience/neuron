@@ -34,10 +34,7 @@ func DeleteExperiment(code string) models.HTTPStatus {
 		log.Printf("Could not delete Experiment %+v", experiment)
 		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)}
 	}
-	// code to remove experiment_tasks: Remove this as we want all memory of experiments
-	// if err := db.Where("experiment_code = ?", code).Delete(&models.ExperimentTask{}).Error; err != nil {
-	// 	log.Printf("Deletion successful, but could not delete code %s from join table", code)
-	// }
+
 	return models.HTTPStatus{Status: http.StatusOK, Message: http.StatusText(http.StatusOK)}
 }
 
@@ -114,27 +111,6 @@ func ExperimentExists(code string) (bool, error) {
 
 	return false, nil
 }
-
-// // experimentCode - taskName
-// func createTables(code string, tasks []string) error {
-// 	for _, task := range tasks {
-// 		taskName := Format(task)
-// 		tableName := "experiment_" + code + "_task_" + taskName
-// 		tableModel, err := GetModel(taskName)
-// 		if err != nil {
-// 			log.Println(err)
-// 			return err
-// 		}
-// 		dbErrors := DBConn.Table(tableName).CreateTable(tableModel).GetErrors()
-
-// 		if len(dbErrors) > 0 {
-// 			log.Println("Error when creating table: " + tableName)
-// 			log.Println(dbErrors)
-// 			return errors.New("could not create table " + tableName)
-// 		}
-// 	}
-// 	return nil
-// }
 
 // GetExperiment gets the experiment based on the given code
 func GetExperiment(code string) (models.Experiment, error) {
