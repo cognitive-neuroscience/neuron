@@ -49,7 +49,6 @@ func GetAllExperiments() ([]models.Experiment, error) {
 
 	for index, experiment := range experiments {
 		// for each experiment, make an SQL query to get all tasks
-
 		err := db.Raw(getOrderedTasks, experiment.Code).Pluck("Tasks", &experiments[index].Tasks).Error
 		if err != nil {
 			log.Println("There was an error getting tasks")
@@ -76,8 +75,6 @@ func SaveExperiment(experiment *models.Experiment) models.HTTPStatus {
 	for index, task := range experiment.Tasks {
 
 		// TODO: validate that the given task is correct with the same name and type
-		// ...
-
 		experimentTaskObj := models.ExperimentTask{
 			ExperimentCode: experiment.Code,
 			TaskID:         task,
