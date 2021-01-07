@@ -67,7 +67,7 @@ func retrieveDataFromTable(experimentCode string, taskName string) (interface{},
 		err := db.Where("experiment_code = ?", experimentCode).Find(&slice).Order("user_id, trial").Error
 		return slice, err
 	case EXPERIMENTUSERS:
-		// TODO: refactor - change this to experiment_code
+		// TODO: refactor - change c'code' to experiment_code
 		slice := []models.ExperimentUser{}
 		err := db.Where("code = ?", experimentCode).Find(&slice).Error
 		return slice, err
@@ -81,6 +81,10 @@ func retrieveDataFromTable(experimentCode string, taskName string) (interface{},
 		return slice, err
 	case TRAILMAKING:
 		slice := []models.TrailMaking{}
+		err := db.Where("experiment_code = ?", experimentCode).Find(&slice).Order("user_id, trial").Error
+		return slice, err
+	case FINGERTAPPING:
+		slice := []models.FingerTapping{}
 		err := db.Where("experiment_code = ?", experimentCode).Find(&slice).Order("user_id, trial").Error
 		return slice, err
 	case DEMOGRAPHICSQUESTIONNAIRE:

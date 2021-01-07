@@ -18,6 +18,7 @@ const (
 	TASKSWITCHING             = "taskswitching"
 	TRAILMAKING               = "trailmaking"
 	DEMANDSELECTION           = "demandselection"
+	FINGERTAPPING             = "fingertapping"
 	EXPERIMENTUSERS           = "experiment_users"
 	DEMOGRAPHICSQUESTIONNAIRE = "demographics_questionnaire_responses"
 	FEEDBACKQUESTIONNAIRE     = "feedback_questionnaire_responses"
@@ -36,6 +37,8 @@ func GetModel(task string) (interface{}, error) {
 		return models.TrailMaking{}, nil
 	case DEMANDSELECTION:
 		return models.DemandSelection{}, nil
+	case FINGERTAPPING:
+		return models.FingerTapping{}, nil
 	default:
 		return nil, errors.New("Could not get model from task name: " + task)
 	}
@@ -56,6 +59,8 @@ func GetModelSlice(task string) (interface{}, error) {
 		return []models.TaskSwitching{}, nil
 	case TRAILMAKING:
 		return []models.TrailMaking{}, nil
+	case FINGERTAPPING:
+		return []models.FingerTapping{}, nil
 	case DEMOGRAPHICSQUESTIONNAIRE:
 		return []models.DemographicsQuestionnaireResponse{}, nil
 	default:

@@ -27,6 +27,7 @@ func AutoMigrate() {
 		&models.TaskSwitching{},
 		&models.TrailMaking{},
 		&models.DemandSelection{},
+		&models.FingerTapping{},
 	)
 	log.Println("MySQL migrations complete")
 }

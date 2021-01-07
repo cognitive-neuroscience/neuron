@@ -89,3 +89,19 @@ type NBack struct {
 	IsPractice     bool      `json:"isPractice"`
 	ExperimentCode string    `json:"experimentCode"`
 }
+
+// FingerTapping represents a model for the data received from the finger tapping Task
+type FingerTapping struct {
+	UserID                string    `json:"userID"`
+	Trial                 int       `json:"trial"`
+	Score                 int       `json:"score"`
+	Block                 int       `json:"block"`
+	DominantHand          string    `json:"dominantHand"`
+	ShouldUseDominantHand bool      `json:"shouldUseDominantHand"`
+	IsCorrect             bool      `json:"isCorrect"`
+	TimeFromLastKeyPress  int       `json:"timeFromLastKeyPress"`
+	KeyPressed            string    `json:"keyPressed"`
+	Submitted             time.Time `json:"submitted"` // ISO date string
+	IsPractice            bool      `json:"isPractice"`
+	ExperimentCode        string    `json:"experimentCode"`
+}
