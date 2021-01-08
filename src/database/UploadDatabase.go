@@ -19,9 +19,8 @@ import (
 // EXPERIMENT_<experimentCode>_TASK_<taskName>
 func UploadTaskData(experimentCode string, taskName string, taskData interface{}) models.HTTPStatus {
 	formattedTaskName := Format(taskName)
-	tableName := "experiment_" + experimentCode + "_task_" + formattedTaskName
 
-	if errs := populateRows(formattedTaskName, tableName, taskData); len(errs) > 0 {
+	if errs := populateRows(formattedTaskName, taskData); len(errs) > 0 {
 		log.Print(errs)
 		return models.HTTPStatus{Status: http.StatusServiceUnavailable, Message: http.StatusText(http.StatusServiceUnavailable)}
 	}
@@ -29,7 +28,7 @@ func UploadTaskData(experimentCode string, taskName string, taskData interface{}
 }
 
 // it suddenly decided to start working? will keep an eye on this
-func populateRows(taskName string, tableName string, taskData interface{}) []error {
+func populateRows(taskName string, taskData interface{}) []error {
 	db := DBConn
 	model, err := GetModel(taskName)
 	if err != nil {
