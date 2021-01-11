@@ -108,15 +108,16 @@ type FingerTapping struct {
 
 // DigitSpan represents a model for the data received from the digit span task
 type DigitSpan struct {
-	UserID         string    `json:"userID"`    // default
-	Trial          int       `json:"trial"`     // default
-	Score          int       `json:"score"`     // default
-	IsCorrect      bool      `json:"isCorrect"` // default
-	ActualAnswer   string    `json:"actualAnswer"`
-	UserAnswer     string    `json:"userAnswer"`
-	ResponseTime   int       `json:"responseTime"`
-	NumberOfDigits int       `json:"numberOfDigits"`
-	Submitted      time.Time `json:"submitted"`      // ISO date string
-	IsPractice     bool      `json:"isPractice"`     // default
-	ExperimentCode string    `json:"experimentCode"` // default
+	UserID              string    `json:"userID"`    // default
+	Trial               int       `json:"trial"`     // default
+	Score               int       `json:"score"`     // default
+	IsCorrect           bool      `json:"isCorrect"` // default
+	ActualAnswer        string    `json:"actualAnswer"`
+	UserAnswer          string    `json:"userAnswer"`
+	ResponseTime        int       `json:"responseTime"`
+	NumberOfDigits      int       `json:"numberOfDigits"`
+	Submitted           time.Time `json:"submitted"`      // ISO date string
+	IsPractice          bool      `json:"isPractice"`     // default
+	ExperimentCode      string    `json:"experimentCode"` // default
+	IsForwardMemoryMode bool      `json:"isForwardMemoryMode"`
 }
