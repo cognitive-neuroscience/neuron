@@ -36,12 +36,12 @@ func ConnectDB() {
 
 	dbConnectionDetails, err := getDBConnectionDetails()
 	if err != nil {
-		panic("No DB connection details available")
+		log.Panic("No DB connection details available")
 	}
 
 	DBConn, err = gorm.Open(mySQL, dbConnectionDetails)
 	if err != nil {
-		log.Fatalln(err.Error())
+		log.Panic(err.Error())
 	}
 
 	validations.RegisterCallbacks(DBConn)

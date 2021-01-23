@@ -1,8 +1,7 @@
 package common
 
 import (
-	"log"
-
+	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
 	"github.com/cognitive-neuroscience/neuron/src/services"
 	"github.com/gofiber/fiber"
 )
@@ -13,7 +12,7 @@ func IsAllowed(c *fiber.Ctx, authorizedRoles []string) bool {
 	// make sure token is present, extractable, and valid
 	authenticatedClaims, err := services.AuthenticateToken(c)
 	if err != nil {
-		log.Println(err)
+		axonlogger.WarningLogger.Println("Could not authenticate the given token", err)
 		return false
 	}
 
@@ -24,6 +23,6 @@ func IsAllowed(c *fiber.Ctx, authorizedRoles []string) bool {
 			return true
 		}
 	}
-
+	axonlogger.WarningLogger.Println("User is not allowed to proceed")
 	return false
 }

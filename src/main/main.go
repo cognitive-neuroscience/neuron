@@ -1,8 +1,6 @@
 package main
 
 import (
-	"log"
-
 	"github.com/cognitive-neuroscience/neuron/src/database"
 	"github.com/cognitive-neuroscience/neuron/src/server"
 	"github.com/joho/godotenv"
@@ -23,8 +21,7 @@ func loadEnv() {
 	// check for current directory, and if no env, check for prod path
 	if err := godotenv.Load(); err != nil {
 		if err := godotenv.Load("/usr/sbin/sharplab/.env"); err != nil {
-			log.Print("No .env file")
-			panic(".env file required")
+			panic("Can't find .env file")
 		}
 	}
 }

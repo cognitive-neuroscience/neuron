@@ -2,8 +2,9 @@ package database
 
 import (
 	"errors"
-	"log"
 	"net/http"
+
+	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
 
 	"github.com/cognitive-neuroscience/neuron/src/models"
 )
@@ -20,16 +21,19 @@ func SaveUser(user *models.User) models.HTTPStatus {
 		if len(errors) == 0 {
 			return models.HTTPStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)}
 		}
+		axonlogger.ErrorLogger.Println("Could not save user", errors)
 		return models.HTTPStatus{Status: http.StatusBadRequest, Message: errors[0].Error()}
 	}
+	axonlogger.WarningLogger.Println("Did not save record, DB NewRecord check failed")
 	return models.HTTPStatus{Status: http.StatusConflict, Message: "Primary field present in body"}
 }
 
 // SaveExperimentAndParticipant sees if the record exists. If not, it creates one
 func SaveExperimentAndParticipant(expUser models.ExperimentUser) models.HTTPStatus {
+	// TODO: refactor this so that we do a search first, and then return true/false based on if we find the participant or not
 	db := DBConn
 	if errors := db.Create(&expUser).GetErrors(); len(errors) != 0 {
-		log.Println(errors[0].Error())
+		axonlogger.ErrorLogger.Println("Could not create experiment user:", errors)
 		return models.HTTPStatus{Status: http.StatusBadRequest, Message: "Participant has already registered or completed the given experiment"}
 	}
 	return models.HTTPStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)}
@@ -40,18 +44,19 @@ func MarkAsComplete(experimentUser models.ExperimentUser) models.HTTPStatus {
 	db := DBConn
 	var expUserFromDB models.ExperimentUser
 	if errs := db.Where(models.ExperimentUser{Code: experimentUser.Code, ID: experimentUser.ID}).First(&expUserFromDB).GetErrors(); len(errs) > 0 {
-		log.Println(errs)
+		axonlogger.ErrorLogger.Println("Error retreiving", experimentUser.ID, experimentUser.Code, "from DB:", errs)
 		return models.HTTPStatus{Status: http.StatusServiceUnavailable, Message: http.StatusText(http.StatusServiceUnavailable)}
 	}
 	if expUserFromDB.ID != "" {
 		expUserFromDB.Complete = experimentUser.Complete
 		expUserFromDB.CompletionCode = experimentUser.CompletionCode
 		if errs := db.Save(&expUserFromDB).GetErrors(); len(errs) > 0 {
-			log.Println(errs)
+			axonlogger.ErrorLogger.Println("Found", experimentUser, "from DB but there was an error saving", expUserFromDB, "to DB")
 			return models.HTTPStatus{Status: http.StatusServiceUnavailable, Message: http.StatusText(http.StatusServiceUnavailable)}
 		}
 		return models.HTTPStatus{Status: http.StatusOK, Message: http.StatusText(http.StatusOK)}
 	}
+	axonlogger.ErrorLogger.Println("User retrieved from DB has empty ID:", expUserFromDB)
 	return models.HTTPStatus{Status: http.StatusServiceUnavailable, Message: http.StatusText(http.StatusServiceUnavailable)}
 }
 
@@ -60,7 +65,7 @@ func GetCompletionCode(userID string, code string) (string, error) {
 	db := DBConn
 	var expUserFromDB models.ExperimentUser
 	if errs := db.Where(models.ExperimentUser{ID: userID, Code: code}).First(&expUserFromDB).GetErrors(); len(errs) > 0 {
-		log.Println(errs)
+		axonlogger.ErrorLogger.Println("Error retreiving completion code from DB for user", userID, code, ":", errs)
 		return "", errs[0]
 	}
 	return expUserFromDB.CompletionCode, nil
@@ -79,15 +84,21 @@ func GetExperimentUsers(experimentUser models.ExperimentUser) ([]models.Experime
 // GetUserByEmail searches for a user given the email
 func GetUserByEmail(email string) (models.User, error) {
 	db := DBConn
+
 	var user models.User
 	var err error
-	db.Where(&models.User{Email: email}).First(&user)
-	if user.Email == email {
-		err = nil
-	} else {
-		err = errors.New("Email does not exist")
+
+	// error getting data from the db
+	if err = db.Where(&models.User{Email: email}).First(&user).Error; err != nil {
+		axonlogger.ErrorLogger.Println(err)
+		return user, errors.New("There was an issue retrieving your login information")
 	}
-	return user, err
+
+	if user.Email == email {
+		return user, err
+	}
+	return user, errors.New("Email has not been registered")
+
 }
 
 // GetAllUsers returns all users in DB

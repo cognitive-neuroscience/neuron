@@ -2,10 +2,11 @@ package services
 
 import (
 	"errors"
-	"log"
 	"os"
 	"strings"
 	"time"
+
+	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
 
 	"github.com/cognitive-neuroscience/neuron/src/models"
 	"github.com/dgrijalva/jwt-go"
@@ -14,13 +15,13 @@ import (
 
 // AuthenticateToken verifies if the token present in the authorization header is valid
 func AuthenticateToken(c *fiber.Ctx) (*models.Claims, error) {
-
 	claims := &models.Claims{}
 	var err error
 
 	// 1. check that token is present
 	token := c.Get("Authorization")
 	if token == "" {
+		axonlogger.WarningLogger.Println("No token present")
 		return claims, errors.New("No token present")
 	}
 
@@ -35,7 +36,6 @@ func AuthenticateToken(c *fiber.Ctx) (*models.Claims, error) {
 	if err != nil {
 		return claims, err
 	}
-
 	return claims, nil
 }
 
@@ -44,6 +44,7 @@ func extractToken(t string) (string, error) {
 	if len(strArr) == 2 && strings.ToLower(strArr[0]) == "bearer" {
 		return strArr[1], nil
 	}
+	axonlogger.WarningLogger.Println("Could not parse token", t)
 	return "", errors.New("Could not parse token")
 }
 
@@ -72,12 +73,12 @@ func ValidateToken(tokenString string) (*models.Claims, error) {
 		return []byte(key), nil
 	})
 	if err != nil {
-		log.Println("Error when calling ParseWithClaims on token!")
-		log.Println(err)
-		return claims, err
+		axonlogger.ErrorLogger.Println("Error when calling ParseWithClaims on token", tokenString, ":", err)
+		return claims, errors.New("Could not parse with claims")
 	}
 
 	if !token.Valid {
+		axonlogger.WarningLogger.Println("Token is not valid")
 		return claims, errors.New("Token is not valid")
 	}
 
@@ -89,7 +90,6 @@ func getKey() string {
 	if exists {
 		return key
 	}
-	log.Println("Using insecure DEV key")
 	// return simple dev key if env is absent
 	return "neuron"
 }

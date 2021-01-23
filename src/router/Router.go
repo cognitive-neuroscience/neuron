@@ -1,8 +1,9 @@
 package router
 
 import (
-	"log"
 	"net/http"
+
+	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
 
 	"github.com/cognitive-neuroscience/neuron/src/controllers"
 	"github.com/cognitive-neuroscience/neuron/src/middleware"
@@ -68,7 +69,6 @@ func setUpUploadRoutes(group fiber.Router) {
 
 func setUpDownloadRoutes(group fiber.Router) {
 	download := group.Group("/download")
-	download.Get("/", controllers.GetTableNames)
 	download.Get("/:code/:taskName", controllers.GetTableData)
 	download.Options("/*", handleOptions)
 	download.All("/*", handleForbidden)
@@ -84,7 +84,7 @@ func setUpQuestionnaireRoutes(group fiber.Router) {
 
 // returns MethodNotAllowed when client tries to access unsupported HTTP request
 func handleForbidden(c *fiber.Ctx) {
-	log.Println("FORBIDDEN!")
+	axonlogger.WarningLogger.Println("Client has tried to make an unsupported request", c.Method())
 	c.Status(http.StatusMethodNotAllowed).JSON(&models.HTTPStatus{Status: http.StatusMethodNotAllowed, Message: http.StatusText(http.StatusMethodNotAllowed)})
 }
 

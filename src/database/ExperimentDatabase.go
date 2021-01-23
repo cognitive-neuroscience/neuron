@@ -2,9 +2,9 @@ package database
 
 import (
 	"errors"
-	"log"
 	"net/http"
 
+	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
 	"github.com/cognitive-neuroscience/neuron/src/models"
 )
 
@@ -25,13 +25,12 @@ func DeleteExperiment(code string) models.HTTPStatus {
 	var experiment models.Experiment
 	// return an error if we cannot find the experiment with the given code
 	if err := db.Where(&models.Experiment{Code: code}).First(&experiment).Error; err != nil {
-		log.Println(err)
-		log.Printf("Experiment with code %s does not exist", code)
+		axonlogger.ErrorLogger.Println("Could not check if experiment exists:", code, err)
 		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)}
 	}
 
 	if err := db.First(&experiment).Update("deleted", true).Error; err != nil {
-		log.Printf("Could not delete Experiment %+v", experiment)
+		axonlogger.ErrorLogger.Println("Could not delete experiment:", code, err)
 		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)}
 	}
 
@@ -44,6 +43,7 @@ func GetAllExperiments() ([]models.Experiment, error) {
 	var err error
 	experiments := []models.Experiment{}
 	if err := db.Find(&experiments).Error; err != nil {
+		axonlogger.ErrorLogger.Println("There was an error getting the experiments from the DB")
 		err = errors.New("Could not fetch experiments")
 	}
 
@@ -51,7 +51,7 @@ func GetAllExperiments() ([]models.Experiment, error) {
 		// for each experiment, make an SQL query to get all tasks
 		err := db.Raw(getOrderedTasks, experiment.Code).Pluck("Tasks", &experiments[index].Tasks).Error
 		if err != nil {
-			log.Println("There was an error getting tasks")
+			axonlogger.ErrorLogger.Println("There was an error getting experiment tasks from the DB:", experiment, err)
 			return nil, err
 		}
 	}
@@ -66,8 +66,8 @@ func SaveExperiment(experiment *models.Experiment) models.HTTPStatus {
 	// create the experiment
 	errors := db.Create(&experiment).GetErrors()
 	if len(errors) > 0 {
-		log.Println(errors)
-		return models.HTTPStatus{Status: http.StatusBadRequest, Message: errors[0].Error()}
+		axonlogger.ErrorLogger.Println("Error creating experiment", experiment, ":", errors)
+		return models.HTTPStatus{Status: http.StatusBadRequest, Message: "There was an error creating an experiment"}
 	}
 
 	// create an ExperimentTask record for each task to preserve the order
@@ -84,7 +84,7 @@ func SaveExperiment(experiment *models.Experiment) models.HTTPStatus {
 		// if there is an error creating, then skip adding this ExperimentTask
 		// and make sure the next one maintains the correct chronological order
 		if len(errors) > 0 {
-			log.Println(errors)
+			axonlogger.ErrorLogger.Println("Error creating experiment task:", experimentTaskObj, ":", errors)
 			adjustment++
 		}
 	}
@@ -97,6 +97,7 @@ func ExperimentExists(code string) (bool, error) {
 	db := DBConn
 	experiments := []models.Experiment{}
 	if err := db.Find(&experiments).Error; err != nil {
+		axonlogger.ErrorLogger.Println(err)
 		return false, errors.New("Could not fetch experiments")
 	}
 
@@ -113,11 +114,15 @@ func ExperimentExists(code string) (bool, error) {
 func GetExperiment(code string) (models.Experiment, error) {
 	db := DBConn
 	experiment := models.Experiment{}
+	// TODO: refactor this, you can just do a join on experiment and tasks
 	if err := db.Where("code = ?", code).First(&experiment).Error; err != nil {
-		log.Println(err.Error())
+		axonlogger.ErrorLogger.Println("Error retrieving experiment", code)
 		return experiment, errors.New(err.Error())
 	}
 	// use pluck to get the specific column
-	db.Raw(getOrderedTasks, experiment.Code).Pluck("Tasks", &experiment.Tasks)
+	if err := db.Raw(getOrderedTasks, experiment.Code).Pluck("Tasks", &experiment.Tasks).Error; err != nil {
+		axonlogger.ErrorLogger.Println("error retrieving experiment tasks", code)
+		return experiment, errors.New(err.Error())
+	}
 	return experiment, nil
 }

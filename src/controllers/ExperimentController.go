@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"github.com/cognitive-neuroscience/neuron/src/common"
+	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
 	"github.com/cognitive-neuroscience/neuron/src/models"
 	"github.com/cognitive-neuroscience/neuron/src/services"
 	"github.com/gofiber/fiber"
@@ -9,30 +10,36 @@ import (
 
 // DeleteExperiment is the experiment api entry point for deleting given the experiment code
 func DeleteExperiment(c *fiber.Ctx) {
+	code := c.Params("code")
+
+	axonlogger.InfoLogger.Println("Deleting experiment:", code)
+
 	authorizedRoles := []string{common.ADMIN}
 	if common.IsAllowed(c, authorizedRoles) {
-		code := c.Params("code")
 		result := services.DeleteExperiment(code)
 		common.SendGenericHTTPModel(c, result)
 		return
 	}
+	axonlogger.WarningLogger.Println("Not authorized to delete:", code)
 	common.SendHTTPForbidden(c)
 }
 
 // SaveExperiment is the experiment api entry point for saving an experiment given the json
 // Note that "code" in Experiment is not a required field as it gets overwritten anyways
 func SaveExperiment(c *fiber.Ctx) {
+	experiment := new(models.Experiment)
+	if err := c.BodyParser(experiment); err != nil {
+		common.SendHTTPBadRequest(c)
+		axonlogger.WarningLogger.Println("Could not parse the given experiment")
+		return
+	}
 	authorizedRoles := []string{common.ADMIN}
 	if common.IsAllowed(c, authorizedRoles) {
-		experiment := new(models.Experiment)
-		if err := c.BodyParser(experiment); err != nil {
-			common.SendHTTPBadRequest(c)
-			return
-		}
 		result := services.SaveExperiment(experiment)
 		common.SendGenericHTTPModel(c, result)
 		return
 	}
+	axonlogger.WarningLogger.Println("Not authorized to save experiment:", experiment)
 	common.SendHTTPStatusServiceUnavailable(c)
 }
 

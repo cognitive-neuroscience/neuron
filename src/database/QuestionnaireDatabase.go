@@ -1,9 +1,9 @@
 package database
 
 import (
-	"log"
 	"net/http"
 
+	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
 	"github.com/cognitive-neuroscience/neuron/src/models"
 )
 
@@ -16,8 +16,7 @@ func SaveDemographicsQuestionnaireResponse(response *models.DemographicsQuestion
 	db := DBConn
 	errors := db.Create(&response).GetErrors()
 	if len(errors) > 0 {
-		log.Println("There was an error saving the questionnaire response")
-		log.Println(errors)
+		axonlogger.ErrorLogger.Println("There was an error saving demographics responses in the DB", errors, response)
 		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)}
 	}
 	return models.HTTPStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)}
@@ -28,8 +27,7 @@ func SaveFeedbackQuestionnaireResponse(response *models.FeedbackQuestionnaireRes
 	db := DBConn
 	errors := db.Create(&response).GetErrors()
 	if len(errors) > 0 {
-		log.Println("There was an error saving the questionnaire response")
-		log.Println(errors)
+		axonlogger.ErrorLogger.Println("There was an error saving feedback responses in the DB", errors, response)
 		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)}
 	}
 	return models.HTTPStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)}

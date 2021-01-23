@@ -8,6 +8,7 @@ import (
 	"time"
 
 	"github.com/cognitive-neuroscience/neuron/src/database"
+	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
 	"github.com/cognitive-neuroscience/neuron/src/models"
 )
 
@@ -25,8 +26,10 @@ func SaveExperiment(experiment *models.Experiment) models.HTTPStatus {
 	code, err := getNewCode()
 
 	if err != nil {
+		axonlogger.ErrorLogger.Println("Error creating experiment shortcode", err)
 		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "Error Creating Experiment Shortcode"}
 	}
+	axonlogger.InfoLogger.Println("Created experiment with shortcode:", code)
 	experiment.Code = code
 
 	return database.SaveExperiment(experiment)

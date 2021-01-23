@@ -2,11 +2,11 @@ package database
 
 import (
 	"errors"
-	"log"
 	"net/http"
 	"reflect"
 	"time"
 
+	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
 	"github.com/cognitive-neuroscience/neuron/src/models"
 	"github.com/mitchellh/mapstructure"
 )
@@ -15,13 +15,12 @@ import (
  * This file is for uploading participant task data to the correct table
  */
 
-// UploadTaskData saves the given GENERIC taskData into the correct database. The database is of the name
-// EXPERIMENT_<experimentCode>_TASK_<taskName>
+// UploadTaskData saves the given GENERIC taskData into the correct database
 func UploadTaskData(experimentCode string, taskName string, taskData interface{}) models.HTTPStatus {
 	formattedTaskName := Format(taskName)
 
 	if errs := populateRows(formattedTaskName, taskData); len(errs) > 0 {
-		log.Print(errs)
+		axonlogger.ErrorLogger.Println("Could not save data into DB:", taskData)
 		return models.HTTPStatus{Status: http.StatusServiceUnavailable, Message: http.StatusText(http.StatusServiceUnavailable)}
 	}
 	return models.HTTPStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)}
@@ -32,7 +31,7 @@ func populateRows(taskName string, taskData interface{}) []error {
 	db := DBConn
 	model, err := GetModel(taskName)
 	if err != nil {
-		log.Println(err)
+		axonlogger.ErrorLogger.Println("Could not get model:", err)
 		return append([]error{}, errors.New("Cannot populate task for "+taskName))
 	}
 
@@ -42,7 +41,7 @@ func populateRows(taskName string, taskData interface{}) []error {
 		for _, trial := range data {
 			decoder, err := getDecoder(&model)
 			if err != nil {
-				log.Println(err)
+				axonlogger.ErrorLogger.Println("There was an error getting the parsing decoder:", err)
 				return append([]error{}, errors.New("Cannot populate task for "+taskName))
 			}
 			// decode the given json map and parse it into the table model
@@ -51,12 +50,14 @@ func populateRows(taskName string, taskData interface{}) []error {
 			// TODO: we currently don't check to see if the given table exists.
 			errs := db.Model(&model).Create(model).GetErrors()
 			if len(errs) > 0 {
-				log.Println(errs)
+				axonlogger.ErrorLogger.Println("Could not save the given data:", trial, "Error:", errs)
 				return errs
 			}
 		}
 		return []error{}
 	}
+	axonlogger.ErrorLogger.Println("Could not cast task data into interface array")
+	axonlogger.ErrorLogger.Println(taskData)
 	return append([]error{}, errors.New("Cannot populate task for "+taskName))
 }
 

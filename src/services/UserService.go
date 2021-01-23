@@ -10,6 +10,7 @@ import (
 	"golang.org/x/crypto/bcrypt"
 
 	"github.com/cognitive-neuroscience/neuron/src/database"
+	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
 	"github.com/cognitive-neuroscience/neuron/src/models"
 )
 
@@ -20,20 +21,24 @@ var emailRegex = regexp.MustCompile("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-
 // SaveExperimentAndParticipant saves user into ExperimentUser database and records if experiment has been complete
 // as well as the completion string for turkers
 func SaveExperimentAndParticipant(experimentUser models.ExperimentUser) models.HTTPStatus {
+	experimentUser.ID = strings.ToUpper(experimentUser.ID)
 	return database.SaveExperimentAndParticipant(experimentUser)
 }
 
 // SaveUser saves the user
 func SaveUser(user *models.User) models.HTTPStatus {
 	if user.Password == "" {
+		axonlogger.WarningLogger.Println("Did not save", user.Email, "password cannot be empty")
 		return models.HTTPStatus{Status: http.StatusBadRequest, Message: "Password cannot be empty"}
 	}
 	if !isEmailValid(user.Email) {
+		axonlogger.WarningLogger.Println("Email not valid:", user.Email)
 		return models.HTTPStatus{Status: http.StatusBadRequest, Message: "Email is not valid"}
 	}
 
 	hashedPassword, err := hashAndSalt(user.Password)
 	if err != nil {
+		axonlogger.ErrorLogger.Println("There was an error hashing the given password", user.Email)
 		return models.HTTPStatus{Status: http.StatusBadGateway, Message: http.StatusText(http.StatusBadGateway)}
 	}
 	user.Password = hashedPassword
@@ -45,6 +50,7 @@ func MarkAsComplete(experimentUser models.ExperimentUser) models.HTTPStatus {
 	code := GenerateCode(10)
 	experimentUser.CompletionCode = code
 	experimentUser.Complete = true
+	axonlogger.InfoLogger.Println("Generated completion code for user", experimentUser.ID, ":", code)
 	return database.MarkAsComplete(experimentUser)
 }
 

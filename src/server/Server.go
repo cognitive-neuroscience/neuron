@@ -3,6 +3,7 @@ package server
 import (
 	"os"
 
+	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
 	"github.com/cognitive-neuroscience/neuron/src/router"
 	"github.com/gofiber/compression"
 	"github.com/gofiber/fiber"
@@ -31,8 +32,20 @@ func CreateServer() {
 	}
 	app.Use(recover.New(recoverConf))
 
+	// logging to external file
+	file, err := os.OpenFile("./axon.log", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
+	if err != nil {
+		panic("Could not create log file to write to")
+	}
+	defer file.Close()
+
+	// initialize logger with given file to write to
+	axonlogger.Initialize(file)
+
 	// Use logger to log HTTP requests
-	app.Use(logger.New())
+	app.Use(logger.New(logger.Config{
+		Output: file,
+	}))
 
 	// Use API rate limiter
 	limiterConf := limiter.Config{

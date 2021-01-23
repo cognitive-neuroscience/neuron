@@ -3,6 +3,8 @@ package services
 import (
 	"errors"
 
+	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
+
 	"github.com/cognitive-neuroscience/neuron/src/database"
 	"github.com/cognitive-neuroscience/neuron/src/models"
 	"golang.org/x/crypto/bcrypt"
@@ -18,7 +20,7 @@ func ValidateCredentials(email string, password string) (models.User, error) {
 	}
 	// check if their password matches
 	if !passwordIsCorrect(user.Password, password) {
-		return user, errors.New("Password is invalid")
+		return user, errors.New("Password is incorrect")
 	}
 	return user, nil
 }
@@ -29,6 +31,7 @@ func passwordIsCorrect(hashedPassword string, plaintextPassword string) bool {
 	bytePlaintextPassword := []byte(plaintextPassword)
 	err := bcrypt.CompareHashAndPassword(byteHashPassword, bytePlaintextPassword)
 	if err != nil {
+		axonlogger.ErrorLogger.Println(err)
 		return false
 	}
 	return true
