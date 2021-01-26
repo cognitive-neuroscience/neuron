@@ -84,7 +84,7 @@ func setUpQuestionnaireRoutes(group fiber.Router) {
 
 // returns MethodNotAllowed when client tries to access unsupported HTTP request
 func handleForbidden(c *fiber.Ctx) {
-	axonlogger.WarningLogger.Println("Client has tried to make an unsupported request", c.Method())
+	axonlogger.WarningLogger.Println("Client has tried to make an unsupported request", c.Method(), c.Path())
 	c.Status(http.StatusMethodNotAllowed).JSON(&models.HTTPStatus{Status: http.StatusMethodNotAllowed, Message: http.StatusText(http.StatusMethodNotAllowed)})
 }
 

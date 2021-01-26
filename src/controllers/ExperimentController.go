@@ -27,6 +27,7 @@ func DeleteExperiment(c *fiber.Ctx) {
 // SaveExperiment is the experiment api entry point for saving an experiment given the json
 // Note that "code" in Experiment is not a required field as it gets overwritten anyways
 func SaveExperiment(c *fiber.Ctx) {
+	axonlogger.InfoLogger.Println("Saving experiment")
 	experiment := new(models.Experiment)
 	if err := c.BodyParser(experiment); err != nil {
 		common.SendHTTPBadRequest(c)
@@ -45,6 +46,8 @@ func SaveExperiment(c *fiber.Ctx) {
 
 // GetAllExperiments is the experiment api entry point for returning all existing experiments
 func GetAllExperiments(c *fiber.Ctx) {
+	axonlogger.InfoLogger.Println("Getting all experiments")
+
 	authorizedRoles := []string{common.ADMIN}
 	if common.IsAllowed(c, authorizedRoles) {
 		experiments, err := services.GetAllExperiments()
@@ -55,14 +58,17 @@ func GetAllExperiments(c *fiber.Ctx) {
 		c.JSON(experiments)
 		return
 	}
+	axonlogger.WarningLogger.Println("Not authorized to get all experiments")
 	common.SendHTTPForbidden(c)
 }
 
 // GetExperiment gets a specific experiment based on the experiment code
 func GetExperiment(c *fiber.Ctx) {
+	code := c.Params("code")
+	axonlogger.InfoLogger.Println("Getting experiment", code)
+
 	authorizedRoles := []string{common.ADMIN, common.PARTICIPANT}
 	if common.IsAllowed(c, authorizedRoles) {
-		code := c.Params("code")
 		experiment, err := services.GetExperiment(code)
 		if err != nil {
 			common.SendHTTPStatusServiceUnavailable(c)
@@ -71,6 +77,7 @@ func GetExperiment(c *fiber.Ctx) {
 		c.JSON(experiment)
 		return
 	}
+	axonlogger.WarningLogger.Println("Not authorized to get experiment", code)
 	common.SendHTTPForbidden(c)
 	return
 }

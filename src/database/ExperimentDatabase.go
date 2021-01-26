@@ -33,7 +33,7 @@ func DeleteExperiment(code string) models.HTTPStatus {
 		axonlogger.ErrorLogger.Println("Could not delete experiment:", code, err)
 		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)}
 	}
-
+	axonlogger.InfoLogger.Println("Experiment", code, "deleted")
 	return models.HTTPStatus{Status: http.StatusOK, Message: http.StatusText(http.StatusOK)}
 }
 
@@ -55,7 +55,7 @@ func GetAllExperiments() ([]models.Experiment, error) {
 			return nil, err
 		}
 	}
-
+	axonlogger.InfoLogger.Println("Getting all experiments")
 	return experiments, err
 }
 
@@ -88,7 +88,7 @@ func SaveExperiment(experiment *models.Experiment) models.HTTPStatus {
 			adjustment++
 		}
 	}
-
+	axonlogger.InfoLogger.Println("Saved Experiment", experiment)
 	return models.HTTPStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)}
 }
 
@@ -124,5 +124,6 @@ func GetExperiment(code string) (models.Experiment, error) {
 		axonlogger.ErrorLogger.Println("error retrieving experiment tasks", code)
 		return experiment, errors.New(err.Error())
 	}
+	axonlogger.InfoLogger.Println("Successfully retrieving experiment", code)
 	return experiment, nil
 }

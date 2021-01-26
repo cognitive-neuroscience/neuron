@@ -20,6 +20,7 @@ func ValidateToken(c *fiber.Ctx) {
 	axonlogger.InfoLogger.Println("Validating the given JWT", token)
 
 	authorizedRoles := []string{common.ADMIN, common.PARTICIPANT}
+	axonlogger.InfoLogger.Println("JWT validated", token)
 	c.JSON(common.IsAllowed(c, authorizedRoles))
 	return
 }

@@ -23,6 +23,7 @@ func UploadTaskData(experimentCode string, taskName string, taskData interface{}
 		axonlogger.ErrorLogger.Println("Could not save data into DB:", taskData)
 		return models.HTTPStatus{Status: http.StatusServiceUnavailable, Message: http.StatusText(http.StatusServiceUnavailable)}
 	}
+	axonlogger.InfoLogger.Println("Task data successfully uploaded")
 	return models.HTTPStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)}
 }
 

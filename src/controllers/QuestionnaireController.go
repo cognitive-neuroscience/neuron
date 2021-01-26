@@ -12,7 +12,7 @@ import (
 func SaveDemographicsQuestionnaireResponse(c *fiber.Ctx) {
 	response := new(models.DemographicsQuestionnaireResponse)
 	if err := c.BodyParser(response); err != nil {
-		axonlogger.WarningLogger.Println("Could not parse demographics data")
+		axonlogger.WarningLogger.Println("Could not parse demographics response")
 		common.SendHTTPBadRequest(c)
 		return
 	}
@@ -25,7 +25,7 @@ func SaveDemographicsQuestionnaireResponse(c *fiber.Ctx) {
 		common.SendGenericHTTPModel(c, result)
 		return
 	}
-	axonlogger.WarningLogger.Println("Forbidden", response)
+	axonlogger.WarningLogger.Println("User not authorized to save demographic data", response)
 	common.SendHTTPForbidden(c)
 }
 
@@ -33,6 +33,7 @@ func SaveDemographicsQuestionnaireResponse(c *fiber.Ctx) {
 func SaveFeedbackQuestionnaireResponse(c *fiber.Ctx) {
 	response := new(models.FeedbackQuestionnaireResponse)
 	if err := c.BodyParser(response); err != nil {
+		axonlogger.WarningLogger.Println("Could not parse feedback response")
 		common.SendHTTPBadRequest(c)
 		return
 	}
@@ -45,6 +46,6 @@ func SaveFeedbackQuestionnaireResponse(c *fiber.Ctx) {
 		common.SendGenericHTTPModel(c, result)
 		return
 	}
-	axonlogger.WarningLogger.Println("Forbidden", response)
+	axonlogger.WarningLogger.Println("User not authorized to save feedback questionnaire response", response)
 	common.SendHTTPForbidden(c)
 }

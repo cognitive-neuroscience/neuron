@@ -19,6 +19,7 @@ func SaveUser(user *models.User) models.HTTPStatus {
 	if db.NewRecord(user) {
 		errors := db.Create(&user).GetErrors()
 		if len(errors) == 0 {
+			axonlogger.InfoLogger.Println("Successfully saved user", user.Email, user.ID, user.Role)
 			return models.HTTPStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)}
 		}
 		axonlogger.ErrorLogger.Println("Could not save user", errors)
@@ -36,6 +37,7 @@ func SaveExperimentAndParticipant(expUser models.ExperimentUser) models.HTTPStat
 		axonlogger.ErrorLogger.Println("Could not create experiment user:", errors)
 		return models.HTTPStatus{Status: http.StatusBadRequest, Message: "Participant has already registered or completed the given experiment"}
 	}
+	axonlogger.InfoLogger.Println("Successfully saved experiment user", expUser)
 	return models.HTTPStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)}
 }
 
@@ -54,6 +56,7 @@ func MarkAsComplete(experimentUser models.ExperimentUser) models.HTTPStatus {
 			axonlogger.ErrorLogger.Println("Found", experimentUser, "from DB but there was an error saving", expUserFromDB, "to DB")
 			return models.HTTPStatus{Status: http.StatusServiceUnavailable, Message: http.StatusText(http.StatusServiceUnavailable)}
 		}
+		axonlogger.InfoLogger.Println("Successfully marked user as complete", experimentUser)
 		return models.HTTPStatus{Status: http.StatusOK, Message: http.StatusText(http.StatusOK)}
 	}
 	axonlogger.ErrorLogger.Println("User retrieved from DB has empty ID:", expUserFromDB)
@@ -65,9 +68,10 @@ func GetCompletionCode(userID string, code string) (string, error) {
 	db := DBConn
 	var expUserFromDB models.ExperimentUser
 	if errs := db.Where(models.ExperimentUser{ID: userID, Code: code}).First(&expUserFromDB).GetErrors(); len(errs) > 0 {
-		axonlogger.ErrorLogger.Println("Error retreiving completion code from DB for user", userID, code, ":", errs)
+		axonlogger.ErrorLogger.Println("Error retrieving completion code from DB for user", userID, code, ":", errs)
 		return "", errs[0]
 	}
+	axonlogger.InfoLogger.Println("Successfully retrieved completion code for", userID, ":", code)
 	return expUserFromDB.CompletionCode, nil
 }
 
@@ -78,6 +82,7 @@ func GetExperimentUsers(experimentUser models.ExperimentUser) ([]models.Experime
 	if err := db.Find(&experimentUsers).Error; err != nil {
 		return experimentUsers, errors.New("Could not fetch experimentUsers")
 	}
+	axonlogger.InfoLogger.Println("Successfully retrieved experiment users")
 	return experimentUsers, nil
 }
 
@@ -95,6 +100,7 @@ func GetUserByEmail(email string) (models.User, error) {
 	}
 
 	if user.Email == email {
+		axonlogger.InfoLogger.Println("Successfully retrieved user", user)
 		return user, err
 	}
 	return user, errors.New("Email has not been registered")
@@ -109,5 +115,6 @@ func GetAllUsers() ([]models.User, error) {
 	if err := db.Find(&users).Error; err != nil {
 		err = errors.New("Could not fetch users")
 	}
+	axonlogger.InfoLogger.Println("Successfully retrieved all users")
 	return users, err
 }

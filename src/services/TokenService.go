@@ -36,6 +36,7 @@ func AuthenticateToken(c *fiber.Ctx) (*models.Claims, error) {
 	if err != nil {
 		return claims, err
 	}
+
 	return claims, nil
 }
 
@@ -81,7 +82,7 @@ func ValidateToken(tokenString string) (*models.Claims, error) {
 		axonlogger.WarningLogger.Println("Token is not valid")
 		return claims, errors.New("Token is not valid")
 	}
-
+	axonlogger.InfoLogger.Println("Authenticated Token:", claims.Email, claims.Id, claims.Role)
 	return claims, nil
 }
 
