@@ -86,6 +86,19 @@ func GetExperimentUsers(experimentUser models.ExperimentUser) ([]models.Experime
 	return experimentUsers, nil
 }
 
+// GetGuests retrieves all users of Role Guest from the DB
+func GetGuests() ([]models.User, error) {
+	db := DBConn
+	var err error
+	guests := []models.User{}
+	if err := db.Where(&models.User{Role: "GUEST"}).Find(&guests).Error; err != nil {
+		axonlogger.ErrorLogger.Println("Error fetching all guests", err)
+		return guests, errors.New("Error getting guests")
+	}
+	axonlogger.InfoLogger.Println("Successfully retrieved guests")
+	return guests, err
+}
+
 // GetUserByEmail searches for a user given the email
 func GetUserByEmail(email string) (models.User, error) {
 	db := DBConn
@@ -113,7 +126,9 @@ func GetAllUsers() ([]models.User, error) {
 	var err error
 	users := []models.User{}
 	if err := db.Find(&users).Error; err != nil {
+		axonlogger.ErrorLogger.Println("Error fetching all users", err)
 		err = errors.New("Could not fetch users")
+		return users, err
 	}
 	axonlogger.InfoLogger.Println("Successfully retrieved all users")
 	return users, err

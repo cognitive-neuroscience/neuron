@@ -45,6 +45,11 @@ func SaveUser(user *models.User) models.HTTPStatus {
 	return database.SaveUser(user)
 }
 
+// GetGuests retrieves all users of the Role GUEST
+func GetGuests() ([]models.User, error) {
+	return database.GetGuests()
+}
+
 // MarkAsComplete updates the given experimentUser as complete
 func MarkAsComplete(experimentUser models.ExperimentUser) models.HTTPStatus {
 	code := GenerateCode(10)
