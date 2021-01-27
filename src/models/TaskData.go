@@ -157,4 +157,5 @@ type SmileyFace struct {
 	KeyPressed          string    `json:"keyPressed"`
 	Rewarded            bool      `json:"rewarded"`
 	IsRescheduledReward bool      `json:"isRescheduledReward"` // denotes if this reward was not originally going to be rewarded, but was the result of a rescheduling
+	RewardedMore        string    `json:"rewardedMore"`
 }
