@@ -100,7 +100,7 @@ func GetUserByEmail(email string) (models.User, error) {
 	}
 
 	if user.Email == email {
-		axonlogger.InfoLogger.Println("Successfully retrieved user", user)
+		axonlogger.InfoLogger.Println("Successfully retrieved user", user.Email)
 		return user, err
 	}
 	return user, errors.New("Email has not been registered")

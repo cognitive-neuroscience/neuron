@@ -101,7 +101,7 @@ type FingerTapping struct {
 	IsCorrect             bool      `json:"isCorrect"` // default
 	TimeFromLastKeyPress  int       `json:"timeFromLastKeyPress"`
 	KeyPressed            string    `json:"keyPressed"`
-	Submitted             time.Time `json:"submitted"`      // ISO date string
+	Submitted             time.Time `json:"submitted"`      // ISO date string, default
 	IsPractice            bool      `json:"isPractice"`     // default
 	ExperimentCode        string    `json:"experimentCode"` // default
 }
@@ -116,8 +116,45 @@ type DigitSpan struct {
 	UserAnswer          string    `json:"userAnswer"`
 	ResponseTime        int       `json:"responseTime"`
 	NumberOfDigits      int       `json:"numberOfDigits"`
-	Submitted           time.Time `json:"submitted"`      // ISO date string
+	Submitted           time.Time `json:"submitted"`      // ISO date string, default
 	IsPractice          bool      `json:"isPractice"`     // default
 	ExperimentCode      string    `json:"experimentCode"` // default
 	IsForwardMemoryMode bool      `json:"isForwardMemoryMode"`
+}
+
+// Oddball represents a model for the data received from the oddball task
+type Oddball struct {
+	UserID         string    `json:"userID"`         // default
+	Trial          int       `json:"trial"`          // default
+	Score          int       `json:"score"`          // default
+	IsCorrect      bool      `json:"isCorrect"`      // default
+	IsPractice     bool      `json:"isPractice"`     // default
+	ExperimentCode string    `json:"experimentCode"` // default
+	Submitted      time.Time `json:"submitted"`      // ISO date string, default
+	Stimulus       string    `json:"stimulus"`
+	TargetResponse string    `json:"targetResponse"`
+	ResponseTime   int       `json:"responseTime"`
+	ActualAnswer   string    `json:"actualAnswer"`
+	UserAnswer     string    `json:"userAnswer"`
+	Target         string    `json:"target"`
+	Block          int       `json:"block"`
+}
+
+// SmileyFace reprsents a model for the data received from the smileyface task
+type SmileyFace struct {
+	UserID              string    `json:"userID"`         // default
+	Trial               int       `json:"trial"`          // default
+	Score               int       `json:"score"`          // default
+	IsCorrect           bool      `json:"isCorrect"`      // default
+	IsPractice          bool      `json:"isPractice"`     // default
+	ExperimentCode      string    `json:"experimentCode"` // default
+	Submitted           time.Time `json:"submitted"`      // ISODateString, default
+	ActualAnswer        string    `json:"actualAnswer"`
+	UserAnswer          string    `json:"userAnswer"`
+	ResponseTime        int       `json:"responseTime"`
+	Block               int       `json:"block"`
+	Stimulus            string    `json:"stimulus"`
+	KeyPressed          string    `json:"keyPressed"`
+	Rewarded            bool      `json:"rewarded"`
+	IsRescheduledReward bool      `json:"isRescheduledReward"` // denotes if this reward was not originally going to be rewarded, but was the result of a rescheduling
 }

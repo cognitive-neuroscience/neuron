@@ -20,6 +20,8 @@ const (
 	DEMANDSELECTION           = "demandselection"
 	FINGERTAPPING             = "fingertapping"
 	DIGITSPAN                 = "digitspan"
+	ODDBALL                   = "oddball"
+	SMILEYFACE                = "smileyface"
 	EXPERIMENTUSERS           = "experiment_users"
 	DEMOGRAPHICSQUESTIONNAIRE = "demographics_questionnaire_responses"
 	FEEDBACKQUESTIONNAIRE     = "feedback_questionnaire_responses"
@@ -42,6 +44,10 @@ func GetModel(task string) (interface{}, error) {
 		return models.FingerTapping{}, nil
 	case DIGITSPAN:
 		return models.DigitSpan{}, nil
+	case ODDBALL:
+		return models.Oddball{}, nil
+	case SMILEYFACE:
+		return models.SmileyFace{}, nil
 	default:
 		return nil, errors.New("Could not get model from task name: " + task)
 	}
@@ -66,6 +72,10 @@ func GetModelSlice(task string) (interface{}, error) {
 		return []models.FingerTapping{}, nil
 	case DIGITSPAN:
 		return []models.DigitSpan{}, nil
+	case ODDBALL:
+		return []models.Oddball{}, nil
+	case SMILEYFACE:
+		return []models.SmileyFace{}, nil
 	case DEMOGRAPHICSQUESTIONNAIRE:
 		return []models.DemographicsQuestionnaireResponse{}, nil
 	default:

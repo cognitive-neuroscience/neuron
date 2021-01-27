@@ -29,6 +29,8 @@ func AutoMigrate() {
 		&models.DemandSelection{},
 		&models.FingerTapping{},
 		&models.DigitSpan{},
+		&models.Oddball{},
+		&models.SmileyFace{},
 	)
 	log.Println("MySQL migrations complete")
 }

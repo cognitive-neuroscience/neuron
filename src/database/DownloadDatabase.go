@@ -58,6 +58,14 @@ func retrieveDataFromTable(experimentCode string, taskName string) (interface{},
 		slice := []models.DigitSpan{}
 		err := db.Where("experiment_code = ?", experimentCode).Find(&slice).Order("user_id, trial").Error
 		return slice, err
+	case ODDBALL:
+		slice := []models.Oddball{}
+		err := db.Where("experiment_code = ?", experimentCode).Find(&slice).Order("user_id, trial").Error
+		return slice, err
+	case SMILEYFACE:
+		slice := []models.SmileyFace{}
+		err := db.Where("experiment_code = ?", experimentCode).Find(&slice).Order("user_id, trial").Error
+		return slice, err
 	case DEMOGRAPHICSQUESTIONNAIRE:
 		slice := []models.DemographicsQuestionnaireResponse{}
 		err := db.Where("experiment_code = ?", experimentCode).Find(&slice).Error

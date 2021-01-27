@@ -82,7 +82,7 @@ func ValidateToken(tokenString string) (*models.Claims, error) {
 		axonlogger.WarningLogger.Println("Token is not valid")
 		return claims, errors.New("Token is not valid")
 	}
-	axonlogger.InfoLogger.Println("Authenticated Token:", claims.Email, claims.Id, claims.Role)
+	axonlogger.InfoLogger.Println("Authenticated Token:", claims.Email, claims.UserID, claims.Role)
 	return claims, nil
 }
 
