@@ -45,6 +45,16 @@ func GetCompletionCode(c *fiber.Ctx) {
 	common.SendHTTPForbidden(c)
 }
 
+// GetGuests retrieves all guests from the DB
+func GetGuests(c *fiber.Ctx) {
+	authorizedRoles := []string{common.ADMIN, common.PARTICIPANT}
+	if common.IsAllowed(c, authorizedRoles) {
+
+	}
+	axonlogger.WarningLogger.Println("Not authorized")
+	common.SendHTTPForbidden(c)
+}
+
 // MarkAsComplete marks the given experimentUser as complete
 func MarkAsComplete(c *fiber.Ctx) {
 
