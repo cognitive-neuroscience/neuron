@@ -1,6 +1,7 @@
 package server
 
 import (
+	"log"
 	"os"
 
 	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
@@ -33,7 +34,8 @@ func CreateServer() {
 	app.Use(recover.New(recoverConf))
 
 	// logging to external file
-	file, err := os.OpenFile("./axon.log", os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
+	file, err := os.OpenFile(getLogPath(), os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
+	log.Println("Created log file", file)
 	if err != nil {
 		panic("Could not create log file to write to")
 	}
@@ -58,4 +60,15 @@ func CreateServer() {
 	router.RegisterRoutes(app)
 
 	app.Listen(port)
+}
+
+func getLogPath() string {
+	prodPath, exists := os.LookupEnv("PROD_LOG_PATH")
+
+	if !exists {
+		log.Println("Could not find PROD_LOG_PATH, using default log path")
+		return "./axon.log"
+	}
+	log.Println("Retrieved log path", prodPath)
+	return prodPath
 }
