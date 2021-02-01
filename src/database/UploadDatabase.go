@@ -27,7 +27,6 @@ func UploadTaskData(experimentCode string, taskName string, taskData interface{}
 	return models.HTTPStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)}
 }
 
-// it suddenly decided to start working? will keep an eye on this
 func populateRows(taskName string, taskData interface{}) []error {
 	db := DBConn
 	model, err := GetModel(taskName)
