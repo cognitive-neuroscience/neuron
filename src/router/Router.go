@@ -30,8 +30,9 @@ func setUpUserRoutes(group fiber.Router) {
 	users := group.Group("/users")
 	users.Post("/", controllers.SaveUser)
 	users.Post("/complete", controllers.MarkAsComplete)
-	users.Get("/guests", controllers.GetGuests)
 	users.Get("/:userid/:code", controllers.GetCompletionCode)
+	users.Get("/guests", controllers.GetGuests)
+	users.Delete("/:email", controllers.DeleteUserByEmail)
 	users.Options("/*", handleOptions)
 	users.All("/*", handleForbidden)
 }

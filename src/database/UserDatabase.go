@@ -3,6 +3,8 @@ package database
 import (
 	"errors"
 	"net/http"
+	"strings"
+	"time"
 
 	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
 
@@ -17,13 +19,17 @@ import (
 func SaveUser(user *models.User) models.HTTPStatus {
 	db := DBConn
 	if db.NewRecord(user) {
-		errors := db.Create(&user).GetErrors()
-		if len(errors) == 0 {
-			axonlogger.InfoLogger.Println("Successfully saved user", user.Email, user.ID, user.Role)
-			return models.HTTPStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)}
+		if err := db.Create(&user).Error; err != nil {
+			axonlogger.ErrorLogger.Println("Could not save user", err)
+			// 1062 = duplicate entry
+			msg := "There was a problem saving the user"
+			if strings.Contains(err.Error(), "1062") {
+				msg = "A user with this email already exists"
+			}
+			return models.HTTPStatus{Status: http.StatusBadRequest, Message: msg}
 		}
-		axonlogger.ErrorLogger.Println("Could not save user", errors)
-		return models.HTTPStatus{Status: http.StatusBadRequest, Message: errors[0].Error()}
+		axonlogger.InfoLogger.Println("Successfully saved user", user.Email, user.ID, user.Role)
+		return models.HTTPStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)}
 	}
 	axonlogger.WarningLogger.Println("Did not save record, DB NewRecord check failed")
 	return models.HTTPStatus{Status: http.StatusConflict, Message: "Primary field present in body"}
@@ -96,7 +102,37 @@ func GetGuests() ([]models.User, error) {
 		return guests, errors.New("Error getting guests")
 	}
 	axonlogger.InfoLogger.Println("Successfully retrieved guests")
-	return guests, err
+
+	return scrubPrivateData(guests), err
+}
+
+func scrubPrivateData(users []models.User) []models.User {
+	for i := 0; i < len(users); i++ {
+		user := &users[i]
+		user.CreatedAt = time.Time{}
+		user.DeletedAt = &time.Time{}
+		user.Password = ""
+		user.UpdatedAt = time.Time{}
+
+	}
+	return users
+}
+
+// DeleteUserByEmail deletes the guest with the given email
+func DeleteUserByEmail(email string) models.HTTPStatus {
+	db := DBConn
+	var user = models.User{}
+	if err := db.Where(&models.User{Email: email}).First(&user).Error; err != nil {
+		axonlogger.ErrorLogger.Println("Could not check if user exists", email, err)
+		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)}
+	}
+
+	if err := db.Unscoped().Where("email = ?", email).Delete(&models.User{}).Error; err != nil {
+		axonlogger.ErrorLogger.Println("Could not delete user:", email, err)
+		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)}
+	}
+	axonlogger.InfoLogger.Println("User with:", email, "delete")
+	return models.HTTPStatus{Status: http.StatusOK, Message: http.StatusText(http.StatusOK)}
 }
 
 // GetUserByEmail searches for a user given the email

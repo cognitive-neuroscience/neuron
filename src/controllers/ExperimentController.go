@@ -48,7 +48,7 @@ func SaveExperiment(c *fiber.Ctx) {
 func GetAllExperiments(c *fiber.Ctx) {
 	axonlogger.InfoLogger.Println("Getting all experiments")
 
-	authorizedRoles := []string{common.ADMIN}
+	authorizedRoles := []string{common.ADMIN, common.GUEST}
 	if common.IsAllowed(c, authorizedRoles) {
 		experiments, err := services.GetAllExperiments()
 		if err != nil {

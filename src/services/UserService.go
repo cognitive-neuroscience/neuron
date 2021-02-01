@@ -50,6 +50,11 @@ func GetGuests() ([]models.User, error) {
 	return database.GetGuests()
 }
 
+// DeleteUserByEmail deletes the guest with the given email
+func DeleteUserByEmail(email string) models.HTTPStatus {
+	return database.DeleteUserByEmail(email)
+}
+
 // MarkAsComplete updates the given experimentUser as complete
 func MarkAsComplete(experimentUser models.ExperimentUser) models.HTTPStatus {
 	code := GenerateCode(10)

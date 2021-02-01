@@ -4,4 +4,5 @@ package common
 const (
 	ADMIN       = "ADMIN"
 	PARTICIPANT = "PARTICIPANT"
+	GUEST       = "GUEST"
 )

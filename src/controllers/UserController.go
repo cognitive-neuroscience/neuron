@@ -23,6 +23,22 @@ func SaveUser(c *fiber.Ctx) {
 	return
 }
 
+// DeleteUserByEmail deletes the guest with the given email
+func DeleteUserByEmail(c *fiber.Ctx) {
+	email := c.Params("email")
+
+	axonlogger.InfoLogger.Println("Deleting user", email)
+
+	authorizedRoles := []string{common.ADMIN}
+	if common.IsAllowed(c, authorizedRoles) {
+		result := services.DeleteUserByEmail(email)
+		common.SendGenericHTTPModel(c, result)
+		return
+	}
+	axonlogger.WarningLogger.Println("Not authorized")
+	common.SendHTTPForbidden(c)
+}
+
 // GetCompletionCode return the completion code associated with the given experimentUser
 func GetCompletionCode(c *fiber.Ctx) {
 	userID := c.Params("userid")
@@ -47,9 +63,16 @@ func GetCompletionCode(c *fiber.Ctx) {
 
 // GetGuests retrieves all guests from the DB
 func GetGuests(c *fiber.Ctx) {
-	authorizedRoles := []string{common.ADMIN, common.PARTICIPANT}
+	authorizedRoles := []string{common.ADMIN}
 	if common.IsAllowed(c, authorizedRoles) {
-
+		result, err := services.GetGuests()
+		if err != nil {
+			axonlogger.ErrorLogger.Println("Could not get guests", err)
+			common.SendHTTPStatusServiceUnavailable(c)
+			return
+		}
+		c.JSON(result)
+		return
 	}
 	axonlogger.WarningLogger.Println("Not authorized")
 	common.SendHTTPForbidden(c)
