@@ -21,6 +21,7 @@ func AutoMigrate() {
 		&models.ExperimentUser{},
 		&models.DemographicsQuestionnaireResponse{},
 		&models.FeedbackQuestionnaireResponse{},
+		&models.Questionnaire{},
 		// Task databases
 		&models.Stroop{},
 		&models.NBack{},
