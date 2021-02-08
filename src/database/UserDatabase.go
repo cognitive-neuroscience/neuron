@@ -18,21 +18,18 @@ import (
 // SaveUser saves a user in the database
 func SaveUser(user *models.User) models.HTTPStatus {
 	db := DBConn
-	if db.NewRecord(user) {
-		if err := db.Create(&user).Error; err != nil {
-			axonlogger.ErrorLogger.Println("Could not save user", err)
-			// 1062 = duplicate entry
-			msg := "There was a problem saving the user"
-			if strings.Contains(err.Error(), "1062") {
-				msg = "A user with this email already exists"
-			}
+	if err := db.Create(&user).Error; err != nil {
+		axonlogger.ErrorLogger.Println("Could not save user", err)
+		// 1062 = duplicate entry
+		msg := "There was a problem saving the user"
+		if strings.Contains(err.Error(), "1062") {
+			msg = "A user with this email already exists"
 			return models.HTTPStatus{Status: http.StatusBadRequest, Message: msg}
 		}
-		axonlogger.InfoLogger.Println("Successfully saved user", user.Email, user.ID, user.Role)
-		return models.HTTPStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)}
+		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: msg}
 	}
-	axonlogger.WarningLogger.Println("Did not save record, DB NewRecord check failed")
-	return models.HTTPStatus{Status: http.StatusConflict, Message: "Primary field present in body"}
+	axonlogger.InfoLogger.Println("Successfully saved user", user.Email, user.ID, user.Role)
+	return models.HTTPStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)}
 }
 
 // SaveExperimentAndParticipant sees if the record exists. If not, it creates one

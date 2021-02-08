@@ -14,3 +14,8 @@ func SaveDemographicsQuestionnaireResponse(response *models.DemographicsQuestion
 func SaveFeedbackQuestionnaireResponse(response *models.FeedbackQuestionnaireResponse) models.HTTPStatus {
 	return database.SaveFeedbackQuestionnaireResponse(response)
 }
+
+// SaveQuestionnaire calls the database to save the given questionnaire
+func SaveQuestionnaire(questionnaire *models.Questionnaire) models.HTTPStatus {
+	return database.SaveQuestionnaire(questionnaire)
+}

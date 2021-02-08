@@ -8,11 +8,12 @@ import (
 
 // Experiment represents a model for a set which contains tasks
 type Experiment struct {
-	Name        string   `json:"name" gorm:"not null;default:''"`
-	Code        string   `json:"code" gorm:"primary_key;not null;unique"`
-	Description string   `json:"description" gorm:"not null;default:''"`
-	Deleted     bool     `json:"deleted" gorm:"default:false"`
-	Tasks       []string `json:"tasks" gorm:"-"` // ignore this field
+	Name           string          `json:"name" gorm:"not null;default:''"`
+	Code           string          `json:"code" gorm:"primary_key;not null;unique"`
+	Description    string          `json:"description" gorm:"not null;default:''"`
+	Deleted        bool            `json:"deleted" gorm:"default:false"`
+	Tasks          []string        `json:"tasks" gorm:"-"` // ignore this field
+	Questionnaires []Questionnaire `json:"questionnaire"`
 }
 
 // Validate method validates a given model

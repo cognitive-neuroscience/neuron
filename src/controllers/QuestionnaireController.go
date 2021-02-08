@@ -49,3 +49,23 @@ func SaveFeedbackQuestionnaireResponse(c *fiber.Ctx) {
 	axonlogger.WarningLogger.Println("User not authorized to save feedback questionnaire response", response)
 	common.SendHTTPForbidden(c)
 }
+
+// SaveQuestionnaire is the questionnaire api entry point for saving a questionnaire given the json. This describes the data that populates
+// an embedded survey monkey survey
+func SaveQuestionnaire(c *fiber.Ctx) {
+	axonlogger.InfoLogger.Println("Saving Questionnaire")
+	questionnaire := new(models.Questionnaire)
+	if err := c.BodyParser(questionnaire); err != nil {
+		common.SendHTTPBadRequest(c)
+		axonlogger.WarningLogger.Println("Could not parse the given questionnaire")
+		return
+	}
+	authorizedRoles := []string{common.ADMIN}
+	if common.IsAllowed(c, authorizedRoles) {
+		result := services.SaveQuestionnaire(questionnaire)
+		common.SendGenericHTTPModel(c, result)
+		return
+	}
+	axonlogger.WarningLogger.Println("Not authorized to save questionnaire:", questionnaire)
+	common.SendHTTPStatusServiceUnavailable(c)
+}

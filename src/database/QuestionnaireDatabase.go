@@ -32,3 +32,14 @@ func SaveFeedbackQuestionnaireResponse(response *models.FeedbackQuestionnaireRes
 	}
 	return models.HTTPStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)}
 }
+
+// SaveQuestionnaire saves the given questionnaire data into the database as a questionnaire object
+func SaveQuestionnaire(questionnaire *models.Questionnaire) models.HTTPStatus {
+	db := DBConn
+	if err := db.Create(&questionnaire).Error; err != nil {
+		axonlogger.ErrorLogger.Println("Could not save questionnaire", questionnaire, err)
+		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)}
+	}
+	axonlogger.InfoLogger.Println("Successfully saved questionnaire", questionnaire.Name)
+	return models.HTTPStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)}
+}
