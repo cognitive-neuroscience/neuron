@@ -3,6 +3,7 @@ package database
 import (
 	"errors"
 	"net/http"
+	"strings"
 
 	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
 	"github.com/cognitive-neuroscience/neuron/src/models"
@@ -14,10 +15,11 @@ import (
 
 // SQL statements
 
-/* inner join between experiment_tasks and tasks. This gets all records relating to a specific experiment
- * and then returns them ordered as a task struct.
- */
+//  This gets all of the task names in order
 var getOrderedTasks string = "SELECT task_id as Tasks FROM experiment_tasks WHERE experiment_code = ? ORDER BY place ASC;"
+
+// Gets all referenced questionnaires
+var questionnaireString = "surveyMonkeyQuestionnaire"
 
 // DeleteExperiment deletes the experiment with the given code. It also deletes all references in the ExperimentTask join table
 func DeleteExperiment(code string) models.HTTPStatus {
@@ -43,18 +45,40 @@ func GetAllExperiments() ([]models.Experiment, error) {
 	var err error
 	experiments := []models.Experiment{}
 	if err := db.Find(&experiments).Error; err != nil {
-		axonlogger.ErrorLogger.Println("There was an error getting the experiments from the DB")
+		axonlogger.ErrorLogger.Println("There was an error getting the experiments from the DB", err)
 		err = errors.New("Could not fetch experiments")
+		return experiments, err
 	}
 
+	if err != nil {
+		axonlogger.ErrorLogger.Println("There was an error getting questionnaires from the DB", err)
+		return nil, err
+	}
+
+	// for each experiment, get the associated tasks and questionnaires
 	for index, experiment := range experiments {
 		// for each experiment, make an SQL query to get all tasks
-		err := db.Raw(getOrderedTasks, experiment.Code).Pluck("Tasks", &experiments[index].Tasks).Error
+		err = db.Raw(getOrderedTasks, experiment.Code).Pluck("Tasks", &experiments[index].Tasks).Error
 		if err != nil {
 			axonlogger.ErrorLogger.Println("There was an error getting experiment tasks from the DB:", experiment, err)
 			return nil, err
 		}
+
+		idList := []string{}
+		// for each taskname, find the survey monkey ones and grab the ID
+		for _, taskName := range experiments[index].Tasks {
+			if strings.Contains(taskName, questionnaireString) {
+				split := strings.Split(taskName, "-")
+				idList = append(idList, split[1])
+			}
+		}
+
+		err = db.Find(&experiments[index].Questionnaires, idList).Error
+		if err != nil {
+			axonlogger.ErrorLogger.Println("There was an error getting questionnaires from the DB", experiment, err)
+		}
 	}
+
 	axonlogger.InfoLogger.Println("Getting all experiments")
 	return experiments, err
 }
@@ -124,6 +148,20 @@ func GetExperiment(code string) (models.Experiment, error) {
 		axonlogger.ErrorLogger.Println("error retrieving experiment tasks", code)
 		return experiment, errors.New(err.Error())
 	}
+
+	idList := []string{}
+	// for each taskname, find the survey monkey ones and grab the ID
+	for _, taskName := range experiment.Tasks {
+		if strings.Contains(taskName, questionnaireString) {
+			split := strings.Split(taskName, "-")
+			idList = append(idList, split[1])
+		}
+	}
+	if err := db.Find(&experiment.Questionnaires, idList).Error; err != nil {
+		axonlogger.ErrorLogger.Println("Error retreiving questionnaire(s) for experiment", experiment, err)
+		return experiment, err
+	}
+
 	axonlogger.InfoLogger.Println("Successfully retrieving experiment", code)
 	return experiment, nil
 }

@@ -50,6 +50,37 @@ func SaveFeedbackQuestionnaireResponse(c *fiber.Ctx) {
 	common.SendHTTPForbidden(c)
 }
 
+// GetAllQuestionnaires gets all questionnaires from the DB
+func GetAllQuestionnaires(c *fiber.Ctx) {
+	axonlogger.InfoLogger.Println("Getting all questionnaires")
+	authorizedRoles := []string{common.ADMIN}
+	if common.IsAllowed(c, authorizedRoles) {
+		questionnaires, err := services.GetAllQuestionnaires()
+		if err != nil {
+			common.SendHTTPStatusServiceUnavailable(c)
+			return
+		}
+		c.JSON(questionnaires)
+		return
+	}
+	axonlogger.WarningLogger.Println("Not authorized to get all questionnaires")
+	common.SendHTTPForbidden(c)
+}
+
+// DeleteQuestionnaireByID deletes the questionnaire from the DB given the ID number
+func DeleteQuestionnaireByID(c *fiber.Ctx) {
+	id := c.Params("id")
+	axonlogger.InfoLogger.Println("Deleting questionnaire", id)
+	authorizedRoles := []string{common.ADMIN}
+	if common.IsAllowed(c, authorizedRoles) {
+		result := services.DeleteQuestionnaireByID(id)
+		common.SendGenericHTTPModel(c, result)
+		return
+	}
+	axonlogger.WarningLogger.Println("Not authorized to delete questionnaire", id)
+	common.SendHTTPForbidden(c)
+}
+
 // SaveQuestionnaire is the questionnaire api entry point for saving a questionnaire given the json. This describes the data that populates
 // an embedded survey monkey survey
 func SaveQuestionnaire(c *fiber.Ctx) {
