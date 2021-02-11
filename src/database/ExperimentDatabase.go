@@ -18,9 +18,6 @@ import (
 //  This gets all of the task names in order
 var getOrderedTasks string = "SELECT task_id as Tasks FROM experiment_tasks WHERE experiment_code = ? ORDER BY place ASC;"
 
-// Gets all referenced questionnaires
-var questionnaireString = "surveyMonkeyQuestionnaire"
-
 // DeleteExperiment deletes the experiment with the given code. It also deletes all references in the ExperimentTask join table
 func DeleteExperiment(code string) models.HTTPStatus {
 	db := DBConn
@@ -67,7 +64,7 @@ func GetAllExperiments() ([]models.Experiment, error) {
 		idList := []string{}
 		// for each taskname, find the survey monkey ones and grab the ID
 		for _, taskName := range experiments[index].Tasks {
-			if strings.Contains(taskName, questionnaireString) {
+			if strings.Contains(taskName, SURVEYMONKEYQUESTIONNAIRE) {
 				split := strings.Split(taskName, "-")
 				idList = append(idList, split[1])
 			}
@@ -152,7 +149,7 @@ func GetExperiment(code string) (models.Experiment, error) {
 	idList := []string{}
 	// for each taskname, find the survey monkey ones and grab the ID
 	for _, taskName := range experiment.Tasks {
-		if strings.Contains(taskName, questionnaireString) {
+		if strings.Contains(taskName, SURVEYMONKEYQUESTIONNAIRE) {
 			split := strings.Split(taskName, "-")
 			idList = append(idList, split[1])
 		}

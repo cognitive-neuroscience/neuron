@@ -23,8 +23,9 @@ const (
 	ODDBALL                   = "oddball"
 	SMILEYFACE                = "smileyface"
 	EXPERIMENTUSERS           = "experiment_users"
-	DEMOGRAPHICSQUESTIONNAIRE = "demographics_questionnaire_responses"
+	DEMOGRAPHICSQUESTIONNAIRE = "demographicsquestionnaire"
 	FEEDBACKQUESTIONNAIRE     = "feedback_questionnaire_responses"
+	SURVEYMONKEYQUESTIONNAIRE = "surveymonkeyquestionnaire"
 )
 
 // GetModel receives the given task, and gets the model for that task
