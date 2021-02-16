@@ -25,7 +25,7 @@ func retrieveDataFromTable(experimentCode string, taskName string) (interface{},
 	db := DBConn
 
 	switch taskName {
-	case STROOP:
+	case STROOP, STROOPSHORT:
 		slice := []models.Stroop{}
 		err := db.Where("experiment_code = ?", experimentCode).Find(&slice).Order("user_id, trial").Error
 		return slice, err

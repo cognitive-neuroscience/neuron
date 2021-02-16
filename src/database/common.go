@@ -14,6 +14,7 @@ import (
 // exported task names
 const (
 	STROOP                    = "stroop"
+	STROOPSHORT               = "stroopshort"
 	NBACK                     = "nback"
 	TASKSWITCHING             = "taskswitching"
 	TRAILMAKING               = "trailmaking"
@@ -31,7 +32,7 @@ const (
 // GetModel receives the given task, and gets the model for that task
 func GetModel(task string) (interface{}, error) {
 	switch task {
-	case STROOP:
+	case STROOP, STROOPSHORT:
 		return models.Stroop{}, nil
 	case NBACK:
 		return models.NBack{}, nil
@@ -57,7 +58,7 @@ func GetModel(task string) (interface{}, error) {
 // GetModelSlice receives the given task and returns the model slice for that task
 func GetModelSlice(task string) (interface{}, error) {
 	switch task {
-	case STROOP:
+	case STROOP, STROOPSHORT:
 		return []models.Stroop{}, nil
 	case NBACK:
 		return []models.NBack{}, nil
