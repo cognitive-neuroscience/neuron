@@ -74,6 +74,18 @@ func retrieveDataFromTable(experimentCode string, taskName string) (interface{},
 		slice := []models.FeedbackQuestionnaireResponse{}
 		err := db.Where("experiment_code = ?", experimentCode).Find(&slice).Error
 		return slice, err
+	case RATING:
+		slice := []models.Rating{}
+		err := db.Where("experiment_code = ?", experimentCode).Find(&slice).Error
+		return slice, err
+	case CHOICE:
+		slice := []models.Choice{}
+		err := db.Where("experiment_code = ?", experimentCode).Find(&slice).Error
+		return slice, err
+	case POSTCHOICE:
+		slice := []models.PostChoice{}
+		err := db.Where("experiment_code = ?", experimentCode).Find(&slice).Error
+		return slice, err
 	default:
 		return nil, errors.New("Could not get model slice from model name. Taskname is: " + taskName)
 	}

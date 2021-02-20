@@ -159,3 +159,49 @@ type SmileyFace struct {
 	IsRescheduledReward bool      `json:"isRescheduledReward"` // denotes if this reward was not originally going to be rewarded, but was the result of a rescheduling
 	RewardedMore        string    `json:"rewardedMore"`
 }
+
+// Rating represents a model for the data received from the rating task
+type Rating struct {
+	UserID         string    `json:"userID"`         // default
+	Trial          int       `json:"trial"`          // default
+	Score          int       `json:"score"`          // default
+	IsCorrect      bool      `json:"isCorrect"`      // default
+	IsPractice     bool      `json:"isPractice"`     // default
+	ExperimentCode string    `json:"experimentCode"` // default
+	Submitted      time.Time `json:"submitted"`      // ISODateString, default
+	Counterbalance int       `json:"counterbalance"`
+	RatingType     string    `json:"ratingType"`
+	Activity       string    `json:"activity"`
+	UserAnswer     string    `json:"userAnswer"`
+	ResponseTime   int       `json:"responseTime"`
+}
+
+// Choice represents a model for the data received from the Choice task
+type Choice struct {
+	UserID         string    `json:"userID"`         // default
+	Trial          int       `json:"trial"`          // default
+	Score          int       `json:"score"`          // default
+	IsCorrect      bool      `json:"isCorrect"`      // default
+	IsPractice     bool      `json:"isPractice"`     // default
+	ExperimentCode string    `json:"experimentCode"` // default
+	Submitted      time.Time `json:"submitted"`      // ISODateString, default
+	ActivityLeft   string    `json:"activityLeft"`
+	ActivityRight  string    `json:"activityRight"`
+	UserAnswer     string    `json:"userAnswer"`
+	ResponseTime   int       `json:"responseTime"`
+}
+
+// PostChoice represents a model for the data received from the PostChoice task
+type PostChoice struct {
+	UserID         string    `json:"userID"`         // default
+	Trial          int       `json:"trial"`          // default
+	Score          int       `json:"score"`          // default
+	IsCorrect      bool      `json:"isCorrect"`      // default
+	IsPractice     bool      `json:"isPractice"`     // default
+	ExperimentCode string    `json:"experimentCode"` // default
+	Submitted      time.Time `json:"submitted"`      // ISODateString, default
+	RatingType     string    `json:"ratingType"`
+	Activity       string    `json:"activity"`
+	UserAnswer     string    `json:"userAnswer"`
+	ResponseTime   int       `json:"responseTime"`
+}

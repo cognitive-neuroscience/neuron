@@ -27,6 +27,9 @@ const (
 	DEMOGRAPHICSQUESTIONNAIRE = "demographicsquestionnaire"
 	FEEDBACKQUESTIONNAIRE     = "feedback_questionnaire_responses"
 	SURVEYMONKEYQUESTIONNAIRE = "surveymonkeyquestionnaire"
+	RATING                    = "rating"
+	CHOICE                    = "choice"
+	POSTCHOICE                = "postchoice"
 )
 
 // GetModel receives the given task, and gets the model for that task
@@ -50,6 +53,12 @@ func GetModel(task string) (interface{}, error) {
 		return models.Oddball{}, nil
 	case SMILEYFACE:
 		return models.SmileyFace{}, nil
+	case RATING:
+		return models.Rating{}, nil
+	case CHOICE:
+		return models.Choice{}, nil
+	case POSTCHOICE:
+		return models.PostChoice{}, nil
 	default:
 		return nil, errors.New("Could not get model from task name: " + task)
 	}
@@ -80,6 +89,12 @@ func GetModelSlice(task string) (interface{}, error) {
 		return []models.SmileyFace{}, nil
 	case DEMOGRAPHICSQUESTIONNAIRE:
 		return []models.DemographicsQuestionnaireResponse{}, nil
+	case RATING:
+		return []models.Rating{}, nil
+	case CHOICE:
+		return []models.Choice{}, nil
+	case POSTCHOICE:
+		return []models.PostChoice{}, nil
 	default:
 		return nil, errors.New("Could not get model slice from task name: " + task)
 	}

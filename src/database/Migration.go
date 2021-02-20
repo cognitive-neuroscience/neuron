@@ -32,6 +32,9 @@ func AutoMigrate() {
 		&models.DigitSpan{},
 		&models.Oddball{},
 		&models.SmileyFace{},
+		&models.Rating{},
+		&models.Choice{},
+		&models.PostChoice{},
 	)
 	log.Println("MySQL migrations complete")
 }
