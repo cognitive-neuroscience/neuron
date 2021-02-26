@@ -31,7 +31,6 @@ func DeleteQuestionnaireByID(id string) models.HTTPStatus {
 		axonlogger.ErrorLogger.Println("Could not parse the given id", id)
 		return models.HTTPStatus{Status: http.StatusBadRequest, Message: http.StatusText(http.StatusBadRequest)}
 	}
-
 	return database.DeleteQuestionnaireByID(idNum)
 }
 

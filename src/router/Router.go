@@ -24,6 +24,7 @@ func RegisterRoutes(app *fiber.App) {
 	setUpUploadRoutes(api)
 	setUpDownloadRoutes(api)
 	setUpQuestionnaireRoutes(api)
+	setUpTaskRoutes(api)
 }
 
 func setUpUserRoutes(group fiber.Router) {
@@ -85,6 +86,15 @@ func setUpQuestionnaireRoutes(group fiber.Router) {
 	questionnaire.Post("/feedback", controllers.SaveFeedbackQuestionnaireResponse)
 	questionnaire.Options("/*", handleOptions)
 	questionnaire.All("/*", handleForbidden)
+}
+
+func setUpTaskRoutes(group fiber.Router) {
+	task := group.Group("/task")
+	task.Get("/", controllers.GetAllCustomTasks)
+	task.Post("/", controllers.SaveCustomTask)
+	task.Delete("/:id", controllers.DeleteCustomTaskByID)
+	task.Options("/*", handleOptions)
+	task.All("/*", handleForbidden)
 }
 
 // returns MethodNotAllowed when client tries to access unsupported HTTP request

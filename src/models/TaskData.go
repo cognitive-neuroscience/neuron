@@ -205,3 +205,11 @@ type PostChoice struct {
 	UserAnswer     string    `json:"userAnswer"`
 	ResponseTime   int       `json:"responseTime"`
 }
+
+// CustomTask represents the CustomTask object where a user can create, edit or remove embedded survey monkey CustomTasks
+type CustomTask struct {
+	CustomTaskID int    `json:"customTaskID" gorm:"autoincrement;primary_key;not null"`
+	URL          string `json:"url"`
+	Name         string `json:"name"`
+	Description  string `json:"description"`
+}
