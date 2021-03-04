@@ -4,6 +4,10 @@ import (
 	"time"
 )
 
+/*
+ * This file defines structs that outline the parameters collected for each task that is administered to participants
+ */
+
 // TaskSwitching represents a model for the data received from the Task Switching Task
 type TaskSwitching struct {
 	UserID         string    `json:"userID"`
@@ -206,10 +210,16 @@ type PostChoice struct {
 	ResponseTime   int       `json:"responseTime"`
 }
 
-// CustomTask represents the CustomTask object where a user can create, edit or remove embedded survey monkey CustomTasks
-type CustomTask struct {
-	CustomTaskID int    `json:"customTaskID" gorm:"autoincrement;primary_key;not null"`
-	URL          string `json:"url"`
-	Name         string `json:"name"`
-	Description  string `json:"description"`
+// ParticipantData represents a model for storing all participant data. Will render manually defining structs
+// for each task obsolete
+type ParticipantData struct {
+	UserID           uint                   `json:"userID" gorm:"primary_key"`
+	ExperimentTaskID uint                   `gorm:"primary_key"`
+	ExperimentCode   string                 `json:"experimentCode"`
+	Data             map[string]interface{} `json:"data"`
+}
+
+// TableName impplements TableName interface to change name of table
+func (ParticipantData) TableName() string {
+	return "participantData"
 }

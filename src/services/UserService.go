@@ -57,7 +57,8 @@ func DeleteUserByEmail(email string) models.HTTPStatus {
 
 // MarkAsComplete updates the given experimentUser as complete
 func MarkAsComplete(experimentUser models.ExperimentUser) models.HTTPStatus {
-	code := GenerateCode(10)
+	// code := GenerateCode(10)
+	code := "hello"
 	experimentUser.CompletionCode = code
 	experimentUser.Complete = true
 	axonlogger.InfoLogger.Println("Generated completion code for user", experimentUser.ID, ":", code)

@@ -1,8 +1,16 @@
 package models
 
-// ExperimentTask represents a join table between experiments and tasks
+import "github.com/jinzhu/gorm"
+
+// ExperimentTask represents a many to many relationship between experiments and tasks
 type ExperimentTask struct {
-	ExperimentCode string `gorm:"primary_key;not null"`
-	TaskID         string `gorm:"primary_key;column:task_id"`
-	Place          int
+	gorm.Model
+	ExperimentID int `gorm:"primary_key;not null"`
+	TaskID       int `gorm:"primary_key;not null"`
+	taskOrder    int `gorm:"not null;default:null"`
+}
+
+// TableName impplements TableName interface to change name of table
+func (ExperimentTask) TableName() string {
+	return "experimentTasks"
 }

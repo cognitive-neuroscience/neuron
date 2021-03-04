@@ -39,21 +39,21 @@ func setUpUserRoutes(group fiber.Router) {
 }
 
 func setUpExperimentRoutes(group fiber.Router) {
-	experiments := group.Group("/experiments")
-	experiments.Get("/", controllers.GetAllExperiments)
-	experiments.Get("/:code", controllers.GetExperiment)
-	experiments.Post("/", controllers.SaveExperiment)
-	experiments.Delete("/:code", controllers.DeleteExperiment)
-	experiments.Options("/*", handleOptions)
-	experiments.All("/*", handleForbidden)
+	// experiments := group.Group("/experiments")
+	// experiments.Get("/", controllers.GetAllExperiments)
+	// experiments.Get("/:code", controllers.GetExperiment)
+	// experiments.Post("/", controllers.SaveExperiment)
+	// experiments.Delete("/:code", controllers.DeleteExperiment)
+	// experiments.Options("/*", handleOptions)
+	// experiments.All("/*", handleForbidden)
 }
 
 func setUpLoginRoutes(group fiber.Router) {
-	login := group.Group("/login")
-	login.Post("/", controllers.Login)
-	login.Post("/turker", controllers.LoginTurker)
-	login.Options("/*", handleOptions)
-	login.All("/*", handleForbidden)
+	// login := group.Group("/login")
+	// login.Post("/", controllers.Login)
+	// login.Post("/turker", controllers.LoginTurker)
+	// login.Options("/*", handleOptions)
+	// login.All("/*", handleForbidden)
 }
 
 func setUpTokenRoutes(group fiber.Router) {
@@ -89,12 +89,12 @@ func setUpQuestionnaireRoutes(group fiber.Router) {
 }
 
 func setUpTaskRoutes(group fiber.Router) {
-	task := group.Group("/task")
-	task.Get("/", controllers.GetAllCustomTasks)
-	task.Post("/", controllers.SaveCustomTask)
-	task.Delete("/:id", controllers.DeleteCustomTaskByID)
-	task.Options("/*", handleOptions)
-	task.All("/*", handleForbidden)
+	// task := group.Group("/task")
+	// task.Get("/", controllers.GetAllCustomTasks)
+	// task.Post("/", controllers.SaveCustomTask)
+	// task.Delete("/:id", controllers.DeleteCustomTaskByID)
+	// task.Options("/*", handleOptions)
+	// task.All("/*", handleForbidden)
 }
 
 // returns MethodNotAllowed when client tries to access unsupported HTTP request
