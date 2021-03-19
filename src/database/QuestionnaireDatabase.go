@@ -69,3 +69,15 @@ func DeleteQuestionnaireByID(id int) models.HTTPStatus {
 	axonlogger.InfoLogger.Println("Successfully deleted questionnaire", id)
 	return models.HTTPStatus{Status: http.StatusOK, Message: http.StatusText(http.StatusOK)}
 }
+
+// GetQuestionnaireByID gets the questionnaire by the given ID
+func GetQuestionnaireByID(id int) (models.Questionnaire, error) {
+	db := DBConn
+	questionnaire := models.Questionnaire{}
+	if err := db.First(&questionnaire, id).Error; err != nil {
+		axonlogger.ErrorLogger.Println("There was an error getting the questionnaire with ID", id)
+		return questionnaire, errors.New("Could not fetch the questionnaire")
+	}
+	axonlogger.InfoLogger.Println("Successfully fetched the questionnaire", id)
+	return questionnaire, nil
+}

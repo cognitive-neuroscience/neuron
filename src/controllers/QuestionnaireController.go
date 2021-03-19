@@ -100,3 +100,21 @@ func SaveQuestionnaire(c *fiber.Ctx) {
 	axonlogger.WarningLogger.Println("Not authorized to save questionnaire:", questionnaire)
 	common.SendHTTPStatusServiceUnavailable(c)
 }
+
+// GetQuestionnaireByID gets the survey monkey questionnaire by ID
+func GetQuestionnaireByID(c *fiber.Ctx) {
+	id := c.Params("id")
+	axonlogger.InfoLogger.Println("Getting questionnaire", id)
+	authorizedRoles := []string{common.ADMIN, common.PARTICIPANT}
+	if common.IsAllowed(c, authorizedRoles) {
+		result, err := services.GetQuestionnaireByID(id)
+		if err != nil {
+			common.SendHTTPStatusServiceUnavailable(c)
+			return
+		}
+		c.JSON(result)
+		return
+	}
+	axonlogger.WarningLogger.Println("Not authorized to get CustomTask", id)
+	common.SendHTTPForbidden(c)
+}

@@ -30,6 +30,7 @@ const (
 	RATING                    = "rating"
 	CHOICE                    = "choice"
 	POSTCHOICE                = "postchoice"
+	PAVLOVIATASK              = "pavloviatask"
 )
 
 // GetModel receives the given task, and gets the model for that task

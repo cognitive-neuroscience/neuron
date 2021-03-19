@@ -1,6 +1,7 @@
 package services
 
 import (
+	"errors"
 	"net/http"
 	"strconv"
 
@@ -37,4 +38,15 @@ func DeleteQuestionnaireByID(id string) models.HTTPStatus {
 // GetAllQuestionnaires calls the database and gets all questionnaires
 func GetAllQuestionnaires() ([]models.Questionnaire, error) {
 	return database.GetAllQuestionnaires()
+}
+
+// GetQuestionnaireByID calls the database and gets the questionnaire
+func GetQuestionnaireByID(id string) (models.Questionnaire, error) {
+	questionnaire := models.Questionnaire{}
+	idNum, err := strconv.Atoi(id)
+	if err != nil {
+		axonlogger.ErrorLogger.Println("Could not parse the given id", id)
+		return questionnaire, errors.New("Could not parse the given id: " + id)
+	}
+	return database.GetQuestionnaireByID(idNum)
 }

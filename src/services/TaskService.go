@@ -1,6 +1,7 @@
 package services
 
 import (
+	"errors"
 	"net/http"
 	"strconv"
 
@@ -28,4 +29,15 @@ func DeleteCustomTaskByID(id string) models.HTTPStatus {
 	}
 
 	return database.DeleteCustomTaskByID(idNum)
+}
+
+// GetCustomTaskByID gets the given task
+func GetCustomTaskByID(id string) (models.CustomTask, error) {
+	customTask := models.CustomTask{}
+	idNum, err := strconv.Atoi(id)
+	if err != nil {
+		axonlogger.ErrorLogger.Println("Could not parse the given id", id)
+		return customTask, errors.New("Could not parse the given id: " + id)
+	}
+	return database.GetCustomTaskByID(idNum)
 }

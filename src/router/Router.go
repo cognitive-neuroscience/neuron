@@ -81,6 +81,7 @@ func setUpQuestionnaireRoutes(group fiber.Router) {
 	questionnaire := group.Group("/questionnaire")
 	questionnaire.Get("/", controllers.GetAllQuestionnaires)
 	questionnaire.Delete("/:id", controllers.DeleteQuestionnaireByID)
+	questionnaire.Get("/:id", controllers.GetQuestionnaireByID)
 	questionnaire.Post("/", controllers.SaveQuestionnaire)
 	questionnaire.Post("/demographics", controllers.SaveDemographicsQuestionnaireResponse)
 	questionnaire.Post("/feedback", controllers.SaveFeedbackQuestionnaireResponse)
@@ -93,6 +94,7 @@ func setUpTaskRoutes(group fiber.Router) {
 	task.Get("/", controllers.GetAllCustomTasks)
 	task.Post("/", controllers.SaveCustomTask)
 	task.Delete("/:id", controllers.DeleteCustomTaskByID)
+	task.Get("/:id", controllers.GetCustomTaskByID)
 	task.Options("/*", handleOptions)
 	task.All("/*", handleForbidden)
 }

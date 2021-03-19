@@ -39,6 +39,24 @@ func DeleteCustomTaskByID(c *fiber.Ctx) {
 	common.SendHTTPForbidden(c)
 }
 
+// GetCustomTaskByID gets the custom task by ID
+func GetCustomTaskByID(c *fiber.Ctx) {
+	id := c.Params("id")
+	axonlogger.InfoLogger.Println("Getting custom task", id)
+	authorizedRoles := []string{common.ADMIN, common.PARTICIPANT}
+	if common.IsAllowed(c, authorizedRoles) {
+		result, err := services.GetCustomTaskByID(id)
+		if err != nil {
+			common.SendHTTPStatusServiceUnavailable(c)
+			return
+		}
+		c.JSON(result)
+		return
+	}
+	axonlogger.WarningLogger.Println("Not authorized to get CustomTask", id)
+	common.SendHTTPForbidden(c)
+}
+
 // SaveCustomTask is the customTask api entry point for saving a CustomTask given the json. This describes the data that populates
 // an embedded pavlovia task
 func SaveCustomTask(c *fiber.Ctx) {

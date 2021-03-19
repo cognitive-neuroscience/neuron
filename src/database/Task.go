@@ -22,6 +22,19 @@ func GetAllCustomTasks() ([]models.CustomTask, error) {
 	return customTasks, err
 }
 
+// GetCustomTaskByID gets the given custom task
+func GetCustomTaskByID(id int) (models.CustomTask, error) {
+	db := DBConn
+	var err error
+	customTask := models.CustomTask{}
+	if err := db.First(&customTask, id).Error; err != nil {
+		axonlogger.ErrorLogger.Println("There was an error getting the customTask with ID", id)
+		return customTask, errors.New("Could not fetch the task")
+	}
+	axonlogger.InfoLogger.Println("Getting custom task")
+	return customTask, err
+}
+
 // SaveCustomTask saves the given customTask data into the database as a customTask object
 func SaveCustomTask(customTask *models.CustomTask) models.HTTPStatus {
 	db := DBConn

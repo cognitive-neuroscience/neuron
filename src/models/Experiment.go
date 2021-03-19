@@ -14,6 +14,7 @@ type Experiment struct {
 	Deleted        bool            `json:"deleted" gorm:"default:false"`
 	Tasks          []string        `json:"tasks" gorm:"-"` // ignore this field
 	Questionnaires []Questionnaire `json:"questionnaires"`
+	CustomTasks    []CustomTask    `json:"customTasks"`
 }
 
 // Validate method validates a given model

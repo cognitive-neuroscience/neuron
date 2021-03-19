@@ -61,18 +61,26 @@ func GetAllExperiments() ([]models.Experiment, error) {
 			return nil, err
 		}
 
-		idList := []string{}
+		surveyMonkeyIDList := []string{}
+		customTaskIDList := []string{}
 		// for each taskname, find the survey monkey ones and grab the ID
 		for _, taskName := range experiments[index].Tasks {
 			if strings.Contains(taskName, SURVEYMONKEYQUESTIONNAIRE) {
 				split := strings.Split(taskName, "-")
-				idList = append(idList, split[1])
+				surveyMonkeyIDList = append(surveyMonkeyIDList, split[1])
+			} else if strings.Contains(taskName, PAVLOVIATASK) {
+				split := strings.Split(taskName, "-")
+				customTaskIDList = append(customTaskIDList, split[1])
 			}
 		}
 
-		err = db.Find(&experiments[index].Questionnaires, idList).Error
+		err = db.Find(&experiments[index].Questionnaires, surveyMonkeyIDList).Error
 		if err != nil {
 			axonlogger.ErrorLogger.Println("There was an error getting questionnaires from the DB", experiment, err)
+		}
+		err = db.Find(&experiments[index].CustomTasks, customTaskIDList).Error
+		if err != nil {
+			axonlogger.ErrorLogger.Println("There was an error getting custom tasks from the DB", experiment, err)
 		}
 	}
 
@@ -146,16 +154,24 @@ func GetExperiment(code string) (models.Experiment, error) {
 		return experiment, errors.New(err.Error())
 	}
 
-	idList := []string{}
+	surveyMonkeyIDList := []string{}
+	pavloviaTaskIDList := []string{}
 	// for each taskname, find the survey monkey ones and grab the ID
 	for _, taskName := range experiment.Tasks {
 		if strings.Contains(taskName, SURVEYMONKEYQUESTIONNAIRE) {
 			split := strings.Split(taskName, "-")
-			idList = append(idList, split[1])
+			surveyMonkeyIDList = append(surveyMonkeyIDList, split[1])
+		} else if strings.Contains(taskName, PAVLOVIATASK) {
+			split := strings.Split(taskName, "-")
+			pavloviaTaskIDList = append(pavloviaTaskIDList, split[1])
 		}
 	}
-	if err := db.Find(&experiment.Questionnaires, idList).Error; err != nil {
+	if err := db.Find(&experiment.Questionnaires, surveyMonkeyIDList).Error; err != nil {
 		axonlogger.ErrorLogger.Println("Error retreiving questionnaire(s) for experiment", experiment, err)
+		return experiment, err
+	}
+	if err := db.Find(&experiment.CustomTasks, pavloviaTaskIDList).Error; err != nil {
+		axonlogger.ErrorLogger.Println("Error retreiving pavlovia task(s) for experiment", experiment, err)
 		return experiment, err
 	}
 
