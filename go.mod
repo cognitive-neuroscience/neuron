@@ -6,6 +6,7 @@ require (
 	github.com/asaskevich/govalidator v0.0.0-20200819183940-29e1ff8eb0bb // indirect
 	github.com/denisenkom/go-mssqldb v0.0.0-20200831201914-36b6ff1bbc10 // indirect
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
+	github.com/go-delve/delve v1.6.0 // indirect
 	github.com/gofiber/compression v0.3.1
 	github.com/gofiber/fiber v1.14.5
 	github.com/gofiber/limiter v0.1.2
