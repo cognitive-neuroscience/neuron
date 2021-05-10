@@ -1,23 +1,23 @@
-package database
+package setup
 
 import (
 	"errors"
 	"log"
 	"os"
 
-	"github.com/jinzhu/gorm"
-	_ "github.com/jinzhu/gorm/dialects/mysql" // MySQL Dialect for GORM
-	"github.com/qor/validations"
+	_ "github.com/go-sql-driver/mysql" // import mysql driver
+	"github.com/jmoiron/sqlx"
 )
 
 /*
  * Database file that deals with config. Looks for a .env file to set the env, and connect to the right DB
  */
 
-// ENV holds the environment we are using
-var ENV string
-
-var mySQL string = "mysql"
+// ENV holds the environment we are using and exposes the global DB reference
+var (
+	ENV string
+	DB  *sqlx.DB
+)
 
 // SetEnvironment reads the loaded .env file and sets the environment
 func SetEnvironment() {
@@ -31,7 +31,7 @@ func SetEnvironment() {
 	log.Printf("Starting up %s environment", ENV)
 }
 
-// ConnectDB instantiates a mongoDB connection
+// ConnectDB instantiates a mysql connection
 func ConnectDB() {
 
 	dbConnectionDetails, err := getDBConnectionDetails()
@@ -39,15 +39,14 @@ func ConnectDB() {
 		log.Panic("No DB connection details available")
 	}
 
-	DBConn, err = gorm.Open(mySQL, dbConnectionDetails)
+	DB = sqlx.MustConnect("mysql", dbConnectionDetails)
 	if err != nil {
 		log.Panic(err.Error())
 	}
-
-	validations.RegisterCallbacks(DBConn)
 	log.Println("Connected to database")
 }
 
+// helper function which takes the given ENV and grabs the connections details from the .env file
 func getDBConnectionDetails() (string, error) {
 	switch ENV {
 	case "DEV":
@@ -58,7 +57,7 @@ func getDBConnectionDetails() (string, error) {
 		return getConnectionDetailsFromOs("PRODDB")
 	default:
 		// realistically we should never reach here because we default to dev
-		return "", errors.New("Unrecognized environment")
+		return "", errors.New("Unrecognized environment: " + ENV)
 	}
 }
 

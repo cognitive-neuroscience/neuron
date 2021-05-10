@@ -1,13 +1,18 @@
 package services
 
-// import (
-// 	"net/http"
-// 	"strconv"
+import (
+	"github.com/cognitive-neuroscience/neuron/src/database"
+	"github.com/cognitive-neuroscience/neuron/src/models"
+)
 
-// 	"github.com/cognitive-neuroscience/neuron/src/database"
-// 	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
-// 	"github.com/cognitive-neuroscience/neuron/src/models"
-// )
+type TaskService struct{}
+
+var taskRepository = database.TaskRepository{}
+
+// GetAllSharplabRoutes calls the repository and queries the db
+func (t TaskService) GetAllSharplabRoutes() ([]models.Task, error) {
+	return taskRepository.GetAllTasksByPlatform("sharplab")
+}
 
 // // GetAllCustomTasks returns a list of all questionnaires from the DB
 // func GetAllCustomTasks() ([]models.CustomTask, error) {

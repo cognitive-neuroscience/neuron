@@ -1,5 +1,10 @@
 package controllers
 
+import (
+	"github.com/cognitive-neuroscience/neuron/src/services"
+	"github.com/gofiber/fiber/v2"
+)
+
 // import (
 // 	"github.com/cognitive-neuroscience/neuron/src/common"
 // 	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
@@ -7,6 +12,14 @@ package controllers
 // 	"github.com/cognitive-neuroscience/neuron/src/services"
 // 	"github.com/gofiber/fiber"
 // )
+
+var taskService = services.TaskService{}
+
+func GetAllSharplabRoutes(c *fiber.Ctx) error {
+	// s, err := taskService.GetAllSharplabRoutes()
+	// c.JSON(s)
+	return nil
+}
 
 // // GetAllCustomTasks gets all CustomTasks from the DB
 // func GetAllCustomTasks(c *fiber.Ctx) {

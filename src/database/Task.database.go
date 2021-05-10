@@ -1,12 +1,65 @@
 package database
 
-// import (
-// 	"errors"
-// 	"net/http"
+import (
+	"errors"
 
-// 	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
-// 	"github.com/cognitive-neuroscience/neuron/src/models"
-// )
+	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
+	"github.com/cognitive-neuroscience/neuron/src/models"
+	"github.com/cognitive-neuroscience/neuron/src/setup"
+)
+
+type TaskRepository struct {
+}
+
+const (
+	PSHARPLAB    = "psharplab"
+	SURVEYMONKEY = "surveymonkey"
+	PAVLOVIA     = "pavlovia"
+)
+
+// type ITaskRepository interface {
+// 	GetAllSharplabRoutes() ([]models.Task, error)
+// }
+
+// GetAllSharplabTasks returns a list of all tasks supported natively by sharplab (e.g. stroop, nback, etc)
+func (t TaskRepository) GetAllTasksByPlatform(platform string) ([]models.Task, error) {
+	db := setup.DB
+	tasks := []models.Task{}
+
+	var getAllSharplabTasksQuery = `SELECT * FROM tasks WHERE fromPlatform = ?;`
+
+	rows, err := db.Query(getAllSharplabTasksQuery, platform)
+	if err != nil {
+		axonlogger.ErrorLogger.Println("Error retrieving psharplab tasks while executing: "+getAllSharplabTasksQuery, err)
+		return nil, errors.New("There was an error while retrieving tasks")
+	}
+	defer rows.Close()
+	for rows.Next() {
+		task := models.Task{}
+		err := rows.Scan(
+			&task.ID,
+			&task.FromPlatform,
+			&task.TaskType,
+			&task.Name,
+			&task.Description,
+			&task.Config,
+			&task.ExternalURL,
+			&task.ComponentMapping,
+		)
+		if err != nil {
+			axonlogger.ErrorLogger.Panicln("There was an error mapping the values from DB rows to the given struct", err)
+			return nil, errors.New("There was an error while retrieving tasks")
+		}
+		tasks = append(tasks, task)
+	}
+
+	err = rows.Err()
+	if err != nil {
+		axonlogger.ErrorLogger.Panicln("There was an error scanning the rows", err)
+		return nil, errors.New("There was an error while retrieving tasks")
+	}
+	return tasks, nil
+}
 
 // // GetAllCustomTasks returns a list of all questionnaires from the DB
 // func GetAllCustomTasks() ([]models.CustomTask, error) {

@@ -6,60 +6,65 @@ import (
 
 	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
 	"github.com/cognitive-neuroscience/neuron/src/router"
-	"github.com/gofiber/compression"
-	"github.com/gofiber/fiber"
-	"github.com/gofiber/limiter"
-	"github.com/gofiber/logger"
-	"github.com/gofiber/recover"
+	"github.com/gofiber/fiber/v2"
+	"github.com/gofiber/fiber/v2/middleware/compress"
+	"github.com/gofiber/fiber/v2/middleware/limiter"
+	"github.com/gofiber/fiber/v2/middleware/logger"
+	"github.com/gofiber/fiber/v2/middleware/recover"
 )
 
 // CreateServer creates a HTTP server
 func CreateServer() {
+
 	port := os.Getenv("NEURON_PORT")
 	if port == "" {
 		port = "8181"
 	}
-	app := fiber.New()
 
-	// Use compression
-	app.Use(compression.New())
-
-	// Use recovery from panic
-	recoverConf := recover.Config{
-		Handler: func(c *fiber.Ctx, err error) {
-			c.SendString(err.Error())
-			c.SendStatus(500)
-		},
-	}
-	app.Use(recover.New(recoverConf))
-
-	// logging to external file
+	// logging to external log file
 	file, err := os.OpenFile(getLogPath(), os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
 	log.Println("Created log file", file)
 	if err != nil {
 		panic("Could not create log file to write to")
 	}
 	defer file.Close()
+	axonlogger.Initialize(file) // initialize logger with given file to write to
 
-	// initialize logger with given file to write to
-	axonlogger.Initialize(file)
+	app := fiber.New(fiber.Config{
+		ErrorHandler: func(c *fiber.Ctx, err error) error {
+			code := fiber.StatusInternalServerError
+			if e, ok := err.(*fiber.Error); ok {
+				code = e.Code
+			}
+			axonlogger.ErrorLogger.Println(err)
+			return c.Status(code).SendString("Internal Server Error")
+		},
+	})
 
 	// Use logger to log HTTP requests
 	app.Use(logger.New(logger.Config{
-		Output: file,
+		TimeFormat: "2006/01/2 15:04:05",
+		Format:     "INFO: ${time} ${method} ${url} ${status} ${error}\n",
+		Output:     file,
 	}))
 
+	// Use compression
+	app.Use(compress.New())
+
+	// Use recovery from panic
+	app.Use(recover.New())
+
 	// Use API rate limiter
-	limiterConf := limiter.Config{
-		Max:     40,
-		Timeout: 5,
-	}
-	app.Use(limiter.New(limiterConf))
+	app.Use(limiter.New(limiter.Config{
+		Max:        40,
+		Expiration: 5,
+	}))
 
 	// Register app routes
 	router.RegisterRoutes(app)
 
-	app.Listen(port)
+	axonlogger.InfoLogger.Println("Listening on port " + port)
+	app.Listen(":" + port)
 }
 
 func getLogPath() string {
