@@ -31,6 +31,7 @@ const (
 	CHOICE                    = "choice"
 	POSTCHOICE                = "postchoice"
 	PAVLOVIATASK              = "pavloviatask"
+	RATINGNEW                 = "ratingnew"
 )
 
 // GetModel receives the given task, and gets the model for that task
@@ -56,6 +57,8 @@ func GetModel(task string) (interface{}, error) {
 		return models.SmileyFace{}, nil
 	case RATING:
 		return models.Rating{}, nil
+	case RATINGNEW:
+		return models.RatingNew{}, nil
 	case CHOICE:
 		return models.Choice{}, nil
 	case POSTCHOICE:
@@ -92,6 +95,8 @@ func GetModelSlice(task string) (interface{}, error) {
 		return []models.DemographicsQuestionnaireResponse{}, nil
 	case RATING:
 		return []models.Rating{}, nil
+	case RATINGNEW:
+		return []models.RatingNew{}, nil
 	case CHOICE:
 		return []models.Choice{}, nil
 	case POSTCHOICE:

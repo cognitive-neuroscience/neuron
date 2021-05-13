@@ -213,3 +213,20 @@ type CustomTask struct {
 	Name         string `json:"name"`
 	Description  string `json:"description"`
 }
+
+// PostChoice represents a model for the data received from the PostChoice task
+type RatingNew struct {
+	UserID         string    `json:"userID"`         // default
+	Trial          int       `json:"trial"`          // default
+	Score          int       `json:"score"`          // default
+	IsCorrect      bool      `json:"isCorrect"`      // default
+	IsPractice     bool      `json:"isPractice"`     // default
+	ExperimentCode string    `json:"experimentCode"` // default
+	Submitted      time.Time `json:"submitted"`      // ISODateString, default
+	ActivityType   string    `json:"activityType"`
+	Counterbalance string    `json:"counterbalance"`
+	Activity       string    `json:"activity"`
+	Question       string    `json:"question"`
+	UserAnswer     int       `json:"userAnswer"`
+	ResponseTime   int       `json:"responseTime"`
+}

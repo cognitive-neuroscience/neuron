@@ -36,6 +36,7 @@ func AutoMigrate() {
 		&models.Rating{},
 		&models.Choice{},
 		&models.PostChoice{},
+		&models.RatingNew{},
 	)
 	log.Println("MySQL migrations complete")
 }

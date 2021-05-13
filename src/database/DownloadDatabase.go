@@ -78,6 +78,10 @@ func retrieveDataFromTable(experimentCode string, taskName string) (interface{},
 		slice := []models.Rating{}
 		err := db.Where("experiment_code = ?", experimentCode).Find(&slice).Error
 		return slice, err
+	case RATINGNEW:
+		slice := []models.RatingNew{}
+		err := db.Where("experiment_code = ?", experimentCode).Find(&slice).Error
+		return slice, err
 	case CHOICE:
 		slice := []models.Choice{}
 		err := db.Where("experiment_code = ?", experimentCode).Find(&slice).Error
