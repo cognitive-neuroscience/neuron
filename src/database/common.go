@@ -1,5 +1,7 @@
 package database
 
+type MapStringInterface map[string]interface{}
+
 // import (
 // 	"errors"
 // 	"strings"

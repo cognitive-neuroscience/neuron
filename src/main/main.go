@@ -1,7 +1,6 @@
 package main
 
 import (
-	"github.com/cognitive-neuroscience/neuron/src/server"
 	"github.com/cognitive-neuroscience/neuron/src/setup"
 	"github.com/joho/godotenv"
 )
@@ -11,10 +10,11 @@ var ENV string
 
 func main() {
 	loadEnv()
+	setup.Setup()
 	setup.SetEnvironment()
 	setup.ConnectDB()
 	setup.MakeTables()
-	server.CreateServer()
+	setup.CreateServer()
 	defer setup.DB.Close()
 }
 

@@ -19,8 +19,8 @@ var ExperimentUserSchema = `
 	);
 `
 
-// ExperimentUser represents a join table between experiments and users keeping track of the progress for that user in each experiment
-// that the user is part of
+// ExperimentUser represents a join table between experiments and users keeping track of the progress
+// for that user in each experiment that the user is part of
 type ExperimentUser struct {
 	UserID           uint      `json:"userId"`
 	ExperimentID     uint      `json:"experimentId"`

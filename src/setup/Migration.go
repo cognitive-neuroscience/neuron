@@ -12,21 +12,21 @@ import (
 
 // MakeTables will start mysql db migration
 func MakeTables() {
-	log.Println("Setting up SQL Tables")
+	InfoLogger.Println("Setting up SQL Tables")
 
-	log.Println("Setting up Experiment Table")
+	InfoLogger.Println("Setting up Experiment Table")
 	DB.MustExec(models.ExperimentSchema)
-	log.Println("Setting up Task Table")
+	InfoLogger.Println("Setting up Task Table")
 	DB.MustExec(models.TaskSchema)
-	log.Println("Setting up Users Table")
+	InfoLogger.Println("Setting up Users Table")
 	DB.MustExec(models.UserSchema)
-	log.Println("Setting up Notifications Table")
+	InfoLogger.Println("Setting up Notifications Table")
 	DB.MustExec(models.NotificationSchema) // REF experiment id
-	log.Println("Setting up Task Table")
+	InfoLogger.Println("Setting up Task Table")
 	DB.MustExec(models.ExperimentTaskSchema) // REF experiment id and task id
-	log.Println("Setting up ExperimentUser Table")
+	InfoLogger.Println("Setting up ExperimentUser Table")
 	DB.MustExec(models.ExperimentUserSchema) // REF experiment id and user id
-	log.Println("Setting up Data Table")
+	InfoLogger.Println("Setting up Data Table")
 	DB.MustExec(models.ParticipantDataSchema) // REF experiment_task composite key
 
 	if err := populateBaseTasks(); err != nil {
