@@ -223,6 +223,7 @@ type RatingNew struct {
 	IsPractice     bool      `json:"isPractice"`     // default
 	ExperimentCode string    `json:"experimentCode"` // default
 	Submitted      time.Time `json:"submitted"`      // ISODateString, default
+	TaskName       string    `json:"taskName"`
 	ActivityType   string    `json:"activityType"`
 	Counterbalance string    `json:"counterbalance"`
 	Activity       string    `json:"activity"`
