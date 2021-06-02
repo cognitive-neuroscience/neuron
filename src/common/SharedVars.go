@@ -5,4 +5,5 @@ const (
 	ADMIN       = "ADMIN"
 	PARTICIPANT = "PARTICIPANT"
 	GUEST       = "GUEST"
+	NONE        = "NONE"
 )

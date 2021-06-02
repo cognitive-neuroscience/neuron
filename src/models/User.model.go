@@ -9,7 +9,7 @@ var UserSchema = `
 		email VARCHAR(255) NOT NULL UNIQUE CHECK(email != ""),
 		created_at DATETIME NOT NULL,
 		password VARCHAR(255) NOT NULL CHECK(password != ""),
-		role ENUM("admin", "participant", "guest"),
+		role ENUM("ADMIN", "PARTICIPANT", "GUEST"),
 		PRIMARY KEY (id)
 	);
 `

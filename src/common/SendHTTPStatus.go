@@ -1,48 +1,48 @@
 package common
 
-// import (
-// 	"net/http"
+import (
+	"net/http"
 
-// 	"github.com/cognitive-neuroscience/neuron/src/models"
-// 	"github.com/gofiber/fiber"
-// )
+	"github.com/cognitive-neuroscience/neuron/src/models"
+	"github.com/labstack/echo/v4"
+)
 
-// // SendHTTPBadRequest sends a 400
-// func SendHTTPBadRequest(c *fiber.Ctx) {
-// 	c.Status(http.StatusBadRequest).JSON(models.HTTPStatus{Status: http.StatusBadRequest, Message: http.StatusText(http.StatusBadRequest)})
-// }
+// SendHTTPBadRequest sends a 400
+func SendHTTPBadRequest(e echo.Context) error {
+	return e.JSON(http.StatusBadRequest, models.HTTPStatus{Status: http.StatusBadRequest, Message: http.StatusText(http.StatusBadRequest)})
+}
 
-// // SendGenericHTTPWithMessage takes in an http code and message and sends it to client
-// func SendGenericHTTPWithMessage(c *fiber.Ctx, httpCode int, message string) {
-// 	c.Status(httpCode).JSON(models.HTTPStatus{Status: httpCode, Message: message})
-// }
+// SendGenericHTTPWithMessage takes in an http code and message and sends it to client
+func SendGenericHTTPWithMessage(e echo.Context, status models.HTTPStatus) error {
+	return e.JSON(status.Status, status)
+}
 
-// // SendHTTPForbidden sends a 401
-// func SendHTTPForbidden(c *fiber.Ctx) {
-// 	c.Status(http.StatusUnauthorized).JSON(models.HTTPStatus{Status: http.StatusUnauthorized, Message: http.StatusText(http.StatusUnauthorized)})
-// }
+// SendHTTPForbidden sends a 401
+func SendHTTPForbidden(e echo.Context) error {
+	return e.JSON(http.StatusUnauthorized, models.HTTPStatus{Status: http.StatusUnauthorized, Message: http.StatusText(http.StatusUnauthorized)})
+}
 
-// // SendHTTPOkWithBody sends a 200 with payload
-// func SendHTTPOkWithBody(c *fiber.Ctx, payload interface{}) {
-// 	c.Status(http.StatusOK).JSON(payload)
-// }
+// SendHTTPOkWithBody sends a 200 with payload
+func SendHTTPOkWithBody(e echo.Context, payload interface{}) error {
+	return e.JSON(http.StatusOK, payload)
+}
 
-// // SendHTTPOk sends a 200
-// func SendHTTPOk(c *fiber.Ctx) {
-// 	c.Status(http.StatusOK).JSON(models.HTTPStatus{Status: http.StatusOK, Message: http.StatusText(http.StatusOK)})
-// }
+// SendHTTPOk sends a 200
+func SendHTTPOk(e echo.Context) error {
+	return e.JSON(http.StatusOK, models.HTTPStatus{Status: http.StatusOK, Message: http.StatusText(http.StatusOK)})
+}
 
-// // SendHTTPStatusCreated sends a 201
-// func SendHTTPStatusCreated(c *fiber.Ctx) {
-// 	c.Status(http.StatusCreated).JSON(models.HTTPStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)})
-// }
+// SendHTTPStatusCreated sends a 201
+func SendHTTPStatusCreated(e echo.Context) error {
+	return e.JSON(http.StatusCreated, models.HTTPStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)})
+}
 
-// // SendHTTPStatusServiceUnavailable sends a 503
-// func SendHTTPStatusServiceUnavailable(c *fiber.Ctx) {
-// 	c.Status(http.StatusServiceUnavailable).JSON(models.HTTPStatus{Status: http.StatusServiceUnavailable, Message: http.StatusText(http.StatusServiceUnavailable)})
-// }
+// SendHTTPStatusServiceUnavailable sends a 503
+func SendHTTPStatusServiceUnavailable(e echo.Context) error {
+	return e.JSON(http.StatusServiceUnavailable, models.HTTPStatus{Status: http.StatusServiceUnavailable, Message: http.StatusText(http.StatusServiceUnavailable)})
+}
 
-// // SendGenericHTTPModel send the given http status code depending on the given HTTPStatus model
-// func SendGenericHTTPModel(c *fiber.Ctx, model models.HTTPStatus) {
-// 	c.Status(model.Status).JSON(model)
-// }
+// SendHTTPStatusService
+func SendHTTPStatusInternalServerError(e echo.Context) error {
+	return e.JSON(http.StatusInternalServerError, models.HTTPStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)})
+}

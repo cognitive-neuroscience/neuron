@@ -1,17 +1,16 @@
 package services
 
-// import (
-// 	"errors"
-// 	"os"
-// 	"strings"
-// 	"time"
+import (
+	"errors"
+	"os"
+	"time"
 
-// 	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
+	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
+	"github.com/cognitive-neuroscience/neuron/src/models"
+	"github.com/dgrijalva/jwt-go"
+)
 
-// 	"github.com/cognitive-neuroscience/neuron/src/models"
-// 	"github.com/dgrijalva/jwt-go"
-// 	"github.com/gofiber/fiber"
-// )
+type TokenService struct {}
 
 // // AuthenticateToken verifies if the token present in the authorization header is valid
 // func AuthenticateToken(c *fiber.Ctx) (*models.Claims, error) {
@@ -49,48 +48,48 @@ package services
 // 	return "", errors.New("Could not parse token")
 // }
 
-// // CreateToken returns the token and error after signing with HS256
-// func CreateToken(id string, email string, role string) (string, error) {
-// 	key := getKey()
-// 	// 4 hours before JWT expires
-// 	expirationTime := time.Now().Add(4 * time.Hour)
-// 	claims := &models.Claims{
-// 		UserID: id,
-// 		Email:  email,
-// 		Role:   role,
-// 		StandardClaims: jwt.StandardClaims{
-// 			ExpiresAt: expirationTime.Unix(),
-// 		},
-// 	}
-// 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
-// 	return token.SignedString([]byte(key))
-// }
+// CreateToken returns the token and error after signing with HS256
+func (t *TokenService) CreateToken(id string, email string, role string) (string, error) {
+	key := GetJWTKey()
+	// 4 hours before JWT expires
+	expirationTime := time.Now().Add(8 * time.Hour)
+	claims := &models.Claims{
+		UserID: id,
+		Email:  email,
+		Role:   role,
+		StandardClaims: jwt.StandardClaims{
+			ExpiresAt: expirationTime.Unix(),
+		},
+	}
+	token := jwt.NewWithClaims(jwt.SigningMethodHS256, claims)
+	return token.SignedString([]byte(key))
+}
 
-// // ValidateToken makes sure a given token is valid (acceptable, can be parsed, not expired)
-// func ValidateToken(tokenString string) (*models.Claims, error) {
-// 	key := getKey()
-// 	claims := &models.Claims{}
-// 	token, err := jwt.ParseWithClaims(tokenString, claims, func(token *jwt.Token) (interface{}, error) {
-// 		return []byte(key), nil
-// 	})
-// 	if err != nil {
-// 		axonlogger.ErrorLogger.Println("Error when calling ParseWithClaims on token", tokenString, ":", err)
-// 		return claims, errors.New("Could not parse with claims")
-// 	}
+// ValidateToken makes sure a given token is valid (acceptable, can be parsed, not expired)
+func (t *TokenService) ValidateToken(tokenString string) (*models.Claims, error) {
+	key := GetJWTKey()
+	claims := &models.Claims{}
+	token, err := jwt.ParseWithClaims(tokenString, claims, func(token *jwt.Token) (interface{}, error) {
+		return []byte(key), nil
+	})
+	if err != nil {
+		axonlogger.ErrorLogger.Println("Error when calling ParseWithClaims on token", tokenString, err)
+		return claims, errors.New("could not parse with claims")
+	}
 
-// 	if !token.Valid {
-// 		axonlogger.WarningLogger.Println("Token is not valid")
-// 		return claims, errors.New("Token is not valid")
-// 	}
-// 	axonlogger.InfoLogger.Println("Authenticated Token:", claims.Email, claims.UserID, claims.Role)
-// 	return claims, nil
-// }
+	if !token.Valid {
+		axonlogger.WarningLogger.Println("Token is not valid")
+		return claims, errors.New("token is not valid")
+	}
+	axonlogger.InfoLogger.Println("Authenticated Token:", claims.Email, claims.UserID, claims.Role)
+	return claims, nil
+}
 
-// func getKey() string {
-// 	key, exists := os.LookupEnv("NEURON_SECRET")
-// 	if exists {
-// 		return key
-// 	}
-// 	// return simple dev key if env is absent
-// 	return "neuron"
-// }
+func GetJWTKey() string {
+	key, exists := os.LookupEnv("NEURON_SECRET")
+	if exists {
+		return key
+	}
+	// return simple dev key if env is absent
+	return "neuron"
+}

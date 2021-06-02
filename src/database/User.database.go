@@ -1,36 +1,47 @@
 package database
 
-// import (
-// 	"errors"
-// 	"net/http"
-// 	"strings"
-// 	"time"
+import (
+	"database/sql"
+	"errors"
+	"net/http"
+	"strings"
+	"time"
 
-// 	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
+	"github.com/cognitive-neuroscience/neuron/src/common"
+	"github.com/cognitive-neuroscience/neuron/src/db"
+	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
 
-// 	"github.com/cognitive-neuroscience/neuron/src/models"
-// )
+	"github.com/cognitive-neuroscience/neuron/src/models"
+)
 
-// /*
-//  * This file is for saving/deleting/retrieving user data
-//  */
+type UserRepository struct {
+}
 
-// // SaveUser saves a user in the database
-// func SaveUser(user *models.User) models.HTTPStatus {
-// 	db := DBConn
-// 	if err := db.Create(&user).Error; err != nil {
-// 		axonlogger.ErrorLogger.Println("Could not save user", err)
-// 		// 1062 = duplicate entry
-// 		msg := "There was a problem saving the user"
-// 		if strings.Contains(err.Error(), "1062") {
-// 			msg = "A user with this email already exists"
-// 			return models.HTTPStatus{Status: http.StatusBadRequest, Message: msg}
-// 		}
-// 		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: msg}
-// 	}
-// 	axonlogger.InfoLogger.Println("Successfully saved user", user.Email, user.ID, user.Role)
-// 	return models.HTTPStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)}
-// }
+/*
+ * This file is for saving/deleting/retrieving user data
+ */
+
+// SaveUser saves a user in the database
+func (u *UserRepository) SaveUser(user *models.User) (operationStatus models.HTTPStatus) {
+	db := db.DB
+
+	var saveUserIntoDB = `INSERT INTO users (email, password, role, created_at) VALUES (?, ?, ?, ?)`
+	_, err := db.Exec(saveUserIntoDB, user.Email, user.Password, user.Role, time.Now().UTC())
+
+	if err != nil {
+		axonlogger.ErrorLogger.Println("Error saving user into DB", err)
+		msg := "There was a problem creating the user"
+		status := http.StatusInternalServerError
+		if strings.Contains(err.Error(), "1062") {
+			// 1062 is a mysql DB error indicating duplicate entry exists
+			msg = "A user with this email already exists"
+			status = http.StatusConflict
+		}
+		return models.HTTPStatus{Status: status, Message: msg}
+	}
+	axonlogger.InfoLogger.Println("Successfully created user:", user.Email, user.ID, user.Role, user.CreatedAt)
+	return models.HTTPStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)}
+}
 
 // // SaveExperimentAndParticipant sees if the record exists. If not, it creates one
 // func SaveExperimentAndParticipant(expUser models.ExperimentUser) models.HTTPStatus {
@@ -89,19 +100,40 @@ package database
 // 	return experimentUsers, nil
 // }
 
-// // GetGuests retrieves all users of Role Guest from the DB
-// func GetGuests() ([]models.User, error) {
-// 	db := DBConn
-// 	var err error
-// 	guests := []models.User{}
-// 	if err := db.Where(&models.User{Role: "GUEST"}).Find(&guests).Error; err != nil {
-// 		axonlogger.ErrorLogger.Println("Error fetching all guests", err)
-// 		return guests, errors.New("Error getting guests")
-// 	}
-// 	axonlogger.InfoLogger.Println("Successfully retrieved guests")
+// GetGuests retrieves all users of Role Guest from the DB
+func (u *UserRepository) GetGuests() ([]models.User, error) {
+	db := db.DB
+	var err error
+	guests := []models.User{}
 
-// 	return scrubPrivateData(guests), err
-// }
+	var getAllGuests = `SELECT id, email, role FROM users WHERE role = ?`
+
+	rows, err := db.Query(getAllGuests, common.GUEST)
+	if err != nil {
+		axonlogger.ErrorLogger.Println("There was an error getting guests from the DB", err)
+		return nil, errors.New("there was an error retrieving guests")
+	}
+	defer rows.Close()
+	for rows.Next() {
+		guest := models.User{}
+		err := rows.Scan(
+			&guest.ID,
+			&guest.Email,
+			&guest.Role,
+		)
+		if err != nil {
+			axonlogger.ErrorLogger.Println("Could not scan rows when retrieving guests", err)
+			return nil, errors.New("there was an error retrieving guests")
+		}
+		guests = append(guests, guest)
+	}
+	if err := rows.Err(); err != nil {
+		axonlogger.ErrorLogger.Println("Error when iterating over rows", err)
+		return nil, errors.New("there was an error retrieving guests")	
+	}
+	return guests, err
+}
+
 
 // func scrubPrivateData(users []models.User) []models.User {
 // 	for i := 0; i < len(users); i++ {
@@ -132,26 +164,31 @@ package database
 // 	return models.HTTPStatus{Status: http.StatusOK, Message: http.StatusText(http.StatusOK)}
 // }
 
-// // GetUserByEmail searches for a user given the email
-// func GetUserByEmail(email string) (models.User, error) {
-// 	db := DBConn
+// GetUserByEmail searches for a user given the email
+func (u *UserRepository) GetUserByEmail(email string) (models.User, error) {
+	db := db.DB
+	var user models.User
 
-// 	var user models.User
-// 	var err error
+	var getUserByEmail = `SELECT id, email, password, role, created_at FROM users WHERE email = ?`
 
-// 	// error getting data from the db
-// 	if err = db.Where(&models.User{Email: email}).First(&user).Error; err != nil {
-// 		axonlogger.ErrorLogger.Println(err)
-// 		return user, errors.New("There was an issue retrieving your login information")
-// 	}
+	rowErr := db.QueryRow(getUserByEmail, email).Scan(
+		&user.ID,
+		&user.Email,
+		&user.Password,
+		&user.Role,
+		&user.CreatedAt,
+	)
+	
+	if rowErr == sql.ErrNoRows {
+		axonlogger.WarningLogger.Println("cannot retrieve user as they do not exist in DB", email)
+		return user, errors.New("user does not exist")
+	} else if rowErr != nil {
+		axonlogger.ErrorLogger.Println("Error scanning row when getting user by email", rowErr)
+		return user, errors.New("there was an error retrieving the user")
+	}
 
-// 	if user.Email == email {
-// 		axonlogger.InfoLogger.Println("Successfully retrieved user", user.Email)
-// 		return user, err
-// 	}
-// 	return user, errors.New("Email has not been registered")
-
-// }
+	return user, nil
+}
 
 // // GetAllUsers returns all users in DB
 // func GetAllUsers() ([]models.User, error) {

@@ -1,4 +1,4 @@
-package setup
+package logger
 
 import (
 	"io"
@@ -6,7 +6,7 @@ import (
 	"os"
 )
 
-var logFileRef *os.File
+var LogFileRef *os.File
 
 // exported loggers
 var (
@@ -29,7 +29,7 @@ func initializeLogger(file *os.File) {
 func Setup() {
 	// logging to external log file
 	file, err := os.OpenFile(getLogPath(), os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
-	logFileRef = file
+	LogFileRef = file
 	log.Println("Created log file")
 	if err != nil {
 		panic("Could not create log file to write to")
@@ -38,7 +38,7 @@ func Setup() {
 }
 
 func CloseLogFile() {
-	logFileRef.Close()
+	LogFileRef.Close()
 }
 
 func getLogPath() string {

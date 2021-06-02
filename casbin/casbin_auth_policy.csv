@@ -1,0 +1,11 @@
+p, ADMIN,       /api/users, GET
+p, GUEST,       /api/users, POST
+p, PARTICIPANT, /api/users, POST
+p, NONE,        /api/users, POST
+
+p, ADMIN,       /api/login, POST
+p, GUEST,       /api/login, POST
+p, PARTICIPANT, /api/login, POST
+p, NONE,        /api/login, POST
+
+

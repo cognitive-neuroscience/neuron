@@ -1,67 +1,67 @@
 package controllers
 
-// import (
-// 	"net/http"
-// 	"strconv"
+import (
+	"net/http"
+	"strconv"
+	"time"
 
-// 	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
+	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
+	"github.com/labstack/echo/v4"
 
-// 	"github.com/cognitive-neuroscience/neuron/src/common"
-// 	"github.com/cognitive-neuroscience/neuron/src/database"
+	"github.com/cognitive-neuroscience/neuron/src/common"
+	"github.com/cognitive-neuroscience/neuron/src/models"
+)
 
-// 	"github.com/cognitive-neuroscience/neuron/src/models"
-// 	"github.com/cognitive-neuroscience/neuron/src/services"
-// 	"github.com/gofiber/fiber"
-// )
+type LoginController struct{}
 
-// // Login is the login api entry point for logging in an existing user and attaching a JWT
-// func Login(c *fiber.Ctx) {
-// 	user := new(models.User)
-// 	// 1: parse input into user model
-// 	if err := c.BodyParser(user); err != nil {
-// 		common.SendHTTPBadRequest(c)
-// 		axonlogger.WarningLogger.Println("Unable to parse user credentials")
-// 		return
-// 	}
+// Login is the login api entry point for logging in an existing user and attaching a JWT
+func (l *LoginController) Login(e echo.Context) error {
+	user := new(models.User)
+	// 1: parse input into user model
+	if err := e.Bind(user); err != nil {
+		axonlogger.WarningLogger.Println("Could not parse user details", err)
+		return common.SendGenericHTTPWithMessage(e, models.HTTPStatus{Status: http.StatusBadRequest, Message: "there was an error logging you in"})
+	}
 
-// 	axonlogger.InfoLogger.Println("User logging in:", user.Email)
+	// 2: check that it's not empty (guarded against in the UI as well)
+	if user.Email == "" || user.Password == "" {
+		axonlogger.WarningLogger.Println("could not login due to empty email or password")
+		return common.SendGenericHTTPWithMessage(e, models.HTTPStatus{
+			Status: http.StatusBadRequest,
+			Message: "Username or password cannot be empty",
+		})
+	}
 
-// 	// 2: check that it's not empty (guarded against in the UI as well)
-// 	if user.Email == "" || user.Password == "" {
-// 		c.Status(http.StatusBadRequest).JSON(models.HTTPStatus{Status: http.StatusBadRequest, Message: "Username or password cannot be empty"})
-// 		axonlogger.WarningLogger.Println("User email or password is empty")
-// 		return
-// 	}
+	// 3: validate username and password, returns the user info and stores in model
+	dbUser, err := loginServiceImpl.ValidateCredentials(user.Email, user.Password)
+	if err != nil {
+		axonlogger.ErrorLogger.Println("Error validating user login credentials:", err)
+		return common.SendGenericHTTPWithMessage(e, models.HTTPStatus{Status: http.StatusUnauthorized, Message: err.Error()})
+	}
 
-// 	// 3: validate username and password, returns the user info and stores in model
-// 	dbUser, err := services.ValidateCredentials(user.Email, user.Password)
-// 	if err != nil {
-// 		axonlogger.ErrorLogger.Println("Error validating user login credentials:", err)
-// 		c.Status(http.StatusUnauthorized).JSON(models.HTTPStatus{Status: http.StatusUnauthorized, Message: err.Error()})
-// 		return
-// 	}
+	// 4: create a jwt with the user data
+	idToString := strconv.FormatUint(uint64(dbUser.ID), 16)
+	tokenString, err := tokenServiceImpl.CreateToken(idToString, dbUser.Email, dbUser.Role)
+	if err != nil {
+		axonlogger.ErrorLogger.Println("Error creating a JWT for user", dbUser.Email, err)
+		return common.SendGenericHTTPWithMessage(e, models.HTTPStatus{Status: http.StatusInternalServerError, Message: "there was an error logging you in"})
+	}
 
-// 	// 4: create a jwt with the user data
-// 	idToString := strconv.FormatUint(uint64(dbUser.ID), 16)
-// 	tokenString, err := services.CreateToken(idToString, dbUser.Email, dbUser.Role)
-// 	if err != nil {
-// 		axonlogger.ErrorLogger.Println("Error creating a JWT for user", dbUser.Email, ":", err)
-// 		c.Status(http.StatusInternalServerError).JSON(models.HTTPStatus{Status: http.StatusInternalServerError, Message: "There was an error logging you in"})
-// 		return
-// 	}
+	cookie := new(http.Cookie)
+	cookie.Name = "token"
+	cookie.Value = tokenString
+	cookie.Expires = time.Now().Add(8 * time.Hour)
+	cookie.HttpOnly = true // not accessible by javascript
+	cookie.Secure = true // sent over https only
+	cookie.Domain = "psharplab.campus.mcgill.ca" // domain only
+	cookie.SameSite = http.SameSiteStrictMode
+	e.SetCookie(cookie)
 
-// 	// set JWT and return OK
-// 	c.Set("Authorization", "Bearer "+tokenString)
-// 	c.Status(http.StatusOK).JSON(fiber.Map{
-// 		"message": http.StatusText(http.StatusOK),
-// 		"userId":  dbUser.ID,
-// 		"email":   dbUser.Email,
-// 		"role":    dbUser.Role,
-// 	})
-// 	axonlogger.InfoLogger.Println("User logged in with signed JWT", dbUser.Email)
-// }
+	axonlogger.InfoLogger.Println("user logged in with set cookie", dbUser.Email)
+	return common.SendHTTPOk(e)
+}
 
-// // LoginTurker is a turker specific function which registers the turker and attaches a JWT
+// LoginTurker is a turker specific function which registers the turker and attaches a JWT
 // func LoginTurker(c *fiber.Ctx) {
 // 	experimentUser := new(models.ExperimentUser)
 // 	if err := c.BodyParser(experimentUser); err != nil {

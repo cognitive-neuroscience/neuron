@@ -1,11 +1,24 @@
 package setup
 
 import (
+	og "log"
+	"net/http"
 	"os"
 
+	"github.com/cognitive-neuroscience/neuron/src/common"
+	"github.com/cognitive-neuroscience/neuron/src/logger"
+	"github.com/cognitive-neuroscience/neuron/src/services"
+	"github.com/facebookgo/grace/gracehttp"
+
+	"github.com/casbin/casbin/v2"
 	"github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
+	"github.com/labstack/gommon/log"
 )
+
+type Enforcer struct {
+	enforcer *casbin.Enforcer
+}
 
 // CreateServer creates a HTTP server
 func CreateServer() {
@@ -16,38 +29,104 @@ func CreateServer() {
 	}
 
 	e := echo.New()
+	e.Server.Addr = ":" + port
+
+	// retrieve jwt from cookie
+	e.Use(validateCookieMiddleware)
 
 	// configure file
 	e.Use(middleware.LoggerWithConfig(middleware.LoggerConfig{
-		Format: "INFO: ${time_custom} HTTP_METHOD:${method} URI:${uri} HTTP_CODE:${status}\n",
-		// Output:           logFileRef,
+		Format:           "INFO: ${time_custom} HTTP_METHOD:${method} URI:${uri} HTTP_CODE:${status}\n",
+		Output:           logger.LogFileRef,
 		CustomTimeFormat: "2006/01/15 15:04:05",
 	}))
-	defer CloseLogFile()
+	defer logger.CloseLogFile()
+
+	casbinEnforcer, err := casbin.NewEnforcer("casbin/casbin_auth_model.conf", "casbin/casbin_auth_policy.csv")
+	if err != nil {
+		logger.ErrorLogger.Println("could not set up casbin route protection", err)
+		panic("could not set up casbin route protection")
+	}
+	enforcer := Enforcer{enforcer: casbinEnforcer}
+	e.Use(enforcer.Enforce)
 
 	// use compression middleware
 	e.Use(middleware.Gzip())
 
+	// protect from XSS
+	e.Use(middleware.Secure())
+
 	// recovery from panic middleware
-	e.Use(middleware.Recover())
+	e.Use(middleware.RecoverWithConfig(middleware.RecoverConfig{
+		StackSize: 4 << 10,
+		LogLevel: log.ERROR,
+	}))
 
 	// rate limiting
-	e.Use(middleware.RateLimiter(middleware.NewRateLimiterMemoryStore(20)))
+	e.Use(middleware.RateLimiter(middleware.NewRateLimiterMemoryStore(50)))
 
-	// app := fiber.New(fiber.Config{
-	// 	ErrorHandler: func(c *fiber.Ctx, err error) error {
-	// 		code := fiber.StatusInternalServerError
-	// 		if e, ok := err.(*fiber.Error); ok {
-	// 			code = e.Code
-	// 		}
-	// 		axonlogger.ErrorLogger.Println(err)
-	// 		return c.Status(code).SendString("Internal Server Error")
-	// 	},
-	// })
+	// CORS handling
+	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
+		AllowOrigins: []string{"https://psharplab.campus.mcgill.ca"},
+	}))
 
-	// // Register app routes
-	router.RegisterRoutes(app)
+	// Register app routes
+	registerRoutes(e)
 
-	// axonlogger.InfoLogger.Println("Listening on port " + port)
-	e.Logger.Fatal(e.Start(":" + port))
+	logger.InfoLogger.Println("Listening on port " + port)
+	logger.InfoLogger.Fatal("Received interrupt, shutting down server. Error:", gracehttp.Serve(e.Server))
+}
+
+func validateCookieMiddleware(next echo.HandlerFunc) echo.HandlerFunc {
+	return func(e echo.Context) error {
+
+		path := e.Request().URL.Path
+		method := e.Request().Method
+		var role string
+
+		// unprotected routes, api/users POST is for register and api/login POST is for logging in
+		if method == http.MethodPost && (path == "/api/users" || path == "/api/login") {
+			role = common.NONE
+		} else {
+			tokenService := services.TokenService{}
+			cookie, err := e.Cookie("token")
+			if err != nil {
+				logger.WarningLogger.Println("Could not read jwt from cookie", err)
+				return common.SendHTTPForbidden(e)
+			}
+
+			jwt := cookie.Value
+			claims, err := tokenService.ValidateToken(jwt)
+			if err != nil {
+				logger.WarningLogger.Println("JWT received from cookie is invalid", jwt)
+				return common.SendHTTPForbidden(e)
+			}
+			role = claims.Role
+		}
+
+		e.Set("path", path)
+		e.Set("method", method)
+		e.Set("role", role)
+		return next(e)
+	}
+}
+
+func (e *Enforcer) Enforce(next echo.HandlerFunc) echo.HandlerFunc {
+	return func(c echo.Context) (errStatus error) {
+
+		// these are set in the validateCookieMiddleware
+		role := c.Get("role")
+		path := c.Get("path")
+		method := c.Get("method")
+		og.Println(role, path, method)
+		result, err := e.enforcer.Enforce(role, path, method)
+		if err != nil {
+			return common.SendHTTPForbidden(c)
+		}
+		og.Println(result)
+		if result {
+			return next(c)
+		}
+		return common.SendHTTPForbidden(c)
+	}
 }

@@ -1,29 +1,32 @@
 package controllers
 
-// import (
-// 	"github.com/cognitive-neuroscience/neuron/src/common"
-// 	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
+import (
+	"errors"
 
-// 	"github.com/cognitive-neuroscience/neuron/src/models"
-// 	"github.com/cognitive-neuroscience/neuron/src/services"
-// 	"github.com/gofiber/fiber"
-// )
+	"github.com/labstack/echo/v4"
 
-// // SaveUser saves a given user in the DB
-// // this route does not require a JWT as users may be creating an account
-// func SaveUser(c *fiber.Ctx) {
-// 	user := new(models.User)
-// 	if err := c.BodyParser(user); err != nil {
-// 		axonlogger.WarningLogger.Println("Could not parse user details", user.Email)
-// 		common.SendHTTPBadRequest(c)
-// 	}
-// 	axonlogger.InfoLogger.Println("Saving", user.Email)
-// 	result := services.SaveUser(user)
-// 	common.SendGenericHTTPModel(c, result)
-// 	return
-// }
+	"github.com/cognitive-neuroscience/neuron/src/common"
+	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
+	"github.com/cognitive-neuroscience/neuron/src/models"
+)
 
-// // DeleteUserByEmail deletes the guest with the given email
+type UserController struct{}
+
+// SaveUser saves a given user in the DB
+// this route does not require a JWT as users may be creating an account
+func (u *UserController) SaveUser(e echo.Context) error {
+	user := new(models.User)
+
+	if err := e.Bind(user); err != nil {
+		axonlogger.WarningLogger.Println("Could not parse user details", err)
+		common.SendHTTPBadRequest(e)
+		return errors.New("could not parse user details")
+	}
+	result := userServiceImpl.SaveUser(user)
+	return common.SendGenericHTTPWithMessage(e, result)
+}
+
+// DeleteUserByEmail deletes the guest with the given email
 // func DeleteUserByEmail(c *fiber.Ctx) {
 // 	email := c.Params("email")
 
@@ -61,22 +64,15 @@ package controllers
 // 	common.SendHTTPForbidden(c)
 // }
 
-// // GetGuests retrieves all guests from the DB
-// func GetGuests(c *fiber.Ctx) {
-// 	authorizedRoles := []string{common.ADMIN}
-// 	if common.IsAllowed(c, authorizedRoles) {
-// 		result, err := services.GetGuests()
-// 		if err != nil {
-// 			axonlogger.ErrorLogger.Println("Could not get guests", err)
-// 			common.SendHTTPStatusServiceUnavailable(c)
-// 			return
-// 		}
-// 		c.JSON(result)
-// 		return
-// 	}
-// 	axonlogger.WarningLogger.Println("Not authorized")
-// 	common.SendHTTPForbidden(c)
-// }
+// GetGuests retrieves all guests from the DB
+func (u *UserController) GetGuests(e echo.Context) error {
+	result, err := userServiceImpl.GetGuests()
+	if err != nil {
+		axonlogger.ErrorLogger.Println("Could not get guests", err)
+		return common.SendHTTPStatusServiceUnavailable(e)
+	}
+	return common.SendHTTPOkWithBody(e, result)
+}
 
 // // MarkAsComplete marks the given experimentUser as complete
 // func MarkAsComplete(c *fiber.Ctx) {

@@ -1,10 +1,11 @@
-package setup
+package db
 
 import (
 	"errors"
 	"log"
 	"os"
 
+	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
 	_ "github.com/go-sql-driver/mysql" // import mysql driver
 	"github.com/jmoiron/sqlx"
 )
@@ -36,14 +37,16 @@ func ConnectDB() {
 
 	dbConnectionDetails, err := getDBConnectionDetails()
 	if err != nil {
+		axonlogger.ErrorLogger.Println("No DB connection details available")
 		log.Panic("No DB connection details available")
 	}
 
 	DB = sqlx.MustConnect("mysql", dbConnectionDetails)
 	if err != nil {
+		axonlogger.ErrorLogger.Println("Could not connect to mysql database", err.Error())
 		log.Panic(err.Error())
 	}
-	log.Println("Connected to database")
+	axonlogger.InfoLogger.Println("Connected to database")
 }
 
 // helper function which takes the given ENV and grabs the connections details from the .env file
@@ -64,7 +67,7 @@ func getDBConnectionDetails() (string, error) {
 func getConnectionDetailsFromOs(envStr string) (string, error) {
 	env, exists := os.LookupEnv(envStr)
 	if !exists {
-		return "", errors.New("No dev connection details")
+		return "", errors.New("no dev connection details")
 	}
 	return env, nil
 }

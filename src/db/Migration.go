@@ -1,8 +1,9 @@
-package setup
+package db
 
 import (
 	"log"
 
+	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
 	"github.com/cognitive-neuroscience/neuron/src/models"
 )
 
@@ -12,26 +13,25 @@ import (
 
 // MakeTables will start mysql db migration
 func MakeTables() {
-	InfoLogger.Println("Setting up SQL Tables")
+	axonlogger.InfoLogger.Println("Setting up SQL Tables")
 
-	InfoLogger.Println("Setting up Experiment Table")
+	axonlogger.InfoLogger.Println("Setting up Experiment Table")
 	DB.MustExec(models.ExperimentSchema)
-	InfoLogger.Println("Setting up Task Table")
+	axonlogger.InfoLogger.Println("Setting up Task Table")
 	DB.MustExec(models.TaskSchema)
-	InfoLogger.Println("Setting up Users Table")
+	axonlogger.InfoLogger.Println("Setting up Users Table")
 	DB.MustExec(models.UserSchema)
-	InfoLogger.Println("Setting up Notifications Table")
+	axonlogger.InfoLogger.Println("Setting up Notifications Table")
 	DB.MustExec(models.NotificationSchema) // REF experiment id
-	InfoLogger.Println("Setting up Task Table")
+	axonlogger.InfoLogger.Println("Setting up Task Table")
 	DB.MustExec(models.ExperimentTaskSchema) // REF experiment id and task id
-	InfoLogger.Println("Setting up ExperimentUser Table")
+	axonlogger.InfoLogger.Println("Setting up ExperimentUser Table")
 	DB.MustExec(models.ExperimentUserSchema) // REF experiment id and user id
-	InfoLogger.Println("Setting up Data Table")
+	axonlogger.InfoLogger.Println("Setting up Data Table")
 	DB.MustExec(models.ParticipantDataSchema) // REF experiment_task composite key
 
 	if err := populateBaseTasks(); err != nil {
-		log.Println(err)
-		log.Println("Unable to populate tasks")
+		axonlogger.WarningLogger.Println("Unable to populate tasks", err)
 	}
 
 	log.Println("MySQL migrations complete")
