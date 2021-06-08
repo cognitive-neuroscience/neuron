@@ -1,7 +1,6 @@
 package setup
 
 import (
-	og "log"
 	"net/http"
 	"os"
 
@@ -59,7 +58,7 @@ func CreateServer() {
 	// recovery from panic middleware
 	e.Use(middleware.RecoverWithConfig(middleware.RecoverConfig{
 		StackSize: 4 << 10,
-		LogLevel: log.ERROR,
+		LogLevel:  log.ERROR,
 	}))
 
 	// rate limiting
@@ -83,12 +82,14 @@ func validateCookieMiddleware(next echo.HandlerFunc) echo.HandlerFunc {
 		path := e.Request().URL.Path
 		method := e.Request().Method
 		var role string
+		var email string
+		var id string
 
 		// unprotected routes, api/users POST is for register and api/login POST is for logging in
 		if method == http.MethodPost && (path == "/api/users" || path == "/api/login") {
 			role = common.NONE
 		} else {
-			tokenService := services.TokenService{}
+			tokenServiceImpl := services.TokenService{}
 			cookie, err := e.Cookie("token")
 			if err != nil {
 				logger.WarningLogger.Println("Could not read jwt from cookie", err)
@@ -96,17 +97,21 @@ func validateCookieMiddleware(next echo.HandlerFunc) echo.HandlerFunc {
 			}
 
 			jwt := cookie.Value
-			claims, err := tokenService.ValidateToken(jwt)
+			claims, err := tokenServiceImpl.ValidateToken(jwt)
 			if err != nil {
 				logger.WarningLogger.Println("JWT received from cookie is invalid", jwt)
 				return common.SendHTTPForbidden(e)
 			}
 			role = claims.Role
+			email = claims.Email
+			id = claims.Id
 		}
 
 		e.Set("path", path)
 		e.Set("method", method)
 		e.Set("role", role)
+		e.Set("email", email)
+		e.Set("id", id)
 		return next(e)
 	}
 }
@@ -118,12 +123,10 @@ func (e *Enforcer) Enforce(next echo.HandlerFunc) echo.HandlerFunc {
 		role := c.Get("role")
 		path := c.Get("path")
 		method := c.Get("method")
-		og.Println(role, path, method)
 		result, err := e.enforcer.Enforce(role, path, method)
 		if err != nil {
 			return common.SendHTTPForbidden(c)
 		}
-		og.Println(result)
 		if result {
 			return next(c)
 		}

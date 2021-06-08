@@ -1,67 +1,23 @@
 package database
 
-// import (
-// 	"database/sql/driver"
-// 	"encoding/json"
-// 	"errors"
+import (
+	"errors"
 
-// 	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
-// 	"github.com/cognitive-neuroscience/neuron/src/models"
-// 	"github.com/cognitive-neuroscience/neuron/src/setup"
-// )
+	"github.com/cognitive-neuroscience/neuron/src/db"
+	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
+	"github.com/cognitive-neuroscience/neuron/src/models"
+)
 
-// var TaskRepositoryImpl = TaskRepository{}
+type TaskRepository struct {
+}
 
-// type TaskRepository struct {
-// }
+const (
+	PSHARPLAB    = "psharplab"
+	SURVEYMONKEY = "surveymonkey"
+	PAVLOVIA     = "pavlovia"
+)
 
-// const (
-// 	PSHARPLAB    = "psharplab"
-// 	SURVEYMONKEY = "surveymonkey"
-// 	PAVLOVIA     = "pavlovia"
-// )
-
-// // reads json columns from mysql and parses them into mapstringinterface
-// // The data stored in a JSON field is returned as a []uint8
-// func (m *MapStringInterface) Scan(src interface{}) error {
-// 	var source []byte
-// 	tempMap := make(map[string]interface{})
-
-// 	switch src.(type) {
-// 	case []uint8:
-// 		source = []byte(src.([]uint8))
-// 	case nil:
-// 		return nil
-// 	default:
-// 		return errors.New("Error converting MYSQL json to MapStringInterface")
-// 	}
-// 	err := json.Unmarshal(source, &tempMap)
-// 	if err != nil {
-// 		return err
-// 	}
-// 	*m = MapStringInterface(tempMap)
-// 	return nil
-// }
-
-// var data = []byte(`{"cmd":"create","data":{"conf":{"a":1},"info":{"b":2}}} `)
-
-// // converts mapstringinterface data to json to insert into mysql
-// func (m MapStringInterface) Value() (driver.Value, error) {
-// 	if len(m) == 0 {
-// 		return nil, nil
-// 	}
-// 	json, err := json.Marshal(m)
-// 	if err != nil {
-// 		return nil, err
-// 	}
-// 	return driver.Value(json), nil
-// }
-
-// func (t *TaskRepository) DoSmth(r string) {
-
-// }
-
-// // GetAllSharplabTasks returns a list of all tasks supported natively by sharplab (e.g. stroop, nback, etc)
+// GetAllSharplabTasks returns a list of all tasks supported natively by sharplab (e.g. stroop, nback, etc)
 // func (t *TaskRepository) GetAllTasksByPlatform(platform string) ([]models.Task, error) {
 // 	db := setup.DB
 // 	tasks := []models.Task{}
@@ -101,21 +57,90 @@ package database
 // 	return tasks, nil
 // }
 
-// // GetAllCustomTasks returns a list of all questionnaires from the DB
-// func GetAllCustomTasks() ([]models.CustomTask, error) {
-// 	db := DBConn
-// 	var err error
-// 	customTasks := []models.CustomTask{}
-// 	if err := db.Find(&customTasks).Error; err != nil {
-// 		axonlogger.ErrorLogger.Println("There was an error getting customTasks from the DB", err)
-// 		err = errors.New("Could not fetch experiments")
-// 		return customTasks, err
-// 	}
-// 	axonlogger.InfoLogger.Println("Getting all customTasks")
-// 	return customTasks, err
-// }
+func (t *TaskRepository) GetTasksByStudyId(studyID uint) ([]models.StudyTask, error) {
+	db := db.DB
+	var err error
+	studyTasks := []models.StudyTask{}
 
-// // SaveCustomTask saves the given customTask data into the database as a customTask object
+	var getAllStudyTasks = `
+		SELECT study_id, task_id, task_order, study_tasks.config, tasks.config, tasks.description, tasks.external_url, tasks.from_platform, tasks.id, tasks.name, tasks.task_type 
+		FROM study_tasks JOIN tasks 
+		ON study_tasks.task_id = tasks.id
+		WHERE study_id = ?
+		ORDER BY task_order;
+	`
+
+	rows, err := db.Query(getAllStudyTasks, studyID)
+	if err != nil {
+		axonlogger.ErrorLogger.Println("There was an error getting tasks from the DB", err)
+		return nil, errors.New("there was an error retrieving tasks")
+	}
+	defer rows.Close()
+	for rows.Next() {
+		studyTask := models.StudyTask{}
+		if err := rows.Scan(
+			&studyTask.StudyID,
+			&studyTask.TaskID,
+			&studyTask.TaskOrder,
+			&studyTask.Config,
+			&studyTask.Task.Config,
+			&studyTask.Task.Description,
+			&studyTask.Task.ExternalURL,
+			&studyTask.Task.FromPlatform,
+			&studyTask.Task.ID,
+			&studyTask.Task.Name,
+			&studyTask.Task.TaskType,
+		); err != nil {
+			axonlogger.ErrorLogger.Println("Could not scan rows when retrieving study tasks", err)
+			return nil, errors.New("there was an error retrieving tasks")
+		}
+		studyTasks = append(studyTasks, studyTask)
+	}
+	if err := rows.Err(); err != nil {
+		axonlogger.ErrorLogger.Println("Error when iterating over rows", err)
+		return nil, errors.New("there was an error retrieving tasks")
+	}
+	return studyTasks, nil
+}
+
+// GetAllTasks returns a list of all questionnaires from the DB
+func (t *TaskRepository) GetAllTasks() ([]models.Task, error) {
+	db := db.DB
+	var err error
+	tasks := []models.Task{}
+
+	var getAllTasks = `SELECT id, from_platform, task_type, name, description, external_url, config FROM tasks;`
+
+	rows, err := db.Query(getAllTasks)
+	if err != nil {
+		axonlogger.ErrorLogger.Println("There was an error getting tasks from the DB", err)
+		return nil, errors.New("there was an error retrieving tasks")
+	}
+	defer rows.Close()
+	for rows.Next() {
+		task := models.Task{}
+		if err := rows.Scan(
+			&task.ID,
+			&task.FromPlatform,
+			&task.TaskType,
+			&task.Name,
+			&task.Description,
+			&task.ExternalURL,
+			&task.Config,
+		); err != nil {
+			axonlogger.ErrorLogger.Println("Could not scan rows when retrieving tasks", err)
+			return nil, errors.New("there was an error retrieving tasks")
+		}
+		tasks = append(tasks, task)
+	}
+	if err := rows.Err(); err != nil {
+		axonlogger.ErrorLogger.Println("Error when iterating over rows", err)
+		return nil, errors.New("there was an error retrieving tasks")
+	}
+	return tasks, err
+}
+
+// SaveCustomTask saves the given customTask data into the database as a customTask object
 // func SaveCustomTask(customTask *models.CustomTask) models.HTTPStatus {
 // 	db := DBConn
 // 	if err := db.Create(&customTask).Error; err != nil {
@@ -126,7 +151,7 @@ package database
 // 	return models.HTTPStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)}
 // }
 
-// // DeleteCustomTaskByID deletes the given custom task by id
+// DeleteCustomTaskByID deletes the given custom task by id
 // func DeleteCustomTaskByID(id int) models.HTTPStatus {
 // 	db := DBConn
 // 	if err := db.Delete(&models.CustomTask{}, id).Error; err != nil {

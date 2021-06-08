@@ -3,7 +3,6 @@ package controllers
 import (
 	"net/http"
 	"strconv"
-	"time"
 
 	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
 	"github.com/labstack/echo/v4"
@@ -27,7 +26,7 @@ func (l *LoginController) Login(e echo.Context) error {
 	if user.Email == "" || user.Password == "" {
 		axonlogger.WarningLogger.Println("could not login due to empty email or password")
 		return common.SendGenericHTTPWithMessage(e, models.HTTPStatus{
-			Status: http.StatusBadRequest,
+			Status:  http.StatusBadRequest,
 			Message: "Username or password cannot be empty",
 		})
 	}
@@ -36,7 +35,7 @@ func (l *LoginController) Login(e echo.Context) error {
 	dbUser, err := loginServiceImpl.ValidateCredentials(user.Email, user.Password)
 	if err != nil {
 		axonlogger.ErrorLogger.Println("Error validating user login credentials:", err)
-		return common.SendGenericHTTPWithMessage(e, models.HTTPStatus{Status: http.StatusUnauthorized, Message: err.Error()})
+		return common.SendGenericHTTPWithMessage(e, models.HTTPStatus{Status: http.StatusNotFound, Message: err.Error()})
 	}
 
 	// 4: create a jwt with the user data
@@ -50,14 +49,30 @@ func (l *LoginController) Login(e echo.Context) error {
 	cookie := new(http.Cookie)
 	cookie.Name = "token"
 	cookie.Value = tokenString
-	cookie.Expires = time.Now().Add(8 * time.Hour)
 	cookie.HttpOnly = true // not accessible by javascript
-	cookie.Secure = true // sent over https only
-	cookie.Domain = "psharplab.campus.mcgill.ca" // domain only
+	cookie.Secure = true   // sent over https only
+	// cookie.Domain = "psharplab.campus.mcgill.ca" // only accept cookies from same domain
 	cookie.SameSite = http.SameSiteStrictMode
 	e.SetCookie(cookie)
 
 	axonlogger.InfoLogger.Println("user logged in with set cookie", dbUser.Email)
+	return common.SendHTTPOkWithBody(e, models.User{
+		Email: dbUser.Email,
+		ID:    dbUser.ID,
+		Role:  dbUser.Role,
+	})
+}
+
+func (l *LoginController) Logout(e echo.Context) error {
+	email := e.Get("email")
+	id := e.Get("id")
+	cookie := new(http.Cookie)
+	cookie.Name = "token"
+	cookie.Value = ""
+	cookie.HttpOnly = true // not accessible by javascript
+	cookie.Secure = true   // sent over https only
+	e.SetCookie(cookie)
+	axonlogger.InfoLogger.Println("clearing cookie and logging out", email, id)
 	return common.SendHTTPOk(e)
 }
 

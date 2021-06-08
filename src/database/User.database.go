@@ -25,7 +25,7 @@ type UserRepository struct {
 func (u *UserRepository) SaveUser(user *models.User) (operationStatus models.HTTPStatus) {
 	db := db.DB
 
-	var saveUserIntoDB = `INSERT INTO users (email, password, role, created_at) VALUES (?, ?, ?, ?)`
+	var saveUserIntoDB = `INSERT INTO users (email, password, role, created_at) VALUES (?, ?, ?, ?);`
 	_, err := db.Exec(saveUserIntoDB, user.Email, user.Password, user.Role, time.Now().UTC())
 
 	if err != nil {
@@ -129,11 +129,10 @@ func (u *UserRepository) GetGuests() ([]models.User, error) {
 	}
 	if err := rows.Err(); err != nil {
 		axonlogger.ErrorLogger.Println("Error when iterating over rows", err)
-		return nil, errors.New("there was an error retrieving guests")	
+		return nil, errors.New("there was an error retrieving guests")
 	}
 	return guests, err
 }
-
 
 // func scrubPrivateData(users []models.User) []models.User {
 // 	for i := 0; i < len(users); i++ {
@@ -147,29 +146,24 @@ func (u *UserRepository) GetGuests() ([]models.User, error) {
 // 	return users
 // }
 
-// // DeleteUserByEmail deletes the guest with the given email
-// func DeleteUserByEmail(email string) models.HTTPStatus {
-// 	db := DBConn
-// 	var user = models.User{}
-// 	if err := db.Where(&models.User{Email: email}).First(&user).Error; err != nil {
-// 		axonlogger.ErrorLogger.Println("Could not check if user exists", email, err)
-// 		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)}
-// 	}
+// DeleteUserByEmail deletes the guest with the given email
+func (u *UserRepository) DeleteUserByEmail(email string) models.HTTPStatus {
+	db := db.DB
+	var deleteUserQuery = `DELETE FROM users WHERE email = ?;`
 
-// 	if err := db.Unscoped().Where("email = ?", email).Delete(&models.User{}).Error; err != nil {
-// 		axonlogger.ErrorLogger.Println("Could not delete user:", email, err)
-// 		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)}
-// 	}
-// 	axonlogger.InfoLogger.Println("User with:", email, "delete")
-// 	return models.HTTPStatus{Status: http.StatusOK, Message: http.StatusText(http.StatusOK)}
-// }
+	if _, err := db.Exec(deleteUserQuery, email); err != nil {
+		axonlogger.ErrorLogger.Println("could not delete user", err)
+		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "Could not delete study"}
+	}
+	return models.HTTPStatus{Status: http.StatusOK, Message: "Successfully deleted user"}
+}
 
 // GetUserByEmail searches for a user given the email
 func (u *UserRepository) GetUserByEmail(email string) (models.User, error) {
 	db := db.DB
 	var user models.User
 
-	var getUserByEmail = `SELECT id, email, password, role, created_at FROM users WHERE email = ?`
+	var getUserByEmail = `SELECT id, email, password, role, created_at FROM users WHERE email = ?;`
 
 	rowErr := db.QueryRow(getUserByEmail, email).Scan(
 		&user.ID,
@@ -178,12 +172,38 @@ func (u *UserRepository) GetUserByEmail(email string) (models.User, error) {
 		&user.Role,
 		&user.CreatedAt,
 	)
-	
+
 	if rowErr == sql.ErrNoRows {
 		axonlogger.WarningLogger.Println("cannot retrieve user as they do not exist in DB", email)
 		return user, errors.New("user does not exist")
 	} else if rowErr != nil {
 		axonlogger.ErrorLogger.Println("Error scanning row when getting user by email", rowErr)
+		return user, errors.New("there was an error retrieving the user")
+	}
+
+	return user, nil
+}
+
+// GetUserById searches for a user given the id
+func (u *UserRepository) GetUserById(id uint) (models.User, error) {
+	db := db.DB
+	var user models.User
+
+	var getUserById = `SELECT id, email, password, role, created_at FROM users WHERE id = ?;`
+
+	rowErr := db.QueryRow(getUserById, id).Scan(
+		&user.ID,
+		&user.Email,
+		&user.Password,
+		&user.Role,
+		&user.CreatedAt,
+	)
+
+	if rowErr == sql.ErrNoRows {
+		axonlogger.WarningLogger.Println("cannot retrieve user as they do not exist in DB", id)
+		return user, errors.New("user does not exist")
+	} else if rowErr != nil {
+		axonlogger.ErrorLogger.Println("Error scanning row when getting user by id", rowErr)
 		return user, errors.New("there was an error retrieving the user")
 	}
 

@@ -1,21 +1,16 @@
 package controllers
 
-// import (
-// 	"github.com/cognitive-neuroscience/neuron/src/services"
-// 	"github.com/gofiber/fiber/v2"
-// )
+import (
+	"net/http"
 
-// // import (
-// // 	"github.com/cognitive-neuroscience/neuron/src/common"
-// // 	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
-// // 	"github.com/cognitive-neuroscience/neuron/src/models"
-// // 	"github.com/cognitive-neuroscience/neuron/src/services"
-// // 	"github.com/gofiber/fiber"
-// // )
+	"github.com/cognitive-neuroscience/neuron/src/common"
+	"github.com/cognitive-neuroscience/neuron/src/models"
+	"github.com/labstack/echo/v4"
+)
 
-// var taskService = services.TaskService{}
+type TaskController struct{}
 
-// func GetAllSharplabRoutes(c *fiber.Ctx) error {
+// func GetAllSharplabRoutes(e echo.Context) error {
 
 // 	s, err := taskService.GetAllSharplabRoutes()
 // 	if err != nil {
@@ -25,24 +20,26 @@ package controllers
 // 	return nil
 // }
 
-// // GetAllCustomTasks gets all CustomTasks from the DB
-// func GetAllCustomTasks(c *fiber.Ctx) {
-// 	axonlogger.InfoLogger.Println("Getting all CustomTasks")
-// 	authorizedRoles := []string{common.ADMIN}
-// 	if common.IsAllowed(c, authorizedRoles) {
-// 		CustomTasks, err := services.GetAllCustomTasks()
-// 		if err != nil {
-// 			common.SendHTTPStatusServiceUnavailable(c)
-// 			return
-// 		}
-// 		c.JSON(CustomTasks)
-// 		return
-// 	}
-// 	axonlogger.WarningLogger.Println("Not authorized to get all CustomTasks")
-// 	common.SendHTTPForbidden(c)
-// }
+// GetTasksByStudyId
+func (t *TaskController) GetTasksByStudyId(e echo.Context) error {
+	id := e.Param("id")
+	tasks, err := taskServiceImpl.GetTasksByStudyId(id)
+	if err != nil {
+		return common.SendGenericHTTPWithMessage(e, models.HTTPStatus{Status: http.StatusInternalServerError, Message: err.Error()})
+	}
+	return common.SendHTTPOkWithBody(e, tasks)
+}
 
-// // DeleteCustomTaskByID deletes the CustomTask from the DB given the ID number
+// GetAllCustomTasks gets all CustomTasks from the DB
+func (t *TaskController) GetAllTasks(e echo.Context) error {
+	tasks, err := taskServiceImpl.GetAllTasks()
+	if err != nil {
+		return common.SendHTTPStatusServiceUnavailable(e)
+	}
+	return common.SendHTTPOkWithBody(e, tasks)
+}
+
+// DeleteCustomTaskByID deletes the CustomTask from the DB given the ID number
 // func DeleteCustomTaskByID(c *fiber.Ctx) {
 // 	id := c.Params("id")
 // 	axonlogger.InfoLogger.Println("Deleting CustomTask", id)
@@ -56,8 +53,8 @@ package controllers
 // 	common.SendHTTPForbidden(c)
 // }
 
-// // SaveCustomTask is the customTask api entry point for saving a CustomTask given the json. This describes the data that populates
-// // an embedded pavlovia task
+// SaveCustomTask is the customTask api entry point for saving a CustomTask given the json. This describes the data that populates
+// an embedded pavlovia task
 // func SaveCustomTask(c *fiber.Ctx) {
 // 	axonlogger.InfoLogger.Println("Saving customTask")
 // 	customTask := new(models.CustomTask)

@@ -2,7 +2,6 @@ package db
 
 import (
 	"errors"
-	"log"
 	"os"
 
 	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
@@ -29,7 +28,7 @@ func SetEnvironment() {
 		ENV = "DEV"
 	}
 	ENV = env
-	log.Printf("Starting up %s environment", ENV)
+	axonlogger.InfoLogger.Printf("Starting up %s environment", ENV)
 }
 
 // ConnectDB instantiates a mysql connection
@@ -37,14 +36,13 @@ func ConnectDB() {
 
 	dbConnectionDetails, err := getDBConnectionDetails()
 	if err != nil {
-		axonlogger.ErrorLogger.Println("No DB connection details available")
-		log.Panic("No DB connection details available")
+		axonlogger.ErrorLogger.Panic("No DB connection details available")
 	}
 
 	DB = sqlx.MustConnect("mysql", dbConnectionDetails)
 	if err != nil {
 		axonlogger.ErrorLogger.Println("Could not connect to mysql database", err.Error())
-		log.Panic(err.Error())
+		axonlogger.ErrorLogger.Panic(err.Error())
 	}
 	axonlogger.InfoLogger.Println("Connected to database")
 }

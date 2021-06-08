@@ -11,7 +11,7 @@ func registerRoutes(app *echo.Echo) {
 	var api = app.Group("/api")
 
 	setUpUserRoutes(api)
-	setUpExperimentRoutes(api)
+	setUpStudyRoutes(api)
 	setUpLoginRoutes(api)
 	setUpTokenRoutes(api)
 	setUpUploadRoutes(api)
@@ -23,8 +23,10 @@ func registerRoutes(app *echo.Echo) {
 func setUpUserRoutes(group *echo.Group) {
 	userControllerImpl := controllers.UserController{}
 	users := group.Group("/users")
+	users.GET("", userControllerImpl.GetUser)
 	users.POST("", userControllerImpl.SaveUser)
 	users.GET("/guests", userControllerImpl.GetGuests)
+	users.DELETE("/:id", userControllerImpl.DeleteUserById)
 	// users.Post("/complete", controllers.MarkAsComplete)
 	// users.Get("/:userid/:code", controllers.GetCompletionCode)
 	// users.Get("/guests", controllers.GetGuests)
@@ -33,8 +35,13 @@ func setUpUserRoutes(group *echo.Group) {
 	// users.All("/*", handleForbidden)
 }
 
-func setUpExperimentRoutes(group *echo.Group) {
-	// experiments := group.Group("/experiments")
+func setUpStudyRoutes(group *echo.Group) {
+	studiesControllerImpl := controllers.StudyController{}
+	studies := group.Group("/studies")
+	studies.POST("", studiesControllerImpl.SaveStudy)
+	studies.GET("", studiesControllerImpl.GetAllStudies)
+	studies.PUT("/:id", studiesControllerImpl.UpdateStudy)
+	studies.DELETE("/:id", studiesControllerImpl.DeleteStudyById)
 	// experiments.Get("/", controllers.GetAllExperiments)
 	// experiments.Get("/:code", controllers.GetExperiment)
 	// experiments.Post("/", controllers.SaveExperiment)
@@ -45,6 +52,7 @@ func setUpExperimentRoutes(group *echo.Group) {
 
 func setUpLoginRoutes(group *echo.Group) {
 	loginControllerImpl := controllers.LoginController{}
+	group.POST("/logout", loginControllerImpl.Logout)
 	login := group.Group("/login")
 	login.POST("", loginControllerImpl.Login)
 	// login.Post("/turker", controllers.LoginTurker)
@@ -85,7 +93,10 @@ func setUpQuestionnaireRoutes(group *echo.Group) {
 }
 
 func setUpTaskRoutes(group *echo.Group) {
-	// task := group.Group("/task")
+	taskControllerImpl := controllers.TaskController{}
+	task := group.Group("/tasks")
+	task.GET("", taskControllerImpl.GetAllTasks)
+	task.GET("/:id", taskControllerImpl.GetTasksByStudyId)
 	// task.GET("/", controllers.GetAllSharplabRoutes)
 	// task.Get("/", controllers.GetAllCustomTasks)
 	// task.Post("/", controllers.SaveCustomTask)
@@ -93,12 +104,6 @@ func setUpTaskRoutes(group *echo.Group) {
 	// task.Options("/*", handleOptions)
 	// task.All("/*", handleForbidden)
 }
-
-// returns MethodNotAllowed when client tries to access unsupported HTTP request
-// func handleForbidden(c *fiber.Ctx) {
-// 	axonlogger.WarningLogger.Println("Client has tried to make an unsupported request", c.Method(), c.Path())
-// 	c.Status(http.StatusMethodNotAllowed).JSON(&models.HTTPStatus{Status: http.StatusMethodNotAllowed, Message: http.StatusText(http.StatusMethodNotAllowed)})
-// }
 
 // // returns StatusOK when options are sent
 // func handleOptions(c *fiber.Ctx) {

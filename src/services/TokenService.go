@@ -10,7 +10,7 @@ import (
 	"github.com/dgrijalva/jwt-go"
 )
 
-type TokenService struct {}
+type TokenService struct{}
 
 // // AuthenticateToken verifies if the token present in the authorization header is valid
 // func AuthenticateToken(c *fiber.Ctx) (*models.Claims, error) {
@@ -51,8 +51,8 @@ type TokenService struct {}
 // CreateToken returns the token and error after signing with HS256
 func (t *TokenService) CreateToken(id string, email string, role string) (string, error) {
 	key := GetJWTKey()
-	// 4 hours before JWT expires
-	expirationTime := time.Now().Add(8 * time.Hour)
+
+	expirationTime := time.Now().Add(2 * time.Hour)
 	claims := &models.Claims{
 		UserID: id,
 		Email:  email,
@@ -73,8 +73,14 @@ func (t *TokenService) ValidateToken(tokenString string) (*models.Claims, error)
 		return []byte(key), nil
 	})
 	if err != nil {
-		axonlogger.ErrorLogger.Println("Error when calling ParseWithClaims on token", tokenString, err)
+		axonlogger.WarningLogger.Println("Error when calling ParseWithClaims on token", tokenString, err)
 		return claims, errors.New("could not parse with claims")
+	}
+
+	// verify that we are using the expected algorithm
+	if token.Method.Alg() != jwt.SigningMethodHS256.Name {
+		axonlogger.WarningLogger.Println("token is not using expected auth algorithm")
+		return claims, errors.New("token is not valid")
 	}
 
 	if !token.Valid {

@@ -211,22 +211,22 @@ import "time"
 // ParticipantDataSchema defines the SQL table schema for this model
 var ParticipantDataSchema = `
 	CREATE TABLE IF NOT EXISTS participant_data (
-		user_id BIGINT UNSIGNED NOT NULL,
-		experiment_id BIGINT UNSIGNED NOT NULL,
+		user_id INT UNSIGNED NOT NULL,
+		study_id INT UNSIGNED NOT NULL,
 		task_order INT NOT NULL,
 		submitted_at DATETIME NOT NULL,
 		data JSON,
-		PRIMARY KEY (experiment_id, task_order, user_id),
-		FOREIGN KEY (experiment_id, task_order) REFERENCES experiment_tasks(experiment_id, task_order)
+		PRIMARY KEY (study_id, task_order, user_id),
+		FOREIGN KEY (study_id, task_order) REFERENCES study_tasks(study_id, task_order)
 	);
 `
 
 // ParticipantData represents a model for storing all participant data including psych task responses and questionnaires.
 // Will make manually defining structs for each task obsolete (aka all of the above structs)
 type ParticipantData struct {
-	UserID       uint                   `json:"userId"`
-	ExperimentID uint                   `json:"experimentId"`
-	TaskOrder    int                    `json:"taskOrder"`
-	SubmittedAt  time.Time              `json:"submittedAt"`
-	Data         map[string]interface{} `json:"data"`
+	UserID      uint               `json:"userId"`
+	StudyID     uint               `json:"studyId"`
+	TaskOrder   int                `json:"taskOrder"`
+	SubmittedAt time.Time          `json:"submittedAt"`
+	Data        MapStringInterface `json:"data"`
 }

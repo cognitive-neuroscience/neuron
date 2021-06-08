@@ -26,21 +26,12 @@ func (u *UserController) SaveUser(e echo.Context) error {
 	return common.SendGenericHTTPWithMessage(e, result)
 }
 
-// DeleteUserByEmail deletes the guest with the given email
-// func DeleteUserByEmail(c *fiber.Ctx) {
-// 	email := c.Params("email")
-
-// 	axonlogger.InfoLogger.Println("Deleting user", email)
-
-// 	authorizedRoles := []string{common.ADMIN}
-// 	if common.IsAllowed(c, authorizedRoles) {
-// 		result := services.DeleteUserByEmail(email)
-// 		common.SendGenericHTTPModel(c, result)
-// 		return
-// 	}
-// 	axonlogger.WarningLogger.Println("Not authorized")
-// 	common.SendHTTPForbidden(c)
-// }
+// DeleteUserById deletes the guest with the given email
+func (u *UserController) DeleteUserById(e echo.Context) error {
+	id := e.Param("id")
+	result := userServiceImpl.DeleteGuestById(id)
+	return common.SendGenericHTTPWithMessage(e, result)
+}
 
 // // GetCompletionCode return the completion code associated with the given experimentUser
 // func GetCompletionCode(c *fiber.Ctx) {
@@ -64,11 +55,42 @@ func (u *UserController) SaveUser(e echo.Context) error {
 // 	common.SendHTTPForbidden(c)
 // }
 
+// SaveGuest
+func (u *UserController) SaveGuest(e echo.Context) error {
+	user := new(models.User)
+
+	user.Password = "guest"
+	user.Role = common.GUEST
+
+	if err := e.Bind(user); err != nil {
+		axonlogger.WarningLogger.Println("Could not parse user details", err)
+		common.SendHTTPBadRequest(e)
+		return errors.New("could not parse user details")
+	}
+	result := userServiceImpl.SaveUser(user)
+	return common.SendGenericHTTPWithMessage(e, result)
+}
+
 // GetGuests retrieves all guests from the DB
 func (u *UserController) GetGuests(e echo.Context) error {
 	result, err := userServiceImpl.GetGuests()
 	if err != nil {
 		axonlogger.ErrorLogger.Println("Could not get guests", err)
+		return common.SendHTTPStatusServiceUnavailable(e)
+	}
+	return common.SendHTTPOkWithBody(e, result)
+}
+
+func (u *UserController) GetUser(e echo.Context) error {
+	email, ok := e.Get("email").(string)
+	if !ok {
+		axonlogger.ErrorLogger.Println("Could not parse email from context")
+		return common.SendHTTPStatusServiceUnavailable(e)
+	}
+
+	result, err := userServiceImpl.GetUserByEmail(email)
+	if err != nil {
+		axonlogger.ErrorLogger.Println("Could not get user", err)
 		return common.SendHTTPStatusServiceUnavailable(e)
 	}
 	return common.SendHTTPOkWithBody(e, result)

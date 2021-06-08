@@ -6,16 +6,18 @@ import (
 	"net/http"
 	"regexp"
 	"strings"
+	"time"
 
 	"golang.org/x/crypto/bcrypt"
 
+	"github.com/cognitive-neuroscience/neuron/src/common"
 	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
 	"github.com/cognitive-neuroscience/neuron/src/models"
 )
 
-type UserService struct {}
+type UserService struct{}
 
-var cost = 13
+var cost = 14
 var emailRegex = regexp.MustCompile("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$")
 
 // SaveExperimentAndParticipant saves user into ExperimentUser database and records if experiment has been complete
@@ -54,10 +56,34 @@ func (u *UserService) GetGuests() ([]models.User, error) {
 	return userRepositoryImpl.GetGuests()
 }
 
-// // DeleteUserByEmail deletes the guest with the given email
-// func DeleteUserByEmail(email string) models.HTTPStatus {
-// 	return database.DeleteUserByEmail(email)
-// }
+// GetUserByEmail retrieves the user by the given email
+func (u *UserService) GetUserByEmail(email string) (models.User, error) {
+	user, err := userRepositoryImpl.GetUserByEmail(email)
+	// scrub sensitive data
+	user.CreatedAt = time.Time{}
+	user.Password = ""
+	return user, err
+}
+
+// DeleteUserById deletes the guest with the given email
+func (u *UserService) DeleteGuestById(id string) models.HTTPStatus {
+	parsedId, err := convertStringToUint8(id)
+	if err != nil {
+		axonlogger.WarningLogger.Println("Could not convert id to uint", err)
+		return models.HTTPStatus{Status: http.StatusBadRequest, Message: "There was an error deleting the guest"}
+	}
+
+	guest, err := userRepositoryImpl.GetUserById(parsedId)
+	if err != nil {
+		axonlogger.WarningLogger.Println("Could not retrieve guest", err)
+		return models.HTTPStatus{Status: http.StatusBadRequest, Message: "There was an error deleting the guest"}
+	}
+	if guest.Role != common.GUEST {
+		axonlogger.WarningLogger.Println("Did not delete guest - unexpected role")
+		return models.HTTPStatus{Status: http.StatusBadRequest, Message: "There was an error deleting the guest"}
+	}
+	return userRepositoryImpl.DeleteUserByEmail(guest.Email)
+}
 
 // // MarkAsComplete updates the given experimentUser as complete
 // func MarkAsComplete(experimentUser models.ExperimentUser) models.HTTPStatus {

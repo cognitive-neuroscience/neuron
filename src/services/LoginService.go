@@ -2,13 +2,14 @@ package services
 
 import (
 	"errors"
+	"time"
 
 	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
 	"github.com/cognitive-neuroscience/neuron/src/models"
 	"golang.org/x/crypto/bcrypt"
 )
 
-type LoginService struct {}
+type LoginService struct{}
 
 // ValidateCredentials checks to see if the email and password match by querying the db
 // for the correct email and then comparing
@@ -22,6 +23,8 @@ func (l *LoginService) ValidateCredentials(email string, password string) (model
 	if !passwordIsCorrect(user.Password, password) {
 		return user, errors.New("password is incorrect")
 	}
+	user.Password = ""
+	user.CreatedAt = time.Time{}
 	return user, nil
 }
 
