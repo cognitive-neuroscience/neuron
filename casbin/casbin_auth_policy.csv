@@ -1,10 +1,10 @@
 p, ADMIN,       /api/*,      *
 
-p, PARTICIPANT, /api/users,   GET
-p, GUEST,       /api/users,   GET
+p, PARTICIPANT, /api/users,  GET
+p, GUEST,       /api/users,  GET
 
 p, PARTICIPANT, /api/logout, POST
 p, GUEST,       /api/logout, POST
 
-p, *,           /api/users,   POST
+p, *,           /api/users,  POST
 p, *,           /api/login,  POST
