@@ -226,8 +226,9 @@ type RatingNew struct {
 	TaskName       string    `json:"taskName"`
 	ActivityType   string    `json:"activityType"`
 	Counterbalance string    `json:"counterbalance"`
-	Activity       string    `json:"activity"`
+	ActivityLeft   string    `json:"activityLeft"`
+	ActivityRight  string    `json:"activityRight"`
 	Question       string    `json:"question"`
-	UserAnswer     int       `json:"userAnswer"`
+	UserAnswer     string    `json:"userAnswer"`
 	ResponseTime   int       `json:"responseTime"`
 }
