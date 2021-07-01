@@ -1,7 +1,8 @@
 package controllers
 
 import (
-	"errors"
+	"log"
+	"net/http"
 
 	"github.com/labstack/echo/v4"
 
@@ -19,11 +20,45 @@ func (u *UserController) SaveUser(e echo.Context) error {
 
 	if err := e.Bind(user); err != nil {
 		axonlogger.WarningLogger.Println("Could not parse user details", err)
-		common.SendHTTPBadRequest(e)
-		return errors.New("could not parse user details")
+		return common.SendHTTPBadRequest(e)
 	}
 	result := userServiceImpl.SaveUser(user)
 	return common.SendGenericHTTPWithMessage(e, result)
+}
+
+// SaveTurker saves the given turker into the DB
+func (u *UserController) SaveCrowdsourcedUser(e echo.Context) error {
+	var crowdsourcedUser = new(models.CrowdSourcedUser)
+	if err := e.Bind(crowdsourcedUser); err != nil {
+		axonlogger.WarningLogger.Println("Could not parse user details", err)
+		return common.SendHTTPBadRequest(e)
+	}
+
+	result := userServiceImpl.SaveCrowdsourcedUser(crowdsourcedUser)
+	if result.Status != http.StatusCreated {
+		return common.SendGenericHTTPWithMessage(e, result)
+	}
+
+	// 4: create a jwt
+	tokenString, err := tokenServiceImpl.CreateToken(crowdsourcedUser.ParticipantID, "", common.PARTICIPANT)
+	if err != nil {
+		axonlogger.ErrorLogger.Println("Error creating a JWT for user", crowdsourcedUser.ParticipantID, err)
+		return common.SendGenericHTTPWithMessage(e, models.HTTPStatus{Status: http.StatusInternalServerError, Message: "there was an error registering the participant"})
+	}
+
+	cookie := new(http.Cookie)
+	cookie.Name = "token"
+	cookie.Value = tokenString
+	cookie.HttpOnly = true // not accessible by javascript
+	cookie.Secure = true   // sent over https only
+	// cookie.Domain = "psharplab.campus.mcgill.ca" // only accept cookies from same domain
+	cookie.SameSite = http.SameSiteStrictMode
+	e.SetCookie(cookie)
+
+	axonlogger.InfoLogger.Println("user registered with set cookie", crowdsourcedUser.ParticipantID)
+	return common.SendHTTPOkWithBody(e, models.CrowdSourcedUser{
+		ParticipantID: crowdsourcedUser.ParticipantID,
+	})
 }
 
 // DeleteUserById deletes the guest with the given email
@@ -32,28 +67,6 @@ func (u *UserController) DeleteUserById(e echo.Context) error {
 	result := userServiceImpl.DeleteGuestById(id)
 	return common.SendGenericHTTPWithMessage(e, result)
 }
-
-// // GetCompletionCode return the completion code associated with the given experimentUser
-// func GetCompletionCode(c *fiber.Ctx) {
-// 	userID := c.Params("userid")
-// 	code := c.Params("code")
-
-// 	axonlogger.InfoLogger.Println("Getting completion code for", userID, code)
-
-// 	authorizedRoles := []string{common.ADMIN, common.PARTICIPANT}
-// 	if common.IsAllowed(c, authorizedRoles) {
-// 		result, err := services.GetCompletionCode(userID, code)
-// 		if err != nil {
-// 			axonlogger.ErrorLogger.Println("Could not get completion code", userID, code)
-// 			common.SendHTTPStatusServiceUnavailable(c)
-// 			return
-// 		}
-// 		c.JSON(result)
-// 		return
-// 	}
-// 	axonlogger.WarningLogger.Println("Not authorized", userID, code)
-// 	common.SendHTTPForbidden(c)
-// }
 
 // SaveGuest
 func (u *UserController) SaveGuest(e echo.Context) error {
@@ -64,8 +77,7 @@ func (u *UserController) SaveGuest(e echo.Context) error {
 
 	if err := e.Bind(user); err != nil {
 		axonlogger.WarningLogger.Println("Could not parse user details", err)
-		common.SendHTTPBadRequest(e)
-		return errors.New("could not parse user details")
+		return common.SendHTTPBadRequest(e)
 	}
 	result := userServiceImpl.SaveUser(user)
 	return common.SendGenericHTTPWithMessage(e, result)
@@ -94,6 +106,39 @@ func (u *UserController) GetUser(e echo.Context) error {
 		return common.SendHTTPStatusServiceUnavailable(e)
 	}
 	return common.SendHTTPOkWithBody(e, result)
+}
+
+func (u *UserController) GetCrowdsourcedUser(e echo.Context) error {
+	id, ok := e.Get("id").(string)
+	if !ok {
+		axonlogger.ErrorLogger.Println("Could not parse id from context")
+		return common.SendHTTPStatusServiceUnavailable(e)
+	}
+	log.Println(e)
+	studyId := e.Param("studyId")
+
+	result, err := userServiceImpl.GetCrowdsourcedUserById(id, studyId)
+	if err != nil {
+		return common.SendHTTPStatusServiceUnavailable(e)
+	}
+	return common.SendHTTPOkWithBody(e, result)
+}
+
+func (u *UserController) RegisterCompletion(e echo.Context) error {
+	// only crowdsourced users will be marked as complete
+	participantId, ok := e.Get("id").(string)
+	if !ok {
+		axonlogger.ErrorLogger.Println("Could not parse participant id from context")
+		return common.SendHTTPStatusServiceUnavailable(e)
+	}
+	studyId := e.Param("studyId")
+
+	completionCode, err := userServiceImpl.RegisterCompletion(participantId, studyId)
+	if err != nil {
+		axonlogger.ErrorLogger.Println("could not register completion", participantId)
+		return common.SendHTTPStatusServiceUnavailable(e)
+	}
+	return common.SendHTTPOkWithBody(e, completionCode)
 }
 
 // // MarkAsComplete marks the given experimentUser as complete

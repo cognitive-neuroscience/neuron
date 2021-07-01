@@ -11,6 +11,7 @@ import (
 var userRepositoryImpl = database.UserRepository{}
 var taskRespositoryImpl = database.TaskRepository{}
 var studyRepositoryImpl = database.StudyRepository{}
+var studyDataRepositoryImpl = database.StudyDataRepository{}
 
 func convertStringToUint8(str string) (uint, error) {
 	parsedUint64, err := strconv.ParseUint(str, 10, 64)

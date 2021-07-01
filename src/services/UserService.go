@@ -51,6 +51,34 @@ func (u *UserService) SaveUser(user *models.User) models.HTTPStatus {
 	return userRepositoryImpl.SaveUser(user)
 }
 
+func (u *UserService) RegisterCompletion(participantId string, studyId string) (string, error) {
+	studyUintId, err := convertStringToUint8(studyId)
+	if err != nil {
+		axonlogger.WarningLogger.Println("Could not convert id to uint", err)
+		return "", errors.New("there was an error registering completion")
+	}
+
+	code := GenerateCode(10)
+	return userRepositoryImpl.RegisterCompletion(participantId, studyUintId, code)
+}
+
+func (u *UserService) SaveCrowdsourcedUser(crowdsourcedUser *models.CrowdSourcedUser) models.HTTPStatus {
+	study, err := studyRepositoryImpl.GetStudyById(crowdsourcedUser.StudyID)
+	if err != nil {
+		return models.HTTPStatus{Status: http.StatusBadRequest, Message: "there was an error registering the participant"}
+	}
+	if study.ID == 0 {
+		axonlogger.WarningLogger.Println("the given study code does not exist")
+		return models.HTTPStatus{Status: http.StatusBadRequest, Message: "study does not exist"}
+	}
+
+	if !study.Started {
+		return models.HTTPStatus{Status: http.StatusForbidden, Message: "this study is not currently accepting participants"}
+	}
+
+	return userRepositoryImpl.SaveCrowdsourcedUser(crowdsourcedUser)
+}
+
 // GetGuests retrieves all users of the Role GUEST
 func (u *UserService) GetGuests() ([]models.User, error) {
 	return userRepositoryImpl.GetGuests()
@@ -63,6 +91,15 @@ func (u *UserService) GetUserByEmail(email string) (models.User, error) {
 	user.CreatedAt = time.Time{}
 	user.Password = ""
 	return user, err
+}
+
+func (u *UserService) GetCrowdsourcedUserById(participantId string, studyId string) (models.CrowdSourcedUser, error) {
+	studyIdUint, err := convertStringToUint8(studyId)
+	if err != nil {
+		axonlogger.WarningLogger.Println("Could not convert id to uint", err)
+		return models.CrowdSourcedUser{}, errors.New("there was an error getting the user")
+	}
+	return userRepositoryImpl.GetCrowdsourcedUserById(participantId, studyIdUint)
 }
 
 // DeleteUserById deletes the guest with the given email
@@ -84,21 +121,6 @@ func (u *UserService) DeleteGuestById(id string) models.HTTPStatus {
 	}
 	return userRepositoryImpl.DeleteUserByEmail(guest.Email)
 }
-
-// // MarkAsComplete updates the given experimentUser as complete
-// func MarkAsComplete(experimentUser models.ExperimentUser) models.HTTPStatus {
-// 	// code := GenerateCode(10)
-// 	code := "hello"
-// 	experimentUser.CompletionCode = code
-// 	experimentUser.Complete = true
-// 	axonlogger.InfoLogger.Println("Generated completion code for user", experimentUser.ID, ":", code)
-// 	return database.MarkAsComplete(experimentUser)
-// }
-
-// // GetCompletionCode return the completion code of the given experimentUser
-// func GetCompletionCode(userID string, code string) (string, error) {
-// 	return database.GetCompletionCode(userID, code)
-// }
 
 func isEmailValid(email string) bool {
 	if len(email) < 3 || len(email) > 254 {
@@ -126,12 +148,3 @@ func hashAndSalt(password string) (string, error) {
 	}
 	return string(hash), nil
 }
-
-// // GetUsers returns all users
-// func GetUsers() []models.User {
-// 	users, err := database.GetAllUsers()
-// 	if err != nil {
-// 		return []models.User{}
-// 	}
-// 	return users
-// }

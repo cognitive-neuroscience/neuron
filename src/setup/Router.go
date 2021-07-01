@@ -11,10 +11,11 @@ func registerRoutes(app *echo.Echo) {
 	var api = app.Group("/api")
 
 	setUpUserRoutes(api)
+	setUpCrowdsourceUserRoutes(api)
 	setUpStudyRoutes(api)
 	setUpLoginRoutes(api)
 	setUpTokenRoutes(api)
-	setUpUploadRoutes(api)
+	setUpStudyDataRoutes(api)
 	setUpDownloadRoutes(api)
 	setUpQuestionnaireRoutes(api)
 	setUpTaskRoutes(api)
@@ -35,11 +36,20 @@ func setUpUserRoutes(group *echo.Group) {
 	// users.All("/*", handleForbidden)
 }
 
+func setUpCrowdsourceUserRoutes(group *echo.Group) {
+	userControllerImpl := controllers.UserController{}
+	users := group.Group("/crowdsourcedusers")
+	users.POST("", userControllerImpl.SaveCrowdsourcedUser)
+	users.GET("/:studyId", userControllerImpl.GetCrowdsourcedUser)
+	users.PATCH("/:studyId", userControllerImpl.RegisterCompletion)
+}
+
 func setUpStudyRoutes(group *echo.Group) {
 	studiesControllerImpl := controllers.StudyController{}
 	studies := group.Group("/studies")
 	studies.POST("", studiesControllerImpl.SaveStudy)
 	studies.GET("", studiesControllerImpl.GetAllStudies)
+	studies.GET("/:studyId", studiesControllerImpl.GetStudyById)
 	studies.PUT("/:id", studiesControllerImpl.UpdateStudy)
 	studies.DELETE("/:id", studiesControllerImpl.DeleteStudyById)
 	// experiments.Get("/", controllers.GetAllExperiments)
@@ -67,12 +77,20 @@ func setUpTokenRoutes(group *echo.Group) {
 	// 	token.All("/*", handleForbidden)
 }
 
-func setUpUploadRoutes(group *echo.Group) {
-	// upload := group.Group("/upload")
-	// upload.Post("/:code/:taskName", controllers.UploadTaskData)
-	// upload.Options("/*", handleOptions)
-	// upload.All("/*", handleForbidden)
+func setUpStudyDataRoutes(group *echo.Group) {
+	studyDataControllerImpl := controllers.StudyDataController{}
+	studyData := group.Group("/studydata")
+	studyData.POST("/feedback", studyDataControllerImpl.UploadFeedback)
+	studyData.POST("", studyDataControllerImpl.UploadTaskData)
+	studyData.GET("/:studyId/:taskOrder", studyDataControllerImpl.GetTaskData)
 }
+
+// func setUpUploadRoutes(group *echo.Group) {
+// upload := group.Group("/upload")
+// upload.Post("/:code/:taskName", controllers.UploadTaskData)
+// upload.Options("/*", handleOptions)
+// upload.All("/*", handleForbidden)
+// }
 
 func setUpDownloadRoutes(group *echo.Group) {
 	// download := group.Group("/download")

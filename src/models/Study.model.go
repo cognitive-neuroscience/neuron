@@ -11,7 +11,7 @@ var StudySchema = `
 		internal_name VARCHAR(255) NOT NULL,
 		external_name VARCHAR(255) NOT NULL,
 		started BOOLEAN DEFAULT FALSE,
-		study_code VARCHAR(255) NOT NULL UNIQUE CHECK(study_code != ""),
+		can_edit BOOLEAN DEFAULT TRUE,
 		description VARCHAR(300),
 		PRIMARY KEY (id)
 	);
@@ -25,7 +25,7 @@ type Study struct {
 	InternalName string      `json:"internalName"`
 	ExternalName string      `json:"externalName"`
 	Started      bool        `json:"started"`
-	StudyCode    string      `json:"studyCode"`
 	Description  string      `json:"description"`
+	CanEdit      bool        `json:"canEdit"`
 	Tasks        []StudyTask `json:"tasks"`
 }

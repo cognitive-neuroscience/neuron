@@ -1,10 +1,20 @@
-p, ADMIN,       /api/*,      *
+p, ADMIN,       /api/*,                         *
 
-p, PARTICIPANT, /api/users,  GET
-p, GUEST,       /api/users,  GET
+p, PARTICIPANT, /api/users,                     GET
+p, GUEST,       /api/users,                     GET
 
-p, PARTICIPANT, /api/logout, POST
-p, GUEST,       /api/logout, POST
+p, PARTICIPANT, /api/crowdsourcedusers/*,       GET
+p, PARTICIPANT, /api/crowdsourcedusers/*,       PATCH
 
-p, *,           /api/users,  POST
-p, *,           /api/login,  POST
+p, PARTICIPANT, /api/studydata,                 POST
+
+p, PARTICIPANT, /api/tasks/*,                   GET
+
+p, PARTICIPANT, /api/logout,                    POST
+p, GUEST,       /api/logout,                    POST
+
+p, PARTICIPANT, /api/studies/*,                 GET
+
+p, *,           /api/users,                     POST
+p, *,           /api/crowdsourcedusers,         POST
+p, *,           /api/login,                     POST

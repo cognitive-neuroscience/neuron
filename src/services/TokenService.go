@@ -52,7 +52,7 @@ type TokenService struct{}
 func (t *TokenService) CreateToken(id string, email string, role string) (string, error) {
 	key := GetJWTKey()
 
-	expirationTime := time.Now().Add(2 * time.Hour)
+	expirationTime := time.Now().Add(6 * time.Hour)
 	claims := &models.Claims{
 		UserID: id,
 		Email:  email,

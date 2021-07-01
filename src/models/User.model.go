@@ -16,12 +16,12 @@ var UserSchema = `
 
 var CrowdSourcedUserSchema = `
 	CREATE TABLE IF NOT EXISTS crowdsourced_users (
-		id INT UNSIGNED NOT NULL AUTO_INCREMENT,
 		participant_id VARCHAR(255) NOT NULL UNIQUE CHECK(participant_id != ""),
-		study_id VARCHAR(255) NOT NULL CHECK(study_id != ""),
-		register_date DATETIME NOT NULL ,
-		completion_code VARCHAR(255),
-		PRIMARY KEY (id)
+		study_id INT UNSIGNED NOT NULL CHECK(study_id != ""),
+		register_date DATETIME NOT NULL,
+		completion_code VARCHAR(255) DEFAULT "",
+		PRIMARY KEY (participant_id, study_id),
+		FOREIGN KEY (study_id) REFERENCES studies(id)
 	);
 `
 
@@ -35,7 +35,6 @@ type User struct {
 }
 
 type CrowdSourcedUser struct {
-	ID             string    `json:"id"`
 	ParticipantID  string    `json:"participantId"`
 	StudyID        uint      `json:"studyId"`
 	RegisterDate   time.Time `json:"registerDate"`

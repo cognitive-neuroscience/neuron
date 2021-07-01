@@ -45,6 +45,15 @@ func (s *StudyController) DeleteStudyById(e echo.Context) error {
 	return common.SendGenericHTTPWithMessage(e, httpStatus)
 }
 
+func (s *StudyController) GetStudyById(e echo.Context) error {
+	studyId := e.Param("studyId")
+	study, err := studyServiceImpl.GetStudyById(studyId)
+	if err != nil {
+		return common.SendHTTPStatusServiceUnavailable(e)
+	}
+	return common.SendHTTPOkWithBody(e, study)
+}
+
 // // DeleteExperiment is the experiment api entry point for deleting given the experiment code
 // func DeleteExperiment(c *fiber.Ctx) {
 // 	code := c.Params("code")

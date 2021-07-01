@@ -43,6 +43,70 @@ func (u *UserRepository) SaveUser(user *models.User) (operationStatus models.HTT
 	return models.HTTPStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)}
 }
 
+func (u *UserRepository) SaveCrowdsourcedUser(crowdsourcedUser *models.CrowdSourcedUser) models.HTTPStatus {
+	db := db.DB
+	var saveCrowdsourcedUserQuery = `INSERT INTO crowdsourced_users (participant_id, study_id, register_date, completion_code) VALUES (?, ?, ?, ?);`
+	_, err := db.Exec(
+		saveCrowdsourcedUserQuery,
+		crowdsourcedUser.ParticipantID,
+		crowdsourcedUser.StudyID,
+		time.Now().UTC(),
+		crowdsourcedUser.CompletionCode,
+	)
+	if err != nil {
+		axonlogger.ErrorLogger.Println("Error saving crowdsourced user into DB", err)
+		msg := "there was an error registering the participant"
+		status := http.StatusInternalServerError
+		if strings.Contains(err.Error(), "1062") {
+			// 1062 is a mysql DB error indicating duplicate entry exists
+			msg = "a participant with this id has already registered for this study"
+			status = http.StatusConflict
+		}
+
+		return models.HTTPStatus{Status: status, Message: msg}
+	}
+	axonlogger.InfoLogger.Println("Successfully created crowdsourced user:", crowdsourcedUser.ParticipantID, crowdsourcedUser.StudyID)
+	return models.HTTPStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)}
+}
+
+func (u *UserRepository) RegisterCompletion(participantId string, studyId uint, code string) (string, error) {
+	db := db.DB
+	var updateCompleteQuery = `UPDATE crowdsourced_users SET completion_code = ? WHERE participant_id = ? AND study_id = ?;`
+	if _, err := db.Exec(updateCompleteQuery, code, participantId, studyId); err != nil {
+		axonlogger.ErrorLogger.Println("There was an error registering completion", err)
+		return "", errors.New("there was an error registering completion")
+	}
+	return code, nil
+}
+
+func (u *UserRepository) GetCrowdsourcedUserById(id string, studyId uint) (models.CrowdSourcedUser, error) {
+	db := db.DB
+	var getCrowdsourcedUser = `SELECT participant_id, study_id, register_date, completion_code FROM crowdsourced_users WHERE participant_id = ? AND study_id = ?;`
+	crowdsourcedUser := models.CrowdSourcedUser{}
+	rows, err := db.Query(getCrowdsourcedUser, id, studyId)
+	if err != nil {
+		axonlogger.ErrorLogger.Println("There was an error getting the crowdsourced user from the DB", err)
+		return crowdsourcedUser, errors.New("there was an error retrieving the user")
+	}
+	defer rows.Close()
+	for rows.Next() {
+		if err := rows.Scan(
+			&crowdsourcedUser.ParticipantID,
+			&crowdsourcedUser.StudyID,
+			&crowdsourcedUser.RegisterDate,
+			&crowdsourcedUser.CompletionCode,
+		); err != nil {
+			axonlogger.ErrorLogger.Println("Could not scan rows when retrieving crowdsourced user", err)
+			return crowdsourcedUser, errors.New("there was an error retrieving the user")
+		}
+	}
+	if err := rows.Err(); err != nil {
+		axonlogger.ErrorLogger.Println("Error when iterating over rows", err)
+		return crowdsourcedUser, errors.New("there was an error retrieving the user")
+	}
+	return crowdsourcedUser, nil
+}
+
 // // SaveExperimentAndParticipant sees if the record exists. If not, it creates one
 // func SaveExperimentAndParticipant(expUser models.ExperimentUser) models.HTTPStatus {
 // 	// TODO: refactor this so that we do a search first, and then return true/false based on if we find the participant or not

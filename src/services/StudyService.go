@@ -37,15 +37,19 @@ func (s *StudyService) UpdateStudy(study *models.Study) models.HTTPStatus {
 
 // SaveStudy saves the given study in the db
 func (s *StudyService) SaveStudy(study *models.Study) models.HTTPStatus {
-	newCode, err := getNewCode()
-	if err != nil {
-		axonlogger.ErrorLogger.Println("Error generating new new study code", err)
-		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "There was an error saving the study"}
-	}
-	study.StudyCode = newCode
+	study.CanEdit = true
 	study.Started = false
 
 	return studyRepositoryImpl.SaveStudy(study)
+}
+
+func (s *StudyService) GetStudyById(studyId string) (models.Study, error) {
+	id, err := convertStringToUint8(studyId)
+	if err != nil {
+		axonlogger.WarningLogger.Println("could not get study", err)
+		return models.Study{}, errors.New("could not get study")
+	}
+	return studyRepositoryImpl.GetStudyById(id)
 }
 
 // // DeleteExperiment calls the db and deletes the experiment with the given code
@@ -67,30 +71,6 @@ func (s *StudyService) SaveStudy(study *models.Study) models.HTTPStatus {
 
 // 	return database.SaveExperiment(experiment)
 // }
-
-func getNewCode() (string, error) {
-	studyCodes, err := studyRepositoryImpl.GetAllStudyCodes()
-
-	if err != nil {
-		return "", errors.New("Could not get study codes")
-	}
-	code := GenerateCode(6)
-
-	// generate a code and loop through until you get a unique one
-	for containsCode(code, &studyCodes) {
-		code = GenerateCode(6)
-	}
-	return code, nil
-}
-
-func containsCode(code string, studyCodes *[]string) bool {
-	for _, studyCode := range *studyCodes {
-		if studyCode == code {
-			return true
-		}
-	}
-	return false
-}
 
 // GenerateCode creates a code using the CharacterCode string of x size
 func GenerateCode(size int) string {

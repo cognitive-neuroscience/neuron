@@ -1,5 +1,7 @@
 package common
 
+import "strings"
+
 // import (
 // 	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
 // 	"github.com/cognitive-neuroscience/neuron/src/services"
@@ -26,3 +28,12 @@ package common
 // 	axonlogger.WarningLogger.Println("User is not allowed to proceed")
 // 	return false
 // }
+
+func IncludesSubStr(strSlice []string, subStr string) bool {
+	for _, str := range strSlice {
+		if strings.Contains(subStr, str) {
+			return true
+		}
+	}
+	return false
+}

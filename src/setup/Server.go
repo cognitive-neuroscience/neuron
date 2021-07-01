@@ -19,6 +19,12 @@ type Enforcer struct {
 	enforcer *casbin.Enforcer
 }
 
+var unprotectedRoutes = []string{
+	"/api/users",
+	"/api/login",
+	"/api/crowdsourcedusers",
+}
+
 // CreateServer creates a HTTP server
 func CreateServer() {
 
@@ -86,7 +92,7 @@ func validateCookieMiddleware(next echo.HandlerFunc) echo.HandlerFunc {
 		var id string
 
 		// unprotected routes, api/users POST is for register and api/login POST is for logging in
-		if method == http.MethodPost && (path == "/api/users" || path == "/api/login") {
+		if method == http.MethodPost && common.IncludesSubStr(unprotectedRoutes, path) {
 			role = common.NONE
 		} else {
 			tokenServiceImpl := services.TokenService{}
@@ -95,7 +101,6 @@ func validateCookieMiddleware(next echo.HandlerFunc) echo.HandlerFunc {
 				logger.WarningLogger.Println("Could not read jwt from cookie", err)
 				return common.SendHTTPForbidden(e)
 			}
-
 			jwt := cookie.Value
 			claims, err := tokenServiceImpl.ValidateToken(jwt)
 			if err != nil {
@@ -104,7 +109,8 @@ func validateCookieMiddleware(next echo.HandlerFunc) echo.HandlerFunc {
 			}
 			role = claims.Role
 			email = claims.Email
-			id = claims.Id
+			id = claims.UserID
+
 		}
 
 		e.Set("path", path)
