@@ -10,6 +10,7 @@ type FeedbackQuestionnaireResponse struct {
 	AdditionalFeedback string    `json:"additionalFeedback"`
 	SubmittedAt        time.Time `json:"submittedAt"`
 	Browser            string    `json:"browser"`
+	ParticipantType    string    `json:"participantType"`
 }
 
 // StudySchema defines the SQL table schema for this model
@@ -21,6 +22,7 @@ var FeedbackQuestionnaireResponseSchema = `
 		issues_encountered VARCHAR(1000),
 		additional_feedback VARCHAR(1000),
 		browser VARCHAR(255),
+		participant_type ENUM("CROWDSOURCED", "ACCOUNTHOLDER"),
 		PRIMARY KEY (user_id, study_id),
 		FOREIGN KEY (study_id) REFERENCES studies(id)
 	);

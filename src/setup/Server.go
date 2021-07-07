@@ -22,6 +22,7 @@ type Enforcer struct {
 var unprotectedRoutes = []string{
 	"/api/users",
 	"/api/login",
+	"api/logout",
 	"/api/crowdsourcedusers",
 }
 
@@ -47,7 +48,8 @@ func CreateServer() {
 	}))
 	defer logger.CloseLogFile()
 
-	casbinEnforcer, err := casbin.NewEnforcer("casbin/casbin_auth_model.conf", "casbin/casbin_auth_policy.csv")
+	///usr/sbin/sharplab/
+	casbinEnforcer, err := casbin.NewEnforcer("/usr/sbin/sharplab/casbin/casbin_auth_model.conf", "/usr/sbin/sharplab/casbin/casbin_auth_policy.csv")
 	if err != nil {
 		logger.ErrorLogger.Println("could not set up casbin route protection", err)
 		panic("could not set up casbin route protection")
@@ -110,7 +112,6 @@ func validateCookieMiddleware(next echo.HandlerFunc) echo.HandlerFunc {
 			role = claims.Role
 			email = claims.Email
 			id = claims.UserID
-
 		}
 
 		e.Set("path", path)

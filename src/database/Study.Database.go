@@ -1,7 +1,6 @@
 package database
 
 import (
-	"database/sql"
 	"errors"
 	"net/http"
 	"time"
@@ -15,17 +14,27 @@ import (
  * This file is for saving/deleting/retrieving data involving experiments (studies)
  */
 
-type StudyRepository struct {
+type StudyRepository struct{}
+
+func (s *StudyRepository) UpdateStudyNoTasks(study *models.Study) models.HTTPStatus {
+	db := db.DB
+	var setStudyActiveValue = `
+		UPDATE studies 
+		SET internal_name = ?, external_name = ?, started = ?, description = ?, can_edit = ?, consent = ?
+		WHERE id = ?;
+	`
+
+	if _, err := db.Exec(setStudyActiveValue, study.InternalName, study.ExternalName, study.Started, study.Description, study.CanEdit, study.Consent, study.ID); err != nil {
+		axonlogger.ErrorLogger.Println("Could not scan rows when retrieving studies", err)
+		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "could not update study"}
+	}
+
+	return models.HTTPStatus{Status: http.StatusOK, Message: "successfully updated study"}
 }
 
 func (s *StudyRepository) UpdateStudy(study *models.Study) models.HTTPStatus {
 	var genericErrMessage = `There was an error updating the study`
 	db := db.DB
-	var setStudyActiveValue = `
-		UPDATE studies 
-		SET internal_name = ?, external_name = ?, started = ?, description = ?, can_edit = ?
-		WHERE id = ?;
-	`
 
 	var deleteStudyTaskQuery = `DELETE FROM study_tasks WHERE study_id = ?;`
 	var saveStudyTasksQuery = `INSERT INTO study_tasks (study_id, task_id, task_order, config) VALUES (?, ?, ?, ?);`
@@ -37,7 +46,7 @@ func (s *StudyRepository) UpdateStudy(study *models.Study) models.HTTPStatus {
 		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: genericErrMessage}
 	}
 
-	if _, err := tx.Exec(setStudyActiveValue, study.InternalName, study.ExternalName, study.Started, study.Description, study.CanEdit, study.ID); err != nil {
+	if httpStatusModel := s.UpdateStudyNoTasks(study); httpStatusModel.Status == http.StatusInternalServerError {
 		tx.Rollback()
 		axonlogger.ErrorLogger.Println("There was an error updating the study from the DB", err)
 		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: genericErrMessage}
@@ -72,9 +81,9 @@ func (s *StudyRepository) DeleteStudyById(studyId uint) models.HTTPStatus {
 
 	if _, err := db.Exec(deleteStudy, time.Now().UTC(), studyId); err != nil {
 		axonlogger.ErrorLogger.Println("There was an error deleting the study", err)
-		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "There was an error deleting the study"}
+		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "There was an error archiving the study"}
 	}
-	return models.HTTPStatus{Status: http.StatusOK, Message: "Successfully deleted study"}
+	return models.HTTPStatus{Status: http.StatusOK, Message: "successfully deleted study"}
 }
 
 func (s *StudyRepository) GetAllStudies() ([]models.Study, error) {
@@ -85,7 +94,7 @@ func (s *StudyRepository) GetAllStudies() ([]models.Study, error) {
 	studies := []models.Study{}
 
 	var getAllStudies = `
-		SELECT id, created_at, internal_name, external_name, started, description, can_edit
+		SELECT id, created_at, internal_name, external_name, started, description, can_edit, consent
 		FROM studies
 		WHERE deleted_at IS NULL ORDER BY created_at DESC;`
 
@@ -105,6 +114,7 @@ func (s *StudyRepository) GetAllStudies() ([]models.Study, error) {
 			&study.Started,
 			&study.Description,
 			&study.CanEdit,
+			&study.Consent,
 		)
 		if err != nil {
 			axonlogger.ErrorLogger.Println("Could not scan rows when retrieving studies", err)
@@ -134,7 +144,7 @@ func (s *StudyRepository) GetAllStudies() ([]models.Study, error) {
 func (s *StudyRepository) SaveStudy(study *models.Study) models.HTTPStatus {
 	db := db.DB
 	var saveStudyTasksQuery = `INSERT INTO study_tasks (study_id, task_id, task_order, config) VALUES (?, ?, ?, ?);`
-	var saveStudyQuery = `INSERT INTO studies (created_at, deleted_at, internal_name, external_name, started, description) VALUES (?, ?, ?, ?, ?, ?);`
+	var saveStudyQuery = `INSERT INTO studies (created_at, deleted_at, internal_name, external_name, started, description, can_edit, consent) VALUES (?, ?, ?, ?, ?, ?, ?, ?);`
 	var genericErrMessage = `There was an error saving the study`
 
 	// begin transaction
@@ -145,7 +155,7 @@ func (s *StudyRepository) SaveStudy(study *models.Study) models.HTTPStatus {
 	}
 
 	// 1. save study to db
-	x, err := tx.Exec(saveStudyQuery, time.Now().UTC(), sql.NullString{}, study.InternalName, study.ExternalName, study.Started, study.Description)
+	x, err := tx.Exec(saveStudyQuery, time.Now().UTC(), models.NullTime{Valid: false, Time: time.Time{}}, study.InternalName, study.ExternalName, study.Started, study.Description, study.CanEdit, study.Consent)
 	if err != nil {
 		tx.Rollback()
 		axonlogger.ErrorLogger.Println("could not save study", err)
@@ -187,7 +197,7 @@ func (s *StudyRepository) GetStudyById(studyId uint) (models.Study, error) {
 	taskRespositoryImpl := TaskRepository{}
 	db := db.DB
 	var err error
-	var getStudyByIdQuery = `SELECT id, created_at, internal_name, external_name, started, description, can_edit FROM studies WHERE id = ?;`
+	var getStudyByIdQuery = `SELECT id, created_at, internal_name, external_name, started, description, can_edit, consent FROM studies WHERE id = ?;`
 	study := models.Study{}
 
 	rows, err := db.Query(getStudyByIdQuery, studyId)
@@ -205,6 +215,7 @@ func (s *StudyRepository) GetStudyById(studyId uint) (models.Study, error) {
 			&study.Started,
 			&study.Description,
 			&study.CanEdit,
+			&study.Consent,
 		); err != nil {
 			axonlogger.ErrorLogger.Println("Could not scan rows when retrieving study", err)
 			return study, err
@@ -223,90 +234,3 @@ func (s *StudyRepository) GetStudyById(studyId uint) (models.Study, error) {
 	study.Tasks = studyTasks
 	return study, err
 }
-
-// 	axonlogger.InfoLogger.Println("Getting all experiments")
-// 	return experiments, err
-// }
-
-// // SaveExperiment saves the given experiment into the db
-// func SaveExperiment(experiment *models.Experiment) models.HTTPStatus {
-// 	db := DBConn
-
-// 	// create the experiment
-// 	errors := db.Create(&experiment).GetErrors()
-// 	if len(errors) > 0 {
-// 		axonlogger.ErrorLogger.Println("Error creating experiment", experiment, ":", errors)
-// 		return models.HTTPStatus{Status: http.StatusBadRequest, Message: "There was an error creating an experiment"}
-// 	}
-
-// 	// create an ExperimentTask record for each task to preserve the order
-// 	adjustment := 0
-// 	for index, task := range experiment.Tasks {
-
-// 		// TODO: validate that the given task is correct with the same name and type
-// 		experimentTaskObj := models.ExperimentTask{
-// 			ExperimentCode: experiment.Code,
-// 			TaskID:         task,
-// 			Place:          index - adjustment,
-// 		}
-// 		errors := db.Create(&experimentTaskObj).GetErrors()
-// 		// if there is an error creating, then skip adding this ExperimentTask
-// 		// and make sure the next one maintains the correct chronological order
-// 		if len(errors) > 0 {
-// 			axonlogger.ErrorLogger.Println("Error creating experiment task:", experimentTaskObj, ":", errors)
-// 			adjustment++
-// 		}
-// 	}
-// 	axonlogger.InfoLogger.Println("Saved Experiment", experiment)
-// 	return models.HTTPStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)}
-// }
-
-// // ExperimentExists takes a code and returns a bool representing if that code exists or not in the db
-// func ExperimentExists(code string) (bool, error) {
-// 	db := DBConn
-// 	experiments := []models.Experiment{}
-// 	if err := db.Find(&experiments).Error; err != nil {
-// 		axonlogger.ErrorLogger.Println(err)
-// 		return false, errors.New("Could not fetch experiments")
-// 	}
-
-// 	for _, experiment := range experiments {
-// 		if experiment.Code == code {
-// 			return true, nil
-// 		}
-// 	}
-
-// 	return false, nil
-// }
-
-// // GetExperiment gets the experiment based on the given code
-// func GetExperiment(code string) (models.Experiment, error) {
-// 	db := DBConn
-// 	experiment := models.Experiment{}
-// 	// TODO: refactor this, you can just do a join on experiment and tasks
-// 	if err := db.Where("code = ?", code).First(&experiment).Error; err != nil {
-// 		axonlogger.ErrorLogger.Println("Error retrieving experiment", code)
-// 		return experiment, errors.New(err.Error())
-// 	}
-// 	// use pluck to get the specific column
-// 	if err := db.Raw(getOrderedTasks, experiment.Code).Pluck("Tasks", &experiment.Tasks).Error; err != nil {
-// 		axonlogger.ErrorLogger.Println("error retrieving experiment tasks", code)
-// 		return experiment, errors.New(err.Error())
-// 	}
-
-// 	idList := []string{}
-// 	// for each taskname, find the survey monkey ones and grab the ID
-// 	for _, taskName := range experiment.Tasks {
-// 		if strings.Contains(taskName, SURVEYMONKEYQUESTIONNAIRE) {
-// 			split := strings.Split(taskName, "-")
-// 			idList = append(idList, split[1])
-// 		}
-// 	}
-// 	if err := db.Find(&experiment.Questionnaires, idList).Error; err != nil {
-// 		axonlogger.ErrorLogger.Println("Error retreiving questionnaire(s) for experiment", experiment, err)
-// 		return experiment, err
-// 	}
-
-// 	axonlogger.InfoLogger.Println("Successfully retrieving experiment", code)
-// 	return experiment, nil
-// }

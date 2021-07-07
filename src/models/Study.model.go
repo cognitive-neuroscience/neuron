@@ -1,6 +1,8 @@
 package models
 
-import "time"
+import (
+	"time"
+)
 
 // StudySchema defines the SQL table schema for this model
 var StudySchema = `
@@ -12,7 +14,9 @@ var StudySchema = `
 		external_name VARCHAR(255) NOT NULL,
 		started BOOLEAN DEFAULT FALSE,
 		can_edit BOOLEAN DEFAULT TRUE,
+		consent INT UNSIGNED DEFAULT(NULL),
 		description VARCHAR(300),
+		FOREIGN KEY (consent) REFERENCES tasks(id),
 		PRIMARY KEY (id)
 	);
 `
@@ -21,11 +25,12 @@ var StudySchema = `
 type Study struct {
 	ID           uint        `json:"id"`
 	CreatedAt    time.Time   `json:"createdAt"`
-	DeletedAt    time.Time   `json:"deletedAt"`
+	DeletedAt    NullTime    `json:"deletedAt"`
 	InternalName string      `json:"internalName"`
 	ExternalName string      `json:"externalName"`
 	Started      bool        `json:"started"`
 	Description  string      `json:"description"`
 	CanEdit      bool        `json:"canEdit"`
+	Consent      uint        `json:"consent"`
 	Tasks        []StudyTask `json:"tasks"`
 }

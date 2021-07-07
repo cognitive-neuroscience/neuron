@@ -42,3 +42,12 @@ func (s *StudyDataController) UploadFeedback(e echo.Context) error {
 	}
 	return common.SendGenericHTTPWithMessage(e, studyDataServiceImpl.UploadFeedback(feedback))
 }
+
+func (s *StudyDataController) GetFeedbackForStudyId(e echo.Context) error {
+	studyId := e.Param("studyId")
+	feedbackData, err := studyDataServiceImpl.GetFeedbackForStudyId(studyId)
+	if err != nil {
+		return common.SendGenericHTTPWithMessage(e, models.HTTPStatus{Status: http.StatusInternalServerError, Message: err.Error()})
+	}
+	return common.SendHTTPOkWithBody(e, feedbackData)
+}

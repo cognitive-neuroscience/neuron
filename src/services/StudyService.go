@@ -4,6 +4,7 @@ import (
 	"errors"
 	"math/rand"
 	"net/http"
+	"strconv"
 	"strings"
 	"time"
 
@@ -31,15 +32,28 @@ func (s *StudyService) GetAllStudies() ([]models.Study, error) {
 	return studyRepositoryImpl.GetAllStudies()
 }
 
-func (s *StudyService) UpdateStudy(study *models.Study) models.HTTPStatus {
-	return studyRepositoryImpl.UpdateStudy(study)
+func (s *StudyService) UpdateStudy(study *models.Study, shouldIncludeTasksUpdate string) models.HTTPStatus {
+	shouldUpdateTasks, err := strconv.ParseBool(shouldIncludeTasksUpdate)
+	if err != nil {
+		axonlogger.WarningLogger.Println("could not update study", err)
+		return models.HTTPStatus{Status: http.StatusBadRequest, Message: "could not update study, unexpected request received"}
+	}
+
+	if shouldUpdateTasks {
+		if givenStudy, err := studyRepositoryImpl.GetStudyById(study.ID); err != nil || !givenStudy.CanEdit {
+			axonlogger.WarningLogger.Println("could not update study", err)
+			return models.HTTPStatus{Status: http.StatusBadRequest, Message: "could not update study"}
+		}
+		return studyRepositoryImpl.UpdateStudy(study)
+	} else {
+		return studyRepositoryImpl.UpdateStudyNoTasks(study)
+	}
 }
 
 // SaveStudy saves the given study in the db
 func (s *StudyService) SaveStudy(study *models.Study) models.HTTPStatus {
 	study.CanEdit = true
 	study.Started = false
-
 	return studyRepositoryImpl.SaveStudy(study)
 }
 
@@ -52,26 +66,6 @@ func (s *StudyService) GetStudyById(studyId string) (models.Study, error) {
 	return studyRepositoryImpl.GetStudyById(id)
 }
 
-// // DeleteExperiment calls the db and deletes the experiment with the given code
-// func DeleteExperiment(code string) models.HTTPStatus {
-// 	return database.DeleteExperiment(code)
-// }
-
-// // SaveExperiment calls the DB and passes the given experiment data
-// func SaveExperiment(experiment *models.Experiment) models.HTTPStatus {
-
-// 	code, err := getNewCode()
-
-// 	if err != nil {
-// 		axonlogger.ErrorLogger.Println("Error creating experiment shortcode", err)
-// 		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "Error Creating Experiment Shortcode"}
-// 	}
-// 	axonlogger.InfoLogger.Println("Created experiment with shortcode:", code)
-// 	experiment.Code = code
-
-// 	return database.SaveExperiment(experiment)
-// }
-
 // GenerateCode creates a code using the CharacterCode string of x size
 func GenerateCode(size int) string {
 	rand.Seed(time.Now().UnixNano())
@@ -83,13 +77,3 @@ func GenerateCode(size int) string {
 	}
 	return str.String()
 }
-
-// // GetAllExperiments calls the DB and returns all experiments
-// func GetAllExperiments() ([]models.Experiment, error) {
-// 	return database.GetAllExperiments()
-// }
-
-// // GetExperiment gets the experiment based on the given code
-// func GetExperiment(code string) (models.Experiment, error) {
-// 	return database.GetExperiment(code)
-// }

@@ -1,7 +1,6 @@
 package controllers
 
 import (
-	"log"
 	"net/http"
 
 	"github.com/labstack/echo/v4"
@@ -61,11 +60,78 @@ func (u *UserController) SaveCrowdsourcedUser(e echo.Context) error {
 	})
 }
 
+func (u *UserController) GetCrowdSourcedUsersByStudyId(e echo.Context) error {
+	id := e.Param("studyId")
+	result, err := userServiceImpl.GetCrowdSourcedUsersByStudyId(id)
+	if err != nil {
+		axonlogger.WarningLogger.Println("Could not parse study id from params", err)
+		return common.SendHTTPBadRequest(e)
+	}
+	return common.SendHTTPOkWithBody(e, result)
+}
+
 // DeleteUserById deletes the guest with the given email
 func (u *UserController) DeleteUserById(e echo.Context) error {
 	id := e.Param("id")
 	result := userServiceImpl.DeleteGuestById(id)
 	return common.SendGenericHTTPWithMessage(e, result)
+}
+
+// // GetStudyUser gets an individual study user grabbing the id stored in the jwt within the cookie
+// func (u *UserController) GetStudyUser(e echo.Context) error {
+// 	id := e.Get("id").(string)
+// 	result, err := userServiceImpl.GetStudyUserById(id)
+// 	if err != nil {
+// 		axonlogger.WarningLogger.Println("Could not parse id from context", err)
+// 		return common.SendHTTPBadRequest(e)
+// 	}
+// 	return common.SendHTTPOkWithBody(e, result)
+// }
+
+// GetStudyUsers gets all study users by the given study id
+func (u *UserController) GetStudyUsersForStudy(e echo.Context) error {
+	id := e.Param("studyId")
+	result, err := userServiceImpl.GetStudyUsersByStudyId(id)
+	if err != nil {
+		axonlogger.WarningLogger.Println("Could not parse study id from params", err)
+		return common.SendHTTPBadRequest(e)
+	}
+	return common.SendHTTPOkWithBody(e, result)
+}
+
+// GetAllStudyUsers gets all study users by the given logged in user id
+func (u *UserController) GetAllStudyUsersForLoggedInUser(e echo.Context) error {
+	userId, ok := e.Get("id").(string)
+
+	if !ok {
+		axonlogger.ErrorLogger.Println("Could not get userId from context")
+		return common.SendHTTPStatusServiceUnavailable(e)
+	}
+	result, err := userServiceImpl.GetAllStudyUsersByUserId(userId)
+	if err != nil {
+		return common.SendHTTPBadRequest(e)
+	}
+	return common.SendHTTPOkWithBody(e, result)
+}
+
+func (u *UserController) SaveStudyUser(e echo.Context) error {
+	studyUser := new(models.StudyUser)
+
+	if err := e.Bind(studyUser); err != nil {
+		axonlogger.WarningLogger.Println("Could not parse study user details", err)
+		return common.SendHTTPBadRequest(e)
+	}
+	result := userServiceImpl.SaveStudyUser(*studyUser)
+	return common.SendGenericHTTPWithMessage(e, result)
+}
+
+func (u *UserController) UpdateStudyUser(e echo.Context) error {
+	studyUser := new(models.StudyUser)
+	if err := e.Bind(studyUser); err != nil {
+		axonlogger.WarningLogger.Println("Could not parse study user details", err)
+		return common.SendHTTPBadRequest(e)
+	}
+	return common.SendGenericHTTPWithMessage(e, userServiceImpl.UpdateStudyUser(*studyUser))
 }
 
 // SaveGuest
@@ -114,7 +180,6 @@ func (u *UserController) GetCrowdsourcedUser(e echo.Context) error {
 		axonlogger.ErrorLogger.Println("Could not parse id from context")
 		return common.SendHTTPStatusServiceUnavailable(e)
 	}
-	log.Println(e)
 	studyId := e.Param("studyId")
 
 	result, err := userServiceImpl.GetCrowdsourcedUserById(id, studyId)
@@ -124,7 +189,7 @@ func (u *UserController) GetCrowdsourcedUser(e echo.Context) error {
 	return common.SendHTTPOkWithBody(e, result)
 }
 
-func (u *UserController) RegisterCompletion(e echo.Context) error {
+func (u *UserController) RegisterCrowdsourcedUserCompletion(e echo.Context) error {
 	// only crowdsourced users will be marked as complete
 	participantId, ok := e.Get("id").(string)
 	if !ok {
@@ -133,7 +198,7 @@ func (u *UserController) RegisterCompletion(e echo.Context) error {
 	}
 	studyId := e.Param("studyId")
 
-	completionCode, err := userServiceImpl.RegisterCompletion(participantId, studyId)
+	completionCode, err := userServiceImpl.RegisterCrowdsourcedUserCompletion(participantId, studyId)
 	if err != nil {
 		axonlogger.ErrorLogger.Println("could not register completion", participantId)
 		return common.SendHTTPStatusServiceUnavailable(e)

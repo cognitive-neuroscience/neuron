@@ -37,9 +37,8 @@ func (l *LoginController) Login(e echo.Context) error {
 		axonlogger.ErrorLogger.Println("Error validating user login credentials:", err)
 		return common.SendGenericHTTPWithMessage(e, models.HTTPStatus{Status: http.StatusNotFound, Message: err.Error()})
 	}
-
 	// 4: create a jwt with the user data
-	idToString := strconv.FormatUint(uint64(dbUser.ID), 16)
+	idToString := strconv.FormatUint(uint64(dbUser.ID), 10)
 	tokenString, err := tokenServiceImpl.CreateToken(idToString, dbUser.Email, dbUser.Role)
 	if err != nil {
 		axonlogger.ErrorLogger.Println("Error creating a JWT for user", dbUser.Email, err)
@@ -50,7 +49,7 @@ func (l *LoginController) Login(e echo.Context) error {
 	cookie.Name = "token"
 	cookie.Value = tokenString
 	cookie.HttpOnly = true // not accessible by javascript
-	cookie.Secure = true   // sent over https only
+	//cookie.Secure = true // sent over https only
 	// cookie.Domain = "psharplab.campus.mcgill.ca" // only accept cookies from same domain
 	cookie.SameSite = http.SameSiteStrictMode
 	e.SetCookie(cookie)

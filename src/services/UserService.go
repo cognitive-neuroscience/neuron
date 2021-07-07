@@ -2,6 +2,7 @@ package services
 
 import (
 	"errors"
+	"log"
 	"net"
 	"net/http"
 	"regexp"
@@ -51,7 +52,7 @@ func (u *UserService) SaveUser(user *models.User) models.HTTPStatus {
 	return userRepositoryImpl.SaveUser(user)
 }
 
-func (u *UserService) RegisterCompletion(participantId string, studyId string) (string, error) {
+func (u *UserService) RegisterCrowdsourcedUserCompletion(participantId string, studyId string) (string, error) {
 	studyUintId, err := convertStringToUint8(studyId)
 	if err != nil {
 		axonlogger.WarningLogger.Println("Could not convert id to uint", err)
@@ -59,7 +60,7 @@ func (u *UserService) RegisterCompletion(participantId string, studyId string) (
 	}
 
 	code := GenerateCode(10)
-	return userRepositoryImpl.RegisterCompletion(participantId, studyUintId, code)
+	return userRepositoryImpl.RegisterCrowdsourcedUserCompletion(participantId, studyUintId, code)
 }
 
 func (u *UserService) SaveCrowdsourcedUser(crowdsourcedUser *models.CrowdSourcedUser) models.HTTPStatus {
@@ -120,6 +121,74 @@ func (u *UserService) DeleteGuestById(id string) models.HTTPStatus {
 		return models.HTTPStatus{Status: http.StatusBadRequest, Message: "There was an error deleting the guest"}
 	}
 	return userRepositoryImpl.DeleteUserByEmail(guest.Email)
+}
+
+func (u *UserService) GetCrowdSourcedUsersByStudyId(studyId string) ([]models.CrowdSourcedUser, error) {
+	parsedId, err := convertStringToUint8(studyId)
+	if err != nil {
+		axonlogger.WarningLogger.Println("Could not convert id to uint", err)
+		return []models.CrowdSourcedUser{}, errors.New("there was an error getting users")
+	}
+	return userRepositoryImpl.GetCrowdSourcedUsersByStudyId(parsedId)
+}
+
+func (u *UserService) SaveStudyUser(studyUser models.StudyUser) models.HTTPStatus {
+	studyUser.CompletionCode = ""
+	studyUser.CurrentTaskIndex = 0
+	studyUser.DueDate = models.NullTime{
+		Valid: false,
+		Time:  time.Time{},
+	}
+	studyUser.HasAcceptedConsent = false
+	return userRepositoryImpl.SaveStudyUser(studyUser)
+}
+
+func (u *UserService) UpdateStudyUser(studyUser models.StudyUser) models.HTTPStatus {
+	queriedStudyUser, err := userRepositoryImpl.GetStudyUserById(studyUser.UserID, studyUser.StudyID)
+	if err != nil {
+		axonlogger.WarningLogger.Println("Could not convert id to uint", err)
+		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "there was an update error"}
+	}
+	log.Println(queriedStudyUser.UserID)
+	log.Println(queriedStudyUser.StudyID)
+	log.Println(queriedStudyUser.HasAcceptedConsent)
+
+	queriedStudyUser.CompletionCode = studyUser.CompletionCode
+	queriedStudyUser.CurrentTaskIndex = studyUser.CurrentTaskIndex
+	queriedStudyUser.DueDate = studyUser.DueDate
+	queriedStudyUser.HasAcceptedConsent = studyUser.HasAcceptedConsent
+
+	log.Println(queriedStudyUser.HasAcceptedConsent)
+	return userRepositoryImpl.UpdateStudyUser(queriedStudyUser)
+}
+
+func (s *UserService) GetAllStudyUsersByUserId(userId string) ([]models.StudyUser, error) {
+	parsedUserId, parsedUserIdErr := convertStringToUint8(userId)
+
+	if parsedUserIdErr != nil {
+		axonlogger.WarningLogger.Println("Could not convert id to uint", parsedUserIdErr)
+		return []models.StudyUser{}, errors.New("there was an error getting study users")
+	}
+	return userRepositoryImpl.GetAllStudyUsersByUserId(uint(parsedUserId))
+}
+
+func (u *UserService) GetStudyUserById(userId string, studyId uint) (models.StudyUser, error) {
+	parsedUserId, err := convertStringToUint8(userId)
+	if err != nil {
+		axonlogger.WarningLogger.Println("Could not convert id to uint", err)
+		return models.StudyUser{}, errors.New("there was an error getting study users")
+	}
+	return userRepositoryImpl.GetStudyUserById(parsedUserId, studyId)
+}
+
+func (u *UserService) GetStudyUsersByStudyId(studyId string) ([]models.StudyUser, error) {
+	parsedId, err := convertStringToUint8(studyId)
+	if err != nil {
+		axonlogger.WarningLogger.Println("Could not convert id to uint", err)
+		return []models.StudyUser{}, errors.New("there was an error getting study users")
+	}
+	return userRepositoryImpl.GetStudyUsersByStudyId(parsedId)
+
 }
 
 func isEmailValid(email string) bool {

@@ -69,7 +69,7 @@ func (u *UserRepository) SaveCrowdsourcedUser(crowdsourcedUser *models.CrowdSour
 	return models.HTTPStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)}
 }
 
-func (u *UserRepository) RegisterCompletion(participantId string, studyId uint, code string) (string, error) {
+func (u *UserRepository) RegisterCrowdsourcedUserCompletion(participantId string, studyId uint, code string) (string, error) {
 	db := db.DB
 	var updateCompleteQuery = `UPDATE crowdsourced_users SET completion_code = ? WHERE participant_id = ? AND study_id = ?;`
 	if _, err := db.Exec(updateCompleteQuery, code, participantId, studyId); err != nil {
@@ -107,62 +107,180 @@ func (u *UserRepository) GetCrowdsourcedUserById(id string, studyId uint) (model
 	return crowdsourcedUser, nil
 }
 
-// // SaveExperimentAndParticipant sees if the record exists. If not, it creates one
-// func SaveExperimentAndParticipant(expUser models.ExperimentUser) models.HTTPStatus {
-// 	// TODO: refactor this so that we do a search first, and then return true/false based on if we find the participant or not
-// 	db := DBConn
-// 	if errors := db.Create(&expUser).GetErrors(); len(errors) != 0 {
-// 		axonlogger.ErrorLogger.Println("Could not create experiment user:", errors)
-// 		return models.HTTPStatus{Status: http.StatusBadRequest, Message: "Participant has already registered or completed the given experiment"}
-// 	}
-// 	axonlogger.InfoLogger.Println("Successfully saved experiment user", expUser)
-// 	return models.HTTPStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)}
-// }
+func (u *UserRepository) GetCrowdSourcedUsersByStudyId(studyId uint) ([]models.CrowdSourcedUser, error) {
+	db := db.DB
 
-// // MarkAsComplete gets the record with the associated userID and experiment code, setting completion to true (or 1)
-// func MarkAsComplete(experimentUser models.ExperimentUser) models.HTTPStatus {
-// 	db := DBConn
-// 	var expUserFromDB models.ExperimentUser
-// 	if errs := db.Where(models.ExperimentUser{Code: experimentUser.Code, ID: experimentUser.ID}).First(&expUserFromDB).GetErrors(); len(errs) > 0 {
-// 		axonlogger.ErrorLogger.Println("Error retreiving", experimentUser.ID, experimentUser.Code, "from DB:", errs)
-// 		return models.HTTPStatus{Status: http.StatusServiceUnavailable, Message: http.StatusText(http.StatusServiceUnavailable)}
-// 	}
-// 	if expUserFromDB.ID != "" {
-// 		expUserFromDB.Complete = experimentUser.Complete
-// 		expUserFromDB.CompletionCode = experimentUser.CompletionCode
-// 		if errs := db.Save(&expUserFromDB).GetErrors(); len(errs) > 0 {
-// 			axonlogger.ErrorLogger.Println("Found", experimentUser, "from DB but there was an error saving", expUserFromDB, "to DB")
-// 			return models.HTTPStatus{Status: http.StatusServiceUnavailable, Message: http.StatusText(http.StatusServiceUnavailable)}
-// 		}
-// 		axonlogger.InfoLogger.Println("Successfully marked user as complete", experimentUser)
-// 		return models.HTTPStatus{Status: http.StatusOK, Message: http.StatusText(http.StatusOK)}
-// 	}
-// 	axonlogger.ErrorLogger.Println("User retrieved from DB has empty ID:", expUserFromDB)
-// 	return models.HTTPStatus{Status: http.StatusServiceUnavailable, Message: http.StatusText(http.StatusServiceUnavailable)}
-// }
+	crowdsourcedUsers := []models.CrowdSourcedUser{}
+	var getCrowdSourcedUsersByStudyIdQuery = `SELECT participant_id, study_id, register_date, completion_code FROM crowdsourced_users WHERE study_id = ?;`
+	rows, err := db.Query(getCrowdSourcedUsersByStudyIdQuery, studyId)
+	if err != nil {
+		axonlogger.ErrorLogger.Println("There was an error getting users from the DB", err)
+		return crowdsourcedUsers, errors.New("there was an error retrieving users")
+	}
+	defer rows.Close()
+	for rows.Next() {
+		crowdsourcedUser := models.CrowdSourcedUser{}
+		if err := rows.Scan(
+			&crowdsourcedUser.ParticipantID,
+			&crowdsourcedUser.StudyID,
+			&crowdsourcedUser.RegisterDate,
+			&crowdsourcedUser.CompletionCode,
+		); err != nil {
+			axonlogger.ErrorLogger.Println("Could not scan rows when retrieving users", err)
+			return crowdsourcedUsers, errors.New("there was an error retrieving users")
+		}
+		crowdsourcedUsers = append(crowdsourcedUsers, crowdsourcedUser)
+	}
+	if err := rows.Err(); err != nil {
+		axonlogger.ErrorLogger.Println("Error when iterating over rows", err)
+		return crowdsourcedUsers, errors.New("there was an error retrieving users")
+	}
+	return crowdsourcedUsers, nil
+}
 
-// // GetCompletionCode returns the associated completion code of the user
-// func GetCompletionCode(userID string, code string) (string, error) {
-// 	db := DBConn
-// 	var expUserFromDB models.ExperimentUser
-// 	if errs := db.Where(models.ExperimentUser{ID: userID, Code: code}).First(&expUserFromDB).GetErrors(); len(errs) > 0 {
-// 		axonlogger.ErrorLogger.Println("Error retrieving completion code from DB for user", userID, code, ":", errs)
-// 		return "", errs[0]
-// 	}
-// 	axonlogger.InfoLogger.Println("Successfully retrieved completion code for", userID, ":", code)
-// 	return expUserFromDB.CompletionCode, nil
-// }
+func (u *UserRepository) SaveStudyUser(studyUser models.StudyUser) models.HTTPStatus {
+	db := db.DB
+	var saveCrowdsourcedUserQuery = `INSERT INTO study_users (user_id, study_id, completion_code, current_task_index, register_date, due_date, has_accepted_consent) VALUES (?, ?, ?, ?, ?, ?, ?);`
+	_, err := db.Exec(
+		saveCrowdsourcedUserQuery,
+		studyUser.UserID,
+		studyUser.StudyID,
+		studyUser.CompletionCode,
+		studyUser.CurrentTaskIndex,
+		time.Now().UTC(),
+		sql.NullString{},
+		studyUser.HasAcceptedConsent,
+	)
+	if err != nil {
+		axonlogger.ErrorLogger.Println("Error saving studyuser user into DB", err)
+		msg := "there was an error registering the study user"
+		status := http.StatusInternalServerError
+		if strings.Contains(err.Error(), "1062") {
+			// 1062 is a mysql DB error indicating duplicate entry exists
+			msg = "a participant with this id has already registered for this study"
+			status = http.StatusConflict
+		}
 
-// // GetExperimentUsers retrieves all the experimentUsers from the database
-// func GetExperimentUsers(experimentUser models.ExperimentUser) ([]models.ExperimentUser, error) {
-// 	db := DBConn
-// 	var experimentUsers []models.ExperimentUser
-// 	if err := db.Find(&experimentUsers).Error; err != nil {
-// 		return experimentUsers, errors.New("Could not fetch experimentUsers")
-// 	}
-// 	axonlogger.InfoLogger.Println("Successfully retrieved experiment users")
-// 	return experimentUsers, nil
-// }
+		return models.HTTPStatus{Status: status, Message: msg}
+	}
+	axonlogger.InfoLogger.Println("Successfully created crowdsourced user:", studyUser.UserID, studyUser.StudyID)
+	return models.HTTPStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)}
+}
+
+func (u *UserRepository) UpdateStudyUser(studyUser models.StudyUser) models.HTTPStatus {
+	db := db.DB
+	var updateStudyUserQuery = `UPDATE study_users SET completion_code = ?, current_task_index = ?, has_accepted_consent = ?, due_date = ? WHERE study_id = ? AND user_id = ?;`
+	if _, err := db.Exec(updateStudyUserQuery, studyUser.CompletionCode, studyUser.CurrentTaskIndex, studyUser.HasAcceptedConsent, studyUser.DueDate, studyUser.StudyID, studyUser.UserID); err != nil {
+		axonlogger.ErrorLogger.Println("There was an error updating the study user", err)
+		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "there was an update error"}
+	}
+	return models.HTTPStatus{Status: http.StatusOK, Message: "successfully updated"}
+}
+
+// GetAllStudyUsersByUserId gets all study users by the given user id. This is equivalent to seeing all studies that the current
+// user is part of
+func (u *UserRepository) GetAllStudyUsersByUserId(userId uint) ([]models.StudyUser, error) {
+	db := db.DB
+	studyRepositoryImpl := StudyRepository{}
+	studyUsers := []models.StudyUser{}
+	var getStudyUsersByStudyIdAndUserIdQuery = `SELECT user_id, study_id, completion_code, current_task_index, register_date, due_date, has_accepted_consent FROM study_users WHERE user_id = ?;`
+	rows, err := db.Query(getStudyUsersByStudyIdAndUserIdQuery, userId)
+	if err != nil {
+		axonlogger.ErrorLogger.Println("There was an error getting users from the DB", err)
+		return studyUsers, errors.New("there was an error retrieving study users")
+	}
+	defer rows.Close()
+	for rows.Next() {
+		studyUser := models.StudyUser{}
+		if err := rows.Scan(
+			&studyUser.UserID,
+			&studyUser.StudyID,
+			&studyUser.CompletionCode,
+			&studyUser.CurrentTaskIndex,
+			&studyUser.RegisterDate,
+			&studyUser.DueDate,
+			&studyUser.HasAcceptedConsent,
+		); err != nil {
+			axonlogger.ErrorLogger.Println("Could not scan rows when retrieving users", err)
+			return studyUsers, errors.New("there was an error retrieving users")
+		}
+		studyUsers = append(studyUsers, studyUser)
+	}
+	if err := rows.Err(); err != nil {
+		axonlogger.ErrorLogger.Println("Error when iterating over rows", err)
+		return studyUsers, errors.New("there was an error retrieving users")
+	}
+
+	for i, studyTask := range studyUsers {
+		study, err := studyRepositoryImpl.GetStudyById(studyTask.StudyID)
+		if err != nil {
+			axonlogger.ErrorLogger.Println("Error when populating study with study tasks", err)
+			return nil, errors.New("there was an error retrieving studies")
+		}
+		studyUsers[i].Study = study
+	}
+	return studyUsers, nil
+}
+
+// GetStudyUserById gets the given study user by the study user id and study id
+func (u *UserRepository) GetStudyUserById(studyUserId uint, studyId uint) (models.StudyUser, error) {
+	db := db.DB
+	studyUser := models.StudyUser{}
+	var getStudyUsersByIdQuery = `SELECT user_id, study_id, completion_code, current_task_index, register_date, due_date, has_accepted_consent FROM study_users WHERE user_id = ? AND study_id = ?;`
+
+	rowErr := db.QueryRow(getStudyUsersByIdQuery, studyUserId, studyId).Scan(
+		&studyUser.UserID,
+		&studyUser.StudyID,
+		&studyUser.CompletionCode,
+		&studyUser.CurrentTaskIndex,
+		&studyUser.RegisterDate,
+		&studyUser.DueDate,
+		&studyUser.HasAcceptedConsent,
+	)
+
+	if rowErr == sql.ErrNoRows {
+		axonlogger.WarningLogger.Println("cannot retrieve study user as they do not exist in DB", studyUserId)
+		return studyUser, errors.New("user does not exist")
+	} else if rowErr != nil {
+		axonlogger.ErrorLogger.Println("Error scanning row when getting user by email", rowErr)
+		return studyUser, errors.New("there was an error retrieving the user")
+	}
+	return studyUser, nil
+}
+
+// GetStudyUsersByStudyId gets every study user by the study id
+func (u *UserRepository) GetStudyUsersByStudyId(studyId uint) ([]models.StudyUser, error) {
+	db := db.DB
+	studyUsers := []models.StudyUser{}
+	var getStudyUsersByStudyIdQuery = `SELECT user_id, study_id, completion_code, current_task_index, register_date, due_date, has_accepted_consent FROM study_users WHERE study_id = ?;`
+	rows, err := db.Query(getStudyUsersByStudyIdQuery, studyId)
+	if err != nil {
+		axonlogger.ErrorLogger.Println("There was an error getting study users from the DB", err)
+		return studyUsers, errors.New("there was an error retrieving study users")
+	}
+	defer rows.Close()
+	for rows.Next() {
+		studyUser := models.StudyUser{}
+		if err := rows.Scan(
+			&studyUser.UserID,
+			&studyUser.StudyID,
+			&studyUser.CompletionCode,
+			&studyUser.CurrentTaskIndex,
+			&studyUser.RegisterDate,
+			&studyUser.DueDate,
+			&studyUser.HasAcceptedConsent,
+		); err != nil {
+			axonlogger.ErrorLogger.Println("Could not scan rows when retrieving study users", err)
+			return studyUsers, errors.New("there was an error retrieving study users")
+		}
+		studyUsers = append(studyUsers, studyUser)
+	}
+	if err := rows.Err(); err != nil {
+		axonlogger.ErrorLogger.Println("Error when iterating over rows", err)
+		return studyUsers, errors.New("there was an error retrieving study users")
+	}
+	return studyUsers, nil
+}
 
 // GetGuests retrieves all users of Role Guest from the DB
 func (u *UserRepository) GetGuests() ([]models.User, error) {
@@ -197,18 +315,6 @@ func (u *UserRepository) GetGuests() ([]models.User, error) {
 	}
 	return guests, err
 }
-
-// func scrubPrivateData(users []models.User) []models.User {
-// 	for i := 0; i < len(users); i++ {
-// 		user := &users[i]
-// 		user.CreatedAt = time.Time{}
-// 		user.DeletedAt = &time.Time{}
-// 		user.Password = ""
-// 		user.UpdatedAt = time.Time{}
-
-// 	}
-// 	return users
-// }
 
 // DeleteUserByEmail deletes the guest with the given email
 func (u *UserRepository) DeleteUserByEmail(email string) models.HTTPStatus {
@@ -273,17 +379,3 @@ func (u *UserRepository) GetUserById(id uint) (models.User, error) {
 
 	return user, nil
 }
-
-// // GetAllUsers returns all users in DB
-// func GetAllUsers() ([]models.User, error) {
-// 	db := DBConn
-// 	var err error
-// 	users := []models.User{}
-// 	if err := db.Find(&users).Error; err != nil {
-// 		axonlogger.ErrorLogger.Println("Error fetching all users", err)
-// 		err = errors.New("Could not fetch users")
-// 		return users, err
-// 	}
-// 	axonlogger.InfoLogger.Println("Successfully retrieved all users")
-// 	return users, err
-// }
