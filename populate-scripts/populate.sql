@@ -643,7 +643,7 @@ VALUES
                     "timerConfig": {
                         "timer": 5000,
                         "showTimer": true,
-                        "canSkipTimer": true,
+                        "canSkipTimer": false,
                         "skipAvailableAfterXSeconds": 0,
                         "countDown": true
                     },
@@ -701,7 +701,7 @@ VALUES
                     "timerConfig": {
                         "timer": 5000,
                         "showTimer": true,
-                        "canSkipTimer": true,
+                        "canSkipTimer": false,
                         "skipAvailableAfterXSeconds": 0,
                         "countDown": true
                     },
@@ -980,7 +980,7 @@ VALUES
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "➡️ (right arrow) if the letter is <b>THE SAME/b> as 2 letters ago"
+                            "textContent": "➡️ (right arrow) if the letter is <b>THE SAME</b> as 2 letters ago"
                         },
                         {
                             "sectionType": "text",
@@ -1262,7 +1262,7 @@ VALUES
         ]
     }'
 ),
--- TRAIL MAKING (connect the dors)
+-- TRAIL MAKING (connect the dots)
 (
     NULL,
     "PSHARPLAB",

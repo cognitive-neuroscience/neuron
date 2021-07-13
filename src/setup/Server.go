@@ -1,6 +1,7 @@
 package setup
 
 import (
+	"errors"
 	"net/http"
 	"os"
 
@@ -48,8 +49,13 @@ func CreateServer() {
 	}))
 	defer logger.CloseLogFile()
 
+	casbinPath, err := getPathToCasbin()
+	if err != nil {
+		panic("Can't find casbin path in .env file")
+	}
+
 	///usr/sbin/sharplab/
-	casbinEnforcer, err := casbin.NewEnforcer("/usr/sbin/sharplab/casbin/casbin_auth_model.conf", "/usr/sbin/sharplab/casbin/casbin_auth_policy.csv")
+	casbinEnforcer, err := casbin.NewEnforcer(casbinPath+"/casbin_auth_model.conf", casbinPath+"/casbin_auth_policy.csv")
 	if err != nil {
 		logger.ErrorLogger.Println("could not set up casbin route protection", err)
 		panic("could not set up casbin route protection")
@@ -139,4 +145,12 @@ func (e *Enforcer) Enforce(next echo.HandlerFunc) echo.HandlerFunc {
 		}
 		return common.SendHTTPForbidden(c)
 	}
+}
+
+func getPathToCasbin() (string, error) {
+	path, exists := os.LookupEnv("CASBIN_PATH")
+	if !exists {
+		return "", errors.New("no dev connection details")
+	}
+	return path, nil
 }
