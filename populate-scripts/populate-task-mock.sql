@@ -1,3 +1,6 @@
+-- This file is for populating the nicktest study. It populates the tasks with fewer requirements in the configs so that
+-- we can test the overall flow.
+
 -- TASKS
 -- NUMBERS GAME (digit span)
 UPDATE study_tasks SET config = 

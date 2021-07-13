@@ -1,8 +1,9 @@
 -- DELETE FROM tasks;
 -- DROP TABLE participant_data, email_notifications, crowdsourced_users, study_tasks, study_users, tasks, feedback_questionnaire_responses, studies;
 
--- source /Users/nicholaslee/Work/go/src/github.com/cognitive-neuroscience/neuron/populate-scripts/populate.sql
--- source /sbin/sharplab/populate-scripts/populate.sql
+-- source /Users/nicholaslee/Work/go/src/github.com/cognitive-neuroscience/neuron/populate-scripts/initial-populate.sql
+-- source C:/Users/nlee30/Documents/sidetings/sharplab/goNeuronWorkspace/src/github.com/cognitive-neuroscience/neuron/populate-scripts/initial-populate.sql
+-- source /sbin/sharplab/populate-scripts/initial-populate.sql
 
 INSERT INTO tasks (id, from_platform, task_type, name, description, external_url, config) 
 VALUES

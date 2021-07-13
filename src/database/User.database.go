@@ -140,9 +140,9 @@ func (u *UserRepository) GetCrowdSourcedUsersByStudyId(studyId uint) ([]models.C
 
 func (u *UserRepository) SaveStudyUser(studyUser models.StudyUser) models.HTTPStatus {
 	db := db.DB
-	var saveCrowdsourcedUserQuery = `INSERT INTO study_users (user_id, study_id, completion_code, current_task_index, register_date, due_date, has_accepted_consent) VALUES (?, ?, ?, ?, ?, ?, ?);`
+	var saveStudyUserQuery = `INSERT INTO study_users (user_id, study_id, completion_code, current_task_index, register_date, due_date, has_accepted_consent) VALUES (?, ?, ?, ?, ?, ?, ?);`
 	_, err := db.Exec(
-		saveCrowdsourcedUserQuery,
+		saveStudyUserQuery,
 		studyUser.UserID,
 		studyUser.StudyID,
 		studyUser.CompletionCode,
@@ -163,7 +163,7 @@ func (u *UserRepository) SaveStudyUser(studyUser models.StudyUser) models.HTTPSt
 
 		return models.HTTPStatus{Status: status, Message: msg}
 	}
-	axonlogger.InfoLogger.Println("Successfully created crowdsourced user:", studyUser.UserID, studyUser.StudyID)
+	axonlogger.InfoLogger.Println("Successfully created study user:", studyUser.UserID, studyUser.StudyID)
 	return models.HTTPStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)}
 }
 

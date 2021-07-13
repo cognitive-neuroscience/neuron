@@ -8,7 +8,6 @@ import (
 	"github.com/cognitive-neuroscience/neuron/src/common"
 	"github.com/cognitive-neuroscience/neuron/src/logger"
 	"github.com/cognitive-neuroscience/neuron/src/services"
-	"github.com/facebookgo/grace/gracehttp"
 
 	"github.com/casbin/casbin/v2"
 	"github.com/labstack/echo/v4"
@@ -87,7 +86,7 @@ func CreateServer() {
 	registerRoutes(e)
 
 	logger.InfoLogger.Println("Listening on port " + port)
-	logger.InfoLogger.Fatal("Received interrupt, shutting down server. Error:", gracehttp.Serve(e.Server))
+	logger.ErrorLogger.Fatal(e.Start(":" + port))
 }
 
 func validateCookieMiddleware(next echo.HandlerFunc) echo.HandlerFunc {

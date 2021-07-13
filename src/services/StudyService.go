@@ -39,11 +39,11 @@ func (s *StudyService) UpdateStudy(study *models.Study, shouldIncludeTasksUpdate
 		return models.HTTPStatus{Status: http.StatusBadRequest, Message: "could not update study, unexpected request received"}
 	}
 
+	if study.Started {
+		study.CanEdit = false
+	}
+
 	if shouldUpdateTasks {
-		if givenStudy, err := studyRepositoryImpl.GetStudyById(study.ID); err != nil || !givenStudy.CanEdit {
-			axonlogger.WarningLogger.Println("could not update study", err)
-			return models.HTTPStatus{Status: http.StatusBadRequest, Message: "could not update study"}
-		}
 		return studyRepositoryImpl.UpdateStudy(study)
 	} else {
 		return studyRepositoryImpl.UpdateStudyNoTasks(study)
