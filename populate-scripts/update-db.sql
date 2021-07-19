@@ -2,7 +2,7 @@
 -- source C:/Users/nlee30/Documents/sidetings/sharplab/goNeuronWorkspace/src/github.com/cognitive-neuroscience/neuron/populate-scripts/update-db.sql
 -- source /sbin/sharplab/populate-scripts/update-db.sql
 
--- TASKS
+-- NUMBERS GAME TASK
 UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "NAB",
@@ -319,7 +319,7 @@ UPDATE tasks set
         ]
     }'
 WHERE id = 1;
-
+-- FINGER TAPPING TASK
 UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "NAB",
@@ -713,7 +713,7 @@ UPDATE tasks set
         ]
     }'
 WHERE id = 2;
-
+-- NBACK
 UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "NAB",
@@ -1032,7 +1032,7 @@ UPDATE tasks set
         ]
     }'
 WHERE id = 3;
-
+-- STROOP
 UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "NAB",
@@ -1253,7 +1253,7 @@ UPDATE tasks set
         ]
     }'
 WHERE id = 4;
-
+-- TRAIL MAKING
 UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "NAB",
@@ -1521,7 +1521,7 @@ UPDATE tasks set
         ]
     }'
 WHERE id = 5;
-
+-- TASK SWITCHING
 UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "EXPERIMENTAL",
@@ -4665,9 +4665,7 @@ UPDATE tasks set
         ]
     }'
 WHERE id = 10;
-
 -- DEMOGRAPHICS QUESTIONNAIRE
-
 UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "QUESTIONNAIRE",
@@ -4779,9 +4777,7 @@ UPDATE tasks set
         ]
     }'
 WHERE id = 11;
-
 -- CORSI
-
 UPDATE tasks set
     from_platform = "PAVLOVIA",
     task_type = "EXPERIMENTAL",
@@ -4790,9 +4786,7 @@ UPDATE tasks set
     external_url = "https://run.pavlovia.org/Sharp_lab/corsi-test/html",
     config = '{}'
 WHERE id = 12;
-
--- CONSENT FORMS
-
+-- STRESS CLINICAL FR
 UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "CONSENT",
@@ -4906,7 +4900,7 @@ UPDATE tasks set
         }
     }'
 WHERE id = 13;
-
+-- STRESS CLINICAL
 UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "CONSENT",
@@ -5015,7 +5009,7 @@ UPDATE tasks set
         }
     }'
 WHERE id = 14;
-
+-- STRESS PILOT
 UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "CONSENT",
@@ -5115,7 +5109,7 @@ UPDATE tasks set
         }
     }'
 WHERE id = 15;
-
+-- STRESS CLINICAL DEBRIEF
 UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "CONSENT",
@@ -5188,7 +5182,7 @@ UPDATE tasks set
         }
     }'
 WHERE id = 16;
-
+-- WEB PHENO CLINICAL FR
 UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "CONSENT",
@@ -5304,7 +5298,7 @@ UPDATE tasks set
         }
     }'
 WHERE id = 17;
-
+-- WEB PHENO CLINICAL
 UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "CONSENT",
@@ -5415,7 +5409,7 @@ UPDATE tasks set
         }
     }' 
 WHERE id = 18;
-
+-- WEB PHENO PILOT
 UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "CONSENT",
@@ -5515,7 +5509,7 @@ UPDATE tasks set
         }
     }'
 WHERE id = 19;
-
+-- APATHY AES ENGLISH CLEAN
 UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "QUESTIONNAIRE",
@@ -5802,7 +5796,7 @@ UPDATE tasks set
         ]
     }'
 WHERE id = 20;
-
+-- APATHY AES FRENCH CLEAN
 UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "QUESTIONNAIRE",
@@ -6089,7 +6083,7 @@ UPDATE tasks set
         ]
     }'
 WHERE id = 21;
-
+-- BIS-11 ENGLISH VERSION
 UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "QUESTIONNAIRE",
@@ -6556,7 +6550,7 @@ UPDATE tasks set
         ]
     }'
 WHERE id = 22;
-
+-- BIS-11 FRENCH VERSION
 UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "QUESTIONNAIRE",
@@ -7023,7 +7017,7 @@ UPDATE tasks set
         ]
     }'
 WHERE id = 23;
-
+-- GDS SHORT FORM ENGLISH
 UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "QUESTIONNAIRE",
@@ -7235,7 +7229,7 @@ UPDATE tasks set
         ]
     }'
 WHERE id = 24;
-
+-- GDS SHORT FORM FRENCH
 UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "QUESTIONNAIRE",
@@ -7447,7 +7441,7 @@ UPDATE tasks set
         ]
     }'
 WHERE id = 25;
-
+-- QUIP ENGLISH
 UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "QUESTIONNAIRE",
@@ -7945,7 +7939,7 @@ UPDATE tasks set
         ]
     }'
 WHERE id = 26;
-
+-- QUIP FRENCH
 UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "QUESTIONNAIRE",
@@ -8435,7 +8429,7 @@ UPDATE tasks set
         ]
     }'
 WHERE id = 27;
-
+-- SHAPS ENGLISH
 UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "QUESTIONNAIRE",
@@ -8662,7 +8656,7 @@ UPDATE tasks set
         ]
     }'
 WHERE id = 28;
-
+-- SHAPS FRENCH
 UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "QUESTIONNAIRE",
@@ -8889,7 +8883,7 @@ UPDATE tasks set
         ]
     }'
 WHERE id = 29;
-
+-- PDAQ ENGLISH
 UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "QUESTIONNAIRE",
@@ -9146,7 +9140,7 @@ UPDATE tasks set
         ]
     }'
 WHERE id = 30;
-
+-- PDAQ FRENCH
 UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "QUESTIONNAIRE",
@@ -9403,7 +9397,7 @@ UPDATE tasks set
         ]
     }'
 WHERE id = 31;
-
+-- AMI
 UPDATE tasks SET
     from_platform = "PSHARPLAB",
     task_type = "QUESTIONNAIRE",
@@ -10012,7 +10006,7 @@ UPDATE tasks SET
         ]
     }'
 WHERE id = 32;
-
+-- EVERYDAY ACTIVITIES POST TEST
 UPDATE tasks SET
     from_platform = "PSHARPLAB",
     task_type = "QUESTIONNAIRE",
@@ -10205,7 +10199,7 @@ UPDATE tasks SET
         ]
     }'
 WHERE id = 33;
-
+-- DEMOGRAPHICS QUESTIONNAIRE WITH SES
 UPDATE tasks SET
     from_platform = "PSHARPLAB",
     task_type = "QUESTIONNAIRE",
