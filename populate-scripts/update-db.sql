@@ -10216,184 +10216,200 @@ UPDATE tasks SET
         "title": "Questionnaire",
         "questions": [
             {
-                "questionType": "displayText",
-                "title": "<p>We are still in the development stages of this research study. The goal of the study is to understand how and why people fill their time. Are people driven by pleasure? By obligation? A bit of both? These are difficult things to measure because different people enjoy different things and have different sets of obligations. Any feedback you can provide on this pilot study will be really helpful to us as we fine-tune our approach to understanding this.</p> <p> Please see below questions for some specific areas where we would like your feedback:</p>"
-            },
-            {
-                "questionType": "divider"
+                "questionType": "input",
+                "title": "What is your age (in years)?",
+                "validation": {
+                    "required": true,
+                    "isNumeric": true,
+                    "min": 18
+                },
+                "key": "age"
             },
             {
                 "questionType": "multipleChoiceSelect",
-                "key": "Q1",
-                "title": "1. We understand that the current pandemic has more or less affected what you do in your everyday life. How much do you think that affected your ability to complete this task? For example, did you have trouble picturing yourself doing a specific activity that you have not been able to do due to the pandemic (e.g. chat with a neighbor)?",
-                "textContent": "Please rate on a scale of 1-10 how much the current life situation affected your ability to complete this this task:",
-                "multipleChoiceOptions": [
-                    {
-                        "label": "1 - Not at all: I had no difficulty picturing myself doing most of these activities",
-                        "value": "1"
+                "title": "What sex were you assigned at birth?",
+                "validation": {
+                    "required": true
+                },
+                "key": "sex",
+                "multipleChoiceOptions": [{
+                        "label": "Female",
+                        "value": "female"
                     },
                     {
-                        "label": "2",
-                        "value": "2"
-                    },
-                    {
-                        "label": "3",
-                        "value": "3"
-                    },
-                    {
-                        "label": "4",
-                        "value": "4"
-                    },
-                    {
-                        "label": "5",
-                        "value": "5"
-                    },
-                    {
-                        "label": "6",
-                        "value": "6"
-                    },
-                    {
-                        "label": "7",
-                        "value": "7"
-                    },
-                    {
-                        "label": "8",
-                        "value": "8"
-                    },
-                    {
-                        "label": "9",
-                        "value": "9"
-                    },
-                    {
-                        "label": "10 - Very much so: I could not picture doing most of the activities given the present circumstances",
-                        "value": "10"
+                        "label": "Male",
+                        "value": "male"
                     }
                 ]
             },
             {
-                "questionType": "freeTextResponse",
-                "textContent": "If you have any specific comments, please include them here [OPTIONAL]",
-                "key": "Q1_comment"
+                "questionType": "multipleChoiceSelect",
+                "title": "How do you describe yourself?",
+                "key": "selfIdentification",
+                "multipleChoiceOptions": [{
+                        "label": "Female",
+                        "value": "female"
+                    },
+                    {
+                        "label": "Male",
+                        "value": "male"
+                    },
+                    {
+                        "label": "Transgender",
+                        "value": "transgender"
+                    },
+                    {
+                        "label": "Do not identify as female, male, or transgender",
+                        "value": "none"
+                    }
+                ],
+                "validation": {
+                    "required": true
+                }
             },
             {
-                "questionType": "divider"
+                "questionType": "input",
+                "key": "yearsOfEducation",
+                "title": "How many years of education do you have (completing high school equals 12 years)?",
+                "validation": {
+                    "isNumeric": true,
+                    "required": true
+                }
             },
             {
                 "questionType": "multipleChoiceSelect",
-                "key": "Q2",
-                "title": "2. Our goal was to ask you about activities that are part of everyday life, but that difers from person to person. Were most of the activities listed part of your usual (i.e. pre-pandemic) everyday life? ",
-                "textContent": "Please respond using the 1-10 scale:",
-                "multipleChoiceOptions": [
-                    {
-                        "label": "1 - Most of the activities are foreign to me",
-                        "value": "1"
+                "key": "hasNeuroConditions",
+                "title": "Do you have any of the following neurological conditions: neurodegenerative disorder (e.g. Parkinson''s or Alzheimer''s), seizures/epilepsy, brain tumor, stroke?",
+                "multipleChoiceOptions": [{
+                        "label": "Yes",
+                        "value": "yes"
                     },
                     {
-                        "label": "2",
-                        "value": "2"
-                    },
-                    {
-                        "label": "3",
-                        "value": "3"
-                    },
-                    {
-                        "label": "4",
-                        "value": "4"
-                    },
-                    {
-                        "label": "5",
-                        "value": "5"
-                    },
-                    {
-                        "label": "6",
-                        "value": "6"
-                    },
-                    {
-                        "label": "7",
-                        "value": "7"
-                    },
-                    {
-                        "label": "8",
-                        "value": "8"
-                    },
-                    {
-                        "label": "9",
-                        "value": "9"
-                    },
-                    {
-                        "label": "10 - Most of the activities do feature in my everyday life",
-                        "value": "10"
+                        "label": "No",
+                        "value": "no"
                     }
-                ]
-            },
-            {
-                "questionType": "freeTextResponse",
-                "textContent": "Any specific comments? (e.g. did any of the activities stand out as NOT being usual activities for you?)",
-                "key": "Q2_comment"
-            },
-            {
-                "questionType": "divider"
+                ],
+                "validation": {
+                    "required": true
+                }
             },
             {
                 "questionType": "multipleChoiceSelect",
-                "key": "Q3",
-                "title": "3. In one part of this task, you were asked to choose between two activities, but we understand these were ‘pretend’ choices.",
-                "textContent": "Please rate on a scale of 1-10 how much you think your choices generally reflected how you would choose in real life:",
+                "key": "hasPsychConditions",
+                "title": "Do you have any of the following psychiatric conditions: currently active major depression, bipolar disorder, schizophrenia?",
+                "multipleChoiceOptions": [{
+                        "label": "Yes",
+                        "value": "yes"
+                    },
+                    {
+                        "label": "No",
+                        "value": "no"
+                    }
+                ],
+                "validation": {
+                    "required": true
+                }
+            },
+            {
+                "questionType": "multipleChoiceSelect",
+                "key": "currentEmploymentStatus",
+                "title": "What is your current employment status?",
+                "multipleChoiceOptions": [{
+                        "label": "Employed full-time",
+                        "value": "employed full-time"
+                    },
+                    {
+                        "label": "Employed part-time",
+                        "value": "employed part-time"
+                    },
+                    {
+                        "label": "Self-employed",
+                        "value": "self-employed"
+                    },
+                    {
+                        "label": "Housemaker",
+                        "value": "housemaker"
+                    },
+                    {
+                        "label": "Retired",
+                        "value": "retired"
+                    },
+                    {
+                        "label": "Student",
+                        "value": "student"
+                    },
+                    {
+                        "label": "Unemployed",
+                        "value": "unemployed"
+                    }
+                ],
+                "validation": {
+                    "required": true
+                }
+            },
+            {
+                "questionType": "multipleChoiceSelect",
+                "key": "householdIncome",
+                "title": "What is your household income?",
                 "multipleChoiceOptions": [
                     {
-                        "label": "1 -  Not at all reflective – I made random choices in the game",
-                        "value": "1"
+                        "label": "Less than $20,000",
+                        "value": "less than $20,000"
                     },
                     {
-                        "label": "2",
-                        "value": "2"
+                        "label": "$20,000-$34,999",
+                        "value": "$20,000-$34,999"
                     },
                     {
-                        "label": "3",
-                        "value": "3"
+                        "label": "$35,000-$49,999",
+                        "value": "$35,000-$49,999"
                     },
                     {
-                        "label": "4",
-                        "value": "4"
+                        "label": "$50,000-$74,999",
+                        "value": "$50,000-$74,999"
                     },
                     {
-                        "label": "5",
-                        "value": "5"
+                        "label": "$75,000-$99,999 ",
+                        "value": "$75,000-$99,999 "
                     },
                     {
-                        "label": "6",
-                        "value": "6"
-                    },
-                    {
-                        "label": "7",
-                        "value": "7"
-                    },
-                    {
-                        "label": "8",
-                        "value": "8"
-                    },
-                    {
-                        "label": "9",
-                        "value": "9"
-                    },
-                    {
-                        "label": "10 - Exactly as I would choose in real life",
-                        "value": "10"
+                        "label": "Over $100,000",
+                        "value": "over $100,000"
                     }
-                ]
+                ],
+                "validation": {
+                    "required": true
+                }
             },
             {
-                "questionType": "freeTextResponse",
-                "textContent": "Additional comments?",
-                "key": "Q3_comment"
-            },
-            {
-                "questionType": "divider"
-            },
-            {
-                "questionType": "freeTextResponse",
-                "title": "4. Do you have any final comments or suggestions about the task? Any specific part of it that was confusing? [OPTIONAL]",
-                "key": "Final_comment"
+                "questionType": "multipleChoiceSelect",
+                "key": "socialClass",
+                "title": "To which social class would you say you belong?",
+                "multipleChoiceOptions": [
+                    {
+                        "label": "Below the poverty level",
+                        "value": "below the poverty level"
+                    },
+                    {
+                        "label": "Lower middle class",
+                        "value": "lower middle class"
+                    },
+                    {
+                        "label": "Middle class",
+                        "value": "middle class"
+                    },
+                    {
+                        "label": "Upper middle class",
+                        "value": "upper middle class"
+                    },
+                    {
+                        "label": "Upper class",
+                        "value": "upper class"
+                    }
+                ],
+                "validation": {
+                    "required": true
+                }
             }
         ]
     }'

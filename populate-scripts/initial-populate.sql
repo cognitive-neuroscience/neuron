@@ -3592,6 +3592,76 @@ VALUES
                         },
                         {
                             "sectionType": "text",
+                            "textContent": "In this practice, you will be shown the type of face (short or long) as a guide"
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": "The game will launch in full-screen"
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": "Click \\"START\\" when you are ready to start the practice round"
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": true,
+                        "previousDisabled": false,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "component": "SMILEYFACECOMPONENT",
+                "config": {
+                    "isPractice": true,
+                    "maxResponseTime": 3000,
+                    "interTrialDelay": 0,
+                    "showHint": true,
+                    "durationFeedbackPresented": 1000,
+                    "durationFixationPresented": 500,
+                    "durationNoFacePresented": 500,
+                    "durationStimulusPresented": 100,
+                    "numShortFaces": 5,
+                    "numFacesMoreRewarded": 5,
+                    "numLongFaces": 5,
+                    "numFacesLessRewarded": 5,
+                    "stimuliConfig": {
+                        "type": "generated",
+                        "stimuli": null
+                    }
+                }
+            },
+            {
+                "component": "DISPLAYCOMPONENT",
+                "content": {
+                    "title": "Practice Round",
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": "Let''s practice one more time!"
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": "Put your index fingers in position."
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": "You will not have much time - the smiley faces will flash on the screen very quickly!"
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": "You must press \\"Z\\" if it is a <b>short</b> mouth, or \\"M\\" if it is a <b>long</b> mouth"
+                        },
+                        {
+                            "sectionType": "image-horizontal",
+                            "imagePath": "/assets/images/instructions/smileyface/countdown.png"
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": "In this practice, you will not be shown the type of face anymore"
+                        },
+                        {
+                            "sectionType": "text",
                             "textContent": "The game will launch in full-screen"
                         },
                         {
