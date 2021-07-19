@@ -1,6 +1,7 @@
 package database
 
 import (
+	"database/sql"
 	"errors"
 	"net/http"
 
@@ -19,13 +20,53 @@ type StudyDataRepository struct{}
 func (s *StudyDataRepository) UploadTaskData(participantData models.ParticipantData) models.HTTPStatus {
 	db := db.DB
 	var uploadTaskDataQuery = `INSERT INTO participant_data (user_id, study_id, task_order, participant_type, submitted_at, data) values (?, ?, ?, ?, ?, ?);`
+	var updateTaskDataQuery = `UPDATE participant_data set data = ? WHERE study_id = ? AND user_id = ? AND task_order = ?;`
 
-	if _, err := db.Exec(uploadTaskDataQuery, participantData.UserID, participantData.StudyID, participantData.TaskOrder, participantData.ParticipantType, participantData.SubmittedAt, participantData.Data); err != nil {
-		axonlogger.ErrorLogger.Println("could not save participant data", err)
+	retrievedParticipantData, err := GetTaskDataByUserForStudyTask(participantData.StudyID, participantData.UserID, participantData.TaskOrder)
+	if err == sql.ErrNoRows {
+		// if no such row exists, create one
+		if _, err := db.Exec(uploadTaskDataQuery, participantData.UserID, participantData.StudyID, participantData.TaskOrder, participantData.ParticipantType, participantData.SubmittedAt, participantData.Data); err != nil {
+			axonlogger.ErrorLogger.Println("could not save participant data", err)
+			return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "could not save participant data"}
+		}
+	} else if err != nil {
+		// if there is some other error then return an error
+		axonlogger.ErrorLogger.Println("could not save participant data")
 		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "could not save participant data"}
+	} else {
+		// if a row exists, then we need to append the data we receive to the existing row
+
+		for _, trial := range participantData.Data {
+			retrievedParticipantData.Data = append(retrievedParticipantData.Data, trial)
+		}
+
+		if _, err := db.Exec(updateTaskDataQuery, retrievedParticipantData.Data, retrievedParticipantData.StudyID, retrievedParticipantData.UserID, retrievedParticipantData.TaskOrder); err != nil {
+			axonlogger.ErrorLogger.Println("could not save participant data", err)
+			return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "could not save participant data"}
+		}
 	}
 
 	return models.HTTPStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)}
+}
+
+func GetTaskDataByUserForStudyTask(studyId uint, userId string, taskOrder int) (models.ParticipantData, error) {
+	db := db.DB
+	var getTaskDataQuery = `SELECT user_id, study_id, task_order, participant_type, submitted_at, data FROM participant_data WHERE study_id = ? AND user_id = ? AND task_order = ?;`
+	participantData := models.ParticipantData{}
+
+	rowErr := db.QueryRow(getTaskDataQuery, studyId, userId, taskOrder).Scan(
+		&participantData.UserID,
+		&participantData.StudyID,
+		&participantData.TaskOrder,
+		&participantData.ParticipantType,
+		&participantData.SubmittedAt,
+		&participantData.Data,
+	)
+
+	if rowErr != nil {
+		return participantData, rowErr
+	}
+	return participantData, nil
 }
 
 func (s *StudyDataRepository) GetTaskData(studyId uint, taskOrder uint) ([]models.ParticipantData, error) {
