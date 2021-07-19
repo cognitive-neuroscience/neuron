@@ -6095,7 +6095,7 @@ UPDATE tasks set
         "questions":[
             {
                 "questionType": "displayText",
-                "title": "DIRECTIONS: People differ in the ways they act and think in different situations. This is a test to measure some of the ways in which you act and think. Read each statement and put an X on  the appropriate circle on the right side of this page. Do not spend too much time on any statement. Answer quickly and honestly."
+                "title": "DIRECTIONS: People differ in the ways they act and think in different situations. This is a test to measure some of the ways in which you act and think. Read each statement and choose the appropriate answer. Do not spend too much time on any statement. Answer quickly and honestly."
             },
             {
                 "questionType": "radiobuttons",
@@ -6495,6 +6495,21 @@ UPDATE tasks set
                     "required":true
                 },
                 "key": "I am more interested in the present than the future",
+                "multipleChoiceOptions": [
+                    { "label": "Rarely/Never", "value": "rarely/never" },
+                    { "label": "Occasionally", "value": "occasionally" },
+                    { "label": "Often", "value": "often" },
+                    { "label": "Almost Always/Always", "value": "almost always/always" }
+                ]
+            },
+            {
+                "questionType":"radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Select the first option if you are paying attention.",
+                "validation":{
+                    "required":true
+                },
+                "key": "attentionCheck-Select the first option if you are paying attention.",
                 "multipleChoiceOptions": [
                     { "label": "Rarely/Never", "value": "rarely/never" },
                     { "label": "Occasionally", "value": "occasionally" },
@@ -7117,6 +7132,19 @@ UPDATE tasks set
                     "required":true
                 },
                 "key": "Do you feel happy most of the time?",
+                "multipleChoiceOptions": [
+                    { "label": "Yes", "value": "yes" },
+                    { "label": "No", "value": "no" }
+                ]
+            },
+            {
+                "questionType":"radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Choose no if you are paying attention",
+                "validation":{
+                    "required":true
+                },
+                "key": "attentionCheck-Choose no if you are paying attention",
                 "multipleChoiceOptions": [
                     { "label": "Yes", "value": "yes" },
                     { "label": "No", "value": "no" }
@@ -8571,6 +8599,21 @@ UPDATE tasks set
                     "required":true
                 },
                 "key": "I would enjoy reading a book, magazine or newspaper",
+                "multipleChoiceOptions": [
+                    { "label": "Strongly Disagree", "value": "strongly disagree" },
+                    { "label": "Disagree", "value": "disagree" },
+                    { "label": "Agree", "value": "agree" },
+                    { "label": "Strongly Agree", "value": "Strongly agree" }
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Select disagree to indicate that you are reading the questions:",
+                "validation": {
+                    "required":true
+                },
+                "key": "attentionCheck-Select disagree to indicate that you are reading the questions",
                 "multipleChoiceOptions": [
                     { "label": "Strongly Disagree", "value": "strongly disagree" },
                     { "label": "Disagree", "value": "disagree" },
