@@ -7140,7 +7140,7 @@ UPDATE tasks set
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "Choose no if you are paying attention",
+                "title": "Choose \\"no\\" if you are paying attention",
                 "validation":{
                     "required":true
                 },
@@ -8609,7 +8609,7 @@ UPDATE tasks set
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "Select disagree to indicate that you are reading the questions:",
+                "title": "Select \\"disagree\\" to indicate that you are reading the questions:",
                 "validation": {
                     "required":true
                 },
@@ -9767,7 +9767,7 @@ UPDATE tasks SET
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "Choose quite true for this question please.",
+                "title": "Choose \\"quite true\\" for this question please.",
                 "validation": {
                     "required": true
                 },
