@@ -8,608 +8,176 @@ VALUES
     NULL,
     "PSHARPLAB",
     "QUESTIONNAIRE",
-    "AMI",
-    "Apathy Motivation Index",
+    "PSS",
+    "Perceived Stress Scale",
     "",
     '{
         "title": "Questionnaire",
         "questions": [
             {
                 "questionType": "displayText",
-                "title": "<p>Below are a number of statements. Each statement asks you to think about your life <b>over the last 2 weeks</b>.</p> <p>For each statement, select how appropriately it describes your life right now. Select \\"Completely true\\" if the statement describes you perfectly, \\"Completely untrue\\" if the statement does not describe you at all over the last 2 weeks, and use the answers in between accordingly.</p>"
-            },
-            {
-                "questionType": "divider"
+                "title": "<p>The questions in this scale ask you about your feelings and thoughts during the last month. In each case, you will be asked to indicate how often you felt or thought a certain way.</p>"
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "1. I feel sad or upset when I hear bad news.",
+                "radiobuttonPresentation": "horizontal",
+                "title": "In the last month, how often have you been upset because of something that happened unexpectedly?",
                 "validation": {
                     "required": true
                 },
-                "key": "Q1",
+                "key": "In the last month, how often have you been upset because of something that happened unexpectedly",
                 "multipleChoiceOptions": [
-                    {
-                        "label": "Completely UNTRUE",
-                        "value": "Completely UNTRUE"
-                    },
-                    {
-                        "label": "Mostly untrue",
-                        "value": "Mostly untrue"
-                    },
-                    {
-                        "label": "Neither true nor untrue",
-                        "value": "Neither true nor untrue"
-                    },
-                    {
-                        "label": "Quite true",
-                        "value": "Quite true"
-                    },
-                    {
-                        "label": "Completely TRUE",
-                        "value": "Completely TRUE"
-                    }
+                    {"label": "0 - Never", "value": "0"},
+                    {"label": "1 - Almost never", "value": "1"},
+                    {"label": "2 - Sometimes", "value": "2"},
+                    {"label": "3 - Fairly often", "value": "3"},
+                    {"label": "4 - Very often", "value": "4"}
                 ]
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "2. I start conversations with random people.",
+                "radiobuttonPresentation": "horizontal",
+                "title": "In the last month, how often have you felt that you were unable to control the important things in your life?",
                 "validation": {
                     "required": true
                 },
-                "key": "Q2",
+                "key": "In the last month, how often have you felt that you were unable to control the important things in your life",
                 "multipleChoiceOptions": [
-                    {
-                        "label": "Completely UNTRUE",
-                        "value": "Completely UNTRUE"
-                    },
-                    {
-                        "label": "Mostly untrue",
-                        "value": "Mostly untrue"
-                    },
-                    {
-                        "label": "Neither true nor untrue",
-                        "value": "Neither true nor untrue"
-                    },
-                    {
-                        "label": "Quite true",
-                        "value": "Quite true"
-                    },
-                    {
-                        "label": "Completely TRUE",
-                        "value": "Completely TRUE"
-                    }
+                    {"label": "0 - Never", "value": "0"},
+                    {"label": "1 - Almost never", "value": "1"},
+                    {"label": "2 - Sometimes", "value": "2"},
+                    {"label": "3 - Fairly often", "value": "3"},
+                    {"label": "4 - Very often", "value": "4"}
                 ]
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "3. I enjoy doing things with people I have just met.",
+                "radiobuttonPresentation": "horizontal",
+                "title": "In the last month, how often have you felt nervous and \\"stressed\\"?",
                 "validation": {
                     "required": true
                 },
-                "key": "Q3",
+                "key": "In the last month, how often have you felt nervous and \\"stressed\\"",
                 "multipleChoiceOptions": [
-                    {
-                        "label": "Completely UNTRUE",
-                        "value": "Completely UNTRUE"
-                    },
-                    {
-                        "label": "Mostly untrue",
-                        "value": "Mostly untrue"
-                    },
-                    {
-                        "label": "Neither true nor untrue",
-                        "value": "Neither true nor untrue"
-                    },
-                    {
-                        "label": "Quite true",
-                        "value": "Quite true"
-                    },
-                    {
-                        "label": "Completely TRUE",
-                        "value": "Completely TRUE"
-                    }
+                    {"label": "0 - Never", "value": "0"},
+                    {"label": "1 - Almost never", "value": "1"},
+                    {"label": "2 - Sometimes", "value": "2"},
+                    {"label": "3 - Fairly often", "value": "3"},
+                    {"label": "4 - Very often", "value": "4"}
                 ]
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "4. I suggest activities for me and my friends to do.",
+                "radiobuttonPresentation": "horizontal",
+                "title": "In the last month, how often have you felt confident about your ability to handle your personal problems?",
                 "validation": {
                     "required": true
                 },
-                "key": "Q4",
+                "key": "In the last month, how often have you felt confident about your ability to handle your personal problems",
                 "multipleChoiceOptions": [
-                    {
-                        "label": "Completely UNTRUE",
-                        "value": "Completely UNTRUE"
-                    },
-                    {
-                        "label": "Mostly untrue",
-                        "value": "Mostly untrue"
-                    },
-                    {
-                        "label": "Neither true nor untrue",
-                        "value": "Neither true nor untrue"
-                    },
-                    {
-                        "label": "Quite true",
-                        "value": "Quite true"
-                    },
-                    {
-                        "label": "Completely TRUE",
-                        "value": "Completely TRUE"
-                    }
+                    {"label": "0 - Never", "value": "0"},
+                    {"label": "1 - Almost never", "value": "1"},
+                    {"label": "2 - Sometimes", "value": "2"},
+                    {"label": "3 - Fairly often", "value": "3"},
+                    {"label": "4 - Very often", "value": "4"}
                 ]
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "5. I make decisions firmly and without hesitation.",
+                "radiobuttonPresentation": "horizontal",
+                "title": "In the last month, how often have you felt that things were going your way?",
                 "validation": {
                     "required": true
                 },
-                "key": "Q5",
+                "key": "In the last month, how often have you felt that things were going your way",
                 "multipleChoiceOptions": [
-                    {
-                        "label": "Completely UNTRUE",
-                        "value": "Completely UNTRUE"
-                    },
-                    {
-                        "label": "Mostly untrue",
-                        "value": "Mostly untrue"
-                    },
-                    {
-                        "label": "Neither true nor untrue",
-                        "value": "Neither true nor untrue"
-                    },
-                    {
-                        "label": "Quite true",
-                        "value": "Quite true"
-                    },
-                    {
-                        "label": "Completely TRUE",
-                        "value": "Completely TRUE"
-                    }
+                    {"label": "0 - Never", "value": "0"},
+                    {"label": "1 - Almost never", "value": "1"},
+                    {"label": "2 - Sometimes", "value": "2"},
+                    {"label": "3 - Fairly often", "value": "3"},
+                    {"label": "4 - Very often", "value": "4"}
                 ]
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "6. After making a decision, I will wonder if I have made the wrong choice.",
+                "radiobuttonPresentation": "horizontal",
+                "title": "In the last month, how often have you found that you could not cope with all the things that you had to do?",
                 "validation": {
                     "required": true
                 },
-                "key": "Q6",
+                "key": "In the last month, how often have you found that you could not cope with all the things that you had to do",
                 "multipleChoiceOptions": [
-                    {
-                        "label": "Completely UNTRUE",
-                        "value": "Completely UNTRUE"
-                    },
-                    {
-                        "label": "Mostly untrue",
-                        "value": "Mostly untrue"
-                    },
-                    {
-                        "label": "Neither true nor untrue",
-                        "value": "Neither true nor untrue"
-                    },
-                    {
-                        "label": "Quite true",
-                        "value": "Quite true"
-                    },
-                    {
-                        "label": "Completely TRUE",
-                        "value": "Completely TRUE"
-                    }
+                    {"label": "0 - Never", "value": "0"},
+                    {"label": "1 - Almost never", "value": "1"},
+                    {"label": "2 - Sometimes", "value": "2"},
+                    {"label": "3 - Fairly often", "value": "3"},
+                    {"label": "4 - Very often", "value": "4"}
                 ]
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "7. Based on the last two weeks, I would say I care deeply about how my loved ones think of me.",
+                "radiobuttonPresentation": "horizontal",
+                "title": "In the last month, how often have you been able to control irritations in your life?",
                 "validation": {
                     "required": true
                 },
-                "key": "Q7",
+                "key": "In the last month, how often have you been able to control irritations in your life",
                 "multipleChoiceOptions": [
-                    {
-                        "label": "Completely UNTRUE",
-                        "value": "Completely UNTRUE"
-                    },
-                    {
-                        "label": "Mostly untrue",
-                        "value": "Mostly untrue"
-                    },
-                    {
-                        "label": "Neither true nor untrue",
-                        "value": "Neither true nor untrue"
-                    },
-                    {
-                        "label": "Quite true",
-                        "value": "Quite true"
-                    },
-                    {
-                        "label": "Completely TRUE",
-                        "value": "Completely TRUE"
-                    }
+                    {"label": "0 - Never", "value": "0"},
+                    {"label": "1 - Almost never", "value": "1"},
+                    {"label": "2 - Sometimes", "value": "2"},
+                    {"label": "3 - Fairly often", "value": "3"},
+                    {"label": "4 - Very often", "value": "4"}
                 ]
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "8. I go out with friends on a weekly basis.",
+                "radiobuttonPresentation": "horizontal",
+                "title": "In the last month, how often have you felt that you were on top of things?",
                 "validation": {
                     "required": true
                 },
-                "key": "Q8",
+                "key": "In the last month, how often have you felt that you were on top of things",
                 "multipleChoiceOptions": [
-                    {
-                        "label": "Completely UNTRUE",
-                        "value": "Completely UNTRUE"
-                    },
-                    {
-                        "label": "Mostly untrue",
-                        "value": "Mostly untrue"
-                    },
-                    {
-                        "label": "Neither true nor untrue",
-                        "value": "Neither true nor untrue"
-                    },
-                    {
-                        "label": "Quite true",
-                        "value": "Quite true"
-                    },
-                    {
-                        "label": "Completely TRUE",
-                        "value": "Completely TRUE"
-                    }
+                    {"label": "0 - Never", "value": "0"},
+                    {"label": "1 - Almost never", "value": "1"},
+                    {"label": "2 - Sometimes", "value": "2"},
+                    {"label": "3 - Fairly often", "value": "3"},
+                    {"label": "4 - Very often", "value": "4"}
                 ]
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "9. When I decide to do something, I am able to make an effort easily.",
+                "radiobuttonPresentation": "horizontal",
+                "title": "In the last month, how often have you been angered because of things that were outside of your control?",
                 "validation": {
                     "required": true
                 },
-                "key": "Q9",
+                "key": "In the last month, how often have you been angered because of things that were outside of your control",
                 "multipleChoiceOptions": [
-                    {
-                        "label": "Completely UNTRUE",
-                        "value": "Completely UNTRUE"
-                    },
-                    {
-                        "label": "Mostly untrue",
-                        "value": "Mostly untrue"
-                    },
-                    {
-                        "label": "Neither true nor untrue",
-                        "value": "Neither true nor untrue"
-                    },
-                    {
-                        "label": "Quite true",
-                        "value": "Quite true"
-                    },
-                    {
-                        "label": "Completely TRUE",
-                        "value": "Completely TRUE"
-                    }
+                    {"label": "0 - Never", "value": "0"},
+                    {"label": "1 - Almost never", "value": "1"},
+                    {"label": "2 - Sometimes", "value": "2"},
+                    {"label": "3 - Fairly often", "value": "3"},
+                    {"label": "4 - Very often", "value": "4"}
                 ]
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "10. I don''t like to laze around.",
+                "radiobuttonPresentation": "horizontal",
+                "title": "In the last month, how often have you felt difficulties were piling up so high that you could not overcome them?",
                 "validation": {
                     "required": true
                 },
-                "key": "Q10",
+                "key": "In the last month, how often have you felt difficulties were piling up so high that you could not overcome them",
                 "multipleChoiceOptions": [
-                    {
-                        "label": "Completely UNTRUE",
-                        "value": "Completely UNTRUE"
-                    },
-                    {
-                        "label": "Mostly untrue",
-                        "value": "Mostly untrue"
-                    },
-                    {
-                        "label": "Neither true nor untrue",
-                        "value": "Neither true nor untrue"
-                    },
-                    {
-                        "label": "Quite true",
-                        "value": "Quite true"
-                    },
-                    {
-                        "label": "Completely TRUE",
-                        "value": "Completely TRUE"
-                    }
+                    {"label": "0 - Never", "value": "0"},
+                    {"label": "1 - Almost never", "value": "1"},
+                    {"label": "2 - Sometimes", "value": "2"},
+                    {"label": "3 - Fairly often", "value": "3"},
+                    {"label": "4 - Very often", "value": "4"}
                 ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "11. Choose quite true for this question please.",
-                "validation": {
-                    "required": true
-                },
-                "key": "attentionCheck",
-                "multipleChoiceOptions": [
-                    {
-                        "label": "Completely UNTRUE",
-                        "value": "Completely UNTRUE"
-                    },
-                    {
-                        "label": "Mostly untrue",
-                        "value": "Mostly untrue"
-                    },
-                    {
-                        "label": "Neither true nor untrue",
-                        "value": "Neither true nor untrue"
-                    },
-                    {
-                        "label": "Quite true",
-                        "value": "Quite true"
-                    },
-                    {
-                        "label": "Completely TRUE",
-                        "value": "Completely TRUE"
-                    }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "12. I get things done when they need to be done, without requiring reminders from others.",
-                "validation": {
-                    "required": true
-                },
-                "key": "Q11",
-                "multipleChoiceOptions": [
-                    {
-                        "label": "Completely UNTRUE",
-                        "value": "Completely UNTRUE"
-                    },
-                    {
-                        "label": "Mostly untrue",
-                        "value": "Mostly untrue"
-                    },
-                    {
-                        "label": "Neither true nor untrue",
-                        "value": "Neither true nor untrue"
-                    },
-                    {
-                        "label": "Quite true",
-                        "value": "Quite true"
-                    },
-                    {
-                        "label": "Completely TRUE",
-                        "value": "Completely TRUE"
-                    }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "13. When I decide to do something, I am motivated to see it through to the end.",
-                "validation": {
-                    "required": true
-                },
-                "key": "Q12",
-                "multipleChoiceOptions": [
-                    {
-                        "label": "Completely UNTRUE",
-                        "value": "Completely UNTRUE"
-                    },
-                    {
-                        "label": "Mostly untrue",
-                        "value": "Mostly untrue"
-                    },
-                    {
-                        "label": "Neither true nor untrue",
-                        "value": "Neither true nor untrue"
-                    },
-                    {
-                        "label": "Quite true",
-                        "value": "Quite true"
-                    },
-                    {
-                        "label": "Completely TRUE",
-                        "value": "Completely TRUE"
-                    }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "14. I feel awful if I say something insensitive",
-                "validation": {
-                    "required": true
-                },
-                "key": "Q13",
-                "multipleChoiceOptions": [
-                    {
-                        "label": "Completely UNTRUE",
-                        "value": "Completely UNTRUE"
-                    },
-                    {
-                        "label": "Mostly untrue",
-                        "value": "Mostly untrue"
-                    },
-                    {
-                        "label": "Neither true nor untrue",
-                        "value": "Neither true nor untrue"
-                    },
-                    {
-                        "label": "Quite true",
-                        "value": "Quite true"
-                    },
-                    {
-                        "label": "Completely TRUE",
-                        "value": "Completely TRUE"
-                    }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "15. I start conversations without being prompted.",
-                "validation": {
-                    "required": true
-                },
-                "key": "Q14",
-                "multipleChoiceOptions": [
-                    {
-                        "label": "Completely UNTRUE",
-                        "value": "Completely UNTRUE"
-                    },
-                    {
-                        "label": "Mostly untrue",
-                        "value": "Mostly untrue"
-                    },
-                    {
-                        "label": "Neither true nor untrue",
-                        "value": "Neither true nor untrue"
-                    },
-                    {
-                        "label": "Quite true",
-                        "value": "Quite true"
-                    },
-                    {
-                        "label": "Completely TRUE",
-                        "value": "Completely TRUE"
-                    }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "16. When I have something I need to do, I do it straightaway so it is out of the way.",
-                "validation": {
-                    "required": true
-                },
-                "key": "Q15",
-                "multipleChoiceOptions": [
-                    {
-                        "label": "Completely UNTRUE",
-                        "value": "Completely UNTRUE"
-                    },
-                    {
-                        "label": "Mostly untrue",
-                        "value": "Mostly untrue"
-                    },
-                    {
-                        "label": "Neither true nor untrue",
-                        "value": "Neither true nor untrue"
-                    },
-                    {
-                        "label": "Quite true",
-                        "value": "Quite true"
-                    },
-                    {
-                        "label": "Completely TRUE",
-                        "value": "Completely TRUE"
-                    }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "17. I feel bad when I hear an acquaintance has an accident or illness.",
-                "validation": {
-                    "required": true
-                },
-                "key": "Q16",
-                "multipleChoiceOptions": [
-                    {
-                        "label": "Completely UNTRUE",
-                        "value": "Completely UNTRUE"
-                    },
-                    {
-                        "label": "Mostly untrue",
-                        "value": "Mostly untrue"
-                    },
-                    {
-                        "label": "Neither true nor untrue",
-                        "value": "Neither true nor untrue"
-                    },
-                    {
-                        "label": "Quite true",
-                        "value": "Quite true"
-                    },
-                    {
-                        "label": "Completely TRUE",
-                        "value": "Completely TRUE"
-                    }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "18. I enjoy choosing what to do from a range of activities.",
-                "validation": {
-                    "required": true
-                },
-                "key": "Q17",
-                "multipleChoiceOptions": [
-                    {
-                        "label": "Completely UNTRUE",
-                        "value": "Completely UNTRUE"
-                    },
-                    {
-                        "label": "Mostly untrue",
-                        "value": "Mostly untrue"
-                    },
-                    {
-                        "label": "Neither true nor untrue",
-                        "value": "Neither true nor untrue"
-                    },
-                    {
-                        "label": "Quite true",
-                        "value": "Quite true"
-                    },
-                    {
-                        "label": "Completely TRUE",
-                        "value": "Completely TRUE"
-                    }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "19. If I realise I have been unpleasant to someone, I will feel terribly guilty afterwards.",
-                "validation": {
-                    "required": true
-                },
-                "key": "Q18",
-                "multipleChoiceOptions": [
-                    {
-                        "label": "Completely UNTRUE",
-                        "value": "Completely UNTRUE"
-                    },
-                    {
-                        "label": "Mostly untrue",
-                        "value": "Mostly untrue"
-                    },
-                    {
-                        "label": "Neither true nor untrue",
-                        "value": "Neither true nor untrue"
-                    },
-                    {
-                        "label": "Quite true",
-                        "value": "Quite true"
-                    },
-                    {
-                        "label": "Completely TRUE",
-                        "value": "Completely TRUE"
-                    }
-                ]
-            }
+            } 
         ]
     }'
 ),
@@ -617,7 +185,7 @@ VALUES
     NULL,
     "PSHARPLAB",
     "QUESTIONNAIRE",
-    "Everyday Activities Post Test",
+    "Holmes-Rahe Life Stress Inventory",
     "",
     "",
     '{
@@ -625,392 +193,566 @@ VALUES
         "questions": [
             {
                 "questionType": "displayText",
-                "title": "<p>We are still in the development stages of this research study. The goal of the study is to understand how and why people fill their time. Are people driven by pleasure? By obligation? A bit of both? These are difficult things to measure because different people enjoy different things and have different sets of obligations. Any feedback you can provide on this pilot study will be really helpful to us as we fine-tune our approach to understanding this.</p> <p> Please see below questions for some specific areas where we would like your feedback:</p>"
+                "title": "<p>Please indicate whether the following life events have happened to you during the previous year.</p>"
             },
             {
-                "questionType": "divider"
-            },
-            {
-                "questionType": "multipleChoiceSelect",
-                "key": "Q1",
-                "title": "1. We understand that the current pandemic has more or less affected what you do in your everyday life. How much do you think that affected your ability to complete this task? For example, did you have trouble picturing yourself doing a specific activity that you have not been able to do due to the pandemic (e.g. chat with a neighbor)?",
-                "textContent": "Please rate on a scale of 1-10 how much the current life situation affected your ability to complete this this task:",
-                "multipleChoiceOptions": [
-                    {
-                        "label": "1 - Not at all: I had no difficulty picturing myself doing most of these activities",
-                        "value": "1"
-                    },
-                    {
-                        "label": "2",
-                        "value": "2"
-                    },
-                    {
-                        "label": "3",
-                        "value": "3"
-                    },
-                    {
-                        "label": "4",
-                        "value": "4"
-                    },
-                    {
-                        "label": "5",
-                        "value": "5"
-                    },
-                    {
-                        "label": "6",
-                        "value": "6"
-                    },
-                    {
-                        "label": "7",
-                        "value": "7"
-                    },
-                    {
-                        "label": "8",
-                        "value": "8"
-                    },
-                    {
-                        "label": "9",
-                        "value": "9"
-                    },
-                    {
-                        "label": "10 - Very much so: I could not picture doing most of the activities given the present circumstances",
-                        "value": "10"
-                    }
-                ]
-            },
-            {
-                "questionType": "freeTextResponse",
-                "textContent": "If you have any specific comments, please include them here [OPTIONAL]",
-                "key": "Q1_comment"
-            },
-            {
-                "questionType": "divider"
-            },
-            {
-                "questionType": "multipleChoiceSelect",
-                "key": "Q2",
-                "title": "2. Our goal was to ask you about activities that are part of everyday life, but that difers from person to person. Were most of the activities listed part of your usual (i.e. pre-pandemic) everyday life? ",
-                "textContent": "Please respond using the 1-10 scale:",
-                "multipleChoiceOptions": [
-                    {
-                        "label": "1 - Most of the activities are foreign to me",
-                        "value": "1"
-                    },
-                    {
-                        "label": "2",
-                        "value": "2"
-                    },
-                    {
-                        "label": "3",
-                        "value": "3"
-                    },
-                    {
-                        "label": "4",
-                        "value": "4"
-                    },
-                    {
-                        "label": "5",
-                        "value": "5"
-                    },
-                    {
-                        "label": "6",
-                        "value": "6"
-                    },
-                    {
-                        "label": "7",
-                        "value": "7"
-                    },
-                    {
-                        "label": "8",
-                        "value": "8"
-                    },
-                    {
-                        "label": "9",
-                        "value": "9"
-                    },
-                    {
-                        "label": "10 - Most of the activities do feature in my everyday life",
-                        "value": "10"
-                    }
-                ]
-            },
-            {
-                "questionType": "freeTextResponse",
-                "textContent": "Any specific comments? (e.g. did any of the activities stand out as NOT being usual activities for you?)",
-                "key": "Q2_comment"
-            },
-            {
-                "questionType": "divider"
-            },
-            {
-                "questionType": "multipleChoiceSelect",
-                "key": "Q3",
-                "title": "3. In one part of this task, you were asked to choose between two activities, but we understand these were ‘pretend’ choices.",
-                "textContent": "Please rate on a scale of 1-10 how much you think your choices generally reflected how you would choose in real life:",
-                "multipleChoiceOptions": [
-                    {
-                        "label": "1 -  Not at all reflective – I made random choices in the game",
-                        "value": "1"
-                    },
-                    {
-                        "label": "2",
-                        "value": "2"
-                    },
-                    {
-                        "label": "3",
-                        "value": "3"
-                    },
-                    {
-                        "label": "4",
-                        "value": "4"
-                    },
-                    {
-                        "label": "5",
-                        "value": "5"
-                    },
-                    {
-                        "label": "6",
-                        "value": "6"
-                    },
-                    {
-                        "label": "7",
-                        "value": "7"
-                    },
-                    {
-                        "label": "8",
-                        "value": "8"
-                    },
-                    {
-                        "label": "9",
-                        "value": "9"
-                    },
-                    {
-                        "label": "10 - Exactly as I would choose in real life",
-                        "value": "10"
-                    }
-                ]
-            },
-            {
-                "questionType": "freeTextResponse",
-                "textContent": "Additional comments?",
-                "key": "Q3_comment"
-            },
-            {
-                "questionType": "divider"
-            },
-            {
-                "questionType": "freeTextResponse",
-                "title": "4. Do you have any final comments or suggestions about the task? Any specific part of it that was confusing? [OPTIONAL]",
-                "key": "Final_comment"
-            }
-        ]
-    }'
-),
-(
-    NULL,
-    "PSHARPLAB",
-    "QUESTIONNAIRE",
-    "Demographics Questionnaire With SES",
-    "",
-    "",
-    '{
-        "title": "Questionnaire",
-        "questions": [
-            {
-                "questionType": "input",
-                "title": "What is your age (in years)?",
-                "validation": {
-                    "required": true,
-                    "isNumeric": true,
-                    "min": 18
-                },
-                "key": "age"
-            },
-            {
-                "questionType": "multipleChoiceSelect",
-                "title": "What sex were you assigned at birth?",
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Death of spouse",
                 "validation": {
                     "required": true
                 },
-                "key": "sex",
-                "multipleChoiceOptions": [{
-                        "label": "Female",
-                        "value": "female"
-                    },
-                    {
-                        "label": "Male",
-                        "value": "male"
-                    }
+                "key": "Death of spouse",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
                 ]
             },
             {
-                "questionType": "multipleChoiceSelect",
-                "title": "How do you describe yourself?",
-                "key": "selfIdentification",
-                "multipleChoiceOptions": [{
-                        "label": "Female",
-                        "value": "female"
-                    },
-                    {
-                        "label": "Male",
-                        "value": "male"
-                    },
-                    {
-                        "label": "Transgender",
-                        "value": "transgender"
-                    },
-                    {
-                        "label": "Do not identify as female, male, or transgender",
-                        "value": "none"
-                    }
-                ],
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Divorce",
                 "validation": {
                     "required": true
-                }
-            },
-            {
-                "questionType": "input",
-                "key": "yearsOfEducation",
-                "title": "How many years of education do you have (completing high school equals 12 years)?",
-                "validation": {
-                    "isNumeric": true,
-                    "required": true
-                }
-            },
-            {
-                "questionType": "multipleChoiceSelect",
-                "key": "hasNeuroConditions",
-                "title": "Do you have any of the following neurological conditions: neurodegenerative disorder (e.g. Parkinson''s or Alzheimer''s), seizures/epilepsy, brain tumor, stroke?",
-                "multipleChoiceOptions": [{
-                        "label": "Yes",
-                        "value": "yes"
-                    },
-                    {
-                        "label": "No",
-                        "value": "no"
-                    }
-                ],
-                "validation": {
-                    "required": true
-                }
-            },
-            {
-                "questionType": "multipleChoiceSelect",
-                "key": "hasPsychConditions",
-                "title": "Do you have any of the following psychiatric conditions: currently active major depression, bipolar disorder, schizophrenia?",
-                "multipleChoiceOptions": [{
-                        "label": "Yes",
-                        "value": "yes"
-                    },
-                    {
-                        "label": "No",
-                        "value": "no"
-                    }
-                ],
-                "validation": {
-                    "required": true
-                }
-            },
-            {
-                "questionType": "multipleChoiceSelect",
-                "key": "currentEmploymentStatus",
-                "title": "What is your current employment status?",
-                "multipleChoiceOptions": [{
-                        "label": "Employed full-time",
-                        "value": "employed full-time"
-                    },
-                    {
-                        "label": "Employed part-time",
-                        "value": "employed part-time"
-                    },
-                    {
-                        "label": "Self-employed",
-                        "value": "self-employed"
-                    },
-                    {
-                        "label": "Housemaker",
-                        "value": "housemaker"
-                    },
-                    {
-                        "label": "Retired",
-                        "value": "retired"
-                    },
-                    {
-                        "label": "Student",
-                        "value": "student"
-                    },
-                    {
-                        "label": "Unemployed",
-                        "value": "unemployed"
-                    }
-                ],
-                "validation": {
-                    "required": true
-                }
-            },
-            {
-                "questionType": "multipleChoiceSelect",
-                "key": "householdIncome",
-                "title": "What is your household income?",
+                },
+                "key": "Divorce",
                 "multipleChoiceOptions": [
-                    {
-                        "label": "Less than $20,000",
-                        "value": "less than $20,000"
-                    },
-                    {
-                        "label": "$20,000-$34,999",
-                        "value": "$20,000-$34,999"
-                    },
-                    {
-                        "label": "$35,000-$49,999",
-                        "value": "$35,000-$49,999"
-                    },
-                    {
-                        "label": "$50,000-$74,999",
-                        "value": "$50,000-$74,999"
-                    },
-                    {
-                        "label": "$75,000-$99,999 ",
-                        "value": "$75,000-$99,999 "
-                    },
-                    {
-                        "label": "Over $100,000",
-                        "value": "over $100,000"
-                    }
-                ],
-                "validation": {
-                    "required": true
-                }
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
             },
             {
-                "questionType": "multipleChoiceSelect",
-                "key": "socialClass",
-                "title": "To which social class would you say you belong?",
-                "multipleChoiceOptions": [
-                    {
-                        "label": "Below the poverty level",
-                        "value": "below the poverty level"
-                    },
-                    {
-                        "label": "Lower middle class",
-                        "value": "lower middle class"
-                    },
-                    {
-                        "label": "Middle class",
-                        "value": "middle class"
-                    },
-                    {
-                        "label": "Upper middle class",
-                        "value": "upper middle class"
-                    },
-                    {
-                        "label": "Upper class",
-                        "value": "upper class"
-                    }
-                ],
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Marital separation from mate",
                 "validation": {
                     "required": true
-                }
+                },
+                "key": "Marital separation from mate",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Detention in jail or other institution",
+                "validation": {
+                    "required": true
+                },
+                "key": "Detention in jail or other institution",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Death of a close family member",
+                "validation": {
+                    "required": true
+                },
+                "key": "Death of a close family member",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Major personal injury or illness",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major personal injury or illness",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Marriage",
+                "validation": {
+                    "required": true
+                },
+                "key": "Marriage",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Being fired at work",
+                "validation": {
+                    "required": true
+                },
+                "key": "Being fired at work",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Marital reconciliation with mate",
+                "validation": {
+                    "required": true
+                },
+                "key": "Marital reconciliation with mate",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Retirement from work",
+                "validation": {
+                    "required": true
+                },
+                "key": "Retirement from work",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Major change in the health or behaviour of a family member",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major change in the health or behaviour of a family member",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Pregnancy",
+                "validation": {
+                    "required": true
+                },
+                "key": "Pregnancy",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Sexual difficulties",
+                "validation": {
+                    "required": true
+                },
+                "key": "Sexual difficulties",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Gaining a new family member (i.e…. Birth, adoption, older adult moving in, etc.)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Gaining a new family member (i.e…. Birth, adoption, older adult moving in, etc.)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Major business readjustment",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major business readjustment",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Major change in financial state (i.e. a lot worse or better off than usual)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major change in financial state (i.e. a lot worse or better off than usual)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Death of a close friend",
+                "validation": {
+                    "required": true
+                },
+                "key": "Death of a close friend",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Changing to a different line of work",
+                "validation": {
+                    "required": true
+                },
+                "key": "Changing to a different line of work",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Major change in the number of arguments with spouse (i.e…. Either a lot more or a lot less than usual regarding child rearing, personal habits, etc.)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major change in the number of arguments with spouse (i.e…. Either a lot more or a lot less than usual regarding child rearing, personal habits, etc.)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Taking on a mortgage (for home, business, etc…)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Taking on a mortgage (for home, business, etc…)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Foreclosure on a mortgage or a loan",
+                "validation": {
+                    "required": true
+                },
+                "key": "Foreclosure on a mortgage or a loan",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Major change in responsibilities at work (i.e. promotion, demotion, etc.)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major change in responsibilities at work (i.e. promotion, demotion, etc.)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Son or daughter leaving home (marriage, attending college, joined mil.)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Son or daughter leaving home (marriage, attending college, joined mil.)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "In-law troubles",
+                "validation": {
+                    "required": true
+                },
+                "key": "In-law troubles",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Outstanding personal achievement",
+                "validation": {
+                    "required": true
+                },
+                "key": "Outstanding personal achievement",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Spouse beginning or ceasing work outside the home",
+                "validation": {
+                    "required": true
+                },
+                "key": "Spouse beginning or ceasing work outside the home",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Beginning or ceasing of formal schooling",
+                "validation": {
+                    "required": true
+                },
+                "key": "Beginning or ceasing of formal schooling",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Major change in living condition (new home, remodeling, deterioration of neighborhood or home etc.)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major change in living condition (new home, remodeling, deterioration of neighborhood or home etc.)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Revision of personal habits (dress manners, associations, quitting smoking)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Revision of personal habits (dress manners, associations, quitting smoking)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Troubles with the boss",
+                "validation": {
+                    "required": true
+                },
+                "key": "Troubles with the boss",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Major changes in working hours or conditions",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major changes in working hours or conditions",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Changes in residence",
+                "validation": {
+                    "required": true
+                },
+                "key": "Changes in residence",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Changing to a new school",
+                "validation": {
+                    "required": true
+                },
+                "key": "Changing to a new school",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Major change in usual type and/or amount of recreation",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major change in usual type and/or amount of recreation",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Major change in church activity (a lot more or less than usual)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major change in church activity (a lot more or less than usual)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Major change in social activities (clubs, movies, visiting, etc.)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major change in social activities (clubs, movies, visiting, etc.)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Taking on a loan (car, tv, freezer, etc.)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Taking on a loan (car, tv, freezer, etc.)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Major change in sleeping habits (a lot more or a lot less than usual)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major change in sleeping habits (a lot more or a lot less than usual)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Major change in number of family get-togethers",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major change in number of family get-togethers",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Major change in eating habits (a lot more or less food intake, or very different meal hours or surroundings)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major change in eating habits (a lot more or less food intake, or very different meal hours or surroundings)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Vacation",
+                "validation": {
+                    "required": true
+                },
+                "key": "Vacation",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Major holidays",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major holidays",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Minor violations of the law (traffic tickets, jaywalking, disturbing the peace, etc)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Minor violations of the law (traffic tickets, jaywalking, disturbing the peace, etc)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
             }
         ]
     }'
