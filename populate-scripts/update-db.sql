@@ -6095,7 +6095,7 @@ UPDATE tasks set
         "questions":[
             {
                 "questionType": "displayText",
-                "title": "DIRECTIONS: People differ in the ways they act and think in different situations. This is a test to measure some of the ways in which you act and think. Read each statement and put an X on  the appropriate circle on the right side of this page. Do not spend too much time on any statement. Answer quickly and honestly."
+                "title": "DIRECTIONS: People differ in the ways they act and think in different situations. This is a test to measure some of the ways in which you act and think. Read each statement and choose the appropriate answer. Do not spend too much time on any statement. Answer quickly and honestly."
             },
             {
                 "questionType": "radiobuttons",
@@ -6495,6 +6495,21 @@ UPDATE tasks set
                     "required":true
                 },
                 "key": "I am more interested in the present than the future",
+                "multipleChoiceOptions": [
+                    { "label": "Rarely/Never", "value": "rarely/never" },
+                    { "label": "Occasionally", "value": "occasionally" },
+                    { "label": "Often", "value": "often" },
+                    { "label": "Almost Always/Always", "value": "almost always/always" }
+                ]
+            },
+            {
+                "questionType":"radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Select the first option if you are paying attention.",
+                "validation":{
+                    "required":true
+                },
+                "key": "attentionCheck-Select the first option if you are paying attention.",
                 "multipleChoiceOptions": [
                     { "label": "Rarely/Never", "value": "rarely/never" },
                     { "label": "Occasionally", "value": "occasionally" },
@@ -7117,6 +7132,19 @@ UPDATE tasks set
                     "required":true
                 },
                 "key": "Do you feel happy most of the time?",
+                "multipleChoiceOptions": [
+                    { "label": "Yes", "value": "yes" },
+                    { "label": "No", "value": "no" }
+                ]
+            },
+            {
+                "questionType":"radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Choose \\"no\\" if you are paying attention",
+                "validation":{
+                    "required":true
+                },
+                "key": "attentionCheck-Choose no if you are paying attention",
                 "multipleChoiceOptions": [
                     { "label": "Yes", "value": "yes" },
                     { "label": "No", "value": "no" }
@@ -8581,6 +8609,21 @@ UPDATE tasks set
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
+                "title": "Select \\"disagree\\" to indicate that you are reading the questions:",
+                "validation": {
+                    "required":true
+                },
+                "key": "attentionCheck-Select disagree to indicate that you are reading the questions",
+                "multipleChoiceOptions": [
+                    { "label": "Strongly Disagree", "value": "strongly disagree" },
+                    { "label": "Disagree", "value": "disagree" },
+                    { "label": "Agree", "value": "agree" },
+                    { "label": "Strongly Agree", "value": "Strongly agree" }
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
                 "title": "I would enjoy a cup of tea or coffee or my favourite drink:",
                 "validation": {
                     "required":true
@@ -9409,19 +9452,16 @@ UPDATE tasks SET
         "questions": [
             {
                 "questionType": "displayText",
-                "title": "<p>Below are a number of statements. Each statement asks you to think about your life <b>over the last 2 weeks</b>.</p> <p>For each statement, select how appropriately it describes your life right now. Select \\"Completely true\\" if the statement describes you perfectly, \\"Completely untrue\\" if the statement does not describe you at all over the last 2 weeks, and use the answers in between accordingly.</p>"
-            },
-            {
-                "questionType": "divider"
+                "title": "<p>Below are a number of statements. Each statement asks you to think about your life <em>over the last 2 weeks</em>.</p> <p>For each statement, select how appropriately it describes your life right now. Select \\"Completely true\\" if the statement describes you perfectly, \\"Completely untrue\\" if the statement does not describe you at all over the last 2 weeks, and use the answers in between accordingly.</p>"
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "1. I feel sad or upset when I hear bad news.",
+                "title": "I feel sad or upset when I hear bad news.",
                 "validation": {
                     "required": true
                 },
-                "key": "Q1",
+                "key": "I feel sad or upset when I hear bad news.",
                 "multipleChoiceOptions": [
                     {
                         "label": "Completely UNTRUE",
@@ -9448,11 +9488,11 @@ UPDATE tasks SET
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "2. I start conversations with random people.",
+                "title": "I start conversations with random people.",
                 "validation": {
                     "required": true
                 },
-                "key": "Q2",
+                "key": "I start conversations with random people.",
                 "multipleChoiceOptions": [
                     {
                         "label": "Completely UNTRUE",
@@ -9479,11 +9519,11 @@ UPDATE tasks SET
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "3. I enjoy doing things with people I have just met.",
+                "title": "I enjoy doing things with people I have just met.",
                 "validation": {
                     "required": true
                 },
-                "key": "Q3",
+                "key": "I enjoy doing things with people I have just met.",
                 "multipleChoiceOptions": [
                     {
                         "label": "Completely UNTRUE",
@@ -9510,11 +9550,11 @@ UPDATE tasks SET
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "4. I suggest activities for me and my friends to do.",
+                "title": "I suggest activities for me and my friends to do.",
                 "validation": {
                     "required": true
                 },
-                "key": "Q4",
+                "key": "I suggest activities for me and my friends to do.",
                 "multipleChoiceOptions": [
                     {
                         "label": "Completely UNTRUE",
@@ -9541,11 +9581,11 @@ UPDATE tasks SET
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "5. I make decisions firmly and without hesitation.",
+                "title": "I make decisions firmly and without hesitation.",
                 "validation": {
                     "required": true
                 },
-                "key": "Q5",
+                "key": "I make decisions firmly and without hesitation.",
                 "multipleChoiceOptions": [
                     {
                         "label": "Completely UNTRUE",
@@ -9572,11 +9612,11 @@ UPDATE tasks SET
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "6. After making a decision, I will wonder if I have made the wrong choice.",
+                "title": "After making a decision, I will wonder if I have made the wrong choice.",
                 "validation": {
                     "required": true
                 },
-                "key": "Q6",
+                "key": "After making a decision, I will wonder if I have made the wrong choice.",
                 "multipleChoiceOptions": [
                     {
                         "label": "Completely UNTRUE",
@@ -9603,11 +9643,11 @@ UPDATE tasks SET
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "7. Based on the last two weeks, I would say I care deeply about how my loved ones think of me.",
+                "title": "Based on the last two weeks, I would say I care deeply about how my loved ones think of me.",
                 "validation": {
                     "required": true
                 },
-                "key": "Q7",
+                "key": "Based on the last two weeks, I would say I care deeply about how my loved ones think of me.",
                 "multipleChoiceOptions": [
                     {
                         "label": "Completely UNTRUE",
@@ -9634,11 +9674,11 @@ UPDATE tasks SET
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "8. I go out with friends on a weekly basis.",
+                "title": "I go out with friends on a weekly basis.",
                 "validation": {
                     "required": true
                 },
-                "key": "Q8",
+                "key": "I go out with friends on a weekly basis.",
                 "multipleChoiceOptions": [
                     {
                         "label": "Completely UNTRUE",
@@ -9665,11 +9705,11 @@ UPDATE tasks SET
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "9. When I decide to do something, I am able to make an effort easily.",
+                "title": "When I decide to do something, I am able to make an effort easily.",
                 "validation": {
                     "required": true
                 },
-                "key": "Q9",
+                "key": "When I decide to do something, I am able to make an effort easily.",
                 "multipleChoiceOptions": [
                     {
                         "label": "Completely UNTRUE",
@@ -9696,11 +9736,11 @@ UPDATE tasks SET
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "10. I don''t like to laze around.",
+                "title": "I don''t like to laze around.",
                 "validation": {
                     "required": true
                 },
-                "key": "Q10",
+                "key": "I don''t like to laze around.",
                 "multipleChoiceOptions": [
                     {
                         "label": "Completely UNTRUE",
@@ -9727,11 +9767,11 @@ UPDATE tasks SET
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "11. Choose quite true for this question please.",
+                "title": "Choose \\"quite true\\" for this question please.",
                 "validation": {
                     "required": true
                 },
-                "key": "attentionCheck",
+                "key": "attentionCheck-Choose quite true for this question please",
                 "multipleChoiceOptions": [
                     {
                         "label": "Completely UNTRUE",
@@ -9758,11 +9798,11 @@ UPDATE tasks SET
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "12. I get things done when they need to be done, without requiring reminders from others.",
+                "title": "I get things done when they need to be done, without requiring reminders from others.",
                 "validation": {
                     "required": true
                 },
-                "key": "Q11",
+                "key": "I get things done when they need to be done, without requiring reminders from others.",
                 "multipleChoiceOptions": [
                     {
                         "label": "Completely UNTRUE",
@@ -9789,11 +9829,11 @@ UPDATE tasks SET
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "13. When I decide to do something, I am motivated to see it through to the end.",
+                "title": "When I decide to do something, I am motivated to see it through to the end.",
                 "validation": {
                     "required": true
                 },
-                "key": "Q12",
+                "key": "When I decide to do something, I am motivated to see it through to the end.",
                 "multipleChoiceOptions": [
                     {
                         "label": "Completely UNTRUE",
@@ -9820,11 +9860,11 @@ UPDATE tasks SET
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "14. I feel awful if I say something insensitive",
+                "title": "I feel awful if I say something insensitive.",
                 "validation": {
                     "required": true
                 },
-                "key": "Q13",
+                "key": "I feel awful if I say something insensitive.",
                 "multipleChoiceOptions": [
                     {
                         "label": "Completely UNTRUE",
@@ -9851,11 +9891,11 @@ UPDATE tasks SET
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "15. I start conversations without being prompted.",
+                "title": "I start conversations without being prompted.",
                 "validation": {
                     "required": true
                 },
-                "key": "Q14",
+                "key": "I start conversations without being prompted.",
                 "multipleChoiceOptions": [
                     {
                         "label": "Completely UNTRUE",
@@ -9882,11 +9922,11 @@ UPDATE tasks SET
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "16. When I have something I need to do, I do it straightaway so it is out of the way.",
+                "title": "When I have something I need to do, I do it straightaway so it is out of the way.",
                 "validation": {
                     "required": true
                 },
-                "key": "Q15",
+                "key": "When I have something I need to do, I do it straightaway so it is out of the way.",
                 "multipleChoiceOptions": [
                     {
                         "label": "Completely UNTRUE",
@@ -9913,11 +9953,11 @@ UPDATE tasks SET
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "17. I feel bad when I hear an acquaintance has an accident or illness.",
+                "title": "I feel bad when I hear an acquaintance has an accident or illness.",
                 "validation": {
                     "required": true
                 },
-                "key": "Q16",
+                "key": "I feel bad when I hear an acquaintance has an accident or illness.",
                 "multipleChoiceOptions": [
                     {
                         "label": "Completely UNTRUE",
@@ -9944,11 +9984,11 @@ UPDATE tasks SET
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "18. I enjoy choosing what to do from a range of activities.",
+                "title": "I enjoy choosing what to do from a range of activities.",
                 "validation": {
                     "required": true
                 },
-                "key": "Q17",
+                "key": "I enjoy choosing what to do from a range of activities.",
                 "multipleChoiceOptions": [
                     {
                         "label": "Completely UNTRUE",
@@ -9975,11 +10015,11 @@ UPDATE tasks SET
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "19. If I realise I have been unpleasant to someone, I will feel terribly guilty afterwards.",
+                "title": "If I realise I have been unpleasant to someone, I will feel terribly guilty afterwards.",
                 "validation": {
                     "required": true
                 },
-                "key": "Q18",
+                "key": "If I realise I have been unpleasant to someone, I will feel terribly guilty afterwards.",
                 "multipleChoiceOptions": [
                     {
                         "label": "Completely UNTRUE",
@@ -10021,13 +10061,10 @@ UPDATE tasks SET
                 "title": "<p>We are still in the development stages of this research study. The goal of the study is to understand how and why people fill their time. Are people driven by pleasure? By obligation? A bit of both? These are difficult things to measure because different people enjoy different things and have different sets of obligations. Any feedback you can provide on this pilot study will be really helpful to us as we fine-tune our approach to understanding this.</p> <p> Please see below questions for some specific areas where we would like your feedback:</p>"
             },
             {
-                "questionType": "divider"
-            },
-            {
                 "questionType": "multipleChoiceSelect",
-                "key": "Q1",
+                "key": "Q1-pandemic",
                 "title": "1. We understand that the current pandemic has more or less affected what you do in your everyday life. How much do you think that affected your ability to complete this task? For example, did you have trouble picturing yourself doing a specific activity that you have not been able to do due to the pandemic (e.g. chat with a neighbor)?",
-                "textContent": "Please rate on a scale of 1-10 how much the current life situation affected your ability to complete this this task:",
+                "textContent": "Please rate <em>on a scale of 1-10</em> how much the current life situation affected your ability to complete this this task:",
                 "multipleChoiceOptions": [
                     {
                         "label": "1 - Not at all: I had no difficulty picturing myself doing most of these activities",
@@ -10077,11 +10114,8 @@ UPDATE tasks SET
                 "key": "Q1_comment"
             },
             {
-                "questionType": "divider"
-            },
-            {
                 "questionType": "multipleChoiceSelect",
-                "key": "Q2",
+                "key": "Q2-activities",
                 "title": "2. Our goal was to ask you about activities that are part of everyday life, but that difers from person to person. Were most of the activities listed part of your usual (i.e. pre-pandemic) everyday life? ",
                 "textContent": "Please respond using the 1-10 scale:",
                 "multipleChoiceOptions": [
@@ -10133,11 +10167,8 @@ UPDATE tasks SET
                 "key": "Q2_comment"
             },
             {
-                "questionType": "divider"
-            },
-            {
                 "questionType": "multipleChoiceSelect",
-                "key": "Q3",
+                "key": "Q3-choice",
                 "title": "3. In one part of this task, you were asked to choose between two activities, but we understand these were ‘pretend’ choices.",
                 "textContent": "Please rate on a scale of 1-10 how much you think your choices generally reflected how you would choose in real life:",
                 "multipleChoiceOptions": [
@@ -10187,9 +10218,6 @@ UPDATE tasks SET
                 "questionType": "freeTextResponse",
                 "textContent": "Additional comments?",
                 "key": "Q3_comment"
-            },
-            {
-                "questionType": "divider"
             },
             {
                 "questionType": "freeTextResponse",
@@ -10408,3 +10436,756 @@ UPDATE tasks SET
         ]
     }'
 WHERE id = 34;
+-- PSS
+UPDATE tasks SET
+    from_platform = "PSHARPLAB",
+    task_type = "QUESTIONNAIRE",
+    name = "PSS",
+    description = "Perceived Stress Scale",
+    external_url = "",
+    config = '{
+        "title": "Questionnaire",
+        "questions": [
+            {
+                "questionType": "displayText",
+                "title": "<p>The questions in this scale ask you about your feelings and thoughts during the last month. In each case, you will be asked to indicate how often you felt or thought a certain way.</p>"
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "In the last month, how often have you been upset because of something that happened unexpectedly?",
+                "validation": {
+                    "required": true
+                },
+                "key": "In the last month, how often have you been upset because of something that happened unexpectedly",
+                "multipleChoiceOptions": [
+                    {"label": "0 - Never", "value": "0"},
+                    {"label": "1 - Almost never", "value": "1"},
+                    {"label": "2 - Sometimes", "value": "2"},
+                    {"label": "3 - Fairly often", "value": "3"},
+                    {"label": "4 - Very often", "value": "4"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "In the last month, how often have you felt that you were unable to control the important things in your life?",
+                "validation": {
+                    "required": true
+                },
+                "key": "In the last month, how often have you felt that you were unable to control the important things in your life",
+                "multipleChoiceOptions": [
+                    {"label": "0 - Never", "value": "0"},
+                    {"label": "1 - Almost never", "value": "1"},
+                    {"label": "2 - Sometimes", "value": "2"},
+                    {"label": "3 - Fairly often", "value": "3"},
+                    {"label": "4 - Very often", "value": "4"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "In the last month, how often have you felt nervous and \\"stressed\\"?",
+                "validation": {
+                    "required": true
+                },
+                "key": "In the last month, how often have you felt nervous and \\"stressed\\"",
+                "multipleChoiceOptions": [
+                    {"label": "0 - Never", "value": "0"},
+                    {"label": "1 - Almost never", "value": "1"},
+                    {"label": "2 - Sometimes", "value": "2"},
+                    {"label": "3 - Fairly often", "value": "3"},
+                    {"label": "4 - Very often", "value": "4"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "In the last month, how often have you felt confident about your ability to handle your personal problems?",
+                "validation": {
+                    "required": true
+                },
+                "key": "In the last month, how often have you felt confident about your ability to handle your personal problems",
+                "multipleChoiceOptions": [
+                    {"label": "0 - Never", "value": "0"},
+                    {"label": "1 - Almost never", "value": "1"},
+                    {"label": "2 - Sometimes", "value": "2"},
+                    {"label": "3 - Fairly often", "value": "3"},
+                    {"label": "4 - Very often", "value": "4"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "In the last month, how often have you felt that things were going your way?",
+                "validation": {
+                    "required": true
+                },
+                "key": "In the last month, how often have you felt that things were going your way",
+                "multipleChoiceOptions": [
+                    {"label": "0 - Never", "value": "0"},
+                    {"label": "1 - Almost never", "value": "1"},
+                    {"label": "2 - Sometimes", "value": "2"},
+                    {"label": "3 - Fairly often", "value": "3"},
+                    {"label": "4 - Very often", "value": "4"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "In the last month, how often have you found that you could not cope with all the things that you had to do?",
+                "validation": {
+                    "required": true
+                },
+                "key": "In the last month, how often have you found that you could not cope with all the things that you had to do",
+                "multipleChoiceOptions": [
+                    {"label": "0 - Never", "value": "0"},
+                    {"label": "1 - Almost never", "value": "1"},
+                    {"label": "2 - Sometimes", "value": "2"},
+                    {"label": "3 - Fairly often", "value": "3"},
+                    {"label": "4 - Very often", "value": "4"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "In the last month, how often have you been able to control irritations in your life?",
+                "validation": {
+                    "required": true
+                },
+                "key": "In the last month, how often have you been able to control irritations in your life",
+                "multipleChoiceOptions": [
+                    {"label": "0 - Never", "value": "0"},
+                    {"label": "1 - Almost never", "value": "1"},
+                    {"label": "2 - Sometimes", "value": "2"},
+                    {"label": "3 - Fairly often", "value": "3"},
+                    {"label": "4 - Very often", "value": "4"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "In the last month, how often have you felt that you were on top of things?",
+                "validation": {
+                    "required": true
+                },
+                "key": "In the last month, how often have you felt that you were on top of things",
+                "multipleChoiceOptions": [
+                    {"label": "0 - Never", "value": "0"},
+                    {"label": "1 - Almost never", "value": "1"},
+                    {"label": "2 - Sometimes", "value": "2"},
+                    {"label": "3 - Fairly often", "value": "3"},
+                    {"label": "4 - Very often", "value": "4"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "In the last month, how often have you been angered because of things that were outside of your control?",
+                "validation": {
+                    "required": true
+                },
+                "key": "In the last month, how often have you been angered because of things that were outside of your control",
+                "multipleChoiceOptions": [
+                    {"label": "0 - Never", "value": "0"},
+                    {"label": "1 - Almost never", "value": "1"},
+                    {"label": "2 - Sometimes", "value": "2"},
+                    {"label": "3 - Fairly often", "value": "3"},
+                    {"label": "4 - Very often", "value": "4"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "In the last month, how often have you felt difficulties were piling up so high that you could not overcome them?",
+                "validation": {
+                    "required": true
+                },
+                "key": "In the last month, how often have you felt difficulties were piling up so high that you could not overcome them",
+                "multipleChoiceOptions": [
+                    {"label": "0 - Never", "value": "0"},
+                    {"label": "1 - Almost never", "value": "1"},
+                    {"label": "2 - Sometimes", "value": "2"},
+                    {"label": "3 - Fairly often", "value": "3"},
+                    {"label": "4 - Very often", "value": "4"}
+                ]
+            } 
+        ]
+    }'
+WHERE id = 35;
+-- Holmes-Rahe Life Stress Inventory
+UPDATE tasks SET
+    from_platform = "PSHARPLAB",
+    task_type = "QUESTIONNAIRE",
+    name = "Holmes-Rahe Life Stress Inventory",
+    description = "",
+    external_url = "",
+    config = '{
+        "title": "Questionnaire",
+        "questions": [
+            {
+                "questionType": "displayText",
+                "title": "<p>Please indicate whether the following life events have happened to you during the previous year.</p>"
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Death of spouse",
+                "validation": {
+                    "required": true
+                },
+                "key": "Death of spouse",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Divorce",
+                "validation": {
+                    "required": true
+                },
+                "key": "Divorce",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Marital separation from mate",
+                "validation": {
+                    "required": true
+                },
+                "key": "Marital separation from mate",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Detention in jail or other institution",
+                "validation": {
+                    "required": true
+                },
+                "key": "Detention in jail or other institution",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Death of a close family member",
+                "validation": {
+                    "required": true
+                },
+                "key": "Death of a close family member",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Major personal injury or illness",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major personal injury or illness",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Marriage",
+                "validation": {
+                    "required": true
+                },
+                "key": "Marriage",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Being fired at work",
+                "validation": {
+                    "required": true
+                },
+                "key": "Being fired at work",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Marital reconciliation with mate",
+                "validation": {
+                    "required": true
+                },
+                "key": "Marital reconciliation with mate",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Retirement from work",
+                "validation": {
+                    "required": true
+                },
+                "key": "Retirement from work",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Major change in the health or behaviour of a family member",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major change in the health or behaviour of a family member",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Pregnancy",
+                "validation": {
+                    "required": true
+                },
+                "key": "Pregnancy",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Sexual difficulties",
+                "validation": {
+                    "required": true
+                },
+                "key": "Sexual difficulties",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Gaining a new family member (i.e…. Birth, adoption, older adult moving in, etc.)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Gaining a new family member (i.e…. Birth, adoption, older adult moving in, etc.)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Major business readjustment",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major business readjustment",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Major change in financial state (i.e. a lot worse or better off than usual)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major change in financial state (i.e. a lot worse or better off than usual)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Death of a close friend",
+                "validation": {
+                    "required": true
+                },
+                "key": "Death of a close friend",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Changing to a different line of work",
+                "validation": {
+                    "required": true
+                },
+                "key": "Changing to a different line of work",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Major change in the number of arguments with spouse (i.e…. Either a lot more or a lot less than usual regarding child rearing, personal habits, etc.)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major change in the number of arguments with spouse (i.e…. Either a lot more or a lot less than usual regarding child rearing, personal habits, etc.)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Taking on a mortgage (for home, business, etc…)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Taking on a mortgage (for home, business, etc…)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Foreclosure on a mortgage or a loan",
+                "validation": {
+                    "required": true
+                },
+                "key": "Foreclosure on a mortgage or a loan",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Major change in responsibilities at work (i.e. promotion, demotion, etc.)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major change in responsibilities at work (i.e. promotion, demotion, etc.)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Son or daughter leaving home (marriage, attending college, joined mil.)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Son or daughter leaving home (marriage, attending college, joined mil.)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "In-law troubles",
+                "validation": {
+                    "required": true
+                },
+                "key": "In-law troubles",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Outstanding personal achievement",
+                "validation": {
+                    "required": true
+                },
+                "key": "Outstanding personal achievement",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Spouse beginning or ceasing work outside the home",
+                "validation": {
+                    "required": true
+                },
+                "key": "Spouse beginning or ceasing work outside the home",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Beginning or ceasing of formal schooling",
+                "validation": {
+                    "required": true
+                },
+                "key": "Beginning or ceasing of formal schooling",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Major change in living condition (new home, remodeling, deterioration of neighborhood or home etc.)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major change in living condition (new home, remodeling, deterioration of neighborhood or home etc.)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Revision of personal habits (dress manners, associations, quitting smoking)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Revision of personal habits (dress manners, associations, quitting smoking)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Troubles with the boss",
+                "validation": {
+                    "required": true
+                },
+                "key": "Troubles with the boss",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Major changes in working hours or conditions",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major changes in working hours or conditions",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Changes in residence",
+                "validation": {
+                    "required": true
+                },
+                "key": "Changes in residence",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Changing to a new school",
+                "validation": {
+                    "required": true
+                },
+                "key": "Changing to a new school",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Major change in usual type and/or amount of recreation",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major change in usual type and/or amount of recreation",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Major change in church activity (a lot more or less than usual)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major change in church activity (a lot more or less than usual)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Major change in social activities (clubs, movies, visiting, etc.)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major change in social activities (clubs, movies, visiting, etc.)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Taking on a loan (car, tv, freezer, etc.)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Taking on a loan (car, tv, freezer, etc.)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Major change in sleeping habits (a lot more or a lot less than usual)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major change in sleeping habits (a lot more or a lot less than usual)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Major change in number of family get-togethers",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major change in number of family get-togethers",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Major change in eating habits (a lot more or less food intake, or very different meal hours or surroundings)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major change in eating habits (a lot more or less food intake, or very different meal hours or surroundings)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Vacation",
+                "validation": {
+                    "required": true
+                },
+                "key": "Vacation",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Major holidays",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major holidays",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Minor violations of the law (traffic tickets, jaywalking, disturbing the peace, etc)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Minor violations of the law (traffic tickets, jaywalking, disturbing the peace, etc)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            }
+        ]
+    }'
+WHERE id = 36;
