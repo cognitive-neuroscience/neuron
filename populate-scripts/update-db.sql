@@ -10116,7 +10116,7 @@ UPDATE tasks SET
             {
                 "questionType": "multipleChoiceSelect",
                 "key": "Q2-activities",
-                "title": "2. Our goal was to ask you about activities that are part of everyday life, but that difers from person to person. Were most of the activities listed part of your usual (i.e. pre-pandemic) everyday life? ",
+                "title": "2. Our goal was to ask you about activities that are part of everyday life, but that differs from person to person. Were most of the activities listed part of your usual (i.e. pre-pandemic) everyday life? ",
                 "textContent": "Please respond using the 1-10 scale:",
                 "multipleChoiceOptions": [
                     {
