@@ -5903,11 +5903,11 @@ UPDATE tasks set
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "Je mets peu d’effort dans n’importe quoi.",
+                "title": "Je mets peu d’effort dans tout.",
                 "validation":{
                     "required":true
                 },
-                "key": "Je mets peu d’effort dans n’importe quoi",
+                "key": "Je mets peu d’effort dans tout",
                 "multipleChoiceOptions": [
                     { "label": "Pas du tout", "value": "pas du tout" },
                     { "label": "Un peu", "value": "un peu" },
@@ -5993,11 +5993,11 @@ UPDATE tasks set
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "Mes problèmes me concernent moins qu’il le devraient.",
+                "title": "Mes problèmes me concernent moins qu’ils le devraient.",
                 "validation":{
                     "required":true
                 },
-                "key": "Mes problèmes me concernent moins qu’il le devraient",
+                "key": "Mes problèmes me concernent moins qu’ils le devraient",
                 "multipleChoiceOptions": [
                     { "label": "Pas du tout", "value": "pas du tout" },
                     { "label": "Un peu", "value": "un peu" },
@@ -6023,11 +6023,11 @@ UPDATE tasks set
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "C’est important pour moi de rencontrer me amis.",
+                "title": "C’est important pour moi de rencontrer mes amis.",
                 "validation":{
                     "required":true
                 },
-                "key": "C’est important pour moi de rencontrer me amis",
+                "key": "C’est important pour moi de rencontrer mes amis",
                 "multipleChoiceOptions": [
                     { "label": "Pas du tout", "value": "pas du tout" },
                     { "label": "Un peu", "value": "un peu" },
@@ -6038,11 +6038,11 @@ UPDATE tasks set
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "Quand quelque chose de bon arrive, je suis excité(e).",
+                "title": "Quand quelque chose de bon m’arrive, je suis excité(e).",
                 "validation":{
                     "required":true
                 },
-                "key": "Quand quelque chose de bon arrive, je suis excité(e)",
+                "key": "Quand quelque chose de bon m’arrive, je suis excité(e)",
                 "multipleChoiceOptions": [
                     { "label": "Pas du tout", "value": "pas du tout" },
                     { "label": "Un peu", "value": "un peu" },
@@ -6607,7 +6607,7 @@ UPDATE tasks set
         "questions":[
             {
                 "questionType": "displayText",
-                "title": "Instructions: Pour chacun des énoncés suivants mettez un X dans la case appropriée. Ne passez pas trop de temps sur les énoncés. Répondez rapidement et honnêtement."
+                "title": "Instructions: Pour chacun des énoncés suivant cliquez la case appropriée. Ne passez pas trop de temps sur les énoncés. Répondez rapidement et honnêtement."
             },
             {
                 "questionType": "radiobuttons",
@@ -7314,7 +7314,7 @@ UPDATE tasks set
         "questions":[
             {
                 "questionType": "displayText",
-                "title": "Choisissez la réponse qui correspond à la façon dont vous vous sentiez la semaine dernière."
+                "title": "Choisissez la réponse qui correspond à la façon dont vous vous sentiez dans la dernière semaine."
             },
             {
                 "questionType": "radiobuttons",
@@ -7423,11 +7423,11 @@ UPDATE tasks set
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "Avez-vous souvent l’impression de ne pouvoir être aidé?",
+                "title": "Avez-vous souvent l’impression de ne pouvoir être aidé(e)?",
                 "validation":{
                     "required":true
                 },
-                "key": "Avez-vous souvent l’impression de ne pouvoir être aidé?",
+                "key": "Avez-vous souvent l’impression de ne pouvoir être aidé(e)?",
                 "multipleChoiceOptions": [
                     { "label": "Oui", "value": "oui" },
                     { "label": "Non", "value": "non" }
@@ -7462,11 +7462,11 @@ UPDATE tasks set
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "Pensez-vous qu’il est merveilleux de vivre actuellement??",
+                "title": "Pensez-vous qu’il est merveilleux de vivre actuellement?",
                 "validation":{
                     "required":true
                 },
-                "key": "Pensez-vous qu’il est merveilleux de vivre actuellement??",
+                "key": "Pensez-vous qu’il est merveilleux de vivre actuellement?",
                 "multipleChoiceOptions": [
                     { "label": "Oui", "value": "oui" },
                     { "label": "Non", "value": "non" }
@@ -7488,11 +7488,11 @@ UPDATE tasks set
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "Vous sentez-vous plein d’énergie?",
+                "title": "Vous sentez-vous plein(e) d’énergie?",
                 "validation":{
                     "required":true
                 },
-                "key": "Vous sentez-vous plein d’énergie?",
+                "key": "Vous sentez-vous plein(e) d’énergie?",
                 "multipleChoiceOptions": [
                     { "label": "Oui", "value": "oui" },
                     { "label": "Non", "value": "non" }
@@ -8053,11 +8053,19 @@ UPDATE tasks set
         "questions":[
             {
                 "questionType": "displayText",
+                "title": "Description des comportements",
+                "textContent": "A. <b>Jeu (''gambling'')</b>: casinos, loteries sur Internet, tickets à gratter, paris, machines à sous ou poker <br /> B. <b>Sexe</b>: faire des demandes sexuelles à autrui, promiscuité, prostitution, changement d''orientation sexuelle, masturbation, activités sexuelles sur Internet et par téléphone, pornographie <br /> C. <b>Achats compulsifs</b>: trop de la même chose ou des choses dont vous n''avez pas besoin ou que vous n''utilisez pas <br /> D. <b>Manger</b>: nt que d''habitude, à des moments différents (comme la nuit), jusqu''à ce que vous vous sentiez mal ou sans avoir faim <br /> E. <b>Hobbyisme - Exécuter des tâches ou pratiquer des passe-temps</b>: tâches spécifiques, passe-temps ou autres activités organisées, comme écrire, peindre, jardiner, réparer ou démonter des objets, collectionner, utiliser un ordinateur, travailler sur des projets, etc. <br /> F. <b> Répéter des activités simples</b>: répéter certaines activités motrices simples, comme nettoyer, ranger, manipuler, examiner, trier, ramasser, amasser, démonter des objets, etc. <br /> G. <b>Consommation de médicaments pour PD</b>: régulièrement prendre trop de médicaments pour le Parkinson ou augmenter vous-même, sans avis médical, votre consommation de médicaments pour le Parkinson"
+            },
+            {
+                "questionType": "displayText","title": "Fréquence des comportements","textContent": "<b>Jamais</b>: pas du tout <br /><b>Rarement</b>: 1 jour/semaine <br /><b>Parfois</b>: 2-3 jours/semaine <br /><b>Souvent</b>: 4-5 jours/semaine <br /><b>Très souvent</b>: 6-7 jours/semaine <br />"
+            },
+            {
+                "questionType": "displayText",
                 "title": "Dans les 4 dernières semaines..."
             },
             {
                 "questionType": "displayText",
-                "title": "1. À quel point pensez-vous aux comportements suivant (comme la difficulté à garder des pensées hors de votre esprit, ou vous sentir coupable)?"
+                "title": "1. À quel point pensez-vous aux comportements suivant (c’est-à-dire avoir de la difficulté à garder des pensées hors de votre esprit, ou vous sentir coupable en relation à ces activités)?"
             },
             {
                 "questionType": "radiobuttons",
@@ -8295,7 +8303,7 @@ UPDATE tasks set
             },
             {
                 "questionType": "displayText",
-                "title": "3. Avez-vous de la difficulté à contrôler les comportements suivants ci-dessous (par exemple, les augmenter au fil du temps, ou avoir de la difficulté à les réduire ou les arrêter)?"
+                "title": "3. Avez-vous de la difficulté à contrôler les comportements suivants (par exemple, la fréquence de votre participation augmente fil du temps, ou vous avez de la difficulté à les réduire ou les arrêter)?"
             },
             {
                 "questionType": "radiobuttons",
@@ -8430,7 +8438,7 @@ UPDATE tasks set
             },
             {
                 "questionType": "displayText",
-                "title": "4. Vous livrez-vous à des activités expressément pour poursuivre les comportements suivants (par exemple, cacher ce que vous faîtes, mentir, accumuler des choses, emprunter aux autres, accumuler des dettes, voler ou participer à des actes illicites)?"
+                "title": "4. Vous livrez-vous à des comportements expressément pour poursuivre les activités suivantes (par exemple, cacher ce que vous faîtes, mentir, accumuler des choses, emprunter aux autres, accumuler des dettes, voler ou participer à des actes illicites)?"
             },
             {
                 "questionType": "radiobuttons",
@@ -8810,7 +8818,7 @@ UPDATE tasks set
                 "validation": {
                     "required":true
                 },
-                "key": "I would enjoy my favourite television or radio program",
+                "key": "Mon émission préférée de télévision ou de radio me procure beaucoup de plaisir",
                 "multipleChoiceOptions": [
                     { "label": "Fortement en désaccord", "value": "fortement en désaccord" },
                     { "label": "En désaccord", "value": "en désaccord" },
@@ -8825,7 +8833,7 @@ UPDATE tasks set
                 "validation": {
                     "required":true
                 },
-                "key": "I would enjoy being with my family or close friends",
+                "key": "J’apprécie beaucoup d’être avec ma famille ou avec des amis intimes",
                 "multipleChoiceOptions": [
                     { "label": "Fortement en désaccord", "value": "fortement en désaccord" },
                     { "label": "En désaccord", "value": "en désaccord" },
@@ -8836,11 +8844,11 @@ UPDATE tasks set
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "Je trouve du plaisir dans me hobbies et passe temps:",
+                "title": "Je trouve du plaisir dans mes hobbies et passe temps:",
                 "validation": {
                     "required":true
                 },
-                "key": "I would find pleasure in my hobbies and pastimes",
+                "key": "Je trouve du plaisir dans mes hobbies et passe temps",
                 "multipleChoiceOptions": [
                     { "label": "Fortement en désaccord", "value": "fortement en désaccord" },
                     { "label": "En désaccord", "value": "en désaccord" },
@@ -8855,7 +8863,7 @@ UPDATE tasks set
                 "validation": {
                     "required":true
                 },
-                "key": "I would be able to enjoy my favourite meal",
+                "key": "Je suis capable d’apprécier mon plat favori",
                 "multipleChoiceOptions": [
                     { "label": "Fortement en désaccord", "value": "fortement en désaccord" },
                     { "label": "En désaccord", "value": "en désaccord" },
@@ -8870,7 +8878,7 @@ UPDATE tasks set
                 "validation": {
                     "required":true
                 },
-                "key": "I would enjoy a warm bath or refreshing shower",
+                "key": "J’aime beaucoup prendre un bain chaud ou une douche rafraîchissante",
                 "multipleChoiceOptions": [
                     { "label": "Fortement en désaccord", "value": "fortement en désaccord" },
                     { "label": "En désaccord", "value": "en désaccord" },
@@ -8885,7 +8893,7 @@ UPDATE tasks set
                 "validation": {
                     "required":true
                 },
-                "key": "I would find pleasure in the scent of flowers or the smell of a fresh sea breeze or freshly baked bread",
+                "key": "Je trouve du plaisir dans le parfum des fleurs ou dans l’odeur d’une fraîche brise de mer ou du pain fraîchement cuit",
                 "multipleChoiceOptions": [
                     { "label": "Fortement en désaccord", "value": "fortement en désaccord" },
                     { "label": "En désaccord", "value": "en désaccord" },
@@ -8900,7 +8908,7 @@ UPDATE tasks set
                 "validation": {
                     "required":true
                 },
-                "key": "I would enjoy seeing other people''s smiling faces",
+                "key": "J’aime beaucoup voir des visages souriants autour de moi",
                 "multipleChoiceOptions": [
                     { "label": "Fortement en désaccord", "value": "fortement en désaccord" },
                     { "label": "En désaccord", "value": "en désaccord" },
@@ -8911,11 +8919,11 @@ UPDATE tasks set
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "J’apprécie beaucoup de paraître élégant quand j’ai fait un effort pour soigner mon apparence:",
+                "title": "J’apprécie beaucoup de paraître élégant(s) quand j’ai fait un effort pour soigner mon apparence:",
                 "validation": {
                     "required":true
                 },
-                "key": "I would enjoy looking smart when I have made an effort with my appearance",
+                "key": "J’apprécie beaucoup de paraître élégant(s) quand j’ai fait un effort pour soigner mon apparence",
                 "multipleChoiceOptions": [
                     { "label": "Fortement en désaccord", "value": "fortement en désaccord" },
                     { "label": "En désaccord", "value": "en désaccord" },
@@ -8930,7 +8938,7 @@ UPDATE tasks set
                 "validation": {
                     "required":true
                 },
-                "key": "I would enjoy reading a book, magazine or newspaper",
+                "key": "J’aime beaucoup lire un livre, un magazine ou un journal",
                 "multipleChoiceOptions": [
                     { "label": "Fortement en désaccord", "value": "fortement en désaccord" },
                     { "label": "En désaccord", "value": "en désaccord" },
@@ -8945,7 +8953,7 @@ UPDATE tasks set
                 "validation": {
                     "required":true
                 },
-                "key": "attentionCheck-Select disagree to indicate that you are reading the questions",
+                "key": "attentionCheck-Sélectionnez « en désaccord » pour indiquer que vous lisez bien les questions",
                 "multipleChoiceOptions": [
                     { "label": "Fortement en désaccord", "value": "fortement en désaccord" },
                     { "label": "En désaccord", "value": "en désaccord" },
@@ -8956,11 +8964,11 @@ UPDATE tasks set
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "J’apprécie beaucoup une tasse de thé ou de café  ou un verre de ma boisson favorite.:",
+                "title": "J’apprécie beaucoup une tasse de thé ou de café ou un verre de ma boisson favorite:",
                 "validation": {
                     "required":true
                 },
-                "key": "I would enjoy a cup of tea or coffee or my favourite drink",
+                "key": "J’apprécie beaucoup une tasse de thé ou de café ou un verre de ma boisson favorite",
                 "multipleChoiceOptions": [
                     { "label": "Fortement en désaccord", "value": "fortement en désaccord" },
                     { "label": "En désaccord", "value": "en désaccord" },
@@ -8975,7 +8983,7 @@ UPDATE tasks set
                 "validation": {
                     "required":true
                 },
-                "key": "I would find pleasure in small things, e.g. bright sunny day, a telephone call from a friend",
+                "key": "Je trouve du plaisir dans des petits riens tels  que, par exemple, une journée fortement ensoleillée ou un coup de téléphone d’un ami",
                 "multipleChoiceOptions": [
                     { "label": "Fortement en désaccord", "value": "fortement en désaccord" },
                     { "label": "En désaccord", "value": "en désaccord" },
@@ -8990,7 +8998,7 @@ UPDATE tasks set
                 "validation": {
                     "required":true
                 },
-                "key": "I would be able to enjoy a beautiful landscape or view",
+                "key": "Je suis capable d’apprécier un très beau paysage ou une très belle vue",
                 "multipleChoiceOptions": [
                     { "label": "Fortement en désaccord", "value": "fortement en désaccord" },
                     { "label": "En désaccord", "value": "en désaccord" },
@@ -9005,7 +9013,7 @@ UPDATE tasks set
                 "validation": {
                     "required":true
                 },
-                "key": "I would get pleasure from helping others",
+                "key": "Je prends plaisir à aider les autres",
                 "multipleChoiceOptions": [
                     { "label": "Fortement en désaccord", "value": "fortement en désaccord" },
                     { "label": "En désaccord", "value": "en désaccord" },
@@ -9020,7 +9028,7 @@ UPDATE tasks set
                 "validation": {
                     "required":true
                 },
-                "key": "I would feel pleasure when I receive praise from other people",
+                "key": "Je ressens du plaisir à recevoir les éloges d’autres personnes",
                 "multipleChoiceOptions": [
                     { "label": "Fortement en désaccord", "value": "fortement en désaccord" },
                     { "label": "En désaccord", "value": "en désaccord" },
@@ -9054,11 +9062,11 @@ UPDATE tasks set
                 },
                 "key": "How much DIFFICULTY do you currently have reading the newspaper or a magazine",
                 "multipleChoiceOptions": [
-                    { "label": "None (4)", "value": 4 },
-                    { "label": "A Little (3)", "value": 3 },
-                    { "label": "Somewhat (2)", "value": 2 },
-                    { "label": "A Lot (1)", "value": 1 },
-                    { "label": "Cannot Do (0)", "value": 0 }
+                    { "label": "None", "value": 4 },
+                    { "label": "A Little", "value": 3 },
+                    { "label": "Somewhat", "value": 2 },
+                    { "label": "A Lot", "value": 1 },
+                    { "label": "Cannot Do", "value": 0 }
                 ]
             },
             {
@@ -9070,11 +9078,11 @@ UPDATE tasks set
                 },
                 "key": "How much DIFFICULTY do you currently have keeping track of time (e.g. using a clock)",
                 "multipleChoiceOptions": [
-                    { "label": "None (4)", "value": 4 },
-                    { "label": "A Little (3)", "value": 3 },
-                    { "label": "Somewhat (2)", "value": 2 },
-                    { "label": "A Lot (1)", "value": 1 },
-                    { "label": "Cannot Do (0)", "value": 0 }
+                    { "label": "None", "value": 4 },
+                    { "label": "A Little", "value": 3 },
+                    { "label": "Somewhat", "value": 2 },
+                    { "label": "A Lot", "value": 1 },
+                    { "label": "Cannot Do", "value": 0 }
                 ]
             },
             {
@@ -9086,11 +9094,11 @@ UPDATE tasks set
                 },
                 "key": "How much DIFFICULTY do you currently have counting the correct amount of money when making purchases",
                 "multipleChoiceOptions": [
-                    { "label": "None (4)", "value": 4 },
-                    { "label": "A Little (3)", "value": 3 },
-                    { "label": "Somewhat (2)", "value": 2 },
-                    { "label": "A Lot (1)", "value": 1 },
-                    { "label": "Cannot Do (0)", "value": 0 }
+                    { "label": "None", "value": 4 },
+                    { "label": "A Little", "value": 3 },
+                    { "label": "Somewhat", "value": 2 },
+                    { "label": "A Lot", "value": 1 },
+                    { "label": "Cannot Do", "value": 0 }
                 ]
             },
             {
@@ -9102,11 +9110,11 @@ UPDATE tasks set
                 },
                 "key": "How much DIFFICULTY do you currently have reading and following complex instructions (e.g. directions for a new medication)",
                 "multipleChoiceOptions": [
-                    { "label": "None (4)", "value": 4 },
-                    { "label": "A Little (3)", "value": 3 },
-                    { "label": "Somewhat (2)", "value": 2 },
-                    { "label": "A Lot (1)", "value": 1 },
-                    { "label": "Cannot Do (0)", "value": 0 }
+                    { "label": "None", "value": 4 },
+                    { "label": "A Little", "value": 3 },
+                    { "label": "Somewhat", "value": 2 },
+                    { "label": "A Lot", "value": 1 },
+                    { "label": "Cannot Do", "value": 0 }
                 ]
             },
             {
@@ -9118,11 +9126,11 @@ UPDATE tasks set
                 },
                 "key": "How much DIFFICULTY do you currently have handling an unfamiliar problem (e.g. getting the refrigerator fixed)",
                 "multipleChoiceOptions": [
-                    { "label": "None (4)", "value": 4 },
-                    { "label": "A Little (3)", "value": 3 },
-                    { "label": "Somewhat (2)", "value": 2 },
-                    { "label": "A Lot (1)", "value": 1 },
-                    { "label": "Cannot Do (0)", "value": 0 }
+                    { "label": "None", "value": 4 },
+                    { "label": "A Little", "value": 3 },
+                    { "label": "Somewhat", "value": 2 },
+                    { "label": "A Lot", "value": 1 },
+                    { "label": "Cannot Do", "value": 0 }
                 ]
             },
             {
@@ -9134,11 +9142,11 @@ UPDATE tasks set
                 },
                 "key": "How much DIFFICULTY do you currently have explaining how to do something involving several steps to another person",
                 "multipleChoiceOptions": [
-                    { "label": "None (4)", "value": 4 },
-                    { "label": "A Little (3)", "value": 3 },
-                    { "label": "Somewhat (2)", "value": 2 },
-                    { "label": "A Lot (1)", "value": 1 },
-                    { "label": "Cannot Do (0)", "value": 0 }
+                    { "label": "None", "value": 4 },
+                    { "label": "A Little", "value": 3 },
+                    { "label": "Somewhat", "value": 2 },
+                    { "label": "A Lot", "value": 1 },
+                    { "label": "Cannot Do", "value": 0 }
                 ]
             },
             {
@@ -9150,11 +9158,11 @@ UPDATE tasks set
                 },
                 "key": "How much DIFFICULTY do you currently have remembering a list of 4 or 5 errands without writing it down",
                 "multipleChoiceOptions": [
-                    { "label": "None (4)", "value": 4 },
-                    { "label": "A Little (3)", "value": 3 },
-                    { "label": "Somewhat (2)", "value": 2 },
-                    { "label": "A Lot (1)", "value": 1 },
-                    { "label": "Cannot Do (0)", "value": 0 }
+                    { "label": "None", "value": 4 },
+                    { "label": "A Little", "value": 3 },
+                    { "label": "Somewhat", "value": 2 },
+                    { "label": "A Lot", "value": 1 },
+                    { "label": "Cannot Do", "value": 0 }
                 ]
             },
             {
@@ -9166,11 +9174,11 @@ UPDATE tasks set
                 },
                 "key": "How much DIFFICULTY do you currently have using a map to tell where to go",
                 "multipleChoiceOptions": [
-                    { "label": "None (4)", "value": 4 },
-                    { "label": "A Little (3)", "value": 3 },
-                    { "label": "Somewhat (2)", "value": 2 },
-                    { "label": "A Lot (1)", "value": 1 },
-                    { "label": "Cannot Do (0)", "value": 0 }
+                    { "label": "None", "value": 4 },
+                    { "label": "A Little", "value": 3 },
+                    { "label": "Somewhat", "value": 2 },
+                    { "label": "A Lot", "value": 1 },
+                    { "label": "Cannot Do", "value": 0 }
                 ]
             },
             {
@@ -9182,11 +9190,11 @@ UPDATE tasks set
                 },
                 "key": "How much DIFFICULTY do you currently have remembering new information like phone number or simple instructions",
                 "multipleChoiceOptions": [
-                    { "label": "None (4)", "value": 4 },
-                    { "label": "A Little (3)", "value": 3 },
-                    { "label": "Somewhat (2)", "value": 2 },
-                    { "label": "A Lot (1)", "value": 1 },
-                    { "label": "Cannot Do (0)", "value": 0 }
+                    { "label": "None", "value": 4 },
+                    { "label": "A Little", "value": 3 },
+                    { "label": "Somewhat", "value": 2 },
+                    { "label": "A Lot", "value": 1 },
+                    { "label": "Cannot Do", "value": 0 }
                 ]
             },
             {
@@ -9198,11 +9206,11 @@ UPDATE tasks set
                 },
                 "key": "How much DIFFICULTY do you currently have doing more than one thing at a time",
                 "multipleChoiceOptions": [
-                    { "label": "None (4)", "value": 4 },
-                    { "label": "A Little (3)", "value": 3 },
-                    { "label": "Somewhat (2)", "value": 2 },
-                    { "label": "A Lot (1)", "value": 1 },
-                    { "label": "Cannot Do (0)", "value": 0 }
+                    { "label": "None", "value": 4 },
+                    { "label": "A Little", "value": 3 },
+                    { "label": "Somewhat", "value": 2 },
+                    { "label": "A Lot", "value": 1 },
+                    { "label": "Cannot Do", "value": 0 }
                 ]
             },
             {
@@ -9214,11 +9222,11 @@ UPDATE tasks set
                 },
                 "key": "How much DIFFICULTY do you currently have learning to use new gadgets or machines around the house",
                 "multipleChoiceOptions": [
-                    { "label": "None (4)", "value": 4 },
-                    { "label": "A Little (3)", "value": 3 },
-                    { "label": "Somewhat (2)", "value": 2 },
-                    { "label": "A Lot (1)", "value": 1 },
-                    { "label": "Cannot Do (0)", "value": 0 }
+                    { "label": "None", "value": 4 },
+                    { "label": "A Little", "value": 3 },
+                    { "label": "Somewhat", "value": 2 },
+                    { "label": "A Lot", "value": 1 },
+                    { "label": "Cannot Do", "value": 0 }
                 ]
             },
             {
@@ -9230,11 +9238,11 @@ UPDATE tasks set
                 },
                 "key": "How much DIFFICULTY do you currently have understanding your personal financial affairs",
                 "multipleChoiceOptions": [
-                    { "label": "None (4)", "value": 4 },
-                    { "label": "A Little (3)", "value": 3 },
-                    { "label": "Somewhat (2)", "value": 2 },
-                    { "label": "A Lot (1)", "value": 1 },
-                    { "label": "Cannot Do (0)", "value": 0 }
+                    { "label": "None", "value": 4 },
+                    { "label": "A Little", "value": 3 },
+                    { "label": "Somewhat", "value": 2 },
+                    { "label": "A Lot", "value": 1 },
+                    { "label": "Cannot Do", "value": 0 }
                 ]
             },
             {
@@ -9246,11 +9254,11 @@ UPDATE tasks set
                 },
                 "key": "How much DIFFICULTY do you currently have maintaining or completing a train of thought",
                 "multipleChoiceOptions": [
-                    { "label": "None (4)", "value": 4 },
-                    { "label": "A Little (3)", "value": 3 },
-                    { "label": "Somewhat (2)", "value": 2 },
-                    { "label": "A Lot (1)", "value": 1 },
-                    { "label": "Cannot Do (0)", "value": 0 }
+                    { "label": "None", "value": 4 },
+                    { "label": "A Little", "value": 3 },
+                    { "label": "Somewhat", "value": 2 },
+                    { "label": "A Lot", "value": 1 },
+                    { "label": "Cannot Do", "value": 0 }
                 ]
             },
             {
@@ -9262,11 +9270,11 @@ UPDATE tasks set
                 },
                 "key": "attentionCheck-Can you choose a little if you are reading the questions?",
                 "multipleChoiceOptions": [
-                    { "label": "None (4)", "value": 4 },
-                    { "label": "A Little (3)", "value": 3 },
-                    { "label": "Somewhat (2)", "value": 2 },
-                    { "label": "A Lot (1)", "value": 1 },
-                    { "label": "Cannot Do (0)", "value": 0 }
+                    { "label": "None", "value": 4 },
+                    { "label": "A Little", "value": 3 },
+                    { "label": "Somewhat", "value": 2 },
+                    { "label": "A Lot", "value": 1 },
+                    { "label": "Cannot Do", "value": 0 }
                 ]
             },
             {
@@ -9278,11 +9286,11 @@ UPDATE tasks set
                 },
                 "key": "How much DIFFICULTY do you currently have discussing a TV show, book, movie, or current events",
                 "multipleChoiceOptions": [
-                    { "label": "None (4)", "value": 4 },
-                    { "label": "A Little (3)", "value": 3 },
-                    { "label": "Somewhat (2)", "value": 2 },
-                    { "label": "A Lot (1)", "value": 1 },
-                    { "label": "Cannot Do (0)", "value": 0 }
+                    { "label": "None", "value": 4 },
+                    { "label": "A Little", "value": 3 },
+                    { "label": "Somewhat", "value": 2 },
+                    { "label": "A Lot", "value": 1 },
+                    { "label": "Cannot Do", "value": 0 }
                 ]
             },
             {
@@ -9294,11 +9302,11 @@ UPDATE tasks set
                 },
                 "key": "How much DIFFICULTY do you currently have remembering what day and month it is",
                 "multipleChoiceOptions": [
-                    { "label": "None (4)", "value": 4 },
-                    { "label": "A Little (3)", "value": 3 },
-                    { "label": "Somewhat (2)", "value": 2 },
-                    { "label": "A Lot (1)", "value": 1 },
-                    { "label": "Cannot Do (0)", "value": 0 }
+                    { "label": "None", "value": 4 },
+                    { "label": "A Little", "value": 3 },
+                    { "label": "Somewhat", "value": 2 },
+                    { "label": "A Lot", "value": 1 },
+                    { "label": "Cannot Do", "value": 0 }
                 ]
             }
         ]
@@ -9327,11 +9335,11 @@ UPDATE tasks set
                 },
                 "key": "How much DIFFICULTY do you currently have reading the newspaper or a magazine",
                 "multipleChoiceOptions": [
-                    { "label": "Aucun(e) (4)", "value": 4 },
-                    { "label": "Un Peu (3)", "value": 3 },
-                    { "label": "Quelque Peu (2)", "value": 2 },
-                    { "label": "Beaucoup (1)", "value": 1 },
-                    { "label": "Ne Peut Pas Faire (0)", "value": 0 }
+                    { "label": "Aucun(e)", "value": 4 },
+                    { "label": "Un Peu", "value": 3 },
+                    { "label": "Quelque Peu", "value": 2 },
+                    { "label": "Beaucoup", "value": 1 },
+                    { "label": "Ne Peut Pas Faire", "value": 0 }
                 ]
             },
             {
@@ -9343,11 +9351,11 @@ UPDATE tasks set
                 },
                 "key": "How much DIFFICULTY do you currently have keeping track of time (e.g. using a clock)",
                 "multipleChoiceOptions": [
-                    { "label": "Aucun(e) (4)", "value": 4 },
-                    { "label": "Un Peu (3)", "value": 3 },
-                    { "label": "Quelque Peu (2)", "value": 2 },
-                    { "label": "Beaucoup (1)", "value": 1 },
-                    { "label": "Ne Peut Pas Faire (0)", "value": 0 }
+                    { "label": "Aucun(e)", "value": 4 },
+                    { "label": "Un Peu", "value": 3 },
+                    { "label": "Quelque Peu", "value": 2 },
+                    { "label": "Beaucoup", "value": 1 },
+                    { "label": "Ne Peut Pas Faire", "value": 0 }
                 ]
             },
             {
@@ -9359,11 +9367,11 @@ UPDATE tasks set
                 },
                 "key": "How much DIFFICULTY do you currently have counting the correct amount of money when making purchases",
                 "multipleChoiceOptions": [
-                    { "label": "Aucun(e) (4)", "value": 4 },
-                    { "label": "Un Peu (3)", "value": 3 },
-                    { "label": "Quelque Peu (2)", "value": 2 },
-                    { "label": "Beaucoup (1)", "value": 1 },
-                    { "label": "Ne Peut Pas Faire (0)", "value": 0 }
+                    { "label": "Aucun(e)", "value": 4 },
+                    { "label": "Un Peu", "value": 3 },
+                    { "label": "Quelque Peu", "value": 2 },
+                    { "label": "Beaucoup", "value": 1 },
+                    { "label": "Ne Peut Pas Faire", "value": 0 }
                 ]
             },
             {
@@ -9375,11 +9383,11 @@ UPDATE tasks set
                 },
                 "key": "How much DIFFICULTY do you currently have reading and following complex instructions (e.g. directions for a new medication)",
                 "multipleChoiceOptions": [
-                    { "label": "Aucun(e) (4)", "value": 4 },
-                    { "label": "Un Peu (3)", "value": 3 },
-                    { "label": "Quelque Peu (2)", "value": 2 },
-                    { "label": "Beaucoup (1)", "value": 1 },
-                    { "label": "Ne Peut Pas Faire (0)", "value": 0 }
+                    { "label": "Aucun(e)", "value": 4 },
+                    { "label": "Un Peu", "value": 3 },
+                    { "label": "Quelque Peu", "value": 2 },
+                    { "label": "Beaucoup", "value": 1 },
+                    { "label": "Ne Peut Pas Faire", "value": 0 }
                 ]
             },
             {
@@ -9391,11 +9399,11 @@ UPDATE tasks set
                 },
                 "key": "How much DIFFICULTY do you currently have handling an unfamiliar problem (e.g. getting the refrigerator fixed)",
                 "multipleChoiceOptions": [
-                    { "label": "Aucun(e) (4)", "value": 4 },
-                    { "label": "Un Peu (3)", "value": 3 },
-                    { "label": "Quelque Peu (2)", "value": 2 },
-                    { "label": "Beaucoup (1)", "value": 1 },
-                    { "label": "Ne Peut Pas Faire (0)", "value": 0 }
+                    { "label": "Aucun(e)", "value": 4 },
+                    { "label": "Un Peu", "value": 3 },
+                    { "label": "Quelque Peu", "value": 2 },
+                    { "label": "Beaucoup", "value": 1 },
+                    { "label": "Ne Peut Pas Faire", "value": 0 }
                 ]
             },
             {
@@ -9407,11 +9415,11 @@ UPDATE tasks set
                 },
                 "key": "How much DIFFICULTY do you currently have explaining how to do something involving several steps to another person",
                 "multipleChoiceOptions": [
-                    { "label": "Aucun(e) (4)", "value": 4 },
-                    { "label": "Un Peu (3)", "value": 3 },
-                    { "label": "Quelque Peu (2)", "value": 2 },
-                    { "label": "Beaucoup (1)", "value": 1 },
-                    { "label": "Ne Peut Pas Faire (0)", "value": 0 }
+                    { "label": "Aucun(e)", "value": 4 },
+                    { "label": "Un Peu", "value": 3 },
+                    { "label": "Quelque Peu", "value": 2 },
+                    { "label": "Beaucoup", "value": 1 },
+                    { "label": "Ne Peut Pas Faire", "value": 0 }
                 ]
             },
             {
@@ -9423,11 +9431,11 @@ UPDATE tasks set
                 },
                 "key": "How much DIFFICULTY do you currently have remembering a list of 4 or 5 errands without writing it down",
                 "multipleChoiceOptions": [
-                    { "label": "Aucun(e) (4)", "value": 4 },
-                    { "label": "Un Peu (3)", "value": 3 },
-                    { "label": "Quelque Peu (2)", "value": 2 },
-                    { "label": "Beaucoup (1)", "value": 1 },
-                    { "label": "Ne Peut Pas Faire (0)", "value": 0 }
+                    { "label": "Aucun(e)", "value": 4 },
+                    { "label": "Un Peu", "value": 3 },
+                    { "label": "Quelque Peu", "value": 2 },
+                    { "label": "Beaucoup", "value": 1 },
+                    { "label": "Ne Peut Pas Faire", "value": 0 }
                 ]
             },
             {
@@ -9439,11 +9447,11 @@ UPDATE tasks set
                 },
                 "key": "How much DIFFICULTY do you currently have using a map to tell where to go",
                 "multipleChoiceOptions": [
-                    { "label": "Aucun(e) (4)", "value": 4 },
-                    { "label": "Un Peu (3)", "value": 3 },
-                    { "label": "Quelque Peu (2)", "value": 2 },
-                    { "label": "Beaucoup (1)", "value": 1 },
-                    { "label": "Ne Peut Pas Faire (0)", "value": 0 }
+                    { "label": "Aucun(e)", "value": 4 },
+                    { "label": "Un Peu", "value": 3 },
+                    { "label": "Quelque Peu", "value": 2 },
+                    { "label": "Beaucoup", "value": 1 },
+                    { "label": "Ne Peut Pas Faire", "value": 0 }
                 ]
             },
             {
@@ -9455,11 +9463,11 @@ UPDATE tasks set
                 },
                 "key": "How much DIFFICULTY do you currently have remembering new information like phone number or simple instructions",
                 "multipleChoiceOptions": [
-                    { "label": "Aucun(e) (4)", "value": 4 },
-                    { "label": "Un Peu (3)", "value": 3 },
-                    { "label": "Quelque Peu (2)", "value": 2 },
-                    { "label": "Beaucoup (1)", "value": 1 },
-                    { "label": "Ne Peut Pas Faire (0)", "value": 0 }
+                    { "label": "Aucun(e)", "value": 4 },
+                    { "label": "Un Peu", "value": 3 },
+                    { "label": "Quelque Peu", "value": 2 },
+                    { "label": "Beaucoup", "value": 1 },
+                    { "label": "Ne Peut Pas Faire", "value": 0 }
                 ]
             },
             {
@@ -9471,11 +9479,11 @@ UPDATE tasks set
                 },
                 "key": "How much DIFFICULTY do you currently have doing more than one thing at a time",
                 "multipleChoiceOptions": [
-                    { "label": "Aucun(e) (4)", "value": 4 },
-                    { "label": "Un Peu (3)", "value": 3 },
-                    { "label": "Quelque Peu (2)", "value": 2 },
-                    { "label": "Beaucoup (1)", "value": 1 },
-                    { "label": "Ne Peut Pas Faire (0)", "value": 0 }
+                    { "label": "Aucun(e)", "value": 4 },
+                    { "label": "Un Peu", "value": 3 },
+                    { "label": "Quelque Peu", "value": 2 },
+                    { "label": "Beaucoup", "value": 1 },
+                    { "label": "Ne Peut Pas Faire", "value": 0 }
                 ]
             },
             {
@@ -9487,11 +9495,11 @@ UPDATE tasks set
                 },
                 "key": "How much DIFFICULTY do you currently have learning to use new gadgets or machines around the house",
                 "multipleChoiceOptions": [
-                    { "label": "Aucun(e) (4)", "value": 4 },
-                    { "label": "Un Peu (3)", "value": 3 },
-                    { "label": "Quelque Peu (2)", "value": 2 },
-                    { "label": "Beaucoup (1)", "value": 1 },
-                    { "label": "Ne Peut Pas Faire (0)", "value": 0 }
+                    { "label": "Aucun(e)", "value": 4 },
+                    { "label": "Un Peu", "value": 3 },
+                    { "label": "Quelque Peu", "value": 2 },
+                    { "label": "Beaucoup", "value": 1 },
+                    { "label": "Ne Peut Pas Faire", "value": 0 }
                 ]
             },
             {
@@ -9503,11 +9511,11 @@ UPDATE tasks set
                 },
                 "key": "How much DIFFICULTY do you currently have understanding your personal financial affairs",
                 "multipleChoiceOptions": [
-                    { "label": "Aucun(e) (4)", "value": 4 },
-                    { "label": "Un Peu (3)", "value": 3 },
-                    { "label": "Quelque Peu (2)", "value": 2 },
-                    { "label": "Beaucoup (1)", "value": 1 },
-                    { "label": "Ne Peut Pas Faire (0)", "value": 0 }
+                    { "label": "Aucun(e)", "value": 4 },
+                    { "label": "Un Peu", "value": 3 },
+                    { "label": "Quelque Peu", "value": 2 },
+                    { "label": "Beaucoup", "value": 1 },
+                    { "label": "Ne Peut Pas Faire", "value": 0 }
                 ]
             },
             {
@@ -9519,11 +9527,11 @@ UPDATE tasks set
                 },
                 "key": "How much DIFFICULTY do you currently have maintaining or completing a train of thought",
                 "multipleChoiceOptions": [
-                    { "label": "Aucun(e) (4)", "value": 4 },
-                    { "label": "Un Peu (3)", "value": 3 },
-                    { "label": "Quelque Peu (2)", "value": 2 },
-                    { "label": "Beaucoup (1)", "value": 1 },
-                    { "label": "Ne Peut Pas Faire (0)", "value": 0 }
+                    { "label": "Aucun(e)", "value": 4 },
+                    { "label": "Un Peu", "value": 3 },
+                    { "label": "Quelque Peu", "value": 2 },
+                    { "label": "Beaucoup", "value": 1 },
+                    { "label": "Ne Peut Pas Faire", "value": 0 }
                 ]
             },
             {
@@ -9535,11 +9543,11 @@ UPDATE tasks set
                 },
                 "key": "attentionCheck-Can you choose a little if you are reading the questions?",
                 "multipleChoiceOptions": [
-                    { "label": "Aucun(e) (4)", "value": 4 },
-                    { "label": "Un Peu (3)", "value": 3 },
-                    { "label": "Quelque Peu (2)", "value": 2 },
-                    { "label": "Beaucoup (1)", "value": 1 },
-                    { "label": "Ne Peut Pas Faire (0)", "value": 0 }
+                    { "label": "Aucun(e)", "value": 4 },
+                    { "label": "Un Peu", "value": 3 },
+                    { "label": "Quelque Peu", "value": 2 },
+                    { "label": "Beaucoup", "value": 1 },
+                    { "label": "Ne Peut Pas Faire", "value": 0 }
                 ]
             },
             {
@@ -9551,11 +9559,11 @@ UPDATE tasks set
                 },
                 "key": "How much DIFFICULTY do you currently have discussing a TV show, book, movie, or current events",
                 "multipleChoiceOptions": [
-                    { "label": "Aucun(e) (4)", "value": 4 },
-                    { "label": "Un Peu (3)", "value": 3 },
-                    { "label": "Quelque Peu (2)", "value": 2 },
-                    { "label": "Beaucoup (1)", "value": 1 },
-                    { "label": "Ne Peut Pas Faire (0)", "value": 0 }
+                    { "label": "Aucun(e)", "value": 4 },
+                    { "label": "Un Peu", "value": 3 },
+                    { "label": "Quelque Peu", "value": 2 },
+                    { "label": "Beaucoup", "value": 1 },
+                    { "label": "Ne Peut Pas Faire", "value": 0 }
                 ]
             },
             {
@@ -9567,11 +9575,11 @@ UPDATE tasks set
                 },
                 "key": "How much DIFFICULTY do you currently have remembering what day and month it is",
                 "multipleChoiceOptions": [
-                    { "label": "Aucun(e) (4)", "value": 4 },
-                    { "label": "Un Peu (3)", "value": 3 },
-                    { "label": "Quelque Peu (2)", "value": 2 },
-                    { "label": "Beaucoup (1)", "value": 1 },
-                    { "label": "Ne Peut Pas Faire (0)", "value": 0 }
+                    { "label": "Aucun(e)", "value": 4 },
+                    { "label": "Un Peu", "value": 3 },
+                    { "label": "Quelque Peu", "value": 2 },
+                    { "label": "Beaucoup", "value": 1 },
+                    { "label": "Ne Peut Pas Faire", "value": 0 }
                 ]
             }
         ]
