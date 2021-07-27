@@ -5676,6 +5676,21 @@ UPDATE tasks set
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
+                "title": "Select \\"somewhat\\"  for this question please.",
+                "validation":{
+                    "required":true
+                },
+                "key": "attentionCheck-Select somewhat for this question please",
+                "multipleChoiceOptions": [
+                    { "label": "Not at all", "value": "not at all" },
+                    { "label": "Slightly", "value": "slightly" },
+                    { "label": "Somewhat", "value": "somewhat" },
+                    { "label": "A lot", "value": "a lot" }
+                ]
+            },
+            {
+                "questionType":"radiobuttons",
+                "radiobuttonPresentation": "horizontal",
                 "title": "I am less concerned about my problems than I should be.",
                 "validation":{
                     "required":true
@@ -5953,6 +5968,21 @@ UPDATE tasks set
                     "required":true
                 },
                 "key": "Quelqu’un doit me dire quoi faire tous les jours",
+                "multipleChoiceOptions": [
+                    { "label": "Pas du tout", "value": "pas du tout" },
+                    { "label": "Un peu", "value": "un peu" },
+                    { "label": "Assez", "value": "assez" },
+                    { "label": "Beaucoup", "value": "beaucoup" }
+                ]
+            },
+            {
+                "questionType":"radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Sélectionnez « un peu » pour cette question s’il vous plaît.",
+                "validation":{
+                    "required":true
+                },
+                "key": "attentionCheck-Sélectionnez un peu pour cette question s’il vous plaît",
                 "multipleChoiceOptions": [
                     { "label": "Pas du tout", "value": "pas du tout" },
                     { "label": "Un peu", "value": "un peu" },
@@ -6987,6 +7017,21 @@ UPDATE tasks set
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
+                "title": "Sélectionnez la première option si vous faites attention.",
+                "validation":{
+                    "required":true
+                },
+                "key": "attentionCheck-Sélectionnez la première option si vous faites attention",
+                "multipleChoiceOptions": [
+                    { "label": "Rarement/Jamais", "value": "rarement/jamais" },
+                    { "label": "Des fois", "value": "des fois" },
+                    { "label": "Souvent", "value": "souvent" },
+                    { "label": "Presque toujours/Toujours", "value": "presque toujours/toujours" }
+                ]
+            },
+            {
+                "questionType":"radiobuttons",
+                "radiobuttonPresentation": "horizontal",
                 "title": "Je suis agité(e) au théâtre et durant les conférences.",
                 "validation":{
                     "required":true
@@ -7357,6 +7402,19 @@ UPDATE tasks set
                     "required":true
                 },
                 "key": "Vous sentez-vous heureux la plupart du temps?",
+                "multipleChoiceOptions": [
+                    { "label": "Oui", "value": "oui" },
+                    { "label": "Non", "value": "non" }
+                ]
+            },
+            {
+                "questionType":"radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Choisissez « non » si vous êtes attentif(ve)",
+                "validation":{
+                    "required":true
+                },
+                "key": "attentionCheck-Choisissez non si vous êtes attentif(ve)",
                 "multipleChoiceOptions": [
                     { "label": "Oui", "value": "oui" },
                     { "label": "Non", "value": "non" }
@@ -7805,6 +7863,22 @@ UPDATE tasks set
                     "required":true
                 },
                 "key": "how much difficulty to you have controlling performing tasks or hobbies",
+                "multipleChoiceOptions": [
+                    { "label": "Never", "value": "never" },
+                    { "label": "Rarely", "value": "rarely" },
+                    { "label": "Sometimes", "value": "sometimes" },
+                    { "label": "Often", "value": "often" },
+                    { "label": "Very Often", "value": "very often" }
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "textContent": "Select \\"rarely\\" here",
+                "validation": {
+                    "required":true
+                },
+                "key": "attentionCheck-Select rarely here",
                 "multipleChoiceOptions": [
                     { "label": "Never", "value": "never" },
                     { "label": "Rarely", "value": "rarely" },
@@ -8295,6 +8369,22 @@ UPDATE tasks set
                     "required":true
                 },
                 "key": "how much difficulty to you have controlling performing tasks or hobbies",
+                "multipleChoiceOptions": [
+                    { "label": "Jamais", "value": "jamais" },
+                    { "label": "Rarement", "value": "rarement" },
+                    { "label": "Parfois", "value": "parfois" },
+                    { "label": "Souvent", "value": "souvent" },
+                    { "label": "Très souvent", "value": "Très souvent" }
+                ]
+            },
+             {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "textContent": "Sélectionnez « rarement » ici",
+                "validation": {
+                    "required":true
+                },
+                "key": "attentionCheck-Select rarely here",
                 "multipleChoiceOptions": [
                     { "label": "Jamais", "value": "jamais" },
                     { "label": "Rarement", "value": "rarement" },
@@ -8851,6 +8941,21 @@ UPDATE tasks set
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
+                "title": "Sélectionnez « en désaccord » pour indiquer que vous lisez bien les questions:",
+                "validation": {
+                    "required":true
+                },
+                "key": "attentionCheck-Select disagree to indicate that you are reading the questions",
+                "multipleChoiceOptions": [
+                    { "label": "Fortement en désaccord", "value": "fortement en désaccord" },
+                    { "label": "En désaccord", "value": "en désaccord" },
+                    { "label": "D’accord", "value": "d’accord" },
+                    { "label": "Fortement d’accord", "value": "fortement d’accord" }
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
                 "title": "J’apprécie beaucoup une tasse de thé ou de café  ou un verre de ma boisson favorite.:",
                 "validation": {
                     "required":true
@@ -9151,6 +9256,22 @@ UPDATE tasks set
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
+                "title": "Can you choose \\"a little\\" if you are reading the questions?",
+                "validation": {
+                    "required":true
+                },
+                "key": "attentionCheck-Can you choose a little if you are reading the questions?",
+                "multipleChoiceOptions": [
+                    { "label": "None (4)", "value": 4 },
+                    { "label": "A Little (3)", "value": 3 },
+                    { "label": "Somewhat (2)", "value": 2 },
+                    { "label": "A Lot (1)", "value": 1 },
+                    { "label": "Cannot Do (0)", "value": 0 }
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
                 "title": "How much DIFFICULTY do you currently have discussing a TV show, book, movie, or current events?",
                 "validation": {
                     "required":true
@@ -9397,6 +9518,22 @@ UPDATE tasks set
                     "required":true
                 },
                 "key": "How much DIFFICULTY do you currently have maintaining or completing a train of thought",
+                "multipleChoiceOptions": [
+                    { "label": "Aucun(e) (4)", "value": 4 },
+                    { "label": "Un Peu (3)", "value": 3 },
+                    { "label": "Quelque Peu (2)", "value": 2 },
+                    { "label": "Beaucoup (1)", "value": 1 },
+                    { "label": "Ne Peut Pas Faire (0)", "value": 0 }
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Pouvez-vous choisir « un peu » si vous lisez les questions?",
+                "validation": {
+                    "required":true
+                },
+                "key": "attentionCheck-Can you choose a little if you are reading the questions?",
                 "multipleChoiceOptions": [
                     { "label": "Aucun(e) (4)", "value": 4 },
                     { "label": "Un Peu (3)", "value": 3 },
@@ -10116,7 +10253,7 @@ UPDATE tasks SET
             {
                 "questionType": "multipleChoiceSelect",
                 "key": "Q2-activities",
-                "title": "2. Our goal was to ask you about activities that are part of everyday life, but that difers from person to person. Were most of the activities listed part of your usual (i.e. pre-pandemic) everyday life? ",
+                "title": "2. Our goal was to ask you about activities that are part of everyday life, but that differs from person to person. Were most of the activities listed part of your usual (i.e. pre-pandemic) everyday life? ",
                 "textContent": "Please respond using the 1-10 scale:",
                 "multipleChoiceOptions": [
                     {
@@ -10538,6 +10675,22 @@ UPDATE tasks SET
                     "required": true
                 },
                 "key": "In the last month, how often have you found that you could not cope with all the things that you had to do",
+                "multipleChoiceOptions": [
+                    {"label": "0 - Never", "value": "0"},
+                    {"label": "1 - Almost never", "value": "1"},
+                    {"label": "2 - Sometimes", "value": "2"},
+                    {"label": "3 - Fairly often", "value": "3"},
+                    {"label": "4 - Very often", "value": "4"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Can you select \\"very often\\" if you are paying attention?",
+                "validation": {
+                    "required": true
+                },
+                "key": "attentionCheck-Can you select very often if you are paying attention",
                 "multipleChoiceOptions": [
                     {"label": "0 - Never", "value": "0"},
                     {"label": "1 - Almost never", "value": "1"},
@@ -11059,6 +11212,19 @@ UPDATE tasks SET
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
+                "title": "Choose \\"yes\\" if you are reading",
+                "validation": {
+                    "required": true
+                },
+                "key": "attentionCheck-Choose yes if you are reading",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
                 "title": "Major change in usual type and/or amount of recreation",
                 "validation": {
                     "required": true
