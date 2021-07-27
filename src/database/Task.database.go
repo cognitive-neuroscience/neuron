@@ -70,7 +70,7 @@ func (t *TaskRepository) GetAllTasks() ([]models.Task, error) {
 	var err error
 	tasks := []models.Task{}
 
-	var getAllTasks = `SELECT id, from_platform, task_type, name, description, external_url, config FROM tasks;`
+	var getAllTasks = `SELECT id, from_platform, task_type, name, description, external_url, config FROM tasks ORDER BY name ASC;`
 
 	rows, err := db.Query(getAllTasks)
 	if err != nil {

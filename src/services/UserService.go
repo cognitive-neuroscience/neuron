@@ -2,7 +2,6 @@ package services
 
 import (
 	"errors"
-	"log"
 	"net"
 	"net/http"
 	"regexp"
@@ -149,16 +148,12 @@ func (u *UserService) UpdateStudyUser(studyUser models.StudyUser) models.HTTPSta
 		axonlogger.WarningLogger.Println("Could not convert id to uint", err)
 		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "there was an update error"}
 	}
-	log.Println(queriedStudyUser.UserID)
-	log.Println(queriedStudyUser.StudyID)
-	log.Println(queriedStudyUser.HasAcceptedConsent)
 
 	queriedStudyUser.CompletionCode = studyUser.CompletionCode
 	queriedStudyUser.CurrentTaskIndex = studyUser.CurrentTaskIndex
 	queriedStudyUser.DueDate = studyUser.DueDate
 	queriedStudyUser.HasAcceptedConsent = studyUser.HasAcceptedConsent
 
-	log.Println(queriedStudyUser.HasAcceptedConsent)
 	return userRepositoryImpl.UpdateStudyUser(queriedStudyUser)
 }
 

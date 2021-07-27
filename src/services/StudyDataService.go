@@ -2,7 +2,6 @@ package services
 
 import (
 	"errors"
-	"net/http"
 
 	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
 	"github.com/cognitive-neuroscience/neuron/src/models"
@@ -12,20 +11,6 @@ type StudyDataService struct{}
 
 // UploadTaskData saves the given experiment data into a table
 func (s *StudyDataService) UploadTaskData(participantData models.ParticipantData) models.HTTPStatus {
-	userServiceImpl := UserService{}
-
-	if participantData.ParticipantType == "ACCOUNTHOLDER" {
-		studyUser, err := userServiceImpl.GetStudyUserById(participantData.UserID, participantData.StudyID)
-		if err != nil {
-			axonlogger.WarningLogger.Println(err)
-			return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "there was a problem uploading the task data"}
-		}
-		studyUser.CurrentTaskIndex = studyUser.CurrentTaskIndex + 1
-		if status := userServiceImpl.UpdateStudyUser(studyUser); status.Status != http.StatusOK {
-			axonlogger.WarningLogger.Println(err)
-			return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "there was a problem uploading the task data"}
-		}
-	}
 	return studyDataRepositoryImpl.UploadTaskData(participantData)
 }
 

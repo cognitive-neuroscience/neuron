@@ -3657,7 +3657,7 @@ UPDATE tasks set
                     ],
                     "buttons": {
                         "isStart": true,
-                        "previousDisabled": false,
+                        "previousDisabled": true,
                         "nextDisabled": false
                     }
                 }
@@ -10629,7 +10629,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Death of spouse",
                 "validation": {
                     "required": true
@@ -10642,7 +10642,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Divorce",
                 "validation": {
                     "required": true
@@ -10655,7 +10655,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Marital separation from mate",
                 "validation": {
                     "required": true
@@ -10668,7 +10668,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Detention in jail or other institution",
                 "validation": {
                     "required": true
@@ -10681,7 +10681,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Death of a close family member",
                 "validation": {
                     "required": true
@@ -10694,7 +10694,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Major personal injury or illness",
                 "validation": {
                     "required": true
@@ -10707,7 +10707,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Marriage",
                 "validation": {
                     "required": true
@@ -10720,7 +10720,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Being fired at work",
                 "validation": {
                     "required": true
@@ -10733,7 +10733,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Marital reconciliation with mate",
                 "validation": {
                     "required": true
@@ -10746,7 +10746,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Retirement from work",
                 "validation": {
                     "required": true
@@ -10759,7 +10759,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Major change in the health or behaviour of a family member",
                 "validation": {
                     "required": true
@@ -10772,7 +10772,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Pregnancy",
                 "validation": {
                     "required": true
@@ -10785,7 +10785,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Sexual difficulties",
                 "validation": {
                     "required": true
@@ -10798,7 +10798,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Gaining a new family member (i.e…. Birth, adoption, older adult moving in, etc.)",
                 "validation": {
                     "required": true
@@ -10811,7 +10811,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Major business readjustment",
                 "validation": {
                     "required": true
@@ -10824,7 +10824,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Major change in financial state (i.e. a lot worse or better off than usual)",
                 "validation": {
                     "required": true
@@ -10837,7 +10837,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Death of a close friend",
                 "validation": {
                     "required": true
@@ -10850,7 +10850,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Changing to a different line of work",
                 "validation": {
                     "required": true
@@ -10863,7 +10863,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Major change in the number of arguments with spouse (i.e…. Either a lot more or a lot less than usual regarding child rearing, personal habits, etc.)",
                 "validation": {
                     "required": true
@@ -10876,7 +10876,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Taking on a mortgage (for home, business, etc…)",
                 "validation": {
                     "required": true
@@ -10889,7 +10889,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Foreclosure on a mortgage or a loan",
                 "validation": {
                     "required": true
@@ -10902,7 +10902,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Major change in responsibilities at work (i.e. promotion, demotion, etc.)",
                 "validation": {
                     "required": true
@@ -10915,7 +10915,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Son or daughter leaving home (marriage, attending college, joined mil.)",
                 "validation": {
                     "required": true
@@ -10928,7 +10928,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "In-law troubles",
                 "validation": {
                     "required": true
@@ -10941,7 +10941,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Outstanding personal achievement",
                 "validation": {
                     "required": true
@@ -10954,7 +10954,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Spouse beginning or ceasing work outside the home",
                 "validation": {
                     "required": true
@@ -10967,7 +10967,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Beginning or ceasing of formal schooling",
                 "validation": {
                     "required": true
@@ -10980,7 +10980,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Major change in living condition (new home, remodeling, deterioration of neighborhood or home etc.)",
                 "validation": {
                     "required": true
@@ -10993,7 +10993,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Revision of personal habits (dress manners, associations, quitting smoking)",
                 "validation": {
                     "required": true
@@ -11006,7 +11006,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Troubles with the boss",
                 "validation": {
                     "required": true
@@ -11019,7 +11019,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Major changes in working hours or conditions",
                 "validation": {
                     "required": true
@@ -11032,7 +11032,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Changes in residence",
                 "validation": {
                     "required": true
@@ -11045,7 +11045,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Changing to a new school",
                 "validation": {
                     "required": true
@@ -11058,7 +11058,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Major change in usual type and/or amount of recreation",
                 "validation": {
                     "required": true
@@ -11071,7 +11071,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Major change in church activity (a lot more or less than usual)",
                 "validation": {
                     "required": true
@@ -11084,7 +11084,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Major change in social activities (clubs, movies, visiting, etc.)",
                 "validation": {
                     "required": true
@@ -11097,7 +11097,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Taking on a loan (car, tv, freezer, etc.)",
                 "validation": {
                     "required": true
@@ -11110,7 +11110,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Major change in sleeping habits (a lot more or a lot less than usual)",
                 "validation": {
                     "required": true
@@ -11123,7 +11123,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Major change in number of family get-togethers",
                 "validation": {
                     "required": true
@@ -11136,7 +11136,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Major change in eating habits (a lot more or less food intake, or very different meal hours or surroundings)",
                 "validation": {
                     "required": true
@@ -11149,7 +11149,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Vacation",
                 "validation": {
                     "required": true
@@ -11162,7 +11162,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Major holidays",
                 "validation": {
                     "required": true
@@ -11175,7 +11175,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
+                "radiobuttonPresentation": "vertical",
                 "title": "Minor violations of the law (traffic tickets, jaywalking, disturbing the peace, etc)",
                 "validation": {
                     "required": true
@@ -11189,3 +11189,21 @@ UPDATE tasks SET
         ]
     }'
 WHERE id = 36;
+-- PAVLOVIA TASK Stress Task Pilot Version 4
+UPDATE tasks SET
+    from_platform = "PAVLOVIA",
+    task_type = "EXPERIMENTAL",
+    name = "Stress Task Pilot Version 4",
+    description = "Includes baseline corsi, math task, videos, emotion ratings, filler task, post task corsi",
+    external_url = "https://run.pavlovia.org/Sharp_lab/s_study_s_part1",
+    config = '{}'
+WHERE id = 37;
+-- PAVLOVIA TASK Control Stress Task Pilot Version 4
+UPDATE tasks SET
+    from_platform = "PAVLOVIA",
+    task_type = "EXPERIMENTAL",
+    name = "Control Stress Task Pilot Version 4",
+    description = "Includes baseline corsi, math task, videos, emotion ratings, filler task, post task corsi",
+    external_url = "https://run.pavlovia.org/Sharp_lab/s_study_c_part1",
+    config = '{}'
+WHERE id = 38;
