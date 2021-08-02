@@ -11605,11 +11605,34 @@ UPDATE tasks SET
         "title":"Questionnaire",
         "questions":[
             {
-                "questionType": "freeTextResponse",
-                "title": "Please describe your experience of playing the math game and watching the videos. How did you feel and what thoughts did you have regarding the game and videos?",
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Did you at any point think that you were being \\"tricked\\"?",
                 "validation": {
-                    "required":true
+                    "required": true
                 },
+                "key": "Did you at any point think that you were being tricked",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Did you think that parts of this study were deceiving you?",
+                "validation": {
+                    "required": true
+                },
+                "key": "Did you think that parts of this study were deceiving you",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "freeTextResponse",
+                "title": "If you answered YES to <em>either of the above<em>, please describe your experience of playing the math game and watching the videos. How did you feel and what thoughts did you have regarding the game and videos?",
                 "key": "description of experiences"
             }
         ]
