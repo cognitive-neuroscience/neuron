@@ -11615,3 +11615,20 @@ UPDATE tasks SET
         ]
     }'
 WHERE id = 40;
+-- Control Stress Debrief
+UPDATE tasks SET
+    from_platform = "PAVLOVIA",
+    task_type = "EXPERIMENTAL",
+    name = "Control Stress Debrief",
+    description = "",
+    external_url = "https://run.pavlovia.org/Sharp_lab/debrief_s_pilot4",
+    config = '{}'
+WHERE id = 41;
+-- Stress Study Debrief
+UPDATE tasks SET
+    from_platform = "PAVLOVIA",
+    task_type = "EXPERIMENTAL",
+    description = "Stress Study Debrief",
+    external_url = "https://run.pavlovia.org/Sharp_lab/debrief_s_s_pilot4",
+    config = '{}'
+WHERE id = 42;
