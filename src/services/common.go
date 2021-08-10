@@ -5,6 +5,7 @@ import (
 	"strconv"
 
 	"github.com/cognitive-neuroscience/neuron/src/database"
+	"github.com/cognitive-neuroscience/neuron/src/email"
 	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
 )
 
@@ -12,6 +13,7 @@ var userRepositoryImpl = database.UserRepository{}
 var taskRespositoryImpl = database.TaskRepository{}
 var studyRepositoryImpl = database.StudyRepository{}
 var studyDataRepositoryImpl = database.StudyDataRepository{}
+var emailServiceImpl = email.EmailBaseService{}
 
 func convertStringToUint8(str string) (uint, error) {
 	parsedUint64, err := strconv.ParseUint(str, 10, 64)

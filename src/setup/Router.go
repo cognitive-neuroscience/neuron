@@ -19,6 +19,7 @@ func registerRoutes(app *echo.Echo) {
 	setUpLoginRoutes(api)
 	setUpStudyDataRoutes(api)
 	setUpTaskRoutes(api)
+	setUpEmailRoutes(api)
 }
 
 func setUpUserRoutes(group *echo.Group) {
@@ -80,4 +81,10 @@ func setUpTaskRoutes(group *echo.Group) {
 	task := group.Group("/tasks")
 	task.GET("", taskControllerImpl.GetAllTasks)
 	task.GET("/:taskId", taskControllerImpl.GetTaskByTaskId)
+}
+
+func setUpEmailRoutes(group *echo.Group) {
+	emailControllerImpl := controllers.EmailController{}
+	email := group.Group("/email")
+	email.GET("", emailControllerImpl.SendEmail)
 }

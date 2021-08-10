@@ -4,6 +4,7 @@ import (
 	"database/sql"
 	"errors"
 	"net/http"
+	"strings"
 
 	"github.com/cognitive-neuroscience/neuron/src/db"
 	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
@@ -106,8 +107,12 @@ func (s *StudyDataRepository) UploadFeedback(feedback *models.FeedbackQuestionna
 	db := db.DB
 	var insertFeedbackQuery = `INSERT INTO feedback_questionnaire_responses (user_id, study_id, issues_encountered, additional_feedback, browser, submitted_at, participant_type) VALUES(?, ?, ?, ?, ?, ?, ?);`
 	if _, err := db.Exec(insertFeedbackQuery, feedback.UserID, feedback.StudyId, feedback.IssuesEncountered, feedback.AdditionalFeedback, feedback.Browser, feedback.SubmittedAt, feedback.ParticipantType); err != nil {
-		axonlogger.ErrorLogger.Println("could not save feedback data", err)
-		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "could not save feedback"}
+		msg := "could not save feedback data"
+		if strings.Contains(err.Error(), "1062") {
+			msg = "you have already uploaded feedback for this study"
+		}
+		axonlogger.ErrorLogger.Println(msg, err)
+		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: msg}
 	}
 	return models.HTTPStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)}
 }

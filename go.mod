@@ -6,14 +6,6 @@ require (
 	github.com/casbin/casbin/v2 v2.31.10
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
-	github.com/facebookgo/clock v0.0.0-20150410010913-600d898af40a // indirect
-	github.com/facebookgo/ensure v0.0.0-20200202191622-63f1cf65ac4c // indirect
-	github.com/facebookgo/freeport v0.0.0-20150612182905-d4adf43b75b9 // indirect
-	github.com/facebookgo/grace v0.0.0-20180706040059-75cf19382434
-	github.com/facebookgo/httpdown v0.0.0-20180706035922-5979d39b15c2 // indirect
-	github.com/facebookgo/stack v0.0.0-20160209184415-751773369052 // indirect
-	github.com/facebookgo/stats v0.0.0-20151006221625-1b76add642e4 // indirect
-	github.com/facebookgo/subset v0.0.0-20200203212716-c811ad88dec4 // indirect
 	github.com/go-sql-driver/mysql v1.6.0
 	github.com/golang/mock v1.6.0 // indirect
 	github.com/jmoiron/sqlx v1.3.4
@@ -24,6 +16,8 @@ require (
 	github.com/lib/pq v1.10.2 // indirect
 	github.com/mattn/go-isatty v0.0.13 // indirect
 	github.com/mattn/go-sqlite3 v2.0.3+incompatible // indirect
+	github.com/sendgrid/rest v2.6.4+incompatible // indirect
+	github.com/sendgrid/sendgrid-go v3.10.0+incompatible
 	github.com/stretchr/testify v1.7.0 // indirect
 	golang.org/x/crypto v0.0.0-20210711020723-a769d52b0f97
 	golang.org/x/net v0.0.0-20210614182718-04defd469f4e // indirect

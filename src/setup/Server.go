@@ -20,10 +20,11 @@ type Enforcer struct {
 }
 
 var unprotectedRoutes = []string{
-	"/api/users",
-	"/api/login",
-	"api/logout",
-	"/api/crowdsourcedusers",
+	"/api/users",             // unprotected to allow anyone to register an account
+	"/api/login",             // unprotected to allow anyone to login
+	"api/logout",             // unprotected to allow anyone to logout
+	"/api/crowdsourcedusers", // unprotected to allow any crowd sourced user to participate
+	"/api/email",
 }
 
 // CreateServer creates a HTTP server
@@ -99,7 +100,7 @@ func validateCookieMiddleware(next echo.HandlerFunc) echo.HandlerFunc {
 		var id string
 
 		// unprotected routes, api/users POST is for register and api/login POST is for logging in
-		if method == http.MethodPost && common.IncludesSubStr(unprotectedRoutes, path) {
+		if method == http.MethodGet && common.IncludesSubStr(unprotectedRoutes, path) {
 			role = common.NONE
 		} else {
 			tokenServiceImpl := services.TokenService{}
