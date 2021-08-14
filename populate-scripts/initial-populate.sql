@@ -10449,4 +10449,1137 @@ VALUES
             }
         ]
     }'
+),
+-- PSS
+(
+    NULL,
+    "PSHARPLAB",
+    "QUESTIONNAIRE",
+    "Perceived Stress Scale",
+    "",
+    "",
+    '{
+        "title": "Questionnaire",
+        "questions": [
+            {
+                "questionType": "displayText",
+                "title": "<p>The questions in this scale ask you about your feelings and thoughts during the last month. In each case, you will be asked to indicate how often you felt or thought a certain way.</p>"
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "In the last month, how often have you been upset because of something that happened unexpectedly?",
+                "validation": {
+                    "required": true
+                },
+                "key": "In the last month, how often have you been upset because of something that happened unexpectedly",
+                "multipleChoiceOptions": [
+                    {"label": "0 - Never", "value": "0"},
+                    {"label": "1 - Almost never", "value": "1"},
+                    {"label": "2 - Sometimes", "value": "2"},
+                    {"label": "3 - Fairly often", "value": "3"},
+                    {"label": "4 - Very often", "value": "4"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "In the last month, how often have you felt that you were unable to control the important things in your life?",
+                "validation": {
+                    "required": true
+                },
+                "key": "In the last month, how often have you felt that you were unable to control the important things in your life",
+                "multipleChoiceOptions": [
+                    {"label": "0 - Never", "value": "0"},
+                    {"label": "1 - Almost never", "value": "1"},
+                    {"label": "2 - Sometimes", "value": "2"},
+                    {"label": "3 - Fairly often", "value": "3"},
+                    {"label": "4 - Very often", "value": "4"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "In the last month, how often have you felt nervous and \\"stressed\\"?",
+                "validation": {
+                    "required": true
+                },
+                "key": "In the last month, how often have you felt nervous and \\"stressed\\"",
+                "multipleChoiceOptions": [
+                    {"label": "0 - Never", "value": "0"},
+                    {"label": "1 - Almost never", "value": "1"},
+                    {"label": "2 - Sometimes", "value": "2"},
+                    {"label": "3 - Fairly often", "value": "3"},
+                    {"label": "4 - Very often", "value": "4"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "In the last month, how often have you felt confident about your ability to handle your personal problems?",
+                "validation": {
+                    "required": true
+                },
+                "key": "In the last month, how often have you felt confident about your ability to handle your personal problems",
+                "multipleChoiceOptions": [
+                    {"label": "0 - Never", "value": "0"},
+                    {"label": "1 - Almost never", "value": "1"},
+                    {"label": "2 - Sometimes", "value": "2"},
+                    {"label": "3 - Fairly often", "value": "3"},
+                    {"label": "4 - Very often", "value": "4"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "In the last month, how often have you felt that things were going your way?",
+                "validation": {
+                    "required": true
+                },
+                "key": "In the last month, how often have you felt that things were going your way",
+                "multipleChoiceOptions": [
+                    {"label": "0 - Never", "value": "0"},
+                    {"label": "1 - Almost never", "value": "1"},
+                    {"label": "2 - Sometimes", "value": "2"},
+                    {"label": "3 - Fairly often", "value": "3"},
+                    {"label": "4 - Very often", "value": "4"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "In the last month, how often have you found that you could not cope with all the things that you had to do?",
+                "validation": {
+                    "required": true
+                },
+                "key": "In the last month, how often have you found that you could not cope with all the things that you had to do",
+                "multipleChoiceOptions": [
+                    {"label": "0 - Never", "value": "0"},
+                    {"label": "1 - Almost never", "value": "1"},
+                    {"label": "2 - Sometimes", "value": "2"},
+                    {"label": "3 - Fairly often", "value": "3"},
+                    {"label": "4 - Very often", "value": "4"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Can you select \\"very often\\" if you are paying attention?",
+                "validation": {
+                    "required": true
+                },
+                "key": "attentionCheck-Can you select very often if you are paying attention",
+                "multipleChoiceOptions": [
+                    {"label": "0 - Never", "value": "0"},
+                    {"label": "1 - Almost never", "value": "1"},
+                    {"label": "2 - Sometimes", "value": "2"},
+                    {"label": "3 - Fairly often", "value": "3"},
+                    {"label": "4 - Very often", "value": "4"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "In the last month, how often have you been able to control irritations in your life?",
+                "validation": {
+                    "required": true
+                },
+                "key": "In the last month, how often have you been able to control irritations in your life",
+                "multipleChoiceOptions": [
+                    {"label": "0 - Never", "value": "0"},
+                    {"label": "1 - Almost never", "value": "1"},
+                    {"label": "2 - Sometimes", "value": "2"},
+                    {"label": "3 - Fairly often", "value": "3"},
+                    {"label": "4 - Very often", "value": "4"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "In the last month, how often have you felt that you were on top of things?",
+                "validation": {
+                    "required": true
+                },
+                "key": "In the last month, how often have you felt that you were on top of things",
+                "multipleChoiceOptions": [
+                    {"label": "0 - Never", "value": "0"},
+                    {"label": "1 - Almost never", "value": "1"},
+                    {"label": "2 - Sometimes", "value": "2"},
+                    {"label": "3 - Fairly often", "value": "3"},
+                    {"label": "4 - Very often", "value": "4"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "In the last month, how often have you been angered because of things that were outside of your control?",
+                "validation": {
+                    "required": true
+                },
+                "key": "In the last month, how often have you been angered because of things that were outside of your control",
+                "multipleChoiceOptions": [
+                    {"label": "0 - Never", "value": "0"},
+                    {"label": "1 - Almost never", "value": "1"},
+                    {"label": "2 - Sometimes", "value": "2"},
+                    {"label": "3 - Fairly often", "value": "3"},
+                    {"label": "4 - Very often", "value": "4"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "In the last month, how often have you felt difficulties were piling up so high that you could not overcome them?",
+                "validation": {
+                    "required": true
+                },
+                "key": "In the last month, how often have you felt difficulties were piling up so high that you could not overcome them",
+                "multipleChoiceOptions": [
+                    {"label": "0 - Never", "value": "0"},
+                    {"label": "1 - Almost never", "value": "1"},
+                    {"label": "2 - Sometimes", "value": "2"},
+                    {"label": "3 - Fairly often", "value": "3"},
+                    {"label": "4 - Very often", "value": "4"}
+                ]
+            } 
+        ]
+    }'
+),
+-- Holmes-Rahe Life Stress Inventory
+(
+    NULL,
+    "PSHARPLAB",
+    "QUESTIONNAIRE",
+    "Holmes-Rahe Life Stress Inventory",
+    "",
+    "",
+    '{
+        "title": "Questionnaire",
+        "questions": [
+            {
+                "questionType": "displayText",
+                "title": "<p>Please indicate whether the following life events have happened to you during the previous year.</p>"
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Death of spouse",
+                "validation": {
+                    "required": true
+                },
+                "key": "Death of spouse",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Divorce",
+                "validation": {
+                    "required": true
+                },
+                "key": "Divorce",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Marital separation from mate",
+                "validation": {
+                    "required": true
+                },
+                "key": "Marital separation from mate",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Detention in jail or other institution",
+                "validation": {
+                    "required": true
+                },
+                "key": "Detention in jail or other institution",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Death of a close family member",
+                "validation": {
+                    "required": true
+                },
+                "key": "Death of a close family member",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Major personal injury or illness",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major personal injury or illness",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Marriage",
+                "validation": {
+                    "required": true
+                },
+                "key": "Marriage",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Being fired at work",
+                "validation": {
+                    "required": true
+                },
+                "key": "Being fired at work",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Marital reconciliation with mate",
+                "validation": {
+                    "required": true
+                },
+                "key": "Marital reconciliation with mate",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Retirement from work",
+                "validation": {
+                    "required": true
+                },
+                "key": "Retirement from work",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Major change in the health or behaviour of a family member",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major change in the health or behaviour of a family member",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Pregnancy",
+                "validation": {
+                    "required": true
+                },
+                "key": "Pregnancy",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Sexual difficulties",
+                "validation": {
+                    "required": true
+                },
+                "key": "Sexual difficulties",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Gaining a new family member (i.e…. Birth, adoption, older adult moving in, etc.)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Gaining a new family member (i.e…. Birth, adoption, older adult moving in, etc.)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Major business readjustment",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major business readjustment",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Major change in financial state (i.e. a lot worse or better off than usual)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major change in financial state (i.e. a lot worse or better off than usual)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Death of a close friend",
+                "validation": {
+                    "required": true
+                },
+                "key": "Death of a close friend",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Changing to a different line of work",
+                "validation": {
+                    "required": true
+                },
+                "key": "Changing to a different line of work",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Major change in the number of arguments with spouse (i.e…. Either a lot more or a lot less than usual regarding child rearing, personal habits, etc.)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major change in the number of arguments with spouse (i.e…. Either a lot more or a lot less than usual regarding child rearing, personal habits, etc.)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Taking on a mortgage (for home, business, etc…)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Taking on a mortgage (for home, business, etc…)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Foreclosure on a mortgage or a loan",
+                "validation": {
+                    "required": true
+                },
+                "key": "Foreclosure on a mortgage or a loan",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Major change in responsibilities at work (i.e. promotion, demotion, etc.)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major change in responsibilities at work (i.e. promotion, demotion, etc.)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Son or daughter leaving home (marriage, attending college, joined mil.)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Son or daughter leaving home (marriage, attending college, joined mil.)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "In-law troubles",
+                "validation": {
+                    "required": true
+                },
+                "key": "In-law troubles",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Outstanding personal achievement",
+                "validation": {
+                    "required": true
+                },
+                "key": "Outstanding personal achievement",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Spouse beginning or ceasing work outside the home",
+                "validation": {
+                    "required": true
+                },
+                "key": "Spouse beginning or ceasing work outside the home",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Beginning or ceasing of formal schooling",
+                "validation": {
+                    "required": true
+                },
+                "key": "Beginning or ceasing of formal schooling",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Major change in living condition (new home, remodeling, deterioration of neighborhood or home etc.)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major change in living condition (new home, remodeling, deterioration of neighborhood or home etc.)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Revision of personal habits (dress manners, associations, quitting smoking)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Revision of personal habits (dress manners, associations, quitting smoking)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Troubles with the boss",
+                "validation": {
+                    "required": true
+                },
+                "key": "Troubles with the boss",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Major changes in working hours or conditions",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major changes in working hours or conditions",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Changes in residence",
+                "validation": {
+                    "required": true
+                },
+                "key": "Changes in residence",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Changing to a new school",
+                "validation": {
+                    "required": true
+                },
+                "key": "Changing to a new school",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Choose \\"yes\\" if you are reading",
+                "validation": {
+                    "required": true
+                },
+                "key": "attentionCheck-Choose yes if you are reading",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "horizontal",
+                "title": "Major change in usual type and/or amount of recreation",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major change in usual type and/or amount of recreation",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Major change in church activity (a lot more or less than usual)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major change in church activity (a lot more or less than usual)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Major change in social activities (clubs, movies, visiting, etc.)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major change in social activities (clubs, movies, visiting, etc.)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Taking on a loan (car, tv, freezer, etc.)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Taking on a loan (car, tv, freezer, etc.)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Major change in sleeping habits (a lot more or a lot less than usual)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major change in sleeping habits (a lot more or a lot less than usual)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Major change in number of family get-togethers",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major change in number of family get-togethers",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Major change in eating habits (a lot more or less food intake, or very different meal hours or surroundings)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major change in eating habits (a lot more or less food intake, or very different meal hours or surroundings)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Vacation",
+                "validation": {
+                    "required": true
+                },
+                "key": "Vacation",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Major holidays",
+                "validation": {
+                    "required": true
+                },
+                "key": "Major holidays",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Minor violations of the law (traffic tickets, jaywalking, disturbing the peace, etc)",
+                "validation": {
+                    "required": true
+                },
+                "key": "Minor violations of the law (traffic tickets, jaywalking, disturbing the peace, etc)",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            }
+        ]
+    }'
+),
+-- PAVLOVIA TASK Stress Task Pilot Version 4
+(
+    NULL,
+    "PAVLOVIA",
+    "EXPERIMENTAL",
+    "Stress Task Pilot Version 4",
+    "Includes baseline corsi, math task, videos, emotion ratings, filler task, post task corsi",
+    "https://run.pavlovia.org/Sharp_lab/s_study_s_part1",
+    '{}'
+),
+-- PAVLOVIA TASK Control Stress Task Pilot Version 4
+(
+    NULL,
+    "PAVLOVIA",
+    "EXPERIMENTAL",
+    "Control Stress Task Pilot Version 4",
+    "Includes baseline corsi, math task, videos, emotion ratings, filler task, post task corsi",
+    "https://run.pavlovia.org/Sharp_lab/s_study_c_part1",
+    '{}'
+),
+-- PANAS
+(
+    NULL,
+    "PSHARPLAB",
+    "QUESTIONNAIRE",
+    "PANAS",
+    "",
+    "",
+    '{
+        "title":"Questionnaire",
+        "questions":[
+            {
+                "questionType": "displayText",
+                "title": "In the following you find a list of expressions that characterize different moods. Please take a look at the list, word by word, and mark for each word the answer that represents best the actual intensity of your mood status. <br /><br /> Please pay attention to the following facts: <br /><br />- Within the list there are some attributes that possibly describe the same or similar moods. Please do not get irritated due to this fact, and judge each attribute irrespective of your answer to another attribute.<br />- Please judge only how you feel at this moment, and not how you normally or somtimes feel.<br />- If you have some difficulties in finding an answer, please mark the answer that fits best.<br /><br />Please judge each word and do not leave out a word."
+            },
+            {
+                "questionType": "displayText",
+                "title": "Use your mouse to drag the marker in order to select your answer"
+            },
+            {
+                "questionType": "slider",
+                "title": "How CONTENT do you feel?",
+                "validation": {
+                    "required":true
+                },
+                "key": "How CONTENT do you feel?",
+                "legend": [
+                    "Definitely Not Feeling This",
+                    "Extremely"
+                ]
+            },
+            {
+                "questionType": "slider",
+                "title": "How RESTLESS do you feel?",
+                "validation": {
+                    "required":true
+                },
+                "key": "How RESTLESS do you feel?",
+                "legend": [
+                    "Definitely Not Feeling This",
+                    "Extremely"
+                ]
+            },
+            {
+                "questionType": "slider",
+                "title": "How BAD do you feel?",
+                "validation": {
+                    "required":true
+                },
+                "key": "How BAD do you feel?",
+                "legend": [
+                    "Definitely Not Feeling This",
+                    "Extremely"
+                ]
+            },
+            {
+                "questionType": "slider",
+                "title": "How COMPOSED do you feel?",
+                "validation": {
+                    "required":true
+                },
+                "key": "How COMPOSED do you feel?",
+                "legend": [
+                    "Definitely Not Feeling This",
+                    "Extremely"
+                ]
+            },
+            {
+                "questionType": "slider",
+                "title": "How GREAT do you feel?",
+                "validation": {
+                    "required":true
+                },
+                "key": "How GREAT do you feel?",
+                "legend": [
+                    "Definitely Not Feeling This",
+                    "Extremely"
+                ]
+            },
+            {
+                "questionType": "slider",
+                "title": "How UNEASY do you feel?",
+                "validation": {
+                    "required":true
+                },
+                "key": "How UNEASY do you feel?",
+                "legend": [
+                    "Definitely Not Feeling This",
+                    "Extremely"
+                ]
+            },
+            {
+                "questionType": "slider",
+                "title": "How UNCOMFORTABLE do you feel?",
+                "validation": {
+                    "required":true
+                },
+                "key": "How UNCOMFORTABLE do you feel?",
+                "legend": [
+                    "Definitely Not Feeling This",
+                    "Extremely"
+                ]
+            },
+            {
+                "questionType": "slider",
+                "title": "How RELAXED do you feel?",
+                "validation": {
+                    "required":true
+                },
+                "key": "How RELAXED do you feel?",
+                "legend": [
+                    "Definitely Not Feeling This",
+                    "Extremely"
+                ]
+            },
+            {
+                "questionType": "slider",
+                "title": "How GOOD do you feel?",
+                "validation": {
+                    "required":true
+                },
+                "key": "How GOOD do you feel?",
+                "legend": [
+                    "Definitely Not Feeling This",
+                    "Extremely"
+                ]
+            },
+            {
+                "questionType": "slider",
+                "title": "How AT EASE do you feel?",
+                "validation": {
+                    "required":true
+                },
+                "key": "How AT EASE do you feel?",
+                "legend": [
+                    "Definitely Not Feeling This",
+                    "Extremely"
+                ]
+            },
+            {
+                "questionType": "slider",
+                "title": "How UNHAPPY do you feel?",
+                "validation": {
+                    "required":true
+                },
+                "key": "How UNHAPPY do you feel?",
+                "legend": [
+                    "Definitely Not Feeling This",
+                    "Extremely"
+                ]
+            },
+            {
+                "questionType": "slider",
+                "title": "How DISCONTENT do you feel?",
+                "validation": {
+                    "required":true
+                },
+                "key": "How DISCONTENT do you feel?",
+                "legend": [
+                    "Definitely Not Feeling This",
+                    "Extremely"
+                ]
+            },
+                    {
+                "questionType": "slider",
+                "title": "How TENSE do you feel?",
+                "validation": {
+                    "required":true
+                },
+                "key": "How TENSE do you feel?",
+                "legend": [
+                    "Definitely Not Feeling This",
+                    "Extremely"
+                ]
+            },
+            {
+                "questionType": "slider",
+                "title": "How HAPPY do you feel?",
+                "validation": {
+                    "required":true
+                },
+                "key": "How HAPPY do you feel?",
+                "legend": [
+                    "Definitely Not Feeling This",
+                    "Extremely"
+                ]
+            },
+            {
+                "questionType": "slider",
+                "title": "How NERVOUS do you feel?",
+                "validation": {
+                    "required":true
+                },
+                "key": "How NERVOUS do you feel?",
+                "legend": [
+                    "Definitely Not Feeling This",
+                    "Extremely"
+                ]
+            },
+            {
+                "questionType": "slider",
+                "title": "How CALM do you feel?",
+                "validation": {
+                    "required":true
+                },
+                "key": "How CALM do you feel?",
+                "legend": [
+                    "Definitely Not Feeling This",
+                    "Extremely"
+                ]
+            }
+        ]
+    }'
+),
+-- Stress Study Post Test
+(
+    NULL,
+    "PSHARPLAB",
+    "QUESTIONNAIRE",
+    "Stress Study Post Test",
+    "",
+    "",
+    '{
+        "title":"Questionnaire",
+        "questions":[
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Did you at any point think that you were being \\"tricked\\"?",
+                "validation": {
+                    "required": true
+                },
+                "key": "Did you at any point think that you were being tricked",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Did you think that parts of this study were deceiving you?",
+                "validation": {
+                    "required": true
+                },
+                "key": "Did you think that parts of this study were deceiving you",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "freeTextResponse",
+                "title": "If you answered YES to <em>either of the above<em>, please describe your experience of playing the math game and watching the videos. How did you feel and what thoughts did you have regarding the game and videos?",
+                "key": "description of experiences"
+            }
+        ]
+    }'
+),
+-- Control Stress Debrief
+(
+    NULL,
+    "PAVLOVIA",
+    "EXPERIMENTAL",
+    "Control Stress Debrief",
+    "",
+    "https://run.pavlovia.org/Sharp_lab/debrief_s_pilot4",
+    '{}'
+),
+-- Stress Study Debrief
+(
+    NULL,
+    "PAVLOVIA",
+    "EXPERIMENTAL",
+    "Stress Study Debrief",
+    "",
+    "https://run.pavlovia.org/Sharp_lab/debrief_s_s_pilot4",
+    '{}'
+),
+-- Basic Background Questionnaire
+(
+    NULL,
+    "PSHARPLAB",
+    "QUESTIONNAIRE",
+    "Basic Background Questionnaire",
+    "",
+    "",
+    '{
+        "title": "Parkinson''s Treatment Questionnaire",
+        "questions": [
+            {
+                "questionType": "displayText",
+                "title": "The following questions are about the treatment you receive for your parkinson''s disease and for related conditions."
+            },
+            {
+                "questionType": "multipleChoiceSelect",
+                "title": "Are you currently taking any of the following prescription medications to treat your Parkinson''s disease symptoms? (Please check all that apply)",
+                "key": "PDMeds",
+                "radiobuttonPresentation": "vertical",
+                "validation": {
+                    "required": true
+                },
+                "allowMultipleSelections": true,
+                "multipleChoiceOptions": [
+                    {
+                        "label": "No, I don''t take any prescription medications to treat my Parkinson''s disease",
+                        "value": "No medications"
+                    },
+                    {
+                        "label": "Sinemet or Carbidopa-Levodopa or Parcopa (Oral)",
+                        "value": "Sinemet or Carbidopa-Levodopa or Parcopa (Oral)"
+                    },
+                    {
+                        "label": "Sinemet CR or Carbidopa-Levodopa, Extended Release (Oral)",
+                        "value": "Sinemet CR or Carbidopa-Levodopa, Extended Release (Oral)"
+                    },
+                    {
+                        "label": "Rytary or Numient (i.e. Carbidopa-Levodopa, Extended Release, Oral)",
+                        "value": "Rytary or Numient"
+                    },
+                    {
+                        "label": "Duopa or Duodopa (i.e. Carbidopa-Levodopa Intestinal Gel)",
+                        "value": "Duopa or Duodopa"
+                    }
+                ]
+            }
+        ]
+    }'
 );

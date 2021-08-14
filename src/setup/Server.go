@@ -100,7 +100,7 @@ func validateCookieMiddleware(next echo.HandlerFunc) echo.HandlerFunc {
 		var id string
 
 		// unprotected routes, api/users POST is for register and api/login POST is for logging in
-		if method == http.MethodGet && common.IncludesSubStr(unprotectedRoutes, path) {
+		if method == http.MethodPost && common.IncludesSubStr(unprotectedRoutes, path) {
 			role = common.NONE
 		} else {
 			tokenServiceImpl := services.TokenService{}
