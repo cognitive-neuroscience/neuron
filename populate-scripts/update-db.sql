@@ -12106,6 +12106,7 @@ UPDATE tasks SET
                 "validation": {
                     "required": true
                 },
+                "allowMultipleSelections": true,
                 "multipleChoiceOptions": [
                     {
                         "label": "English",
