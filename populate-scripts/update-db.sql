@@ -12030,7 +12030,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "multipleChoiceSelect",
-                "title": "We expect to reach people from many different cultural and racial backgrounds with this internet study. To which group do you belong?",
+                "title": "We expect to reach people from many different cultural and racial backgrounds with this internet study. To which group do you belong? (Select all that apply)",
                 "key": "background",
                 "validation": {
                     "required": true
@@ -12101,7 +12101,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "multipleChoiceSelect",
-                "title": "Which of the following languages do you consider yourself fluent in (can read and speak)?",
+                "title": "Which of the following languages do you consider yourself fluent in (can read and speak)? Select all that apply.",
                 "key": "fluentLan",
                 "validation": {
                     "required": true
