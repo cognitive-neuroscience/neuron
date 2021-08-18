@@ -336,6 +336,7 @@ VALUES
                 "validation": {
                     "required": true
                 },
+                "allowMultipleSelections": true,
                 "multipleChoiceOptions": [
                     {
                         "label": "White / Caucasian",
@@ -649,7 +650,7 @@ VALUES
             }
         ]
     }'
-);
+),
 (
     NULL,
     "PSHARPLAB",
