@@ -65,13 +65,22 @@ func (u *UserService) UpdateUser(receivedUser models.User) models.HTTPStatus {
 }
 
 func (u *UserService) ChangePassword(email string, tempPassword string, newPassword string) models.HTTPStatus {
-	if isCorrect := passwordIsCorrect(tempPassword, newPassword); isCorrect {
-		if err := u.UpdatePasswordByEmail(email, newPassword); err != nil {
-			return models.HTTPStatus{Status: http.StatusInternalServerError, Message: err.Error()}
-		}
-		return models.HTTPStatus{Status: http.StatusOK, Message: "updated password"}
+	userFromDB, err := userRepositoryImpl.GetUserByEmail(email)
+	if err != nil {
+		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "there was an error updating the user"}
 	}
-	return models.HTTPStatus{Status: http.StatusUnprocessableEntity, Message: "password is incorrect"}
+	if isCorrect := passwordIsCorrect(userFromDB.Password, tempPassword); !isCorrect {
+		return models.HTTPStatus{Status: http.StatusUnprocessableEntity, Message: "password is incorrect"}
+	}
+	if err := u.UpdatePasswordByEmail(email, newPassword); err != nil {
+		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: err.Error()}
+	}
+
+	userFromDB.ChangePasswordRequired = false
+	if httpStatus := u.UpdateUser(userFromDB); httpStatus.Status != http.StatusOK {
+		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "there was an error updating the user"}
+	}
+	return models.HTTPStatus{Status: http.StatusOK, Message: "updated password"}
 }
 
 func (u *UserService) UpdatePasswordByEmail(email string, newPassword string) error {

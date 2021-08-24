@@ -13,14 +13,16 @@ type EmailController struct{}
 
 func (*EmailController) SendEmail(e echo.Context) error {
 	emailStruct := struct {
-		Address string
+		Email string `json:"email"`
 	}{
 		"",
 	}
-	if err := e.Bind(emailStruct); err != nil {
+	if err := e.Bind(&emailStruct); err != nil {
 		axonlogger.WarningLogger.Println("Could not parse email", err)
 		return common.SendGenericHTTPWithMessage(e, models.HTTPStatus{Status: http.StatusBadRequest, Message: "there was an error resetting your password"})
 	}
-
-	return emailServiceImpl.SendEmail(emailStruct.Address)
+	if err := emailServiceImpl.SendEmail(emailStruct.Email); err != nil {
+		return common.SendGenericHTTPWithMessage(e, models.HTTPStatus{Status: http.StatusInternalServerError, Message: "there was an error resetting your password"})
+	}
+	return common.SendHTTPOk(e)
 }

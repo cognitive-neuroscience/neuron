@@ -25,7 +25,7 @@ type UserRepository struct {
 func (u *UserRepository) UpdateUser(user *models.User) (operationStatus models.HTTPStatus) {
 	db := db.DB
 
-	var updateUserInDB = `UPDATE user SET email = ?, password = ?, role = ?, change_password_required = ? WHERE id = ?;`
+	var updateUserInDB = `UPDATE users SET email = ?, password = ?, role = ?, change_password_required = ? WHERE id = ?;`
 	if _, err := db.Exec(updateUserInDB, user.Email, user.Password, user.Role, user.ChangePasswordRequired, user.ID); err != nil {
 		axonlogger.ErrorLogger.Println("Error updating user from DB", err)
 		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "there wa sa problem updating the user"}
@@ -346,7 +346,7 @@ func (u *UserRepository) GetUserByEmail(email string) (models.User, error) {
 	db := db.DB
 	var user models.User
 
-	var getUserByEmail = `SELECT id, email, password, role, created_at FROM users WHERE email = ?;`
+	var getUserByEmail = `SELECT id, email, password, role, created_at, change_password_required FROM users WHERE email = ?;`
 
 	rowErr := db.QueryRow(getUserByEmail, email).Scan(
 		&user.ID,
@@ -354,6 +354,7 @@ func (u *UserRepository) GetUserByEmail(email string) (models.User, error) {
 		&user.Password,
 		&user.Role,
 		&user.CreatedAt,
+		&user.ChangePasswordRequired,
 	)
 
 	if rowErr == sql.ErrNoRows {
@@ -372,7 +373,7 @@ func (u *UserRepository) GetUserById(id uint) (models.User, error) {
 	db := db.DB
 	var user models.User
 
-	var getUserById = `SELECT id, email, password, role, created_at FROM users WHERE id = ?;`
+	var getUserById = `SELECT id, email, password, role, created_at, change_password_required FROM users WHERE id = ?;`
 
 	rowErr := db.QueryRow(getUserById, id).Scan(
 		&user.ID,
@@ -380,6 +381,7 @@ func (u *UserRepository) GetUserById(id uint) (models.User, error) {
 		&user.Password,
 		&user.Role,
 		&user.CreatedAt,
+		&user.ChangePasswordRequired,
 	)
 
 	if rowErr == sql.ErrNoRows {

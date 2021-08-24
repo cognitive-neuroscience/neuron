@@ -15,16 +15,16 @@ type UserController struct{}
 // ChangePassword takes in an email, temp password, and new password and changes the password
 func (u *UserController) ChangePassword(e echo.Context) error {
 	editPasswordStruct := struct {
-		Email             string
-		TemporaryPassword string
-		NewPassword       string
+		Email             string `json:"email"`
+		TemporaryPassword string `json:"temporaryPassword"`
+		NewPassword       string `json:"newPassword"`
 	}{
 		"",
 		"",
 		"",
 	}
 
-	if err := e.Bind(editPasswordStruct); err != nil {
+	if err := e.Bind(&editPasswordStruct); err != nil {
 		axonlogger.WarningLogger.Println("Could not parse edit password details", err)
 		return common.SendHTTPBadRequest(e)
 	}
