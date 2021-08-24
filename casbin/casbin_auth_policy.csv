@@ -24,4 +24,5 @@ p, *,           /api/users,                     POST
 p, *,           /api/crowdsourcedusers,         POST
 p, *,           /api/login,                     POST
 p, *,           /api/logout,                    POST
-p, *,           /api/email,                     GET
+p, *,           /api/email,                     POST
+p, *,           /api/users/changepassword,      POST

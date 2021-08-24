@@ -12,6 +12,26 @@ import (
 
 type UserController struct{}
 
+// ChangePassword takes in an email, temp password, and new password and changes the password
+func (u *UserController) ChangePassword(e echo.Context) error {
+	editPasswordStruct := struct {
+		Email             string
+		TemporaryPassword string
+		NewPassword       string
+	}{
+		"",
+		"",
+		"",
+	}
+
+	if err := e.Bind(editPasswordStruct); err != nil {
+		axonlogger.WarningLogger.Println("Could not parse edit password details", err)
+		return common.SendHTTPBadRequest(e)
+	}
+	httpStatus := userServiceImpl.ChangePassword(editPasswordStruct.Email, editPasswordStruct.TemporaryPassword, editPasswordStruct.NewPassword)
+	return common.SendGenericHTTPWithMessage(e, httpStatus)
+}
+
 // SaveUser saves a given user in the DB
 // this route does not require a JWT as users may be creating an account
 func (u *UserController) SaveUser(e echo.Context) error {

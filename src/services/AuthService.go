@@ -9,15 +9,22 @@ import (
 	"golang.org/x/crypto/bcrypt"
 )
 
-type LoginService struct{}
+type AuthService struct{}
+
+func (l *AuthService) GetTemporaryPassword() string {
+	return GenerateCode(10)
+}
 
 // ValidateCredentials checks to see if the email and password match by querying the db
 // for the correct email and then comparing
-func (l *LoginService) ValidateCredentials(email string, password string) (models.User, error) {
+func (l *AuthService) ValidateCredentials(email string, password string) (models.User, error) {
 
 	user, err := userRepositoryImpl.GetUserByEmail(email)
 	if err != nil {
 		return user, err
+	}
+	if user.ChangePasswordRequired {
+		return user, errors.New("password must be changed before login")
 	}
 	// check if their password matches
 	if !passwordIsCorrect(user.Password, password) {

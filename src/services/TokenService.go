@@ -12,42 +12,6 @@ import (
 
 type TokenService struct{}
 
-// // AuthenticateToken verifies if the token present in the authorization header is valid
-// func AuthenticateToken(c *fiber.Ctx) (*models.Claims, error) {
-// 	claims := &models.Claims{}
-// 	var err error
-
-// 	// 1. check that token is present
-// 	token := c.Get("Authorization")
-// 	if token == "" {
-// 		axonlogger.WarningLogger.Println("No token present")
-// 		return claims, errors.New("No token present")
-// 	}
-
-// 	// 2. check that token string is extractable and get it
-// 	extractedToken, err := extractToken(token)
-// 	if err != nil {
-// 		return claims, err
-// 	}
-
-// 	// 3. check that token is valid
-// 	claims, err = ValidateToken(extractedToken)
-// 	if err != nil {
-// 		return claims, err
-// 	}
-
-// 	return claims, nil
-// }
-
-// func extractToken(t string) (string, error) {
-// 	strArr := strings.Split(t, " ")
-// 	if len(strArr) == 2 && strings.ToLower(strArr[0]) == "bearer" {
-// 		return strArr[1], nil
-// 	}
-// 	axonlogger.WarningLogger.Println("Could not parse token", t)
-// 	return "", errors.New("Could not parse token")
-// }
-
 // CreateToken returns the token and error after signing with HS256
 func (t *TokenService) CreateToken(id string, email string, role string) (string, error) {
 	key := GetJWTKey()

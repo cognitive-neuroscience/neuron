@@ -20,11 +20,12 @@ type Enforcer struct {
 }
 
 var unprotectedRoutes = []string{
-	"/api/users",             // unprotected to allow anyone to register an account
-	"/api/login",             // unprotected to allow anyone to login
-	"api/logout",             // unprotected to allow anyone to logout
-	"/api/crowdsourcedusers", // unprotected to allow any crowd sourced user to participate
-	"/api/email",
+	"/api/users",                // unprotected to allow anyone to register an account
+	"/api/login",                // unprotected to allow anyone to login
+	"api/logout",                // unprotected to allow anyone to logout
+	"/api/crowdsourcedusers",    // unprotected to allow any crowd sourced user to participate
+	"/api/email",                // unprotected to allow anyone to send a reset password email
+	"/api/users/changepassword", // unprotected to allow anyone to change password with a temp password
 }
 
 // CreateServer creates a HTTP server

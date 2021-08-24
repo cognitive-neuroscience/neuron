@@ -1,8 +1,9 @@
 package email
 
 import (
+	"bytes"
 	"errors"
-	"log"
+	"html/template"
 	"os"
 
 	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
@@ -18,31 +19,49 @@ import (
 type EmailBaseService struct{}
 
 type ForgotPasswordTemplate struct {
-	urlToken string
+	TemporaryPassword string
 }
 
-func (*EmailBaseService) SendForgotPasswordEmail() error {
-
+func (*EmailBaseService) SendForgotPasswordEmail(emailAddres string, tempPassword string) error {
+	errMsg := "there was an error resetting the password"
+	path, exists := os.LookupEnv("EMAIL_TEMPLATES_PATH")
+	if !exists {
+		axonlogger.ErrorLogger.Println("no connection details for the email templates path")
+		return errors.New(errMsg)
+	}
 	sendgridApiKey, exists := os.LookupEnv("SENDGRID_API_KEY")
 	if !exists {
-		return errors.New("no dev connection details")
+		axonlogger.ErrorLogger.Println("no connection details for the sendgrid API")
+		return errors.New(errMsg)
 	}
 
 	from := mail.NewEmail("sharplab", "sharplab.neuro@mcgill.ca")
-	to := mail.NewEmail("sharplab participant", "niconal902@gmail.com")
-	subject := "sending test email via sendgrid"
-	plainTextContent := "plain text content"
-	htmlContent := `<div style="color: red">hello!</div>`
-	message := mail.NewSingleEmail(from, subject, to, plainTextContent, htmlContent)
-	client := sendgrid.NewSendClient(sendgridApiKey)
-	res, err := client.Send(message)
+	to := mail.NewEmail("sharplab participant", emailAddres)
+
+	parsedTemplate, err := template.ParseFiles(path + "/forgotpassword/forgotpassword.html")
 	if err != nil {
+		axonlogger.ErrorLogger.Println("there was an error parsing the forgotpassword.html template", err)
+		return errors.New(errMsg)
+	}
+
+	var doc bytes.Buffer
+
+	fpt := ForgotPasswordTemplate{
+		TemporaryPassword: tempPassword,
+	}
+
+	if err := parsedTemplate.Execute(&doc, fpt); err != nil {
+		axonlogger.ErrorLogger.Println("error applying data to parsed HTML template", err)
+		return errors.New(errMsg)
+	}
+
+	subject := "SHARPLAB: Password Reset Email"
+	message := mail.NewSingleEmail(from, subject, to, doc.String(), doc.String())
+	client := sendgrid.NewSendClient(sendgridApiKey)
+	if _, err := client.Send(message); err != nil {
 		axonlogger.ErrorLogger.Println("could not send email", err)
 		return errors.New("there was an error with emailing")
-	} else {
-		log.Println(res.StatusCode)
-		log.Println(res.Body)
-		log.Println(res.Headers)
 	}
+	axonlogger.InfoLogger.Println("successfully sent forgot password email", emailAddres)
 	return nil
 }

@@ -51,6 +51,48 @@ func (u *UserService) SaveUser(user *models.User) models.HTTPStatus {
 	return userRepositoryImpl.SaveUser(user)
 }
 
+// UpdateUser updates the given user but not the password
+func (u *UserService) UpdateUser(receivedUser models.User) models.HTTPStatus {
+	userFromDB, err := userRepositoryImpl.GetUserById(receivedUser.ID)
+	if err != nil {
+		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "there was an error updating the user"}
+	}
+
+	userFromDB.Email = receivedUser.Email
+	userFromDB.ChangePasswordRequired = receivedUser.ChangePasswordRequired
+
+	return userRepositoryImpl.UpdateUser(&userFromDB)
+}
+
+func (u *UserService) ChangePassword(email string, tempPassword string, newPassword string) models.HTTPStatus {
+	if isCorrect := passwordIsCorrect(tempPassword, newPassword); isCorrect {
+		if err := u.UpdatePasswordByEmail(email, newPassword); err != nil {
+			return models.HTTPStatus{Status: http.StatusInternalServerError, Message: err.Error()}
+		}
+		return models.HTTPStatus{Status: http.StatusOK, Message: "updated password"}
+	}
+	return models.HTTPStatus{Status: http.StatusUnprocessableEntity, Message: "password is incorrect"}
+}
+
+func (u *UserService) UpdatePasswordByEmail(email string, newPassword string) error {
+	const errMsg = "there was an error resetting the password"
+	user, err := userRepositoryImpl.GetUserByEmail(email)
+	if err != nil {
+		return errors.New(errMsg)
+	}
+	hashedPassword, err := hashAndSalt(newPassword)
+	if err != nil {
+		return errors.New(errMsg)
+	}
+
+	user.Password = hashedPassword
+
+	if httpStatus := userRepositoryImpl.UpdateUser(&user); httpStatus.Status != http.StatusOK {
+		return errors.New(httpStatus.Message)
+	}
+	return nil
+}
+
 func (u *UserService) RegisterCrowdsourcedUserCompletion(participantId string, studyId string) (string, error) {
 	studyUintId, err := convertStringToUint8(studyId)
 	if err != nil {

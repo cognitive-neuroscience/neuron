@@ -29,6 +29,7 @@ func setUpUserRoutes(group *echo.Group) {
 	users.POST("", userControllerImpl.SaveUser)
 	users.GET("/guests", userControllerImpl.GetGuests)
 	users.DELETE("/:id", userControllerImpl.DeleteUserById)
+	users.POST("/changepassword", userControllerImpl.ChangePassword)
 }
 
 func setUpStudyUserRoutes(group *echo.Group) {
@@ -86,5 +87,5 @@ func setUpTaskRoutes(group *echo.Group) {
 func setUpEmailRoutes(group *echo.Group) {
 	emailControllerImpl := controllers.EmailController{}
 	email := group.Group("/email")
-	email.GET("", emailControllerImpl.SendEmail)
+	email.POST("", emailControllerImpl.SendEmail)
 }

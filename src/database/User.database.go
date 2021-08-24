@@ -21,12 +21,25 @@ type UserRepository struct {
  * This file is for saving/deleting/retrieving user data
  */
 
+// UpdateUser updates the given user in the db
+func (u *UserRepository) UpdateUser(user *models.User) (operationStatus models.HTTPStatus) {
+	db := db.DB
+
+	var updateUserInDB = `UPDATE user SET email = ?, password = ?, role = ?, change_password_required = ? WHERE id = ?;`
+	if _, err := db.Exec(updateUserInDB, user.Email, user.Password, user.Role, user.ChangePasswordRequired, user.ID); err != nil {
+		axonlogger.ErrorLogger.Println("Error updating user from DB", err)
+		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "there wa sa problem updating the user"}
+	}
+	axonlogger.InfoLogger.Println("Successfully updated user:", user.Email, user.ID, user.Role, user.ChangePasswordRequired)
+	return models.HTTPStatus{Status: http.StatusOK, Message: "user updated"}
+}
+
 // SaveUser saves a user in the database
 func (u *UserRepository) SaveUser(user *models.User) (operationStatus models.HTTPStatus) {
 	db := db.DB
 
-	var saveUserIntoDB = `INSERT INTO users (email, password, role, created_at) VALUES (?, ?, ?, ?);`
-	_, err := db.Exec(saveUserIntoDB, user.Email, user.Password, user.Role, time.Now().UTC())
+	var saveUserIntoDB = `INSERT INTO users (email, password, role, created_at, change_password_required) VALUES (?, ?, ?, ?, ?);`
+	_, err := db.Exec(saveUserIntoDB, user.Email, user.Password, user.Role, time.Now().UTC(), false)
 
 	if err != nil {
 		axonlogger.ErrorLogger.Println("Error saving user into DB", err)
