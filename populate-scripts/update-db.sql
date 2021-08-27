@@ -882,7 +882,7 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Note that for the first two letters of the task, there is no letter to compare to, so you just press ⬅️ for these"
+                            "textContent": "But now you would press ⬅️ for this K because is it <b>NOT THE SAME</b> as the letter presented 2 letters ago."
                         },
                         {
                             "sectionType": "text",
