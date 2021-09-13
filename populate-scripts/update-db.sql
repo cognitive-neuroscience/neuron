@@ -12380,91 +12380,90 @@ UPDATE tasks SET
                     "required": true
                 },
                 "allowMultipleSelections": true,
-                "multipleChoiceOptions": [
-                    {
-                        "label": "Cancer",
-                        "value": "Cancer"
-                    },
-                    {
-                        "label": "Myocardial infarction or angina (heart attack)",
-                        "value": "Myocardial infarction or angina"
-                    },
-                    {
-                        "label": "Transient ischemic attack (TIA)",
-                        "value": "TIA"
-                    },
-                    {
-                        "label": "Cerebrovascular accident (stroke)",
-                        "value": "Stroke"
-                    },
-                    {
-                        "label": "Epilepsy or seizures",
-                        "value": "Epilepsy or seizures"
-                    },
-                    {
-                        "label": "Major head injury/trauma with lasting consequences",
-                        "value": "Major head injury/trauma with lasting consequences"
-                    },
-                    {
-                        "label": "Respiratory problems",
-                        "value": "Respiratory problems"
-                    },
-                    {
-                        "label": "Lung disease",
-                        "value": "Lung disease"
-                    },
-                    {
-                        "label": "Anemia or other blood disease",
-                        "value": "Anemia or other blood disease"
-                    },
-                    {
-                        "label": "Hypertension (high blood pressure)",
-                        "value": "Hypertension"
-                    },
-                    {
-                        "label": "Hypotension (low blood pressure)",
-                        "value": "Hypotension"
-                    },
-                    {
-                        "label": "Diabetes",
-                        "value": "Diabetes"
-                    },
-                    {
-                        "label": "Hypercholesterolemia (high cholesterol)",
-                        "value": "Hypercholesterolemia"
-                    },
-                    {
-                        "label": "Ulcers or stomach disease",
-                        "value": "Ulcers or stomach disease"
-                    },
-                    {
-                        "label": "Inflammatory bowel disease (IBD)",
-                        "value": "IBD"
-                    },
-                    {
-                        "label": "Liver disease",
-                        "value": "Liver disease"
-                    },
-                    {
-                        "label": "Kidney disease",
-                        "value": "Kidney disease"
-                    },
-                    {
-                        "label": "Osteoarthritis (degenerative)",
-                        "value": "Osteoarthritis (degenerative)"
-                    },
-                    {
-                        "label": "Rheumatoid Arthritis (i.e. autoimmune arthritis)",
-                        "value": "Rheumatoid Arthritis"
-                    },
-                    {
-                        "label": "Other",
-                        "value": "Other"
-                    },
-                    {
-                        "label": "None of these",
-                        "value": "None of these"
-                    }
+                "multipleChoiceOptions": [{
+                    "label": "Cancer",
+                    "value": "Cancer"
+                },
+                {
+                    "label": "Myocardial infarction or angina (heart attack)",
+                    "value": "Myocardial infarction or angina"
+                },
+                {
+                    "label": "Transient ischemic attack (TIA)",
+                    "value": "TIA"
+                },
+                {
+                    "label": "Cerebrovascular accident (stroke)",
+                    "value": "Stroke"
+                },
+                {
+                    "label": "Epilepsy or seizures",
+                    "value": "Epilepsy or seizures"
+                },
+                {
+                    "label": "Major head injury/trauma with lasting consequences",
+                    "value": "Major head injury/trauma with lasting consequences"
+                },
+                {
+                    "label": "Respiratory problems",
+                    "value": "Respiratory problems"
+                },
+                {
+                    "label": "Lung disease",
+                    "value": "Lung disease"
+                },
+                {
+                    "label": "Anemia or other blood disease",
+                    "value": "Anemia or other blood disease"
+                },
+                {
+                    "label": "Hypertension (high blood pressure)",
+                    "value": "Hypertension"
+                },
+                {
+                    "label": "Hypotension (low blood pressure)",
+                    "value": "Hypotension"
+                },
+                {
+                    "label": "Diabetes",
+                    "value": "Diabetes"
+                },
+                {
+                    "label": "Hypercholesterolemia (high cholesterol)",
+                    "value": "Hypercholesterolemia"
+                },
+                {
+                    "label": "Ulcers or stomach disease",
+                    "value": "Ulcers or stomach disease"
+                },
+                {
+                    "label": "Inflammatory bowel disease (IBD)",
+                    "value": "IBD"
+                },
+                {
+                    "label": "Liver disease",
+                    "value": "Liver disease"
+                },
+                {
+                    "label": "Kidney disease",
+                    "value": "Kidney disease"
+                },
+                {
+                    "label": "Osteoarthritis (degenerative)",
+                    "value": "Osteoarthritis (degenerative)"
+                },
+                {
+                    "label": "Rheumatoid Arthritis (i.e. autoimmune arthritis)",
+                    "value": "Rheumatoid Arthritis"
+                },
+                {
+                    "label": "Other",
+                    "value": "Other"
+                },
+                {
+                    "label": "None of these",
+                    "value": "None of these"
+                }
                 ]
             },
             {
@@ -12482,43 +12481,42 @@ UPDATE tasks SET
                     "required": true
                 },
                 "allowMultipleSelections": true,
-                "multipleChoiceOptions": [
-                    {
-                        "label": "Depression - currently under treatment",
-                        "value": "Depression - currently under treatment"
-                    },
-                    {
-                        "label": "Depression - but not currently receiving treatment",
-                        "value": "Depression - but not currently receiving treatment"
-                    },
-                    {
-                        "label": "Anxiety - currently under treatment",
-                        "value": "Anxiety - currently under treatment"
-                    },
-                    {
-                        "label": "Anxiety - but not currently receiving treatment",
-                        "value": "Anxiety - but not currently receiving treatment"
-                    },
-                    {
-                        "label": "Obsessive Compulsive Disorder",
-                        "value": "Obsessive Compulsive Disorder"
-                    },
-                    {
-                        "label": "Bipolar Disorder",
-                        "value": "Bipolar Disorder"
-                    },
-                    {
-                        "label": "Schizophrenia",
-                        "value": "Schizophrenia"
-                    },
-                    {
-                        "label": "Other",
-                        "value": "Other"
-                    },
-                    {
-                        "label": "No history of mental health problems",
-                        "value": "No history of mental health problems"
-                    }
+                "multipleChoiceOptions": [{
+                    "label": "Depression - currently under treatment",
+                    "value": "Depression - currently under treatment"
+                },
+                {
+                    "label": "Depression - but not currently receiving treatment",
+                    "value": "Depression - but not currently receiving treatment"
+                },
+                {
+                    "label": "Anxiety - currently under treatment",
+                    "value": "Anxiety - currently under treatment"
+                },
+                {
+                    "label": "Anxiety - but not currently receiving treatment",
+                    "value": "Anxiety - but not currently receiving treatment"
+                },
+                {
+                    "label": "Obsessive Compulsive Disorder",
+                    "value": "Obsessive Compulsive Disorder"
+                },
+                {
+                    "label": "Bipolar Disorder",
+                    "value": "Bipolar Disorder"
+                },
+                {
+                    "label": "Schizophrenia",
+                    "value": "Schizophrenia"
+                },
+                {
+                    "label": "Other",
+                    "value": "Other"
+                },
+                {
+                    "label": "No history of mental health problems",
+                    "value": "No history of mental health problems"
+                }
                 ]
             },
             {
@@ -12531,19 +12529,18 @@ UPDATE tasks SET
                 "validation": {
                     "required": true
                 },
-                "multipleChoiceOptions": [
-                    {
-                        "label": "No, have not gone through menopause",
-                        "value": "No, have not gone through menopause"
-                    },
-                    {
-                        "label": "Yes, have gone through menopause",
-                        "value": "Yes, have gone through menopause"
-                    },
-                    {
-                        "label": "Not applicable",
-                        "value": "Not applicable"
-                    }
+                "multipleChoiceOptions": [{
+                    "label": "No, have not gone through menopause",
+                    "value": "No, have not gone through menopause"
+                },
+                {
+                    "label": "Yes, have gone through menopause",
+                    "value": "Yes, have gone through menopause"
+                },
+                {
+                    "label": "Not applicable",
+                    "value": "Not applicable"
+                }
                 ]
             },
             {
@@ -12553,19 +12550,18 @@ UPDATE tasks SET
                 "validation": {
                     "required": true
                 },
-                "multipleChoiceOptions": [
-                        {
-                        "label": "Excellent",
-                        "value": "Excellent"
-                    },
-                    {
-                        "label": "Good",
-                        "value": "Good"
-                    },
-                    {
-                        "label": "Poor",
-                        "value": "Poor"
-                    }
+                "multipleChoiceOptions": [{
+                    "label": "Excellent",
+                    "value": "Excellent"
+                },
+                {
+                    "label": "Good",
+                    "value": "Good"
+                },
+                {
+                    "label": "Poor",
+                    "value": "Poor"
+                }
                 ]
             },
             {
@@ -12576,15 +12572,14 @@ UPDATE tasks SET
                     "required": true
                 },
                 "radiobuttonPresentation": "vertical",
-                "multipleChoiceOptions": [
-                        {
-                        "label": "Yes",
-                        "value": "Yes"
-                    },
-                    {
-                        "label": "No",
-                        "value": "No"
-                    }
+                "multipleChoiceOptions": [{
+                    "label": "Yes",
+                    "value": "Yes"
+                },
+                {
+                    "label": "No",
+                    "value": "No"
+                }
                 ]
             },
             {
@@ -12594,23 +12589,26 @@ UPDATE tasks SET
                 "validation": {
                     "required": true
                 },
-                "multipleChoiceOptions": [
-                    {
-                        "label": "1",
-                        "value": "1"
-                    },
-                    {
-                        "label": "2 to 5",
-                        "value": "2 to 5"
-                    },
-                    {
-                        "label": "6 to 10",
-                        "value": "6 to 10"
-                    },
-                    {
-                        "label": "More than 10",
-                        "value": "More than 10"
-                    }
+                "multipleChoiceOptions": [{
+                    "label": "None",
+                    "value": "None"
+                },
+                {
+                    "label": "1",
+                    "value": "1"
+                },
+                {
+                    "label": "2 to 5",
+                    "value": "2 to 5"
+                },
+                {
+                    "label": "6 to 10",
+                    "value": "6 to 10"
+                },
+                {
+                    "label": "More than 10",
+                    "value": "More than 10"
+                }
                 ]
             },
             {
@@ -12627,27 +12625,26 @@ UPDATE tasks SET
                 "validation": {
                     "required": true
                 },
-                "multipleChoiceOptions": [
-                    {
-                        "label": "Single, never married, or never lived with a partner",
-                        "value": "Single, never married, or never lived with a partner"
-                    },
-                    {
-                        "label": "Married/Living with a partner in a domestic relationship",
-                        "value": "Married/Living with a partner in a domestic relationship"
-                    },
-                    {
-                        "label": "Widowed",
-                        "value": "Widowed"
-                    },
-                    {
-                        "label": "Divorced/Separated",
-                        "value": "Divorced/Separated"
-                    },
-                    {
-                        "label": "Do not wish to disclose",
-                        "value": "Do not wish to disclose"
-                    }
+                "multipleChoiceOptions": [{
+                    "label": "Single, never married, or never lived with a partner",
+                    "value": "Single, never married, or never lived with a partner"
+                },
+                {
+                    "label": "Married/Living with a partner in a domestic relationship",
+                    "value": "Married/Living with a partner in a domestic relationship"
+                },
+                {
+                    "label": "Widowed",
+                    "value": "Widowed"
+                },
+                {
+                    "label": "Divorced/Separated",
+                    "value": "Divorced/Separated"
+                },
+                {
+                    "label": "Do not wish to disclose",
+                    "value": "Do not wish to disclose"
+                }
                 ]
             },
             {
@@ -12657,39 +12654,38 @@ UPDATE tasks SET
                 "validation": {
                     "required": true
                 },
-                "multipleChoiceOptions": [
-                    {
-                        "label": "Living alone",
-                        "value": "Living alone"
-                    },
-                    {
-                        "label": "Living with spouse/partner/significant other",
-                        "value": "Living with spouse/partner/significant other"
-                    },
-                    {
-                        "label": "Living with adult child/children",
-                        "value": "Living with adult child/children"
-                    },
-                    {
-                        "label": "Living with other family",
-                        "value": "Living with other family"
-                    },
-                    {
-                        "label": "Living with paid in-home care provider/aide",
-                        "value": "Living with paid in-home care provider/aide"
-                    },
-                    {
-                        "label": "Living in assisted living facility",
-                        "value": "Living in assisted living facility"
-                    },
-                    {
-                        "label": "Living in nursing home",
-                        "value": "Living in nursing home"
-                    },
-                    {
-                        "label": "Other",
-                        "value": "Other"
-                    }
+                "multipleChoiceOptions": [{
+                    "label": "Living alone",
+                    "value": "Living alone"
+                },
+                {
+                    "label": "Living with spouse/partner/significant other",
+                    "value": "Living with spouse/partner/significant other"
+                },
+                {
+                    "label": "Living with adult child/children",
+                    "value": "Living with adult child/children"
+                },
+                {
+                    "label": "Living with other family",
+                    "value": "Living with other family"
+                },
+                {
+                    "label": "Living with paid in-home care provider/aide",
+                    "value": "Living with paid in-home care provider/aide"
+                },
+                {
+                    "label": "Living in assisted living facility",
+                    "value": "Living in assisted living facility"
+                },
+                {
+                    "label": "Living in nursing home",
+                    "value": "Living in nursing home"
+                },
+                {
+                    "label": "Other",
+                    "value": "Other"
+                }
                 ]
             },
             {
@@ -12699,27 +12695,26 @@ UPDATE tasks SET
                 "validation": {
                     "required": true
                 },
-                "multipleChoiceOptions": [
-                    {
-                        "label": "Heterosexual (sexual relations with people of the opposite sex)",
-                        "value": "Heterosexual"
-                    },
-                    {
-                        "label": "Homosexual, that is lesbian or gay (sexual relations with people of your own sex)",
-                        "value": "Homosexual"
-                    },
-                    {
-                        "label": "Bisexual (sexual relations with people of both sexes)",
-                        "value": "Bisexual"
-                    },
-                    {
-                        "label": "Other",
-                        "value": "Other"
-                    },
-                    {
-                        "label": "Do not wish to answer",
-                        "value": "Do not wish to answer"
-                    }
+                "multipleChoiceOptions": [{
+                    "label": "Heterosexual (sexual relations with people of the opposite sex)",
+                    "value": "Heterosexual"
+                },
+                {
+                    "label": "Homosexual, that is lesbian or gay (sexual relations with people of your own sex)",
+                    "value": "Homosexual"
+                },
+                {
+                    "label": "Bisexual (sexual relations with people of both sexes)",
+                    "value": "Bisexual"
+                },
+                {
+                    "label": "Other",
+                    "value": "Other"
+                },
+                {
+                    "label": "Do not wish to answer",
+                    "value": "Do not wish to answer"
+                }
                 ]
             },
             {
@@ -12729,31 +12724,34 @@ UPDATE tasks SET
                 "validation": {
                     "required": true
                 },
-                "multipleChoiceOptions": [
-                    {
-                        "label": "Less than $20,000",
-                        "value": "Less than $20,000"
-                    },
-                    {
-                        "label": "$20,000 or more, but less than $50,000",
-                        "value": "$20,000 or more, but less than $50,000"
-                    },
-                    {
-                        "label": "$50,000 or more, but less than $100,000",
-                        "value": "$50,000 or more, but less than $100,000"
-                    },
-                    {
-                        "label": "$150,000 or more",
-                        "value": "$150,000 or more"
-                    },
-                    {
-                        "label": "Do not know",
-                        "value": "Do not know"
-                    },
-                    {
-                        "label": "Do not wish to answer",
-                        "value": "Do not wish to answer"
-                    }
+                "multipleChoiceOptions": [{
+                    "label": "Less than $20,000",
+                    "value": "Less than $20,000"
+                },
+                {
+                    "label": "$20,000 or more, but less than $50,000",
+                    "value": "$20,000 or more, but less than $50,000"
+                },
+                {
+                    "label": "$50,000 or more, but less than $100,000",
+                    "value": "$50,000 or more, but less than $100,000"
+                },
+                {
+                    "label": "$100,000 or more, but less than $150,000",
+                    "value": "$100,000 or more, but less than $150,000"
+                },
+                {
+                    "label": "$150,000 or more",
+                    "value": "$150,000 or more"
+                },
+                {
+                    "label": "Do not know",
+                    "value": "Do not know"
+                },
+                {
+                    "label": "Do not wish to answer",
+                    "value": "Do not wish to answer"
+                }
                 ]
             },
             {
@@ -12763,43 +12761,42 @@ UPDATE tasks SET
                 "validation": {
                     "required": true
                 },
-                "multipleChoiceOptions": [
-                    {
-                        "label": "Employed Full-time (30+ hours a week)",
-                        "value": "Full-time"
-                    },
-                    {
-                        "label": "Employed Part-time",
-                        "value": "Part-time"
-                    },
-                    {
-                        "label": "Unemployed",
-                        "value": "Unemployed"
-                    },
-                    {
-                        "label": "Disability Leave",
-                        "value": "Disability Leave"
-                    },
-                    {
-                        "label": "Homemaker",
-                        "value": "Homemaker"
-                    },
-                    {
-                        "label": "Student",
-                        "value": "Student"
-                    },
-                    {
-                        "label": "Volunteer",
-                        "value": "Volunteer"
-                    },
-                    {
-                        "label": "Retired",
-                        "value": "Retired"
-                    },
-                    {
-                        "label": "Do not wish to answer",
-                        "value": "Do not wish to answer"
-                    }
+                "multipleChoiceOptions": [{
+                    "label": "Employed Full-time (30+ hours a week)",
+                    "value": "Full-time"
+                },
+                {
+                    "label": "Employed Part-time",
+                    "value": "Part-time"
+                },
+                {
+                    "label": "Unemployed",
+                    "value": "Unemployed"
+                },
+                {
+                    "label": "Disability Leave",
+                    "value": "Disability Leave"
+                },
+                {
+                    "label": "Homemaker",
+                    "value": "Homemaker"
+                },
+                {
+                    "label": "Student",
+                    "value": "Student"
+                },
+                {
+                    "label": "Volunteer",
+                    "value": "Volunteer"
+                },
+                {
+                    "label": "Retired",
+                    "value": "Retired"
+                },
+                {
+                    "label": "Do not wish to answer",
+                    "value": "Do not wish to answer"
+                }
                 ]
             },
             {
@@ -12816,31 +12813,30 @@ UPDATE tasks SET
                 "validation": {
                     "required": true
                 },
-                "multipleChoiceOptions": [
-                    {
-                        "label": "Alcohol",
-                        "value": "Alcohol"
-                    },
-                    {
-                        "label": "Cigarettes",
-                        "value": "Cigarettes"
-                    },
-                    {
-                        "label": "Other tobacco products",
-                        "value": "Other tobacco products"
-                    },
-                    {
-                        "label": "Recreational drugs",
-                        "value": "Recreational drugs"
-                    },
-                    {
-                        "label": "Cannabis",
-                        "value": "Cannabis"
-                    },
-                    {
-                        "label": "None of the above",
-                        "value": "None of the above"
-                    }
+                "multipleChoiceOptions": [{
+                    "label": "Alcohol",
+                    "value": "Alcohol"
+                },
+                {
+                    "label": "Cigarettes",
+                    "value": "Cigarettes"
+                },
+                {
+                    "label": "Other tobacco products",
+                    "value": "Other tobacco products"
+                },
+                {
+                    "label": "Recreational drugs",
+                    "value": "Recreational drugs"
+                },
+                {
+                    "label": "Cannabis",
+                    "value": "Cannabis"
+                },
+                {
+                    "label": "None of the above",
+                    "value": "None of the above"
+                }
                 ]
             },
             {
@@ -12850,20 +12846,18 @@ UPDATE tasks SET
                 "validation": {
                     "required": true
                 },
-                "multipleChoiceOptions": [
-                    {
-                        "label": "Yes",
-                        "value": "Yes"
-                    },
-                    {
-                        "label": "No",
-                        "value": "No"
-                    },
-                    {
-                        "label": "Don''t know",
-                        "value": "Don''t know"
-                    }
-                ]
+                "multipleChoiceOptions": [{
+                    "label": "Yes",
+                    "value": "Yes"
+                },
+                {
+                    "label": "No",
+                    "value": "No"
+                },
+                {
+                    "label": "Don''t know",
+                    "value": "Don''t know"
+                }]
             },
             {
                 "questionType": "multipleChoiceSelect",
@@ -12872,39 +12866,42 @@ UPDATE tasks SET
                 "validation": {
                     "required": true
                 },
-                "multipleChoiceOptions": [
-                    {
-                        "label": "Current smoker: 20 or more cigarettes per day",
-                        "value": "Current smoker: 20 or more cigarettes per day"
-                    },
-                    {
-                        "label": "Current smoker: 10-19 cigarettes per day",
-                        "value": "Current smoker: 10-19 cigarettes per day"
-                    },
-                    {
-                        "label": "Current smoker: 0-9 cigarettes per day",
-                        "value": "Current smoker: 0-9 cigarettes per day"
-                    },
-                    {
-                        "label": "Quit in last year",
-                        "value": "Quit in last year"
-                    },
-                    {
-                        "label": "Quit in last 5 years",
-                        "value": "Quit in last 5 years"
-                    },
-                    {
-                        "label": "Quit in last 15 years",
-                        "value": "Quit in last 15 years"
-                    },
-                    {
-                        "label": "Quit in last 15 years",
-                        "value": "Quit in last 15 years"
-                    },
-                    {
-                        "label": "Quit >25 years ago",
-                        "value": "Quit >25 years ago"
-                    }
+                "multipleChoiceOptions": [{
+                    "label": "Not a smoker",
+                    "value": "Not a smoker"
+                },
+                {
+                    "label": "Current smoker: 20 or more cigarettes per day",
+                    "value": "Current smoker: 20 or more cigarettes per day"
+                },
+                {
+                    "label": "Current smoker: 10-19 cigarettes per day",
+                    "value": "Current smoker: 10-19 cigarettes per day"
+                },
+                {
+                    "label": "Current smoker: 0-9 cigarettes per day",
+                    "value": "Current smoker: 0-9 cigarettes per day"
+                },
+                {
+                    "label": "Quit in last year",
+                    "value": "Quit in last year"
+                },
+                {
+                    "label": "Quit in last 5 years",
+                    "value": "Quit in last 5 years"
+                },
+                {
+                    "label": "Quit in last 15 years",
+                    "value": "Quit in last 15 years"
+                },
+                {
+                    "label": "Quit in last 15 years",
+                    "value": "Quit in last 15 years"
+                },
+                {
+                    "label": "Quit >25 years ago",
+                    "value": "Quit >25 years ago"
+                }
                 ]
             },
             {
@@ -12914,20 +12911,18 @@ UPDATE tasks SET
                 "validation": {
                     "required": true
                 },
-                "multipleChoiceOptions": [
-                    {
-                        "label": "Yes",
-                        "value": "Yes"
-                    },
-                    {
-                        "label": "No",
-                        "value": "No"
-                    },
-                    {
-                        "label": "Do not wish to answer",
-                        "value": "Do not wish to answer"
-                    }
-                ]
+                "multipleChoiceOptions": [{
+                    "label": "Yes",
+                    "value": "Yes"
+                },
+                {
+                    "label": "No",
+                    "value": "No"
+                },
+                {
+                    "label": "Do not wish to answer",
+                    "value": "Do not wish to answer"
+                }]
             },
             {
                 "questionType": "multipleChoiceSelect",
@@ -12936,43 +12931,42 @@ UPDATE tasks SET
                 "validation": {
                     "required": true
                 },
-                "multipleChoiceOptions": [
-                    {
-                        "label": "Almost every day (6-7 times a week)",
-                        "value": "Almost every day"
-                    },
-                    {
-                        "label": "4-5 times a week",
-                        "value": "4-5 times a week"
-                    },
-                    {
-                        "label": "2-3 times a week",
-                        "value": "2-3 times a week"
-                    },
-                    {
-                        "label": "Once a week",
-                        "value": "Once a week"
-                    },
-                    {
-                        "label": "2-3 times a month",
-                        "value": "2-3 times a month"
-                    },
-                    {
-                        "label": "About once a month",
-                        "value": "Once a month"
-                    },
-                    {
-                        "label": "Less than once a month",
-                        "value": "Less than once a month"
-                    },
-                    {
-                        "label": "Never",
-                        "value": "Never"
-                    },
-                    {
-                        "label": "Do not wish to answer",
-                        "value": "Do not wish to answer"
-                    }
+                "multipleChoiceOptions": [{
+                    "label": "Almost every day (6-7 times a week)",
+                    "value": "Almost every day"
+                },
+                {
+                    "label": "4-5 times a week",
+                    "value": "4-5 times a week"
+                },
+                {
+                    "label": "2-3 times a week",
+                    "value": "2-3 times a week"
+                },
+                {
+                    "label": "Once a week",
+                    "value": "Once a week"
+                },
+                {
+                    "label": "2-3 times a month",
+                    "value": "2-3 times a month"
+                },
+                {
+                    "label": "About once a month",
+                    "value": "Once a month"
+                },
+                {
+                    "label": "Less than once a month",
+                    "value": "Less than once a month"
+                },
+                {
+                    "label": "Never",
+                    "value": "Never"
+                },
+                {
+                    "label": "Do not wish to answer",
+                    "value": "Do not wish to answer"
+                }
                 ]
             },
             {
@@ -12982,27 +12976,26 @@ UPDATE tasks SET
                 "validation": {
                     "required": true
                 },
-                "multipleChoiceOptions": [
-                    {
-                        "label": "Every day",
-                        "value": "Every day"
-                    },
-                    {
-                        "label": "Several times a week",
-                        "value": "Several times a week"
-                    },
-                    {
-                        "label": "Several times a month",
-                        "value": "Several times a month"
-                    },
-                    {
-                        "label": "Several times a year",
-                        "value": "Several times a year"
-                    },
-                    {
-                        "label": "Once a year or less",
-                        "value": "Once a year or less"
-                    }
+                "multipleChoiceOptions": [{
+                    "label": "Every day",
+                    "value": "Every day"
+                },
+                {
+                    "label": "Several times a week",
+                    "value": "Several times a week"
+                },
+                {
+                    "label": "Several times a month",
+                    "value": "Several times a month"
+                },
+                {
+                    "label": "Several times a year",
+                    "value": "Several times a year"
+                },
+                {
+                    "label": "Once a year or less",
+                    "value": "Once a year or less"
+                }
                 ]
             },
             {
@@ -13012,23 +13005,22 @@ UPDATE tasks SET
                 "validation": {
                     "required": true
                 },
-                "multipleChoiceOptions": [
-                    {
-                        "label": "Less than 1 time per week",
-                        "value": "Less than 1 time per week"
-                    },
-                    {
-                        "label": "1 to 2 days per week",
-                        "value": "1 to 2 days per week"
-                    },
-                    {
-                        "label": "3 to 5 days per week",
-                        "value": "3 to 5 days per week"
-                    },
-                    {
-                        "label": "6 to 7 days per week",
-                        "value": "6 to 7 days per week"
-                    }
+                "multipleChoiceOptions": [{
+                    "label": "Less than 1 time per week",
+                    "value": "Less than 1 time per week"
+                },
+                {
+                    "label": "1 to 2 days per week",
+                    "value": "1 to 2 days per week"
+                },
+                {
+                    "label": "3 to 5 days per week",
+                    "value": "3 to 5 days per week"
+                },
+                {
+                    "label": "6 to 7 days per week",
+                    "value": "6 to 7 days per week"
+                }
                 ]
             },
             {
@@ -13038,23 +13030,22 @@ UPDATE tasks SET
                 "validation": {
                     "required": true
                 },
-                "multipleChoiceOptions": [
-                    {
-                        "label": "Less than 30 minutes",
-                        "value": "Less than 30 minutes"
-                    },
-                    {
-                        "label": "30 to 60 minutes",
-                        "value": "30 to 60 minutes"
-                    },
-                    {
-                        "label": "1 to 2 hours",
-                        "value": "1 to 2 hours"
-                    },
-                    {
-                        "label": "More than 2 hours",
-                        "value": "More than 2 hours"
-                    }
+                "multipleChoiceOptions": [{
+                    "label": "Less than 30 minutes",
+                    "value": "Less than 30 minutes"
+                },
+                {
+                    "label": "30 to 60 minutes",
+                    "value": "30 to 60 minutes"
+                },
+                {
+                    "label": "1 to 2 hours",
+                    "value": "1 to 2 hours"
+                },
+                {
+                    "label": "More than 2 hours",
+                    "value": "More than 2 hours"
+                }
                 ]
             },
             {
@@ -13071,42 +13062,40 @@ UPDATE tasks SET
                 "validation": {
                     "required": true
                 },
-                "multipleChoiceOptions": [
-                    {
-                        "label": "All of the time (5-7 days per week)",
-                        "value": "All of the time"
-                    },
-                    {
-                        "label": "Occasionally (3-4 days per week)",
-                        "value": "Occasionally"
-                    },
-                    {
-                        "label": "Some of the time (1-2 days per week)",
-                        "value": "Some of the time"
-                    },
-                    {
-                        "label": "Rarely or never (less than 1 day per week)",
-                        "value": "Rarely or never"
-                    }
+                "multipleChoiceOptions": [{
+                    "label": "All of the time (5-7 days per week)",
+                    "value": "All of the time"
+                },
+                {
+                    "label": "Occasionally (3-4 days per week)",
+                    "value": "Occasionally"
+                },
+                {
+                    "label": "Some of the time (1-2 days per week)",
+                    "value": "Some of the time"
+                },
+                {
+                    "label": "Rarely or never (less than 1 day per week)",
+                    "value": "Rarely or never"
+                }
                 ]
             },
             {
                 "questionType": "radiobuttons",
-                "title": "Have you ever been told, or suspected yourself, that you seem to \\"act out your dreams\\" while asleep (for example, punching, flailing your arms in the air, making running movements, etc.)?",
+                "title": "Have you ever been told, or suspected yourself, that you seem to ''act out your dreams'' while asleep (for example, punching, flailing your arms in the air, making running movements, etc.)?",
                 "key": "actOutSleep",
                 "validation": {
                     "required": true
                 },
                 "radiobuttonPresentation": "vertical",
-                "multipleChoiceOptions": [
-                    {
-                        "label": "Yes",
-                        "value": "Yes"
-                    },
-                    {
-                        "label": "No",
-                        "value": "No"
-                    }
+                "multipleChoiceOptions": [{
+                    "label": "Yes",
+                    "value": "Yes"
+                },
+                {
+                    "label": "No",
+                    "value": "No"
+                }
                 ]
             }
         ]
