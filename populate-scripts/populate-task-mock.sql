@@ -1032,218 +1032,220 @@ task_order = 4;
 -- STROOP
 UPDATE study_tasks SET config = 
 '{
-    "config": {
-        "counterBalanceGroups": {
-            "1": 1,
-            "2": 2,
-            "3": 3,
-            "4": 4
-        }
-    },
-    "metadata": [
-        {
-            "component": "DISPLAYCOMPONENT",
-            "content": {
-                "title": "Welcome to the Stroop Task",
-                "sections": [
-                    {
-                        "sectionType": "text",
-                        "textContent": "Read the instructions carefully."
-                    },
-                    {
-                        "sectionType": "text",
-                        "textContent": "In this task, different words for colors (Ex. \\"BLUE\\") will be presented in different colored ink:"
-                    },
-                    {
-                        "sectionType": "image-square",
-                        "imagePath": "/assets/images/instructions/strooptask/stroop_ink_examples.png"
-                    },
-                    {
-                        "sectionType": "text",
-                        "textContent": "You have to response to the <b>COLOR</b> of the ink that the word is printed in, <b>NOT</b> the word itself."
-                    },
-                    {
-                        "sectionType": "image-square",
-                        "imagePath": "/assets/images/instructions/strooptask/stroop_ink_instructions.png"
-                    },
-                    {
-                        "sectionType": "text",
-                        "textContent": "Click \\"NEXT\\" to proceed"
+        "config": {
+            "counterBalanceGroups": {
+                "1": 1,
+                "2": 2,
+                "3": 3,
+                "4": 4
+            }
+        },
+        "metadata": [
+            {
+                "component": "DISPLAYCOMPONENT",
+                "content": {
+                    "title": "Welcome to the Stroop Task",
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": "Read the instructions carefully."
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": "In this task, different words for colors (Ex. \\"BLUE\\") will be presented in different colored ink:"
+                        },
+                        {
+                            "sectionType": "image-square",
+                            "imagePath": "/assets/images/instructions/strooptask/stroop_ink_examples.png"
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": "You have to response to the <b>COLOR</b> of the ink that the word is printed in, <b>NOT</b> the word itself."
+                        },
+                        {
+                            "sectionType": "image-square",
+                            "imagePath": "/assets/images/instructions/strooptask/stroop_ink_instructions.png"
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": "Click \\"NEXT\\" to proceed"
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": false,
+                        "previousDisabled": true,
+                        "nextDisabled": false
                     }
-                ],
-                "buttons": {
-                    "isStart": false,
-                    "previousDisabled": true,
-                    "nextDisabled": false
                 }
-            }
-        },
-        {
-            "component": "DISPLAYCOMPONENT",
-            "content": {
-                "title": "Here are some examples",
-                "sections": [
-                    {
-                        "sectionType": "text",
-                        "textContent": "If you see \\"BLUE\\" with red ink then you should respond \\"1\\""
-                    },
-                    {
-                        "sectionType": "text",
-                        "textContent": "If you see \\"BLUE\\" with blue ink then you should respond \\"2\\"; etc..."
-                    },
-                    {
-                        "sectionType": "text",
-                        "textContent": "Again, only the COLOR of the ink matters, NOT the word itself."
-                    },
-                    {
-                        "sectionType": "text",
-                        "textContent": "Please use the number keys \\"1\\", \\"2\\", \\"3\\" on your keyboard to respond"
-                    },
-                    {
-                        "sectionType": "image-square",
-                        "imagePath": "/assets/images/instructions/strooptask/stroop_ink_instructions.png"
-                    },
-                    {
-                        "sectionType": "text",
-                        "textContent": "Click \\"NEXT\\" to proceed"
+            },
+            {
+                "component": "DISPLAYCOMPONENT",
+                "content": {
+                    "title": "Here are some examples",
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": "If you see \\"BLUE\\" with red ink then you should respond \\"1\\""
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": "If you see \\"BLUE\\" with blue ink then you should respond \\"2\\"; etc..."
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": "Again, only the COLOR of the ink matters, NOT the word itself."
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": "Please use the number keys \\"1\\", \\"2\\", \\"3\\" on your keyboard to respond"
+                        },
+                        {
+                            "sectionType": "image-square",
+                            "imagePath": "/assets/images/instructions/strooptask/stroop_ink_instructions.png"
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": "Click \\"NEXT\\" to proceed"
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": false,
+                        "previousDisabled": false,
+                        "nextDisabled": false
                     }
-                ],
-                "buttons": {
-                    "isStart": false,
-                    "previousDisabled": false,
-                    "nextDisabled": false
                 }
-            }
-        },
-        {
-            "component": "DISPLAYCOMPONENT",
-            "content": {
-                "title": "Practice Round",
-                "sections": [
-                    {
-                        "sectionType": "text",
-                        "textContent": "Let''s practice"
-                    },
-                    {
-                        "sectionType": "text",
-                        "textContent": "Good luck! You will have very little time to respond, so be ready"
-                    },
-                    {
-                        "sectionType": "image-square",
-                        "imagePath": "/assets/images/instructions/strooptask/stroop_ink_instructions.png"
-                    },
-                    {
-                        "sectionType": "text",
-                        "textContent": "The game will launch in fullscreen"
-                    },
-                    {
-                        "sectionType": "text",
-                        "textContent": "Click \\"START\\" when you are ready for the practice round"
+            },
+            {
+                "component": "DISPLAYCOMPONENT",
+                "content": {
+                    "title": "Practice Round",
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": "Let''s practice"
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": "Good luck! You will have very little time to respond, so be ready"
+                        },
+                        {
+                            "sectionType": "image-square",
+                            "imagePath": "/assets/images/instructions/strooptask/stroop_ink_instructions.png"
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": "The game will launch in fullscreen"
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": "Click \\"START\\" when you are ready for the practice round"
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": true,
+                        "previousDisabled": false,
+                        "nextDisabled": false
                     }
-                ],
-                "buttons": {
-                    "isStart": true,
-                    "previousDisabled": false,
-                    "nextDisabled": false
                 }
-            }
-        },
-        {
-            "component": "STROOPCOMPONENT",
-            "config": {
-                "isPractice": true,
-                "maxResponseTime": 2000,
-                "interTrialDelay": 0,
-                "showFeedbackAfterEachTrial": true,
-                "showScoreAfterEachTrial": false,
-                "durationOfFeedback": 500,
-                "durationFixationPresented": 1000,
-                "numTrials": 5,
-                "stimuliConfig": {
-                    "type": "generated",
-                    "stimuli": null
-                }
-            }
-        },
-        {
-            "component": "DISPLAYCOMPONENT",
-            "content": {
-                "title": "Practice round is now complete",
-                "sections": [
-                    {
-                        "sectionType": "text",
-                        "textContent": "You will now play the actual game"
-                    },
-                    {
-                        "sectionType": "text",
-                        "textContent": "You will earn 10 points for every right answer"
-                    },
-                    {
-                        "sectionType": "text",
-                        "textContent": "Good luck!"
-                    },
-                    {
-                        "sectionType": "image-square",
-                        "imagePath": "/assets/images/instructions/strooptask/stroop_ink_instructions.png"
-                    },
-                    {
-                        "sectionType": "text",
-                        "textContent": "Click \\"START\\" when you are ready for the actual game"
+            },
+            {
+                "component": "STROOPCOMPONENT",
+                "config": {
+                    "isPractice": true,
+                    "maxResponseTime": 2000,
+                    "interTrialDelay": 0,
+                    "showFeedbackAfterEachTrial": true,
+                    "showScoreAfterEachTrial": false,
+                    "durationOfFeedback": 500,
+                    "durationFixationPresented": 1000,
+                    "numTrials": 15,
+                    "numCongruent": 8,
+                    "stimuliConfig": {
+                        "type": "generated",
+                        "stimuli": null
                     }
-                ],
-                "buttons": {
-                    "isStart": true,
-                    "previousDisabled": true,
-                    "nextDisabled": false
                 }
-            }
-        },
-        {
-            "component": "STROOPCOMPONENT",
-            "config": {
-                "isPractice": false,
-                "maxResponseTime": 2000,
-                "interTrialDelay": 0,
-                "showFeedbackAfterEachTrial": false,
-                "showScoreAfterEachTrial": false,
-                "durationOfFeedback": 500,
-                "durationFixationPresented": 1000,
-                "numTrials": 10,
-                "stimuliConfig": {
-                    "type": "generated",
-                    "stimuli": null
-                }
-            }
-        },
-        {
-            "component": "DISPLAYCOMPONENT",
-            "content": {
-                "title": "Congratulations! You finished the game successfully",
-                "sections": [
-                    {
-                        "sectionType": "text",
-                        "injection": "cached-string",
-                        "cacheKey": "total-score",
-                        "textContent": "You scored: ??? points"
-                    },
-                    {
-                        "sectionType": "text",
-                        "textContent": "Thank you for your participation."
-                    },
-                    {
-                        "sectionType": "text",
-                        "textContent": "Click \\"NEXT\\" to proceed"
+            },
+            {
+                "component": "DISPLAYCOMPONENT",
+                "content": {
+                    "title": "Practice round is now complete",
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": "You will now play the actual game"
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": "You will earn 10 points for every right answer"
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": "Good luck!"
+                        },
+                        {
+                            "sectionType": "image-square",
+                            "imagePath": "/assets/images/instructions/strooptask/stroop_ink_instructions.png"
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": "Click \\"START\\" when you are ready for the actual game"
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": true,
+                        "previousDisabled": true,
+                        "nextDisabled": false
                     }
-                ],
-                "buttons": {
-                    "isStart": false,
-                    "previousDisabled": true,
-                    "nextDisabled": false
+                }
+            },
+            {
+                "component": "STROOPCOMPONENT",
+                "config": {
+                    "isPractice": false,
+                    "maxResponseTime": 2000,
+                    "interTrialDelay": 0,
+                    "showFeedbackAfterEachTrial": false,
+                    "showScoreAfterEachTrial": false,
+                    "durationOfFeedback": 500,
+                    "durationFixationPresented": 1000,
+                    "numTrials": 60,
+                    "numCongruent": 40,
+                    "stimuliConfig": {
+                        "type": "generated",
+                        "stimuli": null
+                    }
+                }
+            },
+            {
+                "component": "DISPLAYCOMPONENT",
+                "content": {
+                    "title": "Congratulations! You finished the game successfully",
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "injection": "cached-string",
+                            "cacheKey": "stroop-total-score",
+                            "textContent": "You scored: ??? points"
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": "Thank you for your participation."
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": "Click \\"NEXT\\" to proceed"
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": false,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
                 }
             }
-        }
-    ]
-}'
+        ]
+    }'
 WHERE 
 study_id = 1 AND 
 task_id = 4 AND

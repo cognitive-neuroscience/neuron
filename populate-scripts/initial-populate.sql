@@ -1177,6 +1177,7 @@ VALUES
                     "durationOfFeedback": 500,
                     "durationFixationPresented": 1000,
                     "numTrials": 15,
+                    "numCongruent": 8,
                     "stimuliConfig": {
                         "type": "generated",
                         "stimuli": null
@@ -1226,7 +1227,8 @@ VALUES
                     "showScoreAfterEachTrial": false,
                     "durationOfFeedback": 500,
                     "durationFixationPresented": 1000,
-                    "numTrials": 120,
+                    "numTrials": 60,
+                    "numCongruent": 40,
                     "stimuliConfig": {
                         "type": "generated",
                         "stimuli": null
@@ -1241,7 +1243,7 @@ VALUES
                         {
                             "sectionType": "text",
                             "injection": "cached-string",
-                            "cacheKey": "total-score",
+                            "cacheKey": "stroop-total-score",
                             "textContent": "You scored: ??? points"
                         },
                         {

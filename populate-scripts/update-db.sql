@@ -1168,6 +1168,7 @@ UPDATE tasks set
                     "durationOfFeedback": 500,
                     "durationFixationPresented": 1000,
                     "numTrials": 15,
+                    "numCongruent": 8,
                     "stimuliConfig": {
                         "type": "generated",
                         "stimuli": null
@@ -1217,7 +1218,8 @@ UPDATE tasks set
                     "showScoreAfterEachTrial": false,
                     "durationOfFeedback": 500,
                     "durationFixationPresented": 1000,
-                    "numTrials": 120,
+                    "numTrials": 60,
+                    "numCongruent": 40,
                     "stimuliConfig": {
                         "type": "generated",
                         "stimuli": null
