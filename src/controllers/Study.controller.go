@@ -48,7 +48,12 @@ func (s *StudyController) DeleteStudyById(e echo.Context) error {
 
 func (s *StudyController) GetStudyById(e echo.Context) error {
 	studyId := e.Param("studyId")
-	study, err := studyServiceImpl.GetStudyById(studyId)
+	role, ok := e.Get("role").(string)
+	if !ok {
+		axonlogger.ErrorLogger.Println("None or invalid role found when getting study by study id")
+		return common.SendHTTPStatusInternalServerError(e)
+	}
+	study, err := studyServiceImpl.GetStudyById(studyId, role)
 	if err != nil {
 		return common.SendHTTPStatusServiceUnavailable(e)
 	}

@@ -20,11 +20,11 @@ func (s *StudyRepository) UpdateStudyNoTasks(study *models.Study) models.HTTPSta
 	db := db.DB
 	var setStudyActiveValue = `
 		UPDATE studies 
-		SET internal_name = ?, external_name = ?, started = ?, description = ?, can_edit = ?, consent = ?
+		SET internal_name = ?, external_name = ?, started = ?, description = ?, can_edit = ?, consent = ?, config = ?
 		WHERE id = ?;
 	`
 
-	if _, err := db.Exec(setStudyActiveValue, study.InternalName, study.ExternalName, study.Started, study.Description, study.CanEdit, study.Consent, study.ID); err != nil {
+	if _, err := db.Exec(setStudyActiveValue, study.InternalName, study.ExternalName, study.Started, study.Description, study.CanEdit, study.Consent, study.Config, study.ID); err != nil {
 		axonlogger.ErrorLogger.Println("Could not scan rows when retrieving studies", err)
 		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "could not update study"}
 	}
@@ -94,7 +94,7 @@ func (s *StudyRepository) GetAllStudies() ([]models.Study, error) {
 	studies := []models.Study{}
 
 	var getAllStudies = `
-		SELECT id, created_at, internal_name, external_name, started, description, can_edit, consent
+		SELECT id, created_at, internal_name, external_name, started, description, can_edit, consent, config
 		FROM studies
 		WHERE deleted_at IS NULL ORDER BY created_at DESC;`
 
@@ -115,6 +115,7 @@ func (s *StudyRepository) GetAllStudies() ([]models.Study, error) {
 			&study.Description,
 			&study.CanEdit,
 			&study.Consent,
+			&study.Config,
 		)
 		if err != nil {
 			axonlogger.ErrorLogger.Println("Could not scan rows when retrieving studies", err)
@@ -144,7 +145,7 @@ func (s *StudyRepository) GetAllStudies() ([]models.Study, error) {
 func (s *StudyRepository) SaveStudy(study *models.Study) models.HTTPStatus {
 	db := db.DB
 	var saveStudyTasksQuery = `INSERT INTO study_tasks (study_id, task_id, task_order, config) VALUES (?, ?, ?, ?);`
-	var saveStudyQuery = `INSERT INTO studies (created_at, deleted_at, internal_name, external_name, started, description, can_edit, consent) VALUES (?, ?, ?, ?, ?, ?, ?, ?);`
+	var saveStudyQuery = `INSERT INTO studies (created_at, deleted_at, internal_name, external_name, started, description, can_edit, consent, config) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);`
 	var genericErrMessage = `There was an error saving the study`
 
 	// begin transaction
@@ -155,7 +156,7 @@ func (s *StudyRepository) SaveStudy(study *models.Study) models.HTTPStatus {
 	}
 
 	// 1. save study to db
-	x, err := tx.Exec(saveStudyQuery, time.Now().UTC(), models.NullTime{Valid: false, Time: time.Time{}}, study.InternalName, study.ExternalName, study.Started, study.Description, study.CanEdit, study.Consent)
+	x, err := tx.Exec(saveStudyQuery, time.Now().UTC(), models.NullTime{Valid: false, Time: time.Time{}}, study.InternalName, study.ExternalName, study.Started, study.Description, study.CanEdit, study.Consent, study.Config)
 	if err != nil {
 		tx.Rollback()
 		axonlogger.ErrorLogger.Println("could not save study", err)
@@ -197,7 +198,7 @@ func (s *StudyRepository) GetStudyById(studyId uint) (models.Study, error) {
 	taskRespositoryImpl := TaskRepository{}
 	db := db.DB
 	var err error
-	var getStudyByIdQuery = `SELECT id, created_at, internal_name, external_name, started, description, can_edit, consent FROM studies WHERE id = ?;`
+	var getStudyByIdQuery = `SELECT id, created_at, internal_name, external_name, started, description, can_edit, consent, config FROM studies WHERE id = ?;`
 	study := models.Study{}
 
 	rows, err := db.Query(getStudyByIdQuery, studyId)
@@ -216,6 +217,7 @@ func (s *StudyRepository) GetStudyById(studyId uint) (models.Study, error) {
 			&study.Description,
 			&study.CanEdit,
 			&study.Consent,
+			&study.Config,
 		); err != nil {
 			axonlogger.ErrorLogger.Println("Could not scan rows when retrieving study", err)
 			return study, err

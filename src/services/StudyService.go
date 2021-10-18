@@ -8,6 +8,7 @@ import (
 	"strings"
 	"time"
 
+	"github.com/cognitive-neuroscience/neuron/src/common"
 	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
 	"github.com/cognitive-neuroscience/neuron/src/models"
 )
@@ -57,13 +58,26 @@ func (s *StudyService) SaveStudy(study *models.Study) models.HTTPStatus {
 	return studyRepositoryImpl.SaveStudy(study)
 }
 
-func (s *StudyService) GetStudyById(studyId string) (models.Study, error) {
+func (s *StudyService) GetStudyById(studyId string, role string) (models.Study, error) {
 	id, err := convertStringToUint8(studyId)
 	if err != nil {
 		axonlogger.WarningLogger.Println("could not get study", err)
 		return models.Study{}, errors.New("could not get study")
 	}
-	return studyRepositoryImpl.GetStudyById(id)
+
+	study, err := studyRepositoryImpl.GetStudyById(id)
+	if err != nil {
+		return study, err
+	}
+	if role != common.ADMIN {
+		// if not admin, then scrub sensitive info
+		study.CreatedAt = time.Time{}
+		study.DeletedAt.Time = time.Time{}
+		study.DeletedAt.Valid = true
+		study.InternalName = ""
+		study.CanEdit = false
+	}
+	return study, err
 }
 
 // GenerateCode creates a code using the CharacterCode string of x size

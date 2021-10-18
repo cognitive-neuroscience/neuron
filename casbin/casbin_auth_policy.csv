@@ -17,10 +17,10 @@ p, PARTICIPANT, /api/tasks/studies/*,           GET
 p, PARTICIPANT, /api/tasks/*,                   GET
 p, GUEST,       /api/tasks,                     GET
 
-p, PARTICIPANT, /api/studies/*,                 GET
 p, GUEST,       /api/studies,                   GET
 
 p, *,           /api/users,                     POST
+p, *,           /api/studies/*,                 GET
 p, *,           /api/crowdsourcedusers,         POST
 p, *,           /api/login,                     POST
 p, *,           /api/logout,                    POST

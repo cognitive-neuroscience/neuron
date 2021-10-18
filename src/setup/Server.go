@@ -19,13 +19,38 @@ type Enforcer struct {
 	enforcer *casbin.Enforcer
 }
 
-var unprotectedRoutes = []string{
-	"/api/users",                // unprotected to allow anyone to register an account
-	"/api/login",                // unprotected to allow anyone to login
-	"api/logout",                // unprotected to allow anyone to logout
-	"/api/crowdsourcedusers",    // unprotected to allow any crowd sourced user to participate
-	"/api/email",                // unprotected to allow anyone to send a reset password email
-	"/api/users/changepassword", // unprotected to allow anyone to change password with a temp password
+var unprotectedRoutes = []struct {
+	Path   string
+	Method string
+}{
+	{
+		"/api/users",
+		http.MethodPost,
+	},
+	{
+		"/api/login",
+		http.MethodPost,
+	},
+	{
+		"api/logout",
+		http.MethodPost,
+	},
+	{
+		"/api/crowdsourcedusers",
+		http.MethodPost,
+	},
+	{
+		"/api/crowdsourcedusers",
+		http.MethodPost,
+	},
+	{
+		"/api/email",
+		http.MethodPost,
+	},
+	{
+		"/api/users/changepassword",
+		http.MethodPost,
+	},
 }
 
 // CreateServer creates a HTTP server
@@ -100,8 +125,8 @@ func validateCookieMiddleware(next echo.HandlerFunc) echo.HandlerFunc {
 		var email string
 		var id string
 
-		// unprotected routes, api/users POST is for register and api/login POST is for logging in
-		if method == http.MethodPost && common.IncludesSubStr(unprotectedRoutes, path) {
+		// unprotected routes, compare the received path and method with what is allowed in the given list
+		if isUnprotectedRoute(path, method) {
 			role = common.NONE
 		} else {
 			tokenServiceImpl := services.TokenService{}
@@ -128,6 +153,15 @@ func validateCookieMiddleware(next echo.HandlerFunc) echo.HandlerFunc {
 		e.Set("id", id)
 		return next(e)
 	}
+}
+
+func isUnprotectedRoute(receivedRoute string, receivedHttpMethod string) bool {
+	for _, unprotectedRoute := range unprotectedRoutes {
+		if receivedRoute == unprotectedRoute.Path && receivedHttpMethod == unprotectedRoute.Method {
+			return true
+		}
+	}
+	return false
 }
 
 func (e *Enforcer) Enforce(next echo.HandlerFunc) echo.HandlerFunc {
