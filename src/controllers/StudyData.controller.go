@@ -20,7 +20,7 @@ func (s *StudyDataController) UploadTaskData(e echo.Context) error {
 		return common.SendHTTPBadRequest(e)
 	}
 	result := studyDataServiceImpl.UploadTaskData(*participantData)
-	return common.SendGenericHTTPWithMessage(e, result)
+	return common.SendHTTPWithMessage(e, result)
 }
 
 func (s *StudyDataController) GetTaskData(e echo.Context) error {
@@ -29,7 +29,7 @@ func (s *StudyDataController) GetTaskData(e echo.Context) error {
 
 	taskData, err := studyDataServiceImpl.GetTaskData(studyId, taskOrder)
 	if err != nil {
-		return common.SendGenericHTTPWithMessage(e, models.HTTPStatus{Status: http.StatusInternalServerError, Message: err.Error()})
+		return common.SendHTTPWithMessage(e, models.HTTPStatus{Status: http.StatusInternalServerError, Message: err.Error()})
 	}
 	return common.SendHTTPOkWithBody(e, taskData)
 }
@@ -40,14 +40,14 @@ func (s *StudyDataController) UploadFeedback(e echo.Context) error {
 		axonlogger.WarningLogger.Println("Could not parse feedback", err)
 		return common.SendHTTPBadRequest(e)
 	}
-	return common.SendGenericHTTPWithMessage(e, studyDataServiceImpl.UploadFeedback(feedback))
+	return common.SendHTTPWithMessage(e, studyDataServiceImpl.UploadFeedback(feedback))
 }
 
 func (s *StudyDataController) GetFeedbackForStudyId(e echo.Context) error {
 	studyId := e.Param("studyId")
 	feedbackData, err := studyDataServiceImpl.GetFeedbackForStudyId(studyId)
 	if err != nil {
-		return common.SendGenericHTTPWithMessage(e, models.HTTPStatus{Status: http.StatusInternalServerError, Message: err.Error()})
+		return common.SendHTTPWithMessage(e, models.HTTPStatus{Status: http.StatusInternalServerError, Message: err.Error()})
 	}
 	return common.SendHTTPOkWithBody(e, feedbackData)
 }

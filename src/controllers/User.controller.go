@@ -29,7 +29,7 @@ func (u *UserController) ChangePassword(e echo.Context) error {
 		return common.SendHTTPBadRequest(e)
 	}
 	httpStatus := userServiceImpl.ChangePassword(editPasswordStruct.Email, editPasswordStruct.TemporaryPassword, editPasswordStruct.NewPassword)
-	return common.SendGenericHTTPWithMessage(e, httpStatus)
+	return common.SendHTTPWithMessage(e, httpStatus)
 }
 
 // SaveUser saves a given user in the DB
@@ -42,7 +42,7 @@ func (u *UserController) SaveUser(e echo.Context) error {
 		return common.SendHTTPBadRequest(e)
 	}
 	result := userServiceImpl.SaveUser(user)
-	return common.SendGenericHTTPWithMessage(e, result)
+	return common.SendHTTPWithMessage(e, result)
 }
 
 // SaveTurker saves the given turker into the DB
@@ -55,14 +55,14 @@ func (u *UserController) SaveCrowdsourcedUser(e echo.Context) error {
 
 	result := userServiceImpl.SaveCrowdsourcedUser(crowdsourcedUser)
 	if result.Status != http.StatusCreated {
-		return common.SendGenericHTTPWithMessage(e, result)
+		return common.SendHTTPWithMessage(e, result)
 	}
 
 	// 4: create a jwt
 	tokenString, err := tokenServiceImpl.CreateToken(crowdsourcedUser.ParticipantID, "", common.PARTICIPANT)
 	if err != nil {
 		axonlogger.ErrorLogger.Println("Error creating a JWT for user", crowdsourcedUser.ParticipantID, err)
-		return common.SendGenericHTTPWithMessage(e, models.HTTPStatus{Status: http.StatusInternalServerError, Message: "there was an error registering the participant"})
+		return common.SendHTTPWithMessage(e, models.HTTPStatus{Status: http.StatusInternalServerError, Message: "there was an error registering the participant"})
 	}
 
 	cookie := new(http.Cookie)
@@ -94,7 +94,7 @@ func (u *UserController) GetCrowdSourcedUsersByStudyId(e echo.Context) error {
 func (u *UserController) DeleteUserById(e echo.Context) error {
 	id := e.Param("id")
 	result := userServiceImpl.DeleteGuestById(id)
-	return common.SendGenericHTTPWithMessage(e, result)
+	return common.SendHTTPWithMessage(e, result)
 }
 
 // // GetStudyUser gets an individual study user grabbing the id stored in the jwt within the cookie
@@ -142,7 +142,7 @@ func (u *UserController) SaveStudyUser(e echo.Context) error {
 		return common.SendHTTPBadRequest(e)
 	}
 	result := userServiceImpl.SaveStudyUser(*studyUser)
-	return common.SendGenericHTTPWithMessage(e, result)
+	return common.SendHTTPWithMessage(e, result)
 }
 
 func (u *UserController) UpdateStudyUser(e echo.Context) error {
@@ -151,7 +151,7 @@ func (u *UserController) UpdateStudyUser(e echo.Context) error {
 		axonlogger.WarningLogger.Println("Could not parse study user details", err)
 		return common.SendHTTPBadRequest(e)
 	}
-	return common.SendGenericHTTPWithMessage(e, userServiceImpl.UpdateStudyUser(*studyUser))
+	return common.SendHTTPWithMessage(e, userServiceImpl.UpdateStudyUser(*studyUser))
 }
 
 // SaveGuest
@@ -166,7 +166,7 @@ func (u *UserController) SaveGuest(e echo.Context) error {
 		return common.SendHTTPBadRequest(e)
 	}
 	result := userServiceImpl.SaveUser(user)
-	return common.SendGenericHTTPWithMessage(e, result)
+	return common.SendHTTPWithMessage(e, result)
 }
 
 // GetGuests retrieves all guests from the DB

@@ -13,7 +13,6 @@ p, PARTICIPANT, /api/studyusers,                PATCH
 p, PARTICIPANT, /api/studydata,                 POST
 p, PARTICIPANT, /api/studydata/feedback,        POST
 
-p, PARTICIPANT, /api/tasks/studies/*,           GET
 p, PARTICIPANT, /api/tasks/*,                   GET
 p, GUEST,       /api/tasks,                     GET
 

@@ -19,10 +19,10 @@ func (*EmailController) SendEmail(e echo.Context) error {
 	}
 	if err := e.Bind(&emailStruct); err != nil {
 		axonlogger.WarningLogger.Println("Could not parse email", err)
-		return common.SendGenericHTTPWithMessage(e, models.HTTPStatus{Status: http.StatusBadRequest, Message: "there was an error resetting your password"})
+		return common.SendHTTPWithMessage(e, models.HTTPStatus{Status: http.StatusBadRequest, Message: "there was an error resetting your password"})
 	}
 	if err := emailServiceImpl.SendEmail(emailStruct.Email); err != nil {
-		return common.SendGenericHTTPWithMessage(e, models.HTTPStatus{Status: http.StatusInternalServerError, Message: "there was an error resetting your password"})
+		return common.SendHTTPWithMessage(e, models.HTTPStatus{Status: http.StatusInternalServerError, Message: "there was an error resetting your password"})
 	}
 	return common.SendHTTPOk(e)
 }

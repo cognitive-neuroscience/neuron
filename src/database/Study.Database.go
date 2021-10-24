@@ -201,37 +201,26 @@ func (s *StudyRepository) GetStudyById(studyId uint) (models.Study, error) {
 	var getStudyByIdQuery = `SELECT id, created_at, internal_name, external_name, started, description, can_edit, consent, config FROM studies WHERE id = ?;`
 	study := models.Study{}
 
-	rows, err := db.Query(getStudyByIdQuery, studyId)
-	if err != nil {
-		axonlogger.ErrorLogger.Println("Could not get study from db", err)
-		return study, err
-	}
-	defer rows.Close()
-	for rows.Next() {
-		if err := rows.Scan(
-			&study.ID,
-			&study.CreatedAt,
-			&study.InternalName,
-			&study.ExternalName,
-			&study.Started,
-			&study.Description,
-			&study.CanEdit,
-			&study.Consent,
-			&study.Config,
-		); err != nil {
-			axonlogger.ErrorLogger.Println("Could not scan rows when retrieving study", err)
-			return study, err
-		}
-	}
-	if err := rows.Err(); err != nil {
-		axonlogger.ErrorLogger.Println("Error when iterating over rows", err)
-		return study, errors.New("there was an error retrieving tasks")
+	rowErr := db.QueryRow(getStudyByIdQuery, studyId).Scan(
+		&study.ID,
+		&study.CreatedAt,
+		&study.InternalName,
+		&study.ExternalName,
+		&study.Started,
+		&study.Description,
+		&study.CanEdit,
+		&study.Consent,
+		&study.Config,
+	)
+
+	if rowErr != nil {
+		return study, rowErr
 	}
 
 	studyTasks, err := taskRespositoryImpl.GetTasksByStudyId(study.ID)
 	if err != nil {
 		axonlogger.ErrorLogger.Println("Error when populating study with study tasks", err)
-		return study, errors.New("there was an error")
+		return study, err
 	}
 	study.Tasks = studyTasks
 	return study, err

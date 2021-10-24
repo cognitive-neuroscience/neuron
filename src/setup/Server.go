@@ -2,7 +2,6 @@ package setup
 
 import (
 	"errors"
-	"net/http"
 	"os"
 
 	"github.com/cognitive-neuroscience/neuron/src/common"
@@ -17,40 +16,6 @@ import (
 
 type Enforcer struct {
 	enforcer *casbin.Enforcer
-}
-
-var unprotectedRoutes = []struct {
-	Path   string
-	Method string
-}{
-	{
-		"/api/users",
-		http.MethodPost,
-	},
-	{
-		"/api/login",
-		http.MethodPost,
-	},
-	{
-		"api/logout",
-		http.MethodPost,
-	},
-	{
-		"/api/crowdsourcedusers",
-		http.MethodPost,
-	},
-	{
-		"/api/crowdsourcedusers",
-		http.MethodPost,
-	},
-	{
-		"/api/email",
-		http.MethodPost,
-	},
-	{
-		"/api/users/changepassword",
-		http.MethodPost,
-	},
 }
 
 // CreateServer creates a HTTP server
@@ -121,29 +86,26 @@ func validateCookieMiddleware(next echo.HandlerFunc) echo.HandlerFunc {
 
 		path := e.Request().URL.Path
 		method := e.Request().Method
-		var role string
-		var email string
-		var id string
+		var role string = ""
+		var email string = ""
+		var id string = ""
 
-		// unprotected routes, compare the received path and method with what is allowed in the given list
-		if isUnprotectedRoute(path, method) {
+		tokenServiceImpl := services.TokenService{}
+		cookie, err := e.Cookie("token")
+
+		if err != nil || cookie == nil || cookie.Value == "" {
 			role = common.NONE
 		} else {
-			tokenServiceImpl := services.TokenService{}
-			cookie, err := e.Cookie("token")
-			if err != nil {
-				logger.WarningLogger.Println("Could not read jwt from cookie", err)
-				return common.SendHTTPForbidden(e)
-			}
 			jwt := cookie.Value
 			claims, err := tokenServiceImpl.ValidateToken(jwt)
+
 			if err != nil {
-				logger.WarningLogger.Println("JWT received from cookie is invalid", jwt)
-				return common.SendHTTPForbidden(e)
+				role = common.NONE
+			} else {
+				role = claims.Role
+				email = claims.Email
+				id = claims.UserID
 			}
-			role = claims.Role
-			email = claims.Email
-			id = claims.UserID
 		}
 
 		e.Set("path", path)
@@ -153,15 +115,6 @@ func validateCookieMiddleware(next echo.HandlerFunc) echo.HandlerFunc {
 		e.Set("id", id)
 		return next(e)
 	}
-}
-
-func isUnprotectedRoute(receivedRoute string, receivedHttpMethod string) bool {
-	for _, unprotectedRoute := range unprotectedRoutes {
-		if receivedRoute == unprotectedRoute.Path && receivedHttpMethod == unprotectedRoute.Method {
-			return true
-		}
-	}
-	return false
 }
 
 func (e *Enforcer) Enforce(next echo.HandlerFunc) echo.HandlerFunc {
