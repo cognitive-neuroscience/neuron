@@ -3464,9 +3464,9 @@ UPDATE study_tasks SET config =
                 "durationNoFacePresented": 500,
                 "durationStimulusPresented": 100,
                 "numShortFaces": 5,
-                "numFacesMoreRewarded": 5,
+                "facesMoreRewardedPercentage": 5,
                 "numLongFaces": 5,
-                "numFacesLessRewarded": 5,
+                "facesLessRewardedPercentage": 5,
                 "stimuliConfig": {
                     "type": "generated",
                     "stimuli": null
@@ -3513,9 +3513,9 @@ UPDATE study_tasks SET config =
                 "durationStimulusPresented": 100,
                 "durationNoFacePresented": 500,
                 "numShortFaces": 5,
-                "numFacesMoreRewarded": 3,
+                "facesMoreRewardedPercentage": 100,
                 "numLongFaces": 5,
-                "numFacesLessRewarded": 1,
+                "facesLessRewardedPercentage": 100,
                 "stimuliConfig": {
                     "type": "generated",
                     "stimuli": null
@@ -3572,9 +3572,9 @@ UPDATE study_tasks SET config =
                 "durationStimulusPresented": 100,
                 "durationNoFacePresented": 500,
                 "numShortFaces": 5,
-                "numFacesMoreRewarded": 3,
+                "numFacesMoreRewarded": 100,
                 "numLongFaces": 5,
-                "numFacesLessRewarded": 1,
+                "numFacesLessRewarded": 100,
                 "stimuliConfig": {
                     "type": "generated",
                     "stimuli": null
@@ -3632,9 +3632,9 @@ UPDATE study_tasks SET config =
                 "durationStimulusPresented": 100,
                 "durationNoFacePresented": 500,
                 "numShortFaces": 5,
-                "numFacesMoreRewarded": 3,
+                "numFacesMoreRewarded": 100,
                 "numLongFaces": 5,
-                "numFacesLessRewarded": 1,
+                "numFacesLessRewarded": 100,
                 "stimuliConfig": {
                     "type": "generated",
                     "stimuli": null

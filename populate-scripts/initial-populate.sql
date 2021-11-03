@@ -3624,9 +3624,9 @@ VALUES
                     "durationNoFacePresented": 500,
                     "durationStimulusPresented": 100,
                     "numShortFaces": 5,
-                    "numFacesMoreRewarded": 5,
+                    "facesMoreRewardedPercentage": 100,
                     "numLongFaces": 5,
-                    "numFacesLessRewarded": 5,
+                    "facesLessRewardedPercentage": 100,
                     "stimuliConfig": {
                         "type": "generated",
                         "stimuli": null
@@ -3689,9 +3689,9 @@ VALUES
                     "durationNoFacePresented": 500,
                     "durationStimulusPresented": 100,
                     "numShortFaces": 5,
-                    "numFacesMoreRewarded": 5,
+                    "facesMoreRewardedPercentage": 100,
                     "numLongFaces": 5,
-                    "numFacesLessRewarded": 5,
+                    "facesLessRewardedPercentage": 100,
                     "stimuliConfig": {
                         "type": "generated",
                         "stimuli": null
@@ -3738,9 +3738,9 @@ VALUES
                     "durationStimulusPresented": 100,
                     "durationNoFacePresented": 500,
                     "numShortFaces": 50,
-                    "numFacesMoreRewarded": 30,
+                    "facesMoreRewardedPercentage": 60,
                     "numLongFaces": 50,
-                    "numFacesLessRewarded": 10,
+                    "facesLessRewardedPercentage": 20,
                     "stimuliConfig": {
                         "type": "generated",
                         "stimuli": null
@@ -3797,9 +3797,9 @@ VALUES
                     "durationStimulusPresented": 100,
                     "durationNoFacePresented": 500,
                     "numShortFaces": 50,
-                    "numFacesMoreRewarded": 30,
+                    "facesMoreRewardedPercentage": 60,
                     "numLongFaces": 50,
-                    "numFacesLessRewarded": 10,
+                    "facesLessRewardedPercentage": 20,
                     "stimuliConfig": {
                         "type": "generated",
                         "stimuli": null
@@ -3857,9 +3857,9 @@ VALUES
                     "durationStimulusPresented": 100,
                     "durationNoFacePresented": 500,
                     "numShortFaces": 50,
-                    "numFacesMoreRewarded": 30,
+                    "facesMoreRewardedPercentage": 60,
                     "numLongFaces": 50,
-                    "numFacesLessRewarded": 10,
+                    "facesLessRewardedPercentage": 20,
                     "stimuliConfig": {
                         "type": "generated",
                         "stimuli": null
