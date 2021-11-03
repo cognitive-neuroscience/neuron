@@ -1,7 +1,4 @@
 -- File used to update the DB for existing tasks
--- source /Users/nicholaslee/Work/go/src/github.com/cognitive-neuroscience/neuron/populate-scripts/update-db.sql
--- source C:/Users/nlee30/Documents/sidetings/sharplab/goNeuronWorkspace/src/github.com/cognitive-neuroscience/neuron/populate-scripts/update-db.sql
--- source /sbin/sharplab/populate-scripts/update-db.sql
 
 -- NUMBERS GAME TASK
 UPDATE tasks set
