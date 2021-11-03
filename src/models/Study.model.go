@@ -16,6 +16,7 @@ var StudySchema = `
 		can_edit BOOLEAN DEFAULT TRUE,
 		consent INT UNSIGNED DEFAULT(NULL),
 		description VARCHAR(300),
+		config JSON NOT NULL DEFAULT (JSON_OBJECT()),
 		FOREIGN KEY (consent) REFERENCES tasks(id),
 		PRIMARY KEY (id)
 	);
@@ -23,14 +24,15 @@ var StudySchema = `
 
 // Experiment represents a model for a set which contains tasks
 type Study struct {
-	ID           uint        `json:"id"`
-	CreatedAt    time.Time   `json:"createdAt"`
-	DeletedAt    NullTime    `json:"deletedAt"`
-	InternalName string      `json:"internalName"`
-	ExternalName string      `json:"externalName"`
-	Started      bool        `json:"started"`
-	Description  string      `json:"description"`
-	CanEdit      bool        `json:"canEdit"`
-	Consent      uint        `json:"consent"`
-	Tasks        []StudyTask `json:"tasks"`
+	ID           uint       		`json:"id"`
+	CreatedAt    time.Time  		`json:"createdAt"`
+	DeletedAt    NullTime   		`json:"deletedAt"`
+	InternalName string     		`json:"internalName"`
+	ExternalName string     		`json:"externalName"`
+	Started      bool       		`json:"started"`
+	Description  string     		`json:"description"`
+	CanEdit      bool       		`json:"canEdit"`
+	Consent      uint        		`json:"consent"`
+	Config       MapStringInterface `json:"config"`
+	Tasks        []StudyTask 		`json:"tasks"`
 }

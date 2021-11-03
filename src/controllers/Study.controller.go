@@ -18,7 +18,7 @@ func (s *StudyController) UpdateStudy(e echo.Context) error {
 		return common.SendHTTPBadRequest(e)
 	}
 	resultHttpStatus := studyServiceImpl.UpdateStudy(study, shouldIncludeTasksUpdate)
-	return common.SendGenericHTTPWithMessage(e, resultHttpStatus)
+	return common.SendHTTPWithMessage(e, resultHttpStatus)
 }
 
 // SaveStudy saves the given study into the database along with the relevant study tasks
@@ -29,7 +29,7 @@ func (s *StudyController) SaveStudy(e echo.Context) error {
 		return common.SendHTTPBadRequest(e)
 	}
 	result := studyServiceImpl.SaveStudy(study)
-	return common.SendGenericHTTPWithMessage(e, result)
+	return common.SendHTTPWithMessage(e, result)
 }
 
 func (s *StudyController) GetAllStudies(e echo.Context) error {
@@ -43,14 +43,20 @@ func (s *StudyController) GetAllStudies(e echo.Context) error {
 func (s *StudyController) DeleteStudyById(e echo.Context) error {
 	id := e.Param("studyId")
 	httpStatus := studyServiceImpl.DeleteStudyById(id)
-	return common.SendGenericHTTPWithMessage(e, httpStatus)
+	return common.SendHTTPWithMessage(e, httpStatus)
 }
 
 func (s *StudyController) GetStudyById(e echo.Context) error {
 	studyId := e.Param("studyId")
-	study, err := studyServiceImpl.GetStudyById(studyId)
-	if err != nil {
-		return common.SendHTTPStatusServiceUnavailable(e)
+	role, ok := e.Get("role").(string)
+	if !ok {
+		axonlogger.ErrorLogger.Println("None or invalid role found when getting study by study id")
+		return common.SendHTTPStatusInternalServerError(e)
 	}
-	return common.SendHTTPOkWithBody(e, study)
+	study, httpStatus := studyServiceImpl.GetStudyById(studyId, role)
+	if common.HTTPRequestIsSuccessful(httpStatus.Status) {
+		return common.SendHTTPWithPayload(e, httpStatus, study)
+	} else {
+		return common.SendHTTPWithMessage(e, httpStatus)
+	}
 }

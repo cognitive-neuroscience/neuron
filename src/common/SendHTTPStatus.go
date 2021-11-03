@@ -7,14 +7,24 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
+var (
+	HTTPStatusServiceUnavailable = models.HTTPStatus{Status: http.StatusServiceUnavailable, Message: http.StatusText(http.StatusServiceUnavailable)}
+	HTTPStatusOK = models.HTTPStatus{Status: http.StatusOK, Message: http.StatusText(http.StatusOK)}
+)
+
 // SendHTTPBadRequest sends a 400
 func SendHTTPBadRequest(e echo.Context) error {
 	return e.JSON(http.StatusBadRequest, models.HTTPStatus{Status: http.StatusBadRequest, Message: http.StatusText(http.StatusBadRequest)})
 }
 
-// SendGenericHTTPWithMessage takes in an http code and message and sends it to client
-func SendGenericHTTPWithMessage(e echo.Context, status models.HTTPStatus) error {
+// SendHTTPWithMessage takes in an http code and message and sends it to client
+func SendHTTPWithMessage(e echo.Context, status models.HTTPStatus) error {
 	return e.JSON(status.Status, status)
+}
+
+// SendHTTPWithPayload takes in an http code and sends it to the client with an associated payload
+func SendHTTPWithPayload(e echo.Context, status models.HTTPStatus, payload interface{}) error {
+	return e.JSON(status.Status, payload)
 }
 
 // SendHTTPForbidden sends a 401
@@ -45,4 +55,8 @@ func SendHTTPStatusServiceUnavailable(e echo.Context) error {
 // SendHTTPStatusService
 func SendHTTPStatusInternalServerError(e echo.Context) error {
 	return e.JSON(http.StatusInternalServerError, models.HTTPStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)})
+}
+
+func HTTPRequestIsSuccessful(httpCode int) bool {
+	return httpCode >= 200 && httpCode < 300
 }

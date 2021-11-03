@@ -19,13 +19,13 @@ func (l *LoginController) Login(e echo.Context) error {
 	// 1: parse input into user model
 	if err := e.Bind(user); err != nil {
 		axonlogger.WarningLogger.Println("Could not parse user details", err)
-		return common.SendGenericHTTPWithMessage(e, models.HTTPStatus{Status: http.StatusBadRequest, Message: "there was an error logging you in"})
+		return common.SendHTTPWithMessage(e, models.HTTPStatus{Status: http.StatusBadRequest, Message: "there was an error logging you in"})
 	}
 
 	// 2: check that it's not empty (guarded against in the UI as well)
 	if user.Email == "" || user.Password == "" {
 		axonlogger.WarningLogger.Println("could not login due to empty email or password")
-		return common.SendGenericHTTPWithMessage(e, models.HTTPStatus{
+		return common.SendHTTPWithMessage(e, models.HTTPStatus{
 			Status:  http.StatusBadRequest,
 			Message: "Username or password cannot be empty",
 		})
@@ -35,14 +35,14 @@ func (l *LoginController) Login(e echo.Context) error {
 	dbUser, err := authServiceImpl.ValidateCredentials(user.Email, user.Password)
 	if err != nil {
 		axonlogger.ErrorLogger.Println("Error validating user login credentials:", err)
-		return common.SendGenericHTTPWithMessage(e, models.HTTPStatus{Status: http.StatusUnprocessableEntity, Message: err.Error()})
+		return common.SendHTTPWithMessage(e, models.HTTPStatus{Status: http.StatusUnprocessableEntity, Message: err.Error()})
 	}
 	// 4: create a jwt with the user data
 	idToString := strconv.FormatUint(uint64(dbUser.ID), 10)
 	tokenString, err := tokenServiceImpl.CreateToken(idToString, dbUser.Email, dbUser.Role)
 	if err != nil {
 		axonlogger.ErrorLogger.Println("Error creating a JWT for user", dbUser.Email, err)
-		return common.SendGenericHTTPWithMessage(e, models.HTTPStatus{Status: http.StatusInternalServerError, Message: "there was an error logging you in"})
+		return common.SendHTTPWithMessage(e, models.HTTPStatus{Status: http.StatusInternalServerError, Message: "there was an error logging you in"})
 	}
 
 	cookie := new(http.Cookie)

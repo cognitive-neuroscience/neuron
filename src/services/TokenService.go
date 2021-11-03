@@ -36,8 +36,9 @@ func (t *TokenService) ValidateToken(tokenString string) (*models.Claims, error)
 	token, err := jwt.ParseWithClaims(tokenString, claims, func(token *jwt.Token) (interface{}, error) {
 		return []byte(key), nil
 	})
+
 	if err != nil {
-		axonlogger.WarningLogger.Println("Error when calling ParseWithClaims on token", tokenString, err)
+		axonlogger.WarningLogger.Println("could not validate given token: " + tokenString)
 		return claims, errors.New("could not parse with claims")
 	}
 

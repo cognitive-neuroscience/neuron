@@ -2,7 +2,6 @@ package setup
 
 import (
 	"errors"
-	"net/http"
 	"os"
 
 	"github.com/cognitive-neuroscience/neuron/src/common"
@@ -17,15 +16,6 @@ import (
 
 type Enforcer struct {
 	enforcer *casbin.Enforcer
-}
-
-var unprotectedRoutes = []string{
-	"/api/users",                // unprotected to allow anyone to register an account
-	"/api/login",                // unprotected to allow anyone to login
-	"api/logout",                // unprotected to allow anyone to logout
-	"/api/crowdsourcedusers",    // unprotected to allow any crowd sourced user to participate
-	"/api/email",                // unprotected to allow anyone to send a reset password email
-	"/api/users/changepassword", // unprotected to allow anyone to change password with a temp password
 }
 
 // CreateServer creates a HTTP server
@@ -96,29 +86,26 @@ func validateCookieMiddleware(next echo.HandlerFunc) echo.HandlerFunc {
 
 		path := e.Request().URL.Path
 		method := e.Request().Method
-		var role string
-		var email string
-		var id string
+		var role string = ""
+		var email string = ""
+		var id string = ""
 
-		// unprotected routes, api/users POST is for register and api/login POST is for logging in
-		if method == http.MethodPost && common.IncludesSubStr(unprotectedRoutes, path) {
+		tokenServiceImpl := services.TokenService{}
+		cookie, err := e.Cookie("token")
+
+		if err != nil || cookie == nil || cookie.Value == "" {
 			role = common.NONE
 		} else {
-			tokenServiceImpl := services.TokenService{}
-			cookie, err := e.Cookie("token")
-			if err != nil {
-				logger.WarningLogger.Println("Could not read jwt from cookie", err)
-				return common.SendHTTPForbidden(e)
-			}
 			jwt := cookie.Value
 			claims, err := tokenServiceImpl.ValidateToken(jwt)
+
 			if err != nil {
-				logger.WarningLogger.Println("JWT received from cookie is invalid", jwt)
-				return common.SendHTTPForbidden(e)
+				role = common.NONE
+			} else {
+				role = claims.Role
+				email = claims.Email
+				id = claims.UserID
 			}
-			role = claims.Role
-			email = claims.Email
-			id = claims.UserID
 		}
 
 		e.Set("path", path)

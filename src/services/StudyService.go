@@ -1,13 +1,14 @@
 package services
 
 import (
-	"errors"
+	"database/sql"
 	"math/rand"
 	"net/http"
 	"strconv"
 	"strings"
 	"time"
 
+	"github.com/cognitive-neuroscience/neuron/src/common"
 	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
 	"github.com/cognitive-neuroscience/neuron/src/models"
 )
@@ -57,13 +58,33 @@ func (s *StudyService) SaveStudy(study *models.Study) models.HTTPStatus {
 	return studyRepositoryImpl.SaveStudy(study)
 }
 
-func (s *StudyService) GetStudyById(studyId string) (models.Study, error) {
+func (s *StudyService) GetStudyById(studyId string, role string) (models.Study, models.HTTPStatus) {
 	id, err := convertStringToUint8(studyId)
 	if err != nil {
 		axonlogger.WarningLogger.Println("could not get study", err)
-		return models.Study{}, errors.New("could not get study")
+		return models.Study{}, models.HTTPStatus{Status: http.StatusInternalServerError, Message: "could not get study"}
 	}
-	return studyRepositoryImpl.GetStudyById(id)
+
+	study, err := studyRepositoryImpl.GetStudyById(id)
+
+	if err == sql.ErrNoRows {
+		return study, models.HTTPStatus{Status: http.StatusNoContent, Message: "study does not exist"}
+	} else if err != nil {
+		return study, common.HTTPStatusServiceUnavailable
+	}
+
+	// scrub sensitive info
+	if role != common.ADMIN {
+		study.CreatedAt = time.Time{}
+		study.DeletedAt.Time = time.Time{}
+		study.DeletedAt.Valid = true
+		study.InternalName = ""
+		study.CanEdit = false
+	}
+	if role == common.NONE {
+		study.Tasks = []models.StudyTask{}
+	}
+	return study, common.HTTPStatusOK
 }
 
 // GenerateCode creates a code using the CharacterCode string of x size

@@ -24,7 +24,7 @@ func (t *TaskController) GetTaskByTaskId(e echo.Context) error {
 
 	task, err := taskServiceImpl.GetTaskByTaskId(taskId)
 	if err != nil {
-		return common.SendGenericHTTPWithMessage(e, models.HTTPStatus{Status: http.StatusInternalServerError, Message: err.Error()})
+		return common.SendHTTPWithMessage(e, models.HTTPStatus{Status: http.StatusInternalServerError, Message: err.Error()})
 	}
 	return common.SendHTTPOkWithBody(e, task)
 }
