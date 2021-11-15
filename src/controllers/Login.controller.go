@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"net/http"
+	"os"
 	"strconv"
 
 	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
@@ -49,8 +50,17 @@ func (l *LoginController) Login(e echo.Context) error {
 	cookie.Name = "token"
 	cookie.Value = tokenString
 	cookie.HttpOnly = true // not accessible by javascript
-	//cookie.Secure = true // sent over https only
-	// cookie.Domain = "psharplab.campus.mcgill.ca" // only accept cookies from same domain
+	cookie.Secure = true // sent over https only
+
+	env, exists := os.LookupEnv("ENV")
+	if exists {
+		if env == "DEV" {
+			cookie.Domain = "localhost:8181"
+		} else if env == "PROD" {
+			cookie.Domain = "psharplab.campus.mcgill.ca"
+		}
+	}
+	
 	cookie.SameSite = http.SameSiteStrictMode
 	e.SetCookie(cookie)
 
