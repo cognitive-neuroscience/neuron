@@ -13198,7 +13198,7 @@ WHERE id = 46;
 -- SART
 UPDATE tasks SET
     from_platform = "PSHARPLAB",
-    task_type = "NAB",
+    task_type = "EXPERIMENTAL",
     name = "SART",
     description = "Sustained Attention to Response Task",
     external_url = "",
