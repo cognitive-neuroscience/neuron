@@ -13274,7 +13274,7 @@ UPDATE tasks SET
                 "config": {
                     "isPractice": true,
                     "maxResponseTime": 900,
-                    "interTrialDelay": 0,
+                    "interTrialDelay": 200,
                     "durationFeedbackPresented": 1000,
                     "durationStimulusPresented": 250,
                     "trialSize": 18,
@@ -13319,7 +13319,7 @@ UPDATE tasks SET
                 "config": {
                     "isPractice": false,
                     "maxResponseTime": 900,
-                    "interTrialDelay": 0,
+                    "interTrialDelay": 200,
                     "durationFeedbackPresented": 1000,
                     "durationStimulusPresented": 250,
                     "trialSize": 225,
@@ -13362,7 +13362,7 @@ UPDATE tasks SET
                 "config": {
                     "isPractice": false,
                     "maxResponseTime": 900,
-                    "interTrialDelay": 0,
+                    "interTrialDelay": 200,
                     "durationFeedbackPresented": 1000,
                     "durationStimulusPresented": 250,
                     "trialSize": 225,
