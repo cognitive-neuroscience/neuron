@@ -4,6 +4,7 @@ import (
 	"net/http"
 	"os"
 	"strconv"
+	"time"
 
 	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
 	"github.com/labstack/echo/v4"
@@ -81,6 +82,18 @@ func (l *LoginController) Logout(e echo.Context) error {
 	cookie.Value = ""
 	cookie.HttpOnly = true // not accessible by javascript
 	cookie.Secure = true   // sent over https only
+	cookie.Expires = time.Unix(0, 0)
+
+	env, exists := os.LookupEnv("ENV")
+	if exists {
+		if env == "DEV" {
+			cookie.Domain = "localhost:8181"
+		} else if env == "PROD" {
+			cookie.Domain = "psharplab.campus.mcgill.ca"
+		}
+	}
+
+	cookie.SameSite = http.SameSiteStrictMode
 	e.SetCookie(cookie)
 	axonlogger.InfoLogger.Println("clearing cookie and logging out", email, id)
 	return common.SendHTTPOk(e)
