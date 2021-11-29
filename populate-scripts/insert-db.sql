@@ -5,194 +5,125 @@ VALUES
 (
     NULL,
     "PSHARPLAB",
-    "EXPERIMENTAL",
-    "SART",
-    "Sustained Attention to Response Task",
+    "INFO_DISPLAY",
+    "Break Display Slide",
+    "",
     "",
     '{
-        "config": {
-            "counterBalanceGroups": {
-                "1": "ascending",
-                "2": "random"
+        "title": "Thank you for your participation and for sticking with it so far!",
+        "sections": [
+            {
+                "header": "A few reminders:",
+                "textContent": ""
+            },
+            {
+                "header": "",
+                "indent": 1,
+                "textContent": "1. You can take breaks if you want to. We simply ask that you wait until the end of a game or of a questionnaire, otherwise your data will be lost."
+            },
+            {
+                "header": "",
+                "indent": 2,
+                "textContent": "<b>To take a break:</b> simply close this window."
+            },
+            {
+                "header": "",
+                "indent": 2,
+                "textContent": "<b>To get back to it:</b> use the link you were sent in the email. It will take you to the log-in page."
+            },
+            {
+                "header": "",
+                "indent": 1,
+                "textContent": "2. Please complete the full set of brain games within 1 week from when you started."
+            },
+            {
+                "header": "",
+                "indent": 1,
+                "textContent": "3. We also ask that you do the games when you are feeling ''ON'', i.e. when the PD medications are in effect (typically best about 1-2 hours after your last dose)."
+            },
+            {
+                "header": "",
+                "textContent": "<b>QUESTIONS OR EXPERIENCING DIFFICULTIES?</b>"
+            },
+            {
+                "header": "",
+                "textContent": "sharplab.neuro@mcgill.ca"
+            },
+            {
+                "header": "",
+                "textContent": "To take a break now, close the window."
+            },
+            {
+                "header": "",
+                "textContent": "To continue, please click NEXT"
             }
-        },
-        "metadata": [
+        ],
+        "buttons": {
+            "displayContinueButton": true
+        }
+    }'
+),
+(
+    NULL,
+    "PSHARPLAB",
+    "INFO_DISPLAY",
+    "Welcome Display Slide",
+    "",
+    "",
+    '{
+        "title": "Welcome to the study of Neurocognition on the Web for PD - Evaluation of Reliability",
+        "sections": [
             {
-                "component": "DISPLAYCOMPONENT",
-                "content": {
-                    "title": "Welcome to the Spot The Number Game!",
-                    "sections": [
-                        {
-                            "sectionType": "text",
-                            "textContent": "You will see numbers flash on the screen very quickly, followed by an X."
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "Your job is to press the LEFT arrow ( ⬅️ ) for every number <b>EXCEPT</b> for the <b>number 3</b>."
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "When you see the <b>number 3</b> you must <b>NOT</b> press any key at all, simply wait for the next number."
-                        },
-                        {
-                            "sectionType": "image-horizontal",
-                            "imageAlignment": "left",
-                            "imagePath": "/assets/images/instructions/SART/visual_instructions.png"
-                        }
-                    ],
-                    "buttons": {
-                        "isStart": false,
-                        "previousDisabled": true,
-                        "nextDisabled": false
-                    }
-                }
+                "header": "Thank you for participating in our study!",
+                "textContent": ""
             },
             {
-                "component": "DISPLAYCOMPONENT",
-                "content": {
-                    "title": "Let''s practice!",
-                    "sections": [
-                        {
-                            "sectionType": "text",
-                            "textContent": "Remember, press the ( ⬅️ ) for all numbers except for 3"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "When you see 3, don''t press anything and wait for the next number to appear."
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "The numbers will appear very quickly, so be ready!"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "Click START to begin the practice"
-                        }
-                    ],
-                    "buttons": {
-                        "isStart": true,
-                        "previousDisabled": false,
-                        "nextDisabled": false
-                    }
-                }
+                "header": "",
+                "textContent": "You will be playing a series of brain games to help us better understand the thinking and memory changes experienced by people with Parkinson''s disease."
             },
             {
-                "component": "SARTCOMPONENT",
-                "config": {
-                    "isPractice": true,
-                    "maxResponseTime": 900,
-                    "interTrialDelay": 0,
-                    "durationFeedbackPresented": 1000,
-                    "durationStimulusPresented": 250,
-                    "trialSize": 18,
-                    "nogoTrialNum": 2,
-                    "stimuliConfig": {
-                        "type": "generated",
-                        "stimuli": null
-                    }
-                }
+                "header": "",
+                "textContent": "You can do this all in one sitting, or leave (by closing the window) and come back another day."
             },
             {
-                "component": "DISPLAYCOMPONENT",
-                "content": {
-                    "title": "Well done!",
-                    "sections": [
-                        {
-                            "sectionType": "text",
-                            "textContent": "Now you are ready for the real game"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "Remember, press the ( ⬅️ ) key for all numbers except for 3"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "When you see 3, don''t press anything and wait for the next number to appear"
-                        },
-                        {
-                            "sectionType": "",
-                            "textContent": "Click START to begin"
-                        }
-                    ],
-                    "buttons": {
-                        "isStart": true,
-                        "previousDisabled": true,
-                        "nextDisabled": false
-                    }
-                }
+                "header": "",
+                "textContent": "Please aim to do all the games over the course of one week. You can see your progress in your dashboard when you first log in."
             },
             {
-                "component": "SARTCOMPONENT",
-                "config": {
-                    "isPractice": false,
-                    "maxResponseTime": 900,
-                    "interTrialDelay": 0,
-                    "durationFeedbackPresented": 1000,
-                    "durationStimulusPresented": 250,
-                    "trialSize": 225,
-                    "counterbalanceMode": "counterbalance",
-                    "nogoTrialNum": 25,
-                    "stimuliConfig": {
-                        "type": "generated",
-                        "stimuli": null
-                    }
-                }
+                "header": "",
+                "textContent": "Throughout this study, please feel free to take breaks! We simply ask that you wait until the end of a game or of a questionnaire, otherwise your data will be lost."
             },
             {
-                "component": "DISPLAYCOMPONENT",
-                "content": {
-                    "title": "It''s break time",
-                    "timerConfig": {
-                        "timer": 35000,
-                        "showTimer": true,
-                        "canSkipTimer": true,
-                        "skipAvailableAfterXSeconds": 20
-                    },
-                    "sections": [
-                        {
-                            "sectionType": "text",
-                            "textContent": "You have to wait for at least 20 seconds before being able to continue"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "The next round will automatically start in 35 seconds unless you choose to continue sooner"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "Click START when you are ready"
-                        }
-                    ]
-                }
+                "header": "",
+                "textContent": "<b>To take a break:</b> simply close this window."
             },
             {
-                "component": "SARTCOMPONENT",
-                "config": {
-                    "isPractice": false,
-                    "maxResponseTime": 900,
-                    "interTrialDelay": 0,
-                    "durationFeedbackPresented": 1000,
-                    "durationStimulusPresented": 250,
-                    "trialSize": 225,
-                    "counterbalanceMode": "counterbalance-alternative",
-                    "nogoTrialNum": 25,
-                    "stimuliConfig": {
-                        "type": "generated",
-                        "stimuli": null
-                    }
-                }
+                "header": "",
+                "textContent": "<b>To get back to it:</b> use the link you were sent in the email. It will take you to the log-in page."
             },
             {
-                "component": "DISPLAYCOMPONENT",
-                "content": {
-                    "title": "You have completed the task, thank you!",
-                    "sections": [
-                        {
-                            "sectionType": "text",
-                            "textContent": "Click next to continue"
-                        }
-                    ]
-                }
+                "header": "",
+                "indent": 1,
+                "textContent": "We also ask that you do the games when you are feeling ''ON'', i.e. when the PD medications are in effect (typically best about 1-2 hours after your last dose)."
+            },
+            {
+                "textContent": "<b>QUESTIONS OR EXPERIENCING DIFFICULTIES?</b>"
+            },
+            {
+                "header": "",
+                "textContent": "sharplab.neuro@mcgill.ca"
+            },
+            {
+                "header": "",
+                "textContent": "To take a break now, close the window."
+            },
+            {
+                "header": "",
+                "textContent": "To continue, please click NEXT"
             }
-        ]
+        ],
+        "buttons": {
+            "displayContinueButton": true
+        }
     }'
 );
