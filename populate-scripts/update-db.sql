@@ -13278,7 +13278,7 @@ UPDATE tasks SET
                     "durationFeedbackPresented": 1500,
                     "durationStimulusPresented": 250,
                     "trialSize": 18,
-                    "nogoTrialNum": 2,
+                    "nogoTrialNum": 3,
                     "stimuliConfig": {
                         "type": "generated",
                         "stimuli": null
