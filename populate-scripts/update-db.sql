@@ -11985,8 +11985,8 @@ UPDATE tasks SET
                         "value": "Non-University Diploma"
                     },
                     {
-                        "label": "Bachelor''s Digree",
-                        "value": "Bachelor''s Digree"
+                        "label": "Bachelor''s Degree",
+                        "value": "Bachelor''s Degree"
                     },
                     {
                         "label": "Postgraduate Degree",
@@ -13278,7 +13278,7 @@ UPDATE tasks SET
                     "durationFeedbackPresented": 1500,
                     "durationStimulusPresented": 250,
                     "trialSize": 18,
-                    "nogoTrialNum": 3,
+                    "nogoTrialNum": 4,
                     "stimuliConfig": {
                         "type": "generated",
                         "stimuli": null
@@ -13339,7 +13339,7 @@ UPDATE tasks SET
                         "timer": 35000,
                         "showTimer": true,
                         "canSkipTimer": true,
-                        "skipAvailableAfterXSeconds": 20
+                        "skipAvailableAfterXSeconds": 5
                     },
                     "sections": [
                         {
@@ -13354,7 +13354,12 @@ UPDATE tasks SET
                             "sectionType": "text",
                             "textContent": "Click START when you are ready"
                         }
-                    ]
+                    ],
+                    "buttons": {
+                        "isStart": true,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
                 }
             },
             {
