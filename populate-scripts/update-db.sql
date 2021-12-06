@@ -322,7 +322,7 @@ UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "NAB",
     name = "Finger Tapping Game",
-    description = "The participant uses their dominant or non dominant hand to tap the \"P\" and \"Q\" characters as quickly as they can",
+    description = "The participant uses their dominant or non dominant hand to tap the \\"P\\" and \\"Q\\" characters as quickly as they can",
     external_url = "",
     config = '{
         "config": {},
@@ -731,19 +731,31 @@ UPDATE tasks set
             {
                 "component": "DISPLAYCOMPONENT",
                 "content": {
-                    "title": "Welcome to the N-Back Task",
+                    "title": {
+                        "en": "Welcome to the N-Back Task",
+                        "fr": "Bienvenue au Jeu Des Lettres"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Read the instructions carefully"
+                            "textContent": {
+                                "en": "Read the instructions carefully",
+                                "fr": "Lisez attentivement les instructions."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "This is a memory task:"
+                            "textContent": {
+                                "en": "This is a memory task:",
+                                "fr": "Ceci est un jeu de mémoire:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to proceed",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -756,19 +768,31 @@ UPDATE tasks set
             {
                 "component": "DISPLAYCOMPONENT",
                 "content": {
-                    "title": "",
+                    "title": {
+                        "en": "",
+                        "fr": ""
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "In this task, letters will be shown on the screen."
+                            "textContent": {
+                                "en": "In this task, letters will be shown on the screen.",
+                                "fr": "Dans ce jeu, des lettres vont apparaître à l''écran, une à la fois."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "For each letter, you have to decide if it is the <b>same letter</b> that was presented <b>2 letters ago</b>"
+                            "textContent": {
+                                "en": "For each letter, you have to decide if it is the <b>same letter</b> that was presented <b>2 letters ago</b>",
+                                "fr": "Votre objectif est de déterminer si la lettre présentée à l’écran est <b>la même lettre</b> que celle qui a été affichée <b>2 lettres plus tôt</b>."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to proceed",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -781,15 +805,24 @@ UPDATE tasks set
             {
                 "component": "DISPLAYCOMPONENT",
                 "content": {
-                    "title": "",
+                    "title": {
+                        "en": "",
+                        "fr": ""
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You have to press:"
+                            "textContent": {
+                                "en": "You have to press:",
+                                "fr": "textContent": "Utilisant votre clavier, vous devez cliquez:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "⬅️ (Left arrow) for <b>not the same</b>, if the letter is <b>not the same</b> as the one that was presented 2 letters ago"
+                            "textContent": {
+                                "en": "⬅️ (Left arrow) for <b>not the same</b>, if the letter is <b>not the same</b> as the one that was presented 2 letters ago",
+                                "fr": "⬅️ (clé pour flèche gauche) si <b>la lettre est différente</b> que celle qui a été présentée <b>il y a 2 lettres</b>."
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -797,11 +830,17 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "➡️ (Right arrow) for <b>the same</b> if the letter is <b>the same</b> as the one that was presented 2 letters ago"
+                            "textContent": {
+                                "en": "➡️ (Right arrow) for <b>the same</b> if the letter is <b>the same</b> as the one that was presented 2 letters ago",
+                                "fr": "➡️ (clé pour flèche droite) si <b>la lettre est pareille</b> que celle qui a été présentée <b>il y a 2 lettres</b>."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to proceed",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -814,7 +853,10 @@ UPDATE tasks set
             {
                 "component": "DISPLAYCOMPONENT",
                 "content": {
-                    "title": "Here is an example",
+                    "title": {
+                        "en": "Here is an example",
+                        "fr": "Voici un exemple:"
+                    },
                     "sections": [
                         {
                             "sectionType": "image-horizontal",
@@ -823,11 +865,17 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Note that for the first two letters of the task, there is no letter to compare to, so you just press ⬅️ for these."
+                            "textContent": {
+                                "en": "Note that for the first two letters of the task, there is no letter to compare to, so you just press ⬅️ for these.",
+                                "fr": "Pour les deux premières qui seront présentées (ex. F, K dans cet exemple), ce n’est pas possible de faire la comparaison (parce qu’il n’y avait pas de lettres précédentes) donc vous appuyez sur ⬅️ pour celles-là."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to proceed",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -840,11 +888,17 @@ UPDATE tasks set
             {
                 "component": "DISPLAYCOMPONENT",
                 "content": {
-                    "title": "Here is an example",
+                    "title": {
+                        "en": "Here is an example (continued)",
+                        "fr": "Voici un exemple cont."
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "The next letter is K:"
+                            "textContent": {
+                                "en": "The next letter is K:",
+                                "fr": "La lettre suivante est K:"
+                            }
                         },
                         {
                             "sectionType": "image-horizontal",
@@ -853,11 +907,17 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Now, you press ➡️ because a K was also <b>presented</b> two letters ago"
+                            "textContent": {
+                                "en": "Now, you press ➡️ because a K was also <b>presented</b> two letters ago",
+                                "fr": "Dans cet exemple, la 5ième lettre présentée (K) correspond à celle qui a été présentée 2 places plus tôt. Donc, vous appuyez sur ➡️."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to proceed",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -870,7 +930,10 @@ UPDATE tasks set
             {
                 "component": "DISPLAYCOMPONENT",
                 "content": {
-                    "title": "Here is an example",
+                    "title": {
+                        "en": "Here is an example (continued)",
+                        "fr": "Voici un exemple cont."
+                    },
                     "sections": [
                         {
                             "sectionType": "image-horizontal",
@@ -879,11 +942,17 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "But now you would press ⬅️ for this K because is it <b>NOT THE SAME</b> as the letter presented 2 letters ago."
+                            "textContent": {
+                                "en": "But now you would press ⬅️ for this K because is it <b>NOT THE SAME</b> as the letter presented 2 letters ago.",
+                                "fr": "La prochaine lettre présentée ne correspond pas à celle présentée deux places plus tôt, donc vous appuyez sur ⬅️."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to proceed",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -896,31 +965,52 @@ UPDATE tasks set
             {
                 "component": "DISPLAYCOMPONENT",
                 "content": {
-                    "title": "Practice Round",
+                    "title": {
+                        "en": "Practice",
+                        "fr": "Pratique"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Let''s practice! You will have very little time to respond, so be ready!"
+                            "textContent": {
+                                "en": "Let''s practice! You will have very little time to respond, so be ready!",
+                                "fr": "Vous aurez maintenant la chance de vous pratiquer. Les lettres se déroulent très vite, alors soyez prêts!"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "(the game will launch in fullscreen)"
+                            "textContent": {
+                                "en": "(the game will launch in fullscreen)",
+                                "fr": "(Le jeu se lancera en plein écran)"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Remember, press:"
+                            "textContent": {
+                                "en": "Remember, press:",
+                                "fr": "Rappelez vous de cliquer les clés comme suit:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "⬅️ (left arrow) if the letter is <b>NOT THE SAME</b> as 2 letters ago"
+                            "textContent": {
+                                "en": "⬅️ (left arrow) if the letter is <b>NOT THE SAME</b> as 2 letters ago",
+                                "fr": "⬅️ (clé flèche gauche) si la lettre <b>n''est pas la même</b> que celle qui a été présentée <b>2 lettres plus tôt</b>."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "➡️ (right arrow) if the letter is <b>THE SAME</b> as 2 letters ago"
+                            "textContent": {
+                                "en": "➡️ (right arrow) if the letter is <b>THE SAME</b> as 2 letters ago",
+                                "fr": "➡️ (clé flèche de droite) si la lettre <b>est la même</b> que celle qui a été présentée <b>2 lettres plus tôt</b>."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready for the practice round"
+                            "textContent": {
+                                "en": "Click \\"START\\" to proceed",
+                                "fr": "Cliquez sur \\"START\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -950,35 +1040,59 @@ UPDATE tasks set
             {
                 "component": "DISPLAYCOMPONENT",
                 "content": {
-                    "title": "Practice round is now complete",
+                    "title": {
+                        "en": "Practice round is now complete",
+                        "fr": "Bon travail!"
+                    }
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You will now play the actual game"
+                            "textContent": {
+                                "en": "You will now play the actual game",
+                                "fr": "Vous allez maintenant commencer le jeu."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You will earn 10 points for every right answer"
+                            "textContent": {
+                                "en": "You will earn 10 points for every right answer",
+                                "fr": "Vous gagnerez 10 points pour chaque bonne réponse."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Remember, press:"
+                            "textContent": {
+                                "en": "Remember, press:",
+                                "fr": "Rappelez vous:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "⬅️ (left arrow) if the letter is <b>NOT THE SAME</b> as 2 letters ago"
+                            "textContent": {
+                                "en": "⬅️ (left arrow) if the letter is <b>NOT THE SAME</b> as 2 letters ago",
+                                "fr": "⬅️ (clé flèche gauche) si la lettre <b>n''est pas la même</b> que celle qui a été présentée <b>2 lettres plus tôt</b>."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "➡️ (right arrow) if the letter is <b>THE SAME</b> as 2 letters ago"
+                            "textContent": {
+                                "en": "➡️ (right arrow) if the letter is <b>THE SAME</b> as 2 letters ago",
+                                "fr": "➡️ (clé flèche de droite) si la lettre <b>est la même</b> que celle qui a été présentée <b>2 lettres plus tôt</b>."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Good luck!"
+                            "textContent": {
+                                "en": "Good luck!",
+                                "fr": "Bonne chance!"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready for the actual game"
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the actual game",
+                                "fr": "Cliquez sur \\"START\\" pour commencer le jeu"
+                            }
                         }
                     ],
                     "buttons": {
@@ -1008,21 +1122,33 @@ UPDATE tasks set
             {
                 "component": "DISPLAYCOMPONENT",
                 "content": {
-                    "title": "Game has finished",
+                    "title": {
+                        "en": "Game has finished",
+                        "fr": "Félicitations!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Congratulations! You have finished the game successfully"
+                            "textContent": {
+                                "en": "Congratulations! You have finished the game successfully",
+                                "fr": "Vous avez terminé le jeu avec succès."
+                            }
                         },
                         {
                             "sectionType": "text",
                             "injection": "cached-string",
                             "cacheKey": "nback-total-score",
-                            "textContent": "You scored ??? points"
+                            "textContent": {
+                                "en": "You scored ??? points",
+                                "fr": "Vous marquez ??? points"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Thank you for your participation. Click \\"CONTINUE\\""
+                            "textContent": {
+                                "en": "Thank you for your participation. Click \\"CONTINUE\\"",
+                                "fr": "Merci de votre participation. Cliquez sur \\"CONTINUE\\""
+                            }
                         }
                     ]
                 }
