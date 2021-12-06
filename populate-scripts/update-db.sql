@@ -322,7 +322,7 @@ UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "NAB",
     name = "Finger Tapping Game",
-    description = "The participant uses their dominant or non dominant hand to tap the \"P\" and \"Q\" characters as quickly as they can",
+    description = "The participant uses their dominant or non dominant hand to tap the \\"P\\" and \\"Q\\" characters as quickly as they can",
     external_url = "",
     config = '{
         "config": {},
@@ -12123,6 +12123,28 @@ UPDATE tasks SET
             },
             {
                 "questionType": "multipleChoiceSelect",
+                "title": "Do you have color-blindness?",
+                "key": "colorBlindnss",
+                "validation": {
+                    "required": true
+                },
+                "multipleChoiceOptions": [
+                    {
+                        "label": "No",
+                        "value": "No"
+                    },
+                    {
+                        "label": "Yes",
+                        "value": "Yes"
+                    },
+                    {
+                        "label": "Unsure",
+                        "value": "Unsure"
+                    }
+                ]
+            },
+            {
+                "questionType": "multipleChoiceSelect",
                 "title": "Do you feel that your memory and thinking have gotten worse?",
                 "textContent": "If you have Parkinson''s disease, consider the change since your diagnosis, or, if you don''t have Parkinson''s disease, consider the change in the last few years.",
                 "key": "memory",
@@ -13447,7 +13469,7 @@ UPDATE tasks SET
             },
             {
                 "header": "",
-                "textContent": "To continue, please click NEXT"
+                "textContent": "To continue, please click CONTINUE"
             }
         ],
         "buttons": {
@@ -13511,7 +13533,7 @@ UPDATE tasks SET
             },
             {
                 "header": "",
-                "textContent": "To continue, please click NEXT"
+                "textContent": "To continue, please click CONTINUE"
             }
         ],
         "buttons": {
@@ -13519,3 +13541,47 @@ UPDATE tasks SET
         }
     }'
 WHERE id = 49;
+-- End Display Slide INFO DISPLAY
+UPDATE tasks SET
+    from_platform = "PSHARPLAB",
+    task_type = "INFO_DISPLAY",
+    name = "End Display Slide",
+    description = "",
+    external_url = "",
+    config = '{
+        "title": "You have successfully completed the Neurocognition on the Web study!",
+        "sections": [
+            {
+                "header": "Thank you for participating in our study!",
+                "textContent": ""
+            },
+            {
+                "header": "",
+                "textContent": "If you have any questions about our study, please feel free to contact us through our email."
+            },
+            {
+                "header": "",
+                "textContent": "If you haven''t already, please also contact us (sharplab.neuro@mcgill.ca) to schedule your in-person session."
+            },
+            {
+                "header": "",
+                "textContent": "Furthermore, we would love to hear your feedback and your experience using our platform, as this project is still a work in progress."
+            },
+            {
+                "header": "",
+                "textContent": "If you are in full-screen mode, you can press ''esc'' to exit, then close the window or browser. You can also click \\"Continue\\" which will bring you back to your dashboard."
+            },
+            {
+                "header": "",
+                "textContent": "Thank you so much for participating!"
+            },
+            {
+                "header": "",
+                "textContent": "<b>Contact Email:</b> sharplab.neuro@mcgill.ca"
+            }
+        ],
+        "buttons": {
+            "displayContinueButton": true
+        }
+    }'
+WHERE id = 50;
