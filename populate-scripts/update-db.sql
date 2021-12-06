@@ -322,7 +322,7 @@ UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "NAB",
     name = "Finger Tapping Game",
-    description = "The participant uses their dominant or non dominant hand to tap the \\"P\\" and \\"Q\\" characters as quickly as they can",
+    description = "The participant uses their dominant or non dominant hand to tap the \"P\" and \"Q\" characters as quickly as they can",
     external_url = "",
     config = '{
         "config": {},
