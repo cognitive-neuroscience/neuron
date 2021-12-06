@@ -322,7 +322,7 @@ UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "NAB",
     name = "Finger Tapping Game",
-    description = "The participant uses their dominant or non dominant hand to tap the \\"P\\" and \\"Q\\" characters as quickly as they can",
+    description = "The participant uses their dominant or non dominant hand to tap the \"P\" and \"Q\" characters as quickly as they can",
     external_url = "",
     config = '{
         "config": {},
@@ -814,7 +814,7 @@ UPDATE tasks set
                             "sectionType": "text",
                             "textContent": {
                                 "en": "You have to press:",
-                                "fr": "textContent": "Utilisant votre clavier, vous devez cliquez:"
+                                "fr": "Utilisant votre clavier, vous devez cliquez:"
                             }
                         },
                         {
@@ -1043,7 +1043,7 @@ UPDATE tasks set
                     "title": {
                         "en": "Practice round is now complete",
                         "fr": "Bon travail!"
-                    }
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
