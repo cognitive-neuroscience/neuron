@@ -44,7 +44,7 @@ UPDATE studies SET
             }
         ]
     }'
-WHERE id IN (2, 3, 4, 5, 13, 14, 15, 18, 20, 21, 22, 30, 32);
+WHERE id IN (2, 3, 4, 5, 13, 14, 15, 18, 20, 21, 22, 30, 32, 33, 34, 37);
 
 UPDATE studies SET
     config = '{
