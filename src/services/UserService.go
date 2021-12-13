@@ -58,8 +58,10 @@ func (u *UserService) UpdateUser(receivedUser models.User) models.HTTPStatus {
 		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "there was an error updating the user"}
 	}
 
+	// we want to ensure that only these fields are being updated - password should never be updated via this route
 	userFromDB.Email = receivedUser.Email
 	userFromDB.ChangePasswordRequired = receivedUser.ChangePasswordRequired
+	userFromDB.Lang = receivedUser.Lang
 
 	return userRepositoryImpl.UpdateUser(&userFromDB)
 }
@@ -72,34 +74,18 @@ func (u *UserService) ChangePassword(email string, tempPassword string, newPassw
 	if isCorrect := passwordIsCorrect(userFromDB.Password, tempPassword); !isCorrect {
 		return models.HTTPStatus{Status: http.StatusUnprocessableEntity, Message: "password is incorrect"}
 	}
-	if err := u.UpdatePasswordByEmail(email, newPassword); err != nil {
+
+	hashedPassword, err := hashAndSalt(newPassword)
+	if err != nil {
 		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: err.Error()}
 	}
-
+	userFromDB.Password = hashedPassword
 	userFromDB.ChangePasswordRequired = false
+
 	if httpStatus := u.UpdateUser(userFromDB); httpStatus.Status != http.StatusOK {
 		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "there was an error updating the user"}
 	}
 	return models.HTTPStatus{Status: http.StatusOK, Message: "updated password"}
-}
-
-func (u *UserService) UpdatePasswordByEmail(email string, newPassword string) error {
-	const errMsg = "there was an error resetting the password"
-	user, err := userRepositoryImpl.GetUserByEmail(email)
-	if err != nil {
-		return errors.New(errMsg)
-	}
-	hashedPassword, err := hashAndSalt(newPassword)
-	if err != nil {
-		return errors.New(errMsg)
-	}
-
-	user.Password = hashedPassword
-
-	if httpStatus := userRepositoryImpl.UpdateUser(&user); httpStatus.Status != http.StatusOK {
-		return errors.New(httpStatus.Message)
-	}
-	return nil
 }
 
 func (u *UserService) RegisterCrowdsourcedUserCompletion(participantId string, studyId string) (string, error) {

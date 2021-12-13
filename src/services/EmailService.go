@@ -20,14 +20,14 @@ func (*EmailService) SendEmail(emailAddress string) error {
 		return err
 	}
 
+	hashedTempPassword, err := hashAndSalt(tempPassword)
+	if err != nil {
+		return err
+	}
+	user.Password = hashedTempPassword
 	user.ChangePasswordRequired = true
 	if httpStatus := userServiceImpl.UpdateUser(user); httpStatus.Status != http.StatusOK {
 		return errors.New(httpStatus.Message)
-	}
-
-	if err := userServiceImpl.UpdatePasswordByEmail(emailAddress, tempPassword); err != nil {
-		axonlogger.ErrorLogger.Println("error updating password for user", err)
-		return err
 	}
 
 	return emailServiceImpl.SendForgotPasswordEmail(emailAddress, tempPassword)

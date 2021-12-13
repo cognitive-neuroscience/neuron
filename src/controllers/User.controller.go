@@ -179,6 +179,16 @@ func (u *UserController) GetGuests(e echo.Context) error {
 	return common.SendHTTPOkWithBody(e, result)
 }
 
+func (u *UserController) UpdateUser(e echo.Context) error {
+	receivedUser := new(models.User)
+	if err := e.Bind(receivedUser); err != nil {
+		axonlogger.WarningLogger.Println("Could not parse user details", err)
+		return common.SendHTTPBadRequest(e)
+	}
+	result := userServiceImpl.UpdateUser(*receivedUser)
+	return common.SendHTTPWithMessage(e, result)
+}
+
 func (u *UserController) GetUser(e echo.Context) error {
 	email, ok := e.Get("email").(string)
 	if !ok {
@@ -247,11 +257,4 @@ func (u *UserController) RegisterCrowdsourcedUserCompletion(e echo.Context) erro
 // 	axonlogger.WarningLogger.Println("Not authorized", experimentUser.ID, experimentUser.Code)
 // 	common.SendHTTPForbidden(c)
 // 	return
-// }
-
-// // UpdateUser updates a given user in the DB
-// // TODO: Impement this
-// func UpdateUser(c *fiber.Ctx) {
-// 	services.AuthenticateToken(c)
-// 	c.Write([]byte("OK"))
 // }

@@ -1392,23 +1392,38 @@ UPDATE tasks set
             {
                 "component": "DISPLAYCOMPONENT",
                 "content": {
-                    "title": "Welcome to Connect the dots game - Part 1",
+                    "title": {
+                        "en": "Welcome to Connect the dots game - Part 1",
+                        "fr": "Bienvenue au jeu ‘Relier Les Points’ - Partie 1"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Read the instructions carefully"
+                            "textContent": {
+                                "en": "Read the instructions carefully",
+                                "fr": "Lisez attentivement les instructions."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "In this task, you will be shown numbered circles on the screen"
+                            "textContent": {
+                                "en": "In this task, you will be shown numbered circles on the screen",
+                                "fr": "Des cercles numérotés seront affichés à l''écran."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You must start by clicking the number 1, then 2, and then continue in ascending order as fast as possible"
+                            "textContent": {
+                                "en": "You must start by clicking the number 1, then 2, and then continue in ascending order as fast as possible",
+                                "fr": "Vous devez relier les cercles en cliquant dessus avec la souris, en suivant l’ordre croissant des numéros (1, 2, 3, etc.). Vous devez le faire le plus vite possible."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to proceed",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -1421,19 +1436,31 @@ UPDATE tasks set
             {
                 "component": "DISPLAYCOMPONENT",
                 "content": {
-                    "title": "Practice round",
+                    "title": {
+                        "en": "Practice round",
+                        "fr": "Pratique"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Let''s practice"
+                            "textContent": {
+                                "en": "Let''s practice",
+                                "fr": "Vous aurez maintenant la chance de vous pratiquer."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The game will launch in full-screen"
+                            "textContent": {
+                                "en": "The game will launch in full-screen",
+                                "fr": "Le jeu se lancera en plein écran."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready for the practice round"
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the practice round",
+                                "fr": "Cliquez sur \\"START\\" pour commencer la pratique"
+                            }
                         }
                     ],
                     "buttons": {
@@ -1460,19 +1487,31 @@ UPDATE tasks set
             {
                 "component": "DISPLAYCOMPONENT",
                 "content": {
-                    "title": "Practice round is now complete!",
+                    "title": {
+                        "en": "Practice round is now complete!",
+                        "fr": "Bravo!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You will now play the actual game"
+                            "textContent": {
+                                "en": "You will now play the actual game",
+                                "fr": "Vous allez maintenant commencer le jeu."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You must start by clicking the number 1, then 2, and then continue in ascending order as fast as possible"
+                            "textContent": {
+                                "en": "You must start by clicking the number 1, then 2, and then continue in ascending order as fast as possible",
+                                "fr": "Rappel: vous devez relier les chiffres en ordre croissant le plus vite possible."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready"
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready",
+                                "fr": "Cliquez sur \\"START\\" quand vous êtes prêt"
+                            }
                         }
                     ],
                     "buttons": {
@@ -1499,23 +1538,38 @@ UPDATE tasks set
             {
                 "component": "DISPLAYCOMPONENT",
                 "content": {
-                    "title": "Welcome to the Connect the dots game - Part 2",
+                    "title": {
+                        "en": "Welcome to the Connect the dots game - Part 2",
+                        "fr": "Jeu ‘Relier Les Points’ - Partie 2"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Read the instructions carefully"
+                            "textContent": {
+                                "en": "Read the instructions carefully",
+                                "fr": "Lisez attentivement les instructions"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "In this task, you will be shown circles with numbers and letters"
+                            "textContent": {
+                                "en": "In this task, you will be shown circles with numbers and letters",
+                                "fr": "Il y aura maintenant des numéros ET des lettres."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Starting with number 1, you must click the circles ALTERNATING between numbers and letters in increasing order as fast as possible."
+                            "textContent": {
+                                "en": "Starting with number 1, you must click the circles ALTERNATING between numbers and letters in increasing order as fast as possible.",
+                                "fr": "Commençant par le numéro 1, vous devez cliquer sur les cercles EN ALTERNANT entre les numéros et les lettres, en suivant l''ordre croissant, le plus vite possible."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Like this:"
+                            "textContent": {
+                                "en": "Like this:",
+                                "fr": "Comme ceci:"
+                            }
                         },
                         {
                             "sectionType": "image-horizontal",
@@ -1523,7 +1577,10 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to proceed",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -1536,11 +1593,17 @@ UPDATE tasks set
             {
                 "component": "DISPLAYCOMPONENT",
                 "content": {
-                    "title": "Practice round",
+                    "title": {
+                        "en": "Practice round",
+                        "fr": "Pratique"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Let''s practice"
+                            "textContent": {
+                                "en": "Let''s practice",
+                                "fr": "Vous aurez maintenant la chance de vous pratiquer."
+                            }
                         },
                         {
                             "sectionType": "image-horizontal",
@@ -1548,11 +1611,17 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The game will launch in full-screen"
+                            "textContent": {
+                                "en": "The game will launch in full-screen",
+                                "fr": "Le jeu se lancera en plein écran"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready for the practice round"
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the practice round",
+                                "fr": "Cliquez sur \\"START\\" pour commencer la pratique"
+                            }
                         }
                     ],
                     "buttons": {
@@ -1579,15 +1648,24 @@ UPDATE tasks set
             {
                 "component": "DISPLAYCOMPONENT",
                 "content": {
-                    "title": "Practice round is now complete!",
+                    "title": {
+                        "en": "Practice round is now complete!",
+                        "fr": "Bon travail!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You will now play the actual game"
+                            "textContent": {
+                                "en": "You will now play the actual game",
+                                "fr": "Vous allez maintenant commencer le jeu."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Starting with number 1, you must click the circles ALTERNATING between numbers and letters in ascending order as fast as possible"
+                            "textContent": {
+                                "en": "Starting with number 1, you must click the circles ALTERNATING between numbers and letters in ascending order as fast as possible",
+                                "fr": "Rappel: vous devez cliquer les cercles en suivant cet ordre et vous devez le faire le plus vite possible."
+                            }
                         },
                         {
                             "sectionType": "image-horizontal",
@@ -1595,7 +1673,10 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready"
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready",
+                                "fr": "Cliquez sur \\"START\\" quand vous êtes prêt"
+                            }
                         }
                     ],
                     "buttons": {
@@ -1622,19 +1703,31 @@ UPDATE tasks set
             {
                 "component": "DISPLAYCOMPONENT",
                 "content": {
-                    "title": "Congratulations!",
+                    "title": {
+                        "en": "Congratulations!",
+                        "fr": "Félicitations!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You finished the game successfully"
+                            "textContent": {
+                                "en": "You finished the game successfully",
+                                "fr": "Vous avez terminé le jeu avec succès."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Thank you for your participation"
+                            "textContent": {
+                                "en": "Thank you for your participation",
+                                "fr": "Merci pour votre participation."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\""
+                            "textContent": {
+                                "en": "Click \\"NEXT\\"",
+                                "fr": "Cliquez sur \\"NEXT\\""
+                            }
                         }
                     ],
                     "buttons": {
@@ -4027,37 +4120,61 @@ UPDATE tasks set
             {
                 "component": "DISPLAYCOMPONENT",
                 "content": {
-                    "title": "Welcome to the Oddball Task",
+                    "title": {
+                        "en": "Welcome to the Oddball Task",
+                        "fr": "Bienvenue dans la tâche Oddball"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Read the instructions carefully"
+                            "textContent": {
+                                "en": "Read the instructions carefully",
+                                "fr": "Lisez attentivement les instructions."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "In this game, you will see \\"+\\" in the middle of the screen."
+                            "textContent": {
+                                "en": "In this game, you will see \\"+\\" in the middle of the screen.",
+                                "fr": "Dans ce jeux, vous verrez un \\"+\\" au centre de l’écran."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The \\"+\\" will be replaced by different shapes, which will be presented only briefly."
+                            "textContent": {
+                                "en": "The \\"+\\" will be replaced by different shapes, which will be presented only briefly.",
+                                "fr": "Le \\"+\\" sera remplacé par plusieurs formes, qui seront présentées brièvement."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Your goal is to identify when the triangle appears."
+                            "textContent": {
+                                "en": "Your goal is to identify when the triangle appears.",
+                                "fr": "Votre but est d’identifier lorsque le triangle apparaît."
+                            }
                         },
                         {
                             "sectionType": "text",
                             "injection": "counterbalance",
-                            "textContent": "Press <b>???</b> on the keyboard when you see the TRIANGLE."
+                            "textContent": {
+                                "en": "Press <b>???</b> on the keyboard when you see the TRIANGLE.",
+                                "fr": "Appuyez le <b>???</b> quand vous voyez le TRIANGLE."
+                            }
                         },
                         {
                             "sectionType": "text",
                             "injection": "counterbalance-alternative",
-                            "textContent": "Press <b>???</b> on the keyboard for any other shape."
+                            "textContent": {
+                                "en": "Press <b>???</b> on the keyboard for any other shape.",
+                                "fr": "Appuyez le <b>???</b> pour toute autre forme."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click NEXT to continue"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -4070,29 +4187,47 @@ UPDATE tasks set
             {
                 "component": "DISPLAYCOMPONENT",
                 "content": {
-                    "title": "",
+                    "title": {
+                        "en": "",
+                        "fr": ""
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You will start with a warm-up block and then a practice block where feedback will be provided after each trial."
+                            "textContent": {
+                                "en": "You will start with a warm-up block and then a practice block where feedback will be provided after each trial.",
+                                "fr": "Vous allez commencer par vous pratiquer."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "<b>Remember:</b>"
+                            "textContent": {
+                                "en": "<b>Remember:</b>",
+                                "fr": "<b>Rappelez-vous:</b>"
+                            }
                         },
                         {
                             "sectionType": "text",
                             "injection": "counterbalance",
-                            "textContent": "Press <b>???</b> on the keyboard when you see the TRIANGLE"
+                            "textContent": {
+                                "en": "Press <b>???</b> on the keyboard when you see the TRIANGLE",
+                                "fr": "Appuyez le <b>???</b> quand vous voyez le TRIANGLE."
+                            }
                         },
                         {
                             "sectionType": "text",
                             "injection": "counterbalance-alternative",
-                            "textContent": "Press <b>???</b> on the keyboard for any other shape"
+                            "textContent": {
+                                "en": "Press <b>???</b> on the keyboard for any other shape",
+                                "fr": "Appuyez le <b>???</b> pour toute autre forme."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" to begin the warm-up block"
+                            "textContent": {
+                                "en": "Click \\"START\\" to begin the warm-up block",
+                                "fr": "Cliquez sur \\"START\\" lorsque vous êtes prêt à commencer la pratique"
+                            }
                         }
                     ],
                     "buttons": {
@@ -4125,29 +4260,47 @@ UPDATE tasks set
             {
                 "component": "DISPLAYCOMPONENT",
                 "content": {
-                    "title": "",
+                    "title": {
+                        "en": "",
+                        "fr": ""
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You have completed the warm-up block! Next is a practice block where feedback will be provided."
+                            "textContent": {
+                                "en": "You have completed the warm-up block! Next is a practice block where feedback will be provided.",
+                                "fr": "Bravo!! Vous avez terminé la première pratique. Vous allez maintenant vous pratiquer une deuxième fois."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "<b>Remember:</b>"
+                            "textContent": {
+                                "en": "<b>Remember:</b>",
+                                "fr": "<b>Rappelez-vous:</b>"
+                            }
                         },
                         {
                             "sectionType": "text",
                             "injection": "counterbalance",
-                            "textContent": "Press <b>???</b> on the keyboard when you see the TRIANGLE"
+                            "textContent": {
+                                "en": "Press <b>???</b> on the keyboard when you see the TRIANGLE",
+                                "fr": "Appuyez le <b>???</b> quand vous voyez le TRIANGLE."
+                            }
                         },
                         {
                             "sectionType": "text",
                             "injection": "counterbalance-alternative",
-                            "textContent": "Press <b>???</b> on the keyboard for any other shape"
+                            "textContent": {
+                                "en": "Press <b>???</b> on the keyboard for any other shape",
+                                "fr": "Appuyez le <b>???</b> pour toute autre forme."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready to begin the practice"
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready to begin the practice",
+                                "fr": "Cliquez sur \\"START\\" lorsque vous êtes prêt à commencer la pratique"
+                            }
                         }
                     ],
                     "buttons": {
@@ -4180,29 +4333,47 @@ UPDATE tasks set
             {
                 "component": "DISPLAYCOMPONENT",
                 "content": {
-                    "title": "",
+                    "title": {
+                        "en": "",
+                        "fr": ""
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You have reached the end of the practice block! Feedback will no longer be provided. There will be a total of 4 blocks with breaks between each block."
+                            "textContent": {
+                                "en": "You have reached the end of the practice block! Feedback will no longer be provided. There will be a total of 4 blocks with breaks between each block.",
+                                "fr": "Bien joué! Vous avez fini la pratique! À partir de maintenant, il n’y aura plus de commentaires à l’écran pour vous aider."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "<b>Remember:</b>"
+                            "textContent": {
+                                "en": "<b>Remember:</b>",
+                                "fr": "<b>Rappelez-vous:</b>"
+                            }
                         },
                         {
                             "sectionType": "text",
                             "injection": "counterbalance",
-                            "textContent": "Press <b>???</b> on the keyboard when you see the TRIANGLE"
+                            "textContent": {
+                                "en": "Press <b>???</b> on the keyboard when you see the TRIANGLE",
+                                "fr": "Appuyez le <b>???</b> quand vous voyez le TRIANGLE."
+                            }
                         },
                         {
                             "sectionType": "text",
                             "injection": "counterbalance-alternative",
-                            "textContent": "Press <b>???</b> on the keyboard for any other shape"
+                            "textContent": {
+                                "en": "Press <b>???</b> on the keyboard for any other shape",
+                                "fr": "Appuyez le <b>???</b> pour toute autre forme."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready to begin"
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready to begin",
+                                "fr": "Cliquez sur \\"START\\" lorsque vous êtes prêt à commencer"
+                            }
                         }
                     ]
                 }
@@ -4230,7 +4401,10 @@ UPDATE tasks set
             {
                 "component": "DISPLAYCOMPONENT",
                 "content": {
-                    "title": "You''ve reached the end of the block!",
+                    "title": {
+                        "en": "You''ve reached the end of the block!",
+                        "fr": "Vous avez atteint la fin du bloc!"
+                    },
                     "timerConfig": {
                         "timer": 30000,
                         "showTimer": true,
@@ -4240,25 +4414,40 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You may take a 30 second break"
+                            "textContent": {
+                                "en": "You may take a 30 second break",
+                                "fr": "Vous pouvez prendre une pause avant de passer au bloc suivant."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Remember:"
+                            "textContent": {
+                                "en": "<b>Remember:</b>",
+                                "fr": "<b>Rappelez-vous:</b>"
+                            }
                         },
                         {
                             "sectionType": "text",
                             "injection": "counterbalance",
-                            "textContent": "Press ??? on the keyboard when you see a triangle"
+                            "textContent": {
+                                "en": "Press <b>???</b> on the keyboard when you see the TRIANGLE",
+                                "fr": "Appuyez le <b>???</b> quand vous voyez le TRIANGLE."
+                            }
                         },
                         {
                             "sectionType": "text",
                             "injection": "counterbalance-alternative",
-                            "textContent": "Press ??? on the keyboard for any other shape"
+                            "textContent": {
+                                "en": "Press <b>???</b> on the keyboard for any other shape",
+                                "fr": "Appuyez le <b>???</b> pour toute autre forme."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You will be automatically directed to the next block after the break. A \\"Get Ready!\\" slide will appear before you begin. You can also click \\"NEXT\\" to move on to the next round"
+                            "textContent": {
+                                "en": "You will be automatically directed to the next block after the break. A \\"Get Ready!\\" slide will appear before you begin. You can also click \\"NEXT\\" to move on to the next round",
+                                "fr": "Vous serez automatiquement dirigé vers le bloc suivant après la pause. Le message \\"Get Ready!\\" apparaîtra avant de commencer. Vous pouvez aussi cliquer sur \\"NEXT\\" pour passer au tour suivant."
+                            }
                         }
                     ]
                 }
@@ -4286,7 +4475,10 @@ UPDATE tasks set
             {
                 "component": "DISPLAYCOMPONENT",
                 "content": {
-                    "title": "You''ve reached the end of the block!",
+                    "title": {
+                        "en": "You''ve reached the end of the block!",
+                        "fr": "Vous avez atteint la fin du bloc!"
+                    },
                     "timerConfig": {
                         "timer": 30000,
                         "showTimer": true,
@@ -4296,25 +4488,40 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You may take a 30 second break"
+                            "textContent": {
+                                "en": "You may take a 30 second break",
+                                "fr": "Vous pouvez prendre une pause avant de passer au bloc suivant."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Remember:"
+                            "textContent": {
+                                "en": "<b>Remember:</b>",
+                                "fr": "<b>Rappelez-vous:</b>"
+                            }
                         },
                         {
                             "sectionType": "text",
                             "injection": "counterbalance",
-                            "textContent": "Press ??? on the keyboard when you see a triangle"
+                            "textContent": {
+                                "en": "Press <b>???</b> on the keyboard when you see the TRIANGLE",
+                                "fr": "Appuyez le <b>???</b> quand vous voyez le TRIANGLE."
+                            }
                         },
                         {
                             "sectionType": "text",
                             "injection": "counterbalance-alternative",
-                            "textContent": "Press ??? on the keyboard for any other shape"
+                            "textContent": {
+                                "en": "Press <b>???</b> on the keyboard for any other shape",
+                                "fr": "Appuyez le <b>???</b> pour toute autre forme."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You will be automatically directed to the next block after the break. A \\"Get Ready!\\" slide will appear before you begin. You can also click \\"NEXT\\" to move on to the next round"
+                            "textContent": {
+                                "en": "You will be automatically directed to the next block after the break. A \\"Get Ready!\\" slide will appear before you begin. You can also click \\"NEXT\\" to move on to the next round",
+                                "fr": "Vous serez automatiquement dirigé vers le bloc suivant après la pause. Le message \\"Get Ready!\\" apparaîtra avant de commencer. Vous pouvez aussi cliquer sur \\"NEXT\\" pour passer au tour suivant."
+                            }
                         }
                     ]
                 }
@@ -4342,7 +4549,10 @@ UPDATE tasks set
             {
                 "component": "DISPLAYCOMPONENT",
                 "content": {
-                    "title": "You''ve reached the end of the block!",
+                    "title": {
+                        "en": "You''ve reached the end of the block!",
+                        "fr": "Vous avez atteint la fin du bloc!"
+                    },
                     "timerConfig": {
                         "timer": 30000,
                         "showTimer": true,
@@ -4352,25 +4562,47 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You may take a 30 second break"
+                            "textContent": {
+                                "en": "You may take a 30 second break",
+                                "fr": "Vous pouvez prendre une pause avant de passer au bloc suivant."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Remember:"
+                            "textContent": {
+                                "en": "You may take a 30 second break",
+                                "fr": "Vous pouvez prendre une pause avant de passer au bloc suivant."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "<b>Remember:</b>",
+                                "fr": "<b>Rappelez-vous:</b>"
+                            }
                         },
                         {
                             "sectionType": "text",
                             "injection": "counterbalance",
-                            "textContent": "Press ??? on the keyboard when you see a triangle"
+                            "textContent": {
+                                "en": "Press <b>???</b> on the keyboard when you see the TRIANGLE",
+                                "fr": "Appuyez le <b>???</b> quand vous voyez le TRIANGLE."
+                            }
                         },
                         {
                             "sectionType": "text",
                             "injection": "counterbalance-alternative",
-                            "textContent": "Press ??? on the keyboard for any other shape"
+                            "textContent": {
+                                "en": "Press <b>???</b> on the keyboard for any other shape",
+                                "fr": "Appuyez le <b>???</b> pour toute autre forme."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You will be automatically directed to the next block after the break. A \\"Get Ready!\\" slide will appear before you begin. You can also click \\"NEXT\\" to move on to the next round"
+                            "textContent": {
+                                "en": "You will be automatically directed to the next block after the break. A \\"Get Ready!\\" slide will appear before you begin. You can also click \\"NEXT\\" to move on to the next round",
+                                "fr": "Vous serez automatiquement dirigé vers le bloc suivant après la pause. Le message \\"Get Ready!\\" apparaîtra avant de commencer. Vous pouvez aussi cliquer sur \\"NEXT\\" pour passer au tour suivant."
+                            }
                         }
                     ]
                 }
@@ -4398,11 +4630,17 @@ UPDATE tasks set
             {
                 "component": "DISPLAYCOMPONENT",
                 "content": {
-                    "title": "Game has finished",
+                    "title": {
+                        "en": "Game has finished",
+                        "fr": "Le jeu est fini!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Thank you for your participation!"
+                            "textContent": {
+                                "en": "Thank you for your participation!",
+                                "fr": "Merci pour votre participation!"
+                            }
                         }
                     ]
                 }

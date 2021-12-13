@@ -11,6 +11,7 @@ var UserSchema = `
 		password VARCHAR(255) NOT NULL CHECK(password != ""),
 		role ENUM("ADMIN", "PARTICIPANT", "GUEST"),
 		change_password_required BOOLEAN DEFAULT FALSE,
+		lang VARCHAR(100) DEFAULT '',
 		PRIMARY KEY (id)
 	);
 `
@@ -34,6 +35,7 @@ type User struct {
 	Role                   string    `json:"role" gorm:"not null;default:'PARTICIPANT'"`
 	ChangePasswordRequired bool      `json:"changePasswordRequired"`
 	CreatedAt              time.Time `json:"createdAt"`
+	Lang                   string    `json:"lang"`
 }
 
 type CrowdSourcedUser struct {

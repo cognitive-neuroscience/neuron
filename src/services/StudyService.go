@@ -29,8 +29,23 @@ func (s *StudyService) DeleteStudyById(studyId string) models.HTTPStatus {
 }
 
 // GetAllStudies retrieves all studies from the db
-func (s *StudyService) GetAllStudies() ([]models.Study, error) {
-	return studyRepositoryImpl.GetAllStudies()
+func (s *StudyService) GetAllStudies(role string) ([]models.Study, error) {
+	studies, err := studyRepositoryImpl.GetAllStudies()
+	if err != nil {
+		return studies, err
+	}
+	if role != common.ADMIN {
+		for _, study := range studies {
+			// scrub sensitive info
+			study.CreatedAt = time.Time{}
+			study.DeletedAt.Time = time.Time{}
+			study.DeletedAt.Valid = true
+			study.InternalName = ""
+			study.CanEdit = false
+		}
+	}
+
+	return studies, err
 }
 
 func (s *StudyService) UpdateStudy(study *models.Study, shouldIncludeTasksUpdate string) models.HTTPStatus {

@@ -1,6 +1,7 @@
 p, ADMIN,       /api/*,                         *
 
 p, PARTICIPANT, /api/users,                     GET
+p, PARTICIPANT, /api/users/*,                   PATCH
 p, GUEST,       /api/users,                     GET
 
 p, PARTICIPANT, /api/crowdsourcedusers/*,       PATCH
