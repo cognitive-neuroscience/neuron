@@ -21,6 +21,7 @@ var StudyUserSchema = `
 		register_date DATETIME NOT NULL, 
 		due_date DATETIME DEFAULT(NULL),
 		has_accepted_consent BOOLEAN DEFAULT FALSE,
+		lang VARCHAR(100) NOT NULL DEFAULT '',
 		PRIMARY KEY (user_id, study_id),
 		FOREIGN KEY (user_id) REFERENCES users(id),
 		FOREIGN KEY (study_id) REFERENCES studies(id)
@@ -38,6 +39,7 @@ type StudyUser struct {
 	CurrentTaskIndex   int       `json:"currentTaskIndex"`
 	HasAcceptedConsent bool      `json:"hasAcceptedConsent"`
 	Study              Study     `json:"study"`
+	Lang               string    `json:"lang"`
 }
 
 // Scan implements the Scanner interface. sql --> value

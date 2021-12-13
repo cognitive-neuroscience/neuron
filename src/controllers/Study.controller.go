@@ -33,7 +33,12 @@ func (s *StudyController) SaveStudy(e echo.Context) error {
 }
 
 func (s *StudyController) GetAllStudies(e echo.Context) error {
-	studies, err := studyServiceImpl.GetAllStudies()
+	role, ok := e.Get("role").(string)
+	if !ok {
+		axonlogger.ErrorLogger.Println("None or invalid role found when getting study by study id")
+		return common.SendHTTPStatusInternalServerError(e)
+	}
+	studies, err := studyServiceImpl.GetAllStudies(role)
 	if err != nil {
 		return common.SendHTTPStatusServiceUnavailable(e)
 	}

@@ -29,6 +29,7 @@ func setUpUserRoutes(group *echo.Group) {
 	users.POST("", userControllerImpl.SaveUser)
 	users.GET("/guests", userControllerImpl.GetGuests)
 	users.DELETE("/:id", userControllerImpl.DeleteUserById)
+	users.PATCH("/:id", userControllerImpl.UpdateUser)
 	users.POST("/changepassword", userControllerImpl.ChangePassword)
 }
 
