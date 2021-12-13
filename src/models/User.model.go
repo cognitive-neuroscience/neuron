@@ -11,7 +11,7 @@ var UserSchema = `
 		password VARCHAR(255) NOT NULL CHECK(password != ""),
 		role ENUM("ADMIN", "PARTICIPANT", "GUEST"),
 		change_password_required BOOLEAN DEFAULT FALSE,
-		lang VARCHAR(100) DEFAULT '',
+		lang VARCHAR(100) NOT NULL DEFAULT '',
 		PRIMARY KEY (id)
 	);
 `
