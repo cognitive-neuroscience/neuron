@@ -3742,15 +3742,24 @@ UPDATE tasks set
             {
                 "component": "DISPLAYCOMPONENT",
                 "content": {
-                    "title": "Welcome to the Smiley Face Game",
+                    "title": {
+                        "en": "Welcome to the Smiley Face Game",
+                        "fr": "BIENVENUE AU JEU DES LETTRES"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You will be shown a smiley face."
+                            "textContent": {
+                                "en": "You will be shown a smiley face.",
+                                "fr": "Vous allez voir des visages souriants à l’écran."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Your job is to determine if the face has a <b>short</b> or a <b>long</b> mouth."
+                            "textContent": {
+                                "en": "Your job is to determine if the face has a <b>short</b> or a <b>long</b> mouth.",
+                                "fr": "Votre objectif est de déterminer si le sourire est <b>COURT</b> ou <b>LONG</b>."
+                            }
                         },
                         {
                             "sectionType": "image-horizontal",
@@ -3758,11 +3767,17 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "This will be hard because they look very similar!"
+                            "textContent": {
+                                "en": "This will be hard because they look very similar!",
+                                "fr": "Regardez attentivement car le sourire n''apparaît que brièvement!"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to practice"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to practice",
+                                "fr": "Cliquez \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3775,23 +3790,38 @@ UPDATE tasks set
             {
                 "component": "DISPLAYCOMPONENT",
                 "content": {
-                    "title": "Practice Round",
+                    "title": {
+                        "en": "Practice Round",
+                        "fr": "Pratique"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Let''s practice!"
+                            "textContent": {
+                                "en": "Let''s practice!",
+                                "fr": "Vous aurez maintenant la chance de vous pratiquer."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Put your index fingers in position."
+                            "textContent": {
+                                "en": "Put your index fingers in position.",
+                                "fr": "Mettez vos index en position."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You will not have much time - the smiley faces will flash on the screen very quickly!"
+                            "textContent": {
+                                "en": "You will not have much time - the smiley faces will flash on the screen very quickly!",
+                                "fr": "Vous aurez très peu de temps pour répondre, alors soyez prêts!"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You must press \\"Z\\" if it is a <b>short</b> mouth, or \\"M\\" if it is a <b>long</b> mouth"
+                            "textContent": {
+                                "en": "You must press \\"Z\\" if it is a <b>short</b> mouth, or \\"M\\" if it is a <b>long</b> mouth",
+                                "fr": "Vous devez appuyer sur \\"Z\\" si le sourire est <b>COURT</b>, ou \\"M\\" si le sourire est <b>LONG</b>."
+                            }
                         },
                         {
                             "sectionType": "image-horizontal",
@@ -3799,15 +3829,24 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "In this practice, you will be shown the type of face (short or long) as a guide"
+                            "textContent": {
+                                "en": "In this practice, you will be shown the type of face (short or long) as a guide",
+                                "fr": "Dans cette pratique, le type de visage (court ou long) vous sera indiqué comme guide."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The game will launch in full-screen"
+                            "textContent": {
+                                "en": "The game will launch in full-screen",
+                                "fr": "Le jeu se lancera en plein écran."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready to start the practice round"
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready to start the practice round",
+                                "fr": "Cliquez sur \\"START\\" lorsque vous êtes prêt à commencer la pratique"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3841,23 +3880,38 @@ UPDATE tasks set
             {
                 "component": "DISPLAYCOMPONENT",
                 "content": {
-                    "title": "Practice Round",
+                    "title": {
+                        "en": "Practice Round",
+                        "fr": "Pratique"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Let''s practice one more time!"
+                            "textContent": {
+                                "en": "Let''s practice one more time!",
+                                "fr": "Pratiquons encore une fois!"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Put your index fingers in position."
+                            "textContent": {
+                                "en": "Put your index fingers in position.",
+                                "fr": "Mettez vos index en position."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You will not have much time - the smiley faces will flash on the screen very quickly!"
+                            "textContent": {
+                                "en": "You will not have much time - the smiley faces will flash on the screen very quickly!",
+                                "fr": "Vous aurez très peu de temps pour répondre, alors soyez prêts!"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You must press \\"Z\\" if it is a <b>short</b> mouth, or \\"M\\" if it is a <b>long</b> mouth"
+                            "textContent": {
+                                "en": "You must press \\"Z\\" if it is a <b>short</b> mouth, or \\"M\\" if it is a <b>long</b> mouth",
+                                "fr": "Vous devez appuyer sur \\"Z\\" si le sourire est <b>COURT</b>, ou \\"M\\" si le sourire est <b>LONG</b>."
+                            }
                         },
                         {
                             "sectionType": "image-horizontal",
@@ -3865,15 +3919,24 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "In this practice, you will not be shown the type of face anymore"
+                            "textContent": {
+                                "en": "In this practice, you will not be shown the type of face anymore",
+                                "fr": "Dans cette pratique, le type de visage ne vous sera plus affiché."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The game will launch in full-screen"
+                            "textContent": {
+                                "en": "The game will launch in full-screen",
+                                "fr": "Le jeu se lancera en plein écran."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready to start the practice round"
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready to start the practice round",
+                                "fr": "Cliquez sur \\"START\\" lorsque vous êtes prêt à commencer la pratique"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3906,15 +3969,24 @@ UPDATE tasks set
             {
                 "component": "DISPLAYCOMPONENT",
                 "content": {
-                    "title": "Good job!",
+                    "title": {
+                        "en": "Good job!",
+                        "fr": "Bravo!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Now you are ready for the real game."
+                            "textContent": {
+                                "en": "Now you are ready for the real game.",
+                                "fr": "Maintenant vous êtes prêt pour le jeu."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You will get <b>50 points</b> for correct answers <b>but only some of your correct answers will be rewarded</b> with points."
+                            "textContent": {
+                                "en": "You will get <b>50 points</b> for correct answers <b>but only some of your correct answers will be rewarded</b> with points.",
+                                "fr": "Vous gagnerez <b>des points</b> pour des bonnes réponses, <b>mais seulement certaines de vos bonnes réponses seront récompensées</b>."
+                            }
                         },
                         {
                             "sectionType": "image-horizontal",
@@ -3922,7 +3994,10 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready to start the game."
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready to start the game.",
+                                "fr": "Cliquez sur \\"START\\" lorsque vous êtes prêt à commencer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3955,7 +4030,10 @@ UPDATE tasks set
             {
                 "component": "DISPLAYCOMPONENT",
                 "content": {
-                    "title": "Please take a break. We ask that you keep it under <b>2 minutes</b>.",
+                    "title": {
+                        "en": "Please take a break. We ask that you keep it under <b>2 minutes</b>.",
+                        "fr": "Vous pouvez prendre une pause avant de continuer. Nous vous demandons de limiter la pause à <b>2 minutes</b>."
+                    },
                     "sections": [
                         {
                             "sectionType": "image-horizontal",
@@ -3963,7 +4041,10 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Press \\"START\\" when you are ready to continue"
+                            "textContent": {
+                                "en": "Press \\"START\\" when you are ready to continue",
+                                "fr": "Cliquez sur \\"START\\" lorsque vous êtes prêt à commencer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3976,7 +4057,10 @@ UPDATE tasks set
             {
                 "component": "DISPLAYCOMPONENT",
                 "content": {
-                    "title": "Get ready!",
+                    "title": {
+                        "en": "Get ready!",
+                        "fr": "Sois prêt!"
+                    },
                     "timerConfig": {
                         "timer": 10000,
                         "showTimer": true,
@@ -4014,7 +4098,10 @@ UPDATE tasks set
             {
                 "component": "DISPLAYCOMPONENT",
                 "content": {
-                    "title": "Please take a break. We ask that you keep it under <b>2 minutes</b>.",
+                    "title": {
+                        "en": "Please take a break. We ask that you keep it under <b>2 minutes</b>.",
+                        "fr": "Vous pouvez prendre une pause avant de continuer. Nous vous demandons de limiter la pause à <b>2 minutes</b>."
+                    },
                     "sections": [
                         {
                             "sectionType": "image-horizontal",
@@ -4022,7 +4109,10 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Press \\"START\\" when you are ready to continue"
+                            "textContent": {
+                                "en": "Press \\"START\\" when you are ready to continue",
+                                "fr": "Cliquez sur \\"START\\" lorsque vous êtes prêt à commencer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -4035,7 +4125,10 @@ UPDATE tasks set
             {
                 "component": "DISPLAYCOMPONENT",
                 "content": {
-                    "title": "Get ready!",
+                    "title": {
+                        "en": "Get ready!",
+                        "fr": "Sois prêt!"
+                    },
                     "timerConfig": {
                         "timer": 10000,
                         "showTimer": true,
@@ -4074,17 +4167,26 @@ UPDATE tasks set
             {
                 "component": "DISPLAYCOMPONENT",
                 "content": {
-                    "title": "Congratulations!",
+                    "title": {
+                        "en": "Congratulations!",
+                        "fr": "Félicitations!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You finished the game successfully"
+                            "textContent": {
+                                "en": "You finished the game successfully",
+                                "fr": "Vous avez terminé le jeu avec succès."
+                            }
                         },
                         {
                             "sectionType": "text",
                             "injection": "cached-string",
                             "cacheKey": "smiley-face-total-score",
-                            "textContent": "You won ??? points"
+                            "textContent": {
+                                "en": "You won ??? points",
+                                "fr": "Vous avez gagné ??? points"
+                            }
                         },
                         {
                             "sectionType": "image-horizontal",
@@ -4092,11 +4194,17 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Thank you for your participation."
+                            "textContent": {
+                                "en": "Thank you for your participation.",
+                                "fr": "Merci de votre participation."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to continue"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\""
+                            }
                         }
                     ]
                 }
@@ -5876,2025 +5984,2624 @@ UPDATE tasks set
         }
     }'
 WHERE id = 19;
--- APATHY AES ENGLISH CLEAN
+-- APATHY AES
 UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "QUESTIONNAIRE",
-    name = "Apathy AES English Clean",
+    name = "Apathy AES",
     description = "Apathy Evaluation Scale",
     external_url = "",
     config = '{
-        "title": "Questionnaire",
+        "title": {
+            "en": "Questionnaire",
+            "fr": "Questionnaire"
+        },
         "questions":[
             {
                 "questionType": "displayText",
-                "title": "Instructions: For each statement, select the answer that best describes your thoughts, feelings, and activity in the past 4 weeks."
+                "title": {
+                    "en": "Instructions: For each statement, select the answer that best describes your thoughts, feelings, and activity in the past 4 weeks.",
+                    "fr": "Instructions: Pour chacun des énoncés suivants mettez un X dans la case qui décrit le mieux vos pensées, sentiments et activités au cours des 4 dernières semaines."
+                }
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I am interested in things.",
+                "title": {
+                    "en": "I am interested in things.",
+                    "fr": "Je m’intéresse à des choses."
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "I am interested in things",
                 "multipleChoiceOptions": [
-                    { "label": "Not at all", "value": "not at all" },
-                    { "label": "Slightly", "value": "slightly" },
-                    { "label": "Somewhat", "value": "somewhat" },
-                    { "label": "A lot", "value": "a lot" }
+                    {
+                        "label": {
+                            "en": "Not at all",
+                            "fr": "Pas du tout"
+                        },
+                        "value": "not at all"
+                    },
+                    {
+                        "label": {
+                            "en": "Slightly",
+                            "fr": "Un peu"
+                        },
+                        "value": "slightly"
+                    },
+                    {
+                        "label": {
+                            "en": "Somewhat",
+                            "fr": "Assez"
+                        },
+                        "value": "somewhat"
+                    },
+                    { 
+                        "label": {
+                            "en": "A lot",
+                            "fr": "Beaucoup"
+                        },
+                        "value": "a lot"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I get things done during the day.",
+                "title": {
+                    "en": "I get things done during the day.",
+                    "fr": "J’accompli des choses durant la journée."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I get things done during the day",
                 "multipleChoiceOptions": [
-                    { "label": "Not at all", "value": "not at all" },
-                    { "label": "Slightly", "value": "slightly" },
-                    { "label": "Somewhat", "value": "somewhat" },
-                    { "label": "A lot", "value": "a lot" }
+                    {
+                        "label": {
+                            "en": "Not at all",
+                            "fr": "Pas du tout"
+                        },
+                        "value": "not at all"
+                    },
+                    {
+                        "label": {
+                            "en": "Slightly",
+                            "fr": "Un peu"
+                        },
+                        "value": "slightly"
+                    },
+                    {
+                        "label": {
+                            "en": "Somewhat",
+                            "fr": "Assez"
+                        },
+                        "value": "somewhat"
+                    },
+                    { 
+                        "label": {
+                            "en": "A lot",
+                            "fr": "Beaucoup"
+                        },
+                        "value": "a lot"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "Getting things started on my own is important to me.",
+                "title": {
+                    "en": "Getting things started on my own is important to me.",
+                    "fr": "Démarrer les choses par moi-même est important pour moi."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "Getting things started on my own is important to me",
                 "multipleChoiceOptions": [
-                    { "label": "Not at all", "value": "not at all" },
-                    { "label": "Slightly", "value": "slightly" },
-                    { "label": "Somewhat", "value": "somewhat" },
-                    { "label": "A lot", "value": "a lot" }
+                    {
+                        "label": {
+                            "en": "Not at all",
+                            "fr": "Pas du tout"
+                        },
+                        "value": "not at all"
+                    },
+                    {
+                        "label": {
+                            "en": "Slightly",
+                            "fr": "Un peu"
+                        },
+                        "value": "slightly"
+                    },
+                    {
+                        "label": {
+                            "en": "Somewhat",
+                            "fr": "Assez"
+                        },
+                        "value": "somewhat"
+                    },
+                    { 
+                        "label": {
+                            "en": "A lot",
+                            "fr": "Beaucoup"
+                        },
+                        "value": "a lot"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I am interested in having new experiences.",
+                "title": {
+                    "en": "I am interested in having new experiences.",
+                    "fr": "Avoir de nouvelles expériences m’intéresse."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I am interested in having new experiences",
                 "multipleChoiceOptions": [
-                    { "label": "Not at all", "value": "not at all" },
-                    { "label": "Slightly", "value": "slightly" },
-                    { "label": "Somewhat", "value": "somewhat" },
-                    { "label": "A lot", "value": "a lot" }
+                    {
+                        "label": {
+                            "en": "Not at all",
+                            "fr": "Pas du tout"
+                        },
+                        "value": "not at all"
+                    },
+                    {
+                        "label": {
+                            "en": "Slightly",
+                            "fr": "Un peu"
+                        },
+                        "value": "slightly"
+                    },
+                    {
+                        "label": {
+                            "en": "Somewhat",
+                            "fr": "Assez"
+                        },
+                        "value": "somewhat"
+                    },
+                    { 
+                        "label": {
+                            "en": "A lot",
+                            "fr": "Beaucoup"
+                        },
+                        "value": "a lot"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I am interested in learning new things.",
+                "title": {
+                    "en": "I am interested in learning new things.",
+                    "fr": "Apprendre de nouvelles choses m’intéresse."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I am interested in learning new things",
                 "multipleChoiceOptions": [
-                    { "label": "Not at all", "value": "not at all" },
-                    { "label": "Slightly", "value": "slightly" },
-                    { "label": "Somewhat", "value": "somewhat" },
-                    { "label": "A lot", "value": "a lot" }
+                    {
+                        "label": {
+                            "en": "Not at all",
+                            "fr": "Pas du tout"
+                        },
+                        "value": "not at all"
+                    },
+                    {
+                        "label": {
+                            "en": "Slightly",
+                            "fr": "Un peu"
+                        },
+                        "value": "slightly"
+                    },
+                    {
+                        "label": {
+                            "en": "Somewhat",
+                            "fr": "Assez"
+                        },
+                        "value": "somewhat"
+                    },
+                    { 
+                        "label": {
+                            "en": "A lot",
+                            "fr": "Beaucoup"
+                        },
+                        "value": "a lot"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I put little effort into anything.",
+                "title": {
+                    "en": "I put little effort into anything.",
+                    "fr": "Je mets peu d’effort dans tout."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I put little effort into anything",
                 "multipleChoiceOptions": [
-                    { "label": "Not at all", "value": "not at all" },
-                    { "label": "Slightly", "value": "slightly" },
-                    { "label": "Somewhat", "value": "somewhat" },
-                    { "label": "A lot", "value": "a lot" }
+                    {
+                        "label": {
+                            "en": "Not at all",
+                            "fr": "Pas du tout"
+                        },
+                        "value": "not at all"
+                    },
+                    {
+                        "label": {
+                            "en": "Slightly",
+                            "fr": "Un peu"
+                        },
+                        "value": "slightly"
+                    },
+                    {
+                        "label": {
+                            "en": "Somewhat",
+                            "fr": "Assez"
+                        },
+                        "value": "somewhat"
+                    },
+                    { 
+                        "label": {
+                            "en": "A lot",
+                            "fr": "Beaucoup"
+                        },
+                        "value": "a lot"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I approach life with intensity.",
+                "title": {
+                    "en": "I approach life with intensity.",
+                    "fr": "J’approche la vie avec intensité."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I approach life with intensity",
                 "multipleChoiceOptions": [
-                    { "label": "Not at all", "value": "not at all" },
-                    { "label": "Slightly", "value": "slightly" },
-                    { "label": "Somewhat", "value": "somewhat" },
-                    { "label": "A lot", "value": "a lot" }
+                    {
+                        "label": {
+                            "en": "Not at all",
+                            "fr": "Pas du tout"
+                        },
+                        "value": "not at all"
+                    },
+                    {
+                        "label": {
+                            "en": "Slightly",
+                            "fr": "Un peu"
+                        },
+                        "value": "slightly"
+                    },
+                    {
+                        "label": {
+                            "en": "Somewhat",
+                            "fr": "Assez"
+                        },
+                        "value": "somewhat"
+                    },
+                    { 
+                        "label": {
+                            "en": "A lot",
+                            "fr": "Beaucoup"
+                        },
+                        "value": "a lot"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "Seeing a job through to the end is important to me.",
+                "title": {
+                    "en": "Seeing a job through to the end is important to me.",
+                    "fr": "C’est important pour moi de voir une tâche jusqu’à sa fin."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "Seeing a job through to the end is important to me",
                 "multipleChoiceOptions": [
-                    { "label": "Not at all", "value": "not at all" },
-                    { "label": "Slightly", "value": "slightly" },
-                    { "label": "Somewhat", "value": "somewhat" },
-                    { "label": "A lot", "value": "a lot" }
+                    {
+                        "label": {
+                            "en": "Not at all",
+                            "fr": "Pas du tout"
+                        },
+                        "value": "not at all"
+                    },
+                    {
+                        "label": {
+                            "en": "Slightly",
+                            "fr": "Un peu"
+                        },
+                        "value": "slightly"
+                    },
+                    {
+                        "label": {
+                            "en": "Somewhat",
+                            "fr": "Assez"
+                        },
+                        "value": "somewhat"
+                    },
+                    { 
+                        "label": {
+                            "en": "A lot",
+                            "fr": "Beaucoup"
+                        },
+                        "value": "a lot"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I spend time doing things that interest me.",
+                "title": {
+                    "en": "I spend time doing things that interest me.",
+                    "fr": "Je passe beaucoup de temps à faire des choses qui m’intéressent."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I spend time doing things that interest me",
                 "multipleChoiceOptions": [
-                    { "label": "Not at all", "value": "not at all" },
-                    { "label": "Slightly", "value": "slightly" },
-                    { "label": "Somewhat", "value": "somewhat" },
-                    { "label": "A lot", "value": "a lot" }
+                    {
+                        "label": {
+                            "en": "Not at all",
+                            "fr": "Pas du tout"
+                        },
+                        "value": "not at all"
+                    },
+                    {
+                        "label": {
+                            "en": "Slightly",
+                            "fr": "Un peu"
+                        },
+                        "value": "slightly"
+                    },
+                    {
+                        "label": {
+                            "en": "Somewhat",
+                            "fr": "Assez"
+                        },
+                        "value": "somewhat"
+                    },
+                    { 
+                        "label": {
+                            "en": "A lot",
+                            "fr": "Beaucoup"
+                        },
+                        "value": "a lot"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "Someone has to tell me what to do each day.",
+                "title": {
+                    "en": "Someone has to tell me what to do each day.",
+                    "fr": "Quelqu’un doit me dire quoi faire tous les jours."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "Someone has to tell me what to do each day",
                 "multipleChoiceOptions": [
-                    { "label": "Not at all", "value": "not at all" },
-                    { "label": "Slightly", "value": "slightly" },
-                    { "label": "Somewhat", "value": "somewhat" },
-                    { "label": "A lot", "value": "a lot" }
+                    {
+                        "label": {
+                            "en": "Not at all",
+                            "fr": "Pas du tout"
+                        },
+                        "value": "not at all"
+                    },
+                    {
+                        "label": {
+                            "en": "Slightly",
+                            "fr": "Un peu"
+                        },
+                        "value": "slightly"
+                    },
+                    {
+                        "label": {
+                            "en": "Somewhat",
+                            "fr": "Assez"
+                        },
+                        "value": "somewhat"
+                    },
+                    { 
+                        "label": {
+                            "en": "A lot",
+                            "fr": "Beaucoup"
+                        },
+                        "value": "a lot"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "Select \\"somewhat\\"  for this question please.",
+                "title": {
+                    "en": "Select \\"somewhat\\" for this question please.",
+                    "fr": "Sélectionnez « un peu » pour cette question s’il vous plaît."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "attentionCheck-Select somewhat for this question please",
                 "multipleChoiceOptions": [
-                    { "label": "Not at all", "value": "not at all" },
-                    { "label": "Slightly", "value": "slightly" },
-                    { "label": "Somewhat", "value": "somewhat" },
-                    { "label": "A lot", "value": "a lot" }
+                    {
+                        "label": {
+                            "en": "Not at all",
+                            "fr": "Pas du tout"
+                        },
+                        "value": "not at all"
+                    },
+                    {
+                        "label": {
+                            "en": "Slightly",
+                            "fr": "Un peu"
+                        },
+                        "value": "slightly"
+                    },
+                    {
+                        "label": {
+                            "en": "Somewhat",
+                            "fr": "Assez"
+                        },
+                        "value": "somewhat"
+                    },
+                    { 
+                        "label": {
+                            "en": "A lot",
+                            "fr": "Beaucoup"
+                        },
+                        "value": "a lot"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I am less concerned about my problems than I should be.",
+                "title": {
+                    "en": "I am less concerned about my problems than I should be.",
+                    "fr": "Mes problèmes me concernent moins qu’ils le devraient."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I am less concerned about my problems than I should be",
                 "multipleChoiceOptions": [
-                    { "label": "Not at all", "value": "not at all" },
-                    { "label": "Slightly", "value": "slightly" },
-                    { "label": "Somewhat", "value": "somewhat" },
-                    { "label": "A lot", "value": "a lot" }
+                    {
+                        "label": {
+                            "en": "Not at all",
+                            "fr": "Pas du tout"
+                        },
+                        "value": "not at all"
+                    },
+                    {
+                        "label": {
+                            "en": "Slightly",
+                            "fr": "Un peu"
+                        },
+                        "value": "slightly"
+                    },
+                    {
+                        "label": {
+                            "en": "Somewhat",
+                            "fr": "Assez"
+                        },
+                        "value": "somewhat"
+                    },
+                    { 
+                        "label": {
+                            "en": "A lot",
+                            "fr": "Beaucoup"
+                        },
+                        "value": "a lot"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I have friends.",
+                "title": {
+                    "en": "I have friends.",
+                    "fr": "J’ai des amis."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I have friends",
                 "multipleChoiceOptions": [
-                    { "label": "Not at all", "value": "not at all" },
-                    { "label": "Slightly", "value": "slightly" },
-                    { "label": "Somewhat", "value": "somewhat" },
-                    { "label": "A lot", "value": "a lot" }
+                    {
+                        "label": {
+                            "en": "Not at all",
+                            "fr": "Pas du tout"
+                        },
+                        "value": "not at all"
+                    },
+                    {
+                        "label": {
+                            "en": "Slightly",
+                            "fr": "Un peu"
+                        },
+                        "value": "slightly"
+                    },
+                    {
+                        "label": {
+                            "en": "Somewhat",
+                            "fr": "Assez"
+                        },
+                        "value": "somewhat"
+                    },
+                    { 
+                        "label": {
+                            "en": "A lot",
+                            "fr": "Beaucoup"
+                        },
+                        "value": "a lot"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "Getting together with friends is important to me.",
+                "title": {
+                    "en": "Getting together with friends is important to me.",
+                    "fr": "C’est important pour moi de rencontrer mes amis."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "Getting together with friends is important to me",
                 "multipleChoiceOptions": [
-                    { "label": "Not at all", "value": "not at all" },
-                    { "label": "Slightly", "value": "slightly" },
-                    { "label": "Somewhat", "value": "somewhat" },
-                    { "label": "A lot", "value": "a lot" }
+                    {
+                        "label": {
+                            "en": "Not at all",
+                            "fr": "Pas du tout"
+                        },
+                        "value": "not at all"
+                    },
+                    {
+                        "label": {
+                            "en": "Slightly",
+                            "fr": "Un peu"
+                        },
+                        "value": "slightly"
+                    },
+                    {
+                        "label": {
+                            "en": "Somewhat",
+                            "fr": "Assez"
+                        },
+                        "value": "somewhat"
+                    },
+                    { 
+                        "label": {
+                            "en": "A lot",
+                            "fr": "Beaucoup"
+                        },
+                        "value": "a lot"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "When something good happens, I get excited.",
+                "title": {
+                    "en": "When something good happens, I get excited.",
+                    "fr": "Quand quelque chose de bon m’arrive, je suis excité(e)."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "When something good happens, I get excited",
                 "multipleChoiceOptions": [
-                    { "label": "Not at all", "value": "not at all" },
-                    { "label": "Slightly", "value": "slightly" },
-                    { "label": "Somewhat", "value": "somewhat" },
-                    { "label": "A lot", "value": "a lot" }
+                    {
+                        "label": {
+                            "en": "Not at all",
+                            "fr": "Pas du tout"
+                        },
+                        "value": "not at all"
+                    },
+                    {
+                        "label": {
+                            "en": "Slightly",
+                            "fr": "Un peu"
+                        },
+                        "value": "slightly"
+                    },
+                    {
+                        "label": {
+                            "en": "Somewhat",
+                            "fr": "Assez"
+                        },
+                        "value": "somewhat"
+                    },
+                    { 
+                        "label": {
+                            "en": "A lot",
+                            "fr": "Beaucoup"
+                        },
+                        "value": "a lot"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I have an accurate understanding of my problems.",
+                "title": {
+                    "en": "I have an accurate understanding of my problems.",
+                    "fr": "J’ai une compréhension précise de mes problèmes."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I have an accurate understanding of my problems",
                 "multipleChoiceOptions": [
-                    { "label": "Not at all", "value": "not at all" },
-                    { "label": "Slightly", "value": "slightly" },
-                    { "label": "Somewhat", "value": "somewhat" },
-                    { "label": "A lot", "value": "a lot" }
+                    {
+                        "label": {
+                            "en": "Not at all",
+                            "fr": "Pas du tout"
+                        },
+                        "value": "not at all"
+                    },
+                    {
+                        "label": {
+                            "en": "Slightly",
+                            "fr": "Un peu"
+                        },
+                        "value": "slightly"
+                    },
+                    {
+                        "label": {
+                            "en": "Somewhat",
+                            "fr": "Assez"
+                        },
+                        "value": "somewhat"
+                    },
+                    { 
+                        "label": {
+                            "en": "A lot",
+                            "fr": "Beaucoup"
+                        },
+                        "value": "a lot"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "Getting things done during the day is important to me.",
+                "title": {
+                    "en": "Getting things done during the day is important to me.",
+                    "fr": "Il est important pour moi de compléter des tâches durant la journée."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "Getting things done during the day is important to me",
                 "multipleChoiceOptions": [
-                    { "label": "Not at all", "value": "not at all" },
-                    { "label": "Slightly", "value": "slightly" },
-                    { "label": "Somewhat", "value": "somewhat" },
-                    { "label": "A lot", "value": "a lot" }
+                    {
+                        "label": {
+                            "en": "Not at all",
+                            "fr": "Pas du tout"
+                        },
+                        "value": "not at all"
+                    },
+                    {
+                        "label": {
+                            "en": "Slightly",
+                            "fr": "Un peu"
+                        },
+                        "value": "slightly"
+                    },
+                    {
+                        "label": {
+                            "en": "Somewhat",
+                            "fr": "Assez"
+                        },
+                        "value": "somewhat"
+                    },
+                    { 
+                        "label": {
+                            "en": "A lot",
+                            "fr": "Beaucoup"
+                        },
+                        "value": "a lot"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I have initiative.",
+                "title": {
+                    "en": "I have initiative.",
+                    "fr": "J’ai de l’initiative."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I have initiative",
                 "multipleChoiceOptions": [
-                    { "label": "Not at all", "value": "not at all" },
-                    { "label": "Slightly", "value": "slightly" },
-                    { "label": "Somewhat", "value": "somewhat" },
-                    { "label": "A lot", "value": "a lot" }
+                    {
+                        "label": {
+                            "en": "Not at all",
+                            "fr": "Pas du tout"
+                        },
+                        "value": "not at all"
+                    },
+                    {
+                        "label": {
+                            "en": "Slightly",
+                            "fr": "Un peu"
+                        },
+                        "value": "slightly"
+                    },
+                    {
+                        "label": {
+                            "en": "Somewhat",
+                            "fr": "Assez"
+                        },
+                        "value": "somewhat"
+                    },
+                    { 
+                        "label": {
+                            "en": "A lot",
+                            "fr": "Beaucoup"
+                        },
+                        "value": "a lot"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I have motivation.",
+                "title": {
+                    "en": "I have motivation.",
+                    "fr": "J’ai de la motivation."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I have motivation",
                 "multipleChoiceOptions": [
-                    { "label": "Not at all", "value": "not at all" },
-                    { "label": "Slightly", "value": "slightly" },
-                    { "label": "Somewhat", "value": "somewhat" },
-                    { "label": "A lot", "value": "a lot" }
+                    {
+                        "label": {
+                            "en": "Not at all",
+                            "fr": "Pas du tout"
+                        },
+                        "value": "not at all"
+                    },
+                    {
+                        "label": {
+                            "en": "Slightly",
+                            "fr": "Un peu"
+                        },
+                        "value": "slightly"
+                    },
+                    {
+                        "label": {
+                            "en": "Somewhat",
+                            "fr": "Assez"
+                        },
+                        "value": "somewhat"
+                    },
+                    { 
+                        "label": {
+                            "en": "A lot",
+                            "fr": "Beaucoup"
+                        },
+                        "value": "a lot"
+                    }
                 ]
             }
         ]
     }'
 WHERE id = 20;
--- APATHY AES FRENCH CLEAN
+-- BIS-11
 UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "QUESTIONNAIRE",
-    name = "Apathy AES French Clean",
-    description = "Apathy Evaluation Scale FR",
-    external_url = "",
-    config = '{
-        "title":"Questionnaire",
-        "questions":[
-            {
-                "questionType": "displayText",
-                "title": "Instructions: Pour chacun des énoncés suivants mettez un X dans la case qui décrit le mieux vos pensées, sentiments et activités au cours des 4 dernières semaines."
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Je m’intéresse à des choses.",
-                "validation": {
-                    "required":true
-                },
-                "key": "Je m’intéresse à des choses",
-                "multipleChoiceOptions": [
-                    { "label": "Pas du tout", "value": "pas du tout" },
-                    { "label": "Un peu", "value": "un peu" },
-                    { "label": "Assez", "value": "assez" },
-                    { "label": "Beaucoup", "value": "beaucoup" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "J’accompli des choses durant la journée.",
-                "validation":{
-                    "required":true
-                },
-                "key": "J’accompli des choses durant la journée",
-                "multipleChoiceOptions": [
-                    { "label": "Pas du tout", "value": "pas du tout" },
-                    { "label": "Un peu", "value": "un peu" },
-                    { "label": "Assez", "value": "assez" },
-                    { "label": "Beaucoup", "value": "beaucoup" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Démarrer les choses par moi-même est important pour moi.",
-                "validation":{
-                    "required":true
-                },
-                "key": "Démarrer les choses par moi-même est important pour moi",
-                "multipleChoiceOptions": [
-                    { "label": "Pas du tout", "value": "pas du tout" },
-                    { "label": "Un peu", "value": "un peu" },
-                    { "label": "Assez", "value": "assez" },
-                    { "label": "Beaucoup", "value": "beaucoup" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Avoir de nouvelles expériences m’intéresse.",
-                "validation":{
-                    "required":true
-                },
-                "key": "Avoir de nouvelles expériences m’intéresse",
-                "multipleChoiceOptions": [
-                    { "label": "Pas du tout", "value": "pas du tout" },
-                    { "label": "Un peu", "value": "un peu" },
-                    { "label": "Assez", "value": "assez" },
-                    { "label": "Beaucoup", "value": "beaucoup" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Apprendre de nouvelles choses m’intéresse.",
-                "validation":{
-                    "required":true
-                },
-                "key": "Apprendre de nouvelles choses m’intéresse",
-                "multipleChoiceOptions": [
-                    { "label": "Pas du tout", "value": "pas du tout" },
-                    { "label": "Un peu", "value": "un peu" },
-                    { "label": "Assez", "value": "assez" },
-                    { "label": "Beaucoup", "value": "beaucoup" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Je mets peu d’effort dans tout.",
-                "validation":{
-                    "required":true
-                },
-                "key": "Je mets peu d’effort dans tout",
-                "multipleChoiceOptions": [
-                    { "label": "Pas du tout", "value": "pas du tout" },
-                    { "label": "Un peu", "value": "un peu" },
-                    { "label": "Assez", "value": "assez" },
-                    { "label": "Beaucoup", "value": "beaucoup" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "J’approche la vie avec intensité.",
-                "validation":{
-                    "required":true
-                },
-                "key": "J’approche la vie avec intensité",
-                "multipleChoiceOptions": [
-                    { "label": "Pas du tout", "value": "pas du tout" },
-                    { "label": "Un peu", "value": "un peu" },
-                    { "label": "Assez", "value": "assez" },
-                    { "label": "Beaucoup", "value": "beaucoup" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "C’est important pour moi de voir une tâche jusqu’à sa fin.",
-                "validation":{
-                    "required":true
-                },
-                "key": "C’est important pour moi de voir une tâche jusqu’à sa fin",
-                "multipleChoiceOptions": [
-                    { "label": "Pas du tout", "value": "pas du tout" },
-                    { "label": "Un peu", "value": "un peu" },
-                    { "label": "Assez", "value": "assez" },
-                    { "label": "Beaucoup", "value": "beaucoup" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Je passe beaucoup de temps à faire des choses qui  m’intéressent.",
-                "validation":{
-                    "required":true
-                },
-                "key": "Je passe beaucoup de temps à faire des choses qui  m’intéressent",
-                "multipleChoiceOptions": [
-                    { "label": "Pas du tout", "value": "pas du tout" },
-                    { "label": "Un peu", "value": "un peu" },
-                    { "label": "Assez", "value": "assez" },
-                    { "label": "Beaucoup", "value": "beaucoup" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Quelqu’un doit me dire quoi faire tous les jours.",
-                "validation":{
-                    "required":true
-                },
-                "key": "Quelqu’un doit me dire quoi faire tous les jours",
-                "multipleChoiceOptions": [
-                    { "label": "Pas du tout", "value": "pas du tout" },
-                    { "label": "Un peu", "value": "un peu" },
-                    { "label": "Assez", "value": "assez" },
-                    { "label": "Beaucoup", "value": "beaucoup" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Sélectionnez « un peu » pour cette question s’il vous plaît.",
-                "validation":{
-                    "required":true
-                },
-                "key": "attentionCheck-Sélectionnez un peu pour cette question s’il vous plaît",
-                "multipleChoiceOptions": [
-                    { "label": "Pas du tout", "value": "pas du tout" },
-                    { "label": "Un peu", "value": "un peu" },
-                    { "label": "Assez", "value": "assez" },
-                    { "label": "Beaucoup", "value": "beaucoup" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Mes problèmes me concernent moins qu’ils le devraient.",
-                "validation":{
-                    "required":true
-                },
-                "key": "Mes problèmes me concernent moins qu’ils le devraient",
-                "multipleChoiceOptions": [
-                    { "label": "Pas du tout", "value": "pas du tout" },
-                    { "label": "Un peu", "value": "un peu" },
-                    { "label": "Assez", "value": "assez" },
-                    { "label": "Beaucoup", "value": "beaucoup" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "J’ai des amis.",
-                "validation":{
-                    "required":true
-                },
-                "key": "J’ai des amis",
-                "multipleChoiceOptions": [
-                    { "label": "Pas du tout", "value": "pas du tout" },
-                    { "label": "Un peu", "value": "un peu" },
-                    { "label": "Assez", "value": "assez" },
-                    { "label": "Beaucoup", "value": "beaucoup" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "C’est important pour moi de rencontrer mes amis.",
-                "validation":{
-                    "required":true
-                },
-                "key": "C’est important pour moi de rencontrer mes amis",
-                "multipleChoiceOptions": [
-                    { "label": "Pas du tout", "value": "pas du tout" },
-                    { "label": "Un peu", "value": "un peu" },
-                    { "label": "Assez", "value": "assez" },
-                    { "label": "Beaucoup", "value": "beaucoup" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Quand quelque chose de bon m’arrive, je suis excité(e).",
-                "validation":{
-                    "required":true
-                },
-                "key": "Quand quelque chose de bon m’arrive, je suis excité(e)",
-                "multipleChoiceOptions": [
-                    { "label": "Pas du tout", "value": "pas du tout" },
-                    { "label": "Un peu", "value": "un peu" },
-                    { "label": "Assez", "value": "assez" },
-                    { "label": "Beaucoup", "value": "beaucoup" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "J’ai une compréhension précise de mes problèmes.",
-                "validation":{
-                    "required":true
-                },
-                "key": "J’ai une compréhension précise de mes problèmes",
-                "multipleChoiceOptions": [
-                    { "label": "Pas du tout", "value": "pas du tout" },
-                    { "label": "Un peu", "value": "un peu" },
-                    { "label": "Assez", "value": "assez" },
-                    { "label": "Beaucoup", "value": "beaucoup" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Il est important pour moi de compléter des tâches durant la  journée.",
-                "validation":{
-                    "required":true
-                },
-                "key": "Il est important pour moi de compléter des tâches durant la  journée",
-                "multipleChoiceOptions": [
-                    { "label": "Pas du tout", "value": "pas du tout" },
-                    { "label": "Un peu", "value": "un peu" },
-                    { "label": "Assez", "value": "assez" },
-                    { "label": "Beaucoup", "value": "beaucoup" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "J’ai de l’initiative.",
-                "validation":{
-                    "required":true
-                },
-                "key": "J’ai de l’initiative",
-                "multipleChoiceOptions": [
-                    { "label": "Pas du tout", "value": "pas du tout" },
-                    { "label": "Un peu", "value": "un peu" },
-                    { "label": "Assez", "value": "assez" },
-                    { "label": "Beaucoup", "value": "beaucoup" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "J’ai de la motivation.",
-                "validation":{
-                    "required":true
-                },
-                "key": "J’ai de la motivation",
-                "multipleChoiceOptions": [
-                    { "label": "Pas du tout", "value": "pas du tout" },
-                    { "label": "Un peu", "value": "un peu" },
-                    { "label": "Assez", "value": "assez" },
-                    { "label": "Beaucoup", "value": "beaucoup" }
-                ]
-            }
-        ]
-    }'
-WHERE id = 21;
--- BIS-11 ENGLISH VERSION
-UPDATE tasks set
-    from_platform = "PSHARPLAB",
-    task_type = "QUESTIONNAIRE",
-    name = "BIS-11 English Version",
+    name = "BIS-11",
     description = "The Barratt Impulsiveness Scale",
     external_url = "",
     config = '{
-        "title":"Questionnaire",
+        "title": {
+            "en": "Questionnaire",
+            "fr": "Questionnaire"
+        },
         "questions":[
             {
                 "questionType": "displayText",
-                "title": "DIRECTIONS: People differ in the ways they act and think in different situations. This is a test to measure some of the ways in which you act and think. Read each statement and choose the appropriate answer. Do not spend too much time on any statement. Answer quickly and honestly."
+                "title": {
+                    "en": "DIRECTIONS: People differ in the ways they act and think in different situations. This is a test to measure some of the ways in which you act and think. Read each statement and choose the appropriate answer. Do not spend too much time on any statement. Answer quickly and honestly.",
+                    "fr": "Instructions: Pour chacun des énoncés suivant cliquez la case appropriée. Ne passez pas trop de temps sur les énoncés. Répondez rapidement et honnêtement."
+                }
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I plan tasks carefully.",
+                "title": {
+                    "en": "I plan tasks carefully.",
+                    "fr": "Je planifie les tâches soigneusement."
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "I plan tasks carefully",
                 "multipleChoiceOptions": [
-                    { "label": "Rarely/Never", "value": "rarely/never" },
-                    { "label": "Occasionally", "value": "occasionally" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Almost Always/Always", "value": "almost always/always" }
+                    {
+                        "label": {
+                            "en": "Rarely/Never",
+                            "fr": "Rarement/Jamais"
+                        },
+                        "value": "rarely/never"
+                    },
+                    {
+                        "label": {
+                            "en": "Occasionally",
+                            "fr": "Des fois"
+                        },
+                        "value": "occasionally"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Almost Always/Always",
+                            "fr": "Presque toujours/Toujours"
+                        },
+                        "value": "almost always/always"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I do things without thinking.",
+                "title": {
+                    "en": "I do things without thinking.",
+                    "fr": "J’agis sans réfléchir."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I do things without thinking",
                 "multipleChoiceOptions": [
-                    { "label": "Rarely/Never", "value": "rarely/never" },
-                    { "label": "Occasionally", "value": "occasionally" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Almost Always/Always", "value": "almost always/always" }
+                    {
+                        "label": {
+                            "en": "Rarely/Never",
+                            "fr": "Rarement/Jamais"
+                        },
+                        "value": "rarely/never"
+                    },
+                    {
+                        "label": {
+                            "en": "Occasionally",
+                            "fr": "Des fois"
+                        },
+                        "value": "occasionally"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Almost Always/Always",
+                            "fr": "Presque toujours/Toujours"
+                        },
+                        "value": "almost always/always"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I make-up my mind quickly.",
+                "title": {
+                    "en": "I make-up my mind quickly.",
+                    "fr": "Je me décide rapidement."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I make-up my mind quickly",
                 "multipleChoiceOptions": [
-                    { "label": "Rarely/Never", "value": "rarely/never" },
-                    { "label": "Occasionally", "value": "occasionally" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Almost Always/Always", "value": "almost always/always" }
+                    {
+                        "label": {
+                            "en": "Rarely/Never",
+                            "fr": "Rarement/Jamais"
+                        },
+                        "value": "rarely/never"
+                    },
+                    {
+                        "label": {
+                            "en": "Occasionally",
+                            "fr": "Des fois"
+                        },
+                        "value": "occasionally"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Almost Always/Always",
+                            "fr": "Presque toujours/Toujours"
+                        },
+                        "value": "almost always/always"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I am happy-go-lucky.",
+                "title": {
+                    "en": "I am happy-go-lucky.",
+                    "fr": "Je suis insouciant(e)."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I am happy-go-lucky",
                 "multipleChoiceOptions": [
-                    { "label": "Rarely/Never", "value": "rarely/never" },
-                    { "label": "Occasionally", "value": "occasionally" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Almost Always/Always", "value": "almost always/always" }
+                    {
+                        "label": {
+                            "en": "Rarely/Never",
+                            "fr": "Rarement/Jamais"
+                        },
+                        "value": "rarely/never"
+                    },
+                    {
+                        "label": {
+                            "en": "Occasionally",
+                            "fr": "Des fois"
+                        },
+                        "value": "occasionally"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Almost Always/Always",
+                            "fr": "Presque toujours/Toujours"
+                        },
+                        "value": "almost always/always"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I don''t \\"pay attention\\".",
+                "title": {
+                    "en": "I don''t \\"pay attention\\".",
+                    "fr": "Je ne porte pas attention."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I don''t \\"pay attention\\"",
                 "multipleChoiceOptions": [
-                    { "label": "Rarely/Never", "value": "rarely/never" },
-                    { "label": "Occasionally", "value": "occasionally" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Almost Always/Always", "value": "almost always/always" }
+                    {
+                        "label": {
+                            "en": "Rarely/Never",
+                            "fr": "Rarement/Jamais"
+                        },
+                        "value": "rarely/never"
+                    },
+                    {
+                        "label": {
+                            "en": "Occasionally",
+                            "fr": "Des fois"
+                        },
+                        "value": "occasionally"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Almost Always/Always",
+                            "fr": "Presque toujours/Toujours"
+                        },
+                        "value": "almost always/always"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I have \\"racing\\" thoughts.",
+                "title": {
+                    "en": "I have \\"racing\\" thoughts.",
+                    "fr": "Mes pensées se suivent rapidement."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I have \\"racing\\" thoughts",
                 "multipleChoiceOptions": [
-                    { "label": "Rarely/Never", "value": "rarely/never" },
-                    { "label": "Occasionally", "value": "occasionally" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Almost Always/Always", "value": "almost always/always" }
+                    {
+                        "label": {
+                            "en": "Rarely/Never",
+                            "fr": "Rarement/Jamais"
+                        },
+                        "value": "rarely/never"
+                    },
+                    {
+                        "label": {
+                            "en": "Occasionally",
+                            "fr": "Des fois"
+                        },
+                        "value": "occasionally"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Almost Always/Always",
+                            "fr": "Presque toujours/Toujours"
+                        },
+                        "value": "almost always/always"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I plan trips well ahead of time.",
+                "title": {
+                    "en": "I plan trips well ahead of time.",
+                    "fr": "Je planifie mes voyages bien en avance."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I plan trips well ahead of time",
                 "multipleChoiceOptions": [
-                    { "label": "Rarely/Never", "value": "rarely/never" },
-                    { "label": "Occasionally", "value": "occasionally" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Almost Always/Always", "value": "almost always/always" }
+                    {
+                        "label": {
+                            "en": "Rarely/Never",
+                            "fr": "Rarement/Jamais"
+                        },
+                        "value": "rarely/never"
+                    },
+                    {
+                        "label": {
+                            "en": "Occasionally",
+                            "fr": "Des fois"
+                        },
+                        "value": "occasionally"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Almost Always/Always",
+                            "fr": "Presque toujours/Toujours"
+                        },
+                        "value": "almost always/always"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I am self controlled.",
+                "title": {
+                    "en": "I am self controlled.",
+                    "fr": "J’ai contrôle sur moi-même."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I am self controlled",
                 "multipleChoiceOptions": [
-                    { "label": "Rarely/Never", "value": "rarely/never" },
-                    { "label": "Occasionally", "value": "occasionally" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Almost Always/Always", "value": "almost always/always" }
+                    {
+                        "label": {
+                            "en": "Rarely/Never",
+                            "fr": "Rarement/Jamais"
+                        },
+                        "value": "rarely/never"
+                    },
+                    {
+                        "label": {
+                            "en": "Occasionally",
+                            "fr": "Des fois"
+                        },
+                        "value": "occasionally"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Almost Always/Always",
+                            "fr": "Presque toujours/Toujours"
+                        },
+                        "value": "almost always/always"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I concentrate easily.",
+                "title": {
+                    "en": "I concentrate easily.",
+                    "fr": "Je me concentre facilement."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I concentrate easily",
                 "multipleChoiceOptions": [
-                    { "label": "Rarely/Never", "value": "rarely/never" },
-                    { "label": "Occasionally", "value": "occasionally" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Almost Always/Always", "value": "almost always/always" }
+                    {
+                        "label": {
+                            "en": "Rarely/Never",
+                            "fr": "Rarement/Jamais"
+                        },
+                        "value": "rarely/never"
+                    },
+                    {
+                        "label": {
+                            "en": "Occasionally",
+                            "fr": "Des fois"
+                        },
+                        "value": "occasionally"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Almost Always/Always",
+                            "fr": "Presque toujours/Toujours"
+                        },
+                        "value": "almost always/always"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I save regularly.",
+                "title": {
+                    "en": "I save regularly.",
+                    "fr": "J’économise régulièrement."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I save regularly",
                 "multipleChoiceOptions": [
-                    { "label": "Rarely/Never", "value": "rarely/never" },
-                    { "label": "Occasionally", "value": "occasionally" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Almost Always/Always", "value": "almost always/always" }
+                    {
+                        "label": {
+                            "en": "Rarely/Never",
+                            "fr": "Rarement/Jamais"
+                        },
+                        "value": "rarely/never"
+                    },
+                    {
+                        "label": {
+                            "en": "Occasionally",
+                            "fr": "Des fois"
+                        },
+                        "value": "occasionally"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Almost Always/Always",
+                            "fr": "Presque toujours/Toujours"
+                        },
+                        "value": "almost always/always"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I \\"squirm\\" at plays or lectures.",
+                "title": {
+                    "en": "I \\"squirm\\" at plays or lectures.",
+                    "fr": "Je me tortille durant les pièces de théâtre et les conférences."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I \\"squirm\\" at plays or lectures",
                 "multipleChoiceOptions": [
-                    { "label": "Rarely/Never", "value": "rarely/never" },
-                    { "label": "Occasionally", "value": "occasionally" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Almost Always/Always", "value": "almost always/always" }
+                    {
+                        "label": {
+                            "en": "Rarely/Never",
+                            "fr": "Rarement/Jamais"
+                        },
+                        "value": "rarely/never"
+                    },
+                    {
+                        "label": {
+                            "en": "Occasionally",
+                            "fr": "Des fois"
+                        },
+                        "value": "occasionally"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Almost Always/Always",
+                            "fr": "Presque toujours/Toujours"
+                        },
+                        "value": "almost always/always"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I am a careful thinker.",
+                "title": {
+                    "en": "I am a careful thinker.",
+                    "fr": "Je suis un(e) penseur(-euse) prudent."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I am a careful thinker",
                 "multipleChoiceOptions": [
-                    { "label": "Rarely/Never", "value": "rarely/never" },
-                    { "label": "Occasionally", "value": "occasionally" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Almost Always/Always", "value": "almost always/always" }
+                    {
+                        "label": {
+                            "en": "Rarely/Never",
+                            "fr": "Rarement/Jamais"
+                        },
+                        "value": "rarely/never"
+                    },
+                    {
+                        "label": {
+                            "en": "Occasionally",
+                            "fr": "Des fois"
+                        },
+                        "value": "occasionally"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Almost Always/Always",
+                            "fr": "Presque toujours/Toujours"
+                        },
+                        "value": "almost always/always"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I plan for job security.",
+                "title": {
+                    "en": "I plan for job security.",
+                    "fr": "Je planifie ma sécurité d’emploi."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I plan for job security",
                 "multipleChoiceOptions": [
-                    { "label": "Rarely/Never", "value": "rarely/never" },
-                    { "label": "Occasionally", "value": "occasionally" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Almost Always/Always", "value": "almost always/always" }
+                    {
+                        "label": {
+                            "en": "Rarely/Never",
+                            "fr": "Rarement/Jamais"
+                        },
+                        "value": "rarely/never"
+                    },
+                    {
+                        "label": {
+                            "en": "Occasionally",
+                            "fr": "Des fois"
+                        },
+                        "value": "occasionally"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Almost Always/Always",
+                            "fr": "Presque toujours/Toujours"
+                        },
+                        "value": "almost always/always"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I say things without thinking.",
+                "title": {
+                    "en": "I say things without thinking.",
+                    "fr": "Je dis des choses sans penser."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I say things without thinking",
                 "multipleChoiceOptions": [
-                    { "label": "Rarely/Never", "value": "rarely/never" },
-                    { "label": "Occasionally", "value": "occasionally" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Almost Always/Always", "value": "almost always/always" }
+                    {
+                        "label": {
+                            "en": "Rarely/Never",
+                            "fr": "Rarement/Jamais"
+                        },
+                        "value": "rarely/never"
+                    },
+                    {
+                        "label": {
+                            "en": "Occasionally",
+                            "fr": "Des fois"
+                        },
+                        "value": "occasionally"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Almost Always/Always",
+                            "fr": "Presque toujours/Toujours"
+                        },
+                        "value": "almost always/always"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I like to think about complex problems.",
+                "title": {
+                    "en": "I like to think about complex problems.",
+                    "fr": "J’aime penser aux problèmes compliqués."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I like to think about complex problems",
                 "multipleChoiceOptions": [
-                    { "label": "Rarely/Never", "value": "rarely/never" },
-                    { "label": "Occasionally", "value": "occasionally" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Almost Always/Always", "value": "almost always/always" }
+                    {
+                        "label": {
+                            "en": "Rarely/Never",
+                            "fr": "Rarement/Jamais"
+                        },
+                        "value": "rarely/never"
+                    },
+                    {
+                        "label": {
+                            "en": "Occasionally",
+                            "fr": "Des fois"
+                        },
+                        "value": "occasionally"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Almost Always/Always",
+                            "fr": "Presque toujours/Toujours"
+                        },
+                        "value": "almost always/always"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I change jobs.",
+                "title": {
+                    "en": "I change jobs.",
+                    "fr": "Je change d’emploi."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I change jobs",
                 "multipleChoiceOptions": [
-                    { "label": "Rarely/Never", "value": "rarely/never" },
-                    { "label": "Occasionally", "value": "occasionally" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Almost Always/Always", "value": "almost always/always" }
+                    {
+                        "label": {
+                            "en": "Rarely/Never",
+                            "fr": "Rarement/Jamais"
+                        },
+                        "value": "rarely/never"
+                    },
+                    {
+                        "label": {
+                            "en": "Occasionally",
+                            "fr": "Des fois"
+                        },
+                        "value": "occasionally"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Almost Always/Always",
+                            "fr": "Presque toujours/Toujours"
+                        },
+                        "value": "almost always/always"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I act \\"on impulse.\\"",
+                "title": {
+                    "en": "I act \\"on impulse.\\"",
+                    "fr": "J’agis impulsivement."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I act \\"on impulse\\"",
                 "multipleChoiceOptions": [
-                    { "label": "Rarely/Never", "value": "rarely/never" },
-                    { "label": "Occasionally", "value": "occasionally" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Almost Always/Always", "value": "almost always/always" }
+                    {
+                        "label": {
+                            "en": "Rarely/Never",
+                            "fr": "Rarement/Jamais"
+                        },
+                        "value": "rarely/never"
+                    },
+                    {
+                        "label": {
+                            "en": "Occasionally",
+                            "fr": "Des fois"
+                        },
+                        "value": "occasionally"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Almost Always/Always",
+                            "fr": "Presque toujours/Toujours"
+                        },
+                        "value": "almost always/always"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I get easily bored when solving thought problems.",
+                "title": {
+                    "en": "I get easily bored when solving thought problems.",
+                    "fr": "Résoudre des problèmes de pensée m’ennuie."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I get easily bored when solving thought problems",
                 "multipleChoiceOptions": [
-                    { "label": "Rarely/Never", "value": "rarely/never" },
-                    { "label": "Occasionally", "value": "occasionally" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Almost Always/Always", "value": "almost always/always" }
+                    {
+                        "label": {
+                            "en": "Rarely/Never",
+                            "fr": "Rarement/Jamais"
+                        },
+                        "value": "rarely/never"
+                    },
+                    {
+                        "label": {
+                            "en": "Occasionally",
+                            "fr": "Des fois"
+                        },
+                        "value": "occasionally"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Almost Always/Always",
+                            "fr": "Presque toujours/Toujours"
+                        },
+                        "value": "almost always/always"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I act on the spur of the moment.",
+                "title": {
+                    "en": "I act on the spur of the moment.",
+                    "fr": "J’agis sous l’impulsion du moment."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I act on the spur of the moment",
                 "multipleChoiceOptions": [
-                    { "label": "Rarely/Never", "value": "rarely/never" },
-                    { "label": "Occasionally", "value": "occasionally" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Almost Always/Always", "value": "almost always/always" }
+                    {
+                        "label": {
+                            "en": "Rarely/Never",
+                            "fr": "Rarement/Jamais"
+                        },
+                        "value": "rarely/never"
+                    },
+                    {
+                        "label": {
+                            "en": "Occasionally",
+                            "fr": "Des fois"
+                        },
+                        "value": "occasionally"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Almost Always/Always",
+                            "fr": "Presque toujours/Toujours"
+                        },
+                        "value": "almost always/always"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I am a steady thinker.",
+                "title": {
+                    "en": "I am a steady thinker.",
+                    "fr": "Je suis un(e) penseur(-euse) pondéré(e)."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I am a steady thinker",
                 "multipleChoiceOptions": [
-                    { "label": "Rarely/Never", "value": "rarely/never" },
-                    { "label": "Occasionally", "value": "occasionally" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Almost Always/Always", "value": "almost always/always" }
+                    {
+                        "label": {
+                            "en": "Rarely/Never",
+                            "fr": "Rarement/Jamais"
+                        },
+                        "value": "rarely/never"
+                    },
+                    {
+                        "label": {
+                            "en": "Occasionally",
+                            "fr": "Des fois"
+                        },
+                        "value": "occasionally"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Almost Always/Always",
+                            "fr": "Presque toujours/Toujours"
+                        },
+                        "value": "almost always/always"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I change residences.",
+                "title": {
+                    "en": "I change residences.",
+                    "fr": "Je change de logements."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I change residences",
                 "multipleChoiceOptions": [
-                    { "label": "Rarely/Never", "value": "rarely/never" },
-                    { "label": "Occasionally", "value": "occasionally" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Almost Always/Always", "value": "almost always/always" }
+                    {
+                        "label": {
+                            "en": "Rarely/Never",
+                            "fr": "Rarement/Jamais"
+                        },
+                        "value": "rarely/never"
+                    },
+                    {
+                        "label": {
+                            "en": "Occasionally",
+                            "fr": "Des fois"
+                        },
+                        "value": "occasionally"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Almost Always/Always",
+                            "fr": "Presque toujours/Toujours"
+                        },
+                        "value": "almost always/always"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I buy things on impulse.",
+                "title": {
+                    "en": "I buy things on impulse.",
+                    "fr": "J’achète des choses sur un coup de tête."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I buy things on impulse",
                 "multipleChoiceOptions": [
-                    { "label": "Rarely/Never", "value": "rarely/never" },
-                    { "label": "Occasionally", "value": "occasionally" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Almost Always/Always", "value": "almost always/always" }
+                    {
+                        "label": {
+                            "en": "Rarely/Never",
+                            "fr": "Rarement/Jamais"
+                        },
+                        "value": "rarely/never"
+                    },
+                    {
+                        "label": {
+                            "en": "Occasionally",
+                            "fr": "Des fois"
+                        },
+                        "value": "occasionally"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Almost Always/Always",
+                            "fr": "Presque toujours/Toujours"
+                        },
+                        "value": "almost always/always"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I can only think about one thing at a time.",
+                "title": {
+                    "en": "I can only think about one thing at a time.",
+                    "fr": "Je peux seulement penser à une chose à la fois."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I can only think about one thing at a time",
                 "multipleChoiceOptions": [
-                    { "label": "Rarely/Never", "value": "rarely/never" },
-                    { "label": "Occasionally", "value": "occasionally" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Almost Always/Always", "value": "almost always/always" }
+                    {
+                        "label": {
+                            "en": "Rarely/Never",
+                            "fr": "Rarement/Jamais"
+                        },
+                        "value": "rarely/never"
+                    },
+                    {
+                        "label": {
+                            "en": "Occasionally",
+                            "fr": "Des fois"
+                        },
+                        "value": "occasionally"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Almost Always/Always",
+                            "fr": "Presque toujours/Toujours"
+                        },
+                        "value": "almost always/always"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I change hobbies.",
+                "title": {
+                    "en": "I change hobbies.",
+                    "fr": "Je change de hobbys."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I change hobbies",
                 "multipleChoiceOptions": [
-                    { "label": "Rarely/Never", "value": "rarely/never" },
-                    { "label": "Occasionally", "value": "occasionally" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Almost Always/Always", "value": "almost always/always" }
+                    {
+                        "label": {
+                            "en": "Rarely/Never",
+                            "fr": "Rarement/Jamais"
+                        },
+                        "value": "rarely/never"
+                    },
+                    {
+                        "label": {
+                            "en": "Occasionally",
+                            "fr": "Des fois"
+                        },
+                        "value": "occasionally"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Almost Always/Always",
+                            "fr": "Presque toujours/Toujours"
+                        },
+                        "value": "almost always/always"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I spend or charge more than I earn.",
+                "title": {
+                    "en": "I spend or charge more than I earn.",
+                    "fr": "Je dépense plus que ce que je gagne."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I spend or charge more than I earn",
                 "multipleChoiceOptions": [
-                    { "label": "Rarely/Never", "value": "rarely/never" },
-                    { "label": "Occasionally", "value": "occasionally" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Almost Always/Always", "value": "almost always/always" }
+                    {
+                        "label": {
+                            "en": "Rarely/Never",
+                            "fr": "Rarement/Jamais"
+                        },
+                        "value": "rarely/never"
+                    },
+                    {
+                        "label": {
+                            "en": "Occasionally",
+                            "fr": "Des fois"
+                        },
+                        "value": "occasionally"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Almost Always/Always",
+                            "fr": "Presque toujours/Toujours"
+                        },
+                        "value": "almost always/always"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I often have extraneous thoughts when thinking.",
+                "title": {
+                    "en": "I often have extraneous thoughts when thinking.",
+                    "fr": "J’ai souvent des pensées étrangères."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I often have extraneous thoughts when thinking",
                 "multipleChoiceOptions": [
-                    { "label": "Rarely/Never", "value": "rarely/never" },
-                    { "label": "Occasionally", "value": "occasionally" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Almost Always/Always", "value": "almost always/always" }
+                    {
+                        "label": {
+                            "en": "Rarely/Never",
+                            "fr": "Rarement/Jamais"
+                        },
+                        "value": "rarely/never"
+                    },
+                    {
+                        "label": {
+                            "en": "Occasionally",
+                            "fr": "Des fois"
+                        },
+                        "value": "occasionally"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Almost Always/Always",
+                            "fr": "Presque toujours/Toujours"
+                        },
+                        "value": "almost always/always"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I am more interested in the present than the future.",
+                "title": {
+                    "en": "I am more interested in the present than the future.",
+                    "fr": "Je m’intéresse plus au présent qu’au futur."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I am more interested in the present than the future",
                 "multipleChoiceOptions": [
-                    { "label": "Rarely/Never", "value": "rarely/never" },
-                    { "label": "Occasionally", "value": "occasionally" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Almost Always/Always", "value": "almost always/always" }
+                    {
+                        "label": {
+                            "en": "Rarely/Never",
+                            "fr": "Rarement/Jamais"
+                        },
+                        "value": "rarely/never"
+                    },
+                    {
+                        "label": {
+                            "en": "Occasionally",
+                            "fr": "Des fois"
+                        },
+                        "value": "occasionally"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Almost Always/Always",
+                            "fr": "Presque toujours/Toujours"
+                        },
+                        "value": "almost always/always"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "Select the first option if you are paying attention.",
+                "title": {
+                    "en": "Select the first option if you are paying attention.",
+                    "fr": "Sélectionnez la première option si vous faites attention."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "attentionCheck-Select the first option if you are paying attention.",
                 "multipleChoiceOptions": [
-                    { "label": "Rarely/Never", "value": "rarely/never" },
-                    { "label": "Occasionally", "value": "occasionally" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Almost Always/Always", "value": "almost always/always" }
+                    {
+                        "label": {
+                            "en": "Rarely/Never",
+                            "fr": "Rarement/Jamais"
+                        },
+                        "value": "rarely/never"
+                    },
+                    {
+                        "label": {
+                            "en": "Occasionally",
+                            "fr": "Des fois"
+                        },
+                        "value": "occasionally"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Almost Always/Always",
+                            "fr": "Presque toujours/Toujours"
+                        },
+                        "value": "almost always/always"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I am restless at the theater or lectures.",
+                "title": {
+                    "en": "I am restless at the theater or lectures.",
+                    "fr": "Je suis agité(e) au théâtre et durant les conférences."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I am restless at the theater or lectures",
                 "multipleChoiceOptions": [
-                    { "label": "Rarely/Never", "value": "rarely/never" },
-                    { "label": "Occasionally", "value": "occasionally" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Almost Always/Always", "value": "almost always/always" }
+                    {
+                        "label": {
+                            "en": "Rarely/Never",
+                            "fr": "Rarement/Jamais"
+                        },
+                        "value": "rarely/never"
+                    },
+                    {
+                        "label": {
+                            "en": "Occasionally",
+                            "fr": "Des fois"
+                        },
+                        "value": "occasionally"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Almost Always/Always",
+                            "fr": "Presque toujours/Toujours"
+                        },
+                        "value": "almost always/always"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I like puzzles.",
+                "title": {
+                    "en": "I like puzzles.",
+                    "fr": "J’aime les casse-têtes."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I like puzzles",
                 "multipleChoiceOptions": [
-                    { "label": "Rarely/Never", "value": "rarely/never" },
-                    { "label": "Occasionally", "value": "occasionally" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Almost Always/Always", "value": "almost always/always" }
+                    {
+                        "label": {
+                            "en": "Rarely/Never",
+                            "fr": "Rarement/Jamais"
+                        },
+                        "value": "rarely/never"
+                    },
+                    {
+                        "label": {
+                            "en": "Occasionally",
+                            "fr": "Des fois"
+                        },
+                        "value": "occasionally"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Almost Always/Always",
+                            "fr": "Presque toujours/Toujours"
+                        },
+                        "value": "almost always/always"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "I am future oriented.",
+                "title": {
+                    "en": "I am future oriented.",
+                    "fr": "Je suis orienté(e) vers l’avenir."
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "I am future oriented",
                 "multipleChoiceOptions": [
-                    { "label": "Rarely/Never", "value": "rarely/never" },
-                    { "label": "Occasionally", "value": "occasionally" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Almost Always/Always", "value": "almost always/always" }
+                    {
+                        "label": {
+                            "en": "Rarely/Never",
+                            "fr": "Rarement/Jamais"
+                        },
+                        "value": "rarely/never"
+                    },
+                    {
+                        "label": {
+                            "en": "Occasionally",
+                            "fr": "Des fois"
+                        },
+                        "value": "occasionally"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Almost Always/Always",
+                            "fr": "Presque toujours/Toujours"
+                        },
+                        "value": "almost always/always"
+                    }
                 ]
             }
         ]
     }'
 WHERE id = 22;
--- BIS-11 FRENCH VERSION
+-- GDS SHORT
 UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "QUESTIONNAIRE",
-    name = "BIS-11 French Version",
-    description = "The Barratt Impulsiveness Scale FR",
+    name = "GDS Short",
+    description = "Geriatric Depression Scale",
     external_url = "",
     config = '{
-        "title":"Questionnaire",
+        "title": {
+            "en": "Questionnaire",
+            "fr": "Questionnaire"
+        },
         "questions":[
             {
                 "questionType": "displayText",
-                "title": "Instructions: Pour chacun des énoncés suivant cliquez la case appropriée. Ne passez pas trop de temps sur les énoncés. Répondez rapidement et honnêtement."
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Je planifie les tâches soigneusement.",
-                "validation": {
-                    "required":true
-                },
-                "key": "Je planifie les tâches soigneusement",
-                "multipleChoiceOptions": [
-                    { "label": "Rarement/Jamais", "value": "rarement/jamais" },
-                    { "label": "Des fois", "value": "des fois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Presque toujours/Toujours", "value": "presque toujours/toujours" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "J’agis sans réfléchir.",
-                "validation":{
-                    "required":true
-                },
-                "key": "J’agis sans réfléchir",
-                "multipleChoiceOptions": [
-                    { "label": "Rarement/Jamais", "value": "rarement/jamais" },
-                    { "label": "Des fois", "value": "des fois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Presque toujours/Toujours", "value": "presque toujours/toujours" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Je me décide rapidement.",
-                "validation":{
-                    "required":true
-                },
-                "key": "Je me décide rapidement",
-                "multipleChoiceOptions": [
-                    { "label": "Rarement/Jamais", "value": "rarement/jamais" },
-                    { "label": "Des fois", "value": "des fois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Presque toujours/Toujours", "value": "presque toujours/toujours" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Je suis insouciant(e).",
-                "validation":{
-                    "required":true
-                },
-                "key": "Je suis insouciant(e)",
-                "multipleChoiceOptions": [
-                    { "label": "Rarement/Jamais", "value": "rarement/jamais" },
-                    { "label": "Des fois", "value": "des fois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Presque toujours/Toujours", "value": "presque toujours/toujours" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Je ne porte pas attention.",
-                "validation":{
-                    "required":true
-                },
-                "key": "Je ne porte pas attention",
-                "multipleChoiceOptions": [
-                    { "label": "Rarement/Jamais", "value": "rarement/jamais" },
-                    { "label": "Des fois", "value": "des fois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Presque toujours/Toujours", "value": "presque toujours/toujours" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Mes pensées se suivent rapidement.",
-                "validation":{
-                    "required":true
-                },
-                "key": "Mes pensées se suivent rapidement",
-                "multipleChoiceOptions": [
-                    { "label": "Rarement/Jamais", "value": "rarement/jamais" },
-                    { "label": "Des fois", "value": "des fois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Presque toujours/Toujours", "value": "presque toujours/toujours" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Je planifie mes voyages bien en avance.",
-                "validation":{
-                    "required":true
-                },
-                "key": "Je planifie mes voyages bien en avance",
-                "multipleChoiceOptions": [
-                    { "label": "Rarement/Jamais", "value": "rarement/jamais" },
-                    { "label": "Des fois", "value": "des fois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Presque toujours/Toujours", "value": "presque toujours/toujours" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "J’ai contrôle sur moi-même.",
-                "validation":{
-                    "required":true
-                },
-                "key": "J’ai contrôle sur moi-même",
-                "multipleChoiceOptions": [
-                    { "label": "Rarement/Jamais", "value": "rarement/jamais" },
-                    { "label": "Des fois", "value": "des fois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Presque toujours/Toujours", "value": "presque toujours/toujours" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Je me concentre facilement.",
-                "validation":{
-                    "required":true
-                },
-                "key": "Je me concentre facilement",
-                "multipleChoiceOptions": [
-                    { "label": "Rarement/Jamais", "value": "rarement/jamais" },
-                    { "label": "Des fois", "value": "des fois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Presque toujours/Toujours", "value": "presque toujours/toujours" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "J’économise régulièrement.",
-                "validation":{
-                    "required":true
-                },
-                "key": "J’économise régulièrement",
-                "multipleChoiceOptions": [
-                    { "label": "Rarement/Jamais", "value": "rarement/jamais" },
-                    { "label": "Des fois", "value": "des fois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Presque toujours/Toujours", "value": "presque toujours/toujours" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Je me tortille durant les pièces de théâtre et les conférences.",
-                "validation":{
-                    "required":true
-                },
-                "key": "Je me tortille durant les pièces de théâtre et les conférences",
-                "multipleChoiceOptions": [
-                    { "label": "Rarement/Jamais", "value": "rarement/jamais" },
-                    { "label": "Des fois", "value": "des fois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Presque toujours/Toujours", "value": "presque toujours/toujours" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Je suis un(e) penseur(-euse) prudent.",
-                "validation":{
-                    "required":true
-                },
-                "key": "Je suis un(e) penseur(-euse) prudent",
-                "multipleChoiceOptions": [
-                    { "label": "Rarement/Jamais", "value": "rarement/jamais" },
-                    { "label": "Des fois", "value": "des fois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Presque toujours/Toujours", "value": "presque toujours/toujours" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Je planifie ma sécurité d’emploi.",
-                "validation":{
-                    "required":true
-                },
-                "key": "Je planifie ma sécurité d’emploi",
-                "multipleChoiceOptions": [
-                    { "label": "Rarement/Jamais", "value": "rarement/jamais" },
-                    { "label": "Des fois", "value": "des fois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Presque toujours/Toujours", "value": "presque toujours/toujours" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Je dis des choses sans penser.",
-                "validation":{
-                    "required":true
-                },
-                "key": "Je dis des choses sans penser",
-                "multipleChoiceOptions": [
-                    { "label": "Rarement/Jamais", "value": "rarement/jamais" },
-                    { "label": "Des fois", "value": "des fois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Presque toujours/Toujours", "value": "presque toujours/toujours" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "J’aime penser aux problèmes compliqués.",
-                "validation":{
-                    "required":true
-                },
-                "key": "J’aime penser aux problèmes compliqués",
-                "multipleChoiceOptions": [
-                    { "label": "Rarement/Jamais", "value": "rarement/jamais" },
-                    { "label": "Des fois", "value": "des fois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Presque toujours/Toujours", "value": "presque toujours/toujours" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Je change d’emploi.",
-                "validation":{
-                    "required":true
-                },
-                "key": "Je change d’emploi",
-                "multipleChoiceOptions": [
-                    { "label": "Rarement/Jamais", "value": "rarement/jamais" },
-                    { "label": "Des fois", "value": "des fois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Presque toujours/Toujours", "value": "presque toujours/toujours" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "J’agis impulsivement.",
-                "validation":{
-                    "required":true
-                },
-                "key": "J’agis impulsivement",
-                "multipleChoiceOptions": [
-                    { "label": "Rarement/Jamais", "value": "rarement/jamais" },
-                    { "label": "Des fois", "value": "des fois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Presque toujours/Toujours", "value": "presque toujours/toujours" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Résoudre des problèmes de pensée m’ennuie.",
-                "validation":{
-                    "required":true
-                },
-                "key": "Résoudre des problèmes de pensée m’ennuie",
-                "multipleChoiceOptions": [
-                    { "label": "Rarement/Jamais", "value": "rarement/jamais" },
-                    { "label": "Des fois", "value": "des fois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Presque toujours/Toujours", "value": "presque toujours/toujours" }
-                ]
-            },
-                        {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "J’agis sous l’impulsion du moment.",
-                "validation":{
-                    "required":true
-                },
-                "key": "J’agis sous l’impulsion du moment",
-                "multipleChoiceOptions": [
-                    { "label": "Rarement/Jamais", "value": "rarement/jamais" },
-                    { "label": "Des fois", "value": "des fois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Presque toujours/Toujours", "value": "presque toujours/toujours" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Je suis un(e) penseur(-euse) pondéré(e).",
-                "validation":{
-                    "required":true
-                },
-                "key": "Je suis un(e) penseur(-euse) pondéré(e)",
-                "multipleChoiceOptions": [
-                    { "label": "Rarement/Jamais", "value": "rarement/jamais" },
-                    { "label": "Des fois", "value": "des fois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Presque toujours/Toujours", "value": "presque toujours/toujours" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Je change de logements.",
-                "validation":{
-                    "required":true
-                },
-                "key": "Je change de logements",
-                "multipleChoiceOptions": [
-                    { "label": "Rarement/Jamais", "value": "rarement/jamais" },
-                    { "label": "Des fois", "value": "des fois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Presque toujours/Toujours", "value": "presque toujours/toujours" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "J’achète des choses sur un coup de tête.",
-                "validation":{
-                    "required":true
-                },
-                "key": "J’achète des choses sur un coup de tête",
-                "multipleChoiceOptions": [
-                    { "label": "Rarement/Jamais", "value": "rarement/jamais" },
-                    { "label": "Des fois", "value": "des fois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Presque toujours/Toujours", "value": "presque toujours/toujours" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Je peux seulement penser à une chose à la fois.",
-                "validation":{
-                    "required":true
-                },
-                "key": "Je peux seulement penser à une chose à la fois",
-                "multipleChoiceOptions": [
-                    { "label": "Rarement/Jamais", "value": "rarement/jamais" },
-                    { "label": "Des fois", "value": "des fois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Presque toujours/Toujours", "value": "presque toujours/toujours" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Je change de hobbys.",
-                "validation":{
-                    "required":true
-                },
-                "key": "Je change de hobbys",
-                "multipleChoiceOptions": [
-                    { "label": "Rarement/Jamais", "value": "rarement/jamais" },
-                    { "label": "Des fois", "value": "des fois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Presque toujours/Toujours", "value": "presque toujours/toujours" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Je dépense plus que ce que je gagne.",
-                "validation":{
-                    "required":true
-                },
-                "key": "Je dépense plus que ce que je gagne",
-                "multipleChoiceOptions": [
-                    { "label": "Rarement/Jamais", "value": "rarement/jamais" },
-                    { "label": "Des fois", "value": "des fois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Presque toujours/Toujours", "value": "presque toujours/toujours" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "J’ai souvent des pensées étrangères.",
-                "validation":{
-                    "required":true
-                },
-                "key": "J’ai souvent des pensées étrangères",
-                "multipleChoiceOptions": [
-                    { "label": "Rarement/Jamais", "value": "rarement/jamais" },
-                    { "label": "Des fois", "value": "des fois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Presque toujours/Toujours", "value": "presque toujours/toujours" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Je m’intéresse plus au présent qu’au futur.",
-                "validation":{
-                    "required":true
-                },
-                "key": "Je m’intéresse plus au présent qu’au futur",
-                "multipleChoiceOptions": [
-                    { "label": "Rarement/Jamais", "value": "rarement/jamais" },
-                    { "label": "Des fois", "value": "des fois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Presque toujours/Toujours", "value": "presque toujours/toujours" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Sélectionnez la première option si vous faites attention.",
-                "validation":{
-                    "required":true
-                },
-                "key": "attentionCheck-Sélectionnez la première option si vous faites attention",
-                "multipleChoiceOptions": [
-                    { "label": "Rarement/Jamais", "value": "rarement/jamais" },
-                    { "label": "Des fois", "value": "des fois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Presque toujours/Toujours", "value": "presque toujours/toujours" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Je suis agité(e) au théâtre et durant les conférences.",
-                "validation":{
-                    "required":true
-                },
-                "key": "Je suis agité(e) au théâtre et durant les conférences",
-                "multipleChoiceOptions": [
-                    { "label": "Rarement/Jamais", "value": "rarement/jamais" },
-                    { "label": "Des fois", "value": "des fois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Presque toujours/Toujours", "value": "presque toujours/toujours" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "J’aime les casse-têtes.",
-                "validation":{
-                    "required":true
-                },
-                "key": "J’aime les casse-têtes",
-                "multipleChoiceOptions": [
-                    { "label": "Rarement/Jamais", "value": "rarement/jamais" },
-                    { "label": "Des fois", "value": "des fois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Presque toujours/Toujours", "value": "presque toujours/toujours" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Je suis orienté(e) vers l’avenir.",
-                "validation":{
-                    "required":true
-                },
-                "key": "Je suis orienté(e) vers l’avenir",
-                "multipleChoiceOptions": [
-                    { "label": "Rarement/Jamais", "value": "rarement/jamais" },
-                    { "label": "Des fois", "value": "des fois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Presque toujours/Toujours", "value": "presque toujours/toujours" }
-                ]
-            }
-        ]
-    }'
-WHERE id = 23;
--- GDS SHORT FORM ENGLISH
-UPDATE tasks set
-    from_platform = "PSHARPLAB",
-    task_type = "QUESTIONNAIRE",
-    name = "GDS Short Form English",
-    description = "Geriatric Depression Scale English",
-    external_url = "",
-    config = '{
-        "title":"Questionnaire",
-        "questions":[
-            {
-                "questionType": "displayText",
-                "title": "Choose the best answer for how you have felt over the past week."
+                "title": {
+                    "en": "Choose the best answer for how you have felt over the past week.",
+                    "fr": "Choisissez la réponse qui correspond à la façon dont vous vous sentiez dans la dernière semaine."
+                }
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "Are you basically satisfied with your life?",
+                "title": {
+                    "en": "Are you basically satisfied with your life?",
+                    "fr": "Êtes-vous satisfait de votre vie?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "Are you basically satisfied with your life?",
                 "multipleChoiceOptions": [
-                    { "label": "Yes", "value": "yes" },
-                    { "label": "No", "value": "no" }
+                    {
+                        "label": {
+                            "en": "Yes",
+                            "fr": "Oui"
+                        },
+                        "value": "yes"
+                    },
+                    {
+                        "label": {
+                            "en": "No",
+                            "fr": "Non"
+                        },
+                        "value": "no"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "Have you dropped many of your activities and interests?",
+                "title": {
+                    "en": "Have you dropped many of your activities and interests?",
+                    "fr": "Avez-vous abandonné beaucoup de vos activités et de vos intérêts?"
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "Have you dropped many of your activities and interests?",
                 "multipleChoiceOptions": [
-                    { "label": "Yes", "value": "yes" },
-                    { "label": "No", "value": "no" }
+                    {
+                        "label": {
+                            "en": "Yes",
+                            "fr": "Oui"
+                        },
+                        "value": "yes"
+                    },
+                    {
+                        "label": {
+                            "en": "No",
+                            "fr": "Non"
+                        },
+                        "value": "no"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "Do you feel that your life is empty?",
+                "title": {
+                    "en": "Do you feel that your life is empty?",
+                    "fr": "Avez-vous le sentiment que votre vie est vide?"
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "Do you feel that your life is empty?",
                 "multipleChoiceOptions": [
-                    { "label": "Yes", "value": "yes" },
-                    { "label": "No", "value": "no" }
+                    {
+                        "label": {
+                            "en": "Yes",
+                            "fr": "Oui"
+                        },
+                        "value": "yes"
+                    },
+                    {
+                        "label": {
+                            "en": "No",
+                            "fr": "Non"
+                        },
+                        "value": "no"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "Do you often get bored?",
+                "title": {
+                    "en": "Do you often get bored?",
+                    "fr": "Vous ennuyez-vous souvent?"
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "Do you often get bored?",
                 "multipleChoiceOptions": [
-                    { "label": "Yes", "value": "yes" },
-                    { "label": "No", "value": "no" }
+                    {
+                        "label": {
+                            "en": "Yes",
+                            "fr": "Oui"
+                        },
+                        "value": "yes"
+                    },
+                    {
+                        "label": {
+                            "en": "No",
+                            "fr": "Non"
+                        },
+                        "value": "no"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "Are you in good spirits most of the time?",
+                "title": {
+                    "en": "Are you in good spirits most of the time?",
+                    "fr": "Êtes-vous de bonne humeur la plupart du temps?"
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "Are you in good spirits most of the time?",
                 "multipleChoiceOptions": [
-                    { "label": "Yes", "value": "yes" },
-                    { "label": "No", "value": "no" }
+                    {
+                        "label": {
+                            "en": "Yes",
+                            "fr": "Oui"
+                        },
+                        "value": "yes"
+                    },
+                    {
+                        "label": {
+                            "en": "No",
+                            "fr": "Non"
+                        },
+                        "value": "no"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "Are you afraid that something bad is going to happen to you?",
+                "title": {
+                    "en": "Are you afraid that something bad is going to happen to you?",
+                    "fr": "Craignez-vous qu’un malheur vous arrive?"
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "Are you afraid that something bad is going to happen to you?",
                 "multipleChoiceOptions": [
-                    { "label": "Yes", "value": "yes" },
-                    { "label": "No", "value": "no" }
+                    {
+                        "label": {
+                            "en": "Yes",
+                            "fr": "Oui"
+                        },
+                        "value": "yes"
+                    },
+                    {
+                        "label": {
+                            "en": "No",
+                            "fr": "Non"
+                        },
+                        "value": "no"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "Do you feel happy most of the time?",
+                "title": {
+                    "en": "Do you feel happy most of the time?",
+                    "fr": "Vous sentez-vous heureux la plupart du temps?"
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "Do you feel happy most of the time?",
                 "multipleChoiceOptions": [
-                    { "label": "Yes", "value": "yes" },
-                    { "label": "No", "value": "no" }
+                    {
+                        "label": {
+                            "en": "Yes",
+                            "fr": "Oui"
+                        },
+                        "value": "yes"
+                    },
+                    {
+                        "label": {
+                            "en": "No",
+                            "fr": "Non"
+                        },
+                        "value": "no"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "Choose \\"no\\" if you are paying attention",
+                "title": {
+                    "en": "Choose \\"no\\" if you are paying attention",
+                    "fr": "Choisissez « non » si vous êtes attentif(ve)"
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "attentionCheck-Choose no if you are paying attention",
                 "multipleChoiceOptions": [
-                    { "label": "Yes", "value": "yes" },
-                    { "label": "No", "value": "no" }
+                    {
+                        "label": {
+                            "en": "Yes",
+                            "fr": "Oui"
+                        },
+                        "value": "yes"
+                    },
+                    {
+                        "label": {
+                            "en": "No",
+                            "fr": "Non"
+                        },
+                        "value": "no"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "Do you often feel helpless?",
+                "title": {
+                    "en": "Do you often feel helpless?",
+                    "fr": "Avez-vous souvent l’impression de ne pouvoir être aidé(e)?"
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "Do you often feel helpless?",
                 "multipleChoiceOptions": [
-                    { "label": "Yes", "value": "yes" },
-                    { "label": "No", "value": "no" }
+                    {
+                        "label": {
+                            "en": "Yes",
+                            "fr": "Oui"
+                        },
+                        "value": "yes"
+                    },
+                    {
+                        "label": {
+                            "en": "No",
+                            "fr": "Non"
+                        },
+                        "value": "no"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "Do you prefer to stay at home rather than going out and doing new things?",
+                "title": {
+                    "en": "Do you prefer to stay at home rather than going out and doing new things?",
+                    "fr": "Préférez-vous rester à la maison plutôt que de sortir et faire des choses nouvelles?"
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "Do you prefer to stay at home rather than going out and doing new things?",
                 "multipleChoiceOptions": [
-                    { "label": "Yes", "value": "yes" },
-                    { "label": "No", "value": "no" }
+                    {
+                        "label": {
+                            "en": "Yes",
+                            "fr": "Oui"
+                        },
+                        "value": "yes"
+                    },
+                    {
+                        "label": {
+                            "en": "No",
+                            "fr": "Non"
+                        },
+                        "value": "no"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "Do you feel you have more problems with memory than most?",
+                "title": {
+                    "en": "Do you feel you have more problems with memory than most?",
+                    "fr": "Avez-vous l’impression d’avoir plus de problèmes de mémoire que la plupart des gens?"
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "Do you feel you have more problems with memory than most?",
                 "multipleChoiceOptions": [
-                    { "label": "Yes", "value": "yes" },
-                    { "label": "No", "value": "no" }
+                    {
+                        "label": {
+                            "en": "Yes",
+                            "fr": "Oui"
+                        },
+                        "value": "yes"
+                    },
+                    {
+                        "label": {
+                            "en": "No",
+                            "fr": "Non"
+                        },
+                        "value": "no"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "Do you think it is wonderful to be alive now?",
+                "title": {
+                    "en": "Do you think it is wonderful to be alive now?",
+                    "fr": "Pensez-vous qu’il est merveilleux de vivre actuellement?"
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "Do you think it is wonderful to be alive now?",
                 "multipleChoiceOptions": [
-                    { "label": "Yes", "value": "yes" },
-                    { "label": "No", "value": "no" }
+                    {
+                        "label": {
+                            "en": "Yes",
+                            "fr": "Oui"
+                        },
+                        "value": "yes"
+                    },
+                    {
+                        "label": {
+                            "en": "No",
+                            "fr": "Non"
+                        },
+                        "value": "no"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "Do you feel pretty worthless the way you are now?",
+                "title": {
+                    "en": "Do you feel pretty worthless the way you are now?",
+                    "fr": "Sentez-vous que vous ne valez pas grand-chose tel que vous êtes actuellement?"
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "Do you feel pretty worthless the way you are now?",
                 "multipleChoiceOptions": [
-                    { "label": "Yes", "value": "yes" },
-                    { "label": "No", "value": "no" }
+                    {
+                        "label": {
+                            "en": "Yes",
+                            "fr": "Oui"
+                        },
+                        "value": "yes"
+                    },
+                    {
+                        "label": {
+                            "en": "No",
+                            "fr": "Non"
+                        },
+                        "value": "no"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "Do you feel full of energy?",
+                "title": {
+                    "en": "Do you feel full of energy?",
+                    "fr": "Vous sentez-vous plein(e) d’énergie?"
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "Do you feel full of energy?",
                 "multipleChoiceOptions": [
-                    { "label": "Yes", "value": "yes" },
-                    { "label": "No", "value": "no" }
+                    {
+                        "label": {
+                            "en": "Yes",
+                            "fr": "Oui"
+                        },
+                        "value": "yes"
+                    },
+                    {
+                        "label": {
+                            "en": "No",
+                            "fr": "Non"
+                        },
+                        "value": "no"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "Do you feel that your situation is hopeless?",
+                "title": {
+                    "en": "Do you feel that your situation is hopeless?",
+                    "fr": "Pensez-vous que votre situation est sans espoir?"
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "Do you feel that your situation is hopeless?",
                 "multipleChoiceOptions": [
-                    { "label": "Yes", "value": "yes" },
-                    { "label": "No", "value": "no" }
+                    {
+                        "label": {
+                            "en": "Yes",
+                            "fr": "Oui"
+                        },
+                        "value": "yes"
+                    },
+                    {
+                        "label": {
+                            "en": "No",
+                            "fr": "Non"
+                        },
+                        "value": "no"
+                    }
                 ]
             },
             {
                 "questionType":"radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "Do you think that most people are better off than you are?",
+                "title": {
+                    "en": "Do you think that most people are better off than you are?",
+                    "fr": "Pensez-vous que la plupart des gens sont en meilleure forme que vous?"
+                },
                 "validation":{
                     "required":true
                 },
                 "key": "Do you think that most people are better off than you are?",
                 "multipleChoiceOptions": [
-                    { "label": "Yes", "value": "yes" },
-                    { "label": "No", "value": "no" }
+                    {
+                        "label": {
+                            "en": "Yes",
+                            "fr": "Oui"
+                        },
+                        "value": "yes"
+                    },
+                    {
+                        "label": {
+                            "en": "No",
+                            "fr": "Non"
+                        },
+                        "value": "no"
+                    }
                 ]
             }
         ]
     }'
 WHERE id = 24;
--- GDS SHORT FORM FRENCH
-UPDATE tasks set
-    from_platform = "PSHARPLAB",
-    task_type = "QUESTIONNAIRE",
-    name = "GDS Short Form French",
-    description = "Geriatric Depression Scale French",
-    external_url = "",
-    config = '{
-        "title":"Questionnaire",
-        "questions":[
-            {
-                "questionType": "displayText",
-                "title": "Choisissez la réponse qui correspond à la façon dont vous vous sentiez dans la dernière semaine."
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "Êtes-vous satisfait de votre vie?",
-                "validation": {
-                    "required":true
-                },
-                "key": "Êtes-vous satisfait de votre vie?",
-                "multipleChoiceOptions": [
-                    { "label": "Oui", "value": "oui" },
-                    { "label": "Non", "value": "non" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "Avez-vous abandonné beaucoup de vos activités et de vos intérêts?",
-                "validation":{
-                    "required":true
-                },
-                "key": "Avez-vous abandonné beaucoup de vos activités et de vos intérêts?",
-                "multipleChoiceOptions": [
-                    { "label": "Oui", "value": "oui" },
-                    { "label": "Non", "value": "non" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "Avez-vous le sentiment que votre vie est vide?",
-                "validation":{
-                    "required":true
-                },
-                "key": "Avez-vous le sentiment que votre vie est vide?",
-                "multipleChoiceOptions": [
-                    { "label": "Oui", "value": "oui" },
-                    { "label": "Non", "value": "non" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "Vous ennuyez-vous souvent?",
-                "validation":{
-                    "required":true
-                },
-                "key": "Vous ennuyez-vous souvent?",
-                "multipleChoiceOptions": [
-                    { "label": "Oui", "value": "oui" },
-                    { "label": "Non", "value": "non" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "Êtes-vous de bonne humeur la plupart du temps?",
-                "validation":{
-                    "required":true
-                },
-                "key": "Êtes-vous de bonne humeur la plupart du temps?",
-                "multipleChoiceOptions": [
-                    { "label": "Oui", "value": "oui" },
-                    { "label": "Non", "value": "non" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "Craignez-vous qu’un malheur vous arrive?",
-                "validation":{
-                    "required":true
-                },
-                "key": "Craignez-vous qu’un malheur vous arrive?",
-                "multipleChoiceOptions": [
-                    { "label": "Oui", "value": "oui" },
-                    { "label": "Non", "value": "non" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "Vous sentez-vous heureux la plupart du temps?",
-                "validation":{
-                    "required":true
-                },
-                "key": "Vous sentez-vous heureux la plupart du temps?",
-                "multipleChoiceOptions": [
-                    { "label": "Oui", "value": "oui" },
-                    { "label": "Non", "value": "non" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "Choisissez « non » si vous êtes attentif(ve)",
-                "validation":{
-                    "required":true
-                },
-                "key": "attentionCheck-Choisissez non si vous êtes attentif(ve)",
-                "multipleChoiceOptions": [
-                    { "label": "Oui", "value": "oui" },
-                    { "label": "Non", "value": "non" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "Avez-vous souvent l’impression de ne pouvoir être aidé(e)?",
-                "validation":{
-                    "required":true
-                },
-                "key": "Avez-vous souvent l’impression de ne pouvoir être aidé(e)?",
-                "multipleChoiceOptions": [
-                    { "label": "Oui", "value": "oui" },
-                    { "label": "Non", "value": "non" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "Préférez-vous rester à la maison plutôt que de sortir et faire des choses nouvelles?",
-                "validation":{
-                    "required":true
-                },
-                "key": "Préférez-vous rester à la maison plutôt que de sortir et faire des choses nouvelles?",
-                "multipleChoiceOptions": [
-                    { "label": "Oui", "value": "oui" },
-                    { "label": "Non", "value": "non" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "Avez-vous l’impression d’avoir plus de problèmes de mémoire que la plupart des gens?",
-                "validation":{
-                    "required":true
-                },
-                "key": "Avez-vous l’impression d’avoir plus de problèmes de mémoire que la plupart des gens?",
-                "multipleChoiceOptions": [
-                    { "label": "Oui", "value": "oui" },
-                    { "label": "Non", "value": "non" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "Pensez-vous qu’il est merveilleux de vivre actuellement?",
-                "validation":{
-                    "required":true
-                },
-                "key": "Pensez-vous qu’il est merveilleux de vivre actuellement?",
-                "multipleChoiceOptions": [
-                    { "label": "Oui", "value": "oui" },
-                    { "label": "Non", "value": "non" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "Sentez-vous que vous ne valez pas grand-chose tel que vous êtes actuellement?",
-                "validation":{
-                    "required":true
-                },
-                "key": "Sentez-vous que vous ne valez pas grand-chose tel que vous êtes actuellement?",
-                "multipleChoiceOptions": [
-                    { "label": "Oui", "value": "oui" },
-                    { "label": "Non", "value": "non" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "Vous sentez-vous plein(e) d’énergie?",
-                "validation":{
-                    "required":true
-                },
-                "key": "Vous sentez-vous plein(e) d’énergie?",
-                "multipleChoiceOptions": [
-                    { "label": "Oui", "value": "oui" },
-                    { "label": "Non", "value": "non" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "Pensez-vous que votre situation est sans espoir?",
-                "validation":{
-                    "required":true
-                },
-                "key": "Pensez-vous que votre situation est sans espoir?",
-                "multipleChoiceOptions": [
-                    { "label": "Oui", "value": "oui" },
-                    { "label": "Non", "value": "non" }
-                ]
-            },
-            {
-                "questionType":"radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "Pensez-vous que la plupart des gens sont en meilleure forme que vous?",
-                "validation":{
-                    "required":true
-                },
-                "key": "Pensez-vous que la plupart des gens sont en meilleure forme que vous?",
-                "multipleChoiceOptions": [
-                    { "label": "Oui", "value": "oui" },
-                    { "label": "Non", "value": "non" }
-                ]
-            }
-        ]
-    }'
-WHERE id = 25;
--- QUIP ENGLISH
+-- QUIP
 UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "QUESTIONNAIRE",
@@ -7902,134 +8609,385 @@ UPDATE tasks set
     description = "Questionnaire for Impulsive-Compulsive Disorders in Parkinson's Disease - Rating Scale (QUIP-RS)",
     external_url = "",
     config = '{
-        "title":"Questionnaire",
+        "title": {
+            "en": "Questionnaire",
+            "fr": "Questionnaire"
+        },
         "questions":[
             {
                 "questionType": "displayText",
                 "title": "Description Of Behaviors",
-                "textContent": "A. <b>Gambling</b>: casinos, internet gambling lotteries, scratch tickets, betting, slot or poker machines <br /> B. <b>Sex</b>: making sexual demads on others, promiscuity, prostitution, change in sexual orientation, masturbation, internet and telephone sexual activities, pornography <br /> C. <b>Buying</b>: too much of the same thing or things you don’t need or use <br /> D. <b>Eating</b>: eating larger amounts or different types of food than in the past, more rapidly than normal, at different times (such as overnight), until feeling uncomfortable full or when not hungry <br /> E. <b>Hobbyism</b>: specific tasks, hobbies or other organized activities, such as writing, painting, gardening, repairing or dismantling things, collecting, computer use, working on projects, etc. <br /> F. <b>Punding</b>: repeating cetain simple motor activities, such as cleaning, tidying, handling, examining, sorting, ordering, collecting, hoarding, or arranging objects, etc. <br /> G. <b>Medication Use</b>: consistently taking too much of your Parkinson’s medications, or increasing on your own, without medical advice, your overall intake of PD medications"
-            },
-            {
-                "questionType": "displayText","title": "Frequency Of Behaviours","textContent": "<b>Never</b>: not at all <br /><b>Rarely</b>: 1 day/week <br /><b>Sometimes</b>: 2-3 days/week <br /><b>Often</b>: 4-5 days/week <br /><b>Very Often</b>: 6-7 days/week <br />"
-            },
-            {
-                "questionType": "displayText",
-                "title": "In the last 4 weeks...(see definitions above)"
+                "textContent": {
+                    "en": "A. <b>Gambling</b>: casinos, internet gambling lotteries, scratch tickets, betting, slot or poker machines <br /> B. <b>Sex</b>: making sexual demads on others, promiscuity, prostitution, change in sexual orientation, masturbation, internet and telephone sexual activities, pornography <br /> C. <b>Buying</b>: too much of the same thing or things you don’t need or use <br /> D. <b>Eating</b>: eating larger amounts or different types of food than in the past, more rapidly than normal, at different times (such as overnight), until feeling uncomfortable full or when not hungry <br /> E. <b>Hobbyism</b>: specific tasks, hobbies or other organized activities, such as writing, painting, gardening, repairing or dismantling things, collecting, computer use, working on projects, etc. <br /> F. <b>Punding</b>: repeating cetain simple motor activities, such as cleaning, tidying, handling, examining, sorting, ordering, collecting, hoarding, or arranging objects, etc. <br /> G. <b>Medication Use</b>: consistently taking too much of your Parkinson’s medications, or increasing on your own, without medical advice, your overall intake of PD medications",
+                    "fr": "A. <b>Jeu (''gambling'')</b>: casinos, loteries sur Internet, tickets à gratter, paris, machines à sous ou poker <br /> B. <b>Sexe</b>: faire des demandes sexuelles à autrui, promiscuité, prostitution, changement d''orientation sexuelle, masturbation, activités sexuelles sur Internet et par téléphone, pornographie <br /> C. <b>Achats compulsifs</b>: trop de la même chose ou des choses dont vous n''avez pas besoin ou que vous n''utilisez pas <br /> D. <b>Manger</b>: nt que d''habitude, à des moments différents (comme la nuit), jusqu''à ce que vous vous sentiez mal ou sans avoir faim <br /> E. <b>Hobbyisme - Exécuter des tâches ou pratiquer des passe-temps</b>: tâches spécifiques, passe-temps ou autres activités organisées, comme écrire, peindre, jardiner, réparer ou démonter des objets, collectionner, utiliser un ordinateur, travailler sur des projets, etc. <br /> F. <b> Répéter des activités simples</b>: répéter certaines activités motrices simples, comme nettoyer, ranger, manipuler, examiner, trier, ramasser, amasser, démonter des objets, etc. <br /> G. <b>Consommation de médicaments pour PD</b>: régulièrement prendre trop de médicaments pour le Parkinson ou augmenter vous-même, sans avis médical, votre consommation de médicaments pour le Parkinson"
+                }
             },
             {
                 "questionType": "displayText",
-                "title": "1. How much do you think about the following behaviors (such as having trouble keeping thoughts out of your mind or feeling guilty)?"
+                "title": {
+                    "en": "Frequency Of Behaviours",
+                    "fr": "Fréquence des comportements"
+                },
+                "textContent": {
+                    "en": "<b>Never</b>: not at all <br /><b>Rarely</b>: 1 day/week <br /><b>Sometimes</b>: 2-3 days/week <br /><b>Often</b>: 4-5 days/week <br /><b>Very Often</b>: 6-7 days/week <br />",
+                    "fr": "<b>Jamais</b>: pas du tout <br /><b>Rarement</b>: 1 jour/semaine <br /><b>Parfois</b>: 2-3 jours/semaine <br /><b>Souvent</b>: 4-5 jours/semaine <br /><b>Très souvent</b>: 6-7 jours/semaine <br />"
+                }
+            },
+            {
+                "questionType": "displayText",
+                "title": {
+                    "en": "In the last 4 weeks...(see definitions above)",
+                    "fr": "Dans les 4 dernières semaines..."
+                }
+            },
+            {
+                "questionType": "displayText",
+                "title": {
+                    "en": "1. How much do you think about the following behaviors (such as having trouble keeping thoughts out of your mind or feeling guilty)?",
+                    "fr": "1. À quel point pensez-vous aux comportements suivant (c’est-à-dire avoir de la difficulté à garder des pensées hors de votre esprit, ou vous sentir coupable en relation à ces activités)?"
+                }
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "textContent": "Gambling?",
+                "textContent": {
+                    "en": "Gambling?",
+                    "fr": "Jeu (''gambling'')?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "how much do you think about gambling",
                 "multipleChoiceOptions": [
-                    { "label": "Never", "value": "never" },
-                    { "label": "Rarely", "value": "rarely" },
-                    { "label": "Sometimes", "value": "sometimes" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Very Often", "value": "very often" }
+                    {
+                        "label": {
+                            "en": "Never",
+                            "fr": "Jamais"
+                        },
+                        "value": "never"
+                    },
+                    {
+                        "label": {
+                            "en": "Rarely",
+                            "fr": "Rarement"
+                        },
+                        "value": "rarely"
+                    },
+                    {
+                        "label": {
+                            "en": "Sometimes",
+                            "fr": "Parfois"
+                        },
+                        "value": "sometimes"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Very Often",
+                            "fr": "Très souvent"
+                        },
+                        "value": "very often"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "textContent": "Sex?",
+                "textContent": {
+                    "en": "Sex?",
+                    "fr": "Sexe?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "how much do you think about sex",
                 "multipleChoiceOptions": [
-                    { "label": "Never", "value": "never" },
-                    { "label": "Rarely", "value": "rarely" },
-                    { "label": "Sometimes", "value": "sometimes" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Very Often", "value": "very often" }
+                    {
+                        "label": {
+                            "en": "Never",
+                            "fr": "Jamais"
+                        },
+                        "value": "never"
+                    },
+                    {
+                        "label": {
+                            "en": "Rarely",
+                            "fr": "Rarement"
+                        },
+                        "value": "rarely"
+                    },
+                    {
+                        "label": {
+                            "en": "Sometimes",
+                            "fr": "Parfois"
+                        },
+                        "value": "sometimes"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Very Often",
+                            "fr": "Très souvent"
+                        },
+                        "value": "very often"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "textContent": "Buying?",
+                "textContent": {
+                    "en": "Buying?",
+                    "fr": "Achats compulsifs?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "how much do you think about buying",
                 "multipleChoiceOptions": [
-                    { "label": "Never", "value": "never" },
-                    { "label": "Rarely", "value": "rarely" },
-                    { "label": "Sometimes", "value": "sometimes" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Very Often", "value": "very often" }
+                    {
+                        "label": {
+                            "en": "Never",
+                            "fr": "Jamais"
+                        },
+                        "value": "never"
+                    },
+                    {
+                        "label": {
+                            "en": "Rarely",
+                            "fr": "Rarement"
+                        },
+                        "value": "rarely"
+                    },
+                    {
+                        "label": {
+                            "en": "Sometimes",
+                            "fr": "Parfois"
+                        },
+                        "value": "sometimes"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Very Often",
+                            "fr": "Très souvent"
+                        },
+                        "value": "very often"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "textContent": "Eating?",
+                "textContent": {
+                    "en": "Eating?",
+                    "fr": "Manger?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "how much do you think about eating",
                 "multipleChoiceOptions": [
-                    { "label": "Never", "value": "never" },
-                    { "label": "Rarely", "value": "rarely" },
-                    { "label": "Sometimes", "value": "sometimes" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Very Often", "value": "very often" }
+                    {
+                        "label": {
+                            "en": "Never",
+                            "fr": "Jamais"
+                        },
+                        "value": "never"
+                    },
+                    {
+                        "label": {
+                            "en": "Rarely",
+                            "fr": "Rarement"
+                        },
+                        "value": "rarely"
+                    },
+                    {
+                        "label": {
+                            "en": "Sometimes",
+                            "fr": "Parfois"
+                        },
+                        "value": "sometimes"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Very Often",
+                            "fr": "Très souvent"
+                        },
+                        "value": "very often"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "textContent": "Performing tasks or hobbies?",
+                "textContent": {
+                    "en": "Performing tasks or hobbies?",
+                    "fr": "Exécuter des tâches ou pratiquer des passe-temps?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "how much do you think about performing tasks or hobbies",
                 "multipleChoiceOptions": [
-                    { "label": "Never", "value": "never" },
-                    { "label": "Rarely", "value": "rarely" },
-                    { "label": "Sometimes", "value": "sometimes" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Very Often", "value": "very often" }
+                    {
+                        "label": {
+                            "en": "Never",
+                            "fr": "Jamais"
+                        },
+                        "value": "never"
+                    },
+                    {
+                        "label": {
+                            "en": "Rarely",
+                            "fr": "Rarement"
+                        },
+                        "value": "rarely"
+                    },
+                    {
+                        "label": {
+                            "en": "Sometimes",
+                            "fr": "Parfois"
+                        },
+                        "value": "sometimes"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Very Often",
+                            "fr": "Très souvent"
+                        },
+                        "value": "very often"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "textContent": "Repeating simple activities?",
+                "textContent": {
+                    "en": "Repeating simple activities?",
+                    "fr": "Répéter des activités simples?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "how much do you think about repeating simple activities",
                 "multipleChoiceOptions": [
-                    { "label": "Never", "value": "never" },
-                    { "label": "Rarely", "value": "rarely" },
-                    { "label": "Sometimes", "value": "sometimes" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Very Often", "value": "very often" }
+                    {
+                        "label": {
+                            "en": "Never",
+                            "fr": "Jamais"
+                        },
+                        "value": "never"
+                    },
+                    {
+                        "label": {
+                            "en": "Rarely",
+                            "fr": "Rarement"
+                        },
+                        "value": "rarely"
+                    },
+                    {
+                        "label": {
+                            "en": "Sometimes",
+                            "fr": "Parfois"
+                        },
+                        "value": "sometimes"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Very Often",
+                            "fr": "Très souvent"
+                        },
+                        "value": "very often"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "textContent": "Taking your PD medications?",
+                "textContent": {
+                    "en": "Taking your PD medications?",
+                    "fr": "Prendre vos médicaments contre le Parkinson?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "how much do you think about taking your PD medications",
                 "multipleChoiceOptions": [
-                    { "label": "Never", "value": "never" },
-                    { "label": "Rarely", "value": "rarely" },
-                    { "label": "Sometimes", "value": "sometimes" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Very Often", "value": "very often" }
+                    {
+                        "label": {
+                            "en": "Never",
+                            "fr": "Jamais"
+                        },
+                        "value": "never"
+                    },
+                    {
+                        "label": {
+                            "en": "Rarely",
+                            "fr": "Rarement"
+                        },
+                        "value": "rarely"
+                    },
+                    {
+                        "label": {
+                            "en": "Sometimes",
+                            "fr": "Parfois"
+                        },
+                        "value": "sometimes"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Very Often",
+                            "fr": "Très souvent"
+                        },
+                        "value": "very often"
+                    }
                 ]
             },
             {
@@ -8037,118 +8995,352 @@ UPDATE tasks set
             },
             {
                 "questionType": "displayText",
-                "title": "2. Do you have urges or desires for the following behaviors that you feel are excessive or cause you distress (including becoming restless or irritable when unable to participate in them)?"
+                "title": {
+                    "en": "2. Do you have urges or desires for the following behaviors that you feel are excessive or cause you distress (including becoming restless or irritable when unable to participate in them)?",
+                    "fr": "2. Avez-vous des pulsions ou des désirs pour les comportements suivants que vous jugez excessifs ou qui vous causent de la détresse (y compris devenir agité ou irritable lorsque vous ne pouvez pas vous y adonner)?"
+                }
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "textContent": "Gambling?",
+                "textContent": {
+                    "en": "Gambling?",
+                    "fr": "Jeu (''gambling'')?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "how much distress is caused by gambling",
                 "multipleChoiceOptions": [
-                    { "label": "Never", "value": "never" },
-                    { "label": "Rarely", "value": "rarely" },
-                    { "label": "Sometimes", "value": "sometimes" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Very Often", "value": "very often" }
+                    {
+                        "label": {
+                            "en": "Never",
+                            "fr": "Jamais"
+                        },
+                        "value": "never"
+                    },
+                    {
+                        "label": {
+                            "en": "Rarely",
+                            "fr": "Rarement"
+                        },
+                        "value": "rarely"
+                    },
+                    {
+                        "label": {
+                            "en": "Sometimes",
+                            "fr": "Parfois"
+                        },
+                        "value": "sometimes"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Very Often",
+                            "fr": "Très souvent"
+                        },
+                        "value": "very often"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "textContent": "Sex?",
+                "textContent": {
+                    "en": "Sex?",
+                    "fr": "Sexe?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "how much distress is caused by sex",
                 "multipleChoiceOptions": [
-                    { "label": "Never", "value": "never" },
-                    { "label": "Rarely", "value": "rarely" },
-                    { "label": "Sometimes", "value": "sometimes" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Very Often", "value": "very often" }
+                    {
+                        "label": {
+                            "en": "Never",
+                            "fr": "Jamais"
+                        },
+                        "value": "never"
+                    },
+                    {
+                        "label": {
+                            "en": "Rarely",
+                            "fr": "Rarement"
+                        },
+                        "value": "rarely"
+                    },
+                    {
+                        "label": {
+                            "en": "Sometimes",
+                            "fr": "Parfois"
+                        },
+                        "value": "sometimes"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Very Often",
+                            "fr": "Très souvent"
+                        },
+                        "value": "very often"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "textContent": "Buying?",
+                "textContent": {
+                    "en": "Buying?",
+                    "fr": "Achats compulsifs?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "how much distress is caused by buying",
                 "multipleChoiceOptions": [
-                    { "label": "Never", "value": "never" },
-                    { "label": "Rarely", "value": "rarely" },
-                    { "label": "Sometimes", "value": "sometimes" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Very Often", "value": "very often" }
+                    {
+                        "label": {
+                            "en": "Never",
+                            "fr": "Jamais"
+                        },
+                        "value": "never"
+                    },
+                    {
+                        "label": {
+                            "en": "Rarely",
+                            "fr": "Rarement"
+                        },
+                        "value": "rarely"
+                    },
+                    {
+                        "label": {
+                            "en": "Sometimes",
+                            "fr": "Parfois"
+                        },
+                        "value": "sometimes"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Very Often",
+                            "fr": "Très souvent"
+                        },
+                        "value": "very often"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "textContent": "Eating?",
+                "textContent": {
+                    "en": "Eating?",
+                    "fr": "Manger?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "how much distress is caused by eating",
                 "multipleChoiceOptions": [
-                    { "label": "Never", "value": "never" },
-                    { "label": "Rarely", "value": "rarely" },
-                    { "label": "Sometimes", "value": "sometimes" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Very Often", "value": "very often" }
+                    {
+                        "label": {
+                            "en": "Never",
+                            "fr": "Jamais"
+                        },
+                        "value": "never"
+                    },
+                    {
+                        "label": {
+                            "en": "Rarely",
+                            "fr": "Rarement"
+                        },
+                        "value": "rarely"
+                    },
+                    {
+                        "label": {
+                            "en": "Sometimes",
+                            "fr": "Parfois"
+                        },
+                        "value": "sometimes"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Very Often",
+                            "fr": "Très souvent"
+                        },
+                        "value": "very often"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "textContent": "Performing tasks or hobbies?",
+                "textContent": {
+                    "en": "Performing tasks or hobbies?",
+                    "fr": "Exécuter des tâches ou pratiquer des passe-temps?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "how much distress is caused by performing tasks or hobbies",
                 "multipleChoiceOptions": [
-                    { "label": "Never", "value": "never" },
-                    { "label": "Rarely", "value": "rarely" },
-                    { "label": "Sometimes", "value": "sometimes" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Very Often", "value": "very often" }
+                    {
+                        "label": {
+                            "en": "Never",
+                            "fr": "Jamais"
+                        },
+                        "value": "never"
+                    },
+                    {
+                        "label": {
+                            "en": "Rarely",
+                            "fr": "Rarement"
+                        },
+                        "value": "rarely"
+                    },
+                    {
+                        "label": {
+                            "en": "Sometimes",
+                            "fr": "Parfois"
+                        },
+                        "value": "sometimes"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Very Often",
+                            "fr": "Très souvent"
+                        },
+                        "value": "very often"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "textContent": "Repeating simple activities?",
+                "textContent": {
+                    "en": "Repeating simple activities?",
+                    "fr": "Répéter des activités simples?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "how much distress is caused by repeating simple activities",
                 "multipleChoiceOptions": [
-                    { "label": "Never", "value": "never" },
-                    { "label": "Rarely", "value": "rarely" },
-                    { "label": "Sometimes", "value": "sometimes" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Very Often", "value": "very often" }
+                    {
+                        "label": {
+                            "en": "Never",
+                            "fr": "Jamais"
+                        },
+                        "value": "never"
+                    },
+                    {
+                        "label": {
+                            "en": "Rarely",
+                            "fr": "Rarement"
+                        },
+                        "value": "rarely"
+                    },
+                    {
+                        "label": {
+                            "en": "Sometimes",
+                            "fr": "Parfois"
+                        },
+                        "value": "sometimes"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Very Often",
+                            "fr": "Très souvent"
+                        },
+                        "value": "very often"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "textContent": "Taking your PD medications?",
+                "textContent": {
+                    "en": "Taking your PD medications?",
+                    "fr": "Prendre vos médicaments contre le Parkinson?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "how much distress is caused by taking your PD medications",
                 "multipleChoiceOptions": [
-                    { "label": "Never", "value": "never" },
-                    { "label": "Rarely", "value": "rarely" },
-                    { "label": "Sometimes", "value": "sometimes" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Very Often", "value": "very often" }
+                    {
+                        "label": {
+                            "en": "Never",
+                            "fr": "Jamais"
+                        },
+                        "value": "never"
+                    },
+                    {
+                        "label": {
+                            "en": "Rarely",
+                            "fr": "Rarement"
+                        },
+                        "value": "rarely"
+                    },
+                    {
+                        "label": {
+                            "en": "Sometimes",
+                            "fr": "Parfois"
+                        },
+                        "value": "sometimes"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Very Often",
+                            "fr": "Très souvent"
+                        },
+                        "value": "very often"
+                    }
                 ]
             },
             {
@@ -8156,134 +9348,401 @@ UPDATE tasks set
             },
             {
                 "questionType": "displayText",
-                "title": "3. Do you have difficulty controlling the following behaviors (such as increasing them over time, or having trouble cutting down or stopping them)?"
+                "title": {
+                    "en": "3. Do you have difficulty controlling the following behaviors (such as increasing them over time, or having trouble cutting down or stopping them)?",
+                    "fr": "3. Avez-vous de la difficulté à contrôler les comportements suivants (par exemple, la fréquence de votre participation augmente fil du temps, ou vous avez de la difficulté à les réduire ou les arrêter)?"
+                }
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "textContent": "Gambling?",
+                "textContent": {
+                    "en": "Gambling?",
+                    "fr": "Jeu (''gambling'')?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "how much difficulty to you have controlling gambling",
                 "multipleChoiceOptions": [
-                    { "label": "Never", "value": "never" },
-                    { "label": "Rarely", "value": "rarely" },
-                    { "label": "Sometimes", "value": "sometimes" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Very Often", "value": "very often" }
+                    {
+                        "label": {
+                            "en": "Never",
+                            "fr": "Jamais"
+                        },
+                        "value": "never"
+                    },
+                    {
+                        "label": {
+                            "en": "Rarely",
+                            "fr": "Rarement"
+                        },
+                        "value": "rarely"
+                    },
+                    {
+                        "label": {
+                            "en": "Sometimes",
+                            "fr": "Parfois"
+                        },
+                        "value": "sometimes"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Very Often",
+                            "fr": "Très souvent"
+                        },
+                        "value": "very often"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "textContent": "Sex?",
+                "textContent": {
+                    "en": "Sex?",
+                    "fr": "Sexe?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "how much difficulty to you have controlling sex",
                 "multipleChoiceOptions": [
-                    { "label": "Never", "value": "never" },
-                    { "label": "Rarely", "value": "rarely" },
-                    { "label": "Sometimes", "value": "sometimes" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Very Often", "value": "very often" }
+                    {
+                        "label": {
+                            "en": "Never",
+                            "fr": "Jamais"
+                        },
+                        "value": "never"
+                    },
+                    {
+                        "label": {
+                            "en": "Rarely",
+                            "fr": "Rarement"
+                        },
+                        "value": "rarely"
+                    },
+                    {
+                        "label": {
+                            "en": "Sometimes",
+                            "fr": "Parfois"
+                        },
+                        "value": "sometimes"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Very Often",
+                            "fr": "Très souvent"
+                        },
+                        "value": "very often"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "textContent": "Buying?",
+                "textContent": {
+                    "en": "Buying?",
+                    "fr": "Achats compulsifs?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "how much difficulty to you have controlling buying",
                 "multipleChoiceOptions": [
-                    { "label": "Never", "value": "never" },
-                    { "label": "Rarely", "value": "rarely" },
-                    { "label": "Sometimes", "value": "sometimes" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Very Often", "value": "very often" }
+                    {
+                        "label": {
+                            "en": "Never",
+                            "fr": "Jamais"
+                        },
+                        "value": "never"
+                    },
+                    {
+                        "label": {
+                            "en": "Rarely",
+                            "fr": "Rarement"
+                        },
+                        "value": "rarely"
+                    },
+                    {
+                        "label": {
+                            "en": "Sometimes",
+                            "fr": "Parfois"
+                        },
+                        "value": "sometimes"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Very Often",
+                            "fr": "Très souvent"
+                        },
+                        "value": "very often"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "textContent": "Eating?",
+                "textContent": {
+                    "en": "Eating?",
+                    "fr": "Manger?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "how much difficulty to you have controlling eating",
                 "multipleChoiceOptions": [
-                    { "label": "Never", "value": "never" },
-                    { "label": "Rarely", "value": "rarely" },
-                    { "label": "Sometimes", "value": "sometimes" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Very Often", "value": "very often" }
+                    {
+                        "label": {
+                            "en": "Never",
+                            "fr": "Jamais"
+                        },
+                        "value": "never"
+                    },
+                    {
+                        "label": {
+                            "en": "Rarely",
+                            "fr": "Rarement"
+                        },
+                        "value": "rarely"
+                    },
+                    {
+                        "label": {
+                            "en": "Sometimes",
+                            "fr": "Parfois"
+                        },
+                        "value": "sometimes"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Very Often",
+                            "fr": "Très souvent"
+                        },
+                        "value": "very often"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "textContent": "Performing tasks or hobbies?",
+                "textContent": {
+                    "en": "Performing tasks or hobbies?",
+                    "fr": "Exécuter des tâches ou pratiquer des passe-temps?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "how much difficulty to you have controlling performing tasks or hobbies",
                 "multipleChoiceOptions": [
-                    { "label": "Never", "value": "never" },
-                    { "label": "Rarely", "value": "rarely" },
-                    { "label": "Sometimes", "value": "sometimes" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Very Often", "value": "very often" }
+                    {
+                        "label": {
+                            "en": "Never",
+                            "fr": "Jamais"
+                        },
+                        "value": "never"
+                    },
+                    {
+                        "label": {
+                            "en": "Rarely",
+                            "fr": "Rarement"
+                        },
+                        "value": "rarely"
+                    },
+                    {
+                        "label": {
+                            "en": "Sometimes",
+                            "fr": "Parfois"
+                        },
+                        "value": "sometimes"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Very Often",
+                            "fr": "Très souvent"
+                        },
+                        "value": "very often"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "textContent": "Select \\"rarely\\" here",
+                "textContent": {
+                    "en": "Select \\"rarely\\" here",
+                    "fr": "Sélectionnez « rarement » ici"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "attentionCheck-Select rarely here",
                 "multipleChoiceOptions": [
-                    { "label": "Never", "value": "never" },
-                    { "label": "Rarely", "value": "rarely" },
-                    { "label": "Sometimes", "value": "sometimes" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Very Often", "value": "very often" }
+                    {
+                        "label": {
+                            "en": "Never",
+                            "fr": "Jamais"
+                        },
+                        "value": "never"
+                    },
+                    {
+                        "label": {
+                            "en": "Rarely",
+                            "fr": "Rarement"
+                        },
+                        "value": "rarely"
+                    },
+                    {
+                        "label": {
+                            "en": "Sometimes",
+                            "fr": "Parfois"
+                        },
+                        "value": "sometimes"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Very Often",
+                            "fr": "Très souvent"
+                        },
+                        "value": "very often"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "textContent": "Repeating simple activities?",
+                "textContent": {
+                    "en": "Repeating simple activities?",
+                    "fr": "Répéter des activités simples?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "how much difficulty to you have controlling repeating simple activities",
                 "multipleChoiceOptions": [
-                    { "label": "Never", "value": "never" },
-                    { "label": "Rarely", "value": "rarely" },
-                    { "label": "Sometimes", "value": "sometimes" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Very Often", "value": "very often" }
+                    {
+                        "label": {
+                            "en": "Never",
+                            "fr": "Jamais"
+                        },
+                        "value": "never"
+                    },
+                    {
+                        "label": {
+                            "en": "Rarely",
+                            "fr": "Rarement"
+                        },
+                        "value": "rarely"
+                    },
+                    {
+                        "label": {
+                            "en": "Sometimes",
+                            "fr": "Parfois"
+                        },
+                        "value": "sometimes"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Very Often",
+                            "fr": "Très souvent"
+                        },
+                        "value": "very often"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "textContent": "Taking your PD medications?",
+                "textContent": {
+                    "en": "Taking your PD medications?",
+                    "fr": "Prendre vos médicaments contre le Parkinson?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "how much difficulty to you have controlling taking your PD medications",
                 "multipleChoiceOptions": [
-                    { "label": "Never", "value": "never" },
-                    { "label": "Rarely", "value": "rarely" },
-                    { "label": "Sometimes", "value": "sometimes" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Very Often", "value": "very often" }
+                    {
+                        "label": {
+                            "en": "Never",
+                            "fr": "Jamais"
+                        },
+                        "value": "never"
+                    },
+                    {
+                        "label": {
+                            "en": "Rarely",
+                            "fr": "Rarement"
+                        },
+                        "value": "rarely"
+                    },
+                    {
+                        "label": {
+                            "en": "Sometimes",
+                            "fr": "Parfois"
+                        },
+                        "value": "sometimes"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Very Often",
+                            "fr": "Très souvent"
+                        },
+                        "value": "very often"
+                    }
                 ]
             },
             {
@@ -8291,1667 +9750,1817 @@ UPDATE tasks set
             },
             {
                 "questionType": "displayText",
-                "title": "4. Do you engage in activities specifically to continue the following behaviors (such as hiding what you are doing, lying, hoarding things, borrowing from others, accumulating debt, stealing, or being involved in illegal acts)?"
+                "title": {
+                    "en": "4. Do you engage in activities specifically to continue the following behaviors (such as hiding what you are doing, lying, hoarding things, borrowing from others, accumulating debt, stealing, or being involved in illegal acts)?",
+                    "fr": "4. Vous livrez-vous à des comportements expressément pour poursuivre les activités suivantes (par exemple, cacher ce que vous faîtes, mentir, accumuler des choses, emprunter aux autres, accumuler des dettes, voler ou participer à des actes illicites)?"
+                }
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "textContent": "Gambling?",
+                "textContent": {
+                    "en": "Gambling?",
+                    "fr": "Jeu (''gambling'')?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "how much do you engage in activities to hide gambling",
                 "multipleChoiceOptions": [
-                    { "label": "Never", "value": "never" },
-                    { "label": "Rarely", "value": "rarely" },
-                    { "label": "Sometimes", "value": "sometimes" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Very Often", "value": "very often" }
+                    {
+                        "label": {
+                            "en": "Never",
+                            "fr": "Jamais"
+                        },
+                        "value": "never"
+                    },
+                    {
+                        "label": {
+                            "en": "Rarely",
+                            "fr": "Rarement"
+                        },
+                        "value": "rarely"
+                    },
+                    {
+                        "label": {
+                            "en": "Sometimes",
+                            "fr": "Parfois"
+                        },
+                        "value": "sometimes"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Very Often",
+                            "fr": "Très souvent"
+                        },
+                        "value": "very often"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "textContent": "Sex?",
+                "textContent": {
+                    "en": "Sex?",
+                    "fr": "Sexe?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "how much do you engage in activities to hide sex",
                 "multipleChoiceOptions": [
-                    { "label": "Never", "value": "never" },
-                    { "label": "Rarely", "value": "rarely" },
-                    { "label": "Sometimes", "value": "sometimes" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Very Often", "value": "very often" }
+                    {
+                        "label": {
+                            "en": "Never",
+                            "fr": "Jamais"
+                        },
+                        "value": "never"
+                    },
+                    {
+                        "label": {
+                            "en": "Rarely",
+                            "fr": "Rarement"
+                        },
+                        "value": "rarely"
+                    },
+                    {
+                        "label": {
+                            "en": "Sometimes",
+                            "fr": "Parfois"
+                        },
+                        "value": "sometimes"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Very Often",
+                            "fr": "Très souvent"
+                        },
+                        "value": "very often"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "textContent": "Buying?",
+                "textContent": {
+                    "en": "Buying?",
+                    "fr": "Achats compulsifs?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "how much do you engage in activities to hide buying",
                 "multipleChoiceOptions": [
-                    { "label": "Never", "value": "never" },
-                    { "label": "Rarely", "value": "rarely" },
-                    { "label": "Sometimes", "value": "sometimes" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Very Often", "value": "very often" }
+                    {
+                        "label": {
+                            "en": "Never",
+                            "fr": "Jamais"
+                        },
+                        "value": "never"
+                    },
+                    {
+                        "label": {
+                            "en": "Rarely",
+                            "fr": "Rarement"
+                        },
+                        "value": "rarely"
+                    },
+                    {
+                        "label": {
+                            "en": "Sometimes",
+                            "fr": "Parfois"
+                        },
+                        "value": "sometimes"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Very Often",
+                            "fr": "Très souvent"
+                        },
+                        "value": "very often"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "textContent": "Eating?",
+                "textContent": {
+                    "en": "Eating?",
+                    "fr": "Manger?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "how much do you engage in activities to hide eating",
                 "multipleChoiceOptions": [
-                    { "label": "Never", "value": "never" },
-                    { "label": "Rarely", "value": "rarely" },
-                    { "label": "Sometimes", "value": "sometimes" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Very Often", "value": "very often" }
+                    {
+                        "label": {
+                            "en": "Never",
+                            "fr": "Jamais"
+                        },
+                        "value": "never"
+                    },
+                    {
+                        "label": {
+                            "en": "Rarely",
+                            "fr": "Rarement"
+                        },
+                        "value": "rarely"
+                    },
+                    {
+                        "label": {
+                            "en": "Sometimes",
+                            "fr": "Parfois"
+                        },
+                        "value": "sometimes"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Very Often",
+                            "fr": "Très souvent"
+                        },
+                        "value": "very often"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "textContent": "Performing tasks or hobbies?",
+                "textContent": {
+                    "en": "Performing tasks or hobbies?",
+                    "fr": "Exécuter des tâches ou pratiquer des passe-temps?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "how much do you engage in activities to hide performing tasks or hobbies",
                 "multipleChoiceOptions": [
-                    { "label": "Never", "value": "never" },
-                    { "label": "Rarely", "value": "rarely" },
-                    { "label": "Sometimes", "value": "sometimes" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Very Often", "value": "very often" }
+                    {
+                        "label": {
+                            "en": "Never",
+                            "fr": "Jamais"
+                        },
+                        "value": "never"
+                    },
+                    {
+                        "label": {
+                            "en": "Rarely",
+                            "fr": "Rarement"
+                        },
+                        "value": "rarely"
+                    },
+                    {
+                        "label": {
+                            "en": "Sometimes",
+                            "fr": "Parfois"
+                        },
+                        "value": "sometimes"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Very Often",
+                            "fr": "Très souvent"
+                        },
+                        "value": "very often"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "textContent": "Repeating simple activities?",
+                "textContent": {
+                    "en": "Repeating simple activities?",
+                    "fr": "Répéter des activités simples?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "how much do you engage in activities to hide repeating simple activities",
                 "multipleChoiceOptions": [
-                    { "label": "Never", "value": "never" },
-                    { "label": "Rarely", "value": "rarely" },
-                    { "label": "Sometimes", "value": "sometimes" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Very Often", "value": "very often" }
+                    {
+                        "label": {
+                            "en": "Never",
+                            "fr": "Jamais"
+                        },
+                        "value": "never"
+                    },
+                    {
+                        "label": {
+                            "en": "Rarely",
+                            "fr": "Rarement"
+                        },
+                        "value": "rarely"
+                    },
+                    {
+                        "label": {
+                            "en": "Sometimes",
+                            "fr": "Parfois"
+                        },
+                        "value": "sometimes"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Very Often",
+                            "fr": "Très souvent"
+                        },
+                        "value": "very often"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "textContent": "Taking your PD medications?",
+                "textContent": {
+                    "en": "Taking your PD medications?",
+                    "fr": "Prendre vos médicaments contre le Parkinson?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "how much do you engage in activities to hide taking your PD medications",
                 "multipleChoiceOptions": [
-                    { "label": "Never", "value": "never" },
-                    { "label": "Rarely", "value": "rarely" },
-                    { "label": "Sometimes", "value": "sometimes" },
-                    { "label": "Often", "value": "often" },
-                    { "label": "Very Often", "value": "very often" }
+                    {
+                        "label": {
+                            "en": "Never",
+                            "fr": "Jamais"
+                        },
+                        "value": "never"
+                    },
+                    {
+                        "label": {
+                            "en": "Rarely",
+                            "fr": "Rarement"
+                        },
+                        "value": "rarely"
+                    },
+                    {
+                        "label": {
+                            "en": "Sometimes",
+                            "fr": "Parfois"
+                        },
+                        "value": "sometimes"
+                    },
+                    {
+                        "label": {
+                            "en": "Often",
+                            "fr": "Souvent"
+                        },
+                        "value": "often"
+                    },
+                    {
+                        "label": {
+                            "en": "Very Often",
+                            "fr": "Très souvent"
+                        },
+                        "value": "very often"
+                    }
                 ]
             }
         ]
     }'
 WHERE id = 26;
--- QUIP FRENCH
+-- SHAPS
 UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "QUESTIONNAIRE",
-    name = "QUIP French",
-    description = "Questionnaire sur les troubles impulsifs-compulsifs dans la maladie de Parkinson (QUIP-RS)",
+    name = "SHAPS",
+    description = "Snaith-Hamilton Pleasure Scale",
     external_url = "",
     config = '{
-        "title":"Questionnaire",
+        "title": {
+            "en": "Questionnaire",
+            "fr": "Questionnaire"
+        },
         "questions":[
             {
                 "questionType": "displayText",
-                "title": "Description des comportements",
-                "textContent": "A. <b>Jeu (''gambling'')</b>: casinos, loteries sur Internet, tickets à gratter, paris, machines à sous ou poker <br /> B. <b>Sexe</b>: faire des demandes sexuelles à autrui, promiscuité, prostitution, changement d''orientation sexuelle, masturbation, activités sexuelles sur Internet et par téléphone, pornographie <br /> C. <b>Achats compulsifs</b>: trop de la même chose ou des choses dont vous n''avez pas besoin ou que vous n''utilisez pas <br /> D. <b>Manger</b>: nt que d''habitude, à des moments différents (comme la nuit), jusqu''à ce que vous vous sentiez mal ou sans avoir faim <br /> E. <b>Hobbyisme - Exécuter des tâches ou pratiquer des passe-temps</b>: tâches spécifiques, passe-temps ou autres activités organisées, comme écrire, peindre, jardiner, réparer ou démonter des objets, collectionner, utiliser un ordinateur, travailler sur des projets, etc. <br /> F. <b> Répéter des activités simples</b>: répéter certaines activités motrices simples, comme nettoyer, ranger, manipuler, examiner, trier, ramasser, amasser, démonter des objets, etc. <br /> G. <b>Consommation de médicaments pour PD</b>: régulièrement prendre trop de médicaments pour le Parkinson ou augmenter vous-même, sans avis médical, votre consommation de médicaments pour le Parkinson"
-            },
-            {
-                "questionType": "displayText","title": "Fréquence des comportements","textContent": "<b>Jamais</b>: pas du tout <br /><b>Rarement</b>: 1 jour/semaine <br /><b>Parfois</b>: 2-3 jours/semaine <br /><b>Souvent</b>: 4-5 jours/semaine <br /><b>Très souvent</b>: 6-7 jours/semaine <br />"
-            },
-            {
-                "questionType": "displayText",
-                "title": "Dans les 4 dernières semaines..."
-            },
-            {
-                "questionType": "displayText",
-                "title": "1. À quel point pensez-vous aux comportements suivant (c’est-à-dire avoir de la difficulté à garder des pensées hors de votre esprit, ou vous sentir coupable en relation à ces activités)?"
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "textContent": "Jeu (''gambling'')?",
-                "validation": {
-                    "required":true
-                },
-                "key": "how much do you think about gambling",
-                "multipleChoiceOptions": [
-                    { "label": "Jamais", "value": "jamais" },
-                    { "label": "Rarement", "value": "rarement" },
-                    { "label": "Parfois", "value": "parfois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Très souvent", "value": "Très souvent" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "textContent": "Sexe?",
-                "validation": {
-                    "required":true
-                },
-                "key": "how much do you think about sex",
-                "multipleChoiceOptions": [
-                    { "label": "Jamais", "value": "jamais" },
-                    { "label": "Rarement", "value": "rarement" },
-                    { "label": "Parfois", "value": "parfois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Très souvent", "value": "Très souvent" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "textContent": "Achats compulsifs?",
-                "validation": {
-                    "required":true
-                },
-                "key": "how much do you think about buying",
-                "multipleChoiceOptions": [
-                    { "label": "Jamais", "value": "jamais" },
-                    { "label": "Rarement", "value": "rarement" },
-                    { "label": "Parfois", "value": "parfois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Très souvent", "value": "Très souvent" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "textContent": "Manger?",
-                "validation": {
-                    "required":true
-                },
-                "key": "how much do you think about eating",
-                "multipleChoiceOptions": [
-                    { "label": "Jamais", "value": "jamais" },
-                    { "label": "Rarement", "value": "rarement" },
-                    { "label": "Parfois", "value": "parfois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Très souvent", "value": "Très souvent" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "textContent": "Exécuter des tâches ou pratiquer des passe-temps?",
-                "validation": {
-                    "required":true
-                },
-                "key": "how much do you think about performing tasks or hobbies",
-                "multipleChoiceOptions": [
-                    { "label": "Jamais", "value": "jamais" },
-                    { "label": "Rarement", "value": "rarement" },
-                    { "label": "Parfois", "value": "parfois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Très souvent", "value": "Très souvent" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "textContent": "Répéter des activités simples?",
-                "validation": {
-                    "required":true
-                },
-                "key": "how much do you think about repeating simple activities",
-                "multipleChoiceOptions": [
-                    { "label": "Jamais", "value": "jamais" },
-                    { "label": "Rarement", "value": "rarement" },
-                    { "label": "Parfois", "value": "parfois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Très souvent", "value": "Très souvent" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "textContent": "Prendre vos médicaments contre le Parkinson?",
-                "validation": {
-                    "required":true
-                },
-                "key": "how much do you think about taking your PD medications",
-                "multipleChoiceOptions": [
-                    { "label": "Jamais", "value": "jamais" },
-                    { "label": "Rarement", "value": "rarement" },
-                    { "label": "Parfois", "value": "parfois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Très souvent", "value": "Très souvent" }
-                ]
-            },
-            {
-                "questionType": "divider"
-            },
-            {
-                "questionType": "displayText",
-                "title": "2. Avez-vous des pulsions ou des désirs pour les comportements suivants que vous jugez excessifs ou qui vous causent de la détresse (y compris devenir agité ou irritable lorsque vous ne pouvez pas vous y adonner)?"
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "textContent": "Jeu (''gambling'')?",
-                "validation": {
-                    "required":true
-                },
-                "key": "how much distress is caused by gambling",
-                "multipleChoiceOptions": [
-                    { "label": "Jamais", "value": "jamais" },
-                    { "label": "Rarement", "value": "rarement" },
-                    { "label": "Parfois", "value": "parfois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Très souvent", "value": "Très souvent" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "textContent": "Sexe?",
-                "validation": {
-                    "required":true
-                },
-                "key": "how much distress is caused by sex",
-                "multipleChoiceOptions": [
-                    { "label": "Jamais", "value": "jamais" },
-                    { "label": "Rarement", "value": "rarement" },
-                    { "label": "Parfois", "value": "parfois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Très souvent", "value": "Très souvent" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "textContent": "Achats compulsifs?",
-                "validation": {
-                    "required":true
-                },
-                "key": "how much distress is caused by buying",
-                "multipleChoiceOptions": [
-                    { "label": "Jamais", "value": "jamais" },
-                    { "label": "Rarement", "value": "rarement" },
-                    { "label": "Parfois", "value": "parfois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Très souvent", "value": "Très souvent" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "textContent": "Manger?",
-                "validation": {
-                    "required":true
-                },
-                "key": "how much distress is caused by eating",
-                "multipleChoiceOptions": [
-                    { "label": "Jamais", "value": "jamais" },
-                    { "label": "Rarement", "value": "rarement" },
-                    { "label": "Parfois", "value": "parfois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Très souvent", "value": "Très souvent" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "textContent": "Exécuter des tâches ou pratiquer des passe-temps?",
-                "validation": {
-                    "required":true
-                },
-                "key": "how much distress is caused by performing tasks or hobbies",
-                "multipleChoiceOptions": [
-                    { "label": "Jamais", "value": "jamais" },
-                    { "label": "Rarement", "value": "rarement" },
-                    { "label": "Parfois", "value": "parfois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Très souvent", "value": "Très souvent" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "textContent": "Répéter des activités simples?",
-                "validation": {
-                    "required":true
-                },
-                "key": "how much distress is caused by repeating simple activities",
-                "multipleChoiceOptions": [
-                    { "label": "Jamais", "value": "jamais" },
-                    { "label": "Rarement", "value": "rarement" },
-                    { "label": "Parfois", "value": "parfois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Très souvent", "value": "Très souvent" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "textContent": "Prendre vos médicaments contre le Parkinson?",
-                "validation": {
-                    "required":true
-                },
-                "key": "how much distress is caused by taking your PD medications",
-                "multipleChoiceOptions": [
-                    { "label": "Jamais", "value": "jamais" },
-                    { "label": "Rarement", "value": "rarement" },
-                    { "label": "Parfois", "value": "parfois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Très souvent", "value": "Très souvent" }
-                ]
-            },
-            {
-                "questionType": "divider"
-            },
-            {
-                "questionType": "displayText",
-                "title": "3. Avez-vous de la difficulté à contrôler les comportements suivants (par exemple, la fréquence de votre participation augmente fil du temps, ou vous avez de la difficulté à les réduire ou les arrêter)?"
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "textContent": "Jeu (''gambling'')?",
-                "validation": {
-                    "required":true
-                },
-                "key": "how much difficulty to you have controlling gambling",
-                "multipleChoiceOptions": [
-                    { "label": "Jamais", "value": "jamais" },
-                    { "label": "Rarement", "value": "rarement" },
-                    { "label": "Parfois", "value": "parfois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Très souvent", "value": "Très souvent" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "textContent": "Sexe?",
-                "validation": {
-                    "required":true
-                },
-                "key": "how much difficulty to you have controlling sex",
-                "multipleChoiceOptions": [
-                    { "label": "Jamais", "value": "jamais" },
-                    { "label": "Rarement", "value": "rarement" },
-                    { "label": "Parfois", "value": "parfois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Très souvent", "value": "Très souvent" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "textContent": "Achats compulsifs?",
-                "validation": {
-                    "required":true
-                },
-                "key": "how much difficulty to you have controlling buying",
-                "multipleChoiceOptions": [
-                    { "label": "Jamais", "value": "jamais" },
-                    { "label": "Rarement", "value": "rarement" },
-                    { "label": "Parfois", "value": "parfois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Très souvent", "value": "Très souvent" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "textContent": "Manger?",
-                "validation": {
-                    "required":true
-                },
-                "key": "how much difficulty to you have controlling eating",
-                "multipleChoiceOptions": [
-                    { "label": "Jamais", "value": "jamais" },
-                    { "label": "Rarement", "value": "rarement" },
-                    { "label": "Parfois", "value": "parfois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Très souvent", "value": "Très souvent" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "textContent": "Exécuter des tâches ou pratiquer des passe-temps?",
-                "validation": {
-                    "required":true
-                },
-                "key": "how much difficulty to you have controlling performing tasks or hobbies",
-                "multipleChoiceOptions": [
-                    { "label": "Jamais", "value": "jamais" },
-                    { "label": "Rarement", "value": "rarement" },
-                    { "label": "Parfois", "value": "parfois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Très souvent", "value": "Très souvent" }
-                ]
-            },
-             {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "textContent": "Sélectionnez « rarement » ici",
-                "validation": {
-                    "required":true
-                },
-                "key": "attentionCheck-Select rarely here",
-                "multipleChoiceOptions": [
-                    { "label": "Jamais", "value": "jamais" },
-                    { "label": "Rarement", "value": "rarement" },
-                    { "label": "Parfois", "value": "parfois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Très souvent", "value": "Très souvent" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "textContent": "Répéter des activités simples?",
-                "validation": {
-                    "required":true
-                },
-                "key": "how much difficulty to you have controlling repeating simple activities",
-                "multipleChoiceOptions": [
-                    { "label": "Jamais", "value": "jamais" },
-                    { "label": "Rarement", "value": "rarement" },
-                    { "label": "Parfois", "value": "parfois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Très souvent", "value": "Très souvent" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "textContent": "Prendre vos médicaments contre le Parkinson?",
-                "validation": {
-                    "required":true
-                },
-                "key": "how much difficulty to you have controlling taking your PD medications",
-                "multipleChoiceOptions": [
-                    { "label": "Jamais", "value": "jamais" },
-                    { "label": "Rarement", "value": "rarement" },
-                    { "label": "Parfois", "value": "parfois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Très souvent", "value": "Très souvent" }
-                ]
-            },
-            {
-                "questionType": "divider"
-            },
-            {
-                "questionType": "displayText",
-                "title": "4. Vous livrez-vous à des comportements expressément pour poursuivre les activités suivantes (par exemple, cacher ce que vous faîtes, mentir, accumuler des choses, emprunter aux autres, accumuler des dettes, voler ou participer à des actes illicites)?"
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "textContent": "Jeu (''gambling'')?",
-                "validation": {
-                    "required":true
-                },
-                "key": "how much do you engage in activities to hide gambling",
-                "multipleChoiceOptions": [
-                    { "label": "Jamais", "value": "jamais" },
-                    { "label": "Rarement", "value": "rarement" },
-                    { "label": "Parfois", "value": "parfois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Très souvent", "value": "Très souvent" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "textContent": "Sexe?",
-                "validation": {
-                    "required":true
-                },
-                "key": "how much do you engage in activities to hide sex",
-                "multipleChoiceOptions": [
-                    { "label": "Jamais", "value": "jamais" },
-                    { "label": "Rarement", "value": "rarement" },
-                    { "label": "Parfois", "value": "parfois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Très souvent", "value": "Très souvent" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "textContent": "Achats compulsifs?",
-                "validation": {
-                    "required":true
-                },
-                "key": "how much do you engage in activities to hide buying",
-                "multipleChoiceOptions": [
-                    { "label": "Jamais", "value": "jamais" },
-                    { "label": "Rarement", "value": "rarement" },
-                    { "label": "Parfois", "value": "parfois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Très souvent", "value": "Très souvent" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "textContent": "Manger?",
-                "validation": {
-                    "required":true
-                },
-                "key": "how much do you engage in activities to hide eating",
-                "multipleChoiceOptions": [
-                    { "label": "Jamais", "value": "jamais" },
-                    { "label": "Rarement", "value": "rarement" },
-                    { "label": "Parfois", "value": "parfois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Très souvent", "value": "Très souvent" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "textContent": "Exécuter des tâches ou pratiquer des passe-temps?",
-                "validation": {
-                    "required":true
-                },
-                "key": "how much do you engage in activities to hide performing tasks or hobbies",
-                "multipleChoiceOptions": [
-                    { "label": "Jamais", "value": "jamais" },
-                    { "label": "Rarement", "value": "rarement" },
-                    { "label": "Parfois", "value": "parfois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Très souvent", "value": "Très souvent" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "textContent": "Répéter des activités simples?",
-                "validation": {
-                    "required":true
-                },
-                "key": "how much do you engage in activities to hide repeating simple activities",
-                "multipleChoiceOptions": [
-                    { "label": "Jamais", "value": "jamais" },
-                    { "label": "Rarement", "value": "rarement" },
-                    { "label": "Parfois", "value": "parfois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Très souvent", "value": "Très souvent" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "textContent": "Prendre vos médicaments contre le Parkinson?",
-                "validation": {
-                    "required":true
-                },
-                "key": "how much do you engage in activities to hide taking your PD medications",
-                "multipleChoiceOptions": [
-                    { "label": "Jamais", "value": "jamais" },
-                    { "label": "Rarement", "value": "rarement" },
-                    { "label": "Parfois", "value": "parfois" },
-                    { "label": "Souvent", "value": "souvent" },
-                    { "label": "Très souvent", "value": "Très souvent" }
-                ]
-            }
-        ]
-    }'
-WHERE id = 27;
--- SHAPS ENGLISH
-UPDATE tasks set
-    from_platform = "PSHARPLAB",
-    task_type = "QUESTIONNAIRE",
-    name = "SHAPS English",
-    description = "Snaith-Hamilton Pleasure Scale English",
-    external_url = "",
-    config = '{
-        "title":"Questionnaire",
-        "questions":[
-            {
-                "questionType": "displayText",
-                "title": "This questionnaire is designed to measure your ability to experience pleasure in the last few days. Please read each  statement very carefully. Tick one of the boxes to indicate how much you agree or disagree with each statement."
+                "title": {
+                    "en": "This questionnaire is designed to measure your ability to experience pleasure in the last few days. Please read each  statement very carefully. Tick one of the boxes to indicate how much you agree or disagree with each statement.",
+                    "fr": "Ce questionnaire a été conçu pour mesurer votre capacité à éprouver du plaisir <b> au cours des ces derniers jours</b>. Il est important de lire chaque énoncé <b> très attentivement </b>. Cochez l''une des cases pour préciser votre degré d’accord ou de désaccord pour chacun des énoncés."
+                }
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "I would enjoy my favourite television or radio program:",
+                "title": {
+                    "en": "I would enjoy my favourite television or radio program:",
+                    "fr": "Mon émission préférée de télévision ou de radio me procure beaucoup de plaisir:"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "I would enjoy my favourite television or radio program",
                 "multipleChoiceOptions": [
-                    { "label": "Strongly Disagree", "value": "strongly disagree" },
-                    { "label": "Disagree", "value": "disagree" },
-                    { "label": "Agree", "value": "agree" },
-                    { "label": "Strongly Agree", "value": "Strongly agree" }
+                    {
+                        "label": {
+                            "en": "Strongly Disagree",
+                            "fr": "Fortement en désaccord"
+                        },
+                        "value": "strongly disagree"
+                    },
+                    {
+                        "label": {
+                            "en": "Disagree",
+                            "fr": "En désaccord"
+                        },
+                        "value": "disagree"
+                    },
+                    {
+                        "label": {
+                            "en": "Agree",
+                            "fr": "D’accord"
+                        },
+                        "value": "agree"
+                    },
+                    {
+                        "label": {
+                            "en": "Strongly Agree",
+                            "fr": "Fortement d’accord"
+                        },
+                        "value": "Strongly agree"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "I would enjoy being with my family or close friends:",
+                "title": {
+                    "en": "I would enjoy being with my family or close friends:",
+                    "fr": "J’apprécie beaucoup d’être avec ma famille ou avec des amis intimes:"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "I would enjoy being with my family or close friends",
                 "multipleChoiceOptions": [
-                    { "label": "Strongly Disagree", "value": "strongly disagree" },
-                    { "label": "Disagree", "value": "disagree" },
-                    { "label": "Agree", "value": "agree" },
-                    { "label": "Strongly Agree", "value": "Strongly agree" }
+                    {
+                        "label": {
+                            "en": "Strongly Disagree",
+                            "fr": "Fortement en désaccord"
+                        },
+                        "value": "strongly disagree"
+                    },
+                    {
+                        "label": {
+                            "en": "Disagree",
+                            "fr": "En désaccord"
+                        },
+                        "value": "disagree"
+                    },
+                    {
+                        "label": {
+                            "en": "Agree",
+                            "fr": "D’accord"
+                        },
+                        "value": "agree"
+                    },
+                    {
+                        "label": {
+                            "en": "Strongly Agree",
+                            "fr": "Fortement d’accord"
+                        },
+                        "value": "Strongly agree"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "I would find pleasure in my hobbies and pastimes:",
+                "title": {
+                    "en": "I would find pleasure in my hobbies and pastimes:",
+                    "fr": "Je trouve du plaisir dans mes hobbies et passe temps:"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "I would find pleasure in my hobbies and pastimes",
                 "multipleChoiceOptions": [
-                    { "label": "Strongly Disagree", "value": "strongly disagree" },
-                    { "label": "Disagree", "value": "disagree" },
-                    { "label": "Agree", "value": "agree" },
-                    { "label": "Strongly Agree", "value": "Strongly agree" }
+                    {
+                        "label": {
+                            "en": "Strongly Disagree",
+                            "fr": "Fortement en désaccord"
+                        },
+                        "value": "strongly disagree"
+                    },
+                    {
+                        "label": {
+                            "en": "Disagree",
+                            "fr": "En désaccord"
+                        },
+                        "value": "disagree"
+                    },
+                    {
+                        "label": {
+                            "en": "Agree",
+                            "fr": "D’accord"
+                        },
+                        "value": "agree"
+                    },
+                    {
+                        "label": {
+                            "en": "Strongly Agree",
+                            "fr": "Fortement d’accord"
+                        },
+                        "value": "Strongly agree"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "I would be able to enjoy my favourite meal:",
+                "title": {
+                    "en": "I would be able to enjoy my favourite meal:",
+                    "fr": "Je suis capable d’apprécier mon plat favori:"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "I would be able to enjoy my favourite meal",
                 "multipleChoiceOptions": [
-                    { "label": "Strongly Disagree", "value": "strongly disagree" },
-                    { "label": "Disagree", "value": "disagree" },
-                    { "label": "Agree", "value": "agree" },
-                    { "label": "Strongly Agree", "value": "Strongly agree" }
+                    {
+                        "label": {
+                            "en": "Strongly Disagree",
+                            "fr": "Fortement en désaccord"
+                        },
+                        "value": "strongly disagree"
+                    },
+                    {
+                        "label": {
+                            "en": "Disagree",
+                            "fr": "En désaccord"
+                        },
+                        "value": "disagree"
+                    },
+                    {
+                        "label": {
+                            "en": "Agree",
+                            "fr": "D’accord"
+                        },
+                        "value": "agree"
+                    },
+                    {
+                        "label": {
+                            "en": "Strongly Agree",
+                            "fr": "Fortement d’accord"
+                        },
+                        "value": "Strongly agree"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "I would enjoy a warm bath or refreshing shower:",
+                "title": {
+                    "en": "I would enjoy a warm bath or refreshing shower:",
+                    "fr": "J’aime beaucoup prendre un bain chaud ou une douche rafraîchissante:"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "I would enjoy a warm bath or refreshing shower",
                 "multipleChoiceOptions": [
-                    { "label": "Strongly Disagree", "value": "strongly disagree" },
-                    { "label": "Disagree", "value": "disagree" },
-                    { "label": "Agree", "value": "agree" },
-                    { "label": "Strongly Agree", "value": "Strongly agree" }
+                    {
+                        "label": {
+                            "en": "Strongly Disagree",
+                            "fr": "Fortement en désaccord"
+                        },
+                        "value": "strongly disagree"
+                    },
+                    {
+                        "label": {
+                            "en": "Disagree",
+                            "fr": "En désaccord"
+                        },
+                        "value": "disagree"
+                    },
+                    {
+                        "label": {
+                            "en": "Agree",
+                            "fr": "D’accord"
+                        },
+                        "value": "agree"
+                    },
+                    {
+                        "label": {
+                            "en": "Strongly Agree",
+                            "fr": "Fortement d’accord"
+                        },
+                        "value": "Strongly agree"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "I would find pleasure in the scent of flowers or the smell of a fresh sea breeze or freshly baked bread:",
+                "title": {
+                    "en": "I would find pleasure in the scent of flowers or the smell of a fresh sea breeze or freshly baked bread:",
+                    "fr": "Je trouve du plaisir dans le parfum des fleurs ou dans l’odeur d’une fraîche brise de mer ou du pain fraîchement cuit:"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "I would find pleasure in the scent of flowers or the smell of a fresh sea breeze or freshly baked bread",
                 "multipleChoiceOptions": [
-                    { "label": "Strongly Disagree", "value": "strongly disagree" },
-                    { "label": "Disagree", "value": "disagree" },
-                    { "label": "Agree", "value": "agree" },
-                    { "label": "Strongly Agree", "value": "Strongly agree" }
+                    {
+                        "label": {
+                            "en": "Strongly Disagree",
+                            "fr": "Fortement en désaccord"
+                        },
+                        "value": "strongly disagree"
+                    },
+                    {
+                        "label": {
+                            "en": "Disagree",
+                            "fr": "En désaccord"
+                        },
+                        "value": "disagree"
+                    },
+                    {
+                        "label": {
+                            "en": "Agree",
+                            "fr": "D’accord"
+                        },
+                        "value": "agree"
+                    },
+                    {
+                        "label": {
+                            "en": "Strongly Agree",
+                            "fr": "Fortement d’accord"
+                        },
+                        "value": "Strongly agree"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "I would enjoy seeing other people''s smiling faces:",
+                "title": {
+                    "en": "I would enjoy seeing other people''s smiling faces:",
+                    "fr": "J’aime beaucoup voir des visages souriants autour de moi:"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "I would enjoy seeing other people''s smiling faces",
                 "multipleChoiceOptions": [
-                    { "label": "Strongly Disagree", "value": "strongly disagree" },
-                    { "label": "Disagree", "value": "disagree" },
-                    { "label": "Agree", "value": "agree" },
-                    { "label": "Strongly Agree", "value": "Strongly agree" }
+                    {
+                        "label": {
+                            "en": "Strongly Disagree",
+                            "fr": "Fortement en désaccord"
+                        },
+                        "value": "strongly disagree"
+                    },
+                    {
+                        "label": {
+                            "en": "Disagree",
+                            "fr": "En désaccord"
+                        },
+                        "value": "disagree"
+                    },
+                    {
+                        "label": {
+                            "en": "Agree",
+                            "fr": "D’accord"
+                        },
+                        "value": "agree"
+                    },
+                    {
+                        "label": {
+                            "en": "Strongly Agree",
+                            "fr": "Fortement d’accord"
+                        },
+                        "value": "Strongly agree"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "I would enjoy looking smart when I have made an effort with my appearance:",
+                "title": {
+                    "en": "I would enjoy looking smart when I have made an effort with my appearance:",
+                    "fr": "J’apprécie beaucoup de paraître élégant(s) quand j’ai fait un effort pour soigner mon apparence:"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "I would enjoy looking smart when I have made an effort with my appearance",
                 "multipleChoiceOptions": [
-                    { "label": "Strongly Disagree", "value": "strongly disagree" },
-                    { "label": "Disagree", "value": "disagree" },
-                    { "label": "Agree", "value": "agree" },
-                    { "label": "Strongly Agree", "value": "Strongly agree" }
+                    {
+                        "label": {
+                            "en": "Strongly Disagree",
+                            "fr": "Fortement en désaccord"
+                        },
+                        "value": "strongly disagree"
+                    },
+                    {
+                        "label": {
+                            "en": "Disagree",
+                            "fr": "En désaccord"
+                        },
+                        "value": "disagree"
+                    },
+                    {
+                        "label": {
+                            "en": "Agree",
+                            "fr": "D’accord"
+                        },
+                        "value": "agree"
+                    },
+                    {
+                        "label": {
+                            "en": "Strongly Agree",
+                            "fr": "Fortement d’accord"
+                        },
+                        "value": "Strongly agree"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "I would enjoy reading a book, magazine or newspaper:",
+                "title": {
+                    "en": "I would enjoy reading a book, magazine or newspaper:",
+                    "fr": "J’aime beaucoup lire un livre, un magazine ou un journal:"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "I would enjoy reading a book, magazine or newspaper",
                 "multipleChoiceOptions": [
-                    { "label": "Strongly Disagree", "value": "strongly disagree" },
-                    { "label": "Disagree", "value": "disagree" },
-                    { "label": "Agree", "value": "agree" },
-                    { "label": "Strongly Agree", "value": "Strongly agree" }
+                    {
+                        "label": {
+                            "en": "Strongly Disagree",
+                            "fr": "Fortement en désaccord"
+                        },
+                        "value": "strongly disagree"
+                    },
+                    {
+                        "label": {
+                            "en": "Disagree",
+                            "fr": "En désaccord"
+                        },
+                        "value": "disagree"
+                    },
+                    {
+                        "label": {
+                            "en": "Agree",
+                            "fr": "D’accord"
+                        },
+                        "value": "agree"
+                    },
+                    {
+                        "label": {
+                            "en": "Strongly Agree",
+                            "fr": "Fortement d’accord"
+                        },
+                        "value": "Strongly agree"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "Select \\"disagree\\" to indicate that you are reading the questions:",
+                "title": {
+                    "en": "Select \\"disagree\\" to indicate that you are reading the questions:",
+                    "fr": "Sélectionnez « en désaccord » pour indiquer que vous lisez bien les questions:"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "attentionCheck-Select disagree to indicate that you are reading the questions",
                 "multipleChoiceOptions": [
-                    { "label": "Strongly Disagree", "value": "strongly disagree" },
-                    { "label": "Disagree", "value": "disagree" },
-                    { "label": "Agree", "value": "agree" },
-                    { "label": "Strongly Agree", "value": "Strongly agree" }
+                    {
+                        "label": {
+                            "en": "Strongly Disagree",
+                            "fr": "Fortement en désaccord"
+                        },
+                        "value": "strongly disagree"
+                    },
+                    {
+                        "label": {
+                            "en": "Disagree",
+                            "fr": "En désaccord"
+                        },
+                        "value": "disagree"
+                    },
+                    {
+                        "label": {
+                            "en": "Agree",
+                            "fr": "D’accord"
+                        },
+                        "value": "agree"
+                    },
+                    {
+                        "label": {
+                            "en": "Strongly Agree",
+                            "fr": "Fortement d’accord"
+                        },
+                        "value": "Strongly agree"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "I would enjoy a cup of tea or coffee or my favourite drink:",
+                "title": {
+                    "en": "I would enjoy a cup of tea or coffee or my favourite drink:",
+                    "fr": "J’apprécie beaucoup une tasse de thé ou de café ou un verre de ma boisson favorite:"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "I would enjoy a cup of tea or coffee or my favourite drink",
                 "multipleChoiceOptions": [
-                    { "label": "Strongly Disagree", "value": "strongly disagree" },
-                    { "label": "Disagree", "value": "disagree" },
-                    { "label": "Agree", "value": "agree" },
-                    { "label": "Strongly Agree", "value": "Strongly agree" }
+                    {
+                        "label": {
+                            "en": "Strongly Disagree",
+                            "fr": "Fortement en désaccord"
+                        },
+                        "value": "strongly disagree"
+                    },
+                    {
+                        "label": {
+                            "en": "Disagree",
+                            "fr": "En désaccord"
+                        },
+                        "value": "disagree"
+                    },
+                    {
+                        "label": {
+                            "en": "Agree",
+                            "fr": "D’accord"
+                        },
+                        "value": "agree"
+                    },
+                    {
+                        "label": {
+                            "en": "Strongly Agree",
+                            "fr": "Fortement d’accord"
+                        },
+                        "value": "Strongly agree"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "I would find pleasure in small things, e.g. bright sunny day, a telephone call from a friend:",
+                "title": {
+                    "en": "I would find pleasure in small things, e.g. bright sunny day, a telephone call from a friend:",
+                    "fr": "Je trouve du plaisir dans des petits riens tels  que, par exemple, une journée fortement ensoleillée ou un coup de téléphone d’un ami:"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "I would find pleasure in small things, e.g. bright sunny day, a telephone call from a friend",
                 "multipleChoiceOptions": [
-                    { "label": "Strongly Disagree", "value": "strongly disagree" },
-                    { "label": "Disagree", "value": "disagree" },
-                    { "label": "Agree", "value": "agree" },
-                    { "label": "Strongly Agree", "value": "Strongly agree" }
+                    {
+                        "label": {
+                            "en": "Strongly Disagree",
+                            "fr": "Fortement en désaccord"
+                        },
+                        "value": "strongly disagree"
+                    },
+                    {
+                        "label": {
+                            "en": "Disagree",
+                            "fr": "En désaccord"
+                        },
+                        "value": "disagree"
+                    },
+                    {
+                        "label": {
+                            "en": "Agree",
+                            "fr": "D’accord"
+                        },
+                        "value": "agree"
+                    },
+                    {
+                        "label": {
+                            "en": "Strongly Agree",
+                            "fr": "Fortement d’accord"
+                        },
+                        "value": "Strongly agree"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "I would be able to enjoy a beautiful landscape or view:",
+                "title": {
+                    "en": "I would be able to enjoy a beautiful landscape or view:",
+                    "fr": "Je suis capable d’apprécier un très beau paysage ou une très belle vue:"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "I would be able to enjoy a beautiful landscape or view",
                 "multipleChoiceOptions": [
-                    { "label": "Strongly Disagree", "value": "strongly disagree" },
-                    { "label": "Disagree", "value": "disagree" },
-                    { "label": "Agree", "value": "agree" },
-                    { "label": "Strongly Agree", "value": "Strongly agree" }
+                    {
+                        "label": {
+                            "en": "Strongly Disagree",
+                            "fr": "Fortement en désaccord"
+                        },
+                        "value": "strongly disagree"
+                    },
+                    {
+                        "label": {
+                            "en": "Disagree",
+                            "fr": "En désaccord"
+                        },
+                        "value": "disagree"
+                    },
+                    {
+                        "label": {
+                            "en": "Agree",
+                            "fr": "D’accord"
+                        },
+                        "value": "agree"
+                    },
+                    {
+                        "label": {
+                            "en": "Strongly Agree",
+                            "fr": "Fortement d’accord"
+                        },
+                        "value": "Strongly agree"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "I would get pleasure from helping others:",
+                "title": {
+                    "en": "I would get pleasure from helping others:",
+                    "fr": "Je prends plaisir à aider les autres:"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "I would get pleasure from helping others",
                 "multipleChoiceOptions": [
-                    { "label": "Strongly Disagree", "value": "strongly disagree" },
-                    { "label": "Disagree", "value": "disagree" },
-                    { "label": "Agree", "value": "agree" },
-                    { "label": "Strongly Agree", "value": "Strongly agree" }
+                    {
+                        "label": {
+                            "en": "Strongly Disagree",
+                            "fr": "Fortement en désaccord"
+                        },
+                        "value": "strongly disagree"
+                    },
+                    {
+                        "label": {
+                            "en": "Disagree",
+                            "fr": "En désaccord"
+                        },
+                        "value": "disagree"
+                    },
+                    {
+                        "label": {
+                            "en": "Agree",
+                            "fr": "D’accord"
+                        },
+                        "value": "agree"
+                    },
+                    {
+                        "label": {
+                            "en": "Strongly Agree",
+                            "fr": "Fortement d’accord"
+                        },
+                        "value": "Strongly agree"
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "I would feel pleasure when I receive praise from other people:",
+                "title": {
+                    "en": "I would feel pleasure when I receive praise from other people:",
+                    "fr": "Je ressens du plaisir à recevoir les éloges d’autres personnes:"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "I would feel pleasure when I receive praise from other people",
                 "multipleChoiceOptions": [
-                    { "label": "Strongly Disagree", "value": "strongly disagree" },
-                    { "label": "Disagree", "value": "disagree" },
-                    { "label": "Agree", "value": "agree" },
-                    { "label": "Strongly Agree", "value": "Strongly agree" }
+                    {
+                        "label": {
+                            "en": "Strongly Disagree",
+                            "fr": "Fortement en désaccord"
+                        },
+                        "value": "strongly disagree"
+                    },
+                    {
+                        "label": {
+                            "en": "Disagree",
+                            "fr": "En désaccord"
+                        },
+                        "value": "disagree"
+                    },
+                    {
+                        "label": {
+                            "en": "Agree",
+                            "fr": "D’accord"
+                        },
+                        "value": "agree"
+                    },
+                    {
+                        "label": {
+                            "en": "Strongly Agree",
+                            "fr": "Fortement d’accord"
+                        },
+                        "value": "Strongly agree"
+                    }
                 ]
             }
         ]
     }'
 WHERE id = 28;
--- SHAPS FRENCH
+-- PDAQ
 UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "QUESTIONNAIRE",
-    name = "SHAPS French",
-    description = "Échelle de Plaisir de Snaith-Hamilton",
-    external_url = "",
-    config = '{
-        "title":"Questionnaire",
-        "questions":[
-            {
-                "questionType": "displayText",
-                "title": "Ce questionnaire a été conçu pour mesurer votre capacité à éprouver du plaisir <b> au cours des ces derniers jours</b>. Il est important de lire chaque énoncé <b> très attentivement </b>. Cochez l''une des cases pour préciser votre degré d’accord ou de désaccord pour chacun des énoncés."
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "Mon émission préférée de télévision ou de radio me procure beaucoup de plaisir:",
-                "validation": {
-                    "required":true
-                },
-                "key": "Mon émission préférée de télévision ou de radio me procure beaucoup de plaisir",
-                "multipleChoiceOptions": [
-                    { "label": "Fortement en désaccord", "value": "fortement en désaccord" },
-                    { "label": "En désaccord", "value": "en désaccord" },
-                    { "label": "D’accord", "value": "d’accord" },
-                    { "label": "Fortement d’accord", "value": "fortement d’accord" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "J’apprécie beaucoup d’être avec ma famille ou avec des amis intimes:",
-                "validation": {
-                    "required":true
-                },
-                "key": "J’apprécie beaucoup d’être avec ma famille ou avec des amis intimes",
-                "multipleChoiceOptions": [
-                    { "label": "Fortement en désaccord", "value": "fortement en désaccord" },
-                    { "label": "En désaccord", "value": "en désaccord" },
-                    { "label": "D’accord", "value": "d’accord" },
-                    { "label": "Fortement d’accord", "value": "fortement d’accord" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "Je trouve du plaisir dans mes hobbies et passe temps:",
-                "validation": {
-                    "required":true
-                },
-                "key": "Je trouve du plaisir dans mes hobbies et passe temps",
-                "multipleChoiceOptions": [
-                    { "label": "Fortement en désaccord", "value": "fortement en désaccord" },
-                    { "label": "En désaccord", "value": "en désaccord" },
-                    { "label": "D’accord", "value": "d’accord" },
-                    { "label": "Fortement d’accord", "value": "fortement d’accord" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "Je suis capable d’apprécier mon plat favori:",
-                "validation": {
-                    "required":true
-                },
-                "key": "Je suis capable d’apprécier mon plat favori",
-                "multipleChoiceOptions": [
-                    { "label": "Fortement en désaccord", "value": "fortement en désaccord" },
-                    { "label": "En désaccord", "value": "en désaccord" },
-                    { "label": "D’accord", "value": "d’accord" },
-                    { "label": "Fortement d’accord", "value": "fortement d’accord" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "J’aime beaucoup prendre un bain chaud ou une douche rafraîchissante:",
-                "validation": {
-                    "required":true
-                },
-                "key": "J’aime beaucoup prendre un bain chaud ou une douche rafraîchissante",
-                "multipleChoiceOptions": [
-                    { "label": "Fortement en désaccord", "value": "fortement en désaccord" },
-                    { "label": "En désaccord", "value": "en désaccord" },
-                    { "label": "D’accord", "value": "d’accord" },
-                    { "label": "Fortement d’accord", "value": "fortement d’accord" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "Je trouve du plaisir dans le parfum des fleurs ou dans l’odeur d’une fraîche brise de mer ou du pain fraîchement cuit:",
-                "validation": {
-                    "required":true
-                },
-                "key": "Je trouve du plaisir dans le parfum des fleurs ou dans l’odeur d’une fraîche brise de mer ou du pain fraîchement cuit",
-                "multipleChoiceOptions": [
-                    { "label": "Fortement en désaccord", "value": "fortement en désaccord" },
-                    { "label": "En désaccord", "value": "en désaccord" },
-                    { "label": "D’accord", "value": "d’accord" },
-                    { "label": "Fortement d’accord", "value": "fortement d’accord" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "J’aime beaucoup voir des visages souriants autour de moi:",
-                "validation": {
-                    "required":true
-                },
-                "key": "J’aime beaucoup voir des visages souriants autour de moi",
-                "multipleChoiceOptions": [
-                    { "label": "Fortement en désaccord", "value": "fortement en désaccord" },
-                    { "label": "En désaccord", "value": "en désaccord" },
-                    { "label": "D’accord", "value": "d’accord" },
-                    { "label": "Fortement d’accord", "value": "fortement d’accord" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "J’apprécie beaucoup de paraître élégant(s) quand j’ai fait un effort pour soigner mon apparence:",
-                "validation": {
-                    "required":true
-                },
-                "key": "J’apprécie beaucoup de paraître élégant(s) quand j’ai fait un effort pour soigner mon apparence",
-                "multipleChoiceOptions": [
-                    { "label": "Fortement en désaccord", "value": "fortement en désaccord" },
-                    { "label": "En désaccord", "value": "en désaccord" },
-                    { "label": "D’accord", "value": "d’accord" },
-                    { "label": "Fortement d’accord", "value": "fortement d’accord" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "J’aime beaucoup lire un livre, un magazine ou un journal:",
-                "validation": {
-                    "required":true
-                },
-                "key": "J’aime beaucoup lire un livre, un magazine ou un journal",
-                "multipleChoiceOptions": [
-                    { "label": "Fortement en désaccord", "value": "fortement en désaccord" },
-                    { "label": "En désaccord", "value": "en désaccord" },
-                    { "label": "D’accord", "value": "d’accord" },
-                    { "label": "Fortement d’accord", "value": "fortement d’accord" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "Sélectionnez « en désaccord » pour indiquer que vous lisez bien les questions:",
-                "validation": {
-                    "required":true
-                },
-                "key": "attentionCheck-Sélectionnez « en désaccord » pour indiquer que vous lisez bien les questions",
-                "multipleChoiceOptions": [
-                    { "label": "Fortement en désaccord", "value": "fortement en désaccord" },
-                    { "label": "En désaccord", "value": "en désaccord" },
-                    { "label": "D’accord", "value": "d’accord" },
-                    { "label": "Fortement d’accord", "value": "fortement d’accord" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "J’apprécie beaucoup une tasse de thé ou de café ou un verre de ma boisson favorite:",
-                "validation": {
-                    "required":true
-                },
-                "key": "J’apprécie beaucoup une tasse de thé ou de café ou un verre de ma boisson favorite",
-                "multipleChoiceOptions": [
-                    { "label": "Fortement en désaccord", "value": "fortement en désaccord" },
-                    { "label": "En désaccord", "value": "en désaccord" },
-                    { "label": "D’accord", "value": "d’accord" },
-                    { "label": "Fortement d’accord", "value": "fortement d’accord" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "Je trouve du plaisir dans des petits riens tels  que, par exemple, une journée fortement ensoleillée ou un coup de téléphone d’un ami:",
-                "validation": {
-                    "required":true
-                },
-                "key": "Je trouve du plaisir dans des petits riens tels  que, par exemple, une journée fortement ensoleillée ou un coup de téléphone d’un ami",
-                "multipleChoiceOptions": [
-                    { "label": "Fortement en désaccord", "value": "fortement en désaccord" },
-                    { "label": "En désaccord", "value": "en désaccord" },
-                    { "label": "D’accord", "value": "d’accord" },
-                    { "label": "Fortement d’accord", "value": "fortement d’accord" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "Je suis capable d’apprécier un très beau paysage ou une très belle vue:",
-                "validation": {
-                    "required":true
-                },
-                "key": "Je suis capable d’apprécier un très beau paysage ou une très belle vue",
-                "multipleChoiceOptions": [
-                    { "label": "Fortement en désaccord", "value": "fortement en désaccord" },
-                    { "label": "En désaccord", "value": "en désaccord" },
-                    { "label": "D’accord", "value": "d’accord" },
-                    { "label": "Fortement d’accord", "value": "fortement d’accord" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "Je prends plaisir à aider les autres:",
-                "validation": {
-                    "required":true
-                },
-                "key": "Je prends plaisir à aider les autres",
-                "multipleChoiceOptions": [
-                    { "label": "Fortement en désaccord", "value": "fortement en désaccord" },
-                    { "label": "En désaccord", "value": "en désaccord" },
-                    { "label": "D’accord", "value": "d’accord" },
-                    { "label": "Fortement d’accord", "value": "fortement d’accord" }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "vertical",
-                "title": "Je ressens du plaisir à recevoir les éloges d’autres personnes:",
-                "validation": {
-                    "required":true
-                },
-                "key": "Je ressens du plaisir à recevoir les éloges d’autres personnes",
-                "multipleChoiceOptions": [
-                    { "label": "Fortement en désaccord", "value": "fortement en désaccord" },
-                    { "label": "En désaccord", "value": "en désaccord" },
-                    { "label": "D’accord", "value": "d’accord" },
-                    { "label": "Fortement d’accord", "value": "fortement d’accord" }
-                ]
-            }
-        ]
-    }'
-WHERE id = 29;
--- PDAQ ENGLISH
-UPDATE tasks set
-    from_platform = "PSHARPLAB",
-    task_type = "QUESTIONNAIRE",
-    name = "PDAQ English",
+    name = "PDAQ",
     description =  "Penn Parkinson's Daily Activities Questionnaire-15",
     external_url = "",
     config = '{
-        "title":"Questionnaire",
+        "title": {
+            "en": "Questionnaire",
+            "fr": "Questionnaire"
+        },
         "questions":[
             {
                 "questionType": "displayText",
-                "title": "Please check or fill in the following that best describes YOU."
+                "title": {
+                    "en": "Please check or fill in the following that best describes YOU.",
+                    "fr": "Voici des questions sur des activités de tous les jours. Veuillez indiquer ce qui VOUS décrit le mieux"
+                }
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "How much DIFFICULTY do you currently have reading the newspaper or a magazine?",
+                "title": {
+                    "en": "How much DIFFICULTY do you currently have reading the newspaper or a magazine?",
+                    "fr": "Quelle DIFFICULTÉ avez-vous actuellement à lire le journal ou un magazine?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "How much DIFFICULTY do you currently have reading the newspaper or a magazine",
                 "multipleChoiceOptions": [
-                    { "label": "None", "value": 4 },
-                    { "label": "A Little", "value": 3 },
-                    { "label": "Somewhat", "value": 2 },
-                    { "label": "A Lot", "value": 1 },
-                    { "label": "Cannot Do", "value": 0 }
+                    {
+                        "label": {
+                            "en": "None",
+                            "fr": "Aucun(e)"
+                        },
+                        "value": 4
+                    },
+                    {
+                        "label": {
+                            "en": "A Little",
+                            "fr": "Un Peu"
+                        },
+                        "value": 3
+                    },
+                    {
+                        "label": {
+                            "en": "Somewhat",
+                            "fr": "Quelque Peu"
+                        },
+                        "value": 2
+                    },
+                    {
+                        "label": {
+                            "en": "A Lot",
+                            "fr": "Beaucoup"
+                        },
+                        "value": 1
+                    },
+                    {
+                        "label": {
+                            "en": "Cannot Do",
+                            "fr": "Ne Peut Pas Faire"
+                        },
+                        "value": 0
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "How much DIFFICULTY do you currently have keeping track of time (e.g. using a clock)?",
+                "title": {
+                    "en": "How much DIFFICULTY do you currently have keeping track of time (e.g. using a clock)?",
+                    "fr": "Quelle DIFFICULTÉ avez-vous actuellement à garder la notion du temps qui passe (ex. en utilisant une montre)?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "How much DIFFICULTY do you currently have keeping track of time (e.g. using a clock)",
                 "multipleChoiceOptions": [
-                    { "label": "None", "value": 4 },
-                    { "label": "A Little", "value": 3 },
-                    { "label": "Somewhat", "value": 2 },
-                    { "label": "A Lot", "value": 1 },
-                    { "label": "Cannot Do", "value": 0 }
+                    {
+                        "label": {
+                            "en": "None",
+                            "fr": "Aucun(e)"
+                        },
+                        "value": 4
+                    },
+                    {
+                        "label": {
+                            "en": "A Little",
+                            "fr": "Un Peu"
+                        },
+                        "value": 3
+                    },
+                    {
+                        "label": {
+                            "en": "Somewhat",
+                            "fr": "Quelque Peu"
+                        },
+                        "value": 2
+                    },
+                    {
+                        "label": {
+                            "en": "A Lot",
+                            "fr": "Beaucoup"
+                        },
+                        "value": 1
+                    },
+                    {
+                        "label": {
+                            "en": "Cannot Do",
+                            "fr": "Ne Peut Pas Faire"
+                        },
+                        "value": 0
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "How much DIFFICULTY do you currently have counting the correct amount of money when making purchases?",
+                "title": {
+                    "en": "How much DIFFICULTY do you currently have counting the correct amount of money when making purchases?",
+                    "fr": "Quelle DIFFICULTÉ avez-vous actuellement à compter le montant correct lors de vos achats?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "How much DIFFICULTY do you currently have counting the correct amount of money when making purchases",
                 "multipleChoiceOptions": [
-                    { "label": "None", "value": 4 },
-                    { "label": "A Little", "value": 3 },
-                    { "label": "Somewhat", "value": 2 },
-                    { "label": "A Lot", "value": 1 },
-                    { "label": "Cannot Do", "value": 0 }
+                    {
+                        "label": {
+                            "en": "None",
+                            "fr": "Aucun(e)"
+                        },
+                        "value": 4
+                    },
+                    {
+                        "label": {
+                            "en": "A Little",
+                            "fr": "Un Peu"
+                        },
+                        "value": 3
+                    },
+                    {
+                        "label": {
+                            "en": "Somewhat",
+                            "fr": "Quelque Peu"
+                        },
+                        "value": 2
+                    },
+                    {
+                        "label": {
+                            "en": "A Lot",
+                            "fr": "Beaucoup"
+                        },
+                        "value": 1
+                    },
+                    {
+                        "label": {
+                            "en": "Cannot Do",
+                            "fr": "Ne Peut Pas Faire"
+                        },
+                        "value": 0
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "How much DIFFICULTY do you currently have reading and following complex instructions (e.g. directions for a new medication)?",
+                "title": {
+                    "en": "How much DIFFICULTY do you currently have reading and following complex instructions (e.g. directions for a new medication)?",
+                    "fr": "Quelle DIFFICULTÉ avez-vous actuellement à lire et à suivre des instructions complexes?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "How much DIFFICULTY do you currently have reading and following complex instructions (e.g. directions for a new medication)",
                 "multipleChoiceOptions": [
-                    { "label": "None", "value": 4 },
-                    { "label": "A Little", "value": 3 },
-                    { "label": "Somewhat", "value": 2 },
-                    { "label": "A Lot", "value": 1 },
-                    { "label": "Cannot Do", "value": 0 }
+                    {
+                        "label": {
+                            "en": "None",
+                            "fr": "Aucun(e)"
+                        },
+                        "value": 4
+                    },
+                    {
+                        "label": {
+                            "en": "A Little",
+                            "fr": "Un Peu"
+                        },
+                        "value": 3
+                    },
+                    {
+                        "label": {
+                            "en": "Somewhat",
+                            "fr": "Quelque Peu"
+                        },
+                        "value": 2
+                    },
+                    {
+                        "label": {
+                            "en": "A Lot",
+                            "fr": "Beaucoup"
+                        },
+                        "value": 1
+                    },
+                    {
+                        "label": {
+                            "en": "Cannot Do",
+                            "fr": "Ne Peut Pas Faire"
+                        },
+                        "value": 0
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "How much DIFFICULTY do you currently have handling an unfamiliar problem (e.g. getting the refrigerator fixed)?",
+                "title": {
+                    "en": "How much DIFFICULTY do you currently have handling an unfamiliar problem (e.g. getting the refrigerator fixed)?",
+                    "fr": "Quelle DIFFICULTÉ avez-vous actuellement à gérer un problème auquel vous n’êtes pas habitué (ex. réparer le réfrigérateur)?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "How much DIFFICULTY do you currently have handling an unfamiliar problem (e.g. getting the refrigerator fixed)",
                 "multipleChoiceOptions": [
-                    { "label": "None", "value": 4 },
-                    { "label": "A Little", "value": 3 },
-                    { "label": "Somewhat", "value": 2 },
-                    { "label": "A Lot", "value": 1 },
-                    { "label": "Cannot Do", "value": 0 }
+                    {
+                        "label": {
+                            "en": "None",
+                            "fr": "Aucun(e)"
+                        },
+                        "value": 4
+                    },
+                    {
+                        "label": {
+                            "en": "A Little",
+                            "fr": "Un Peu"
+                        },
+                        "value": 3
+                    },
+                    {
+                        "label": {
+                            "en": "Somewhat",
+                            "fr": "Quelque Peu"
+                        },
+                        "value": 2
+                    },
+                    {
+                        "label": {
+                            "en": "A Lot",
+                            "fr": "Beaucoup"
+                        },
+                        "value": 1
+                    },
+                    {
+                        "label": {
+                            "en": "Cannot Do",
+                            "fr": "Ne Peut Pas Faire"
+                        },
+                        "value": 0
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "How much DIFFICULTY do you currently have explaining how to do something involving several steps to another person?",
+                "title": {
+                    "en": "How much DIFFICULTY do you currently have explaining how to do something involving several steps to another person?",
+                    "fr": "Quelle DIFFICULTÉ avez-vous actuellement à expliquer à une autre personne comment faire quelque chose qui implique plusieurs étapes?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "How much DIFFICULTY do you currently have explaining how to do something involving several steps to another person",
                 "multipleChoiceOptions": [
-                    { "label": "None", "value": 4 },
-                    { "label": "A Little", "value": 3 },
-                    { "label": "Somewhat", "value": 2 },
-                    { "label": "A Lot", "value": 1 },
-                    { "label": "Cannot Do", "value": 0 }
+                    {
+                        "label": {
+                            "en": "None",
+                            "fr": "Aucun(e)"
+                        },
+                        "value": 4
+                    },
+                    {
+                        "label": {
+                            "en": "A Little",
+                            "fr": "Un Peu"
+                        },
+                        "value": 3
+                    },
+                    {
+                        "label": {
+                            "en": "Somewhat",
+                            "fr": "Quelque Peu"
+                        },
+                        "value": 2
+                    },
+                    {
+                        "label": {
+                            "en": "A Lot",
+                            "fr": "Beaucoup"
+                        },
+                        "value": 1
+                    },
+                    {
+                        "label": {
+                            "en": "Cannot Do",
+                            "fr": "Ne Peut Pas Faire"
+                        },
+                        "value": 0
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "How much DIFFICULTY do you currently have remembering a list of 4 or 5 errands without writing it down?",
+                "title": {
+                    "en": "How much DIFFICULTY do you currently have remembering a list of 4 or 5 errands without writing it down?",
+                    "fr": "Quelle DIFFICULTÉ avez-vous actuellement à vous souvenir d’une liste de 4 ou 5 courses que vous avez à faire sans l’écrire?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "How much DIFFICULTY do you currently have remembering a list of 4 or 5 errands without writing it down",
                 "multipleChoiceOptions": [
-                    { "label": "None", "value": 4 },
-                    { "label": "A Little", "value": 3 },
-                    { "label": "Somewhat", "value": 2 },
-                    { "label": "A Lot", "value": 1 },
-                    { "label": "Cannot Do", "value": 0 }
+                    {
+                        "label": {
+                            "en": "None",
+                            "fr": "Aucun(e)"
+                        },
+                        "value": 4
+                    },
+                    {
+                        "label": {
+                            "en": "A Little",
+                            "fr": "Un Peu"
+                        },
+                        "value": 3
+                    },
+                    {
+                        "label": {
+                            "en": "Somewhat",
+                            "fr": "Quelque Peu"
+                        },
+                        "value": 2
+                    },
+                    {
+                        "label": {
+                            "en": "A Lot",
+                            "fr": "Beaucoup"
+                        },
+                        "value": 1
+                    },
+                    {
+                        "label": {
+                            "en": "Cannot Do",
+                            "fr": "Ne Peut Pas Faire"
+                        },
+                        "value": 0
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "How much DIFFICULTY do you currently have using a map to tell where to go?",
+                "title": {
+                    "en": "How much DIFFICULTY do you currently have using a map to tell where to go?",
+                    "fr": "Quelle DIFFICULTÉ avez-vous actuellement à utiliser une carte pour vous orienter?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "How much DIFFICULTY do you currently have using a map to tell where to go",
                 "multipleChoiceOptions": [
-                    { "label": "None", "value": 4 },
-                    { "label": "A Little", "value": 3 },
-                    { "label": "Somewhat", "value": 2 },
-                    { "label": "A Lot", "value": 1 },
-                    { "label": "Cannot Do", "value": 0 }
+                    {
+                        "label": {
+                            "en": "None",
+                            "fr": "Aucun(e)"
+                        },
+                        "value": 4
+                    },
+                    {
+                        "label": {
+                            "en": "A Little",
+                            "fr": "Un Peu"
+                        },
+                        "value": 3
+                    },
+                    {
+                        "label": {
+                            "en": "Somewhat",
+                            "fr": "Quelque Peu"
+                        },
+                        "value": 2
+                    },
+                    {
+                        "label": {
+                            "en": "A Lot",
+                            "fr": "Beaucoup"
+                        },
+                        "value": 1
+                    },
+                    {
+                        "label": {
+                            "en": "Cannot Do",
+                            "fr": "Ne Peut Pas Faire"
+                        },
+                        "value": 0
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "How much DIFFICULTY do you currently have remembering new information like phone number or simple instructions?",
+                "title": {
+                    "en": "How much DIFFICULTY do you currently have remembering new information like phone number or simple instructions?",
+                    "fr": "Quelle DIFFICULTÉ avez-vous actuellement à vous souvenir de nouvelles informations telles qu’un numéro de téléphone ou des instructions simples?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "How much DIFFICULTY do you currently have remembering new information like phone number or simple instructions",
                 "multipleChoiceOptions": [
-                    { "label": "None", "value": 4 },
-                    { "label": "A Little", "value": 3 },
-                    { "label": "Somewhat", "value": 2 },
-                    { "label": "A Lot", "value": 1 },
-                    { "label": "Cannot Do", "value": 0 }
+                    {
+                        "label": {
+                            "en": "None",
+                            "fr": "Aucun(e)"
+                        },
+                        "value": 4
+                    },
+                    {
+                        "label": {
+                            "en": "A Little",
+                            "fr": "Un Peu"
+                        },
+                        "value": 3
+                    },
+                    {
+                        "label": {
+                            "en": "Somewhat",
+                            "fr": "Quelque Peu"
+                        },
+                        "value": 2
+                    },
+                    {
+                        "label": {
+                            "en": "A Lot",
+                            "fr": "Beaucoup"
+                        },
+                        "value": 1
+                    },
+                    {
+                        "label": {
+                            "en": "Cannot Do",
+                            "fr": "Ne Peut Pas Faire"
+                        },
+                        "value": 0
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "How much DIFFICULTY do you currently have doing more than one thing at a time?",
+                "title": {
+                    "en": "How much DIFFICULTY do you currently have doing more than one thing at a time?",
+                    "fr": "Quelle DIFFICULTÉ avez-vous actuellement à faire plus d’une chose en même temps?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "How much DIFFICULTY do you currently have doing more than one thing at a time",
                 "multipleChoiceOptions": [
-                    { "label": "None", "value": 4 },
-                    { "label": "A Little", "value": 3 },
-                    { "label": "Somewhat", "value": 2 },
-                    { "label": "A Lot", "value": 1 },
-                    { "label": "Cannot Do", "value": 0 }
+                    {
+                        "label": {
+                            "en": "None",
+                            "fr": "Aucun(e)"
+                        },
+                        "value": 4
+                    },
+                    {
+                        "label": {
+                            "en": "A Little",
+                            "fr": "Un Peu"
+                        },
+                        "value": 3
+                    },
+                    {
+                        "label": {
+                            "en": "Somewhat",
+                            "fr": "Quelque Peu"
+                        },
+                        "value": 2
+                    },
+                    {
+                        "label": {
+                            "en": "A Lot",
+                            "fr": "Beaucoup"
+                        },
+                        "value": 1
+                    },
+                    {
+                        "label": {
+                            "en": "Cannot Do",
+                            "fr": "Ne Peut Pas Faire"
+                        },
+                        "value": 0
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "How much DIFFICULTY do you currently have learning to use new gadgets or machines around the house?",
+                "title": {
+                    "en": "How much DIFFICULTY do you currently have learning to use new gadgets or machines around the house?",
+                    "fr": "Quelle DIFFICULTÉ avez-vous actuellement à apprendre à utiliser de nouveaux gadgets ou machines dans la maison?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "How much DIFFICULTY do you currently have learning to use new gadgets or machines around the house",
                 "multipleChoiceOptions": [
-                    { "label": "None", "value": 4 },
-                    { "label": "A Little", "value": 3 },
-                    { "label": "Somewhat", "value": 2 },
-                    { "label": "A Lot", "value": 1 },
-                    { "label": "Cannot Do", "value": 0 }
+                    {
+                        "label": {
+                            "en": "None",
+                            "fr": "Aucun(e)"
+                        },
+                        "value": 4
+                    },
+                    {
+                        "label": {
+                            "en": "A Little",
+                            "fr": "Un Peu"
+                        },
+                        "value": 3
+                    },
+                    {
+                        "label": {
+                            "en": "Somewhat",
+                            "fr": "Quelque Peu"
+                        },
+                        "value": 2
+                    },
+                    {
+                        "label": {
+                            "en": "A Lot",
+                            "fr": "Beaucoup"
+                        },
+                        "value": 1
+                    },
+                    {
+                        "label": {
+                            "en": "Cannot Do",
+                            "fr": "Ne Peut Pas Faire"
+                        },
+                        "value": 0
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "How much DIFFICULTY do you currently have understanding your personal financial affairs?",
+                "title": {
+                    "en": "How much DIFFICULTY do you currently have understanding your personal financial affairs?",
+                    "fr": "Quelle DIFFICULTÉ avez-vous actuellement à comprendre et gérer vos finances personnelles?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "How much DIFFICULTY do you currently have understanding your personal financial affairs",
                 "multipleChoiceOptions": [
-                    { "label": "None", "value": 4 },
-                    { "label": "A Little", "value": 3 },
-                    { "label": "Somewhat", "value": 2 },
-                    { "label": "A Lot", "value": 1 },
-                    { "label": "Cannot Do", "value": 0 }
+                    {
+                        "label": {
+                            "en": "None",
+                            "fr": "Aucun(e)"
+                        },
+                        "value": 4
+                    },
+                    {
+                        "label": {
+                            "en": "A Little",
+                            "fr": "Un Peu"
+                        },
+                        "value": 3
+                    },
+                    {
+                        "label": {
+                            "en": "Somewhat",
+                            "fr": "Quelque Peu"
+                        },
+                        "value": 2
+                    },
+                    {
+                        "label": {
+                            "en": "A Lot",
+                            "fr": "Beaucoup"
+                        },
+                        "value": 1
+                    },
+                    {
+                        "label": {
+                            "en": "Cannot Do",
+                            "fr": "Ne Peut Pas Faire"
+                        },
+                        "value": 0
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "How much DIFFICULTY do you currently have maintaining or completing a train of thought?",
+                "title": {
+                    "en": "How much DIFFICULTY do you currently have maintaining or completing a train of thought?",
+                    "fr": "Quelle DIFFICULTÉ avez-vous actuellement à garder ou à terminer le fil de votre pensée?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "How much DIFFICULTY do you currently have maintaining or completing a train of thought",
                 "multipleChoiceOptions": [
-                    { "label": "None", "value": 4 },
-                    { "label": "A Little", "value": 3 },
-                    { "label": "Somewhat", "value": 2 },
-                    { "label": "A Lot", "value": 1 },
-                    { "label": "Cannot Do", "value": 0 }
+                    {
+                        "label": {
+                            "en": "None",
+                            "fr": "Aucun(e)"
+                        },
+                        "value": 4
+                    },
+                    {
+                        "label": {
+                            "en": "A Little",
+                            "fr": "Un Peu"
+                        },
+                        "value": 3
+                    },
+                    {
+                        "label": {
+                            "en": "Somewhat",
+                            "fr": "Quelque Peu"
+                        },
+                        "value": 2
+                    },
+                    {
+                        "label": {
+                            "en": "A Lot",
+                            "fr": "Beaucoup"
+                        },
+                        "value": 1
+                    },
+                    {
+                        "label": {
+                            "en": "Cannot Do",
+                            "fr": "Ne Peut Pas Faire"
+                        },
+                        "value": 0
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "Can you choose \\"a little\\" if you are reading the questions?",
+                "title": {
+                    "en": "Can you choose \\"a little\\" if you are reading the questions?",
+                    "fr": "Pouvez-vous choisir « un peu » si vous lisez les questions?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "attentionCheck-Can you choose a little if you are reading the questions?",
                 "multipleChoiceOptions": [
-                    { "label": "None", "value": 4 },
-                    { "label": "A Little", "value": 3 },
-                    { "label": "Somewhat", "value": 2 },
-                    { "label": "A Lot", "value": 1 },
-                    { "label": "Cannot Do", "value": 0 }
+                    {
+                        "label": {
+                            "en": "None",
+                            "fr": "Aucun(e)"
+                        },
+                        "value": 4
+                    },
+                    {
+                        "label": {
+                            "en": "A Little",
+                            "fr": "Un Peu"
+                        },
+                        "value": 3
+                    },
+                    {
+                        "label": {
+                            "en": "Somewhat",
+                            "fr": "Quelque Peu"
+                        },
+                        "value": 2
+                    },
+                    {
+                        "label": {
+                            "en": "A Lot",
+                            "fr": "Beaucoup"
+                        },
+                        "value": 1
+                    },
+                    {
+                        "label": {
+                            "en": "Cannot Do",
+                            "fr": "Ne Peut Pas Faire"
+                        },
+                        "value": 0
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "How much DIFFICULTY do you currently have discussing a TV show, book, movie, or current events?",
+                "title": {
+                    "en": "How much DIFFICULTY do you currently have discussing a TV show, book, movie, or current events?",
+                    "fr": "Quelle DIFFICULTÉ avez-vous actuellement à discuter d’une émission de télévision, d’un livre, d’un film ou d’actualités?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "How much DIFFICULTY do you currently have discussing a TV show, book, movie, or current events",
                 "multipleChoiceOptions": [
-                    { "label": "None", "value": 4 },
-                    { "label": "A Little", "value": 3 },
-                    { "label": "Somewhat", "value": 2 },
-                    { "label": "A Lot", "value": 1 },
-                    { "label": "Cannot Do", "value": 0 }
+                    {
+                        "label": {
+                            "en": "None",
+                            "fr": "Aucun(e)"
+                        },
+                        "value": 4
+                    },
+                    {
+                        "label": {
+                            "en": "A Little",
+                            "fr": "Un Peu"
+                        },
+                        "value": 3
+                    },
+                    {
+                        "label": {
+                            "en": "Somewhat",
+                            "fr": "Quelque Peu"
+                        },
+                        "value": 2
+                    },
+                    {
+                        "label": {
+                            "en": "A Lot",
+                            "fr": "Beaucoup"
+                        },
+                        "value": 1
+                    },
+                    {
+                        "label": {
+                            "en": "Cannot Do",
+                            "fr": "Ne Peut Pas Faire"
+                        },
+                        "value": 0
+                    }
                 ]
             },
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "horizontal",
-                "title": "How much DIFFICULTY do you currently have remembering what day and month it is?",
+                "title": {
+                    "en": "How much DIFFICULTY do you currently have remembering what day and month it is?",
+                    "fr": "Quelle DIFFICULTÉ avez-vous actuellement à vous souvenir de quel jour et de quel mois il s’agit?"
+                },
                 "validation": {
                     "required":true
                 },
                 "key": "How much DIFFICULTY do you currently have remembering what day and month it is",
                 "multipleChoiceOptions": [
-                    { "label": "None", "value": 4 },
-                    { "label": "A Little", "value": 3 },
-                    { "label": "Somewhat", "value": 2 },
-                    { "label": "A Lot", "value": 1 },
-                    { "label": "Cannot Do", "value": 0 }
+                    {
+                        "label": {
+                            "en": "None",
+                            "fr": "Aucun(e)"
+                        },
+                        "value": 4
+                    },
+                    {
+                        "label": {
+                            "en": "A Little",
+                            "fr": "Un Peu"
+                        },
+                        "value": 3
+                    },
+                    {
+                        "label": {
+                            "en": "Somewhat",
+                            "fr": "Quelque Peu"
+                        },
+                        "value": 2
+                    },
+                    {
+                        "label": {
+                            "en": "A Lot",
+                            "fr": "Beaucoup"
+                        },
+                        "value": 1
+                    },
+                    {
+                        "label": {
+                            "en": "Cannot Do",
+                            "fr": "Ne Peut Pas Faire"
+                        },
+                        "value": 0
+                    }
                 ]
             }
         ]
     }'
 WHERE id = 30;
--- PDAQ FRENCH
-UPDATE tasks set
-    from_platform = "PSHARPLAB",
-    task_type = "QUESTIONNAIRE",
-    name ="PDAQ French",
-    description =  "Penn Parkinson's Daily Activities Questionnaire-15 French",
-    external_url = "",
-    config = '{
-        "title":"Questionnaire",
-        "questions":[
-            {
-                "questionType": "displayText",
-                "title": "Voici des questions sur des activités de tous les jours. Veuillez indiquer ce qui VOUS décrit le mieux"
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Quelle DIFFICULTÉ avez-vous actuellement à lire le journal ou un magazine?",
-                "validation": {
-                    "required":true
-                },
-                "key": "How much DIFFICULTY do you currently have reading the newspaper or a magazine",
-                "multipleChoiceOptions": [
-                    { "label": "Aucun(e)", "value": 4 },
-                    { "label": "Un Peu", "value": 3 },
-                    { "label": "Quelque Peu", "value": 2 },
-                    { "label": "Beaucoup", "value": 1 },
-                    { "label": "Ne Peut Pas Faire", "value": 0 }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Quelle DIFFICULTÉ avez-vous actuellement à garder la notion du temps qui passe (ex. en utilisant une montre)?",
-                "validation": {
-                    "required":true
-                },
-                "key": "How much DIFFICULTY do you currently have keeping track of time (e.g. using a clock)",
-                "multipleChoiceOptions": [
-                    { "label": "Aucun(e)", "value": 4 },
-                    { "label": "Un Peu", "value": 3 },
-                    { "label": "Quelque Peu", "value": 2 },
-                    { "label": "Beaucoup", "value": 1 },
-                    { "label": "Ne Peut Pas Faire", "value": 0 }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Quelle DIFFICULTÉ avez-vous actuellement à compter le montant correct lors de vos achats?",
-                "validation": {
-                    "required":true
-                },
-                "key": "How much DIFFICULTY do you currently have counting the correct amount of money when making purchases",
-                "multipleChoiceOptions": [
-                    { "label": "Aucun(e)", "value": 4 },
-                    { "label": "Un Peu", "value": 3 },
-                    { "label": "Quelque Peu", "value": 2 },
-                    { "label": "Beaucoup", "value": 1 },
-                    { "label": "Ne Peut Pas Faire", "value": 0 }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Quelle DIFFICULTÉ avez-vous actuellement à lire et à suivre des instructions complexes?",
-                "validation": {
-                    "required":true
-                },
-                "key": "How much DIFFICULTY do you currently have reading and following complex instructions (e.g. directions for a new medication)",
-                "multipleChoiceOptions": [
-                    { "label": "Aucun(e)", "value": 4 },
-                    { "label": "Un Peu", "value": 3 },
-                    { "label": "Quelque Peu", "value": 2 },
-                    { "label": "Beaucoup", "value": 1 },
-                    { "label": "Ne Peut Pas Faire", "value": 0 }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Quelle DIFFICULTÉ avez-vous actuellement à gérer un problème auquel vous n’êtes pas habitué (ex. réparer le réfrigérateur)?",
-                "validation": {
-                    "required":true
-                },
-                "key": "How much DIFFICULTY do you currently have handling an unfamiliar problem (e.g. getting the refrigerator fixed)",
-                "multipleChoiceOptions": [
-                    { "label": "Aucun(e)", "value": 4 },
-                    { "label": "Un Peu", "value": 3 },
-                    { "label": "Quelque Peu", "value": 2 },
-                    { "label": "Beaucoup", "value": 1 },
-                    { "label": "Ne Peut Pas Faire", "value": 0 }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Quelle DIFFICULTÉ avez-vous actuellement à expliquer à une autre personne comment faire quelque chose qui implique plusieurs étapes?",
-                "validation": {
-                    "required":true
-                },
-                "key": "How much DIFFICULTY do you currently have explaining how to do something involving several steps to another person",
-                "multipleChoiceOptions": [
-                    { "label": "Aucun(e)", "value": 4 },
-                    { "label": "Un Peu", "value": 3 },
-                    { "label": "Quelque Peu", "value": 2 },
-                    { "label": "Beaucoup", "value": 1 },
-                    { "label": "Ne Peut Pas Faire", "value": 0 }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Quelle DIFFICULTÉ avez-vous actuellement à vous souvenir d’une liste de 4 ou 5 courses que vous avez à faire sans l’écrire?",
-                "validation": {
-                    "required":true
-                },
-                "key": "How much DIFFICULTY do you currently have remembering a list of 4 or 5 errands without writing it down",
-                "multipleChoiceOptions": [
-                    { "label": "Aucun(e)", "value": 4 },
-                    { "label": "Un Peu", "value": 3 },
-                    { "label": "Quelque Peu", "value": 2 },
-                    { "label": "Beaucoup", "value": 1 },
-                    { "label": "Ne Peut Pas Faire", "value": 0 }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Quelle DIFFICULTÉ avez-vous actuellement à utiliser une carte pour vous orienter?",
-                "validation": {
-                    "required":true
-                },
-                "key": "How much DIFFICULTY do you currently have using a map to tell where to go",
-                "multipleChoiceOptions": [
-                    { "label": "Aucun(e)", "value": 4 },
-                    { "label": "Un Peu", "value": 3 },
-                    { "label": "Quelque Peu", "value": 2 },
-                    { "label": "Beaucoup", "value": 1 },
-                    { "label": "Ne Peut Pas Faire", "value": 0 }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Quelle DIFFICULTÉ avez-vous actuellement à vous souvenir de nouvelles informations telles qu’un numéro de téléphone ou des instructions simples?",
-                "validation": {
-                    "required":true
-                },
-                "key": "How much DIFFICULTY do you currently have remembering new information like phone number or simple instructions",
-                "multipleChoiceOptions": [
-                    { "label": "Aucun(e)", "value": 4 },
-                    { "label": "Un Peu", "value": 3 },
-                    { "label": "Quelque Peu", "value": 2 },
-                    { "label": "Beaucoup", "value": 1 },
-                    { "label": "Ne Peut Pas Faire", "value": 0 }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Quelle DIFFICULTÉ avez-vous actuellement à faire plus d’une chose en même temps?",
-                "validation": {
-                    "required":true
-                },
-                "key": "How much DIFFICULTY do you currently have doing more than one thing at a time",
-                "multipleChoiceOptions": [
-                    { "label": "Aucun(e)", "value": 4 },
-                    { "label": "Un Peu", "value": 3 },
-                    { "label": "Quelque Peu", "value": 2 },
-                    { "label": "Beaucoup", "value": 1 },
-                    { "label": "Ne Peut Pas Faire", "value": 0 }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Quelle DIFFICULTÉ avez-vous actuellement à apprendre à utiliser de nouveaux gadgets ou machines dans la maison?",
-                "validation": {
-                    "required":true
-                },
-                "key": "How much DIFFICULTY do you currently have learning to use new gadgets or machines around the house",
-                "multipleChoiceOptions": [
-                    { "label": "Aucun(e)", "value": 4 },
-                    { "label": "Un Peu", "value": 3 },
-                    { "label": "Quelque Peu", "value": 2 },
-                    { "label": "Beaucoup", "value": 1 },
-                    { "label": "Ne Peut Pas Faire", "value": 0 }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Quelle DIFFICULTÉ avez-vous actuellement à comprendre et gérer vos finances personnelles?",
-                "validation": {
-                    "required":true
-                },
-                "key": "How much DIFFICULTY do you currently have understanding your personal financial affairs",
-                "multipleChoiceOptions": [
-                    { "label": "Aucun(e)", "value": 4 },
-                    { "label": "Un Peu", "value": 3 },
-                    { "label": "Quelque Peu", "value": 2 },
-                    { "label": "Beaucoup", "value": 1 },
-                    { "label": "Ne Peut Pas Faire", "value": 0 }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Quelle DIFFICULTÉ avez-vous actuellement à garder ou à terminer le fil de votre pensée?",
-                "validation": {
-                    "required":true
-                },
-                "key": "How much DIFFICULTY do you currently have maintaining or completing a train of thought",
-                "multipleChoiceOptions": [
-                    { "label": "Aucun(e)", "value": 4 },
-                    { "label": "Un Peu", "value": 3 },
-                    { "label": "Quelque Peu", "value": 2 },
-                    { "label": "Beaucoup", "value": 1 },
-                    { "label": "Ne Peut Pas Faire", "value": 0 }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Pouvez-vous choisir « un peu » si vous lisez les questions?",
-                "validation": {
-                    "required":true
-                },
-                "key": "attentionCheck-Can you choose a little if you are reading the questions?",
-                "multipleChoiceOptions": [
-                    { "label": "Aucun(e)", "value": 4 },
-                    { "label": "Un Peu", "value": 3 },
-                    { "label": "Quelque Peu", "value": 2 },
-                    { "label": "Beaucoup", "value": 1 },
-                    { "label": "Ne Peut Pas Faire", "value": 0 }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Quelle DIFFICULTÉ avez-vous actuellement à discuter d’une émission de télévision, d’un livre, d’un film ou d’actualités?",
-                "validation": {
-                    "required":true
-                },
-                "key": "How much DIFFICULTY do you currently have discussing a TV show, book, movie, or current events",
-                "multipleChoiceOptions": [
-                    { "label": "Aucun(e)", "value": 4 },
-                    { "label": "Un Peu", "value": 3 },
-                    { "label": "Quelque Peu", "value": 2 },
-                    { "label": "Beaucoup", "value": 1 },
-                    { "label": "Ne Peut Pas Faire", "value": 0 }
-                ]
-            },
-            {
-                "questionType": "radiobuttons",
-                "radiobuttonPresentation": "horizontal",
-                "title": "Quelle DIFFICULTÉ avez-vous actuellement à vous souvenir de quel jour et de quel mois il s’agit?",
-                "validation": {
-                    "required":true
-                },
-                "key": "How much DIFFICULTY do you currently have remembering what day and month it is",
-                "multipleChoiceOptions": [
-                    { "label": "Aucun(e)", "value": 4 },
-                    { "label": "Un Peu", "value": 3 },
-                    { "label": "Quelque Peu", "value": 2 },
-                    { "label": "Beaucoup", "value": 1 },
-                    { "label": "Ne Peut Pas Faire", "value": 0 }
-                ]
-            }
-        ]
-    }'
-WHERE id = 31;
 -- AMI
 UPDATE tasks SET
     from_platform = "PSHARPLAB",
