@@ -2911,6 +2911,8 @@ UPDATE tasks set
             },
             {
                 "component": "DISPLAYCOMPONENT",
+                "skippable": true,
+                "skippableCacheKey": "demandselection-should-skip",
                 "content": {
                     "title": "",
                     "sections": [
