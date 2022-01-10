@@ -60,10 +60,26 @@ func (u *UserService) UpdateUser(receivedUser models.User) models.HTTPStatus {
 
 	// we want to ensure that only these fields are being updated - password should never be updated via this route
 	userFromDB.Email = receivedUser.Email
-	userFromDB.ChangePasswordRequired = receivedUser.ChangePasswordRequired
 	userFromDB.Lang = receivedUser.Lang
 
 	return userRepositoryImpl.UpdateUser(&userFromDB)
+}
+
+// updatePassword only updates the password for a specific user. This should not be accessible via an HTTP call and should remain private and internal
+func (u *UserService) updatePassword(email string, newPassword string, changePasswordRequired bool) error {
+	userFromDB, err := userRepositoryImpl.GetUserByEmail(email)
+	if err != nil {
+		return errors.New("there was an error retrieving the user")
+	}
+
+	userFromDB.Password = newPassword
+	userFromDB.ChangePasswordRequired = changePasswordRequired
+
+	if status := userRepositoryImpl.UpdateUser(&userFromDB); status.Status == http.StatusInternalServerError {
+		return errors.New("there was an error updating the user password")
+	}
+
+	return nil
 }
 
 func (u *UserService) ChangePassword(email string, tempPassword string, newPassword string) models.HTTPStatus {
@@ -79,12 +95,11 @@ func (u *UserService) ChangePassword(email string, tempPassword string, newPassw
 	if err != nil {
 		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: err.Error()}
 	}
-	userFromDB.Password = hashedPassword
-	userFromDB.ChangePasswordRequired = false
 
-	if httpStatus := u.UpdateUser(userFromDB); httpStatus.Status != http.StatusOK {
-		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "there was an error updating the user"}
+	if err := u.updatePassword(email, hashedPassword, false); err != nil {
+		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "there was an error updating the password"}
 	}
+
 	return models.HTTPStatus{Status: http.StatusOK, Message: "updated password"}
 }
 
@@ -245,7 +260,7 @@ func isEmailValid(email string) bool {
 func hashAndSalt(password string) (string, error) {
 	hash, err := bcrypt.GenerateFromPassword([]byte(password), cost)
 	if err != nil {
-		return "", errors.New("Could not Hash password")
+		return "", errors.New("could not hash password")
 	}
 	return string(hash), nil
 }
