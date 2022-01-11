@@ -36,7 +36,7 @@ func CreateServer() {
 	e.Use(middleware.LoggerWithConfig(middleware.LoggerConfig{
 		Format:           "INFO: ${time_custom} HTTP_METHOD:${method} URI:${uri} HTTP_CODE:${status}\n",
 		Output:           logger.LogFileRef,
-		CustomTimeFormat: "2006/01/15 15:04:05",
+		CustomTimeFormat: "2006/01/02 15:04:05",
 	}))
 	defer logger.CloseLogFile()
 

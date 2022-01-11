@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"net/http"
+	"os"
 
 	"github.com/labstack/echo/v4"
 
@@ -70,8 +71,18 @@ func (u *UserController) SaveCrowdsourcedUser(e echo.Context) error {
 	cookie.Value = tokenString
 	cookie.HttpOnly = true // not accessible by javascript
 	cookie.Secure = true   // sent over https only
-	// cookie.Domain = "psharplab.campus.mcgill.ca" // only accept cookies from same domain
+
+	env, exists := os.LookupEnv("ENV")
+	if exists {
+		if env == "DEV" {
+			cookie.Domain = "localhost"
+		} else if env == "PROD" {
+			cookie.Domain = "psharplab.campus.mcgill.ca"
+		}
+	}
+
 	cookie.SameSite = http.SameSiteStrictMode
+
 	e.SetCookie(cookie)
 
 	axonlogger.InfoLogger.Println("user registered with set cookie", crowdsourcedUser.ParticipantID)
