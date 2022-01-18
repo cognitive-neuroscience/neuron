@@ -22,6 +22,7 @@ var CrowdSourcedUserSchema = `
 		study_id INT UNSIGNED NOT NULL CHECK(study_id != ""),
 		register_date DATETIME NOT NULL,
 		completion_code VARCHAR(255) DEFAULT "",
+		lang VARCHAR(100) NOT NULL DEFAULT '',
 		PRIMARY KEY (participant_id, study_id),
 		FOREIGN KEY (study_id) REFERENCES studies(id)
 	);
@@ -43,4 +44,5 @@ type CrowdSourcedUser struct {
 	StudyID        uint      `json:"studyId"`
 	RegisterDate   time.Time `json:"registerDate"`
 	CompletionCode string    `json:"completionCode"`
+	Lang           string    `json:"lang"`
 }

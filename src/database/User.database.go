@@ -58,13 +58,14 @@ func (u *UserRepository) SaveUser(user *models.User) (operationStatus models.HTT
 
 func (u *UserRepository) SaveCrowdsourcedUser(crowdsourcedUser *models.CrowdSourcedUser) models.HTTPStatus {
 	db := db.DB
-	var saveCrowdsourcedUserQuery = `INSERT INTO crowdsourced_users (participant_id, study_id, register_date, completion_code) VALUES (?, ?, ?, ?);`
+	var saveCrowdsourcedUserQuery = `INSERT INTO crowdsourced_users (participant_id, study_id, register_date, completion_code, lang) VALUES (?, ?, ?, ?, ?);`
 	_, err := db.Exec(
 		saveCrowdsourcedUserQuery,
 		crowdsourcedUser.ParticipantID,
 		crowdsourcedUser.StudyID,
 		time.Now().UTC(),
 		crowdsourcedUser.CompletionCode,
+		crowdsourcedUser.Lang,
 	)
 	if err != nil {
 		axonlogger.ErrorLogger.Println("Error saving crowdsourced user into DB", err)
@@ -94,7 +95,7 @@ func (u *UserRepository) RegisterCrowdsourcedUserCompletion(participantId string
 
 func (u *UserRepository) GetCrowdsourcedUserById(id string, studyId uint) (models.CrowdSourcedUser, error) {
 	db := db.DB
-	var getCrowdsourcedUser = `SELECT participant_id, study_id, register_date, completion_code FROM crowdsourced_users WHERE participant_id = ? AND study_id = ?;`
+	var getCrowdsourcedUser = `SELECT participant_id, study_id, register_date, completion_code, lang FROM crowdsourced_users WHERE participant_id = ? AND study_id = ?;`
 	crowdsourcedUser := models.CrowdSourcedUser{}
 	rows, err := db.Query(getCrowdsourcedUser, id, studyId)
 	if err != nil {
@@ -108,6 +109,7 @@ func (u *UserRepository) GetCrowdsourcedUserById(id string, studyId uint) (model
 			&crowdsourcedUser.StudyID,
 			&crowdsourcedUser.RegisterDate,
 			&crowdsourcedUser.CompletionCode,
+			&crowdsourcedUser.Lang,
 		); err != nil {
 			axonlogger.ErrorLogger.Println("Could not scan rows when retrieving crowdsourced user", err)
 			return crowdsourcedUser, errors.New("there was an error retrieving the user")
@@ -124,7 +126,7 @@ func (u *UserRepository) GetCrowdSourcedUsersByStudyId(studyId uint) ([]models.C
 	db := db.DB
 
 	crowdsourcedUsers := []models.CrowdSourcedUser{}
-	var getCrowdSourcedUsersByStudyIdQuery = `SELECT participant_id, study_id, register_date, completion_code FROM crowdsourced_users WHERE study_id = ?;`
+	var getCrowdSourcedUsersByStudyIdQuery = `SELECT participant_id, study_id, register_date, completion_code, lang FROM crowdsourced_users WHERE study_id = ?;`
 	rows, err := db.Query(getCrowdSourcedUsersByStudyIdQuery, studyId)
 	if err != nil {
 		axonlogger.ErrorLogger.Println("There was an error getting users from the DB", err)
@@ -138,6 +140,7 @@ func (u *UserRepository) GetCrowdSourcedUsersByStudyId(studyId uint) ([]models.C
 			&crowdsourcedUser.StudyID,
 			&crowdsourcedUser.RegisterDate,
 			&crowdsourcedUser.CompletionCode,
+			&crowdsourcedUser.Lang,
 		); err != nil {
 			axonlogger.ErrorLogger.Println("Could not scan rows when retrieving users", err)
 			return crowdsourcedUsers, errors.New("there was an error retrieving users")

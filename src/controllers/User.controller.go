@@ -86,9 +86,7 @@ func (u *UserController) SaveCrowdsourcedUser(e echo.Context) error {
 	e.SetCookie(cookie)
 
 	axonlogger.InfoLogger.Println("user registered with set cookie", crowdsourcedUser.ParticipantID)
-	return common.SendHTTPOkWithBody(e, models.CrowdSourcedUser{
-		ParticipantID: crowdsourcedUser.ParticipantID,
-	})
+	return common.SendHTTPOkWithBody(e, crowdsourcedUser)
 }
 
 func (u *UserController) GetCrowdSourcedUsersByStudyId(e echo.Context) error {
