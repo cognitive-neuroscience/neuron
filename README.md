@@ -174,7 +174,7 @@ The timerConfig property should be set if you want to convert the slide into a t
 
 Questionnaire config files are used to describe the questions included in the online form.
 
-Task config files take this form:
+Questionnaire config files take this form:
 ```
 {
   "title": "Some title",
