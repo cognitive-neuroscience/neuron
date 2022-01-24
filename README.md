@@ -240,7 +240,7 @@ Example:
 
 <img width="618" alt="Screen Shot 2022-01-23 at 11 02 52 PM" src="https://user-images.githubusercontent.com/26612023/150736658-d29f2bd3-7215-4137-bb51-89ec0f393991.png">
 
-#### 2. MultiplChoiceSelect
+#### 2. MultipleChoiceSelect
 
 ```
 {
@@ -287,6 +287,13 @@ Example:
 
 
 
+#### 4. FreeTextResponse
+
+#### 5. DisplayText (decorative, does not accept input)
+
+#### 6. Divider (decorative, does not accept input)
+
+#### 7. Slider
 
 
 
