@@ -13,6 +13,8 @@ Tasks, questionnaires, and display slides all utilize JSON config files in order
 
 #### Overview
 
+Task config files are used to describe sharplab tasks. These include a display component that can display instructions to the participant, and task specific components to run the actual task itself.
+
 Task config files take this form:
 ```
 {
@@ -22,6 +24,8 @@ Task config files take this form:
       "component": "DISPLAYCOMPONENT",
       "content": {
         "title": "Some example title",
+        "subtitle": "Some example subtitle",
+        "timerConfig": {},
         "sections": [
           {
             "sectionType": "text",
@@ -43,8 +47,10 @@ Task config files take this form:
 - The **config** property is used for when we want to counterbalance different groups of participants.
 - The **metadata** property is an array that holds each slide in order. In the above example, we are showing a display slide followed by the digit span task.
   - The **component** property is used on the frontend and tells the code which component to render.
-  - The **content** property holds the text/image properties of a display component. More info on this later.
+  - The **content** property holds the text/image properties of a display component. More info on this below.
     - The **title** property specifies a title for the top of the page
+    - The **subtitle** property specifies a subtitle under the title
+    - The **timerConfig** property indicates values to set to make the slide act as a timer. More info on this below
     - The **sections** property is an array that holds an ordered list of all the content to be rendered for a display slide
   - The **config** property within metadata is used for components that render a task (digit span, stroop, nback, etc). The config tells the frontend to run the game with specific configurations such as max response time, feedback duration, and other necessary inputs.
 
@@ -52,7 +58,7 @@ Task config files take this form:
 
 Most likely, the use case for editing these config files is to modify/create views to display to the participant within a task. This is the purpose of the **display component**. There are a few possible configurations that are supported.
 
-#### 1.
+#### 1. Text
 
 ```
 {
@@ -74,9 +80,18 @@ Most likely, the use case for editing these config files is to modify/create vie
   ]
 }
 ```
-The first is the most basic example. The property ```"sectionType": "text"``` indicates that text will be rendered. Set the required text under the ```textContent``` property. 
+The first is the most basic example. The property ```"sectionType": "text"``` indicates that text will be rendered. Set the desired text for the ```textContent``` property.
+```textContent``` supports french/english language translations as well. To add french translations, the textContent should be given en and fr properties:
+```
+{
+  "textContent": {
+    "en": "hello world",
+    "fr": "bonjour le monde"
+  }
+}
+```
 
-#### 2.
+#### 2. Images
 
 ```
 {
@@ -88,9 +103,10 @@ The first is the most basic example. The property ```"sectionType": "text"``` in
         "title": "Some example title",
         "sections": [
           {
-            "sectionType": "image-horizontal",
-            "textContent": "example text content"
-          }
+              "sectionType": "image-horizontal", // possible values are: "image-horizontal", "image-square", "image-small",
+              "imageAlignment": "left", // possible values are: "left", "center", "right"
+              "imagePath": "/assets/images/instructions/fingertapping/index-finger-banner.png"
+          },
         ]
       }
     },
@@ -98,9 +114,187 @@ The first is the most basic example. The property ```"sectionType": "text"``` in
   ]
 }
 ```
+SectionType should be set to image-horizontal, image-square, or image-small if you want to render an image.
+The imageAlignment property should be set to left, center, or right. It specifies whether the image should be left, center, or right aligned respectively.
+The imagePath property must be set to reference the desired image.
+Note: the image must be uploaded in the frontend in order to reference them via an imagePath
+
+#### Example of image-horizontal
+
+<img width="1345" alt="Screen Shot 2022-01-23 at 10 02 54 PM" src="https://user-images.githubusercontent.com/26612023/150730262-395aa275-25ad-4f06-b0de-c6d2527de5f3.png">
+
+#### Exanple of image-square
+
+<img width="1345" alt="Screen Shot 2022-01-23 at 10 07 33 PM" src="https://user-images.githubusercontent.com/26612023/150730645-740bd058-f3e3-4d7d-aecb-e77024e84270.png">
+
+#### Example of image-small
+
+(in this case, the "3" and "8" are images)
+
+<img width="1345" alt="Screen Shot 2022-01-23 at 10 11 48 PM" src="https://user-images.githubusercontent.com/26612023/150731096-4f675910-a544-452b-9941-064d4976f27d.png">
+
+#### 3. Timer
+
+```
+{
+    "component": "DISPLAYCOMPONENT",
+    "content": {
+        "title": {
+            "en": "Get ready!",
+            "fr": "Sois prêt!"
+        },
+        "timerConfig": {
+            "timer": 10000,
+            "showTimer": true,
+            "canSkipTimer": false,
+            "skipAvailableAfterXSeconds": 5000,
+            "countDown": true
+        },
+        "sections": [
+            {
+                "sectionType": "image-horizontal",
+                "imagePath": "/assets/images/instructions/smileyface/countdown.png"
+            }
+        ]
+    }
+},
+```
+The timerConfig property should be set if you want to convert the slide into a timer. This can be useful if you want the participants to wait a certain amount of time before continuing on to the next slide.
+ - the **timer** property is the amount of time to wait in milliseconds.
+ - the **showTimer** property indicates whether to show the numbers counting down or not
+ - the **canSkipTimer** property indicates whether the participant is allowed to skip to the next section
+ - the **countDown** property set to true will have the timer count down, and false will have it counting up
+ - the **skipAvailableAfterXSeconds** works with the ```canSkipTimer: true``` property. Setting this property to a specific number will allow the participant to skip to the next slide only after that number of seconds has elapsed.
+
 ---
 
 ### Questionnaires
+
+#### Overview
+
+Questionnaire config files are used to describe the questions included in the online form.
+
+Task config files take this form:
+```
+{
+  "title": "Some title",
+  "questions": [
+    "questionType": "input", // possible values: "multipleChoiceSelect", "radiobuttons", "freeTextResponse", "displayText", "divider", "input", "slider"
+    "title": "Age question",
+    "textContent": "what is your age?"
+    "validation": {
+      "required":true,
+      "isNumeric":true,
+      "min":18
+    },
+    "key":"age"
+  ]
+}
+```
+ - The **title** property represents the name of the form displayed to the participant
+ - The **questions** property is an array of questions rendered to the participant
+     - The **questionType** property is the type of input to be rendered. Possible options are "multipleChoiceSelect", "radiobuttons", "freeTextResponse", "displayText", "divider", "input", and "slider"
+     - The **title** property is the title of that specific question
+     - The **textContent** property is the text content for that specific question
+     - The **validation** property is a configuration that allows you to apply specific validation rules to the rendered question
+ - The **key** property is a string that is used as the identifier for this specific question. This is also the value that will be used for this question when downloading the spreadsheet data for this questionnaire. In the above example, the spreadsheet would say "age" along with all participant responses. _This must be unique._
+
+Different questionTypes have different properties to set. More info on that below.
+
+#### 1. Input
+
+```
+{
+  "title": "Some title",
+  "questions": [
+    "questionType": "input",
+    "title": {
+      "en": "what is your age?",
+      "fr": "quel âge as-tu?"
+    },
+    "validation": {
+      "required":true,
+      "isNumeric":true,
+      "min":18
+    },
+    "key":"age"
+  ]
+}
+```
+The most basic example is a input with ```"questionType": "input"```. This renders a basic textbox that allows the user to type a response.
+You can apply certain validations:
+ - ```required: true``` makes it so that the question must be answered
+ - ```isNumeric: true``` makes it so that the question must be answered with a number
+ - ```min: 18``` makes it so that the number entered must be at least 18
+ - ```max: 80``` makes it so that the number entered must be at most 80
+ - ```minLength: 20``` makes is so that the response must be at least 20 characters
+ - ```maxLength: 100``` makes it so that the response must be at most 100 characters
+
+Note that all questionnaires accept french translations for the title and textContent.
+
+Example:
+
+<img width="618" alt="Screen Shot 2022-01-23 at 11 02 52 PM" src="https://user-images.githubusercontent.com/26612023/150736658-d29f2bd3-7215-4137-bb51-89ec0f393991.png">
+
+#### 2. MultiplChoiceSelect
+
+```
+{
+  "title": "Some title",
+  "questions": [
+    "questionType": "multipleChoiceSelect",
+    "title": {
+      "en": "What sex were you assigned at birth?",
+      "fr": "quel est ton sexe?"
+    },
+    "validation": {
+        "required": true
+    },
+    "key": "sex",
+    "multipleChoiceOptions": [
+      {
+        "label": {
+          "en": "Female",
+          "fr": "Femelle"
+        },
+        "value": "female"
+      },
+      {
+        "label": {
+          "en": "Male",
+          "fr": "Mâle"
+        },
+        "value": "male"
+      }
+    ]
+  ]
+}
+```
+This question type renders a select. This requires that the user select one option out of multiple possibilities.
+For ```"questionType": "multipleChoiceSelect"```, you need to provide multiple choice options. In the above example, the multiple choice options are "Female" and "Male"
+
+Note that french translations are supported for label values.
+
+Example:
+
+<img width="642" alt="Screen Shot 2022-01-23 at 11 10 48 PM" src="https://user-images.githubusercontent.com/26612023/150737591-257b84d9-180e-4ba5-9188-5cc0df4bef29.png">
+
+#### 3. Radiobuttons
+
+
+
+
+
+
+
+
+
+// TODO finish this
+
+
+
+
+
 
 ---
 
