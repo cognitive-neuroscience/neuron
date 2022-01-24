@@ -179,15 +179,19 @@ Questionnaire config files take this form:
 {
   "title": "Some title",
   "questions": [
-    "questionType": "input", // possible values: "multipleChoiceSelect", "radiobuttons", "freeTextResponse", "displayText", "divider", "input", "slider"
-    "title": "Age question",
-    "textContent": "what is your age?"
-    "validation": {
-      "required":true,
-      "isNumeric":true,
-      "min":18
+    {
+      "questionType": "input", // possible values: "multipleChoiceSelect", "radiobuttons", "freeTextResponse", "displayText", "divider", "input", "slider"
+      "title": "Age question",
+      "textContent": "what is your age?"
+      "validation": {
+        "required":true,
+        "isNumeric":true,
+        "min":18
+      },
+      "key":"age"
     },
-    "key":"age"
+    { ... },
+    ...
   ]
 }
 ```
