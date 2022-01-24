@@ -5,14 +5,108 @@
 ## SQL Config Files
 
 Neuron runs on JSON config files in order to populate views for the user. This allows a high degree of flexibility when editing specific tasks.
-
 Tasks, questionnaires, and display slides all utilize JSON config files in order to populate the view.
+
+---
 
 ### Tasks
 
+#### Overview
+
+Task config files take this form:
+```
+{
+  "config": {},
+  "metadata": [
+    {
+      "component": "DISPLAYCOMPONENT",
+      "content": {
+        "title": "Some example title",
+        "sections": [
+          {
+            "sectionType": "text",
+            "textContent": "example text content"
+          }
+        ]
+      }
+    },
+    {
+      "component": "DIGITSPANCOMPONENT",
+      "config": {
+        ...
+      }
+    }
+  ]
+}
+```
+
+- The **config** property is used for when we want to counterbalance different groups of participants.
+- The **metadata** property is an array that holds each slide in order. In the above example, we are showing a display slide followed by the digit span task.
+  - The **component** property is used on the frontend and tells the code which component to render.
+  - The **content** property holds the text/image properties of a display component. More info on this later.
+    - The **title** property specifies a title for the top of the page
+    - The **sections** property is an array that holds an ordered list of all the content to be rendered for a display slide
+  - The **config** property within metadata is used for components that render a task (digit span, stroop, nback, etc). The config tells the frontend to run the game with specific configurations such as max response time, feedback duration, and other necessary inputs.
+
+#### Useful JSON values for the Display Component
+
+Most likely, the use case for editing these config files is to modify/create views to display to the participant within a task. This is the purpose of the **display component**. There are a few possible configurations that are supported.
+
+#### 1.
+
+```
+{
+  "config": {},
+  "metadata": [
+    {
+      "component": "DISPLAYCOMPONENT",
+      "content": {
+        "title": "Some example title",
+        "sections": [
+          {
+            "sectionType": "text",
+            "textContent": "example text content"
+          }
+        ]
+      }
+    },
+    ...
+  ]
+}
+```
+The first is the most basic example. The property ```"sectionType": "text"``` indicates that text will be rendered. Set the required text under the ```textContent``` property. 
+
+#### 2.
+
+```
+{
+  "config": {},
+  "metadata": [
+    {
+      "component": "DISPLAYCOMPONENT",
+      "content": {
+        "title": "Some example title",
+        "sections": [
+          {
+            "sectionType": "image-horizontal",
+            "textContent": "example text content"
+          }
+        ]
+      }
+    },
+    ...
+  ]
+}
+```
+---
+
 ### Questionnaires
 
+---
+
 ### Display Slides
+
+---
 
 ## Download and Install Go
 ### Linux, macOS, and FreeBSD tarballs
