@@ -15610,7 +15610,11 @@ UPDATE tasks SET
             },
             {
                 "header": "",
-                "textContent": "If you haven''t already, please also contact us (sharplab.neuro@mcgill.ca) to schedule your in-person session."
+                "textContent": "If you reside in <b>Montreal</b>, and you haven''t already, please also contact us (sharplab.neuro@mcgill.ca) to schedule your in-person session."
+            },
+            {
+                "header": "",
+                "textContent": "If you <b>do not</b> reside in <b>Montreal</b>, then no need to worry, you have successfully completed all the games!"
             },
             {
                 "header": "",
