@@ -13478,11 +13478,11 @@ UPDATE tasks SET
     external_url = "https://run.pavlovia.org/Sharp_lab/s_study_c_part1",
     config = '{}'
 WHERE id = 38;
--- PANAS
+-- MDMQ
 UPDATE tasks SET
     from_platform = "PSHARPLAB",
     task_type = "QUESTIONNAIRE",
-    name = "PANAS",
+    name = "MDMQ",
     description = "",
     external_url = "",
     config = '{
@@ -14214,6 +14214,51 @@ UPDATE tasks SET
                         "value": "Not sure"
                     }
                 ]
+            },
+            {
+                "questionType": "multipleChoiceSelect",
+                "title": "Would you like to be contacted by email about future opportunities to participate in online research?",
+                "key": "futureOnlineResearch",
+                "validation": {
+                    "required": true
+                },
+                "multipleChoiceOptions": [
+                    {
+                        "label": "Yes",
+                        "value": "Yes"
+                    },
+                    {
+                        "label": "No",
+                        "value": "No"
+                    }
+                ]
+            },
+            {
+                "questionType": "freeTextResponse",
+                "title": "If you answered yes, and would also be willing to receive a phone call, please include it here:",
+                "key": "futureOnlineResearchPhone",
+                "label": "eg. 123-456-7890",
+                "validation": {
+                    "required": false
+                }
+            },
+            {
+                "questionType": "multipleChoiceSelect",
+                "title": "Would you like to receive updates about the findings from this study?",
+                "key": "updateFindings",
+                "validation": {
+                    "required": true
+                },
+                "multipleChoiceOptions": [
+                    {
+                        "label": "Yes",
+                        "value": "Yes"
+                    },
+                    {
+                        "label": "No",
+                        "value": "No"
+                    }
+                ]
             }
         ]
     }'
@@ -14883,6 +14928,7 @@ UPDATE tasks SET
                 "validation": {
                     "required": true
                 },
+                "allowMultipleSelections": true,
                 "multipleChoiceOptions": [{
                     "label": "Alcohol",
                     "value": "Alcohol"
@@ -16119,6 +16165,7 @@ UPDATE tasks SET
                 "validation": {
                     "required": true
                 },
+                "allowMultipleSelections": true,
                 "multipleChoiceOptions": [{
                     "label": "Alcohol",
                     "value": "Alcohol"
@@ -16586,7 +16633,7 @@ UPDATE tasks SET
             },
             {
                 "questionType": "multipleChoiceSelect",
-                "title": "We expect to reach people from many different cultural and racial backgrounds with this internet study. To which group do you belong? (Select all that apply)",
+                "title": "To which group do you belong or identify with? (Select all that apply)",
                 "key": "background",
                 "validation": {
                     "required": true
@@ -16846,3 +16893,91 @@ UPDATE tasks SET
         ]
     }'
 WHERE id = 52;
+-- PLT (PAVLOVIA)
+UPDATE tasks SET
+    from_platform = "PAVLOVIA",
+    task_type = "EXPERIMENTAL",
+    name = "PLT",
+    description = "This task is a probablistic learning task based on the reinforcement learning model. The current version is based on the paper by Frank, Woroch and Curran. (2005). Neuron, 47(4), 495-501.",
+    external_url = "https://run.pavlovia.org/Sharp_lab/probabilistic-learning-task/html",
+    config = '{}'
+WHERE id = 53;
+-- Stress Study: Post Manipulation Check In
+UPDATE tasks SET
+    from_platform = "PSHARPLAB",
+    task_type = "QUESTIONNAIRE",
+    name = "Stress Study: Post Manipulation Check In",
+    description = "",
+    external_url = "",
+    config = '{
+        "title":"Questionnaire",
+        "questions": [
+            {
+                "questionType": "displayText",
+                "title": "Please consider how you are feeling in this current moment when answering the following questions. Drag the marker to the appropriate position on the 0-100 scale with 0 being \\"not feeling this at all\\" and 100 being \\"extremely feeling this\\"."
+            },
+            {
+                "questionType": "displayText",
+                "title": "Use your mouse to drag the marker in order to select your answer"
+            },
+            {
+                "questionType": "slider",
+                "title": "How stressed do you feel?",
+                "validation": {
+                    "required":true
+                },
+                "key": "How stressed do you feel?",
+                "legend": [
+                    "Not feeling this at all",
+                    "Extremely feeling this"
+                ]
+            },
+            {
+                "questionType": "slider",
+                "title": "How pleased do you feel?",
+                "validation": {
+                    "required":true
+                },
+                "key": "How pleased do you feel?",
+                "legend": [
+                    "Not feeling this at all",
+                    "Extremely feeling this"
+                ]
+            },
+            {
+                "questionType": "slider",
+                "title": "How calm do you feel?",
+                "validation": {
+                    "required":true
+                },
+                "key": "How calm do you feel?",
+                "legend": [
+                    "Not feeling this at all",
+                    "Extremely feeling this"
+                ]
+            }
+        ]
+    }'
+WHERE id = 54;
+-- Stress Study Wait Slide
+UPDATE tasks SET
+    from_platform = "PSHARPLAB",
+    task_type = "INFO_DISPLAY",
+    name = "Stress Study Wait Slide",
+    description = "",
+    external_url = "",
+    config = '{
+        "title": "Thank you for all your participation so far!",
+        "sections": [
+            {
+                "textContent": "Once you have reached this slide, please <b>wait</b> and <b>do not</b> press any buttons until you are instructed by the researcher to proceed to the next task."
+            },
+            {
+                "textContent": "The researcher will return shortly."
+            }
+        ],
+        "buttons": {
+            "displayContinueButton": true
+        }
+    }'
+WHERE id = 55;
