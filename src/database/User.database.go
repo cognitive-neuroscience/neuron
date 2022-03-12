@@ -191,6 +191,7 @@ func (u *UserRepository) UpdateStudyUser(studyUser models.StudyUser) models.HTTP
 		axonlogger.ErrorLogger.Println("There was an error updating the study user", err)
 		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "there was an update error"}
 	}
+	axonlogger.InfoLogger.Println("Successfully updated study user:", studyUser.CurrentTaskIndex, studyUser.DueDate, studyUser.HasAcceptedConsent, studyUser.CompletionCode)
 	return models.HTTPStatus{Status: http.StatusOK, Message: "successfully updated"}
 }
 

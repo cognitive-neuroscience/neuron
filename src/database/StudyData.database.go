@@ -47,6 +47,7 @@ func (s *StudyDataRepository) UploadTaskData(participantData models.ParticipantD
 		}
 	}
 
+	axonlogger.InfoLogger.Println("Successfully uploaded task data:", participantData.UserID, participantData.StudyID, participantData.TaskOrder, participantData.Data)
 	return models.HTTPStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)}
 }
 
