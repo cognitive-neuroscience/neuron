@@ -49,7 +49,8 @@ func (s *StudyDataRepository) UploadTaskData(participantData models.ParticipantD
 	}
 
 	axonlogger.InfoLogger.Println("Successfully uploaded task data:", participantData.UserID, participantData.StudyID, participantData.TaskOrder)
-	axonlogger.InfoLogger.Println(json.MarshalIndent(participantData.Data, "", "\t"))
+	marshalledJSON, _ := json.MarshalIndent(participantData, "", "\t")
+	axonlogger.InfoLogger.Println(string(marshalledJSON))
 	return models.HTTPStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)}
 }
 
