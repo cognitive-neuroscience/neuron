@@ -2,6 +2,7 @@ package database
 
 import (
 	"database/sql"
+	"encoding/json"
 	"errors"
 	"net/http"
 	"strings"
@@ -47,7 +48,8 @@ func (s *StudyDataRepository) UploadTaskData(participantData models.ParticipantD
 		}
 	}
 
-	axonlogger.InfoLogger.Println("Successfully uploaded task data:", participantData.UserID, participantData.StudyID, participantData.TaskOrder, participantData.Data)
+	axonlogger.InfoLogger.Println("Successfully uploaded task data:", participantData.UserID, participantData.StudyID, participantData.TaskOrder)
+	axonlogger.InfoLogger.Println(json.MarshalIndent(participantData.Data, "", "\t"))
 	return models.HTTPStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)}
 }
 
