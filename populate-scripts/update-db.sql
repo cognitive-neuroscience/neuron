@@ -13343,11 +13343,11 @@ UPDATE tasks SET
             {
                 "questionType": "radiobuttons",
                 "radiobuttonPresentation": "vertical",
-                "title": "Major change in church activity (a lot more or less than usual)",
+                "title": "Major change in religious activity (a lot more or less than usual)",
                 "validation": {
                     "required": true
                 },
-                "key": "Major change in church activity (a lot more or less than usual)",
+                "key": "Major change in religious activity (a lot more or less than usual)",
                 "multipleChoiceOptions": [
                     {"label": "Yes", "value": "yes"},
                     {"label": "No", "value": "no"}
@@ -15528,7 +15528,7 @@ UPDATE tasks SET
             {
                 "header": "",
                 "indent": 1,
-                "textContent": "1. You can take breaks if you want to. We simply ask that you wait until the end of a game or of a questionnaire, otherwise your data will be lost."
+                "textContent": "1. You can take breaks if you want to. We simply ask that you <b>wait until the end of a game or of a questionnaire</b>, otherwise your data will be lost."
             },
             {
                 "header": "",
@@ -15548,7 +15548,7 @@ UPDATE tasks SET
             {
                 "header": "",
                 "indent": 1,
-                "textContent": "3. We also ask that you do the games when you are feeling ''ON'', i.e. when the PD medications are in effect (typically best about 1-2 hours after your last dose)."
+                "textContent": "3. We also ask that you do the games when you are feeling ''ON'', i.e. when the PD medications are in effect (typically best about 1-2 hours after your last dose). If you don''t take PD medications, then please choose the time that works best for you."
             },
             {
                 "header": "",
@@ -15849,6 +15849,10 @@ UPDATE tasks SET
                     "value": "$50,000 or more, but less than $100,000"
                 },
                 {
+                    "label": "$100,000 or more, but less than $150,000",
+                    "value": "$100,000 or more, but less than $150,000"
+                },
+                {
                     "label": "$150,000 or more",
                     "value": "$150,000 or more"
                 },
@@ -16137,6 +16141,10 @@ UPDATE tasks SET
                     "required": true
                 },
                 "multipleChoiceOptions": [{
+                    "label": "None",
+                    "value": "None"
+                },
+                {
                     "label": "1",
                     "value": "1"
                 },
@@ -16250,6 +16258,10 @@ UPDATE tasks SET
                 {
                     "label": "Quit >25 years ago",
                     "value": "Quit >25 years ago"
+                },
+                {
+                    "label": "Does not smoke",
+                    "value": "Does not smoke"
                 }
                 ]
             },
@@ -16633,7 +16645,78 @@ UPDATE tasks SET
             },
             {
                 "questionType": "multipleChoiceSelect",
-                "title": "To which group do you belong or identify with? (Select all that apply)",
+                "title": "To which group do you culturally belong or identify with? (Select all that apply)",
+                "key": "background",
+                "validation": {
+                    "required": true
+                },
+                "allowMultipleSelections": true,
+                "multipleChoiceOptions": [
+                    {
+                        "label": "White / Caucasian",
+                        "value": "White/Caucasian"
+                    },
+                    {
+                        "label": "French Canadian",
+                        "value": "French Canadian"
+                    },
+                    {
+                        "label": "First Nations",
+                        "value": "First Nations"
+                    },
+                    {
+                        "label": "Hispanic or Latino",
+                        "value": "Hispanic or Latino"
+                    },
+                    {
+                        "label": "African / Carribean / Afro American",
+                        "value": "African/Carribean/Afro American"
+                    },
+                    {
+                        "label": "North African",
+                        "value": "North African"
+                    },
+                    {
+                        "label": "Middle Eastern",
+                        "value": "Middle Eastern"
+                    },
+                    {
+                        "label": "Chinese",
+                        "value": "Chinese"
+                    },
+                    {
+                        "label": "South Asian (E.g. Indian, Pakistani, Sri Lankan)",
+                        "value": "South Asian"
+                    },
+                    {
+                        "label": "Southeast Asian (E.g. Filipino, Cambodian, Indonesian, Laotian, Vietnamese)",
+                        "value": "Southeast Asian"
+                    },
+                    {
+                        "label": "Japanese",
+                        "value": "Japanese"
+                    },
+                    {
+                        "label": "Korean",
+                        "value": "Korean"
+                    },
+                    {
+                        "label": "Other",
+                        "value": "Other"
+                    },
+                    {
+                        "label": "Don''t know",
+                        "value": "Don''t know"
+                    },
+                    {
+                        "label": "Prefer not to answer",
+                        "value": "Prefer not to answer"
+                    }
+                ]
+            },
+            {
+                "questionType": "multipleChoiceSelect",
+                "title": "To which ethnicity do you belong or identify with? (Select all that apply)",
                 "key": "background",
                 "validation": {
                     "required": true
@@ -16902,7 +16985,7 @@ UPDATE tasks SET
     external_url = "https://run.pavlovia.org/Sharp_lab/probabilistic-learning-task/html",
     config = '{}'
 WHERE id = 53;
--- Stress Study: Post Manipulation Check In
+-- Stress Study: Post Manipulation Check In Questionnaire
 UPDATE tasks SET
     from_platform = "PSHARPLAB",
     task_type = "QUESTIONNAIRE",
@@ -16959,7 +17042,7 @@ UPDATE tasks SET
         ]
     }'
 WHERE id = 54;
--- Stress Study Wait Slide
+-- Stress Study Wait INFO DISPLAY
 UPDATE tasks SET
     from_platform = "PSHARPLAB",
     task_type = "INFO_DISPLAY",
