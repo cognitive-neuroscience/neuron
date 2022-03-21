@@ -169,13 +169,15 @@ func (u *UserRepository) SaveStudyUser(studyUser models.StudyUser) models.HTTPSt
 		studyUser.Lang,
 	)
 	if err != nil {
-		axonlogger.ErrorLogger.Println("Error saving studyuser user into DB", err)
 		msg := "there was an error registering the study user"
 		status := http.StatusInternalServerError
 		if strings.Contains(err.Error(), "1062") {
+			axonlogger.WarningLogger.Println("Studyuser already exists", err)
 			// 1062 is a mysql DB error indicating duplicate entry exists
 			msg = "a participant with this id has already registered for this study"
 			status = http.StatusConflict
+		} else {
+			axonlogger.ErrorLogger.Println("Error saving studyuser user into DB", err)
 		}
 
 		return models.HTTPStatus{Status: status, Message: msg}
