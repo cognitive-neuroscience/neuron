@@ -1,6 +1,7 @@
 package services
 
 import (
+	"database/sql"
 	"errors"
 	"net"
 	"net/http"
@@ -52,17 +53,27 @@ func (u *UserService) SaveUser(user *models.User) models.HTTPStatus {
 }
 
 // UpdateUser updates the given user but not the password
-func (u *UserService) UpdateUser(receivedUser models.User) models.HTTPStatus {
+func (u *UserService) UpdateUser(receivedUser models.User) (models.User, models.HTTPStatus) {
 	userFromDB, err := userRepositoryImpl.GetUserById(receivedUser.ID)
 	if err != nil {
-		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "there was an error updating the user"}
+		return models.User{}, models.HTTPStatus{Status: http.StatusInternalServerError, Message: "there was an error updating the user"}
 	}
 
 	// we want to ensure that only these fields are being updated - password should never be updated via this route
 	userFromDB.Email = receivedUser.Email
 	userFromDB.Lang = receivedUser.Lang
 
-	return userRepositoryImpl.UpdateUser(&userFromDB)
+	status := userRepositoryImpl.UpdateUser(&userFromDB)
+	if status.Status == http.StatusOK {
+		user, err := u.GetUserByEmail(userFromDB.Email)
+		if err != nil {
+			axonlogger.ErrorLogger.Println("there was an error getting the user by email", err.Error())
+			return models.User{}, models.HTTPStatus{Status: http.StatusServiceUnavailable, Message: "there was an error getting the user"}
+		}
+		return user, status
+	}
+
+	return models.User{}, status
 }
 
 // updatePassword only updates the password for a specific user. This should not be accessible via an HTTP call and should remain private and internal
@@ -194,22 +205,65 @@ func (u *UserService) SaveStudyUser(studyUser models.StudyUser) models.HTTPStatu
 	return userRepositoryImpl.SaveStudyUser(studyUser)
 }
 
-func (u *UserService) UpdateStudyUser(studyUser models.StudyUser) models.HTTPStatus {
+func (u *UserService) UpdateStudyUser(studyUser models.StudyUser) (models.StudyUser, models.HTTPStatus) {
 	queriedStudyUser, err := userRepositoryImpl.GetStudyUserById(studyUser.UserID, studyUser.StudyID)
 	if err != nil {
-		axonlogger.WarningLogger.Println("Could not convert id to uint", err)
-		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "there was an update error"}
+		axonlogger.ErrorLogger.Println("Could not get the given study user", err)
+		return models.StudyUser{}, models.HTTPStatus{Status: http.StatusInternalServerError, Message: "there was an update error"}
 	}
 
 	queriedStudyUser.CompletionCode = studyUser.CompletionCode
-	queriedStudyUser.CurrentTaskIndex = studyUser.CurrentTaskIndex
 	queriedStudyUser.DueDate = studyUser.DueDate
 	queriedStudyUser.HasAcceptedConsent = studyUser.HasAcceptedConsent
 
-	return userRepositoryImpl.UpdateStudyUser(queriedStudyUser)
+	status := userRepositoryImpl.UpdateStudyUser(queriedStudyUser)
+	if status.Status == http.StatusOK {
+		studyUser, err := userRepositoryImpl.GetStudyUserById(studyUser.UserID, studyUser.StudyID)
+		if err != nil {
+			axonlogger.ErrorLogger.Println("there was an error getting the study user", err.Error())
+			return models.StudyUser{}, models.HTTPStatus{Status: http.StatusServiceUnavailable, Message: "there was an error getting the user"}
+		}
+		return studyUser, status
+	}
+
+	return models.StudyUser{}, status
 }
 
-func (s *UserService) GetAllStudyUsersByUserId(userId string) ([]models.StudyUser, error) {
+func (u *UserService) IncrementStudyUserCurrentTaskIndex(studyUser models.StudyUser) (models.StudyUser, models.HTTPStatus) {
+	queriedStudyUser, err := userRepositoryImpl.GetStudyUserById(studyUser.UserID, studyUser.StudyID)
+	if err != nil {
+		axonlogger.ErrorLogger.Println("Could not get the given study user", err)
+		return models.StudyUser{}, models.HTTPStatus{Status: http.StatusInternalServerError, Message: "there was an update error"}
+	}
+
+	_, queryErr := studyDataRepositoryImpl.GetTaskDataByUserForStudyTask(
+		queriedStudyUser.StudyID,
+		convertUintToString(queriedStudyUser.UserID),
+		queriedStudyUser.CurrentTaskIndex,
+	)
+
+	// the increment should be prevented if there is no participant data in the database for this index
+	if queryErr == sql.ErrNoRows {
+		axonlogger.WarningLogger.Println("preventing invalid increment", queriedStudyUser)
+		return models.StudyUser{}, models.HTTPStatus{Status: http.StatusBadRequest, Message: "cannot move to next task"}
+	}
+	
+	queriedStudyUser.CurrentTaskIndex = queriedStudyUser.CurrentTaskIndex + 1
+
+	status := userRepositoryImpl.UpdateStudyUser(queriedStudyUser)
+	if status.Status == http.StatusOK {
+		studyUser, err := userRepositoryImpl.GetStudyUserById(studyUser.UserID, studyUser.StudyID)
+		if err != nil {
+			axonlogger.ErrorLogger.Println("there was an error getting the study user", err.Error())
+			return models.StudyUser{}, models.HTTPStatus{Status: http.StatusServiceUnavailable, Message: "there was an error getting the user"}
+		}
+		return studyUser, status
+	}
+
+	return models.StudyUser{}, status
+}
+
+func (u *UserService) GetAllStudyUsersByUserId(userId string) ([]models.StudyUser, error) {
 	parsedUserId, parsedUserIdErr := convertStringToUint8(userId)
 
 	if parsedUserIdErr != nil {
@@ -217,15 +271,6 @@ func (s *UserService) GetAllStudyUsersByUserId(userId string) ([]models.StudyUse
 		return []models.StudyUser{}, errors.New("there was an error getting study users")
 	}
 	return userRepositoryImpl.GetAllStudyUsersByUserId(uint(parsedUserId))
-}
-
-func (u *UserService) GetStudyUserById(userId string, studyId uint) (models.StudyUser, error) {
-	parsedUserId, err := convertStringToUint8(userId)
-	if err != nil {
-		axonlogger.WarningLogger.Println("Could not convert id to uint", err)
-		return models.StudyUser{}, errors.New("there was an error getting study users")
-	}
-	return userRepositoryImpl.GetStudyUserById(parsedUserId, studyId)
 }
 
 func (u *UserService) GetStudyUsersByStudyId(studyId string) ([]models.StudyUser, error) {

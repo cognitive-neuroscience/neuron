@@ -33,21 +33,3 @@ func (s *StudyDataController) GetTaskData(e echo.Context) error {
 	}
 	return common.SendHTTPOkWithBody(e, taskData)
 }
-
-func (s *StudyDataController) UploadFeedback(e echo.Context) error {
-	var feedback = new(models.FeedbackQuestionnaireResponse)
-	if err := e.Bind(feedback); err != nil {
-		axonlogger.WarningLogger.Println("Could not parse feedback", err)
-		return common.SendHTTPBadRequest(e)
-	}
-	return common.SendHTTPWithMessage(e, studyDataServiceImpl.UploadFeedback(feedback))
-}
-
-func (s *StudyDataController) GetFeedbackForStudyId(e echo.Context) error {
-	studyId := e.Param("studyId")
-	feedbackData, err := studyDataServiceImpl.GetFeedbackForStudyId(studyId)
-	if err != nil {
-		return common.SendHTTPWithMessage(e, models.HTTPStatus{Status: http.StatusInternalServerError, Message: err.Error()})
-	}
-	return common.SendHTTPOkWithBody(e, feedbackData)
-}

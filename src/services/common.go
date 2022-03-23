@@ -24,3 +24,7 @@ func convertStringToUint8(str string) (uint, error) {
 	parsedUint := uint(parsedUint64)
 	return parsedUint, nil
 }
+
+func convertUintToString(number uint) string {
+	return strconv.FormatUint(uint64(number), 10)
+}
