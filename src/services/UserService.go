@@ -128,7 +128,11 @@ func (u *UserService) RegisterCrowdsourcedUserCompletion(participantId string, s
 func (u *UserService) SaveCrowdsourcedUser(crowdsourcedUser *models.CrowdSourcedUser) models.HTTPStatus {
 	study, err := studyRepositoryImpl.GetStudyById(crowdsourcedUser.StudyID)
 	if err != nil {
-		return models.HTTPStatus{Status: http.StatusBadRequest, Message: "there was an error registering the participant"}
+		if err == sql.ErrNoRows {
+			return models.HTTPStatus{Status: http.StatusBadRequest, Message: "the given study code does not exist"}
+		} else {
+			return models.HTTPStatus{Status: http.StatusBadRequest, Message: "there was an error registering the participant"}
+		}
 	}
 	if study.ID == 0 {
 		axonlogger.WarningLogger.Println("the given study code does not exist")
