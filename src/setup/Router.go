@@ -39,7 +39,7 @@ func setUpStudyUserRoutes(group *echo.Group) {
 	studyUsers.GET("/:studyId", userControllerImpl.GetStudyUsersForStudy)
 	studyUsers.GET("/studies", userControllerImpl.GetAllStudyUsersForLoggedInUser)
 	studyUsers.PATCH("", userControllerImpl.UpdateStudyUser)
-	// studyUsers.GET("", userControllerImpl.GetStudyUser)
+	studyUsers.PATCH("/increment", userControllerImpl.IncrementStudyUserCurrentTaskIndex)
 	studyUsers.POST("", userControllerImpl.SaveStudyUser)
 }
 
@@ -72,8 +72,6 @@ func setUpLoginRoutes(group *echo.Group) {
 func setUpStudyDataRoutes(group *echo.Group) {
 	studyDataControllerImpl := controllers.StudyDataController{}
 	studyData := group.Group("/studydata")
-	studyData.POST("/feedback", studyDataControllerImpl.UploadFeedback)
-	studyData.GET("/feedback/:studyId", studyDataControllerImpl.GetFeedbackForStudyId)
 	studyData.POST("", studyDataControllerImpl.UploadTaskData)
 	studyData.GET("/:studyId/:taskOrder", studyDataControllerImpl.GetTaskData)
 }

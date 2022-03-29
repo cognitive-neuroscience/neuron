@@ -29,16 +29,3 @@ func (s *StudyDataService) GetTaskData(studyIdFromPath string, taskOrderFromPath
 
 	return studyDataRepositoryImpl.GetTaskData(studyId, taskOrder)
 }
-
-func (s *StudyDataService) UploadFeedback(feedback *models.FeedbackQuestionnaireResponse) models.HTTPStatus {
-	return studyDataRepositoryImpl.UploadFeedback(feedback)
-}
-
-func (s *StudyDataService) GetFeedbackForStudyId(studyIdFromPath string) ([]models.FeedbackQuestionnaireResponse, error) {
-	studyId, err := convertStringToUint8(studyIdFromPath)
-	if err != nil {
-		axonlogger.WarningLogger.Println(err)
-		return []models.FeedbackQuestionnaireResponse{}, errors.New("could not get feedback data")
-	}
-	return studyDataRepositoryImpl.GetFeedbackForStudyId(studyId)
-}

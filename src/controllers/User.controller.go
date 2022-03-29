@@ -13,40 +13,9 @@ import (
 
 type UserController struct{}
 
-// ChangePassword takes in an email, temp password, and new password and changes the password
-func (u *UserController) ChangePassword(e echo.Context) error {
-	editPasswordStruct := struct {
-		Email             string `json:"email"`
-		TemporaryPassword string `json:"temporaryPassword"`
-		NewPassword       string `json:"newPassword"`
-	}{
-		"",
-		"",
-		"",
-	}
+// CROWDSOURCED USERS
 
-	if err := e.Bind(&editPasswordStruct); err != nil {
-		axonlogger.WarningLogger.Println("Could not parse edit password details", err)
-		return common.SendHTTPBadRequest(e)
-	}
-	httpStatus := userServiceImpl.ChangePassword(editPasswordStruct.Email, editPasswordStruct.TemporaryPassword, editPasswordStruct.NewPassword)
-	return common.SendHTTPWithMessage(e, httpStatus)
-}
-
-// SaveUser saves a given user in the DB
-// this route does not require a JWT as users may be creating an account
-func (u *UserController) SaveUser(e echo.Context) error {
-	user := new(models.User)
-
-	if err := e.Bind(user); err != nil {
-		axonlogger.WarningLogger.Println("Could not parse user details", err)
-		return common.SendHTTPBadRequest(e)
-	}
-	result := userServiceImpl.SaveUser(user)
-	return common.SendHTTPWithMessage(e, result)
-}
-
-// SaveTurker saves the given turker into the DB
+// SaveTurker saves the given crowdsourced user into the DB
 func (u *UserController) SaveCrowdsourcedUser(e echo.Context) error {
 	var crowdsourcedUser = new(models.CrowdSourcedUser)
 	if err := e.Bind(crowdsourcedUser); err != nil {
@@ -99,23 +68,39 @@ func (u *UserController) GetCrowdSourcedUsersByStudyId(e echo.Context) error {
 	return common.SendHTTPOkWithBody(e, result)
 }
 
-// DeleteUserById deletes the guest with the given email
-func (u *UserController) DeleteUserById(e echo.Context) error {
-	id := e.Param("id")
-	result := userServiceImpl.DeleteGuestById(id)
-	return common.SendHTTPWithMessage(e, result)
+func (u *UserController) GetCrowdsourcedUser(e echo.Context) error {
+	id, ok := e.Get("id").(string)
+	if !ok {
+		axonlogger.ErrorLogger.Println("Could not parse id from context")
+		return common.SendHTTPStatusServiceUnavailable(e)
+	}
+	studyId := e.Param("studyId")
+
+	result, err := userServiceImpl.GetCrowdsourcedUserById(id, studyId)
+	if err != nil {
+		return common.SendHTTPStatusServiceUnavailable(e)
+	}
+	return common.SendHTTPOkWithBody(e, result)
 }
 
-// // GetStudyUser gets an individual study user grabbing the id stored in the jwt within the cookie
-// func (u *UserController) GetStudyUser(e echo.Context) error {
-// 	id := e.Get("id").(string)
-// 	result, err := userServiceImpl.GetStudyUserById(id)
-// 	if err != nil {
-// 		axonlogger.WarningLogger.Println("Could not parse id from context", err)
-// 		return common.SendHTTPBadRequest(e)
-// 	}
-// 	return common.SendHTTPOkWithBody(e, result)
-// }
+func (u *UserController) RegisterCrowdsourcedUserCompletion(e echo.Context) error {
+	// only crowdsourced users will be marked as complete
+	participantId, ok := e.Get("id").(string)
+	if !ok {
+		axonlogger.ErrorLogger.Println("Could not parse participant id from context")
+		return common.SendHTTPStatusServiceUnavailable(e)
+	}
+	studyId := e.Param("studyId")
+
+	completionCode, err := userServiceImpl.RegisterCrowdsourcedUserCompletion(participantId, studyId)
+	if err != nil {
+		axonlogger.ErrorLogger.Println("could not register completion", participantId)
+		return common.SendHTTPStatusServiceUnavailable(e)
+	}
+	return common.SendHTTPOkWithBody(e, completionCode)
+}
+
+// STUDY USERS
 
 // GetStudyUsers gets all study users by the given study id
 func (u *UserController) GetStudyUsersForStudy(e echo.Context) error {
@@ -154,14 +139,31 @@ func (u *UserController) SaveStudyUser(e echo.Context) error {
 	return common.SendHTTPWithMessage(e, result)
 }
 
+// UpdateStudyUser updates the study user with details but it DOES NOT increment task index
 func (u *UserController) UpdateStudyUser(e echo.Context) error {
 	studyUser := new(models.StudyUser)
 	if err := e.Bind(studyUser); err != nil {
 		axonlogger.WarningLogger.Println("Could not parse study user details", err)
 		return common.SendHTTPBadRequest(e)
 	}
-	return common.SendHTTPWithMessage(e, userServiceImpl.UpdateStudyUser(*studyUser))
+
+	updatedStudyUser, status := userServiceImpl.UpdateStudyUser(*studyUser)
+
+	return common.SendHTTPWithPayload(e, status, updatedStudyUser)
 }
+
+// IncrementStudyUserCurrentTaskIndex takes the given study id and increments the current task index
+func (u *UserController) IncrementStudyUserCurrentTaskIndex(e echo.Context) error {
+	studyUser := new(models.StudyUser)
+	if err := e.Bind(studyUser); err != nil {
+		axonlogger.WarningLogger.Println("Could not parse study user details", err)
+		return common.SendHTTPBadRequest(e)
+	}
+	updatedStudyUser, status := userServiceImpl.IncrementStudyUserCurrentTaskIndex(*studyUser)
+	return common.SendHTTPWithPayload(e, status, updatedStudyUser)
+}
+
+// GUESTS
 
 // SaveGuest
 func (u *UserController) SaveGuest(e echo.Context) error {
@@ -188,14 +190,56 @@ func (u *UserController) GetGuests(e echo.Context) error {
 	return common.SendHTTPOkWithBody(e, result)
 }
 
+// USERS
+
+// ChangePassword takes in an email, temp password, and new password and changes the password
+func (u *UserController) ChangePassword(e echo.Context) error {
+	editPasswordStruct := struct {
+		Email             string `json:"email"`
+		TemporaryPassword string `json:"temporaryPassword"`
+		NewPassword       string `json:"newPassword"`
+	}{
+		"",
+		"",
+		"",
+	}
+
+	if err := e.Bind(&editPasswordStruct); err != nil {
+		axonlogger.WarningLogger.Println("Could not parse edit password details", err)
+		return common.SendHTTPBadRequest(e)
+	}
+	httpStatus := userServiceImpl.ChangePassword(editPasswordStruct.Email, editPasswordStruct.TemporaryPassword, editPasswordStruct.NewPassword)
+	return common.SendHTTPWithMessage(e, httpStatus)
+}
+
+// SaveUser saves a given user in the DB
+// this route does not require a JWT as users may be creating an account
+func (u *UserController) SaveUser(e echo.Context) error {
+	user := new(models.User)
+
+	if err := e.Bind(user); err != nil {
+		axonlogger.WarningLogger.Println("Could not parse user details", err)
+		return common.SendHTTPBadRequest(e)
+	}
+	result := userServiceImpl.SaveUser(user)
+	return common.SendHTTPWithMessage(e, result)
+}
+
+// DeleteUserById deletes the guest with the given email. It is meant for guests, but is not guest specific
+func (u *UserController) DeleteUserById(e echo.Context) error {
+	id := e.Param("id")
+	result := userServiceImpl.DeleteGuestById(id)
+	return common.SendHTTPWithMessage(e, result)
+}
+
 func (u *UserController) UpdateUser(e echo.Context) error {
 	receivedUser := new(models.User)
 	if err := e.Bind(receivedUser); err != nil {
 		axonlogger.WarningLogger.Println("Could not parse user details", err)
 		return common.SendHTTPBadRequest(e)
 	}
-	result := userServiceImpl.UpdateUser(*receivedUser)
-	return common.SendHTTPWithMessage(e, result)
+	user, status := userServiceImpl.UpdateUser(*receivedUser)
+	return common.SendHTTPWithPayload(e, status, user)
 }
 
 func (u *UserController) GetUser(e echo.Context) error {
@@ -212,58 +256,3 @@ func (u *UserController) GetUser(e echo.Context) error {
 	}
 	return common.SendHTTPOkWithBody(e, result)
 }
-
-func (u *UserController) GetCrowdsourcedUser(e echo.Context) error {
-	id, ok := e.Get("id").(string)
-	if !ok {
-		axonlogger.ErrorLogger.Println("Could not parse id from context")
-		return common.SendHTTPStatusServiceUnavailable(e)
-	}
-	studyId := e.Param("studyId")
-
-	result, err := userServiceImpl.GetCrowdsourcedUserById(id, studyId)
-	if err != nil {
-		return common.SendHTTPStatusServiceUnavailable(e)
-	}
-	return common.SendHTTPOkWithBody(e, result)
-}
-
-func (u *UserController) RegisterCrowdsourcedUserCompletion(e echo.Context) error {
-	// only crowdsourced users will be marked as complete
-	participantId, ok := e.Get("id").(string)
-	if !ok {
-		axonlogger.ErrorLogger.Println("Could not parse participant id from context")
-		return common.SendHTTPStatusServiceUnavailable(e)
-	}
-	studyId := e.Param("studyId")
-
-	completionCode, err := userServiceImpl.RegisterCrowdsourcedUserCompletion(participantId, studyId)
-	if err != nil {
-		axonlogger.ErrorLogger.Println("could not register completion", participantId)
-		return common.SendHTTPStatusServiceUnavailable(e)
-	}
-	return common.SendHTTPOkWithBody(e, completionCode)
-}
-
-// // MarkAsComplete marks the given experimentUser as complete
-// func MarkAsComplete(c *fiber.Ctx) {
-
-// 	experimentUser := new(models.ExperimentUser)
-// 	if err := c.BodyParser(experimentUser); err != nil {
-// 		axonlogger.WarningLogger.Println("Could not parse user details", experimentUser)
-// 		common.SendHTTPBadRequest(c)
-// 		return
-// 	}
-
-// 	axonlogger.InfoLogger.Println("Marking complete", experimentUser.ID, experimentUser.Code)
-
-// 	authorizedRoles := []string{common.ADMIN, common.PARTICIPANT}
-// 	if common.IsAllowed(c, authorizedRoles) {
-// 		result := services.MarkAsComplete(*experimentUser)
-// 		common.SendGenericHTTPModel(c, result)
-// 		return
-// 	}
-// 	axonlogger.WarningLogger.Println("Not authorized", experimentUser.ID, experimentUser.Code)
-// 	common.SendHTTPForbidden(c)
-// 	return
-// }

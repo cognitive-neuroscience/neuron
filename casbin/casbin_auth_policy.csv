@@ -10,9 +10,9 @@ p, PARTICIPANT, /api/crowdsourcedusers/user/*,  GET
 p, PARTICIPANT, /api/studyusers,                POST
 p, PARTICIPANT, /api/studyusers/studies,        GET
 p, PARTICIPANT, /api/studyusers,                PATCH
+p, PARTICIPANT, /api/studyusers/increment,      PATCH
 
 p, PARTICIPANT, /api/studydata,                 POST
-p, PARTICIPANT, /api/studydata/feedback,        POST
 
 p, PARTICIPANT, /api/tasks/*,                   GET
 p, GUEST,       /api/tasks,                     GET
