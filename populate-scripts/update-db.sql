@@ -1474,7 +1474,7 @@ UPDATE tasks set
                 "componentName": "TRAILMAKINGCOMPONENT",
                 "componentConfig": {
                     "isPractice": true,
-                    "maxResponseTime": 240000,
+                    "maxResponseTime": 120000,
                     "flashIncorrectDuration": 500,
                     "trialType": "NUMERIC",
                     "durationOutOfTimeMessageShown": 3000,
@@ -1525,7 +1525,7 @@ UPDATE tasks set
                 "componentName": "TRAILMAKINGCOMPONENT",
                 "componentConfig": {
                     "isPractice": false,
-                    "maxResponseTime": 240000,
+                    "maxResponseTime": 120000,
                     "flashIncorrectDuration": 500,
                     "trialType": "NUMERIC",
                     "durationOutOfTimeMessageShown": 3000,
@@ -13590,11 +13590,11 @@ UPDATE tasks SET
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Minor violations of the law (traffic tickets, jaywalking, disturbing the peace, etc)",
+                            "title": "Minor violations of the law (traffic tickets, disturbing the peace, etc)",
                             "validation": {
                                 "required": true
                             },
-                            "key": "Minor violations of the law (traffic tickets, jaywalking, disturbing the peace, etc)",
+                            "key": "Minor violations of the law (traffic tickets, disturbing the peace, etc)",
                             "multipleChoiceOptions": [
                                 {"label": "Yes", "value": "yes"},
                                 {"label": "No", "value": "no"}
@@ -16153,6 +16153,10 @@ UPDATE tasks SET
                                 "value": "Divorced/Separated"
                             },
                             {
+                                "label": "In a relationship",
+                                "value": "In a relationship"
+                            },
+                            {
                                 "label": "Do not wish to disclose",
                                 "value": "Do not wish to disclose"
                             }
@@ -16706,7 +16710,7 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "radiobuttons",
-                            "title": "Have you ever been told, or suspected yourself, that you seem to \\"act out your dreams\\" while asleep (for example, punching, flailing your arms in the air, making running movements, etc.)?",
+                            "title": "Have you ever been told, or suspected yourself, that you seem to \\"act out your dreams\\" while asleep (for example, talking, punching, flailing your arms in the air, making running movements, etc.)?",
                             "key": "actOutSleep",
                             "validation": {
                                 "required": true

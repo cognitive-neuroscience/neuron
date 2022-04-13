@@ -1,3 +1,6 @@
+-- This file is for overwriting task metadata for a specific task in a study instance
+-- An example would be if you are replacing the NBACK response time for study id 23 but you don't want that to affect all other NBACKs
+
 UPDATE study_tasks SET
     config = '{
         "taskConfig": {},
