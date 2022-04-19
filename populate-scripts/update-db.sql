@@ -5364,8 +5364,8 @@ UPDATE tasks set
                             },
                             "words": [
                                 {
-                                    "en": "Strong emotions are known to influence our cognitive processes, i.e. how we think, how well we concentrate, etc. In Parkinson’s disease, there is some evidence that emotions are processed differently, and that the way the body reacts may also be different. The purpose of this study is to examine the impact of Parkinson’s disease on emotional processing and cognition. For this research study, we will recruit a total of 400 participants, men and women, aged between 45 and 80.",
-                                    "fr": "Les émotions fortes au cours d''une vie influencent nos processus cognitifs : la manière dont nous pensons, notre concentration, etc. Il est possible qu''avec la maladie de Parkinson, la façon que le cerveau gère les émotions, et la manière dont le corps réagit à ces expériences pourraient être différentes. Le but de cette étude est d''examiner l''impact de la maladie de Parkinson sur les processus émotifs et la réponse corporelle aux émotions. Pour cette étude, nous recrutons un total de 400 participants, hommes et femmes, âgés entre 45 et 80 ans."
+                                    "en": "Strong emotions are known to influence our cognitive processes, i.e. how we think, how well we concentrate, etc. In Parkinson’s disease, there is some evidence that emotions are processed differently, and that the way the body reacts may also be different. The purpose of this study is to examine the impact of Parkinson’s disease on emotional processing and cognition. For this research study, we will recruit 60 participants with Parkinson’s disease, men and women, aged between 45 and 75, as well as 60 aged matched participants without Parkinson’s disease, and 60 men and women, above age 18 to help develop the testing procedures.",
+                                    "fr": "Les émotions fortes au cours d''une vie influencent nos processus cognitifs : la manière dont nous pensons, notre concentration, etc. Il est possible qu''avec la maladie de Parkinson, la façon que le cerveau gère les émotions, et la manière dont le corps réagit à ces expériences pourraient être différentes. Le but de cette étude est d''examiner l''impact de la maladie de Parkinson sur les processus émotifs et la réponse corporelle aux émotions. Pour cette étude, nous recruterons 60 participants avec la maladie de Parkinson, hommes et femmes, âgés entre 45-75 ans, et 60 participants du même âge sans la maladie de Parkinson. De plus, nous recruterons 60 hommes et femmes âgés de plus de 18 ans pour nous aider à développer les procédures de test.."
                                 }
                             ]
                         },
@@ -5489,8 +5489,8 @@ UPDATE tasks set
                             },
                             "words": [
                                 {
-                                    "en": "You will be entered to win one of four $100 Amazon e-gift cards.",
-                                    "fr": "En participant vous courrez la chance de gagner l''une des quatre cartes-cadeaux électroniques Amazon de $100."
+                                    "en": "You will receive an amount of $10 per hour for a maximum of $30 per study visit for costs and inconveniences incurred during this research study. If you withdraw from the study or are withdrawn before it is completed, you will receive compensation proportional to the number of visits you have completed.",
+                                    "fr": "En guise de compensation pour les frais encourus en raison de votre participation au projet de recherche vous recevrez un montant de 10$ par visite prévue au protocole, pour un montant total de 30$ par visite. Si vous vous retirez du projet (ou s’il est mis fin à votre participation) avant qu’il ne soit complété, la compensation sera proportionnelle à la durée de votre participation."
                                 }
                             ]
                         },
