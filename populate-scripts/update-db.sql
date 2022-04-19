@@ -5305,8 +5305,8 @@ UPDATE tasks set
                             },
                             "words": [
                                 {
-                                    "en": "Stress in Parkinson’s disease and its effects on cognition and mood: A pilot study",
-                                    "fr": "L''effet du stress sur la cognition et l''humeur dans la maladie de Parkinson : une étude pilote"
+                                    "en": "A pilot study on mood and cognition in Parkinson''s disease",
+                                    "fr": "La cognition et l''humeur dans la maladie de Parkinson : une étude pilote"
                                 }
                             ]
                         },
@@ -5364,8 +5364,8 @@ UPDATE tasks set
                             },
                             "words": [
                                 {
-                                    "en": "Strong emotions and lifetime exposure to stress are known to influence our cognitive processes, i.e. how we think, how well we concentrate, etc. In Parkinson’s disease, there is some evidence that emotions are processed differently, and that the way the body reacts may also be different. The purpose of this study is to examine the impact of Parkinson’s disease on emotional processing and the body’s response to emotions. For this research study, we will recruit a total of 400 participants, men and women, aged between 45 and 80.",
-                                    "fr": "Les émotions fortes et le fait d''avoir vécu beaucoup de stress au cours d''une vie influencent nos processus cognitifs : la manière dont nous pensons, notre concentration, etc. Il est possible qu''avec la maladie de Parkinson, la façon que le cerveau gère les émotions et le stress, et la manière dont le corps réagit à ces expériences pourraient être différentes. Le but de cette étude est d''examiner l''impact de la maladie de Parkinson sur les processus émotifs et la réponse corporelle aux émotions. Pour cette étude, nous recrutons un total de 400 participants, hommes et femmes, âgés entre 45 et 80 ans."
+                                    "en": "Strong emotions are known to influence our cognitive processes, i.e. how we think, how well we concentrate, etc. In Parkinson’s disease, there is some evidence that emotions are processed differently, and that the way the body reacts may also be different. The purpose of this study is to examine the impact of Parkinson’s disease on emotional processing and cognition. For this research study, we will recruit a total of 400 participants, men and women, aged between 45 and 80.",
+                                    "fr": "Les émotions fortes au cours d''une vie influencent nos processus cognitifs : la manière dont nous pensons, notre concentration, etc. Il est possible qu''avec la maladie de Parkinson, la façon que le cerveau gère les émotions, et la manière dont le corps réagit à ces expériences pourraient être différentes. Le but de cette étude est d''examiner l''impact de la maladie de Parkinson sur les processus émotifs et la réponse corporelle aux émotions. Pour cette étude, nous recrutons un total de 400 participants, hommes et femmes, âgés entre 45 et 80 ans."
                                 }
                             ]
                         },
@@ -5395,6 +5395,10 @@ UPDATE tasks set
                                     "en": "This will take under 2 hours",
                                     "indent": 2,
                                     "fr": "Ceci prendra moins de 2 heures."
+                                },
+                                {
+                                    "en": "3. &nbsp;&nbsp;&nbsp;&nbsp; In some cases, we will also measure your motor function by performing standard neurological assessments of tremor. These assessments will be videotaped in order to be reviewed by the study doctor.",
+                                    "fr": "3. &nbsp;&nbsp;&nbsp;&nbsp; Dans certains cas, nous mesurerons votre fonction motrice en performant des tests neurologiques standards pour évaluer le tremblement. Cette évaluation sera enregistrée par vidéo pour être évaluée par le médecin responsable."
                                 },
                                 {
                                     "en": "",
