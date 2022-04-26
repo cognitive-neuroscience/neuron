@@ -6,7 +6,7 @@ UPDATE study_tasks SET
         "taskConfig": {},
         "metadata": [
             {
-                "componentName": "DISPLAYCOMPONENT",
+                "componentName": "QUESTIONNAIRECOMPONENT",
                 "componentConfig": {
                     "title": "Questionnaire",
                     "questions": [
