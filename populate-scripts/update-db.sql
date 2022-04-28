@@ -17364,3 +17364,12 @@ UPDATE tasks SET
         ]
     }'
 WHERE id = 55;
+-- PLT
+UPDATE tasks SET
+    from_platform = "PSHARPLAB",
+    task_type = "EXPERIMENTAL",
+    name = "Probabilistic Learning Task",
+    description = "This task is a probablistic learning task based on the reinforcement learning model. The current version is based on the paper by Frank, Woroch and Curran. (2005). Neuron, 47(4), 495-501.",
+    external_url = "",
+    config = '{}'
+WHERE id = 56;
