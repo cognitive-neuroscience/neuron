@@ -15950,7 +15950,7 @@ WHERE id = 50;
 UPDATE tasks SET
     from_platform = "PSHARPLAB",
     task_type = "QUESTIONNAIRE",
-    name = "Stress Study Questionnaire",
+    name = "Questionnaire",
     description = "",
     external_url = "",
     config = '{
