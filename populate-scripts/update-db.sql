@@ -17371,5 +17371,140 @@ UPDATE tasks SET
     name = "Probabilistic Learning Task",
     description = "This task is a probablistic learning task based on the reinforcement learning model. The current version is based on the paper by Frank, Woroch and Curran. (2005). Neuron, 47(4), 495-501.",
     external_url = "",
-    config = '{}'
+    config = '{
+        "taskConfig": {},
+        "metadata": [
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": "Welcome to the pairs game",
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": "Thank you for participating and welcome to the pairs game. Click \\"START\\" to get started."
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": "MORE INSTRUCTIONS WILL BE INSERTED HERE IN THE FUTURE"
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": true,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "PLTCOMPONENT",
+                "componentConfig": {
+                    "isPractice": true,
+                    "maxResponseTime": 4000,
+                    "phase": "practice-phase",
+                    "interTrialDelay": 0,
+                    "durationFeedbackPresented": 1000,
+                    "durationFixationJitteredLowerBound": 500,
+                    "durationFixationJitteredUpperBound": 500,
+                    "showFeedbackAfterEachTrial": true,
+                    "stimuliConfig": {
+                        "type": "generated",
+                        "stimuli": null
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": "Second block",
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": "Congratulations, you finished the practice."
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": "Now you will be doing some more trials with different pairs."
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": true,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "PLTCOMPONENT",
+                "componentConfig": {
+                    "isPractice": false,
+                    "maxResponseTime": 4000,
+                    "phase": "training-phase",
+                    "interTrialDelay": 0,
+                    "durationFeedbackPresented": 1000,
+                    "durationFixationJitteredLowerBound": 300,
+                    "durationFixationJitteredUpperBound": 800,
+                    "showFeedbackAfterEachTrial": true,
+                    "stimuliConfig": {
+                        "type": "generated",
+                        "stimuli": null
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": "Second block",
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": "Congratulations, you finished the block."
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": "Finally, you will be doing even more trials with different pairs."
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": true,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "PLTCOMPONENT",
+                "componentConfig": {
+                    "isPractice": false,
+                    "maxResponseTime": 4000,
+                    "phase": "test-phase",
+                    "interTrialDelay": 0,
+                    "durationFeedbackPresented": 1000,
+                    "durationFixationJitteredLowerBound": 300,
+                    "durationFixationJitteredUpperBound": 800,
+                    "showFeedbackAfterEachTrial": false,
+                    "stimuliConfig": {
+                        "type": "generated",
+                        "stimuli": null
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": "Finished",
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": "Congratulations, you completed the task."
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": false,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
+                }
+            }
+        ]
+    }'
 WHERE id = 56;
