@@ -4914,11 +4914,11 @@ UPDATE tasks set
                                 "questions": [
                                     {
                                         "question": "How much do you look forward to the outcome of this activity?",
-                                        "legend": ["Not at all", "Very Much"]
+                                        "legend": ["Not at all", "Neutral", "Very Much"]
                                     },
                                     {
                                         "question": "How mentally effortful does this activity feel to you?",
-                                        "legend": ["Not at all", "Very effortful"]
+                                        "legend": ["Not at all", "Neutral", "Very effortful"]
                                     }
                                 ]
                             }
@@ -5061,14 +5061,13 @@ UPDATE tasks set
                     "delayToShowHelpMessage": 10000,
                     "durationHelpMessageShown": 5000,
                     "durationOutOftimeMessageShown": 2000,
-                    "delayToShowRatingSlider": 0,
+                    "delayToShowRatingInput": 0,
                     "stimuliConfig": {
                         "type": "hardcoded",
                         "stimuli": [
                             {
                                 "firstActivity": "Bring the car to the mechanic",
-                                "secondActivity": "Dust your bookshelves",
-                                "legend": ["Strongly choose left", "Strongly choose right"]
+                                "secondActivity": "Dust your bookshelves"
                             }
                         ]
                     }
@@ -5108,7 +5107,7 @@ UPDATE tasks set
                     "delayToShowHelpMessage": 10000,
                     "durationHelpMessageShown": 5000,
                     "durationOutOftimeMessageShown": 2000,
-                    "delayToShowRatingSlider": 0,
+                    "delayToShowRatingInput": 0,
                     "stimuliConfig": {
                         "type": "generated",
                         "stimuli": null
