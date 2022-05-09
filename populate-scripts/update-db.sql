@@ -13655,215 +13655,207 @@ UPDATE tasks SET
     description = "",
     external_url = "",
     config = '{
-        "taskConfig": {},
-        "metadata": [
+        "title":"Questionnaire",
+        "questions":[
             {
-                "componentName": "QUESTIONNAIRECOMPONENT",
-                "componentConfig": {
-                    "title":"Questionnaire",
-                    "questions":[
-                        {
-                            "questionType": "displayText",
-                            "title": "In the following you find a list of expressions that characterize different moods. Please take a look at the list, word by word, and mark for each word the answer that represents best the actual intensity of your mood status. <br /><br /> Please pay attention to the following facts: <br /><br />- Within the list there are some attributes that possibly describe the same or similar moods. Please do not get irritated due to this fact, and judge each attribute irrespective of your answer to another attribute.<br />- Please judge only how you feel at this moment, and not how you normally or somtimes feel.<br />- If you have some difficulties in finding an answer, please mark the answer that fits best.<br /><br />Please judge each word and do not leave out a word."
-                        },
-                        {
-                            "questionType": "displayText",
-                            "title": "Use your mouse to drag the marker in order to select your answer"
-                        },
-                        {
-                            "questionType": "slider",
-                            "title": "How CONTENT do you feel?",
-                            "validation": {
-                                "required":true
-                            },
-                            "key": "How CONTENT do you feel?",
-                            "legend": [
-                                "Definitely Not Feeling This",
-                                "Extremely"
-                            ]
-                        },
-                        {
-                            "questionType": "slider",
-                            "title": "How RESTLESS do you feel?",
-                            "validation": {
-                                "required":true
-                            },
-                            "key": "How RESTLESS do you feel?",
-                            "legend": [
-                                "Definitely Not Feeling This",
-                                "Extremely"
-                            ]
-                        },
-                        {
-                            "questionType": "slider",
-                            "title": "How BAD do you feel?",
-                            "validation": {
-                                "required":true
-                            },
-                            "key": "How BAD do you feel?",
-                            "legend": [
-                                "Definitely Not Feeling This",
-                                "Extremely"
-                            ]
-                        },
-                        {
-                            "questionType": "slider",
-                            "title": "How COMPOSED do you feel?",
-                            "validation": {
-                                "required":true
-                            },
-                            "key": "How COMPOSED do you feel?",
-                            "legend": [
-                                "Definitely Not Feeling This",
-                                "Extremely"
-                            ]
-                        },
-                        {
-                            "questionType": "slider",
-                            "title": "How GREAT do you feel?",
-                            "validation": {
-                                "required":true
-                            },
-                            "key": "How GREAT do you feel?",
-                            "legend": [
-                                "Definitely Not Feeling This",
-                                "Extremely"
-                            ]
-                        },
-                        {
-                            "questionType": "slider",
-                            "title": "How UNEASY do you feel?",
-                            "validation": {
-                                "required":true
-                            },
-                            "key": "How UNEASY do you feel?",
-                            "legend": [
-                                "Definitely Not Feeling This",
-                                "Extremely"
-                            ]
-                        },
-                        {
-                            "questionType": "slider",
-                            "title": "How UNCOMFORTABLE do you feel?",
-                            "validation": {
-                                "required":true
-                            },
-                            "key": "How UNCOMFORTABLE do you feel?",
-                            "legend": [
-                                "Definitely Not Feeling This",
-                                "Extremely"
-                            ]
-                        },
-                        {
-                            "questionType": "slider",
-                            "title": "How RELAXED do you feel?",
-                            "validation": {
-                                "required":true
-                            },
-                            "key": "How RELAXED do you feel?",
-                            "legend": [
-                                "Definitely Not Feeling This",
-                                "Extremely"
-                            ]
-                        },
-                        {
-                            "questionType": "slider",
-                            "title": "How GOOD do you feel?",
-                            "validation": {
-                                "required":true
-                            },
-                            "key": "How GOOD do you feel?",
-                            "legend": [
-                                "Definitely Not Feeling This",
-                                "Extremely"
-                            ]
-                        },
-                        {
-                            "questionType": "slider",
-                            "title": "How AT EASE do you feel?",
-                            "validation": {
-                                "required":true
-                            },
-                            "key": "How AT EASE do you feel?",
-                            "legend": [
-                                "Definitely Not Feeling This",
-                                "Extremely"
-                            ]
-                        },
-                        {
-                            "questionType": "slider",
-                            "title": "How UNHAPPY do you feel?",
-                            "validation": {
-                                "required":true
-                            },
-                            "key": "How UNHAPPY do you feel?",
-                            "legend": [
-                                "Definitely Not Feeling This",
-                                "Extremely"
-                            ]
-                        },
-                        {
-                            "questionType": "slider",
-                            "title": "How DISCONTENT do you feel?",
-                            "validation": {
-                                "required":true
-                            },
-                            "key": "How DISCONTENT do you feel?",
-                            "legend": [
-                                "Definitely Not Feeling This",
-                                "Extremely"
-                            ]
-                        },
-                                {
-                            "questionType": "slider",
-                            "title": "How TENSE do you feel?",
-                            "validation": {
-                                "required":true
-                            },
-                            "key": "How TENSE do you feel?",
-                            "legend": [
-                                "Definitely Not Feeling This",
-                                "Extremely"
-                            ]
-                        },
-                        {
-                            "questionType": "slider",
-                            "title": "How HAPPY do you feel?",
-                            "validation": {
-                                "required":true
-                            },
-                            "key": "How HAPPY do you feel?",
-                            "legend": [
-                                "Definitely Not Feeling This",
-                                "Extremely"
-                            ]
-                        },
-                        {
-                            "questionType": "slider",
-                            "title": "How NERVOUS do you feel?",
-                            "validation": {
-                                "required":true
-                            },
-                            "key": "How NERVOUS do you feel?",
-                            "legend": [
-                                "Definitely Not Feeling This",
-                                "Extremely"
-                            ]
-                        },
-                        {
-                            "questionType": "slider",
-                            "title": "How CALM do you feel?",
-                            "validation": {
-                                "required":true
-                            },
-                            "key": "How CALM do you feel?",
-                            "legend": [
-                                "Definitely Not Feeling This",
-                                "Extremely"
-                            ]
-                        }
-                    ]
-                }
+                "questionType": "displayText",
+                "title": "In the following you find a list of expressions that characterize different moods. Please take a look at the list, word by word, and mark for each word the answer that represents best the actual intensity of your mood status. <br /><br /> Please pay attention to the following facts: <br /><br />- Within the list there are some attributes that possibly describe the same or similar moods. Please do not get irritated due to this fact, and judge each attribute irrespective of your answer to another attribute.<br />- Please judge only how you feel at this moment, and not how you normally or sometimes feel.<br />- If you have some difficulties in finding an answer, please mark the answer that fits best.<br /><br />Please judge each word and do not leave out a word."
+            },
+            {
+                "questionType": "displayText",
+                "title": "Use your mouse to drag the marker in order to select your answer"
+            },
+            {
+                "questionType": "slider",
+                "title": "How CONTENT do you feel?",
+                "validation": {
+                    "required":true
+                },
+                "key": "How CONTENT do you feel?",
+                "legend": [
+                    "Definitely Not Feeling This",
+                    "Extremely"
+                ]
+            },
+            {
+                "questionType": "slider",
+                "title": "How RESTLESS do you feel?",
+                "validation": {
+                    "required":true
+                },
+                "key": "How RESTLESS do you feel?",
+                "legend": [
+                    "Definitely Not Feeling This",
+                    "Extremely"
+                ]
+            },
+            {
+                "questionType": "slider",
+                "title": "How BAD do you feel?",
+                "validation": {
+                    "required":true
+                },
+                "key": "How BAD do you feel?",
+                "legend": [
+                    "Definitely Not Feeling This",
+                    "Extremely"
+                ]
+            },
+            {
+                "questionType": "slider",
+                "title": "How COMPOSED do you feel?",
+                "validation": {
+                    "required":true
+                },
+                "key": "How COMPOSED do you feel?",
+                "legend": [
+                    "Definitely Not Feeling This",
+                    "Extremely"
+                ]
+            },
+            {
+                "questionType": "slider",
+                "title": "How GREAT do you feel?",
+                "validation": {
+                    "required":true
+                },
+                "key": "How GREAT do you feel?",
+                "legend": [
+                    "Definitely Not Feeling This",
+                    "Extremely"
+                ]
+            },
+            {
+                "questionType": "slider",
+                "title": "How UNEASY do you feel?",
+                "validation": {
+                    "required":true
+                },
+                "key": "How UNEASY do you feel?",
+                "legend": [
+                    "Definitely Not Feeling This",
+                    "Extremely"
+                ]
+            },
+            {
+                "questionType": "slider",
+                "title": "How UNCOMFORTABLE do you feel?",
+                "validation": {
+                    "required":true
+                },
+                "key": "How UNCOMFORTABLE do you feel?",
+                "legend": [
+                    "Definitely Not Feeling This",
+                    "Extremely"
+                ]
+            },
+            {
+                "questionType": "slider",
+                "title": "How RELAXED do you feel?",
+                "validation": {
+                    "required":true
+                },
+                "key": "How RELAXED do you feel?",
+                "legend": [
+                    "Definitely Not Feeling This",
+                    "Extremely"
+                ]
+            },
+            {
+                "questionType": "slider",
+                "title": "How GOOD do you feel?",
+                "validation": {
+                    "required":true
+                },
+                "key": "How GOOD do you feel?",
+                "legend": [
+                    "Definitely Not Feeling This",
+                    "Extremely"
+                ]
+            },
+            {
+                "questionType": "slider",
+                "title": "How AT EASE do you feel?",
+                "validation": {
+                    "required":true
+                },
+                "key": "How AT EASE do you feel?",
+                "legend": [
+                    "Definitely Not Feeling This",
+                    "Extremely"
+                ]
+            },
+            {
+                "questionType": "slider",
+                "title": "How UNHAPPY do you feel?",
+                "validation": {
+                    "required":true
+                },
+                "key": "How UNHAPPY do you feel?",
+                "legend": [
+                    "Definitely Not Feeling This",
+                    "Extremely"
+                ]
+            },
+            {
+                "questionType": "slider",
+                "title": "How DISCONTENT do you feel?",
+                "validation": {
+                    "required":true
+                },
+                "key": "How DISCONTENT do you feel?",
+                "legend": [
+                    "Definitely Not Feeling This",
+                    "Extremely"
+                ]
+            },
+                    {
+                "questionType": "slider",
+                "title": "How TENSE do you feel?",
+                "validation": {
+                    "required":true
+                },
+                "key": "How TENSE do you feel?",
+                "legend": [
+                    "Definitely Not Feeling This",
+                    "Extremely"
+                ]
+            },
+            {
+                "questionType": "slider",
+                "title": "How HAPPY do you feel?",
+                "validation": {
+                    "required":true
+                },
+                "key": "How HAPPY do you feel?",
+                "legend": [
+                    "Definitely Not Feeling This",
+                    "Extremely"
+                ]
+            },
+            {
+                "questionType": "slider",
+                "title": "How NERVOUS do you feel?",
+                "validation": {
+                    "required":true
+                },
+                "key": "How NERVOUS do you feel?",
+                "legend": [
+                    "Definitely Not Feeling This",
+                    "Extremely"
+                ]
+            },
+            {
+                "questionType": "slider",
+                "title": "How CALM do you feel?",
+                "validation": {
+                    "required":true
+                },
+                "key": "How CALM do you feel?",
+                "legend": [
+                    "Definitely Not Feeling This",
+                    "Extremely"
+                ]
             }
         ]
     }'
@@ -13876,46 +13868,38 @@ UPDATE tasks SET
     description = "",
     external_url = "",
     config = '{
-        "taskConfig": {},
-        "metadata": [
+        "title":"Questionnaire",
+        "questions":[
             {
-                "componentName": "QUESTIONNAIRECOMPONENT",
-                "componentConfig": {
-                    "title":"Questionnaire",
-                    "questions":[
-                        {
-                            "questionType": "radiobuttons",
-                            "radiobuttonPresentation": "vertical",
-                            "title": "Did you at any point think that you were being \\"tricked\\"?",
-                            "validation": {
-                                "required": true
-                            },
-                            "key": "Did you at any point think that you were being tricked",
-                            "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
-                            ]
-                        },
-                        {
-                            "questionType": "radiobuttons",
-                            "radiobuttonPresentation": "vertical",
-                            "title": "Did you think that parts of this study were deceiving you?",
-                            "validation": {
-                                "required": true
-                            },
-                            "key": "Did you think that parts of this study were deceiving you",
-                            "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
-                            ]
-                        },
-                        {
-                            "questionType": "freeTextResponse",
-                            "title": "If you answered YES to <em>either of the above<em>, please describe your experience of playing the math game and watching the videos. How did you feel and what thoughts did you have regarding the game and videos?",
-                            "key": "description of experiences"
-                        }
-                    ]
-                }
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Did you at any point think that you were being \\"tricked\\"?",
+                "validation": {
+                    "required": true
+                },
+                "key": "Did you at any point think that you were being tricked",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "radiobuttons",
+                "radiobuttonPresentation": "vertical",
+                "title": "Did you think that parts of this study were deceiving you?",
+                "validation": {
+                    "required": true
+                },
+                "key": "Did you think that parts of this study were deceiving you",
+                "multipleChoiceOptions": [
+                    {"label": "Yes", "value": "yes"},
+                    {"label": "No", "value": "no"}
+                ]
+            },
+            {
+                "questionType": "freeTextResponse",
+                "title": "If you answered <b>YES</b> to either of the above, please describe your experience with the games and the ice water task. How did you feel and what thoughts did you have?",
+                "key": "description of experiences"
             }
         ]
     }'
@@ -15949,7 +15933,7 @@ WHERE id = 50;
 UPDATE tasks SET
     from_platform = "PSHARPLAB",
     task_type = "QUESTIONNAIRE",
-    name = "Questionnaire",
+    name = "Stress Study Questionnaire",
     description = "",
     external_url = "",
     config = '{
@@ -15958,7 +15942,7 @@ UPDATE tasks SET
             {
                 "componentName": "QUESTIONNAIRECOMPONENT",
                 "componentConfig": {
-                    "title": "Stress Study Questionnaire",
+                    "title": "Questionnaire",
                     "questions": [
                         {
                             "questionType": "input",
@@ -16518,12 +16502,16 @@ UPDATE tasks SET
                                 "value": "Quit in last 5 years"
                             },
                             {
-                                "label": "Quit in last 15 years",
-                                "value": "Quit in last 15 years"
+                                "label": "Quit in last 10 years",
+                                "value": "Quit in last 10 years"
                             },
                             {
                                 "label": "Quit in last 15 years",
                                 "value": "Quit in last 15 years"
+                            },
+                            {
+                                "label": "Quit in last 20 years",
+                                "value": "Quit in last 20 years"
                             },
                             {
                                 "label": "Quit >25 years ago",
@@ -17285,7 +17273,7 @@ UPDATE tasks SET
                     "questions": [
                         {
                             "questionType": "displayText",
-                            "title": "Please consider how you are feeling in this current moment when answering the following questions. Drag the marker to the appropriate position on the 0-100 scale with 0 being \\"not feeling this at all\\" and 100 being \\"extremely feeling this\\"."
+                            "title": "With regards to the situation you just experienced, please consider how you are feeling in this current moment when answering the following questions. Drag the marker to the appropriate position on the 0-100 scale with 0 being \\"not feeling this at all\\" and 100 being \\"extremely feeling this\\"."
                         },
                         {
                             "questionType": "displayText",
