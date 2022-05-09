@@ -4914,11 +4914,11 @@ UPDATE tasks set
                                 "questions": [
                                     {
                                         "question": "How much do you look forward to the outcome of this activity?",
-                                        "legend": ["Not at all", "Neutral", "Very Much"]
+                                        "legend": ["Not at all", "Very Much"]
                                     },
                                     {
                                         "question": "How mentally effortful does this activity feel to you?",
-                                        "legend": ["Not at all", "Neutral", "Very effortful"]
+                                        "legend": ["Not at all", "Very effortful"]
                                     }
                                 ]
                             }
@@ -13664,7 +13664,7 @@ UPDATE tasks SET
                     "questions":[
                         {
                             "questionType": "displayText",
-                            "title": "In the following you find a list of expressions that characterize different moods. Please take a look at the list, word by word, and mark for each word the answer that represents best the actual intensity of your mood status. <br /><br /> Please pay attention to the following facts: <br /><br />- Within the list there are some attributes that possibly describe the same or similar moods. Please do not get irritated due to this fact, and judge each attribute irrespective of your answer to another attribute.<br />- Please judge only how you feel at this moment, and not how you normally or somtimes feel.<br />- If you have some difficulties in finding an answer, please mark the answer that fits best.<br /><br />Please judge each word and do not leave out a word."
+                            "title": "In the following you find a list of expressions that characterize different moods. Please take a look at the list, word by word, and mark for each word the answer that represents best the actual intensity of your mood status. <br /><br /> Please pay attention to the following facts: <br /><br />- Within the list there are some attributes that possibly describe the same or similar moods. Please do not get irritated due to this fact, and judge each attribute irrespective of your answer to another attribute.<br />- Please judge only how you feel at this moment, and not how you normally or sometimes feel.<br />- If you have some difficulties in finding an answer, please mark the answer that fits best.<br /><br />Please judge each word and do not leave out a word."
                         },
                         {
                             "questionType": "displayText",
@@ -13911,7 +13911,7 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "freeTextResponse",
-                            "title": "If you answered YES to <em>either of the above<em>, please describe your experience of playing the math game and watching the videos. How did you feel and what thoughts did you have regarding the game and videos?",
+                            "title": "If you answered <b>YES</b> to either of the above, please describe your experience with the games and the ice water task. How did you feel and what thoughts did you have?",
                             "key": "description of experiences"
                         }
                     ]
@@ -15949,7 +15949,7 @@ WHERE id = 50;
 UPDATE tasks SET
     from_platform = "PSHARPLAB",
     task_type = "QUESTIONNAIRE",
-    name = "Questionnaire",
+    name = "Stress Study Questionnaire",
     description = "",
     external_url = "",
     config = '{
@@ -15958,7 +15958,7 @@ UPDATE tasks SET
             {
                 "componentName": "QUESTIONNAIRECOMPONENT",
                 "componentConfig": {
-                    "title": "Stress Study Questionnaire",
+                    "title": "Questionnaire",
                     "questions": [
                         {
                             "questionType": "input",
@@ -16518,12 +16518,16 @@ UPDATE tasks SET
                                 "value": "Quit in last 5 years"
                             },
                             {
-                                "label": "Quit in last 15 years",
-                                "value": "Quit in last 15 years"
+                                "label": "Quit in last 10 years",
+                                "value": "Quit in last 10 years"
                             },
                             {
                                 "label": "Quit in last 15 years",
                                 "value": "Quit in last 15 years"
+                            },
+                            {
+                                "label": "Quit in last 20 years",
+                                "value": "Quit in last 20 years"
                             },
                             {
                                 "label": "Quit >25 years ago",
@@ -17285,7 +17289,7 @@ UPDATE tasks SET
                     "questions": [
                         {
                             "questionType": "displayText",
-                            "title": "Please consider how you are feeling in this current moment when answering the following questions. Drag the marker to the appropriate position on the 0-100 scale with 0 being \\"not feeling this at all\\" and 100 being \\"extremely feeling this\\"."
+                            "title": "With regards to the situation you just experienced, please consider how you are feeling in this current moment when answering the following questions. Drag the marker to the appropriate position on the 0-100 scale with 0 being \\"not feeling this at all\\" and 100 being \\"extremely feeling this\\"."
                         },
                         {
                             "questionType": "displayText",
