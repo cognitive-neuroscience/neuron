@@ -5061,14 +5061,13 @@ UPDATE tasks set
                     "delayToShowHelpMessage": 10000,
                     "durationHelpMessageShown": 5000,
                     "durationOutOftimeMessageShown": 2000,
-                    "delayToShowRatingSlider": 0,
+                    "delayToShowRatingInput": 0,
                     "stimuliConfig": {
                         "type": "hardcoded",
                         "stimuli": [
                             {
                                 "firstActivity": "Bring the car to the mechanic",
-                                "secondActivity": "Dust your bookshelves",
-                                "legend": ["Strongly choose left", "Strongly choose right"]
+                                "secondActivity": "Dust your bookshelves"
                             }
                         ]
                     }
@@ -5108,7 +5107,7 @@ UPDATE tasks set
                     "delayToShowHelpMessage": 10000,
                     "durationHelpMessageShown": 5000,
                     "durationOutOftimeMessageShown": 2000,
-                    "delayToShowRatingSlider": 0,
+                    "delayToShowRatingInput": 0,
                     "stimuliConfig": {
                         "type": "generated",
                         "stimuli": null
