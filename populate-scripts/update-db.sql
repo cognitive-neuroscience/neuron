@@ -4914,11 +4914,11 @@ UPDATE tasks set
                                 "questions": [
                                     {
                                         "question": "How much do you look forward to the outcome of this activity?",
-                                        "legend": ["Not at all", "Very Much"]
+                                        "legend": ["Not at all", "Neutral", "Very Much"]
                                     },
                                     {
                                         "question": "How mentally effortful does this activity feel to you?",
-                                        "legend": ["Not at all", "Very effortful"]
+                                        "legend": ["Not at all", "Neutral", "Very effortful"]
                                     }
                                 ]
                             }
