@@ -564,4 +564,13 @@ VALUES
     "This task is a probablistic learning task based on the reinforcement learning model. The current version is based on the paper by Frank, Woroch and Curran. (2005). Neuron, 47(4), 495-501.",
     "",
     '{}'
+),
+(
+    NULL,
+    "PSHARPLAB",
+    "QUESTIONNAIRE",
+    "POST PLT Questionnaire",
+    "Questionnaire asking the participant what they thought was the most/least likely stimulus to be correct",
+    "",
+    '{}'
 );
