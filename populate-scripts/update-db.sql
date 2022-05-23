@@ -1,6 +1,6 @@
 -- File used to update the DB for existing tasks
 
--- NUMBERS GAME TASK
+-- NUMBERS GAME TASK (previously the DIGIT SPAN)
 UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "NAB",
@@ -13,19 +13,31 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Welcome to the Number Game Part 1",
+                    "title": {
+                        "en": "Welcome to the Number Game Part 1",
+                        "fr": "Bienvenue au jeu des chiffres - Partie 1"
+                        },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Please read the instructions carefully"
+                            "textContent": {
+                                "en": "Please read the instructions carefully",
+                                "fr": "Lisez attentivement les instructions"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "This is a memory test"
+                            "textContent": {
+                                "en": "This is a memory test",
+                                "fr": "Ceci est un test de mémoire"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to proceed",
+                                "fr": "Cliquez sur \\"SUIVANT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -42,19 +54,32 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "A sequence of numbers appear on the screen <b>one at a time</b>. (Ex: 3, 9, 2)"
+                            "textContent": {
+                                "en": "A sequence of numbers appear on the screen <b>one at a time</b>. (Ex: 3, 9, 2)",
+                                "fr": "Une séquence de chiffres apparaîtra sur l''écran <b>un à la fois</b>. (Eg: 3, 9, 2)"
+
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Using the keypad shown on the screen, you will need to enter those same numbers <b>in the same order (Ex: 3, 9, 2)</b>."
+                            "textContent": {
+                                "en": "Using the keypad shown on the screen, you will need to enter those same numbers <b>in the same order (Ex: 3, 9, 2)</b>.",
+                                "fr": "Vous devrez mémoriser cette séquence, et, en utilisant votre souris, vous devrez saisir ces mêmes chiffres <b>dans le même ordre (Ex: 3, 9, 2)</b>."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You must click the \\"Submit\\" key to record your answer"
+                            "textContent": {
+                                "en": "You must click the \\"Submit\\" key to record your answer",
+                                "fr": "Vous devez cliquer sur \\"SUBMIT\\" pour enregistrer votre réponse."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to proceed",
+                                "fr": "Cliquez sur \\"SUIVANT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -71,19 +96,31 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Let''s practice"
+                            "textContent": {
+                                "en": "Let''s practice",
+                                "fr": "Pratiquons"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Remember when the keypad is shown, you need to enter the numbers <b>in the same order</b> as they were shown and then click submit."
+                            "textContent": {
+                                "en": "Remember when the keypad is shown, you need to enter the numbers <b>in the same order</b> as they were shown and then click submit.",
+                                "fr": "Rappelez-vous que lorsque le clavier est affiché, vous devez saisir les chiffres <b>dans le même ordre</b> que l’ordre dans lequel ils ont été présentés. Ensuite, cliquez sur SUBMIT."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If you don''t remember, press skip"
+                            "textContent": {
+                                "en": "If you don''t remember, press skip",
+                                "fr": "Si vous ne vous en souvenez pas, cliquez sur \\"SKIP\\" pour passer au prochain."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round."
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ],
                     "buttons": {
@@ -116,23 +153,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Good job!",
+                    "title": {
+                        "en": "Good job!",
+                        "fr": "Bon travail!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You will now play the actual game."
+                            "textContent": {
+                                "en": "You will now play the actual game.",
+                                "fr": "Vous allez maintenant commencer le jeu."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Remember when the keypad is shown, you need to enter the numbers <b>in the same order</b> as they were shown and click the <b>submit</b> button."
+                            "textContent": {
+                                "en": "Remember when the keypad is shown, you need to enter the numbers <b>in the same order</b> as they were shown and click the <b>submit</b> button.",
+                                "fr": "Rappelez-vous que quand le clavier est affiché, vous devrez saisir les chiffres <b>dans le même ordre</b> que l’ordre dans lequel ils ont été présentés, et ensuite, cliquez sur <b>Submit</b> pour soumettre votre réponse."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If you don''t remember the numbers, click skip for the next trial."
+                            "textContent": {
+                                "en": "If you don''t remember the numbers, click skip for the next trial.",
+                                "fr": "Si vous ne vous en souvenez pas, cliquez sur \\"Skip\\" pour passer au prochain tour."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready for the actual game"
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the actual game",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -165,19 +217,31 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Welcome to the Number Game Part 2",
+                    "title": {
+                        "en": "Welcome to the Number Game Part 2",
+                        "fr": "Bienvenue au jeu des chiffres - Partie 2"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "A sequence of numbers appear on the screen <b>one at a time</b>. (Ex: 3, 9, 2)"
+                            "textContent": {
+                                "en": "A sequence of numbers appear on the screen <b>one at a time</b>. (Ex: 3, 9, 2)",
+                                "fr": "Une séquence de chiffres apparaîtra sur l''écran <b>un à la fois</b>. (Ex: 3, 9, 2)"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Using the keypad shown on the screen, you will need to enter those same numbers <b>in REVERSE order (Ex: 2, 9, 3)</b> and then click the \\"Submit\\" key."
+                            "textContent": {
+                                "en": "Using the keypad shown on the screen, you will need to enter those same numbers <b>in REVERSE order (Ex: 2, 9, 3)</b> and then click the \\"Submit\\" key.",
+                                "fr": "Vous devrez maintenant saisir ces mêmes chiffres <b>dans l''ordre INVERSE (Ex: 2, 9, 3)</b>. Ensuite, cliquez sur \\"Submit\\"."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to proceed",
+                                "fr": "Cliquez sur \\"SUIVANT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -190,27 +254,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Practice round pt. 2",
+                    "title": {
+                        "en": "Practice round pt. 2",
+                        "fr": "Pratique 2"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Let''s practice"
+                            "textContent": {
+                                "en": "Let''s practice",
+                                "fr": "Pratiquons"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Rememebr when the keypad is shown, you need to enter the numbers <b>in reverse order</b> as they were shown and click submit"
+                            "textContent": {
+                                "en": "Rememebr when the keypad is shown, you need to enter the numbers <b>in reverse order</b> as they were shown and click submit",
+                                "fr": "Rappelez-vous: quand le clavier est affiché, vous devez saisir les chiffres <b>dans l''ordre inverse</b> que celui dans lequel ils ont été présentés. Ensuite, cliquez sur submit."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If you don''t remember, press skip"
+                            "textContent": {
+                                "en": "If you don''t remember, press skip",
+                                "fr": "Si vous ne vous en souvenez pas, cliquez sur \\"SKIP\\" pour passer au prochain."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The game will launch in full-screen."
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready for the practice round"
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ],
                     "buttons": {
@@ -243,23 +318,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Good job!",
+                    "title": {
+                        "en": "Good job!",
+                        "fr": "Bon travail!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You will now play the actual game"
+                            "textContent": {
+                                "en": "You will now play the actual game",
+                                "fr": "Vous allez maintenant commencer le vrai tour"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Remember when the keypad is shown, you need to enter the numbers <b>in reverse order</b> as they were shown and click the <b>submit</b> button"
+                            "textContent": {
+                                "en": "Remember when the keypad is shown, you need to enter the numbers <b>in reverse order</b> as they were shown and click the <b>submit</b> button",
+                                "fr": "Rappelez-vous que quand le clavier est affiché, vous devez saisir les chiffres <b>dans l''ordre inverse</b> que celui dans lequel ils ont été présentés. Ensuite, cliquez sur <b>Submit</b>."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If you don''t remember the numbers, press skip for the the next trial."
+                            "textContent": {
+                                "en": "If you don''t remember, press skip",
+                                "fr": "Si vous ne vous en souvenez pas, cliquez sur \\"SKIP\\" pour passer au prochain."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready for the actual game"
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the actual game",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -292,19 +382,31 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Congratulations!",
+                    "title": {
+                        "en": "Congratulations!",
+                        "fr": "Félicitations!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You finished the game successfully"
+                            "textContent": {
+                                "en": "You finished the game successfully",
+                                "fr": "Vous avez terminé le jeu avec succès"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Thank you for your participation"
+                            "textContent": {
+                                "en": "Thank you for your participation",
+                                "fr": "Merci pour votre participation"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to continue"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -330,19 +432,31 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Welcome to the Finger Tapping Game",
+                    "title": {
+                        "en": "Welcome to the Finger Tapping Game",
+                        "fr": "Bienvenue au jeu des doigts"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Read the instructions carefully"
+                            "textContent": {
+                                "en": "Read the instructions carefully",
+                                "fr": "Lisez attentivement les instructions"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "This is a test of finger tapping speed"
+                            "textContent": {
+                                "en": "This is a test of finger tapping speed",
+                                "fr": "Ceci est un test de vitesse de des doigts"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to proceed",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -355,15 +469,24 @@ UPDATE tasks set
             {
                 "componentName": "SELECTOPTIONCOMPONENT",
                 "componentConfig": {
-                    "question": "Are you left handed or right handed?",
+                    "question": {
+                        "en": "Are you left handed or right handed?",
+                        "fr": "Es-tu gaucher ou droitier?"
+                    },
                     "cacheKey": "finger-tapping-handedness",
                     "options": [
                         {
-                            "label": "Left Handed",
+                            "label": {
+                                "en": "Left Handed",
+                                "fr": "Gaucher"
+                            },
                             "value": "LEFT"
                         },
                         {
-                            "label": "Right Handed",
+                            "label": {
+                                "en": "Right Handed",
+                                "fr": "Droitier"
+                            },
                             "value": "RIGHT"
                         }
                     ]
@@ -380,19 +503,31 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You will have to <b>alternatively tap</b> the <b>P</b> and <b>Q</b> keys of the keyboard <b>as fast as you can</b>"
+                            "textContent": {
+                                "en": "You will have to <b>alternatively tap</b> the <b>P</b> and <b>Q</b> keys of the keyboard <b>as fast as you can</b>",
+                                "fr": "Avec un de vos index, vous devrez taper les clés P et Q du clavier <b>en alternance et le plus vite possible</b>"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You will do 3 rounds of this."
+                            "textContent": {
+                                "en": "You will do 3 rounds of this.",
+                                "fr": "Vous ferez 3 tours."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "We will tell you which hand to use right before each round"
+                            "textContent": {
+                                "en": "We will tell you which hand to use right before each round",
+                                "fr": "Avant chaque tour, nous indiquerons si vous devez utiliser l’index droit ou gauche"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -409,15 +544,24 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "The keys you will be tapping on the keyboard are the \\"Q\\" and the \\"P\\" keys"
+                            "textContent": {
+                                "en": "The keys you will be tapping on the keyboard are the \\"Q\\" and the \\"P\\" keys",
+                                "fr": "Les touches sur lesquelles vous allez taper en alternance sont \\"Q\\" et \\"P\\""
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Please go ahead and find these keys now"
+                            "textContent": {
+                                "en": "Please go ahead and find these keys now",
+                                "fr": "Prenez un moment pour localiser ces touches sur le clavier."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -430,23 +574,31 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Practice round",
+                    "title": {
+                        "en": "Practice round",
+                        "fr": "Pratique"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "First, let''s practice"
+                            "textContent": {
+                                "en": "First, let''s practice",
+                                "fr": "Commençons par un tour d’entraînement!"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "For the practice, please use your <b>RIGHT</b> index finger"
+                            "textContent": {
+                                "en": "For the practice, please use your <b>RIGHT</b> index finger",
+                                "fr": "Veuillez utiliser votre index <b>DROIT</b>"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "(the task will launch in fullscreen)"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready for the practice round"
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ],
                     "buttons": {
@@ -459,7 +611,10 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Remember, you must use a SINGLE hand, and tap as fast as you can",
+                    "title": {
+                        "en": "Remember, you must use a SINGLE hand, and tap as fast as you can",
+                        "fr": "N''oubliez pas que vous devez utiliser une SEULE main et taper aussi vite que vous le pouvez"
+                    },
                     "timerConfig": {
                         "timer": 5000,
                         "showTimer": true,
@@ -474,7 +629,6 @@ UPDATE tasks set
                 "componentConfig": {
                     "isPractice": true,
                     "maxResponseTime": 10000,
-
                     "durationFixationPresented": 50,
                     "useHand": "RIGHT"
                 }
@@ -482,23 +636,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Main round",
+                    "title": {
+                        "en": "Main round",
+                        "fr": "Tour principal"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Good job! Now you will complete the main test."
+                            "textContent": {
+                                "en": "Good job! Now you will complete the main test.",
+                                "fr": "Bon travail! Vous êtes maintenant prêt à commencer."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You will be doing 3 rounds"
+                            "textContent": {
+                                "en": "You will be doing 3 rounds",
+                                "fr": "Vous ferez 3 tours."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You’ll get a break between each round and we will tell you which hand to use just before you begin."
+                            "textContent": {
+                                "en": "You’ll get a break between each round and we will tell you which hand to use just before you begin.",
+                                "fr": "Nous indiquerons si vous devez utiliser l’index droit ou gauche avant chaque tour et vous aurez une pause après chaque tour."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to continue"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -515,19 +684,31 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "In the <b>first two rounds</b>, you have to tap <b>as fast as you can</b> with a <b>SINGLE</b> index finger for 1 full minute"
+                            "textContent": {
+                                "en": "In the <b>first two rounds</b>, you have to tap <b>as fast as you can</b> with a <b>SINGLE</b> index finger for 1 full minute",
+                                "fr": "Pour <b>les deux premiers tours</b>, vous devrez taper le \\"P\\" et \\"Q\\" en alternance avec <b>UN SEUL</b> index pendant 1 minute, <b>le plus vite possible</b>, comme pendant l’entraînement."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "We will tell you which hand to use before each round"
+                            "textContent": {
+                                "en": "We will tell you which hand to use before each round",
+                                "fr": "Nous vous dirons quelle main utiliser avant chaque tour."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "In the <b>third round</b>, you have to use <b>BOTH</b> index fingers, one for each key, and keep tapping <b>as fast as you can</b> for 20 seconds"
+                            "textContent": {
+                                "en": "In the <b>third round</b>, you have to use <b>BOTH</b> index fingers, one for each key, and keep tapping <b>as fast as you can</b> for 20 seconds",
+                                "fr": "Pour <b>le troisième tour</b>, vous devrez utiliser les <b>DEUX</b> index, un pour \\"Q\\" et un pour \\"P\\", et taper les touches en alternance <b>aussi vite que possible</b> pendant 20 secondes."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to continue"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -540,27 +721,45 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "First Round",
+                    "title": {
+                        "en": "First Round",
+                        "fr": "Premier tour"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Please use the index finger of your <b>DOMINANT HAND</b> for this round"
+                            "textContent": {
+                                "en": "Please use the index finger of your <b>DOMINANT HAND</b> for this round",
+                                "fr": "Veuillez utiliser l''index de votre <b>MAIN DOMINANTE</b> pour ce tour."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "(if you are right-handed, that is your right hand)"
+                            "textContent": {
+                                "en": "(if you are right-handed, that is your right hand)",
+                                "fr": "(si vous utilisez principalement votre main droite pour écrire, votre main dominante est la droite)"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "REMEMBER:"
+                            "textContent": {
+                                "en": "REMEMBER:",
+                                "fr": "N''oubliez pas:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Tap the \\"P\\" and \\"Q\\" keys as fast as you can"
+                            "textContent": {
+                                "en": "Tap the \\"P\\" and \\"Q\\" keys as fast as you can",
+                                "fr": "Tapez les clés \\"P\\" et \\"Q\\" en alternance aussi vite que possible"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -573,7 +772,10 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Remember, you must use a SINGLE hand and tap as fast as you can",
+                    "title": {
+                        "en": "Remember, you must use a SINGLE hand and tap as fast as you can",
+                        "fr": "N''oubliez pas que vous devez utiliser une SEULE main et taper aussi vite que vous le pouvez"
+                    },
                     "timerConfig": {
                         "timer": 5000,
                         "showTimer": true,
@@ -595,7 +797,10 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "It''s break time",
+                    "title": {
+                        "en": "It''s break time",
+                        "fr": "C''est la pause"
+                    },
                     "timerConfig": {
                         "timer": 120000,
                         "showTimer": true,
@@ -606,23 +811,38 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "<b>Second Round:</b> Please use your <b>NON-DOMINANT</b> hand for this round."
+                            "textContent": {
+                                "en": "<b>Second Round:</b> Please use your <b>NON-DOMINANT</b> hand for this round.",
+                                "fr": "<b>Deuxième tour</b>: Veuillez utiliser votre <b>MAIN NON DOMINANTE</b> pour ce tour."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "(so if you are right-handed, that is your left hand)"
+                            "textContent": {
+                                "en": "(so if you are right-handed, that is your left hand)",
+                                "fr": "(si vous êtes droitier, c''est votre main gauche)"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You have to wait for <b> at least 30 seconds</b> before being able to continue"
+                            "textContent": {
+                                "en": "You have to wait for <b>at least 30 seconds</b> before being able to continue",
+                                "fr": "Vous devrez attendre <b>au moins 30 secondes</b> avant de cliquer \\"Start\\" pour continuer"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The next round will automatically start in 2 minutes unless you choose to continue sooner"
+                            "textContent": {
+                                "en": "The next round will automatically start in 2 minutes unless you choose to continue sooner",
+                                "fr": "Le prochain tour commencera automatiquement dans 2 minutes à moins que vous ne choisissiez de continuer plus tôt."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready"
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ]
                 }
@@ -630,7 +850,10 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "You must use a SINGLE hand and tap as fast as you can",
+                    "title": {
+                        "en": "Remember, you must use a SINGLE hand and tap as fast as you can",
+                        "fr": "N''oubliez pas que vous devez utiliser une SEULE main et taper aussi vite que vous le pouvez"
+                    },
                     "timerConfig": {
                         "timer": 5000,
                         "showTimer": true,
@@ -653,7 +876,10 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "It''s break time",
+                    "title": {
+                        "en": "It''s break time",
+                        "fr": "C''est la pause"
+                    },
                     "timerConfig": {
                         "timer": 120000,
                         "showTimer": true,
@@ -664,23 +890,38 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "<b>Third round:</b> Please use <b>BOTH INDEX FINGERS</b> for this round."
+                            "textContent": {
+                                "en": "<b>Third round:</b> Please use <b>BOTH INDEX FINGERS</b> for this round.",
+                                "fr": "<b>Troisième tour:</b> Veuillez utiliser les <b>DEUX MAINS</b> pour ce tour."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "This means you must use your LEFT finger to tap \\"Q\\" and your RIGHT finger to tap \\"P\\", and alternate between the two"
+                            "textContent": {
+                                "en": "This means you must use your LEFT finger to tap \\"Q\\" and your RIGHT finger to tap \\"P\\", and alternate between the two",
+                                "fr": "Vous devez utiliser l’index de la main GAUCHE pour appuyer sur \\"Q\\" et l’index de la main DROITE pour appuyer sur \\"P\\", et alterner entre les deux."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You have to wait <b> at least 30 seconds</b> before being able to continue"
+                            "textContent": {
+                                "en": "You have to wait <b> at least 30 seconds</b> before being able to continue",
+                                "fr": "Vous devez attendre <b>au moins 30 secondes</b> avant de pouvoir continuer."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The next round will automatically start in 2 minutes unless you choose to continue sooner"
+                            "textContent": {
+                                "en": "The next round will automatically start in 2 minutes unless you choose to continue sooner",
+                                "fr": "Le prochain tour commencera automatiquement dans 2 minutes à moins que vous ne choisissiez de continuer plus tôt."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready"
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ]
                 }
@@ -688,7 +929,10 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "You must use BOTH your index fingers, and tap as fast as you can",
+                    "title": {
+                        "en": "You must use BOTH your index fingers, and tap as fast as you can",
+                        "fr": "Vous devez utiliser les index des DEUX mains et taper en alternance aussi vite que possible."
+                    },
                     "timerConfig": {
                         "timer": 5000,
                         "showTimer": true,
@@ -1176,31 +1420,52 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Welcome to the Stroop Task",
+                    "title": {
+                        "en": "Welcome to the Stroop Task",
+                        "fr": "Bienvenue au jeu des couleurs"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Read the instructions carefully."
+                            "textContent": {
+                                "en": "Read the instructions carefully.",
+                                "fr": "Lisez attentivement les instructions."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "In this task, different words for colors (Ex. \\"BLUE\\") will be presented in different colored ink:"
+                            "textContent": {
+                                "en": "In this task, different words for colors (Ex. \\"BLUE\\") will be presented in different colored ink:",
+                                "fr": "Dans ce jeu, différents noms de couleurs (ex. \\"Bleu\\") apparaîtront à l’écran, et seront imprimés avec différentes couleurs d’encre."
+                            }
                         },
                         {
                             "sectionType": "image-square",
-                            "imagePath": "/assets/images/instructions/strooptask/stroop_ink_examples.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/strooptask/stroop_ink_examples_en.png",
+                                "fr": "/assets/images/instructions/strooptask/stroop_ink_examples_fr.png"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You have to response to the <b>COLOR</b> of the ink that the word is printed in, <b>NOT</b> the word itself."
+                            "textContent": {
+                                "en": "You have to response to the <b>COLOR</b> of the ink that the word is printed in, <b>NOT</b> the word itself.",
+                                "fr": "Vous devrez indiquer <b>la couleur de l’encre</b> sans tenir compte du nom de couleur qui est écrit."
+                            }
                         },
                         {
                             "sectionType": "image-square",
-                            "imagePath": "/assets/images/instructions/strooptask/stroop_ink_instructions.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/strooptask/stroop_ink_instructions_en.png",
+                                "fr": "/assets/images/instructions/strooptask/stroop_ink_instructions_fr.png"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to proceed",
+                                "fr": "Cliquez sur \\"SUIVANT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -1213,31 +1478,52 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Here are some examples",
+                    "title": {
+                        "en": "Here are some examples",
+                        "fr": "Voici quelques exemples"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "If you see \\"BLUE\\" with red ink then you should respond \\"1\\""
+                            "textContent": {
+                                "en": "If you see \\"BLUE\\" with red ink then you should respond \\"1\\"",
+                                "fr": "Si vous voyez \\"BLEU\\" (encre rouge) vous devez répondre \\"1\\""
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If you see \\"BLUE\\" with blue ink then you should respond \\"2\\"; etc..."
+                            "textContent": {
+                                "en": "If you see \\"BLUE\\" with blue ink then you should respond \\"2\\"",
+                                "fr": "Si vous voyez \\"BLEU\\" (encre bleu) vous devez répondre \\"2\\""
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Again, only the COLOR of the ink matters, NOT the word itself."
+                            "textContent": {
+                                "en": "Again, only the COLOR of the ink matters, NOT the word itself.",
+                                "fr": "N''oubliez pas: seule la COULEUR de l''encre compte, PAS le mot lui-même"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Please use the number keys \\"1\\", \\"2\\", \\"3\\" on your keyboard to respond"
+                            "textContent": {
+                                "en": "Please use the number keys \\"1\\", \\"2\\", \\"3\\" on your keyboard to respond",
+                                "fr": "Veuillez utiliser les touches numériques \\"1\\", \\"2\\", \\"3\\" sur votre clavier pour répondre"
+                            }
                         },
                         {
                             "sectionType": "image-square",
-                            "imagePath": "/assets/images/instructions/strooptask/stroop_ink_instructions.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/strooptask/stroop_ink_instructions_en.png",
+                                "fr": "/assets/images/instructions/strooptask/stroop_ink_instructions_fr.png"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to proceed",
+                                "fr": "Cliquez sur \\"SUIVANT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -1250,27 +1536,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Practice Round",
+                    "title": {
+                        "en": "Practice Round",
+                        "fr": "Pratique"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Let''s practice"
+                            "textContent": {
+                                "en": "Let''s practice",
+                                "fr": "Pratiquons"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Good luck! You will have very little time to respond, so be ready"
+                            "textContent": {
+                                "en": "Good luck! You will have very little time to respond, so be ready",
+                                "fr": "Vous aurez très peu de temps pour répondre, alors soyez prêts! Bonne chance!"
+                            }
                         },
                         {
                             "sectionType": "image-square",
-                            "imagePath": "/assets/images/instructions/strooptask/stroop_ink_instructions.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/strooptask/stroop_ink_instructions_en.png",
+                                "fr": "/assets/images/instructions/strooptask/stroop_ink_instructions_fr.png"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The game will launch in fullscreen"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready for the practice round"
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ],
                     "buttons": {
@@ -1301,27 +1598,45 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Practice round is now complete",
+                    "title": {
+                        "en": "Practice round is now complete",
+                        "fr": "Bon travail!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You will now play the actual game"
+                            "textContent": {
+                                "en": "You will now play the actual game",
+                                "fr": "Vous allez maintenant commencer le vrai jeu"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You will earn 10 points for every right answer"
+                            "textContent": {
+                                "en": "You will earn 10 points for every right answer",
+                                "fr": "Vous gagnerez 10 points pour chaque bonne réponse"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Good luck!"
+                            "textContent": {
+                                "en": "Good luck!",
+                                "fr": "Bonne chance!"
+                            }
                         },
                         {
                             "sectionType": "image-square",
-                            "imagePath": "/assets/images/instructions/strooptask/stroop_ink_instructions.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/strooptask/stroop_ink_instructions_en.png",
+                                "fr": "/assets/images/instructions/strooptask/stroop_ink_instructions_fr.png"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready for the actual game"
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the actual game",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -1352,21 +1667,33 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Congratulations! You finished the game successfully",
+                    "title": {
+                        "en": "Congratulations! You finished the game successfully",
+                        "fr": "Félicitations! Vous avez terminé le jeu avec succès."
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
                             "injection": "cached-string",
                             "cacheKey": "stroop-total-score",
-                            "textContent": "You scored: ??? points"
+                            "textContent": {
+                                "en": "You scored: ??? points",
+                                "fr": "Tu as: ??? points"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Thank you for your participation."
+                            "textContent": {
+                                "en": "Thank you for your participation.",
+                                "fr": "Merci pour votre participation."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
