@@ -951,6 +951,36 @@ UPDATE tasks set
                     "durationFixationPresented": 50,
                     "useHand": "BOTH"
                 }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "Congratulations! You finished the game successfully",
+                        "fr": "Félicitations! Vous avez terminé le jeu avec succès."
+                    },
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Thank you for your participation.",
+                                "fr": "Merci pour votre participation."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": false,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
+                }
             }
         ]
     }'
@@ -2080,23 +2110,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Welcome",
+                    "title": {
+                        "en": "Welcome",
+                        "fr": "Bienvenue"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "There are two parts to this game."
+                            "textContent": {
+                                "en": "There are two parts to this game.",
+                                "fr": "Ce jeu comporte deux parties."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "PART 1: Number game"
+                            "textContent": {
+                                "en": "PART 1: Number game",
+                                "fr": "PARTIE 1: Jeu des chiffres"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "First we will go through the instructions and then you will have some opportunity to practice."
+                            "textContent": {
+                                "en": "First we will go through the instructions and then you will have some opportunity to practice.",
+                                "fr": "Nous vous expliquerons les règles du jeu et vous aurez ensuite l''occasion de pratiquer."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2113,19 +2158,31 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Read the instructions carefully."
+                            "textContent": {
+                                "en": "Read the instructions carefully.",
+                                "fr": "Lisez attentivement les instructions."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You will see a number on the screen. That number will either be <b>ORANGE</b> or <b>BLUE</b>"
+                            "textContent": {
+                                "en": "You will see a number on the screen. That number will either be <b>ORANGE</b> or <b>BLUE</b>.",
+                                "fr": "Vous verrez un chiffre à l''écran. Ce chiffre sera <b>ORANGE</b> ou <b>BLEU</b>."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The color is important: It will tell you what you must identify about that number."
+                            "textContent": {
+                                "en": "The color is important: It will tell you what you must identify about that number.",
+                                "fr": "La couleur est importante: elle indique ce que vous devez identifier à propos de ce numéro."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2138,23 +2195,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Instructions continued",
+                    "title": {
+                        "en": "Instructions continued",
+                        "fr": "Instructions suite"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "<b>ORANGE NUMBER</b>"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>",
+                                "fr": "<b>Si le CHIFFRE est ORANGE</b>"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Determine if the number is less than or greater than 5"
+                            "textContent": {
+                                "en": "Determine if the number is less than or greater than 5",
+                                "fr": "Vous devez déterminez si le chiffre est inférieur ou supérieur à 5"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Lesser than (<) 5: Press the left arrow key ⬅️"
+                            "textContent": {
+                                "en": "Lesser than (<) 5: Press the left arrow key ⬅️",
+                                "fr": "Inférieur à (<) 5: Appuyez sur la touche fléchée gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Greater than (>) 5: Press the right arrow key ➡️"
+                            "textContent": {
+                                "en": "Greater than (>) 5: Press the right arrow key ➡️",
+                                "fr": "Supérieur à (>) 5: Appuyez sur la touche fléchée droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -2162,23 +2234,38 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "<b>BLUE NUMBER</b>"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>",
+                                "fr": "<b>Si le CHIFFRE est BLEU</b>"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Determine if the number is odd or even"
+                            "textContent": {
+                                "en": "Determine if the number is odd or even",
+                                "fr": "Vous devez déterminez si le chiffre est impair ou pair"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If the number is odd: Press the left arrow key ⬅️"
+                            "textContent": {
+                                "en": "If the number is odd: Press the left arrow key ⬅️",
+                                "fr": "Chiffre impair: Appuyez sur la touche fléchée gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If the number is even: Press the right arrow key ➡️"
+                            "textContent": {
+                                "en": "If the number is even: Press the right arrow key ➡️",
+                                "fr": "Chiffre pair: Appuyez sur la touche fléchée droite"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2191,7 +2278,10 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Examples",
+                    "title": {
+                        "en": "Examples",
+                        "fr": "Exemples"
+                    },
                     "sections": [
                         {
                             "sectionType": "image-small",
@@ -2200,11 +2290,17 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Hint: The number is <b>ORANGE</b> so you must decide if it is less than or greater than 5"
+                            "textContent": {
+                                "en": "Hint: The number is <b>ORANGE</b> so you must decide if it is less than or greater than 5",
+                                "fr": "Indice: Le chiffre est <b>ORANGE</b> vous devez donc décider s''il est inférieur ou supérieur à 5"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You should choose <b>LEFT</b> arrow to indicate that it''s less than (<) 5"
+                            "textContent": {
+                                "en": "You should choose <b>LEFT</b> arrow to indicate that it''s less than (<) 5",
+                                "fr": "Vous devez taper la flèche <b>GAUCHE</b> pour indiquer qu''il est inférieur à (<) 5"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -2217,15 +2313,24 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Hint: The number is <b>BLUE</b> so you must decide if it is an odd or even number"
+                            "textContent": {
+                                "en": "Hint: The number is <b>BLUE</b> so you must decide if it is an odd or even number",
+                                "fr": "Indice: Le chiffre est <b>BLEU</b>, vous devez donc décider s''il s''agit d''un chiffre pair ou impair"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You should choose <b>RIGHT</b> arrow to indicate that it''s even"
+                            "textContent": {
+                                "en": "You should choose <b>RIGHT</b> arrow to indicate that it''s even",
+                                "fr": "Vous devez taper la flèche <b>DROITE</b> pour indiquer qu''il est pair"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2238,7 +2343,10 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Examples",
+                    "title": {
+                        "en": "Examples",
+                        "fr": "Exemples"
+                    },
                     "sections": [
                         {
                             "sectionType": "image-small",
@@ -2247,11 +2355,17 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Hint: The number is <b>ORANGE</b> so you must decide if it is less than or greater than 5"
+                            "textContent": {
+                                "en": "Hint: The number is <b>ORANGE</b> so you must decide if it is less than or greater than 5",
+                                "fr": "Indice: Le chiffre est <b>ORANGE</b> vous devez donc décider s''il est inférieur ou supérieur à 5"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You should choose the <b>RIGHT</b> arrow to indicate that it''s greater than (>) 5"
+                            "textContent": {
+                                "en": "You should choose the <b>RIGHT</b> arrow to indicate that it''s greater than (>) 5",
+                                "fr": "Vous devez choisir la flèche <b>DROITE</b> pour indiquer qu''il est supérieur à (>) 5"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -2264,15 +2378,24 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Hint: The number is <b>BLUE</b> so you must decide if it is an odd or even number"
+                            "textContent": {
+                                "en": "Hint: The number is <b>BLUE</b> so you must decide if it is an odd or even number",
+                                "fr": "Indice: Le chiffre est <b>BLEU</b>, vous devez donc décider s''il s''agit d''un chiffre pair ou impair"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You should choose the <b>LEFT</b> arrow to indicate that it''s odd"
+                            "textContent": {
+                                "en": "You should choose the <b>LEFT</b> arrow to indicate that it''s odd",
+                                "fr": "Vous devez choisir la flèche <b>GAUCHE</b> pour indiquer qu''il est impair"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2285,23 +2408,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Practice round",
+                    "title": {
+                        "en": "Practice round",
+                        "fr": "Pratique"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Let''s practice"
+                            "textContent": {
+                                "en": "Let''s practice",
+                                "fr": "Pratiquons"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Don''t worry, this is just to help you learn which keys to press. We will continue to give you hints."
+                            "textContent": {
+                                "en": "Don''t worry, this is just to help you learn which keys to press. We will continue to give you hints.",
+                                "fr": "Vous aurez maintenant la chance de vous habituer à appuyer sur les bonnes flèhes au bon moment. Par contre, il n''y aura plus d''indices."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "(The game will launch in fullscreen)"
+                            "textContent": {
+                                "en": "(The game will launch in fullscreen)",
+                                "fr": "(Le jeu se lancera en plein écran)"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2318,15 +2456,24 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "<b>BLUE NUMBER</b>: is number odd or even?"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Odd: Left arrow key ⬅️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Even: Right arrow key ➡️"
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -2334,19 +2481,31 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "<b>ORANGE NUMBER</b>: is number odd or even?"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Less than 5: Left arrow key ⬅️"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Greater than 5: Right arrow key ➡️"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" to start the practice"
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ],
                     "buttons": {
@@ -2379,7 +2538,10 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "1st Practice round is now complete",
+                    "title": {
+                        "en": "1st Practice round is now complete",
+                        "fr": "Le premier tour de pratique est maintenant terminé"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
@@ -2389,7 +2551,10 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" when you are ready for the next stage"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" when you are ready for the next stage",
+                                "fr": "Cliquez sur \\"NEXT\\" pour commencer la prochaine étape"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2402,39 +2567,70 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Practice round 2",
+                    "title": {
+                        "en": "Practice round 2",
+                        "fr": "Pratique 2"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Remember, the number''s color tells you what you must identify about the number"
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "<b>ORANGE NUMBER</b>"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Less than 5: Left arrow key ⬅️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Greater than 5: Right arrow key ➡️"
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "<b>BLUE NUMBER</b>"
+                            "textContent": "<br />"
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Odd: Left arrow key ⬅️"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Even: Right arrow key ➡️"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready for the practice round"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ],
                     "buttons": {
@@ -2491,11 +2687,17 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "We will repeat this round so you can get more practice"
+                            "textContent": {
+                                "en": "We will repeat this round so you can get more practice",
+                                "fr": "Nous allons répéter ce tour pour que vous puissiez vous entraîner davantage"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" when you are ready for the next stage"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" when you are ready for the next stage",
+                                "fr": "Cliquez sur \\"NEXT\\" pour commencer la prochaine étape"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2510,39 +2712,70 @@ UPDATE tasks set
                 "componentConfig": {
                     "skippable": true,
                     "skippableCacheKey": "task-switching-should-skip",
-                    "title": "Practice round 2",
+                    "title": {
+                        "en": "Practice round 2",
+                        "fr": "Pratique 2"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Remember, the number''s color tells you what you must identify about the number"
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "<b>ORANGE NUMBER</b>"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Less than 5: Left arrow key ⬅️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Greater than 5: Right arrow key ➡️"
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "<b>BLUE NUMBER</b>"
+                            "textContent": "<br />"
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Odd: Left arrow key ⬅️"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Even: Right arrow key ➡️"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready for the practice round"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ],
                     "buttons": {
@@ -2575,23 +2808,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Practice round 3",
+                    "title": {
+                        "en": "Practice round 3",
+                        "fr": "Pratique 3"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Last practice"
+                            "textContent": {
+                                "en": "Last practice",
+                                "fr": "Dernière pratique"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "This time we won''t give you feedback after each answer"
+                            "textContent": {
+                                "en": "This time we won''t give you feedback after each answer",
+                                "fr": "Cette fois, nous ne vous dirons pas si vous avez répondu correctement ou incorrectement après chaque réponse."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Do your best!"
+                            "textContent": {
+                                "en": "Do your best!",
+                                "fr": "Faites de votre mieux!"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2604,39 +2852,70 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Practice round 3",
+                    "title": {
+                        "en": "Practice round 3",
+                        "fr": "Pratique 3"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Remember, the number''s color tells you what you must identify about the number"
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "<b>ORANGE NUMBER</b>"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Less than 5: Left arrow key ⬅️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Greater than 5: Right arrow key ➡️"
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "<b>BLUE NUMBER</b>"
+                            "textContent": "<br />"
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Odd: Left arrow key ⬅️"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Even: Right arrow key ➡️"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready for the practice round"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ],
                     "buttons": {
@@ -2668,19 +2947,31 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Main round",
+                    "title": {
+                        "en": "Main round",
+                        "fr": "Tour principal"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Great! All practices are complete."
+                            "textContent": {
+                                "en": "Great! All practices are complete.",
+                                "fr": "Bravo! Vous avez compléter les tours de pratique."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Now you will play the real game."
+                            "textContent": {
+                                "en": "Now you will play the real game.",
+                                "fr": "Maintenant, vous allez jouer au vrai jeu."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2693,39 +2984,70 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Recap instructions",
+                    "title": {
+                        "en": "Recap instructions",
+                        "fr": "Instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Remember, the number''s color tells you what you must identify about the number"
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "<b>ORANGE NUMBER</b>"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Less than 5: Left arrow key ⬅️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Greater than 5: Right arrow key ➡️"
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "<b>BLUE NUMBER</b>"
+                            "textContent": "<br />"
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Odd: Left arrow key ⬅️"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Even: Right arrow key ➡️"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready for the practice round"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the actual game",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2757,11 +3079,17 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Congratulations!",
+                    "title": {
+                        "en": "Congratulations!",
+                        "fr": "Félicitations!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You finished the game successfully"
+                            "textContent": {
+                                "en": "You finished the game successfully",
+                                "fr": "Vous avez terminé le jeu avec succès."
+							}
                         },
                         {
                             "sectionType": "text",
@@ -2771,11 +3099,10 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Thank you for your participation"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2806,27 +3133,45 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Part 2: Patch Game",
+                    "title": {
+                        "en": "Part 2: Patch Game",
+                        "fr": "Partie 2: Jeu des Parcelles"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Read the instructions carefully"
+                            "textContent": {
+                                "en": "Read the instructions carefully",
+                                "fr": "Lisez attentivement les instructions"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Now you will be playing a slightly different game"
+                            "textContent": {
+                                "en": "Now you will be playing a slightly different game",
+                                "fr": "Vous allez maintenant jouer à un jeu légèrement différent"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You will see two colored patches on the screen and will have to pick one. Each patch is hiding a colored number."
+                            "textContent": {
+                                "en": "You will see two colored patches on the screen and will have to pick one. Each patch is hiding a colored number.",
+                                "fr": "Vous verrez deux parcelles colorées à l''écran et vous devrez en choisir une. Chaque parcelle cache un chiffre coloré."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Once the number appears, as before, you will have to make a decision about that number based on its color: ORANGE or BLUE"
+                            "textContent": {
+                                "en": "Once the number appears, as before, you will have to make a decision about that number based on its color: ORANGE or BLUE",
+                                "fr": "Quand le chiffre apparaît, comme avant, vous devrez réagir au chiffre en fonction de sa couleur, ORANGE ou BLEU."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2839,23 +3184,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "More instructions",
+                    "title": {
+                        "en": "More instructions",
+                        "fr": "Suite des instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "There are differences between the patches:"
+                            "textContent": {
+                                "en": "There are differences between the patches:",
+                                "fr": "Les parcelles ne sont pas pareilles:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "One patch is hiding numbers that change color <b>less</b> often"
+                            "textContent": {
+                                "en": "One patch is hiding numbers that change color <b>less</b> often",
+                                "fr": "Un parcelle cache des chiffres qui changent de couleur <b>MOINS</b> souvent."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The other patch is hiding numbers that change color <b>more</b> often"
+                            "textContent": {
+                                "en": "The other patch is hiding numbers that change color <b>more</b> often",
+                                "fr": "L''autre parcelle cache des chiffres qui changent de couleur <b>PLUS</b> souvent."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2868,23 +3228,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "More instructions",
+                    "title": {
+                        "en": "More instructions",
+                        "fr": "Suite des instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "If you develop a preference for one of the patches, feel free to continue to choose it"
+                            "textContent": {
+                                "en": "If you develop a preference for one of the patches, feel free to continue to choose it",
+                                "fr": "Si vous développez une préférence pour une des parcelles, n''hésitez pas à continuer à la choisir."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "However, we recommend that you <b>try both patches at the beginning</b>"
+                            "textContent": {
+                                "en": "However, we recommend that you <b>try both patches at the beginning</b>",
+                                "fr": "Toutefois, nous vous recommandons <b>d''essayer les deux parcelles au début</b> pour voir si vous en préférez une."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Try to avoid choosing the patch solely based on its deisgn or its location"
+                            "textContent": {
+                                "en": "Try to avoid choosing the patch solely based on its deisgn or its location",
+                                "fr": "Essayez d''éviter de choisir le parcelle uniquement en fonction de sa couleur ou de son emplacement sur l''écran."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2897,11 +3272,17 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "More instructions",
+                    "title": {
+                        "en": "More instructions",
+                        "fr": "Suite des instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Steps to select a patch:"
+                            "textContent": {
+                                "en": "Steps to select a patch:",
+                                "fr": "Comment sélectionner une parcelle:"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -2909,11 +3290,17 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "1. Move the cursor to the bullseye in the middle of the screen. This will make the patches appear"
+                            "textContent": {
+                                "en": "1. Move the cursor to the bullseye in the middle of the screen. This will make the patches appear",
+                                "fr": "1. Avec votre souris vous devez premièrement amener le curseur vers la cible au milieu de l''écran. Ceci permettra de dévoiler les parcelles."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "2. To select a patch, move the cursor to its location. The number will then appear"
+                            "textContent": {
+                                "en": "2. To select a patch, move the cursor to its location. The number will then appear",
+                                "fr": "2. Ensuite vous devez sélectionner une parcelle en plaçant le curseur par dessus. Ceci fera apparaître le chiffre caché."
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -2921,11 +3308,17 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "3. Then use the arrow keys as before to give us your answer"
+                            "textContent": {
+                                "en": "3. Then use the arrow keys as before to give us your answer",
+                                "fr": "3. Ensuite vous devez utiliser les touches fléchées selon la couleur du chiffre, comme durant la première partie du jeu."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2938,23 +3331,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "More instructions",
+                    "title": {
+                        "en": "More instructions",
+                        "fr": "Suite des instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Orange number:"
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Determine if the number is less than or greater than 5"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "LESS than (<) 5 : Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "GREATER than (>) 5: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -2962,23 +3370,31 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Blue number:"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Determine if the number is odd or even"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is ODD: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is EVEN: Press the RIGHT arrow key ➡️"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2991,15 +3407,24 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "First, a practice round",
+                    "title": {
+                        "en": "First, a practice round",
+                        "fr": "Vous allez maintenant vous pratiquer!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "(The game will launch in fullscreen)"
+                            "textContent": {
+                                "en": "(The game will launch in fullscreen)",
+                                "fr": "(Le jeu se lancera en plein écran)"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready for the practice round"
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ],
                     "buttons": {
@@ -3125,7 +3550,10 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Practice round is now complete",
+                    "title": {
+                        "en": "Practice round is now complete",
+                        "fr": "Le tour de pratique est maintenant terminé"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
@@ -3145,11 +3573,17 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "We will repeat this round so you can get more practice."
+                            "textContent": {
+                                "en": "We will repeat this round so you can get more practice.",
+                                "fr": "Nous allons répéter ce tour afin que vous puissiez vous entraîner davantage."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" when you are ready for the next stage"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" when you are ready for the next stage",
+                                "fr": "Cliquez sur \\"NEXT\\" pour commencer la prochaine étape"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3164,23 +3598,38 @@ UPDATE tasks set
                 "componentConfig": {
                     "skippable": true,
                     "skippableCacheKey": "demandselection-should-skip",
-                    "title": "More instructions",
+                    "title": {
+                        "en": "More instructions",
+                        "fr": "Suite des instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Orange number:"
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Determine if the number is less or greater than 5"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "LESS than (<) 5 : Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "GREATER than (>) 5: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -3188,23 +3637,31 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Blue number:"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Determine if the number is odd or even"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is ODD: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is EVEN: Press the RIGHT arrow key ➡️"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3255,19 +3712,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Instructions Recap",
+                    "title": {
+                        "en": "Recap instructions",
+                        "fr": "Instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Orange number: Determine if the number is less or greater than 5"
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "LESS than 5: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "GREATER than 5: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -3275,19 +3751,31 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Blue number: Determine if the number is odd or even"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is ODD: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is EVEN: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" to launch the practice"
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ],
                     "buttons": {
@@ -3322,19 +3810,31 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Main Round",
+                    "title": {
+                        "en": "Main round",
+                        "fr": "Tour principal"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Good job! Now we will start the real game"
+                            "textContent": {
+                                "en": "Great! All practices are complete.",
+                                "fr": "Bravo! Vous avez compléter les tours de pratique."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "There are six short parts to the game, each lasting a few minutes. You can take short breaks in between each."
+                            "textContent": {
+                                "en": "There are six short parts to the game, each lasting a few minutes. You can take short breaks in between each.",
+                                "fr": "Il y a six courts tours, chacun d''une durée de quelques minutes. Vous pourrez prendre une pauses entre chaque tour."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3357,7 +3857,10 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ]
                 }
@@ -3365,23 +3868,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Recap Instructions",
+                    "title": {
+                        "en": "Recap instructions",
+                        "fr": "Rappel des instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Remember, first pick a patch then make a decision based on the color of the number, ORANGE or BLUE"
+                            "textContent": {
+                                "en": "Remember, first pick a patch then make a decision based on the color of the number, ORANGE or BLUE",
+                                "fr": "Rappelez-vous, choisissez d''abord un patch puis prenez une décision en fonction de la couleur du numéro, ORANGE ou BLEU"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The patches are different:"
+                            "textContent": {
+                                "en": "The patches are different:",
+                                "fr": "Les parcelles sont différentes."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The numbers hiding behind each patch change color <b>more</b> or <b>less</b> often depending on the patch"
+                            "textContent": {
+                                "en": "The numbers hiding behind each patch change color <b>more</b> or <b>less</b> often depending on the patch",
+                                "fr": "Les chiffres qui se cachent derrière chaque parcelle changent de couleur <b>plus</b> ou <b>moins</b> souvent selon la parcelle."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3394,23 +3912,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Recap Instructions",
+                    "title": {
+                        "en": "Recap instructions",
+                        "fr": "Rappel des instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "If you develop a preference for one of the patches, feel free to continue to choose it"
+                            "textContent": {
+                                "en": "If you develop a preference for one of the patches, feel free to continue to choose it.",
+                                "fr": "Si vous développez une préférence pour une des parcelles, n''hésitez pas à continuer à la choisir."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "However, we recommend that <b>you try both patches at the beginning</b>"
+                            "textContent": {
+                                "en": "However, we recommend that <b>you try both patches at the beginning</b>.",
+                                "fr": "Toutefois, nous vous recommandons d''essayer les deux parcelles au début."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Try to avoid choosing the patch solely based on how they look or on their location"
+                            "textContent": {
+                                "en": "Try to avoid choosing the patch solely based on how they look or on their location.",
+                                "fr": "Essayez d''éviter de choisir une parcelle uniquement en fonction de sa couleur ou de son emplacement"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3423,19 +3956,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Recap Instructions",
+                    "title": {
+                        "en": "Recap instructions",
+                        "fr": "Rappel des instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Orange number: Determine if the number is less than or greater than 5"
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "LESS than 5: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "GREATER than 5: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -3443,19 +3995,31 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Blue number: Determine if the number is odd or even"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is ODD: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is EVEN: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3489,11 +4053,17 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Congrats, you have finished this part",
+                    "title": {
+                        "en": "Congrats, you have finished this part.",
+                        "fr": "Le premier tour est maintenant terminé."
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3516,7 +4086,10 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3529,19 +4102,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Recap Instructions",
+                    "title": {
+                        "en": "Recap instructions",
+                        "fr": "Rappel des instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Orange number: Determine if the number is less than or greater than 5"
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "LESS than 5: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "GREATER than 5: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -3549,19 +4141,31 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Blue number: Determine if the number is odd or even"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is ODD: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is EVEN: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready"
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the actual game",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3595,11 +4199,17 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Congrats, you have finished this part",
+                    "title": {
+                        "en": "Congrats, you have finished this part",
+                        "fr": "Félicitations, vous avez terminé cette partie"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3622,7 +4232,10 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3635,19 +4248,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Recap Instructions",
+                    "title": {
+                        "en": "Recap instructions",
+                        "fr": "Rappel des instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Orange number: Determine if the number is less than or greater than 5"
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "LESS than 5: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "GREATER than 5: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -3655,19 +4287,31 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Blue number: Determine if the number is odd or even"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is ODD: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is EVEN: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready"
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the actual game",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3701,11 +4345,17 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Congrats, you have finished this part",
+                    "title": {
+                        "en": "Congrats, you have finished this part",
+                        "fr": "Félicitations, vous avez terminé cette partie"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ]
                 }
@@ -3723,7 +4373,10 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ]
                 }
@@ -3731,19 +4384,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Recap Instructions",
+                    "title": {
+                        "en": "Recap instructions",
+                        "fr": "Rappel des instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Orange number: Determine if the number is less than or greater than 5"
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "LESS than 5: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "GREATER than 5: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -3751,19 +4423,31 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Blue number: Determine if the number is odd or even"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is ODD: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is EVEN: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready"
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the actual game",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3797,15 +4481,24 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Congrats, you have finished this part",
+                    "title": {
+                        "en": "Congrats, you have finished this part",
+                        "fr": "Félicitations, vous avez terminé cette partie"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "<b>Please pay attention. We will be asking you to do something different!!!</b>"
+                            "textContent": {
+                                "en": "<b>Please pay attention. We will be asking you to do something different!!!</b>",
+                                "fr": "<b>Attention: Les règles vont changer pour la prochaine partie!!</b>"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3824,25 +4517,47 @@ UPDATE tasks set
                             "sectionType": "text",
                             "injection": "cached-string",
                             "cacheKey": "demandselection-block-num",
-                            "textContent": "This is part ??? of the game."
+                            "textContent": {
+                                "en": "This is part ??? of the game.",
+                                "fr": "Cela fait partie ??? du jeu."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Read these instructions."
+                            "textContent": {
+                                "en": "Read these instructions.",
+                                "fr": "Veuillez lire ces instructions."
+                            }
                         },
                         {
                             "sectionType": "text",
                             "injection": "counterbalance",
-                            "textContent": "Find the <b>???</b> and pick that one on each trial"
+                            "textContent": {
+                                "en": "You must now find the <b>???</b> and pick that one on each trial",
+                                "fr": "Vous devez maintenant identifier la parcelle qui vous semble <b>???</b> et la choisir à chaque essai."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "As before, start by taking the time to explore each of the patches.",
+                                "fr": "Comme d’habitude, prenez tout d’abord le temps d’explorer les deux parcelles."
+                            }
                         },
                         {
                             "sectionType": "text",
                             "injection": "counterbalance",
-                            "textContent": "Remember, once you have found and selected the <b>???</b>, your goal is still to make a decision about the number that appears based on its color: ORANGE or BLUE"
+                            "textContent": {
+                                "en": "Remember, once you have found and selected the <b>???</b>, your goal is still to make a decision about the number that appears based on its color: ORANGE or BLUE",
+                                "fr": "Ensuite, comme toujours, vous devez répondre avec les flèches selon la couleur couleur ORANGE ou BLEUE du chiffre qui apparaît."
+							}
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ]
                 }
@@ -3850,19 +4565,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Recap Instructions",
+                    "title": {
+                        "en": "Recap instructions",
+                        "fr": "Rappel des instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Orange number: Determine if the number is less than or greater than 5"
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "LESS than 5: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "GREATER than 5: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -3870,19 +4604,31 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Blue number: Determine if the number is odd or even"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is ODD: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is EVEN: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready"
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the actual game",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3916,11 +4662,17 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Congrats, you have finished this part",
+                    "title": {
+                        "en": "Congrats, you have finished this part",
+                        "fr": "Félicitations, vous avez terminé cette partie"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "<b>Please pay attention. We will be asking you to do something different!!!</b>"
+                            "textContent": {
+                                "en": "<b>Please pay attention. We will be asking you to do something different!!!</b>",
+                                "fr": "<b>Attention: Les règles vont changer pour la prochaine partie!!</b>"
+                            }
                         }
                     ]
                 }
@@ -3934,25 +4686,47 @@ UPDATE tasks set
                             "sectionType": "text",
                             "injection": "cached-string",
                             "cacheKey": "demandselection-block-num",
-                            "textContent": "This is part ??? of the game."
+                            "textContent": {
+                                "en": "This is part ??? of the game.",
+                                "fr": "Cela fait partie ??? du jeu."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Read these instructions."
+                            "textContent": {
+                                "en": "Read these instructions.",
+                                "fr": "Veuillez lire ces instructions."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "injection": "counterbalance-alternative",
-                            "textContent": "Find the <b>???</b> and pick that one on each trial"
+                            "injection": "counterbalance",
+                            "textContent": {
+                                "en": "You must now find the <b>???</b> and pick that one on each trial",
+                                "fr": "Vous devez maintenant identifier la parcelle qui vous semble <b>???</b> et la choisir à chaque essai."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "injection": "counterbalance-alternative",
-                            "textContent": "Remember, once you have found and selected the <b>???</b>, your goal is still to make a decision about the number that appears based on its color: ORANGE or BLUE"
+                            "textContent": {
+                                "en": "As before, start by taking the time to explore each of the patches.",
+                                "fr": "Comme d’habitude, prenez tout d’abord le temps d’explorer les deux parcelles."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "injection": "counterbalance",
+                            "textContent": {
+                                "en": "Remember, once you have found and selected the <b>???</b>, your goal is still to make a decision about the number that appears based on its color: ORANGE or BLUE",
+                                "fr": "Ensuite, comme toujours, vous devez répondre avec les flèches selon la couleur couleur ORANGE ou BLEUE du chiffre qui apparaît."
+							}
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ]
                 }
@@ -3960,19 +4734,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Recap Instructions",
+                    "title": {
+                        "en": "Recap instructions",
+                        "fr": "Rappel des instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Orange number: Determine if the number is less than or greater than 5"
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "LESS than 5: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "GREATER than 5: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -3980,19 +4773,31 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Blue number: Determine if the number is odd or even"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is ODD: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is EVEN: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready"
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the actual game",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -4026,19 +4831,24 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Congratulations!",
+                    "title": {
+                        "en": "Congratulations!",
+                        "fr": "Félicitations!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You finished the game successfully."
+                            "textContent": {
+                                "en": "You finished the game successfully",
+                                "fr": "Vous avez terminé le jeu avec succès."
+							}
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Thank you for your participation."
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
