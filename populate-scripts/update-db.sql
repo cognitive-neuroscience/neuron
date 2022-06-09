@@ -1135,7 +1135,7 @@ UPDATE tasks set
                         {
                             "sectionType": "image-horizontal",
                             "imageAlignment": "center",
-                            "imagePath": "/assets/images/instructions/nback/examplePart1.png"
+                            "imagePath": "assets/images/instructions/nback/examplePart1.png"
                         },
                         {
                             "sectionType": "text",
@@ -1177,7 +1177,10 @@ UPDATE tasks set
                         {
                             "sectionType": "image-horizontal",
                             "imageAlignment": "center",
-                            "imagePath": "/assets/images/instructions/nback/examplePart2.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/nback/examplePart2.png",
+                                "fr": "/assets/images/instructions/nback/examplePart2_fr.jpg"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -1212,7 +1215,10 @@ UPDATE tasks set
                         {
                             "sectionType": "image-horizontal",
                             "imageAlignment": "center",
-                            "imagePath": "/assets/images/instructions/nback/examplePart3.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/nback/examplePart3.png",
+                                "fr": "/assets/images/instructions/nback/examplePart3_fr.jpg"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -2547,7 +2553,10 @@ UPDATE tasks set
                             "sectionType": "text",
                             "injection": "cached-string",
                             "cacheKey": "task-switching-num-correct",
-                            "textContent": "You got ??? out of 5 trials correct"
+                            "textContent": {
+                                "en": "You got ??? out of 5 trials correct",
+                                "fr": "Vous avez ??? bonnes réponses sur 5"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -2668,7 +2677,10 @@ UPDATE tasks set
                             "sectionType": "text",
                             "injection": "cached-string",
                             "cacheKey": "task-switching-num-correct",
-                            "textContent": "You got ??? out of 20 trials correct"
+                            "textContent": {
+                                "en": "You got ??? out of 20 trials correct",
+                                "fr": "Vous avez ??? bonnes réponses sur 20"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3095,7 +3107,10 @@ UPDATE tasks set
                             "sectionType": "text",
                             "injection": "cached-string",
                             "cacheKey": "task-switching-num-correct",
-                            "textContent": "You scored ??? points"
+                            "textContent": {
+                                "en": "You scored ??? points",
+                                "fr": "Vous avez ??? points"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -3559,7 +3574,10 @@ UPDATE tasks set
                             "sectionType": "text",
                             "injection": "cached-string",
                             "cacheKey": "demandselection-num-correct",
-                            "textContent": "You got ??? out of 10 correct"
+                            "textContent": {
+                                "en": "You got ??? out of 10 correct",
+                                "fr": "Vous avez ??? bonne réponses sur 10"
+                            }
                         }
                     ]
                 }
@@ -3704,7 +3722,10 @@ UPDATE tasks set
                             "sectionType": "text",
                             "injection": "cached-string",
                             "cacheKey": "demandselection-num-correct",
-                            "textContent": "You got ??? out of 10 correct"
+                            "textContent": {
+                                "en": "You got ??? out of 10 correct",
+                                "fr": "Vous avez ??? bonne réponses sur 10"
+                            }
                         }
                     ]
                 }
@@ -3853,7 +3874,10 @@ UPDATE tasks set
                             "sectionType": "text",
                             "injection": "cached-string",
                             "cacheKey": "demandselection-block-num",
-                            "textContent": "This is part ??? of the game"
+                            "textContent": {
+                                "en": "This is part ??? of the game.",
+                                "fr": "Cela fait partie ??? du jeu."
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -4082,7 +4106,10 @@ UPDATE tasks set
                             "sectionType": "text",
                             "injection": "cached-string",
                             "cacheKey": "demandselection-block-num",
-                            "textContent": "This is part ??? of the game"
+                            "textContent": {
+                                "en": "This is part ??? of the game.",
+                                "fr": "Cela fait partie ??? du jeu."
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -4209,295 +4236,6 @@ UPDATE tasks set
                             "textContent": {
                                 "en": "Click \\"NEXT\\" to continue",
                                 "fr": "Cliquez sur \\"NEXT\\" pour continuer"
-                            }
-                        }
-                    ],
-                    "buttons": {
-                        "isStart": false,
-                        "previousDisabled": true,
-                        "nextDisabled": false
-                    }
-                }
-            },
-            {
-                "componentName": "DISPLAYCOMPONENT",
-                "componentConfig": {
-                    "title": "",
-                    "sections": [
-                        {
-                            "sectionType": "text",
-                            "injection": "cached-string",
-                            "cacheKey": "demandselection-block-num",
-                            "textContent": "This is part ??? of the game"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Click \\"NEXT\\" to continue",
-                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
-                            }
-                        }
-                    ],
-                    "buttons": {
-                        "isStart": false,
-                        "previousDisabled": false,
-                        "nextDisabled": false
-                    }
-                }
-            },
-            {
-                "componentName": "DISPLAYCOMPONENT",
-                "componentConfig": {
-                    "title": {
-                        "en": "Recap instructions",
-                        "fr": "Rappel des instructions"
-                    },
-                    "sections": [
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Remember, the number''s color tells you what you must identify about the number",
-                                "fr": "Rappel:"
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
-                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Odd: Left arrow key ⬅️",
-                                "fr": "Impair: touche flèche gauche ⬅"
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Even: Right arrow key ➡️",
-                                "fr": "Pair: touche fléche droite ➡"
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "<br />"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
-                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Less than 5: Left arrow key ⬅️",
-                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Greater than 5: Right arrow key ➡️",
-                                "fr": "Supérieur à 5: touche fléche droite ➡"
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Click \\"START\\" when you are ready for the actual game",
-                                "fr": "Cliquez sur \\"START\\" pour commencer"
-                            }
-                        }
-                    ],
-                    "buttons": {
-                        "isStart": true,
-                        "previousDisabled": false,
-                        "nextDisabled": false
-                    }
-                }
-            },
-            {
-                "componentName": "DEMANDSELECTIONCOMPONENT",
-                "componentConfig": {
-                    "isPractice": false,
-                    "maxResponseTime": 5000,
-                    "interTrialDelay": 0,
-                    "showFeedbackAfterEachTrial": true,
-                    "durationOfFeedback": 1000,
-                    "numTrials": 50,
-                    "delayToShowHelpMessage": 4000,
-                    "probOfShiftFirstPatch": 10,
-                    "probOfShiftSecondPatch": 90,
-                    "oddEvenColor": "blue",
-                    "ltGtColor": "orange",
-                    "counterbalanceMode": "none",
-                    "stimuliConfig": {
-                        "type": "generated",
-                        "stimuli": null
-                    }
-                }
-            },
-            {
-                "componentName": "DISPLAYCOMPONENT",
-                "componentConfig": {
-                    "title": {
-                        "en": "Congrats, you have finished this part",
-                        "fr": "Félicitations, vous avez terminé cette partie"
-                    },
-                    "sections": [
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Click \\"NEXT\\" to continue",
-                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
-                            }
-                        }
-                    ]
-                }
-            },
-            {
-                "componentName": "DISPLAYCOMPONENT",
-                "componentConfig": {
-                    "title": "",
-                    "sections": [
-                        {
-                            "sectionType": "text",
-                            "injection": "cached-string",
-                            "cacheKey": "demandselection-block-num",
-                            "textContent": "This is part ??? of the game"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Click \\"NEXT\\" to continue",
-                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
-                            }
-                        }
-                    ]
-                }
-            },
-            {
-                "componentName": "DISPLAYCOMPONENT",
-                "componentConfig": {
-                    "title": {
-                        "en": "Recap instructions",
-                        "fr": "Rappel des instructions"
-                    },
-                    "sections": [
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Remember, the number''s color tells you what you must identify about the number",
-                                "fr": "Rappel:"
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
-                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Odd: Left arrow key ⬅️",
-                                "fr": "Impair: touche flèche gauche ⬅"
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Even: Right arrow key ➡️",
-                                "fr": "Pair: touche fléche droite ➡"
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "<br />"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
-                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Less than 5: Left arrow key ⬅️",
-                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Greater than 5: Right arrow key ➡️",
-                                "fr": "Supérieur à 5: touche fléche droite ➡"
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Click \\"START\\" when you are ready for the actual game",
-                                "fr": "Cliquez sur \\"START\\" pour commencer"
-                            }
-                        }
-                    ],
-                    "buttons": {
-                        "isStart": true,
-                        "previousDisabled": false,
-                        "nextDisabled": false
-                    }
-                }
-            },
-            {
-                "componentName": "DEMANDSELECTIONCOMPONENT",
-                "componentConfig": {
-                    "isPractice": false,
-                    "maxResponseTime": 5000,
-                    "interTrialDelay": 0,
-                    "showFeedbackAfterEachTrial": true,
-                    "durationOfFeedback": 1000,
-                    "numTrials": 50,
-                    "delayToShowHelpMessage": 4000,
-                    "probOfShiftFirstPatch": 10,
-                    "probOfShiftSecondPatch": 90,
-                    "oddEvenColor": "blue",
-                    "ltGtColor": "orange",
-                    "counterbalanceMode": "none",
-                    "stimuliConfig": {
-                        "type": "generated",
-                        "stimuli": null
-                    }
-                }
-            },
-            {
-                "componentName": "DISPLAYCOMPONENT",
-                "componentConfig": {
-                    "title": {
-                        "en": "Congrats, you have finished this part",
-                        "fr": "Félicitations, vous avez terminé cette partie"
-                    },
-                    "sections": [
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Click \\"NEXT\\" to continue",
-                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "<b>Please pay attention. We will be asking you to do something different!!!</b>",
-                                "fr": "<b>Attention: Les règles vont changer pour la prochaine partie!!</b>"
                             }
                         }
                     ],
@@ -4525,32 +4263,146 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Read these instructions.",
-                                "fr": "Veuillez lire ces instructions."
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": false,
+                        "previousDisabled": false,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "Recap instructions",
+                        "fr": "Rappel des instructions"
+                    },
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
                             }
                         },
                         {
                             "sectionType": "text",
-                            "injection": "counterbalance",
                             "textContent": {
-                                "en": "You must now find the <b>???</b> and pick that one on each trial",
-                                "fr": "Vous devez maintenant identifier la parcelle qui vous semble <b>???</b> et la choisir à chaque essai."
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
                             }
                         },
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "As before, start by taking the time to explore each of the patches.",
-                                "fr": "Comme d’habitude, prenez tout d’abord le temps d’explorer les deux parcelles."
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
                             }
                         },
                         {
                             "sectionType": "text",
-                            "injection": "counterbalance",
                             "textContent": {
-                                "en": "Remember, once you have found and selected the <b>???</b>, your goal is still to make a decision about the number that appears based on its color: ORANGE or BLUE",
-                                "fr": "Ensuite, comme toujours, vous devez répondre avec les flèches selon la couleur couleur ORANGE ou BLEUE du chiffre qui apparaît."
-							}
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite ➡"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": "<br />"
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the actual game",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": true,
+                        "previousDisabled": false,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "DEMANDSELECTIONCOMPONENT",
+                "componentConfig": {
+                    "isPractice": false,
+                    "maxResponseTime": 5000,
+                    "interTrialDelay": 0,
+                    "showFeedbackAfterEachTrial": true,
+                    "durationOfFeedback": 1000,
+                    "numTrials": 50,
+                    "delayToShowHelpMessage": 4000,
+                    "probOfShiftFirstPatch": 10,
+                    "probOfShiftSecondPatch": 90,
+                    "oddEvenColor": "blue",
+                    "ltGtColor": "orange",
+                    "counterbalanceMode": "none",
+                    "stimuliConfig": {
+                        "type": "generated",
+                        "stimuli": null
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "Congrats, you have finished this part",
+                        "fr": "Félicitations, vous avez terminé cette partie"
+                    },
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": "",
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "injection": "cached-string",
+                            "cacheKey": "demandselection-block-num",
+                            "textContent": {
+                                "en": "This is part ??? of the game.",
+                                "fr": "Cela fait partie ??? du jeu."
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -4632,7 +4484,7 @@ UPDATE tasks set
                         }
                     ],
                     "buttons": {
-                        "isStart": false,
+                        "isStart": true,
                         "previousDisabled": false,
                         "nextDisabled": false
                     }
@@ -4646,13 +4498,13 @@ UPDATE tasks set
                     "interTrialDelay": 0,
                     "showFeedbackAfterEachTrial": true,
                     "durationOfFeedback": 1000,
-                    "numTrials": 35,
+                    "numTrials": 50,
                     "delayToShowHelpMessage": 4000,
                     "probOfShiftFirstPatch": 10,
                     "probOfShiftSecondPatch": 90,
                     "oddEvenColor": "blue",
                     "ltGtColor": "orange",
-                    "counterbalanceMode": "counterbalance-alternative",
+                    "counterbalanceMode": "none",
                     "stimuliConfig": {
                         "type": "generated",
                         "stimuli": null
@@ -4670,11 +4522,23 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
                                 "en": "<b>Please pay attention. We will be asking you to do something different!!!</b>",
                                 "fr": "<b>Attention: Les règles vont changer pour la prochaine partie!!</b>"
                             }
                         }
-                    ]
+                    ],
+                    "buttons": {
+                        "isStart": false,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
                 }
             },
             {
@@ -4832,6 +4696,175 @@ UPDATE tasks set
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
                     "title": {
+                        "en": "Congrats, you have finished this part",
+                        "fr": "Félicitations, vous avez terminé cette partie"
+                    },
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "<b>Please pay attention. We will be asking you to do something different!!!</b>",
+                                "fr": "<b>Attention: Les règles vont changer pour la prochaine partie!!</b>"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": "",
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "injection": "cached-string",
+                            "cacheKey": "demandselection-block-num",
+                            "textContent": {
+                                "en": "This is part ??? of the game.",
+                                "fr": "Cela fait partie ??? du jeu."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Read these instructions.",
+                                "fr": "Veuillez lire ces instructions."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "injection": "counterbalance-alternative",
+                            "textContent": {
+                                "en": "You must now find the <b>???</b> and pick that one on each trial",
+                                "fr": "Vous devez maintenant identifier la parcelle qui vous semble <b>???</b> et la choisir à chaque essai."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "As before, start by taking the time to explore each of the patches.",
+                                "fr": "Comme d’habitude, prenez tout d’abord le temps d’explorer les deux parcelles."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "injection": "counterbalance",
+                            "textContent": {
+                                "en": "Remember, once you have found and selected the <b>???</b>, your goal is still to make a decision about the number that appears based on its color: ORANGE or BLUE",
+                                "fr": "Ensuite, comme toujours, vous devez répondre avec les flèches selon la couleur couleur ORANGE ou BLEUE du chiffre qui apparaît."
+							}
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "Recap instructions",
+                        "fr": "Rappel des instructions"
+                    },
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite ➡"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": "<br />"
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the actual game",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": false,
+                        "previousDisabled": false,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "DEMANDSELECTIONCOMPONENT",
+                "componentConfig": {
+                    "isPractice": false,
+                    "maxResponseTime": 5000,
+                    "interTrialDelay": 0,
+                    "showFeedbackAfterEachTrial": true,
+                    "durationOfFeedback": 1000,
+                    "numTrials": 35,
+                    "delayToShowHelpMessage": 4000,
+                    "probOfShiftFirstPatch": 10,
+                    "probOfShiftSecondPatch": 90,
+                    "oddEvenColor": "blue",
+                    "ltGtColor": "orange",
+                    "counterbalanceMode": "counterbalance-alternative",
+                    "stimuliConfig": {
+                        "type": "generated",
+                        "stimuli": null
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": {
                         "en": "Congratulations!",
                         "fr": "Félicitations!"
                     },
@@ -4900,7 +4933,10 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "image-horizontal",
-                            "imagePath": "/assets/images/instructions/smileyface/countdown.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/smileyface/countdown.png",
+                                "fr": "/assets/images/instructions/smileyface/countdown_fr.jpg"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -4962,7 +4998,10 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "image-horizontal",
-                            "imagePath": "/assets/images/instructions/smileyface/countdown.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/smileyface/countdown.png",
+                                "fr": "/assets/images/instructions/smileyface/countdown_fr.jpg"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -5052,7 +5091,10 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "image-horizontal",
-                            "imagePath": "/assets/images/instructions/smileyface/countdown.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/smileyface/countdown.png",
+                                "fr": "/assets/images/instructions/smileyface/countdown_fr.jpg"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -5127,7 +5169,10 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "image-horizontal",
-                            "imagePath": "/assets/images/instructions/smileyface/countdown.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/smileyface/countdown.png",
+                                "fr": "/assets/images/instructions/smileyface/countdown_fr.jpg"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -5174,7 +5219,10 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "image-horizontal",
-                            "imagePath": "/assets/images/instructions/smileyface/countdown.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/smileyface/countdown.png",
+                                "fr": "/assets/images/instructions/smileyface/countdown_fr.jpg"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -5207,7 +5255,10 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "image-horizontal",
-                            "imagePath": "/assets/images/instructions/smileyface/countdown.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/smileyface/countdown.png",
+                                "fr": "/assets/images/instructions/smileyface/countdown_fr.jpg"
+                            }
                         }
                     ]
                 }
@@ -5242,7 +5293,10 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "image-horizontal",
-                            "imagePath": "/assets/images/instructions/smileyface/countdown.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/smileyface/countdown.png",
+                                "fr": "/assets/images/instructions/smileyface/countdown_fr.jpg"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -5276,7 +5330,10 @@ UPDATE tasks set
                         {
                             "sectionType": "image-horizontal",
                             "imageAlignment": "center",
-                            "imagePath": "/assets/images/instructions/smileyface/countdown.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/smileyface/countdown.png",
+                                "fr": "/assets/images/instructions/smileyface/countdown_fr.jpg"
+                            }
                         }
                     ]
                 }
@@ -5327,7 +5384,10 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "image-horizontal",
-                            "imagePath": "/assets/images/instructions/smileyface/countdown.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/smileyface/countdown.png",
+                                "fr": "/assets/images/instructions/smileyface/countdown_fr.jpg"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -15108,30 +15168,48 @@ UPDATE tasks SET
             {
                 "componentName": "QUESTIONNAIRECOMPONENT",
                 "componentConfig": {
-                    "title": "Questionnaire",
+                    "title": {
+                    	"en": "Questionnaire",
+                    	"fr": "Questionnaire"
+                    },
                     "questions": [
                         {
                             "questionType": "displayText",
-                            "title": "The following questions are general questions about you. If you don''t have Parkinson''s disease (PD), not all of them will apply to you, so select the \\"I don''t have Parkinson''s disease\\" option."
+                            "title": {
+                            	"en": "The following questions are general questions about you. If you don''t have Parkinson''s disease (PD), not all of them will apply to you, so select the \\"I don''t have Parkinson''s disease\\" option.",
+                            	"fr": "Les questions suivantes sont des questions générales sur vous. Si vous n''êtes pas atteint de la maladie de Parkinson (MP), toutes ne s''appliqueront pas à vous, alors sélectionnez l''option \\"Je n''ai pas la maladie de Parkinson\\"."
+                            }
                         },
                         {
                             "questionType": "radiobuttons",
-                            "title": "Do you have a diagnosis of Parkinson’s disease given to you by a doctor (e.g. family doctor or neurologist)?",
+                            "title": {
+                            	"en": "Do you have a diagnosis of Parkinson’s disease given to you by a doctor (e.g. family doctor or neurologist)?",
+                            	"fr": "Avez-vous un diagnostic de la maladie de Parkinson qui vous a été donné par un médecin (par exemple, un médecin de famille ou un neurologue)?"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "radiobuttonPresentation": "vertical",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Yes",
+                                    "label": {
+                                    	"en": "Yes",
+                                    	"fr": "Oui"
+                                    },
                                     "value": "Yes"
                                 },
                                 {
-                                    "label": "No",
+                                    "label": {
+                                    	"en": "No",
+                                    	"fr": "Non"
+                                    },
                                     "value": "No"
                                 },
                                 {
-                                    "label": "No, but I think I have Parkinson''s disease",
+                                    "label": {
+                                    	"en": "No, but I think I have Parkinson''s disease",
+                                    	"fr": "Non, mais je pense avoir la maladie de Parkinson"
+                                    },
                                     "value": "No, but I think I have Parkinson''s disease"
                                 }
                             ],
@@ -15139,22 +15217,34 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Do you currently take medication for Parkinson''s disease?",
+                            "title": {
+                            	"en": "Do you currently take medication for Parkinson''s disease?",
+                            	"fr": "Prenez-vous actuellement des médicaments pour la maladie de Parkinson?"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "takePDMed",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "I don''t have Parkinson''s disease",
+                                    "label": {
+                                    	"en": "I don''t have Parkinson''s disease",
+                                    	"fr": "Je n''ai pas la maladie de Parkinson"
+                                    },
                                     "value": "I don''t have Parkinson''s disease"
                                 },
                                 {
-                                    "label": "I have PD but don''t take medications for it",
+                                    "label": {
+                                    	"en": "I have PD but don''t take medications for it",
+                                    	"fr": "J''ai la maladie de Parkinson mais je ne prends pas de médicaments pour ça"
+                                    },
                                     "value": "I have PD but don''t take medications for it"
                                 },
                                 {
-                                    "label": "I have PD and I take medications for it",
+                                    "label": {
+                                    	"en": "I have PD and I take medications for it",
+                                    	"fr": "J''ai la maladie de Parkinson et je prends des médicaments pour cela"
+                                    },
                                     "value": "I have PD and I take medications for it"
                                 }
                             ]
@@ -15164,13 +15254,22 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "displayText",
-                            "title": "If you answered previously that you do take Parkinson’s disease medication, how long ago did you take it?"
+                            "title": {
+                            	"en": "If you answered previously that you do take Parkinson’s disease medication, how long ago did you take it?",
+                            	"fr": "Si vous avez répondu précédemment que vous prenez des médicaments contre la maladie de Parkinson, depuis combien de temps les avez-vous pris?"
+                            }
                         },
                         {
                             "questionType": "input",
-                            "textContent": "If you answered that you don''t take any Parkinson’s medication in the last question, please write \\"0\\".",
+                            "textContent": {
+                            	"en": "If you answered that you don''t take any Parkinson’s medication in the last question, please write \\"0\\".",
+                            	"fr": "Si vous avez répondu que vous ne prenez aucun médicament contre la maladie de Parkinson à la dernière question, veuillez écrire \\"0\\"."
+                            },
                             "key": "lastDoseHour",
-                            "label": "Hours",
+                            "label": {
+                            	"en": "Hours",
+                            	"fr": "Heures"
+                            },
                             "validation": {
                                 "required": true,
                                 "isNumeric": true,
@@ -15181,7 +15280,10 @@ UPDATE tasks SET
                         {
                             "questionType": "input",
                             "key": "lastDoseMinute",
-                            "label": "Minutes",
+                            "label": {
+                            	"en": "Minutes",
+                            	"fr": "Minutes"
+                            },
                             "validation": {
                                 "required": true,
                                 "isNumeric": true,
@@ -15194,111 +15296,174 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Do you feel ON (i.e. can feel that the PD medications are taking effect) or OFF (i.e. medications are not currently taking effect)?",
+                            "title": {
+                            	"en": "Do you feel ON (i.e. can feel that the PD medications are taking effect) or OFF (i.e. medications are not currently taking effect)?",
+                            	"fr": "Vous sentez-vous ''ON'' (c''est-à-dire que vous pouvez sentir que les médicaments contre la maladie de Parkinson font effet) ou ''OFF'' (c''est-à-dire que les médicaments ne font pas actuellement effet)?"
+                            },
                             "key": "onOffMed",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "I don''t have Parkinson''s disease",
+                                    "label": {
+                                    	"en": "I don''t have Parkinson''s disease",
+                                    	"fr": "Je n''ai pas la maladie de Parkinson"
+                                    },
                                     "value": "I don''t have Parkinson''s disease"
                                 },
                                 {
-                                    "label": "I have PD but don''t take medications for it",
+                                    "label": {
+                                    	"en": "I have PD but don''t take medications for it",
+                                    	"fr": "J''ai la maladie de Parkinson mais je ne prends pas de médicaments pour ça"
+                                    },
                                     "value": "I have PD but don''t take medications for it"
                                 },
                                 {
-                                    "label": "I feel ON",
+                                    "label": {
+                                    	"en": "I feel ON",
+                                    	"fr": "Je me sens ''ON''"
+                                    },
                                     "value": "I feel ON"
                                 },
                                 {
-                                    "label": "I feel OFF",
+                                    "label": {
+                                    	"en": "I feel OFF",
+                                    	"fr": "Je me sens ''OFF''"
+                                    },
                                     "value": "I feel OFF"
                                 },
                                 {
-                                    "label": "I can not tell the difference",
+                                    "label": {
+                                    	"en": "I can not tell the difference",
+                                    	"fr": "Je ne peux pas faire la différence"
+                                    },
                                     "value": "I can not tell the difference"
                                 }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Do you have a diagnosis of dementia or Alzheimer''s disease given to you by a doctor?",
+                            "title": {
+                            	"en": "Do you have a diagnosis of dementia or Alzheimer''s disease given to you by a doctor?",
+                            	"fr": "Avez-vous un diagnostic de démence ou de maladie d''Alzheimer qui vous a été donné par un médecin?"
+                            },
                             "key": "diagnosisPD",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Yes",
+                                    "label": {
+                                    	"en": "Yes",
+                                    	"fr": "Oui"
+                                    },
                                     "value": "Yes"
                                 },
                                 {
-                                    "label": "No",
+                                    "label": {
+                                    	"en": "No",
+                                    	"fr": "Non"
+                                    },
                                     "value": "No"
                                 },
                                 {
-                                    "label": "No, but I think I have dementia",
+                                    "label": {
+                                    	"en": "No, but I think I have dementia",
+                                    	"fr": "Non, mais je pense que j''ai la démence"
+                                    },
                                     "value": "No, but I think I have dementia"
                                 }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Do you have a diagnosis of Mild Cognitive Impairment (MCI) given to you by a doctor?",
+                            "title": {
+                            	"en": "Do you have a diagnosis of Mild Cognitive Impairment (MCI) given to you by a doctor?",
+                            	"fr": "Avez-vous un diagnostic de trouble cognitif léger (MCI) qui vous a été remis par un médecin?"
+                            },
                             "key": "diagnosisMCI",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Yes",
+                                    "label": {
+                                    	"en": "Yes",
+                                    	"fr": "Oui"
+                                    },
                                     "value": "Yes"
                                 },
                                 {
-                                    "label": "No",
+                                    "label": {
+                                    	"en": "No",
+                                    	"fr": "Non"
+                                    },
                                     "value": "No"
                                 },
                                 {
-                                    "label": "No, but I think I have cognitive impairment",
+                                    "label": {
+                                    	"en": "No, but I think I have cognitive impairment",
+                                    	"fr": "Non, mais je pense avoir des troubles cognitifs"
+                                    },
                                     "value": "No, but I think I have cognitive impairment"
                                 }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Do you have a family history of Parkinson’s disease?",
+                            "title": {
+                            	"en": "Do you have a family history of Parkinson’s disease?",
+                            	"fr": "Avez-vous des antécédents familiaux de maladie de Parkinson?"
+                            },
                             "key": "familyHistory",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Yes, my biological mother or father has/had Parkinson’s disease",
+                                    "label": {
+                                    	"en": "Yes, my biological mother or father has/had Parkinson’s disease",
+                                    	"fr": "Oui, ma mère ou mon père biologique a eu la maladie de Parkinson"
+                                    },
                                     "value": "Yes, biological mother or father"
                                 },
                                 {
-                                    "label": "Yes, one of my siblings has/had Parkinson’s disease",
+                                    "label": {
+                                    	"en": "Yes, one of my siblings has/had Parkinson’s disease",
+                                    	"fr": "Oui, un de mes frères et sœurs a eu la maladie de Parkinson"
+                                    },
                                     "value": "Yes, siblings"
                                 },
                                 {
-                                    "label": "Yes, one of my children has/had Parkinson’s disease",
+                                    "label": {
+                                    	"en": "Yes, one of my children has/had Parkinson’s disease",
+                                    	"fr": "Oui, un de mes enfants a eu la maladie de Parkinson"
+                                    },
                                     "value": "Yes, children"
                                 },
                                 {
-                                    "label": "Yes, an uncle/aunt/cousin or other blood relative has/had Parkinson’s disease",
+                                    "label": {
+                                    	"en": "Yes, an uncle/aunt/cousin or other blood relative has/had Parkinson’s disease",
+                                    	"fr": "Oui, un oncle/une tante/un cousin ou un autre parent par le sang a eu la maladie de Parkinson"
+                                    },
                                     "value": "Yes, relative"
                                 },
                                 {
-                                    "label": "No, no family history",
+                                    "label": {
+                                    	"en": "No, no family history",
+                                    	"fr": "Non, pas d''antécédents familiaux"
+                                    },
                                     "value": "No"
                                 }
                             ]
                         },
                         {
                             "questionType": "input",
-                            "title": "What is your current age?",
+                            "title": {
+                            	"en": "What is your current age?",
+                            	"fr": "Quel est votre âge actuel?"
+                            },
                             "key": "age",
                             "label": "Age",
                             "validation": {
@@ -15310,92 +15475,149 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "What sex were you assigned at birth?",
+                            "title": {
+                            	"en": "What sex were you assigned at birth?",
+                            	"fr": "Quel sexe vous a été assigné à la naissance?"
+                            },
                             "key": "sex",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Female",
+                                    "label": {
+                                    	"en": "Female",
+                                    	"fr": "Femme"
+                                    },
                                     "value": "Female"
                                 },
                                 {
-                                    "label": "Male",
+                                    "label": {
+                                    	"en": "Male",
+                                    	"fr": "Homme"
+                                    },
                                     "value": "Male"
                                 }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "How do you describe yourself?",
+                            "title": {
+                            	"en": "How do you describe yourself?",
+                            	"fr": "Comment vous décrivez-vous?"
+                            },
                             "key": "gender",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Female",
+                                    "label": {
+                                    	"en": "Female",
+                                    	"fr": "Femme"
+                                    },
                                     "value": "Female"
                                 },
                                 {
-                                    "label": "Male",
+                                    "label": {
+                                    	"en": "Male",
+                                    	"fr": "Homme"
+                                    },
                                     "value": "Male"
                                 },
                                 {
-                                    "label": "Transgender",
+                                    "label": {
+                                    	"en": "Transgender",
+                                    	"fr": "Transgenre"
+                                    },
                                     "value": "Transgender"
                                 },
                                 {
-                                    "label": "Do not identify as female, male, or transgender",
+                                    "label": {
+                                    	"en": "Do not identify as female, male, or transgender",
+                                    	"fr": "Ne vous identifiez pas comme femme, homme ou transgenre"
+                                    },
                                     "value": "Do not identify as female, male, or transgender"
                                 }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "What is the highest level of education you have completed?",
+                            "title": {
+                            	"en": "What is the highest level of education you have completed?",
+                            	"fr": "Quel est le plus haut niveau d''études que vous avez atteint?"
+                            },
                             "key": "education",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "None",
+                                    "label": {
+                                    	"en": "None",
+                                    	"fr": "Aucun"
+                                    },
                                     "value": "None"
                                 },
                                 {
-                                    "label": "Grade (Elementary) school",
+                                    "label": {
+                                    	"en": "Grade (Elementary) school",
+                                    	"fr": "École primaire (élémentaire)"
+                                    },
                                     "value": "Grade (Elementary) school"
                                 },
                                 {
-                                    "label": "High school",
+                                    "label": {
+                                    	"en": "High school",
+                                    	"fr": "École secondaire"
+                                    },
                                     "value": "High school"
                                 },
                                 {
-                                    "label": "Trade Certificate/Diploma",
+                                    "label": {
+                                    	"en": "Trade Certificate/Diploma",
+                                    	"fr": "Certificat/diplôme de commerce"
+                                    },
                                     "value": "Trade Certificate/Diploma"
                                 },
                                 {
-                                    "label": "Non-University Diploma",
+                                    "label": {
+                                    	"en": "Non-University Diploma",
+                                    	"fr": "Diplôme non universitaire"
+                                    },
                                     "value": "Non-University Diploma"
                                 },
                                 {
-                                    "label": "Bachelor''s Degree",
+                                    "label": {
+                                    	"en": "Bachelor''s Degree",
+                                    	"fr": "Baccalauréat"
+                                    },
                                     "value": "Bachelor''s Degree"
                                 },
                                 {
-                                    "label": "Postgraduate Degree",
+                                    "label": {
+                                    	"en": "Postgraduate Degree",
+                                    	"fr": "Diplôme d''études supérieures"
+                                    },
                                     "value": "Postgraduate Degree"
                                 }
                             ]
                         },
                         {
                             "questionType": "input",
-                            "title": "How many years of education did you complete?",
-                            "textContent": "E.g. completed up to grade 9 = 9 years; completed grade 12 and 3 years of university = 15 years",
+                            "title": {
+                            	"en": "How many years of education did you complete?",
+                            	"fr": "Combien d''années d''études avez-vous complétées?"
+                            },
+                            "textContent": {
+                            	"en": "E.g. completed up to grade 9 = 9 years; completed grade 12 and 3 years of university = 15 years",
+                            	"fr": "Par exemple. terminé jusqu''à la 9e année = 9 ans; terminé la 12e année et 3 ans d''université = 15 ans"
+                            },
                             "key": "educationYears",
-                            "label": "Years of education",
+                            "label": {
+                            	"en": "Years of education",
+                            	"fr": "Années d''études"
+                            },
                             "validation": {
                                 "required": true,
                                 "isNumeric": true,
@@ -15405,27 +15627,42 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "What is your handedness?",
+                            "title": {
+                            	"en": "What is your handedness?",
+                            	"fr": "Quelle est votre latéralité?"
+                            },
                             "key": "handedness",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [{
-                                "label": "Right-handed",
+                                "label": {
+                                	"en": "Right-handed",
+                                	"fr": "Droitier"
+                                },
                                 "value": "Right"
                             },
                             {
-                                "label": "Left-handed",
+                                "label": {
+                                	"en": "Left-handed",
+                                	"fr": "Gaucher"
+                                },
                                 "value": "Left"
                             },
                             {
-                                "label": "Ambidextrous",
+                                "label": {
+                                	"en": "Ambidextrous",
+                                	"fr": "Ambidextre"
+                                },
                                 "value": "Ambidextrous"
                             }]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "We expect to reach people from many different cultural and racial backgrounds with this internet study. To which group do you belong? (Select all that apply)",
+                            "title": {
+                            	"en": "We expect to reach people from many different cultural and racial backgrounds with this internet study. To which group do you belong? (Select all that apply)",
+                            	"fr": "Nous prévoyons d''atteindre des personnes de nombreux horizons culturels et raciaux différents avec cette étude sur Internet. A quel groupe appartenez-vous ? (Sélectionnez tout ce qui s''y rapporte)"
+                            },
                             "key": "background",
                             "validation": {
                                 "required": true
@@ -15433,70 +15670,118 @@ UPDATE tasks SET
                             "allowMultipleSelections": true,
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "White / Caucasian",
+                                    "label": {
+                                    	"en": "White / Caucasian",
+                                    	"fr": "Blanc / Caucasien"
+                                    },
                                     "value": "White/Caucasian"
                                 },
                                 {
-                                    "label": "French Canadian",
+                                    "label": {
+                                    	"en": "French Canadian",
+                                    	"fr": "Français Canadien"
+                                    },
                                     "value": "French Canadian"
                                 },
                                 {
-                                    "label": "First Nations",
+                                    "label": {
+                                    	"en": "First Nations",
+                                    	"fr": "Premières nations"
+                                    },
                                     "value": "First Nations"
                                 },
                                 {
-                                    "label": "Hispanic or Latino",
+                                    "label": {
+                                    	"en": "Hispanic or Latino",
+                                    	"fr": "Hispanique ou Latino"
+                                    },
                                     "value": "Hispanic or Latino"
                                 },
                                 {
-                                    "label": "African / Carribean / Afro American",
+                                    "label": {
+                                    	"en": "African / Carribean / Afro American",
+                                    	"fr": "Africain / Caribéen / Afro Américain"
+                                    },
                                     "value": "African/Carribean/Afro American"
                                 },
                                 {
-                                    "label": "North African",
+                                    "label": {
+                                    	"en": "North African",
+                                    	"fr": "Nord-Africain"
+                                    },
                                     "value": "North African"
                                 },
                                 {
-                                    "label": "Middle Eastern",
+                                    "label": {
+                                    	"en": "Middle Eastern",
+                                    	"fr": "Moyen-Orient"
+                                    },
                                     "value": "Middle Eastern"
                                 },
                                 {
-                                    "label": "Chinese",
+                                    "label": {
+                                    	"en": "Chinese",
+                                    	"fr": "Chinois"
+                                    },
                                     "value": "Chinese"
                                 },
                                 {
-                                    "label": "South Asian (E.g. Indian, Pakistani, Sri Lankan)",
+                                    "label": {
+                                    	"en": "South Asian (E.g. Indian, Pakistani, Sri Lankan)",
+                                    	"fr": "Sud-Asiatique (par exemple Indien, Pakistanais, Sri Lankais)"
+                                    },
                                     "value": "South Asian"
                                 },
                                 {
-                                    "label": "Southeast Asian (E.g. Filipino, Cambodian, Indonesian, Laotian, Vietnamese)",
+                                    "label": {
+                                    	"en": "Southeast Asian (E.g. Filipino, Cambodian, Indonesian, Laotian, Vietnamese)",
+                                    	"fr": "Asiatique du Sud-Est (par exemple, philippin, cambodgien, indonésien, laotien, vietnamien)"
+                                    },
                                     "value": "Southeast Asian"
                                 },
                                 {
-                                    "label": "Japanese",
+                                    "label": {
+                                    	"en": "Japanese",
+                                    	"fr": "Japonais"
+                                    },
                                     "value": "Japanese"
                                 },
                                 {
-                                    "label": "Korean",
+                                    "label": {
+                                    	"en": "Korean",
+                                    	"fr": "Coréen"
+                                    },
                                     "value": "Korean"
                                 },
                                 {
-                                    "label": "Other",
+                                    "label": {
+                                    	"en": "Other",
+                                    	"fr": "Autre"
+                                    },
                                     "value": "Other"
                                 },
                                 {
-                                    "label": "Don''t know",
+                                    "label": {
+                                    	"en": "Don''t know",
+                                    	"fr": "Je ne sais pas"
+                                    },
                                     "value": "Don''t know"
                                 },
                                 {
-                                    "label": "Prefer not to answer",
+                                    "label": {
+                                    	"en": "Prefer not to answer",
+                                    	"fr": "Je préfère ne pas répondre"
+                                    },
                                     "value": "Prefer not to answer"
                                 }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Which of the following languages do you consider yourself fluent in (can read and speak)? Select all that apply.",
+                            "title": {
+                            	"en": "Which of the following languages do you consider yourself fluent in (can read and speak)? Select all that apply.",
+                            	"fr": "Laquelle des langues suivantes considérez-vous maîtriser (savoir lire et parler)? Sélectionnez tout ce qui s''y rapporte."
+                            },
                             "key": "fluentLan",
                             "validation": {
                                 "required": true
@@ -15504,85 +15789,133 @@ UPDATE tasks SET
                             "allowMultipleSelections": true,
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "English",
+                                    "label": {
+                                    	"en": "English",
+                                    	"fr": "Anglais"
+                                    },
                                     "value": "English"
                                 },
                                 {
-                                    "label": "French",
+                                    "label": {
+                                    	"en": "French",
+                                    	"fr": "Français"
+                                    },
                                     "value": "French"
                                 },
                                 {
-                                    "label": "Neither",
+                                    "label": {
+                                    	"en": "Neither",
+                                    	"fr": "Aucun d''eux"
+                                    },
                                     "value": "Neither"
                                 }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Do you have color-blindness?",
+                            "title": {
+                            	"en": "Do you have color-blindness?",
+                            	"fr": "Avez-vous le daltonisme?"
+                            },
                             "key": "colorBlindnss",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "No",
-                                    "value": "No"
-                                },
-                                {
-                                    "label": "Yes",
+                                    "label": {
+                                    	"en": "Yes",
+                                    	"fr": "Oui"
+                                    },
                                     "value": "Yes"
                                 },
                                 {
-                                    "label": "Unsure",
+                                    "label": {
+                                    	"en": "No",
+                                    	"fr": "Non"
+                                    },
+                                    "value": "No"
+                                },
+                                {
+                                    "label": {
+                                    	"en": "Unsure",
+                                    	"fr": "Je ne sais pas"
+                                    },
                                     "value": "Unsure"
                                 }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Do you feel that your memory and thinking have gotten worse?",
-                            "textContent": "If you have Parkinson''s disease, consider the change since your diagnosis, or, if you don''t have Parkinson''s disease, consider the change in the last few years.",
+                            "title": {
+                            	"en": "Do you feel that your memory and thinking have gotten worse?",
+                            	"fr": "Avez-vous l''impression que votre mémoire et votre pensée se sont détériorées?"
+                            },
+                            "textContent": {
+                            	"en": "If you have Parkinson''s disease, consider the change since your diagnosis, or, if you don''t have Parkinson''s disease, consider the change in the last few years.",
+                            	"fr": "Si vous êtes atteint de la maladie de Parkinson, considérez le changement depuis votre diagnostic ou, si vous n''êtes pas atteint de la maladie de Parkinson, considérez le changement au cours des dernières années."
+                            },
                             "key": "memory",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Yes",
+                                    "label": {
+                                    	"en": "Yes",
+                                    	"fr": "Oui"
+                                    },
                                     "value": "Yes"
                                 },
                                 {
-                                    "label": "No",
+                                    "label": {
+                                    	"en": "No",
+                                    	"fr": "Non"
+                                    },
                                     "value": "No"
                                 },
                                 {
-                                    "label": "Not sure",
+                                    "label": {
+                                    	"en": "Not sure",
+                                    	"fr": "Je ne sais pas"
+                                    },
                                     "value": "Not sure"
                                 }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Would you like to be contacted by email about future opportunities to participate in online research?",
+                            "title": {
+                            	"en": "Would you like to be contacted by email about future opportunities to participate in online research?",
+                            	"fr": "Souhaitez-vous être contacté par e-mail au sujet des opportunités futures de participer à la recherche en ligne?"
+                            },
                             "key": "futureOnlineResearch",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Yes",
+                                    "label": {
+                                    	"en": "Yes",
+                                    	"fr": "Oui"
+                                    },
                                     "value": "Yes"
                                 },
                                 {
-                                    "label": "No",
+                                    "label": {
+                                    	"en": "No",
+                                    	"fr": "Non"
+                                    },
                                     "value": "No"
                                 }
                             ]
                         },
                         {
                             "questionType": "freeTextResponse",
-                            "title": "If you answered yes, and would also be willing to receive a phone call, please include it here:",
+                            "title": {
+                            	"en": "If you answered yes, and would also be willing to receive a phone call, please include it here:",
+                            	"fr": "Si vous avez répondu oui et que vous souhaiteriez également recevoir un appel téléphonique, veuillez l''inclure ici:"
+                            },
                             "key": "futureOnlineResearchPhone",
                             "label": "eg. 123-456-7890",
                             "validation": {
@@ -15591,18 +15924,27 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Would you like to receive updates about the findings from this study?",
+                            "title": {
+                            	"en": "Would you like to receive updates about the findings from this study?",
+                            	"fr": "Souhaitez-vous recevoir des mises à jour sur les résultats de cette étude?"
+                            },
                             "key": "updateFindings",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Yes",
+                                    "label": {
+                                    	"en": "Yes",
+                                    	"fr": "Oui"
+                                    },
                                     "value": "Yes"
                                 },
                                 {
-                                    "label": "No",
+                                    "label": {
+                                    	"en": "No",
+                                    	"fr": "Non"
+                                    },
                                     "value": "No"
                                 }
                             ]
@@ -16704,19 +17046,31 @@ UPDATE tasks SET
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Welcome to the Spot The Number Game!",
+                    "title": {
+                        "en": "Welcome to the Spot The Number Game!",
+                        "fr": "Bienvenue dans le jeu Spot The Number!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You will see numbers flash on the screen very quickly, followed by an X."
+                            "textContent": {
+                                    "en": "You will see numbers flash on the screen very quickly, followed by an X.",
+                                    "fr": "Vous verrez des chiffres clignoter très rapidement à l''écran, suivis d''un X."
+                                }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Your job is to press the LEFT arrow ( ⬅️ ) for every number <b>EXCEPT</b> for the <b>number 3</b>."
+                            "textContent": {
+                                    "en": "Your job is to press the LEFT arrow ( ⬅️ ) for every number <b>EXCEPT</b> for the <b>number 3</b>.",
+                                    "fr": "Vous devez appuyer sur la flèche GAUCHE ( ⬅️ ) pour chaque numéro <b>SAUF</b> pour le <b>numéro 3</b>."
+                                }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "When you see the <b>number 3</b> you must <b>NOT</b> press any key at all, simply wait for the next number."
+                            "textContent": {
+                                    "en": "When you see the <b>number 3</b> you must <b>NOT</b> press any key at all, simply wait for the next number.",
+                                    "fr": "Quand vous voyez le <b>numéro 3</b>, vous <b>NE DEVEZ PAS</b> appuyer sur aucune touche, attendez simplement le numéro suivant."
+                                }
                         },
                         {
                             "sectionType": "image-horizontal",
@@ -16734,23 +17088,38 @@ UPDATE tasks SET
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Let''s practice!",
+                    "title": {
+                            "en": "Let''s practice!",
+                            "fr": "Pratiquons!"
+                        },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Remember, press the ( ⬅️ ) for all numbers except for 3"
+                            "textContent": {
+                                    "en": "Remember, press the ( ⬅️ ) for all numbers except for 3",
+                                    "fr": "N''oubliez pas d''appuyer sur ( ⬅️ ) pour tous les numéros sauf le 3"
+                                }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "When you see 3, don''t press anything and wait for the next number to appear."
+                            "textContent": {
+                                    "en": "When you see 3, don''t press anything and wait for the next number to appear.",
+                                    "fr": "Quand vous voyez le numéro 3, vous ne devez pas appuyer sur aucune touche, attendez simplement le numéro suivant."
+                                }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The numbers will appear very quickly, so be ready!"
+                            "textContent": {
+                                    "en": "The numbers will appear very quickly, so be ready!",
+                                    "fr": "Les chiffres vont apparaître très rapidement, alors soyez prêt!"
+                                }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click START to begin the practice"
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ],
                     "buttons": {
@@ -16779,23 +17148,38 @@ UPDATE tasks SET
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Well done!",
+                    "title": {
+                        "en": "Well done!",
+                        "fr": "Bravo!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Now you are ready for the real game"
+                            "textContent": {
+                                "en": "Now you are ready for the real game.",
+                                "fr": "Vous êtes prêt pour le vrai jeu."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Remember, press the ( ⬅️ ) key for all numbers except for 3"
+                            "textContent": {
+                                "en": "Remember, press the ( ⬅️ ) key for all numbers except for 3",
+                                "fr": "N''oubliez pas d''appuyer sur ( ⬅️ ) pour tous les numéros sauf le 3"
+                                }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "When you see 3, don''t press anything and wait for the next number to appear"
+                            "textContent": {
+                                "en": "When you see 3, don''t press anything and wait for the next number to appear",
+                                "fr": "Quand vous voyez le numéro 3, vous ne devez pas appuyer sur aucune touche, attendez simplement le numéro suivant."
+                                }
                         },
                         {
                             "sectionType": "",
-                            "textContent": "Click START to begin"
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the actual game",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -16825,7 +17209,10 @@ UPDATE tasks SET
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "It''s break time",
+                    "title": {
+                        "en": "It''s break time",
+                        "fr": "C''est l''heure de la pause"
+                    },
                     "timerConfig": {
                         "timer": 35000,
                         "showTimer": true,
@@ -16835,15 +17222,24 @@ UPDATE tasks SET
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You have to wait for at least 20 seconds before being able to continue"
+                            "textContent": {
+                                "en": "You have to wait for at least 20 seconds before being able to continue",
+                                "fr": "Vous devez attendre au moins 20 secondes avant de pouvoir continuer"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The next round will automatically start in 35 seconds unless you choose to continue sooner"
+                            "textContent": {
+                                "en": "The next round will automatically start in 35 seconds unless you choose to continue sooner.",
+                                "fr": "Le prochain tour commencera automatiquement dans 35 secondes, sauf si vous choisissez de continuer plus tôt."
+                            } 
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click START when you are ready"
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the actual game",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -16873,11 +17269,17 @@ UPDATE tasks SET
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "You have completed the task, thank you!",
+                    "title": {
+                        "en": "You have completed the game, thank you!",
+                        "fr": "Vous avez terminé le jeu, merci!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Click next to continue"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ]
                 }
