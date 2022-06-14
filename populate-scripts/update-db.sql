@@ -92,7 +92,10 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Practice round",
+                    "title": {
+                        "en": "Practice round",
+                        "fr": "Ronde de pratique"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
@@ -499,7 +502,10 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "image-horizontal",
-                            "imagePath": "/assets/images/instructions/fingertapping/index-finger-banner.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/fingertapping/index-finger-banner_en.png",
+                                "fr": "/assets/images/instructions/fingertapping/index-finger-banner_fr.png"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -1178,7 +1184,7 @@ UPDATE tasks set
                             "sectionType": "image-horizontal",
                             "imageAlignment": "center",
                             "imagePath": {
-                                "en": "/assets/images/instructions/nback/examplePart2.png",
+                                "en": "/assets/images/instructions/nback/examplePart2_en.png",
                                 "fr": "/assets/images/instructions/nback/examplePart2_fr.jpg"
                             }
                         },
@@ -1216,7 +1222,7 @@ UPDATE tasks set
                             "sectionType": "image-horizontal",
                             "imageAlignment": "center",
                             "imagePath": {
-                                "en": "/assets/images/instructions/nback/examplePart3.png",
+                                "en": "/assets/images/instructions/nback/examplePart3_en.png",
                                 "fr": "/assets/images/instructions/nback/examplePart3_fr.jpg"
                             }
                         },
@@ -3464,6 +3470,7 @@ UPDATE tasks set
                     "probOfShiftSecondPatch": 90,
                     "oddEvenColor": "blue",
                     "ltGtColor": "orange",
+                    "setCounterBalancePatchStringInMemory": "none",
                     "counterbalanceMode": "none",
                     "stimuliConfig": {
                         "type": "hardcoded",
@@ -3704,6 +3711,7 @@ UPDATE tasks set
                     "probOfShiftSecondPatch": 90,
                     "oddEvenColor": "blue",
                     "ltGtColor": "orange",
+                    "setCounterBalancePatchStringInMemory": "none",
                     "counterbalanceMode": "none",
                     "stimuliConfig": {
                         "type": "generated",
@@ -3821,6 +3829,7 @@ UPDATE tasks set
                     "probOfShiftSecondPatch": 90,
                     "oddEvenColor": "blue",
                     "ltGtColor": "orange",
+                    "setCounterBalancePatchStringInMemory": "none",
                     "counterbalanceMode": "none",
                     "stimuliConfig": {
                         "type": "generated",
@@ -4067,6 +4076,7 @@ UPDATE tasks set
                     "probOfShiftSecondPatch": 90,
                     "oddEvenColor": "blue",
                     "ltGtColor": "orange",
+                    "setCounterBalancePatchStringInMemory": "none",
                     "counterbalanceMode": "none",
                     "stimuliConfig": {
                         "type": "generated",
@@ -4216,6 +4226,7 @@ UPDATE tasks set
                     "probOfShiftSecondPatch": 90,
                     "oddEvenColor": "blue",
                     "ltGtColor": "orange",
+                    "setCounterBalancePatchStringInMemory": "none",
                     "counterbalanceMode": "none",
                     "stimuliConfig": {
                         "type": "generated",
@@ -4365,6 +4376,7 @@ UPDATE tasks set
                     "probOfShiftSecondPatch": 90,
                     "oddEvenColor": "blue",
                     "ltGtColor": "orange",
+                    "setCounterBalancePatchStringInMemory": "none",
                     "counterbalanceMode": "none",
                     "stimuliConfig": {
                         "type": "generated",
@@ -4504,6 +4516,7 @@ UPDATE tasks set
                     "probOfShiftSecondPatch": 90,
                     "oddEvenColor": "blue",
                     "ltGtColor": "orange",
+                    "setCounterBalancePatchStringInMemory": "counterbalance",
                     "counterbalanceMode": "none",
                     "stimuliConfig": {
                         "type": "generated",
@@ -4564,7 +4577,8 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "injection": "counterbalance",
+                            "injection": "cached-string",
+                            "cacheKey": "demandselection-patch-string-presented",
                             "textContent": {
                                 "en": "You must now find the <b>???</b> and pick that one on each trial",
                                 "fr": "Vous devez maintenant identifier la parcelle qui vous semble <b>???</b> et la choisir à chaque essai."
@@ -4579,7 +4593,8 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "injection": "counterbalance",
+                            "injection": "cached-string",
+                            "cacheKey": "demandselection-patch-string-presented",
                             "textContent": {
                                 "en": "Remember, once you have found and selected the <b>???</b>, your goal is still to make a decision about the number that appears based on its color: ORANGE or BLUE",
                                 "fr": "Ensuite, comme toujours, vous devez répondre avec les flèches selon la couleur couleur ORANGE ou BLEUE du chiffre qui apparaît."
@@ -4685,6 +4700,7 @@ UPDATE tasks set
                     "probOfShiftSecondPatch": 90,
                     "oddEvenColor": "blue",
                     "ltGtColor": "orange",
+                    "setCounterBalancePatchStringInMemory": "counterbalance-alternative",
                     "counterbalanceMode": "counterbalance",
                     "stimuliConfig": {
                         "type": "generated",
@@ -4733,7 +4749,8 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "injection": "counterbalance-alternative",
+                            "injection": "cached-string",
+                            "cacheKey": "demandselection-patch-string-presented",
                             "textContent": {
                                 "en": "You must now find the <b>???</b> and pick that one on each trial",
                                 "fr": "Vous devez maintenant identifier la parcelle qui vous semble <b>???</b> et la choisir à chaque essai."
@@ -4748,7 +4765,8 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "injection": "counterbalance",
+                            "injection": "cached-string",
+                            "cacheKey": "demandselection-patch-string-presented",
                             "textContent": {
                                 "en": "Remember, once you have found and selected the <b>???</b>, your goal is still to make a decision about the number that appears based on its color: ORANGE or BLUE",
                                 "fr": "Ensuite, comme toujours, vous devez répondre avec les flèches selon la couleur couleur ORANGE ou BLEUE du chiffre qui apparaît."
@@ -4854,6 +4872,7 @@ UPDATE tasks set
                     "probOfShiftSecondPatch": 90,
                     "oddEvenColor": "blue",
                     "ltGtColor": "orange",
+                    "setCounterBalancePatchStringInMemory": "none",
                     "counterbalanceMode": "counterbalance-alternative",
                     "stimuliConfig": {
                         "type": "generated",
@@ -4934,7 +4953,7 @@ UPDATE tasks set
                         {
                             "sectionType": "image-horizontal",
                             "imagePath": {
-                                "en": "/assets/images/instructions/smileyface/countdown.png",
+                                "en": "/assets/images/instructions/smileyface/countdown_en.png",
                                 "fr": "/assets/images/instructions/smileyface/countdown_fr.jpg"
                             }
                         },
@@ -4999,7 +5018,7 @@ UPDATE tasks set
                         {
                             "sectionType": "image-horizontal",
                             "imagePath": {
-                                "en": "/assets/images/instructions/smileyface/countdown.png",
+                                "en": "/assets/images/instructions/smileyface/countdown_en.png",
                                 "fr": "/assets/images/instructions/smileyface/countdown_fr.jpg"
                             }
                         },
@@ -5092,7 +5111,7 @@ UPDATE tasks set
                         {
                             "sectionType": "image-horizontal",
                             "imagePath": {
-                                "en": "/assets/images/instructions/smileyface/countdown.png",
+                                "en": "/assets/images/instructions/smileyface/countdown_en.png",
                                 "fr": "/assets/images/instructions/smileyface/countdown_fr.jpg"
                             }
                         },
@@ -5170,7 +5189,7 @@ UPDATE tasks set
                         {
                             "sectionType": "image-horizontal",
                             "imagePath": {
-                                "en": "/assets/images/instructions/smileyface/countdown.png",
+                                "en": "/assets/images/instructions/smileyface/countdown_en.png",
                                 "fr": "/assets/images/instructions/smileyface/countdown_fr.jpg"
                             }
                         },
@@ -5220,7 +5239,7 @@ UPDATE tasks set
                         {
                             "sectionType": "image-horizontal",
                             "imagePath": {
-                                "en": "/assets/images/instructions/smileyface/countdown.png",
+                                "en": "/assets/images/instructions/smileyface/countdown_en.png",
                                 "fr": "/assets/images/instructions/smileyface/countdown_fr.jpg"
                             }
                         },
@@ -5256,7 +5275,7 @@ UPDATE tasks set
                         {
                             "sectionType": "image-horizontal",
                             "imagePath": {
-                                "en": "/assets/images/instructions/smileyface/countdown.png",
+                                "en": "/assets/images/instructions/smileyface/countdown_en.png",
                                 "fr": "/assets/images/instructions/smileyface/countdown_fr.jpg"
                             }
                         }
@@ -5294,7 +5313,7 @@ UPDATE tasks set
                         {
                             "sectionType": "image-horizontal",
                             "imagePath": {
-                                "en": "/assets/images/instructions/smileyface/countdown.png",
+                                "en": "/assets/images/instructions/smileyface/countdown_en.png",
                                 "fr": "/assets/images/instructions/smileyface/countdown_fr.jpg"
                             }
                         },
@@ -5331,7 +5350,7 @@ UPDATE tasks set
                             "sectionType": "image-horizontal",
                             "imageAlignment": "center",
                             "imagePath": {
-                                "en": "/assets/images/instructions/smileyface/countdown.png",
+                                "en": "/assets/images/instructions/smileyface/countdown_en.png",
                                 "fr": "/assets/images/instructions/smileyface/countdown_fr.jpg"
                             }
                         }
@@ -5385,7 +5404,7 @@ UPDATE tasks set
                         {
                             "sectionType": "image-horizontal",
                             "imagePath": {
-                                "en": "/assets/images/instructions/smileyface/countdown.png",
+                                "en": "/assets/images/instructions/smileyface/countdown_en.png",
                                 "fr": "/assets/images/instructions/smileyface/countdown_fr.jpg"
                             }
                         },
@@ -17075,7 +17094,10 @@ UPDATE tasks SET
                         {
                             "sectionType": "image-horizontal",
                             "imageAlignment": "left",
-                            "imagePath": "/assets/images/instructions/SART/visual_instructions.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/SART/visual_instructions_en.png",
+                                "fr": "/assets/images/instructions/SART/visual_instructions_fr.png"
+                            }
                         }
                     ],
                     "buttons": {
