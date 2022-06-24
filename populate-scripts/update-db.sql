@@ -4597,7 +4597,7 @@ UPDATE tasks set
                             "cacheKey": "demandselection-patch-string-presented",
                             "textContent": {
                                 "en": "Remember, once you have found and selected the <b>???</b>, your goal is still to make a decision about the number that appears based on its color: ORANGE or BLUE",
-                                "fr": "Ensuite, comme toujours, vous devez répondre avec les flèches selon la couleur couleur ORANGE ou BLEUE du chiffre qui apparaît."
+                                "fr": "Rappelez-vous, une fois que vous avez trouvé et sélectionné le <b>???</b>, votre objectif est toujours de prendre une décision sur le nombre qui apparaît en fonction de sa couleur : ORANGE ou BLEU"
 							}
                         },
                         {
@@ -4769,7 +4769,7 @@ UPDATE tasks set
                             "cacheKey": "demandselection-patch-string-presented",
                             "textContent": {
                                 "en": "Remember, once you have found and selected the <b>???</b>, your goal is still to make a decision about the number that appears based on its color: ORANGE or BLUE",
-                                "fr": "Ensuite, comme toujours, vous devez répondre avec les flèches selon la couleur couleur ORANGE ou BLEUE du chiffre qui apparaît."
+                                "fr": "Rappelez-vous, une fois que vous avez trouvé et sélectionné le <b>???</b>, votre objectif est toujours de prendre une décision sur le nombre qui apparaît en fonction de sa couleur : ORANGE ou BLEU"
 							}
                         },
                         {
@@ -6875,87 +6875,6 @@ UPDATE tasks set
         ]
     }'
 WHERE id = 15;
--- STRESS CLINICAL DEBRIEF
-UPDATE tasks set
-    from_platform = "PSHARPLAB",
-    task_type = "CONSENT",
-    name = "Stress Clinical Debrief",
-    description = "Note: May want to review deleting this and changing it to an info display slide",
-    external_url = "",
-    config = '{
-        "taskconfig": {},
-        "metadata": [
-            {
-                "componentName": "CONSENT",
-                "componentConfig": {
-                    "imgPath": "../../../assets/images/consent/consentOrgs.png",
-                    "title": "DEBRIEFING ABOUT THE DECEPTION USED IN THE STUDY",
-                    "body": [
-                        {
-                            "caption": "Thank you for participating!",
-                            "words": [
-                                "Earlier, we informed you that our study was about measuring aspect of cognition. While this is true, we were specifically interested in <b>the effects of stress on cognition</b>. As a result, half of the participants in the study saw unpleasant videos and completed a very stressful math game in order to create a short-term stressful experience."
-                            ]
-                        },
-                        {
-                            "caption": "",
-                            "words": [
-                                "In order to properly study this, <b>it was required that we deceive you about the actual nature of the study</b>. We could not warn you that you would experience stress because knowing this in advance would have minimized the experience of the stress."
-                            ]
-                        },
-                        {
-                            "caption": "",
-                            "words": [
-                                "The specific deception elements in this study included:",
-                                "&nbsp;&nbsp;&nbsp;&nbsp 1) Not telling you in the consent form that this study was about the effects of stress on cognition.",
-                                "&nbsp;&nbsp;&nbsp;&nbsp 2) If you were part of the stress group:",
-                                "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a. Telling you you were doing badly on the math game no matter your actual performance.",
-                                "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b. Telling you you had to maintain a certain performance level which was not true. In fact, we are not at all interested in performance on this game. This was only to cause stress.",
-                                "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c. Watching unpleasant videos without warning."
-                            ]
-                        },
-                        {
-                            "caption": "",
-                            "words": [
-                                "Given the ubiquitous nature of stress, it is critical that we study it in order to understand the range of consequences it can hold for brain health."
-                            ]
-                        },
-                        {
-                            "caption": "",
-                            "words": [
-                                "We followed standard research procedures commonly used to cause stress in the research setting. <b>The stress was meant to be relatively mild and very short-term</b>. If you still feel lingering effects of this stress, or have any questions about the study or your rights as a participant, please contact us: <b>Madeleine Sharp, Department of Neurology and Neurosurgery, Montréal Neurological Institute, McGill University</b> <a href=\\"#\\">madeleine.sharp@mcgill.ca</a> or <a href=\\"#\\">sharplab.neuro@mcgill.ca</a>"
-                            ]
-                        },
-                        {
-                            "caption": "",
-                            "words": [
-                                "Please also consider the following mental health resource:",
-                                "Mental Health Services Locator http://store.samhsa.gov/mhlocator"
-                            ]
-                        },
-                        {
-                            "caption": "",
-                            "words": [
-                                "Finally, if you have comments, or wish to file a complaint, you may communicate with the Ombudsman of the Montreal Neurological Hospital at (514) 934-1934 ext. 22223."
-                            ]
-                        }
-                    ],
-                    "endMessage": "Thank you again for your participation!",
-                    "buttons": {
-                        "reject": {
-                            "show": false,
-                            "text": "DECLINE"
-                        },
-                        "accept": {
-                            "show": true,
-                            "text": "ACKNOWLEDGE"
-                        }
-                    }
-                }
-            }
-        ]
-    }'
-WHERE id = 16;
 -- WEB PHENO CLINICAL
 UPDATE tasks set
     from_platform = "PSHARPLAB",
