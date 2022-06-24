@@ -1,6 +1,6 @@
 -- File used to update the DB for existing tasks
 
--- NUMBERS GAME TASK
+-- NUMBERS GAME TASK (previously the DIGIT SPAN)
 UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "NAB",
@@ -13,19 +13,31 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Welcome to the Number Game Part 1",
+                    "title": {
+                        "en": "Welcome to the Number Game Part 1",
+                        "fr": "Bienvenue au jeu des chiffres - Partie 1"
+                        },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Please read the instructions carefully"
+                            "textContent": {
+                                "en": "Please read the instructions carefully",
+                                "fr": "Lisez attentivement les instructions"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "This is a memory test"
+                            "textContent": {
+                                "en": "This is a memory test",
+                                "fr": "Ceci est un test de mémoire"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to proceed",
+                                "fr": "Cliquez sur \\"SUIVANT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -42,19 +54,32 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "A sequence of numbers appear on the screen <b>one at a time</b>. (Ex: 3, 9, 2)"
+                            "textContent": {
+                                "en": "A sequence of numbers appear on the screen <b>one at a time</b>. (Ex: 3, 9, 2)",
+                                "fr": "Une séquence de chiffres apparaîtra sur l''écran <b>un à la fois</b>. (Eg: 3, 9, 2)"
+
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Using the keypad shown on the screen, you will need to enter those same numbers <b>in the same order (Ex: 3, 9, 2)</b>."
+                            "textContent": {
+                                "en": "Using the keypad shown on the screen, you will need to enter those same numbers <b>in the same order (Ex: 3, 9, 2)</b>.",
+                                "fr": "Vous devrez mémoriser cette séquence, et, en utilisant votre souris, vous devrez saisir ces mêmes chiffres <b>dans le même ordre (Ex: 3, 9, 2)</b>."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You must click the \\"Submit\\" key to record your answer"
+                            "textContent": {
+                                "en": "You must click the \\"Submit\\" key to record your answer",
+                                "fr": "Vous devez cliquer sur \\"SUBMIT\\" pour enregistrer votre réponse."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to proceed",
+                                "fr": "Cliquez sur \\"SUIVANT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -67,23 +92,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Practice round",
+                    "title": {
+                        "en": "Practice round",
+                        "fr": "Ronde de pratique"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Let''s practice"
+                            "textContent": {
+                                "en": "Let''s practice",
+                                "fr": "Pratiquons"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Remember when the keypad is shown, you need to enter the numbers <b>in the same order</b> as they were shown and then click submit."
+                            "textContent": {
+                                "en": "Remember when the keypad is shown, you need to enter the numbers <b>in the same order</b> as they were shown and then click submit.",
+                                "fr": "Rappelez-vous que lorsque le clavier est affiché, vous devez saisir les chiffres <b>dans le même ordre</b> que l’ordre dans lequel ils ont été présentés. Ensuite, cliquez sur SUBMIT."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If you don''t remember, press skip"
+                            "textContent": {
+                                "en": "If you don''t remember, press skip",
+                                "fr": "Si vous ne vous en souvenez pas, cliquez sur \\"SKIP\\" pour passer au prochain."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round."
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ],
                     "buttons": {
@@ -116,23 +156,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Good job!",
+                    "title": {
+                        "en": "Good job!",
+                        "fr": "Bon travail!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You will now play the actual game."
+                            "textContent": {
+                                "en": "You will now play the actual game.",
+                                "fr": "Vous allez maintenant commencer le jeu."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Remember when the keypad is shown, you need to enter the numbers <b>in the same order</b> as they were shown and click the <b>submit</b> button."
+                            "textContent": {
+                                "en": "Remember when the keypad is shown, you need to enter the numbers <b>in the same order</b> as they were shown and click the <b>submit</b> button.",
+                                "fr": "Rappelez-vous que quand le clavier est affiché, vous devrez saisir les chiffres <b>dans le même ordre</b> que l’ordre dans lequel ils ont été présentés, et ensuite, cliquez sur <b>Submit</b> pour soumettre votre réponse."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If you don''t remember the numbers, click skip for the next trial."
+                            "textContent": {
+                                "en": "If you don''t remember the numbers, click skip for the next trial.",
+                                "fr": "Si vous ne vous en souvenez pas, cliquez sur \\"Skip\\" pour passer au prochain tour."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready for the actual game"
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the actual game",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -165,19 +220,31 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Welcome to the Number Game Part 2",
+                    "title": {
+                        "en": "Welcome to the Number Game Part 2",
+                        "fr": "Bienvenue au jeu des chiffres - Partie 2"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "A sequence of numbers appear on the screen <b>one at a time</b>. (Ex: 3, 9, 2)"
+                            "textContent": {
+                                "en": "A sequence of numbers appear on the screen <b>one at a time</b>. (Ex: 3, 9, 2)",
+                                "fr": "Une séquence de chiffres apparaîtra sur l''écran <b>un à la fois</b>. (Ex: 3, 9, 2)"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Using the keypad shown on the screen, you will need to enter those same numbers <b>in REVERSE order (Ex: 2, 9, 3)</b> and then click the \\"Submit\\" key."
+                            "textContent": {
+                                "en": "Using the keypad shown on the screen, you will need to enter those same numbers <b>in REVERSE order (Ex: 2, 9, 3)</b> and then click the \\"Submit\\" key.",
+                                "fr": "Vous devrez maintenant saisir ces mêmes chiffres <b>dans l''ordre INVERSE (Ex: 2, 9, 3)</b>. Ensuite, cliquez sur \\"Submit\\"."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to proceed",
+                                "fr": "Cliquez sur \\"SUIVANT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -190,27 +257,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Practice round pt. 2",
+                    "title": {
+                        "en": "Practice round pt. 2",
+                        "fr": "Pratique 2"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Let''s practice"
+                            "textContent": {
+                                "en": "Let''s practice",
+                                "fr": "Pratiquons"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Rememebr when the keypad is shown, you need to enter the numbers <b>in reverse order</b> as they were shown and click submit"
+                            "textContent": {
+                                "en": "Rememebr when the keypad is shown, you need to enter the numbers <b>in reverse order</b> as they were shown and click submit",
+                                "fr": "Rappelez-vous: quand le clavier est affiché, vous devez saisir les chiffres <b>dans l''ordre inverse</b> que celui dans lequel ils ont été présentés. Ensuite, cliquez sur submit."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If you don''t remember, press skip"
+                            "textContent": {
+                                "en": "If you don''t remember, press skip",
+                                "fr": "Si vous ne vous en souvenez pas, cliquez sur \\"SKIP\\" pour passer au prochain."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The game will launch in full-screen."
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready for the practice round"
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ],
                     "buttons": {
@@ -243,23 +321,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Good job!",
+                    "title": {
+                        "en": "Good job!",
+                        "fr": "Bon travail!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You will now play the actual game"
+                            "textContent": {
+                                "en": "You will now play the actual game",
+                                "fr": "Vous allez maintenant commencer le vrai tour"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Remember when the keypad is shown, you need to enter the numbers <b>in reverse order</b> as they were shown and click the <b>submit</b> button"
+                            "textContent": {
+                                "en": "Remember when the keypad is shown, you need to enter the numbers <b>in reverse order</b> as they were shown and click the <b>submit</b> button",
+                                "fr": "Rappelez-vous que quand le clavier est affiché, vous devez saisir les chiffres <b>dans l''ordre inverse</b> que celui dans lequel ils ont été présentés. Ensuite, cliquez sur <b>Submit</b>."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If you don''t remember the numbers, press skip for the the next trial."
+                            "textContent": {
+                                "en": "If you don''t remember, press skip",
+                                "fr": "Si vous ne vous en souvenez pas, cliquez sur \\"SKIP\\" pour passer au prochain."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready for the actual game"
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the actual game",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -292,19 +385,31 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Congratulations!",
+                    "title": {
+                        "en": "Congratulations!",
+                        "fr": "Félicitations!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You finished the game successfully"
+                            "textContent": {
+                                "en": "You finished the game successfully",
+                                "fr": "Vous avez terminé le jeu avec succès"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Thank you for your participation"
+                            "textContent": {
+                                "en": "Thank you for your participation",
+                                "fr": "Merci pour votre participation"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to continue"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -330,19 +435,31 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Welcome to the Finger Tapping Game",
+                    "title": {
+                        "en": "Welcome to the Finger Tapping Game",
+                        "fr": "Bienvenue au jeu des doigts"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Read the instructions carefully"
+                            "textContent": {
+                                "en": "Read the instructions carefully",
+                                "fr": "Lisez attentivement les instructions"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "This is a test of finger tapping speed"
+                            "textContent": {
+                                "en": "This is a test of finger tapping speed",
+                                "fr": "Ceci est un test de vitesse de des doigts"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to proceed",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -355,15 +472,24 @@ UPDATE tasks set
             {
                 "componentName": "SELECTOPTIONCOMPONENT",
                 "componentConfig": {
-                    "question": "Are you left handed or right handed?",
+                    "question": {
+                        "en": "Are you left handed or right handed?",
+                        "fr": "Es-tu gaucher ou droitier?"
+                    },
                     "cacheKey": "finger-tapping-handedness",
                     "options": [
                         {
-                            "label": "Left Handed",
+                            "label": {
+                                "en": "Left Handed",
+                                "fr": "Gaucher"
+                            },
                             "value": "LEFT"
                         },
                         {
-                            "label": "Right Handed",
+                            "label": {
+                                "en": "Right Handed",
+                                "fr": "Droitier"
+                            },
                             "value": "RIGHT"
                         }
                     ]
@@ -376,23 +502,38 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "image-horizontal",
-                            "imagePath": "/assets/images/instructions/fingertapping/index-finger-banner.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/fingertapping/index-finger-banner_en.png",
+                                "fr": "/assets/images/instructions/fingertapping/index-finger-banner_fr.png"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You will have to <b>alternatively tap</b> the <b>P</b> and <b>Q</b> keys of the keyboard <b>as fast as you can</b>"
+                            "textContent": {
+                                "en": "You will have to <b>alternatively tap</b> the <b>P</b> and <b>Q</b> keys of the keyboard <b>as fast as you can</b>",
+                                "fr": "Avec un de vos index, vous devrez taper les clés P et Q du clavier <b>en alternance et le plus vite possible</b>"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You will do 3 rounds of this."
+                            "textContent": {
+                                "en": "You will do 3 rounds of this.",
+                                "fr": "Vous ferez 3 tours."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "We will tell you which hand to use right before each round"
+                            "textContent": {
+                                "en": "We will tell you which hand to use right before each round",
+                                "fr": "Avant chaque tour, nous indiquerons si vous devez utiliser l’index droit ou gauche"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -409,15 +550,24 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "The keys you will be tapping on the keyboard are the \\"Q\\" and the \\"P\\" keys"
+                            "textContent": {
+                                "en": "The keys you will be tapping on the keyboard are the \\"Q\\" and the \\"P\\" keys",
+                                "fr": "Les touches sur lesquelles vous allez taper en alternance sont \\"Q\\" et \\"P\\""
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Please go ahead and find these keys now"
+                            "textContent": {
+                                "en": "Please go ahead and find these keys now",
+                                "fr": "Prenez un moment pour localiser ces touches sur le clavier."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -430,23 +580,31 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Practice round",
+                    "title": {
+                        "en": "Practice round",
+                        "fr": "Pratique"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "First, let''s practice"
+                            "textContent": {
+                                "en": "First, let''s practice",
+                                "fr": "Commençons par un tour d’entraînement!"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "For the practice, please use your <b>RIGHT</b> index finger"
+                            "textContent": {
+                                "en": "For the practice, please use your <b>RIGHT</b> index finger",
+                                "fr": "Veuillez utiliser votre index <b>DROIT</b>"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "(the task will launch in fullscreen)"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready for the practice round"
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ],
                     "buttons": {
@@ -459,7 +617,10 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Remember, you must use a SINGLE hand, and tap as fast as you can",
+                    "title": {
+                        "en": "Remember, you must use a SINGLE hand, and tap as fast as you can",
+                        "fr": "N''oubliez pas que vous devez utiliser une SEULE main et taper aussi vite que vous le pouvez"
+                    },
                     "timerConfig": {
                         "timer": 5000,
                         "showTimer": true,
@@ -474,7 +635,6 @@ UPDATE tasks set
                 "componentConfig": {
                     "isPractice": true,
                     "maxResponseTime": 10000,
-
                     "durationFixationPresented": 50,
                     "useHand": "RIGHT"
                 }
@@ -482,23 +642,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Main round",
+                    "title": {
+                        "en": "Main round",
+                        "fr": "Tour principal"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Good job! Now you will complete the main test."
+                            "textContent": {
+                                "en": "Good job! Now you will complete the main test.",
+                                "fr": "Bon travail! Vous êtes maintenant prêt à commencer."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You will be doing 3 rounds"
+                            "textContent": {
+                                "en": "You will be doing 3 rounds",
+                                "fr": "Vous ferez 3 tours."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You’ll get a break between each round and we will tell you which hand to use just before you begin."
+                            "textContent": {
+                                "en": "You’ll get a break between each round and we will tell you which hand to use just before you begin.",
+                                "fr": "Nous indiquerons si vous devez utiliser l’index droit ou gauche avant chaque tour et vous aurez une pause après chaque tour."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to continue"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -515,19 +690,31 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "In the <b>first two rounds</b>, you have to tap <b>as fast as you can</b> with a <b>SINGLE</b> index finger for 1 full minute"
+                            "textContent": {
+                                "en": "In the <b>first two rounds</b>, you have to tap <b>as fast as you can</b> with a <b>SINGLE</b> index finger for 1 full minute",
+                                "fr": "Pour <b>les deux premiers tours</b>, vous devrez taper le \\"P\\" et \\"Q\\" en alternance avec <b>UN SEUL</b> index pendant 1 minute, <b>le plus vite possible</b>, comme pendant l’entraînement."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "We will tell you which hand to use before each round"
+                            "textContent": {
+                                "en": "We will tell you which hand to use before each round",
+                                "fr": "Nous vous dirons quelle main utiliser avant chaque tour."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "In the <b>third round</b>, you have to use <b>BOTH</b> index fingers, one for each key, and keep tapping <b>as fast as you can</b> for 20 seconds"
+                            "textContent": {
+                                "en": "In the <b>third round</b>, you have to use <b>BOTH</b> index fingers, one for each key, and keep tapping <b>as fast as you can</b> for 20 seconds",
+                                "fr": "Pour <b>le troisième tour</b>, vous devrez utiliser les <b>DEUX</b> index, un pour \\"Q\\" et un pour \\"P\\", et taper les touches en alternance <b>aussi vite que possible</b> pendant 20 secondes."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to continue"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -540,27 +727,45 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "First Round",
+                    "title": {
+                        "en": "First Round",
+                        "fr": "Premier tour"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Please use the index finger of your <b>DOMINANT HAND</b> for this round"
+                            "textContent": {
+                                "en": "Please use the index finger of your <b>DOMINANT HAND</b> for this round",
+                                "fr": "Veuillez utiliser l''index de votre <b>MAIN DOMINANTE</b> pour ce tour."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "(if you are right-handed, that is your right hand)"
+                            "textContent": {
+                                "en": "(if you are right-handed, that is your right hand)",
+                                "fr": "(si vous utilisez principalement votre main droite pour écrire, votre main dominante est la droite)"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "REMEMBER:"
+                            "textContent": {
+                                "en": "REMEMBER:",
+                                "fr": "N''oubliez pas:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Tap the \\"P\\" and \\"Q\\" keys as fast as you can"
+                            "textContent": {
+                                "en": "Tap the \\"P\\" and \\"Q\\" keys as fast as you can",
+                                "fr": "Tapez les clés \\"P\\" et \\"Q\\" en alternance aussi vite que possible"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -573,7 +778,10 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Remember, you must use a SINGLE hand and tap as fast as you can",
+                    "title": {
+                        "en": "Remember, you must use a SINGLE hand and tap as fast as you can",
+                        "fr": "N''oubliez pas que vous devez utiliser une SEULE main et taper aussi vite que vous le pouvez"
+                    },
                     "timerConfig": {
                         "timer": 5000,
                         "showTimer": true,
@@ -595,7 +803,10 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "It''s break time",
+                    "title": {
+                        "en": "It''s break time",
+                        "fr": "C''est la pause"
+                    },
                     "timerConfig": {
                         "timer": 120000,
                         "showTimer": true,
@@ -606,23 +817,38 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "<b>Second Round:</b> Please use your <b>NON-DOMINANT</b> hand for this round."
+                            "textContent": {
+                                "en": "<b>Second Round:</b> Please use your <b>NON-DOMINANT</b> hand for this round.",
+                                "fr": "<b>Deuxième tour</b>: Veuillez utiliser votre <b>MAIN NON DOMINANTE</b> pour ce tour."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "(so if you are right-handed, that is your left hand)"
+                            "textContent": {
+                                "en": "(so if you are right-handed, that is your left hand)",
+                                "fr": "(si vous êtes droitier, c''est votre main gauche)"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You have to wait for <b> at least 30 seconds</b> before being able to continue"
+                            "textContent": {
+                                "en": "You have to wait for <b>at least 30 seconds</b> before being able to continue",
+                                "fr": "Vous devrez attendre <b>au moins 30 secondes</b> avant de cliquer \\"Start\\" pour continuer"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The next round will automatically start in 2 minutes unless you choose to continue sooner"
+                            "textContent": {
+                                "en": "The next round will automatically start in 2 minutes unless you choose to continue sooner",
+                                "fr": "Le prochain tour commencera automatiquement dans 2 minutes à moins que vous ne choisissiez de continuer plus tôt."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready"
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ]
                 }
@@ -630,7 +856,10 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "You must use a SINGLE hand and tap as fast as you can",
+                    "title": {
+                        "en": "Remember, you must use a SINGLE hand and tap as fast as you can",
+                        "fr": "N''oubliez pas que vous devez utiliser une SEULE main et taper aussi vite que vous le pouvez"
+                    },
                     "timerConfig": {
                         "timer": 5000,
                         "showTimer": true,
@@ -653,7 +882,10 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "It''s break time",
+                    "title": {
+                        "en": "It''s break time",
+                        "fr": "C''est la pause"
+                    },
                     "timerConfig": {
                         "timer": 120000,
                         "showTimer": true,
@@ -664,23 +896,38 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "<b>Third round:</b> Please use <b>BOTH INDEX FINGERS</b> for this round."
+                            "textContent": {
+                                "en": "<b>Third round:</b> Please use <b>BOTH INDEX FINGERS</b> for this round.",
+                                "fr": "<b>Troisième tour:</b> Veuillez utiliser les <b>DEUX MAINS</b> pour ce tour."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "This means you must use your LEFT finger to tap \\"Q\\" and your RIGHT finger to tap \\"P\\", and alternate between the two"
+                            "textContent": {
+                                "en": "This means you must use your LEFT finger to tap \\"Q\\" and your RIGHT finger to tap \\"P\\", and alternate between the two",
+                                "fr": "Vous devez utiliser l’index de la main GAUCHE pour appuyer sur \\"Q\\" et l’index de la main DROITE pour appuyer sur \\"P\\", et alterner entre les deux."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You have to wait <b> at least 30 seconds</b> before being able to continue"
+                            "textContent": {
+                                "en": "You have to wait <b> at least 30 seconds</b> before being able to continue",
+                                "fr": "Vous devez attendre <b>au moins 30 secondes</b> avant de pouvoir continuer."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The next round will automatically start in 2 minutes unless you choose to continue sooner"
+                            "textContent": {
+                                "en": "The next round will automatically start in 2 minutes unless you choose to continue sooner",
+                                "fr": "Le prochain tour commencera automatiquement dans 2 minutes à moins que vous ne choisissiez de continuer plus tôt."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready"
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ]
                 }
@@ -688,7 +935,10 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "You must use BOTH your index fingers, and tap as fast as you can",
+                    "title": {
+                        "en": "You must use BOTH your index fingers, and tap as fast as you can",
+                        "fr": "Vous devez utiliser les index des DEUX mains et taper en alternance aussi vite que possible."
+                    },
                     "timerConfig": {
                         "timer": 5000,
                         "showTimer": true,
@@ -706,6 +956,36 @@ UPDATE tasks set
                     "maxResponseTime": 20000,
                     "durationFixationPresented": 50,
                     "useHand": "BOTH"
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "Congratulations! You finished the game successfully",
+                        "fr": "Félicitations! Vous avez terminé le jeu avec succès."
+                    },
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Thank you for your participation.",
+                                "fr": "Merci pour votre participation."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": false,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
                 }
             }
         ]
@@ -861,7 +1141,7 @@ UPDATE tasks set
                         {
                             "sectionType": "image-horizontal",
                             "imageAlignment": "center",
-                            "imagePath": "/assets/images/instructions/nback/examplePart1.png"
+                            "imagePath": "assets/images/instructions/nback/examplePart1.png"
                         },
                         {
                             "sectionType": "text",
@@ -903,7 +1183,10 @@ UPDATE tasks set
                         {
                             "sectionType": "image-horizontal",
                             "imageAlignment": "center",
-                            "imagePath": "/assets/images/instructions/nback/examplePart2.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/nback/examplePart2_en.png",
+                                "fr": "/assets/images/instructions/nback/examplePart2_fr.jpg"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -938,7 +1221,10 @@ UPDATE tasks set
                         {
                             "sectionType": "image-horizontal",
                             "imageAlignment": "center",
-                            "imagePath": "/assets/images/instructions/nback/examplePart3.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/nback/examplePart3_en.png",
+                                "fr": "/assets/images/instructions/nback/examplePart3_fr.jpg"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -1176,31 +1462,52 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Welcome to the Stroop Task",
+                    "title": {
+                        "en": "Welcome to the Stroop Task",
+                        "fr": "Bienvenue au jeu des couleurs"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Read the instructions carefully."
+                            "textContent": {
+                                "en": "Read the instructions carefully.",
+                                "fr": "Lisez attentivement les instructions."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "In this task, different words for colors (Ex. \\"BLUE\\") will be presented in different colored ink:"
+                            "textContent": {
+                                "en": "In this task, different words for colors (Ex. \\"BLUE\\") will be presented in different colored ink:",
+                                "fr": "Dans ce jeu, différents noms de couleurs (ex. \\"Bleu\\") apparaîtront à l’écran, et seront imprimés avec différentes couleurs d’encre."
+                            }
                         },
                         {
                             "sectionType": "image-square",
-                            "imagePath": "/assets/images/instructions/strooptask/stroop_ink_examples.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/strooptask/stroop_ink_examples_en.png",
+                                "fr": "/assets/images/instructions/strooptask/stroop_ink_examples_fr.png"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You have to response to the <b>COLOR</b> of the ink that the word is printed in, <b>NOT</b> the word itself."
+                            "textContent": {
+                                "en": "You have to response to the <b>COLOR</b> of the ink that the word is printed in, <b>NOT</b> the word itself.",
+                                "fr": "Vous devrez indiquer <b>la couleur de l’encre</b> sans tenir compte du nom de couleur qui est écrit."
+                            }
                         },
                         {
                             "sectionType": "image-square",
-                            "imagePath": "/assets/images/instructions/strooptask/stroop_ink_instructions.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/strooptask/stroop_ink_instructions_en.png",
+                                "fr": "/assets/images/instructions/strooptask/stroop_ink_instructions_fr.png"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to proceed",
+                                "fr": "Cliquez sur \\"SUIVANT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -1213,31 +1520,52 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Here are some examples",
+                    "title": {
+                        "en": "Here are some examples",
+                        "fr": "Voici quelques exemples"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "If you see \\"BLUE\\" with red ink then you should respond \\"1\\""
+                            "textContent": {
+                                "en": "If you see \\"BLUE\\" with red ink then you should respond \\"1\\"",
+                                "fr": "Si vous voyez \\"BLEU\\" (encre rouge) vous devez répondre \\"1\\""
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If you see \\"BLUE\\" with blue ink then you should respond \\"2\\"; etc..."
+                            "textContent": {
+                                "en": "If you see \\"BLUE\\" with blue ink then you should respond \\"2\\"",
+                                "fr": "Si vous voyez \\"BLEU\\" (encre bleu) vous devez répondre \\"2\\""
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Again, only the COLOR of the ink matters, NOT the word itself."
+                            "textContent": {
+                                "en": "Again, only the COLOR of the ink matters, NOT the word itself.",
+                                "fr": "N''oubliez pas: seule la COULEUR de l''encre compte, PAS le mot lui-même"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Please use the number keys \\"1\\", \\"2\\", \\"3\\" on your keyboard to respond"
+                            "textContent": {
+                                "en": "Please use the number keys \\"1\\", \\"2\\", \\"3\\" on your keyboard to respond",
+                                "fr": "Veuillez utiliser les touches numériques \\"1\\", \\"2\\", \\"3\\" sur votre clavier pour répondre"
+                            }
                         },
                         {
                             "sectionType": "image-square",
-                            "imagePath": "/assets/images/instructions/strooptask/stroop_ink_instructions.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/strooptask/stroop_ink_instructions_en.png",
+                                "fr": "/assets/images/instructions/strooptask/stroop_ink_instructions_fr.png"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to proceed",
+                                "fr": "Cliquez sur \\"SUIVANT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -1250,27 +1578,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Practice Round",
+                    "title": {
+                        "en": "Practice Round",
+                        "fr": "Pratique"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Let''s practice"
+                            "textContent": {
+                                "en": "Let''s practice",
+                                "fr": "Pratiquons"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Good luck! You will have very little time to respond, so be ready"
+                            "textContent": {
+                                "en": "Good luck! You will have very little time to respond, so be ready",
+                                "fr": "Vous aurez très peu de temps pour répondre, alors soyez prêts! Bonne chance!"
+                            }
                         },
                         {
                             "sectionType": "image-square",
-                            "imagePath": "/assets/images/instructions/strooptask/stroop_ink_instructions.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/strooptask/stroop_ink_instructions_en.png",
+                                "fr": "/assets/images/instructions/strooptask/stroop_ink_instructions_fr.png"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The game will launch in fullscreen"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready for the practice round"
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ],
                     "buttons": {
@@ -1301,27 +1640,45 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Practice round is now complete",
+                    "title": {
+                        "en": "Practice round is now complete",
+                        "fr": "Bon travail!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You will now play the actual game"
+                            "textContent": {
+                                "en": "You will now play the actual game",
+                                "fr": "Vous allez maintenant commencer le vrai jeu"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You will earn 10 points for every right answer"
+                            "textContent": {
+                                "en": "You will earn 10 points for every right answer",
+                                "fr": "Vous gagnerez 10 points pour chaque bonne réponse"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Good luck!"
+                            "textContent": {
+                                "en": "Good luck!",
+                                "fr": "Bonne chance!"
+                            }
                         },
                         {
                             "sectionType": "image-square",
-                            "imagePath": "/assets/images/instructions/strooptask/stroop_ink_instructions.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/strooptask/stroop_ink_instructions_en.png",
+                                "fr": "/assets/images/instructions/strooptask/stroop_ink_instructions_fr.png"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready for the actual game"
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the actual game",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -1352,21 +1709,33 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Congratulations! You finished the game successfully",
+                    "title": {
+                        "en": "Congratulations! You finished the game successfully",
+                        "fr": "Félicitations! Vous avez terminé le jeu avec succès."
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
                             "injection": "cached-string",
                             "cacheKey": "stroop-total-score",
-                            "textContent": "You scored: ??? points"
+                            "textContent": {
+                                "en": "You scored: ??? points",
+                                "fr": "Tu as: ??? points"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Thank you for your participation."
+                            "textContent": {
+                                "en": "Thank you for your participation.",
+                                "fr": "Merci pour votre participation."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -1753,23 +2122,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Welcome",
+                    "title": {
+                        "en": "Welcome",
+                        "fr": "Bienvenue"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "There are two parts to this game."
+                            "textContent": {
+                                "en": "There are two parts to this game.",
+                                "fr": "Ce jeu comporte deux parties."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "PART 1: Number game"
+                            "textContent": {
+                                "en": "PART 1: Number game",
+                                "fr": "PARTIE 1: Jeu des chiffres"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "First we will go through the instructions and then you will have some opportunity to practice."
+                            "textContent": {
+                                "en": "First we will go through the instructions and then you will have some opportunity to practice.",
+                                "fr": "Nous vous expliquerons les règles du jeu et vous aurez ensuite l''occasion de pratiquer."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -1786,19 +2170,31 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Read the instructions carefully."
+                            "textContent": {
+                                "en": "Read the instructions carefully.",
+                                "fr": "Lisez attentivement les instructions."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You will see a number on the screen. That number will either be <b>ORANGE</b> or <b>BLUE</b>"
+                            "textContent": {
+                                "en": "You will see a number on the screen. That number will either be <b>ORANGE</b> or <b>BLUE</b>.",
+                                "fr": "Vous verrez un chiffre à l''écran. Ce chiffre sera <b>ORANGE</b> ou <b>BLEU</b>."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The color is important: It will tell you what you must identify about that number."
+                            "textContent": {
+                                "en": "The color is important: It will tell you what you must identify about that number.",
+                                "fr": "La couleur est importante: elle indique ce que vous devez identifier à propos de ce numéro."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -1811,23 +2207,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Instructions continued",
+                    "title": {
+                        "en": "Instructions continued",
+                        "fr": "Instructions suite"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "<b>ORANGE NUMBER</b>"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>",
+                                "fr": "<b>Si le CHIFFRE est ORANGE</b>"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Determine if the number is less than or greater than 5"
+                            "textContent": {
+                                "en": "Determine if the number is less than or greater than 5",
+                                "fr": "Vous devez déterminez si le chiffre est inférieur ou supérieur à 5"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Lesser than (<) 5: Press the left arrow key ⬅️"
+                            "textContent": {
+                                "en": "Lesser than (<) 5: Press the left arrow key ⬅️",
+                                "fr": "Inférieur à (<) 5: Appuyez sur la touche fléchée gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Greater than (>) 5: Press the right arrow key ➡️"
+                            "textContent": {
+                                "en": "Greater than (>) 5: Press the right arrow key ➡️",
+                                "fr": "Supérieur à (>) 5: Appuyez sur la touche fléchée droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -1835,23 +2246,38 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "<b>BLUE NUMBER</b>"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>",
+                                "fr": "<b>Si le CHIFFRE est BLEU</b>"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Determine if the number is odd or even"
+                            "textContent": {
+                                "en": "Determine if the number is odd or even",
+                                "fr": "Vous devez déterminez si le chiffre est impair ou pair"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If the number is odd: Press the left arrow key ⬅️"
+                            "textContent": {
+                                "en": "If the number is odd: Press the left arrow key ⬅️",
+                                "fr": "Chiffre impair: Appuyez sur la touche fléchée gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If the number is even: Press the right arrow key ➡️"
+                            "textContent": {
+                                "en": "If the number is even: Press the right arrow key ➡️",
+                                "fr": "Chiffre pair: Appuyez sur la touche fléchée droite"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -1864,7 +2290,10 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Examples",
+                    "title": {
+                        "en": "Examples",
+                        "fr": "Exemples"
+                    },
                     "sections": [
                         {
                             "sectionType": "image-small",
@@ -1873,11 +2302,17 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Hint: The number is <b>ORANGE</b> so you must decide if it is less than or greater than 5"
+                            "textContent": {
+                                "en": "Hint: The number is <b>ORANGE</b> so you must decide if it is less than or greater than 5",
+                                "fr": "Indice: Le chiffre est <b>ORANGE</b> vous devez donc décider s''il est inférieur ou supérieur à 5"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You should choose <b>LEFT</b> arrow to indicate that it''s less than (<) 5"
+                            "textContent": {
+                                "en": "You should choose <b>LEFT</b> arrow to indicate that it''s less than (<) 5",
+                                "fr": "Vous devez taper la flèche <b>GAUCHE</b> pour indiquer qu''il est inférieur à (<) 5"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -1890,15 +2325,24 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Hint: The number is <b>BLUE</b> so you must decide if it is an odd or even number"
+                            "textContent": {
+                                "en": "Hint: The number is <b>BLUE</b> so you must decide if it is an odd or even number",
+                                "fr": "Indice: Le chiffre est <b>BLEU</b>, vous devez donc décider s''il s''agit d''un chiffre pair ou impair"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You should choose <b>RIGHT</b> arrow to indicate that it''s even"
+                            "textContent": {
+                                "en": "You should choose <b>RIGHT</b> arrow to indicate that it''s even",
+                                "fr": "Vous devez taper la flèche <b>DROITE</b> pour indiquer qu''il est pair"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -1911,7 +2355,10 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Examples",
+                    "title": {
+                        "en": "Examples",
+                        "fr": "Exemples"
+                    },
                     "sections": [
                         {
                             "sectionType": "image-small",
@@ -1920,11 +2367,17 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Hint: The number is <b>ORANGE</b> so you must decide if it is less than or greater than 5"
+                            "textContent": {
+                                "en": "Hint: The number is <b>ORANGE</b> so you must decide if it is less than or greater than 5",
+                                "fr": "Indice: Le chiffre est <b>ORANGE</b> vous devez donc décider s''il est inférieur ou supérieur à 5"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You should choose the <b>RIGHT</b> arrow to indicate that it''s greater than (>) 5"
+                            "textContent": {
+                                "en": "You should choose the <b>RIGHT</b> arrow to indicate that it''s greater than (>) 5",
+                                "fr": "Vous devez choisir la flèche <b>DROITE</b> pour indiquer qu''il est supérieur à (>) 5"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -1937,15 +2390,24 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Hint: The number is <b>BLUE</b> so you must decide if it is an odd or even number"
+                            "textContent": {
+                                "en": "Hint: The number is <b>BLUE</b> so you must decide if it is an odd or even number",
+                                "fr": "Indice: Le chiffre est <b>BLEU</b>, vous devez donc décider s''il s''agit d''un chiffre pair ou impair"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You should choose the <b>LEFT</b> arrow to indicate that it''s odd"
+                            "textContent": {
+                                "en": "You should choose the <b>LEFT</b> arrow to indicate that it''s odd",
+                                "fr": "Vous devez choisir la flèche <b>GAUCHE</b> pour indiquer qu''il est impair"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -1958,23 +2420,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Practice round",
+                    "title": {
+                        "en": "Practice round",
+                        "fr": "Pratique"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Let''s practice"
+                            "textContent": {
+                                "en": "Let''s practice",
+                                "fr": "Pratiquons"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Don''t worry, this is just to help you learn which keys to press. We will continue to give you hints."
+                            "textContent": {
+                                "en": "Don''t worry, this is just to help you learn which keys to press. We will continue to give you hints.",
+                                "fr": "Vous aurez maintenant la chance de vous habituer à appuyer sur les bonnes flèhes au bon moment. Par contre, il n''y aura plus d''indices."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "(The game will launch in fullscreen)"
+                            "textContent": {
+                                "en": "(The game will launch in fullscreen)",
+                                "fr": "(Le jeu se lancera en plein écran)"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -1991,15 +2468,24 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "<b>BLUE NUMBER</b>: is number odd or even?"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Odd: Left arrow key ⬅️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Even: Right arrow key ➡️"
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -2007,19 +2493,31 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "<b>ORANGE NUMBER</b>: is number odd or even?"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Less than 5: Left arrow key ⬅️"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Greater than 5: Right arrow key ➡️"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" to start the practice"
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ],
                     "buttons": {
@@ -2052,17 +2550,26 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "1st Practice round is now complete",
+                    "title": {
+                        "en": "1st Practice round is now complete",
+                        "fr": "Le premier tour de pratique est maintenant terminé"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
                             "injection": "cached-string",
                             "cacheKey": "task-switching-num-correct",
-                            "textContent": "You got ??? out of 5 trials correct"
+                            "textContent": {
+                                "en": "You got ??? out of 5 trials correct",
+                                "fr": "Vous avez ??? bonnes réponses sur 5"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" when you are ready for the next stage"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" when you are ready for the next stage",
+                                "fr": "Cliquez sur \\"NEXT\\" pour commencer la prochaine étape"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2075,39 +2582,70 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Practice round 2",
+                    "title": {
+                        "en": "Practice round 2",
+                        "fr": "Pratique 2"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Remember, the number''s color tells you what you must identify about the number"
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "<b>ORANGE NUMBER</b>"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Less than 5: Left arrow key ⬅️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Greater than 5: Right arrow key ➡️"
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "<b>BLUE NUMBER</b>"
+                            "textContent": "<br />"
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Odd: Left arrow key ⬅️"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Even: Right arrow key ➡️"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready for the practice round"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ],
                     "buttons": {
@@ -2145,7 +2683,10 @@ UPDATE tasks set
                             "sectionType": "text",
                             "injection": "cached-string",
                             "cacheKey": "task-switching-num-correct",
-                            "textContent": "You got ??? out of 20 trials correct"
+                            "textContent": {
+                                "en": "You got ??? out of 20 trials correct",
+                                "fr": "Vous avez ??? bonnes réponses sur 20"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2164,11 +2705,17 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "We will repeat this round so you can get more practice"
+                            "textContent": {
+                                "en": "We will repeat this round so you can get more practice",
+                                "fr": "Nous allons répéter ce tour pour que vous puissiez vous entraîner davantage"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" when you are ready for the next stage"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" when you are ready for the next stage",
+                                "fr": "Cliquez sur \\"NEXT\\" pour commencer la prochaine étape"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2183,39 +2730,70 @@ UPDATE tasks set
                 "componentConfig": {
                     "skippable": true,
                     "skippableCacheKey": "task-switching-should-skip",
-                    "title": "Practice round 2",
+                    "title": {
+                        "en": "Practice round 2",
+                        "fr": "Pratique 2"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Remember, the number''s color tells you what you must identify about the number"
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "<b>ORANGE NUMBER</b>"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Less than 5: Left arrow key ⬅️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Greater than 5: Right arrow key ➡️"
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "<b>BLUE NUMBER</b>"
+                            "textContent": "<br />"
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Odd: Left arrow key ⬅️"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Even: Right arrow key ➡️"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready for the practice round"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ],
                     "buttons": {
@@ -2248,23 +2826,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Practice round 3",
+                    "title": {
+                        "en": "Practice round 3",
+                        "fr": "Pratique 3"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Last practice"
+                            "textContent": {
+                                "en": "Last practice",
+                                "fr": "Dernière pratique"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "This time we won''t give you feedback after each answer"
+                            "textContent": {
+                                "en": "This time we won''t give you feedback after each answer",
+                                "fr": "Cette fois, nous ne vous dirons pas si vous avez répondu correctement ou incorrectement après chaque réponse."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Do your best!"
+                            "textContent": {
+                                "en": "Do your best!",
+                                "fr": "Faites de votre mieux!"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2277,39 +2870,70 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Practice round 3",
+                    "title": {
+                        "en": "Practice round 3",
+                        "fr": "Pratique 3"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Remember, the number''s color tells you what you must identify about the number"
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "<b>ORANGE NUMBER</b>"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Less than 5: Left arrow key ⬅️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Greater than 5: Right arrow key ➡️"
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "<b>BLUE NUMBER</b>"
+                            "textContent": "<br />"
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Odd: Left arrow key ⬅️"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Even: Right arrow key ➡️"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready for the practice round"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ],
                     "buttons": {
@@ -2341,19 +2965,31 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Main round",
+                    "title": {
+                        "en": "Main round",
+                        "fr": "Tour principal"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Great! All practices are complete."
+                            "textContent": {
+                                "en": "Great! All practices are complete.",
+                                "fr": "Bravo! Vous avez compléter les tours de pratique."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Now you will play the real game."
+                            "textContent": {
+                                "en": "Now you will play the real game.",
+                                "fr": "Maintenant, vous allez jouer au vrai jeu."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2366,39 +3002,70 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Recap instructions",
+                    "title": {
+                        "en": "Recap instructions",
+                        "fr": "Instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Remember, the number''s color tells you what you must identify about the number"
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "<b>ORANGE NUMBER</b>"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Less than 5: Left arrow key ⬅️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Greater than 5: Right arrow key ➡️"
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "<b>BLUE NUMBER</b>"
+                            "textContent": "<br />"
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Odd: Left arrow key ⬅️"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Even: Right arrow key ➡️"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready for the practice round"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the actual game",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2430,25 +3097,33 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Congratulations!",
+                    "title": {
+                        "en": "Congratulations!",
+                        "fr": "Félicitations!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You finished the game successfully"
+                            "textContent": {
+                                "en": "You finished the game successfully",
+                                "fr": "Vous avez terminé le jeu avec succès."
+							}
                         },
                         {
                             "sectionType": "text",
                             "injection": "cached-string",
                             "cacheKey": "task-switching-num-correct",
-                            "textContent": "You scored ??? points"
+                            "textContent": {
+                                "en": "You scored ??? points",
+                                "fr": "Vous avez ??? points"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Thank you for your participation"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2479,27 +3154,45 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Part 2: Patch Game",
+                    "title": {
+                        "en": "Part 2: Patch Game",
+                        "fr": "Partie 2: Jeu des Parcelles"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Read the instructions carefully"
+                            "textContent": {
+                                "en": "Read the instructions carefully",
+                                "fr": "Lisez attentivement les instructions"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Now you will be playing a slightly different game"
+                            "textContent": {
+                                "en": "Now you will be playing a slightly different game",
+                                "fr": "Vous allez maintenant jouer à un jeu légèrement différent"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You will see two colored patches on the screen and will have to pick one. Each patch is hiding a colored number."
+                            "textContent": {
+                                "en": "You will see two colored patches on the screen and will have to pick one. Each patch is hiding a colored number.",
+                                "fr": "Vous verrez deux parcelles colorées à l''écran et vous devrez en choisir une. Chaque parcelle cache un chiffre coloré."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Once the number appears, as before, you will have to make a decision about that number based on its color: ORANGE or BLUE"
+                            "textContent": {
+                                "en": "Once the number appears, as before, you will have to make a decision about that number based on its color: ORANGE or BLUE",
+                                "fr": "Quand le chiffre apparaît, comme avant, vous devrez réagir au chiffre en fonction de sa couleur, ORANGE ou BLEU."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2512,23 +3205,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "More instructions",
+                    "title": {
+                        "en": "More instructions",
+                        "fr": "Suite des instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "There are differences between the patches:"
+                            "textContent": {
+                                "en": "There are differences between the patches:",
+                                "fr": "Les parcelles ne sont pas pareilles:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "One patch is hiding numbers that change color <b>less</b> often"
+                            "textContent": {
+                                "en": "One patch is hiding numbers that change color <b>less</b> often",
+                                "fr": "Un parcelle cache des chiffres qui changent de couleur <b>MOINS</b> souvent."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The other patch is hiding numbers that change color <b>more</b> often"
+                            "textContent": {
+                                "en": "The other patch is hiding numbers that change color <b>more</b> often",
+                                "fr": "L''autre parcelle cache des chiffres qui changent de couleur <b>PLUS</b> souvent."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2541,23 +3249,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "More instructions",
+                    "title": {
+                        "en": "More instructions",
+                        "fr": "Suite des instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "If you develop a preference for one of the patches, feel free to continue to choose it"
+                            "textContent": {
+                                "en": "If you develop a preference for one of the patches, feel free to continue to choose it",
+                                "fr": "Si vous développez une préférence pour une des parcelles, n''hésitez pas à continuer à la choisir."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "However, we recommend that you <b>try both patches at the beginning</b>"
+                            "textContent": {
+                                "en": "However, we recommend that you <b>try both patches at the beginning</b>",
+                                "fr": "Toutefois, nous vous recommandons <b>d''essayer les deux parcelles au début</b> pour voir si vous en préférez une."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Try to avoid choosing the patch solely based on its deisgn or its location"
+                            "textContent": {
+                                "en": "Try to avoid choosing the patch solely based on its deisgn or its location",
+                                "fr": "Essayez d''éviter de choisir le parcelle uniquement en fonction de sa couleur ou de son emplacement sur l''écran."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2570,11 +3293,17 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "More instructions",
+                    "title": {
+                        "en": "More instructions",
+                        "fr": "Suite des instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Steps to select a patch:"
+                            "textContent": {
+                                "en": "Steps to select a patch:",
+                                "fr": "Comment sélectionner une parcelle:"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -2582,11 +3311,17 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "1. Move the cursor to the bullseye in the middle of the screen. This will make the patches appear"
+                            "textContent": {
+                                "en": "1. Move the cursor to the bullseye in the middle of the screen. This will make the patches appear",
+                                "fr": "1. Avec votre souris vous devez premièrement amener le curseur vers la cible au milieu de l''écran. Ceci permettra de dévoiler les parcelles."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "2. To select a patch, move the cursor to its location. The number will then appear"
+                            "textContent": {
+                                "en": "2. To select a patch, move the cursor to its location. The number will then appear",
+                                "fr": "2. Ensuite vous devez sélectionner une parcelle en plaçant le curseur par dessus. Ceci fera apparaître le chiffre caché."
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -2594,11 +3329,17 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "3. Then use the arrow keys as before to give us your answer"
+                            "textContent": {
+                                "en": "3. Then use the arrow keys as before to give us your answer",
+                                "fr": "3. Ensuite vous devez utiliser les touches fléchées selon la couleur du chiffre, comme durant la première partie du jeu."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2611,23 +3352,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "More instructions",
+                    "title": {
+                        "en": "More instructions",
+                        "fr": "Suite des instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Orange number:"
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Determine if the number is less than or greater than 5"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "LESS than (<) 5 : Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "GREATER than (>) 5: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -2635,23 +3391,31 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Blue number:"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Determine if the number is odd or even"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is ODD: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is EVEN: Press the RIGHT arrow key ➡️"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2664,15 +3428,24 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "First, a practice round",
+                    "title": {
+                        "en": "First, a practice round",
+                        "fr": "Vous allez maintenant vous pratiquer!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "(The game will launch in fullscreen)"
+                            "textContent": {
+                                "en": "(The game will launch in fullscreen)",
+                                "fr": "(Le jeu se lancera en plein écran)"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready for the practice round"
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ],
                     "buttons": {
@@ -2697,6 +3470,7 @@ UPDATE tasks set
                     "probOfShiftSecondPatch": 90,
                     "oddEvenColor": "blue",
                     "ltGtColor": "orange",
+                    "setCounterBalancePatchStringInMemory": "none",
                     "counterbalanceMode": "none",
                     "stimuliConfig": {
                         "type": "hardcoded",
@@ -2798,13 +3572,19 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Practice round is now complete",
+                    "title": {
+                        "en": "Practice round is now complete",
+                        "fr": "Le tour de pratique est maintenant terminé"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
                             "injection": "cached-string",
                             "cacheKey": "demandselection-num-correct",
-                            "textContent": "You got ??? out of 10 correct"
+                            "textContent": {
+                                "en": "You got ??? out of 10 correct",
+                                "fr": "Vous avez ??? bonne réponses sur 10"
+                            }
                         }
                     ]
                 }
@@ -2818,11 +3598,17 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "We will repeat this round so you can get more practice."
+                            "textContent": {
+                                "en": "We will repeat this round so you can get more practice.",
+                                "fr": "Nous allons répéter ce tour afin que vous puissiez vous entraîner davantage."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" when you are ready for the next stage"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" when you are ready for the next stage",
+                                "fr": "Cliquez sur \\"NEXT\\" pour commencer la prochaine étape"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2837,23 +3623,38 @@ UPDATE tasks set
                 "componentConfig": {
                     "skippable": true,
                     "skippableCacheKey": "demandselection-should-skip",
-                    "title": "More instructions",
+                    "title": {
+                        "en": "More instructions",
+                        "fr": "Suite des instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Orange number:"
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Determine if the number is less or greater than 5"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "LESS than (<) 5 : Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "GREATER than (>) 5: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -2861,23 +3662,31 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Blue number:"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Determine if the number is odd or even"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is ODD: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is EVEN: Press the RIGHT arrow key ➡️"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2902,6 +3711,7 @@ UPDATE tasks set
                     "probOfShiftSecondPatch": 90,
                     "oddEvenColor": "blue",
                     "ltGtColor": "orange",
+                    "setCounterBalancePatchStringInMemory": "none",
                     "counterbalanceMode": "none",
                     "stimuliConfig": {
                         "type": "generated",
@@ -2920,7 +3730,10 @@ UPDATE tasks set
                             "sectionType": "text",
                             "injection": "cached-string",
                             "cacheKey": "demandselection-num-correct",
-                            "textContent": "You got ??? out of 10 correct"
+                            "textContent": {
+                                "en": "You got ??? out of 10 correct",
+                                "fr": "Vous avez ??? bonne réponses sur 10"
+                            }
                         }
                     ]
                 }
@@ -2928,19 +3741,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Instructions Recap",
+                    "title": {
+                        "en": "Recap instructions",
+                        "fr": "Instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Orange number: Determine if the number is less or greater than 5"
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "LESS than 5: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "GREATER than 5: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -2948,19 +3780,31 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Blue number: Determine if the number is odd or even"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is ODD: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is EVEN: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" to launch the practice"
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ],
                     "buttons": {
@@ -2985,6 +3829,7 @@ UPDATE tasks set
                     "probOfShiftSecondPatch": 90,
                     "oddEvenColor": "blue",
                     "ltGtColor": "orange",
+                    "setCounterBalancePatchStringInMemory": "none",
                     "counterbalanceMode": "none",
                     "stimuliConfig": {
                         "type": "generated",
@@ -2995,19 +3840,31 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Main Round",
+                    "title": {
+                        "en": "Main round",
+                        "fr": "Tour principal"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Good job! Now we will start the real game"
+                            "textContent": {
+                                "en": "Great! All practices are complete.",
+                                "fr": "Bravo! Vous avez compléter les tours de pratique."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "There are six short parts to the game, each lasting a few minutes. You can take short breaks in between each."
+                            "textContent": {
+                                "en": "There are six short parts to the game, each lasting a few minutes. You can take short breaks in between each.",
+                                "fr": "Il y a six courts tours, chacun d''une durée de quelques minutes. Vous pourrez prendre une pauses entre chaque tour."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3026,11 +3883,17 @@ UPDATE tasks set
                             "sectionType": "text",
                             "injection": "cached-string",
                             "cacheKey": "demandselection-block-num",
-                            "textContent": "This is part ??? of the game"
+                            "textContent": {
+                                "en": "This is part ??? of the game.",
+                                "fr": "Cela fait partie ??? du jeu."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ]
                 }
@@ -3038,23 +3901,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Recap Instructions",
+                    "title": {
+                        "en": "Recap instructions",
+                        "fr": "Rappel des instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Remember, first pick a patch then make a decision based on the color of the number, ORANGE or BLUE"
+                            "textContent": {
+                                "en": "Remember, first pick a patch then make a decision based on the color of the number, ORANGE or BLUE",
+                                "fr": "Rappelez-vous, choisissez d''abord un patch puis prenez une décision en fonction de la couleur du numéro, ORANGE ou BLEU"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The patches are different:"
+                            "textContent": {
+                                "en": "The patches are different:",
+                                "fr": "Les parcelles sont différentes."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The numbers hiding behind each patch change color <b>more</b> or <b>less</b> often depending on the patch"
+                            "textContent": {
+                                "en": "The numbers hiding behind each patch change color <b>more</b> or <b>less</b> often depending on the patch",
+                                "fr": "Les chiffres qui se cachent derrière chaque parcelle changent de couleur <b>plus</b> ou <b>moins</b> souvent selon la parcelle."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3067,23 +3945,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Recap Instructions",
+                    "title": {
+                        "en": "Recap instructions",
+                        "fr": "Rappel des instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "If you develop a preference for one of the patches, feel free to continue to choose it"
+                            "textContent": {
+                                "en": "If you develop a preference for one of the patches, feel free to continue to choose it.",
+                                "fr": "Si vous développez une préférence pour une des parcelles, n''hésitez pas à continuer à la choisir."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "However, we recommend that <b>you try both patches at the beginning</b>"
+                            "textContent": {
+                                "en": "However, we recommend that <b>you try both patches at the beginning</b>.",
+                                "fr": "Toutefois, nous vous recommandons d''essayer les deux parcelles au début."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Try to avoid choosing the patch solely based on how they look or on their location"
+                            "textContent": {
+                                "en": "Try to avoid choosing the patch solely based on how they look or on their location.",
+                                "fr": "Essayez d''éviter de choisir une parcelle uniquement en fonction de sa couleur ou de son emplacement"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3096,19 +3989,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Recap Instructions",
+                    "title": {
+                        "en": "Recap instructions",
+                        "fr": "Rappel des instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Orange number: Determine if the number is less than or greater than 5"
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "LESS than 5: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "GREATER than 5: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -3116,19 +4028,31 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Blue number: Determine if the number is odd or even"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is ODD: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is EVEN: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3152,6 +4076,7 @@ UPDATE tasks set
                     "probOfShiftSecondPatch": 90,
                     "oddEvenColor": "blue",
                     "ltGtColor": "orange",
+                    "setCounterBalancePatchStringInMemory": "none",
                     "counterbalanceMode": "none",
                     "stimuliConfig": {
                         "type": "generated",
@@ -3162,11 +4087,17 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Congrats, you have finished this part",
+                    "title": {
+                        "en": "Congrats, you have finished this part.",
+                        "fr": "Le premier tour est maintenant terminé."
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3185,11 +4116,17 @@ UPDATE tasks set
                             "sectionType": "text",
                             "injection": "cached-string",
                             "cacheKey": "demandselection-block-num",
-                            "textContent": "This is part ??? of the game"
+                            "textContent": {
+                                "en": "This is part ??? of the game.",
+                                "fr": "Cela fait partie ??? du jeu."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3202,19 +4139,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Recap Instructions",
+                    "title": {
+                        "en": "Recap instructions",
+                        "fr": "Rappel des instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Orange number: Determine if the number is less than or greater than 5"
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "LESS than 5: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "GREATER than 5: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -3222,19 +4178,31 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Blue number: Determine if the number is odd or even"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is ODD: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is EVEN: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready"
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the actual game",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3258,6 +4226,7 @@ UPDATE tasks set
                     "probOfShiftSecondPatch": 90,
                     "oddEvenColor": "blue",
                     "ltGtColor": "orange",
+                    "setCounterBalancePatchStringInMemory": "none",
                     "counterbalanceMode": "none",
                     "stimuliConfig": {
                         "type": "generated",
@@ -3268,11 +4237,17 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Congrats, you have finished this part",
+                    "title": {
+                        "en": "Congrats, you have finished this part",
+                        "fr": "Félicitations, vous avez terminé cette partie"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3291,11 +4266,17 @@ UPDATE tasks set
                             "sectionType": "text",
                             "injection": "cached-string",
                             "cacheKey": "demandselection-block-num",
-                            "textContent": "This is part ??? of the game"
+                            "textContent": {
+                                "en": "This is part ??? of the game.",
+                                "fr": "Cela fait partie ??? du jeu."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3308,19 +4289,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Recap Instructions",
+                    "title": {
+                        "en": "Recap instructions",
+                        "fr": "Rappel des instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Orange number: Determine if the number is less than or greater than 5"
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "LESS than 5: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "GREATER than 5: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -3328,19 +4328,31 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Blue number: Determine if the number is odd or even"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is ODD: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is EVEN: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready"
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the actual game",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3364,6 +4376,7 @@ UPDATE tasks set
                     "probOfShiftSecondPatch": 90,
                     "oddEvenColor": "blue",
                     "ltGtColor": "orange",
+                    "setCounterBalancePatchStringInMemory": "none",
                     "counterbalanceMode": "none",
                     "stimuliConfig": {
                         "type": "generated",
@@ -3374,11 +4387,17 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Congrats, you have finished this part",
+                    "title": {
+                        "en": "Congrats, you have finished this part",
+                        "fr": "Félicitations, vous avez terminé cette partie"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ]
                 }
@@ -3392,11 +4411,17 @@ UPDATE tasks set
                             "sectionType": "text",
                             "injection": "cached-string",
                             "cacheKey": "demandselection-block-num",
-                            "textContent": "This is part ??? of the game"
+                            "textContent": {
+                                "en": "This is part ??? of the game.",
+                                "fr": "Cela fait partie ??? du jeu."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ]
                 }
@@ -3404,19 +4429,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Recap Instructions",
+                    "title": {
+                        "en": "Recap instructions",
+                        "fr": "Rappel des instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Orange number: Determine if the number is less than or greater than 5"
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "LESS than 5: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "GREATER than 5: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -3424,19 +4468,31 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Blue number: Determine if the number is odd or even"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is ODD: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is EVEN: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready"
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the actual game",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3460,6 +4516,7 @@ UPDATE tasks set
                     "probOfShiftSecondPatch": 90,
                     "oddEvenColor": "blue",
                     "ltGtColor": "orange",
+                    "setCounterBalancePatchStringInMemory": "counterbalance",
                     "counterbalanceMode": "none",
                     "stimuliConfig": {
                         "type": "generated",
@@ -3470,15 +4527,24 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Congrats, you have finished this part",
+                    "title": {
+                        "en": "Congrats, you have finished this part",
+                        "fr": "Félicitations, vous avez terminé cette partie"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "<b>Please pay attention. We will be asking you to do something different!!!</b>"
+                            "textContent": {
+                                "en": "<b>Please pay attention. We will be asking you to do something different!!!</b>",
+                                "fr": "<b>Attention: Les règles vont changer pour la prochaine partie!!</b>"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3497,25 +4563,49 @@ UPDATE tasks set
                             "sectionType": "text",
                             "injection": "cached-string",
                             "cacheKey": "demandselection-block-num",
-                            "textContent": "This is part ??? of the game."
+                            "textContent": {
+                                "en": "This is part ??? of the game.",
+                                "fr": "Cela fait partie ??? du jeu."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Read these instructions."
+                            "textContent": {
+                                "en": "Read these instructions.",
+                                "fr": "Veuillez lire ces instructions."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "injection": "counterbalance",
-                            "textContent": "Find the <b>???</b> and pick that one on each trial"
+                            "injection": "cached-string",
+                            "cacheKey": "demandselection-patch-string-presented",
+                            "textContent": {
+                                "en": "You must now find the <b>???</b> and pick that one on each trial",
+                                "fr": "Vous devez maintenant identifier la parcelle qui vous semble <b>???</b> et la choisir à chaque essai."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "injection": "counterbalance",
-                            "textContent": "Remember, once you have found and selected the <b>???</b>, your goal is still to make a decision about the number that appears based on its color: ORANGE or BLUE"
+                            "textContent": {
+                                "en": "As before, start by taking the time to explore each of the patches.",
+                                "fr": "Comme d’habitude, prenez tout d’abord le temps d’explorer les deux parcelles."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "injection": "cached-string",
+                            "cacheKey": "demandselection-patch-string-presented",
+                            "textContent": {
+                                "en": "Remember, once you have found and selected the <b>???</b>, your goal is still to make a decision about the number that appears based on its color: ORANGE or BLUE",
+                                "fr": "Rappelez-vous, une fois que vous avez trouvé et sélectionné le <b>???</b>, votre objectif est toujours de prendre une décision sur le nombre qui apparaît en fonction de sa couleur : ORANGE ou BLEU"
+							}
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ]
                 }
@@ -3523,19 +4613,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Recap Instructions",
+                    "title": {
+                        "en": "Recap instructions",
+                        "fr": "Rappel des instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Orange number: Determine if the number is less than or greater than 5"
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "LESS than 5: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "GREATER than 5: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -3543,19 +4652,31 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Blue number: Determine if the number is odd or even"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is ODD: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is EVEN: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready"
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the actual game",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3579,116 +4700,7 @@ UPDATE tasks set
                     "probOfShiftSecondPatch": 90,
                     "oddEvenColor": "blue",
                     "ltGtColor": "orange",
-                    "counterbalanceMode": "counterbalance-alternative",
-                    "stimuliConfig": {
-                        "type": "generated",
-                        "stimuli": null
-                    }
-                }
-            },
-            {
-                "componentName": "DISPLAYCOMPONENT",
-                "componentConfig": {
-                    "title": "Congrats, you have finished this part",
-                    "sections": [
-                        {
-                            "sectionType": "text",
-                            "textContent": "<b>Please pay attention. We will be asking you to do something different!!!</b>"
-                        }
-                    ]
-                }
-            },
-            {
-                "componentName": "DISPLAYCOMPONENT",
-                "componentConfig": {
-                    "title": "",
-                    "sections": [
-                        {
-                            "sectionType": "text",
-                            "injection": "cached-string",
-                            "cacheKey": "demandselection-block-num",
-                            "textContent": "This is part ??? of the game."
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "Read these instructions."
-                        },
-                        {
-                            "sectionType": "text",
-                            "injection": "counterbalance-alternative",
-                            "textContent": "Find the <b>???</b> and pick that one on each trial"
-                        },
-                        {
-                            "sectionType": "text",
-                            "injection": "counterbalance-alternative",
-                            "textContent": "Remember, once you have found and selected the <b>???</b>, your goal is still to make a decision about the number that appears based on its color: ORANGE or BLUE"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
-                        }
-                    ]
-                }
-            },
-            {
-                "componentName": "DISPLAYCOMPONENT",
-                "componentConfig": {
-                    "title": "Recap Instructions",
-                    "sections": [
-                        {
-                            "sectionType": "text",
-                            "textContent": "Orange number: Determine if the number is less than or greater than 5"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "LESS than 5: Press the LEFT arrow key ⬅️"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "GREATER than 5: Press the RIGHT arrow key ➡️"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "<br />"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "Blue number: Determine if the number is odd or even"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "If number is ODD: Press the LEFT arrow key ⬅️"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "If number is EVEN: Press the RIGHT arrow key ➡️"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready"
-                        }
-                    ],
-                    "buttons": {
-                        "isStart": false,
-                        "previousDisabled": false,
-                        "nextDisabled": false
-                    }
-                }
-            },
-            {
-                "componentName": "DEMANDSELECTIONCOMPONENT",
-                "componentConfig": {
-                    "isPractice": false,
-                    "maxResponseTime": 5000,
-                    "interTrialDelay": 0,
-                    "showFeedbackAfterEachTrial": true,
-                    "durationOfFeedback": 1000,
-                    "numTrials": 35,
-                    "delayToShowHelpMessage": 4000,
-                    "probOfShiftFirstPatch": 10,
-                    "probOfShiftSecondPatch": 90,
-                    "oddEvenColor": "blue",
-                    "ltGtColor": "orange",
+                    "setCounterBalancePatchStringInMemory": "counterbalance-alternative",
                     "counterbalanceMode": "counterbalance",
                     "stimuliConfig": {
                         "type": "generated",
@@ -3699,19 +4711,196 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Congratulations!",
+                    "title": {
+                        "en": "Congrats, you have finished this part",
+                        "fr": "Félicitations, vous avez terminé cette partie"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You finished the game successfully."
+                            "textContent": {
+                                "en": "<b>Please pay attention. We will be asking you to do something different!!!</b>",
+                                "fr": "<b>Attention: Les règles vont changer pour la prochaine partie!!</b>"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": "",
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "injection": "cached-string",
+                            "cacheKey": "demandselection-block-num",
+                            "textContent": {
+                                "en": "This is part ??? of the game.",
+                                "fr": "Cela fait partie ??? du jeu."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Thank you for your participation."
+                            "textContent": {
+                                "en": "Read these instructions.",
+                                "fr": "Veuillez lire ces instructions."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "injection": "cached-string",
+                            "cacheKey": "demandselection-patch-string-presented",
+                            "textContent": {
+                                "en": "You must now find the <b>???</b> and pick that one on each trial",
+                                "fr": "Vous devez maintenant identifier la parcelle qui vous semble <b>???</b> et la choisir à chaque essai."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "As before, start by taking the time to explore each of the patches.",
+                                "fr": "Comme d’habitude, prenez tout d’abord le temps d’explorer les deux parcelles."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "injection": "cached-string",
+                            "cacheKey": "demandselection-patch-string-presented",
+                            "textContent": {
+                                "en": "Remember, once you have found and selected the <b>???</b>, your goal is still to make a decision about the number that appears based on its color: ORANGE or BLUE",
+                                "fr": "Rappelez-vous, une fois que vous avez trouvé et sélectionné le <b>???</b>, votre objectif est toujours de prendre une décision sur le nombre qui apparaît en fonction de sa couleur : ORANGE ou BLEU"
+							}
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "Recap instructions",
+                        "fr": "Rappel des instructions"
+                    },
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite ➡"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": "<br />"
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the actual game",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": false,
+                        "previousDisabled": false,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "DEMANDSELECTIONCOMPONENT",
+                "componentConfig": {
+                    "isPractice": false,
+                    "maxResponseTime": 5000,
+                    "interTrialDelay": 0,
+                    "showFeedbackAfterEachTrial": true,
+                    "durationOfFeedback": 1000,
+                    "numTrials": 35,
+                    "delayToShowHelpMessage": 4000,
+                    "probOfShiftFirstPatch": 10,
+                    "probOfShiftSecondPatch": 90,
+                    "oddEvenColor": "blue",
+                    "ltGtColor": "orange",
+                    "setCounterBalancePatchStringInMemory": "none",
+                    "counterbalanceMode": "counterbalance-alternative",
+                    "stimuliConfig": {
+                        "type": "generated",
+                        "stimuli": null
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "Congratulations!",
+                        "fr": "Félicitations!"
+                    },
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "You finished the game successfully",
+                                "fr": "Vous avez terminé le jeu avec succès."
+							}
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3763,7 +4952,10 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "image-horizontal",
-                            "imagePath": "/assets/images/instructions/smileyface/countdown.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/smileyface/countdown_en.png",
+                                "fr": "/assets/images/instructions/smileyface/countdown_fr.jpg"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -3825,7 +5017,10 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "image-horizontal",
-                            "imagePath": "/assets/images/instructions/smileyface/countdown.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/smileyface/countdown_en.png",
+                                "fr": "/assets/images/instructions/smileyface/countdown_fr.jpg"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -3915,7 +5110,10 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "image-horizontal",
-                            "imagePath": "/assets/images/instructions/smileyface/countdown.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/smileyface/countdown_en.png",
+                                "fr": "/assets/images/instructions/smileyface/countdown_fr.jpg"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -3990,7 +5188,10 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "image-horizontal",
-                            "imagePath": "/assets/images/instructions/smileyface/countdown.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/smileyface/countdown_en.png",
+                                "fr": "/assets/images/instructions/smileyface/countdown_fr.jpg"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -4037,7 +5238,10 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "image-horizontal",
-                            "imagePath": "/assets/images/instructions/smileyface/countdown.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/smileyface/countdown_en.png",
+                                "fr": "/assets/images/instructions/smileyface/countdown_fr.jpg"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -4070,7 +5274,10 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "image-horizontal",
-                            "imagePath": "/assets/images/instructions/smileyface/countdown.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/smileyface/countdown_en.png",
+                                "fr": "/assets/images/instructions/smileyface/countdown_fr.jpg"
+                            }
                         }
                     ]
                 }
@@ -4105,7 +5312,10 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "image-horizontal",
-                            "imagePath": "/assets/images/instructions/smileyface/countdown.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/smileyface/countdown_en.png",
+                                "fr": "/assets/images/instructions/smileyface/countdown_fr.jpg"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -4139,7 +5349,10 @@ UPDATE tasks set
                         {
                             "sectionType": "image-horizontal",
                             "imageAlignment": "center",
-                            "imagePath": "/assets/images/instructions/smileyface/countdown.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/smileyface/countdown_en.png",
+                                "fr": "/assets/images/instructions/smileyface/countdown_fr.jpg"
+                            }
                         }
                     ]
                 }
@@ -4190,7 +5403,10 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "image-horizontal",
-                            "imagePath": "/assets/images/instructions/smileyface/countdown.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/smileyface/countdown_en.png",
+                                "fr": "/assets/images/instructions/smileyface/countdown_fr.jpg"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -5659,87 +6875,6 @@ UPDATE tasks set
         ]
     }'
 WHERE id = 15;
--- STRESS CLINICAL DEBRIEF
-UPDATE tasks set
-    from_platform = "PSHARPLAB",
-    task_type = "CONSENT",
-    name = "Stress Clinical Debrief",
-    description = "Note: May want to review deleting this and changing it to an info display slide",
-    external_url = "",
-    config = '{
-        "taskconfig": {},
-        "metadata": [
-            {
-                "componentName": "CONSENT",
-                "componentConfig": {
-                    "imgPath": "../../../assets/images/consent/consentOrgs.png",
-                    "title": "DEBRIEFING ABOUT THE DECEPTION USED IN THE STUDY",
-                    "body": [
-                        {
-                            "caption": "Thank you for participating!",
-                            "words": [
-                                "Earlier, we informed you that our study was about measuring aspect of cognition. While this is true, we were specifically interested in <b>the effects of stress on cognition</b>. As a result, half of the participants in the study saw unpleasant videos and completed a very stressful math game in order to create a short-term stressful experience."
-                            ]
-                        },
-                        {
-                            "caption": "",
-                            "words": [
-                                "In order to properly study this, <b>it was required that we deceive you about the actual nature of the study</b>. We could not warn you that you would experience stress because knowing this in advance would have minimized the experience of the stress."
-                            ]
-                        },
-                        {
-                            "caption": "",
-                            "words": [
-                                "The specific deception elements in this study included:",
-                                "&nbsp;&nbsp;&nbsp;&nbsp 1) Not telling you in the consent form that this study was about the effects of stress on cognition.",
-                                "&nbsp;&nbsp;&nbsp;&nbsp 2) If you were part of the stress group:",
-                                "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a. Telling you you were doing badly on the math game no matter your actual performance.",
-                                "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b. Telling you you had to maintain a certain performance level which was not true. In fact, we are not at all interested in performance on this game. This was only to cause stress.",
-                                "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c. Watching unpleasant videos without warning."
-                            ]
-                        },
-                        {
-                            "caption": "",
-                            "words": [
-                                "Given the ubiquitous nature of stress, it is critical that we study it in order to understand the range of consequences it can hold for brain health."
-                            ]
-                        },
-                        {
-                            "caption": "",
-                            "words": [
-                                "We followed standard research procedures commonly used to cause stress in the research setting. <b>The stress was meant to be relatively mild and very short-term</b>. If you still feel lingering effects of this stress, or have any questions about the study or your rights as a participant, please contact us: <b>Madeleine Sharp, Department of Neurology and Neurosurgery, Montréal Neurological Institute, McGill University</b> <a href=\\"#\\">madeleine.sharp@mcgill.ca</a> or <a href=\\"#\\">sharplab.neuro@mcgill.ca</a>"
-                            ]
-                        },
-                        {
-                            "caption": "",
-                            "words": [
-                                "Please also consider the following mental health resource:",
-                                "Mental Health Services Locator http://store.samhsa.gov/mhlocator"
-                            ]
-                        },
-                        {
-                            "caption": "",
-                            "words": [
-                                "Finally, if you have comments, or wish to file a complaint, you may communicate with the Ombudsman of the Montreal Neurological Hospital at (514) 934-1934 ext. 22223."
-                            ]
-                        }
-                    ],
-                    "endMessage": "Thank you again for your participation!",
-                    "buttons": {
-                        "reject": {
-                            "show": false,
-                            "text": "DECLINE"
-                        },
-                        "accept": {
-                            "show": true,
-                            "text": "ACKNOWLEDGE"
-                        }
-                    }
-                }
-            }
-        ]
-    }'
-WHERE id = 16;
 -- WEB PHENO CLINICAL
 UPDATE tasks set
     from_platform = "PSHARPLAB",
@@ -13971,30 +15106,48 @@ UPDATE tasks SET
             {
                 "componentName": "QUESTIONNAIRECOMPONENT",
                 "componentConfig": {
-                    "title": "Questionnaire",
+                    "title": {
+                    	"en": "Questionnaire",
+                    	"fr": "Questionnaire"
+                    },
                     "questions": [
                         {
                             "questionType": "displayText",
-                            "title": "The following questions are general questions about you. If you don''t have Parkinson''s disease (PD), not all of them will apply to you, so select the \\"I don''t have Parkinson''s disease\\" option."
+                            "title": {
+                            	"en": "The following questions are general questions about you. If you don''t have Parkinson''s disease (PD), not all of them will apply to you, so select the \\"I don''t have Parkinson''s disease\\" option.",
+                            	"fr": "Les questions suivantes sont des questions générales sur vous. Si vous n''êtes pas atteint de la maladie de Parkinson (MP), toutes ne s''appliqueront pas à vous, alors sélectionnez l''option \\"Je n''ai pas la maladie de Parkinson\\"."
+                            }
                         },
                         {
                             "questionType": "radiobuttons",
-                            "title": "Do you have a diagnosis of Parkinson’s disease given to you by a doctor (e.g. family doctor or neurologist)?",
+                            "title": {
+                            	"en": "Do you have a diagnosis of Parkinson’s disease given to you by a doctor (e.g. family doctor or neurologist)?",
+                            	"fr": "Avez-vous un diagnostic de la maladie de Parkinson qui vous a été donné par un médecin (par exemple, un médecin de famille ou un neurologue)?"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "radiobuttonPresentation": "vertical",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Yes",
+                                    "label": {
+                                    	"en": "Yes",
+                                    	"fr": "Oui"
+                                    },
                                     "value": "Yes"
                                 },
                                 {
-                                    "label": "No",
+                                    "label": {
+                                    	"en": "No",
+                                    	"fr": "Non"
+                                    },
                                     "value": "No"
                                 },
                                 {
-                                    "label": "No, but I think I have Parkinson''s disease",
+                                    "label": {
+                                    	"en": "No, but I think I have Parkinson''s disease",
+                                    	"fr": "Non, mais je pense avoir la maladie de Parkinson"
+                                    },
                                     "value": "No, but I think I have Parkinson''s disease"
                                 }
                             ],
@@ -14002,22 +15155,34 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Do you currently take medication for Parkinson''s disease?",
+                            "title": {
+                            	"en": "Do you currently take medication for Parkinson''s disease?",
+                            	"fr": "Prenez-vous actuellement des médicaments pour la maladie de Parkinson?"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "takePDMed",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "I don''t have Parkinson''s disease",
+                                    "label": {
+                                    	"en": "I don''t have Parkinson''s disease",
+                                    	"fr": "Je n''ai pas la maladie de Parkinson"
+                                    },
                                     "value": "I don''t have Parkinson''s disease"
                                 },
                                 {
-                                    "label": "I have PD but don''t take medications for it",
+                                    "label": {
+                                    	"en": "I have PD but don''t take medications for it",
+                                    	"fr": "J''ai la maladie de Parkinson mais je ne prends pas de médicaments pour ça"
+                                    },
                                     "value": "I have PD but don''t take medications for it"
                                 },
                                 {
-                                    "label": "I have PD and I take medications for it",
+                                    "label": {
+                                    	"en": "I have PD and I take medications for it",
+                                    	"fr": "J''ai la maladie de Parkinson et je prends des médicaments pour cela"
+                                    },
                                     "value": "I have PD and I take medications for it"
                                 }
                             ]
@@ -14027,13 +15192,22 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "displayText",
-                            "title": "If you answered previously that you do take Parkinson’s disease medication, how long ago did you take it?"
+                            "title": {
+                            	"en": "If you answered previously that you do take Parkinson’s disease medication, how long ago did you take it?",
+                            	"fr": "Si vous avez répondu précédemment que vous prenez des médicaments contre la maladie de Parkinson, depuis combien de temps les avez-vous pris?"
+                            }
                         },
                         {
                             "questionType": "input",
-                            "textContent": "If you answered that you don''t take any Parkinson’s medication in the last question, please write \\"0\\".",
+                            "textContent": {
+                            	"en": "If you answered that you don''t take any Parkinson’s medication in the last question, please write \\"0\\".",
+                            	"fr": "Si vous avez répondu que vous ne prenez aucun médicament contre la maladie de Parkinson à la dernière question, veuillez écrire \\"0\\"."
+                            },
                             "key": "lastDoseHour",
-                            "label": "Hours",
+                            "label": {
+                            	"en": "Hours",
+                            	"fr": "Heures"
+                            },
                             "validation": {
                                 "required": true,
                                 "isNumeric": true,
@@ -14044,7 +15218,10 @@ UPDATE tasks SET
                         {
                             "questionType": "input",
                             "key": "lastDoseMinute",
-                            "label": "Minutes",
+                            "label": {
+                            	"en": "Minutes",
+                            	"fr": "Minutes"
+                            },
                             "validation": {
                                 "required": true,
                                 "isNumeric": true,
@@ -14057,111 +15234,174 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Do you feel ON (i.e. can feel that the PD medications are taking effect) or OFF (i.e. medications are not currently taking effect)?",
+                            "title": {
+                            	"en": "Do you feel ON (i.e. can feel that the PD medications are taking effect) or OFF (i.e. medications are not currently taking effect)?",
+                            	"fr": "Vous sentez-vous ''ON'' (c''est-à-dire que vous pouvez sentir que les médicaments contre la maladie de Parkinson font effet) ou ''OFF'' (c''est-à-dire que les médicaments ne font pas actuellement effet)?"
+                            },
                             "key": "onOffMed",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "I don''t have Parkinson''s disease",
+                                    "label": {
+                                    	"en": "I don''t have Parkinson''s disease",
+                                    	"fr": "Je n''ai pas la maladie de Parkinson"
+                                    },
                                     "value": "I don''t have Parkinson''s disease"
                                 },
                                 {
-                                    "label": "I have PD but don''t take medications for it",
+                                    "label": {
+                                    	"en": "I have PD but don''t take medications for it",
+                                    	"fr": "J''ai la maladie de Parkinson mais je ne prends pas de médicaments pour ça"
+                                    },
                                     "value": "I have PD but don''t take medications for it"
                                 },
                                 {
-                                    "label": "I feel ON",
+                                    "label": {
+                                    	"en": "I feel ON",
+                                    	"fr": "Je me sens ''ON''"
+                                    },
                                     "value": "I feel ON"
                                 },
                                 {
-                                    "label": "I feel OFF",
+                                    "label": {
+                                    	"en": "I feel OFF",
+                                    	"fr": "Je me sens ''OFF''"
+                                    },
                                     "value": "I feel OFF"
                                 },
                                 {
-                                    "label": "I can not tell the difference",
+                                    "label": {
+                                    	"en": "I can not tell the difference",
+                                    	"fr": "Je ne peux pas faire la différence"
+                                    },
                                     "value": "I can not tell the difference"
                                 }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Do you have a diagnosis of dementia or Alzheimer''s disease given to you by a doctor?",
+                            "title": {
+                            	"en": "Do you have a diagnosis of dementia or Alzheimer''s disease given to you by a doctor?",
+                            	"fr": "Avez-vous un diagnostic de démence ou de maladie d''Alzheimer qui vous a été donné par un médecin?"
+                            },
                             "key": "diagnosisPD",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Yes",
+                                    "label": {
+                                    	"en": "Yes",
+                                    	"fr": "Oui"
+                                    },
                                     "value": "Yes"
                                 },
                                 {
-                                    "label": "No",
+                                    "label": {
+                                    	"en": "No",
+                                    	"fr": "Non"
+                                    },
                                     "value": "No"
                                 },
                                 {
-                                    "label": "No, but I think I have dementia",
+                                    "label": {
+                                    	"en": "No, but I think I have dementia",
+                                    	"fr": "Non, mais je pense que j''ai la démence"
+                                    },
                                     "value": "No, but I think I have dementia"
                                 }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Do you have a diagnosis of Mild Cognitive Impairment (MCI) given to you by a doctor?",
+                            "title": {
+                            	"en": "Do you have a diagnosis of Mild Cognitive Impairment (MCI) given to you by a doctor?",
+                            	"fr": "Avez-vous un diagnostic de trouble cognitif léger (MCI) qui vous a été remis par un médecin?"
+                            },
                             "key": "diagnosisMCI",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Yes",
+                                    "label": {
+                                    	"en": "Yes",
+                                    	"fr": "Oui"
+                                    },
                                     "value": "Yes"
                                 },
                                 {
-                                    "label": "No",
+                                    "label": {
+                                    	"en": "No",
+                                    	"fr": "Non"
+                                    },
                                     "value": "No"
                                 },
                                 {
-                                    "label": "No, but I think I have cognitive impairment",
+                                    "label": {
+                                    	"en": "No, but I think I have cognitive impairment",
+                                    	"fr": "Non, mais je pense avoir des troubles cognitifs"
+                                    },
                                     "value": "No, but I think I have cognitive impairment"
                                 }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Do you have a family history of Parkinson’s disease?",
+                            "title": {
+                            	"en": "Do you have a family history of Parkinson’s disease?",
+                            	"fr": "Avez-vous des antécédents familiaux de maladie de Parkinson?"
+                            },
                             "key": "familyHistory",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Yes, my biological mother or father has/had Parkinson’s disease",
+                                    "label": {
+                                    	"en": "Yes, my biological mother or father has/had Parkinson’s disease",
+                                    	"fr": "Oui, ma mère ou mon père biologique a eu la maladie de Parkinson"
+                                    },
                                     "value": "Yes, biological mother or father"
                                 },
                                 {
-                                    "label": "Yes, one of my siblings has/had Parkinson’s disease",
+                                    "label": {
+                                    	"en": "Yes, one of my siblings has/had Parkinson’s disease",
+                                    	"fr": "Oui, un de mes frères et sœurs a eu la maladie de Parkinson"
+                                    },
                                     "value": "Yes, siblings"
                                 },
                                 {
-                                    "label": "Yes, one of my children has/had Parkinson’s disease",
+                                    "label": {
+                                    	"en": "Yes, one of my children has/had Parkinson’s disease",
+                                    	"fr": "Oui, un de mes enfants a eu la maladie de Parkinson"
+                                    },
                                     "value": "Yes, children"
                                 },
                                 {
-                                    "label": "Yes, an uncle/aunt/cousin or other blood relative has/had Parkinson’s disease",
+                                    "label": {
+                                    	"en": "Yes, an uncle/aunt/cousin or other blood relative has/had Parkinson’s disease",
+                                    	"fr": "Oui, un oncle/une tante/un cousin ou un autre parent par le sang a eu la maladie de Parkinson"
+                                    },
                                     "value": "Yes, relative"
                                 },
                                 {
-                                    "label": "No, no family history",
+                                    "label": {
+                                    	"en": "No, no family history",
+                                    	"fr": "Non, pas d''antécédents familiaux"
+                                    },
                                     "value": "No"
                                 }
                             ]
                         },
                         {
                             "questionType": "input",
-                            "title": "What is your current age?",
+                            "title": {
+                            	"en": "What is your current age?",
+                            	"fr": "Quel est votre âge actuel?"
+                            },
                             "key": "age",
                             "label": "Age",
                             "validation": {
@@ -14173,92 +15413,149 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "What sex were you assigned at birth?",
+                            "title": {
+                            	"en": "What sex were you assigned at birth?",
+                            	"fr": "Quel sexe vous a été assigné à la naissance?"
+                            },
                             "key": "sex",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Female",
+                                    "label": {
+                                    	"en": "Female",
+                                    	"fr": "Femme"
+                                    },
                                     "value": "Female"
                                 },
                                 {
-                                    "label": "Male",
+                                    "label": {
+                                    	"en": "Male",
+                                    	"fr": "Homme"
+                                    },
                                     "value": "Male"
                                 }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "How do you describe yourself?",
+                            "title": {
+                            	"en": "How do you describe yourself?",
+                            	"fr": "Comment vous décrivez-vous?"
+                            },
                             "key": "gender",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Female",
+                                    "label": {
+                                    	"en": "Female",
+                                    	"fr": "Femme"
+                                    },
                                     "value": "Female"
                                 },
                                 {
-                                    "label": "Male",
+                                    "label": {
+                                    	"en": "Male",
+                                    	"fr": "Homme"
+                                    },
                                     "value": "Male"
                                 },
                                 {
-                                    "label": "Transgender",
+                                    "label": {
+                                    	"en": "Transgender",
+                                    	"fr": "Transgenre"
+                                    },
                                     "value": "Transgender"
                                 },
                                 {
-                                    "label": "Do not identify as female, male, or transgender",
+                                    "label": {
+                                    	"en": "Do not identify as female, male, or transgender",
+                                    	"fr": "Ne vous identifiez pas comme femme, homme ou transgenre"
+                                    },
                                     "value": "Do not identify as female, male, or transgender"
                                 }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "What is the highest level of education you have completed?",
+                            "title": {
+                            	"en": "What is the highest level of education you have completed?",
+                            	"fr": "Quel est le plus haut niveau d''études que vous avez atteint?"
+                            },
                             "key": "education",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "None",
+                                    "label": {
+                                    	"en": "None",
+                                    	"fr": "Aucun"
+                                    },
                                     "value": "None"
                                 },
                                 {
-                                    "label": "Grade (Elementary) school",
+                                    "label": {
+                                    	"en": "Grade (Elementary) school",
+                                    	"fr": "École primaire (élémentaire)"
+                                    },
                                     "value": "Grade (Elementary) school"
                                 },
                                 {
-                                    "label": "High school",
+                                    "label": {
+                                    	"en": "High school",
+                                    	"fr": "École secondaire"
+                                    },
                                     "value": "High school"
                                 },
                                 {
-                                    "label": "Trade Certificate/Diploma",
+                                    "label": {
+                                    	"en": "Trade Certificate/Diploma",
+                                    	"fr": "Certificat/diplôme de commerce"
+                                    },
                                     "value": "Trade Certificate/Diploma"
                                 },
                                 {
-                                    "label": "Non-University Diploma",
+                                    "label": {
+                                    	"en": "Non-University Diploma",
+                                    	"fr": "Diplôme non universitaire"
+                                    },
                                     "value": "Non-University Diploma"
                                 },
                                 {
-                                    "label": "Bachelor''s Degree",
+                                    "label": {
+                                    	"en": "Bachelor''s Degree",
+                                    	"fr": "Baccalauréat"
+                                    },
                                     "value": "Bachelor''s Degree"
                                 },
                                 {
-                                    "label": "Postgraduate Degree",
+                                    "label": {
+                                    	"en": "Postgraduate Degree",
+                                    	"fr": "Diplôme d''études supérieures"
+                                    },
                                     "value": "Postgraduate Degree"
                                 }
                             ]
                         },
                         {
                             "questionType": "input",
-                            "title": "How many years of education did you complete?",
-                            "textContent": "E.g. completed up to grade 9 = 9 years; completed grade 12 and 3 years of university = 15 years",
+                            "title": {
+                            	"en": "How many years of education did you complete?",
+                            	"fr": "Combien d''années d''études avez-vous complétées?"
+                            },
+                            "textContent": {
+                            	"en": "E.g. completed up to grade 9 = 9 years; completed grade 12 and 3 years of university = 15 years",
+                            	"fr": "Par exemple. terminé jusqu''à la 9e année = 9 ans; terminé la 12e année et 3 ans d''université = 15 ans"
+                            },
                             "key": "educationYears",
-                            "label": "Years of education",
+                            "label": {
+                            	"en": "Years of education",
+                            	"fr": "Années d''études"
+                            },
                             "validation": {
                                 "required": true,
                                 "isNumeric": true,
@@ -14268,27 +15565,42 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "What is your handedness?",
+                            "title": {
+                            	"en": "What is your handedness?",
+                            	"fr": "Quelle est votre latéralité?"
+                            },
                             "key": "handedness",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [{
-                                "label": "Right-handed",
+                                "label": {
+                                	"en": "Right-handed",
+                                	"fr": "Droitier"
+                                },
                                 "value": "Right"
                             },
                             {
-                                "label": "Left-handed",
+                                "label": {
+                                	"en": "Left-handed",
+                                	"fr": "Gaucher"
+                                },
                                 "value": "Left"
                             },
                             {
-                                "label": "Ambidextrous",
+                                "label": {
+                                	"en": "Ambidextrous",
+                                	"fr": "Ambidextre"
+                                },
                                 "value": "Ambidextrous"
                             }]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "We expect to reach people from many different cultural and racial backgrounds with this internet study. To which group do you belong? (Select all that apply)",
+                            "title": {
+                            	"en": "We expect to reach people from many different cultural and racial backgrounds with this internet study. To which group do you belong? (Select all that apply)",
+                            	"fr": "Nous prévoyons d''atteindre des personnes de nombreux horizons culturels et raciaux différents avec cette étude sur Internet. A quel groupe appartenez-vous ? (Sélectionnez tout ce qui s''y rapporte)"
+                            },
                             "key": "background",
                             "validation": {
                                 "required": true
@@ -14296,70 +15608,118 @@ UPDATE tasks SET
                             "allowMultipleSelections": true,
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "White / Caucasian",
+                                    "label": {
+                                    	"en": "White / Caucasian",
+                                    	"fr": "Blanc / Caucasien"
+                                    },
                                     "value": "White/Caucasian"
                                 },
                                 {
-                                    "label": "French Canadian",
+                                    "label": {
+                                    	"en": "French Canadian",
+                                    	"fr": "Français Canadien"
+                                    },
                                     "value": "French Canadian"
                                 },
                                 {
-                                    "label": "First Nations",
+                                    "label": {
+                                    	"en": "First Nations",
+                                    	"fr": "Premières nations"
+                                    },
                                     "value": "First Nations"
                                 },
                                 {
-                                    "label": "Hispanic or Latino",
+                                    "label": {
+                                    	"en": "Hispanic or Latino",
+                                    	"fr": "Hispanique ou Latino"
+                                    },
                                     "value": "Hispanic or Latino"
                                 },
                                 {
-                                    "label": "African / Carribean / Afro American",
+                                    "label": {
+                                    	"en": "African / Carribean / Afro American",
+                                    	"fr": "Africain / Caribéen / Afro Américain"
+                                    },
                                     "value": "African/Carribean/Afro American"
                                 },
                                 {
-                                    "label": "North African",
+                                    "label": {
+                                    	"en": "North African",
+                                    	"fr": "Nord-Africain"
+                                    },
                                     "value": "North African"
                                 },
                                 {
-                                    "label": "Middle Eastern",
+                                    "label": {
+                                    	"en": "Middle Eastern",
+                                    	"fr": "Moyen-Orient"
+                                    },
                                     "value": "Middle Eastern"
                                 },
                                 {
-                                    "label": "Chinese",
+                                    "label": {
+                                    	"en": "Chinese",
+                                    	"fr": "Chinois"
+                                    },
                                     "value": "Chinese"
                                 },
                                 {
-                                    "label": "South Asian (E.g. Indian, Pakistani, Sri Lankan)",
+                                    "label": {
+                                    	"en": "South Asian (E.g. Indian, Pakistani, Sri Lankan)",
+                                    	"fr": "Sud-Asiatique (par exemple Indien, Pakistanais, Sri Lankais)"
+                                    },
                                     "value": "South Asian"
                                 },
                                 {
-                                    "label": "Southeast Asian (E.g. Filipino, Cambodian, Indonesian, Laotian, Vietnamese)",
+                                    "label": {
+                                    	"en": "Southeast Asian (E.g. Filipino, Cambodian, Indonesian, Laotian, Vietnamese)",
+                                    	"fr": "Asiatique du Sud-Est (par exemple, philippin, cambodgien, indonésien, laotien, vietnamien)"
+                                    },
                                     "value": "Southeast Asian"
                                 },
                                 {
-                                    "label": "Japanese",
+                                    "label": {
+                                    	"en": "Japanese",
+                                    	"fr": "Japonais"
+                                    },
                                     "value": "Japanese"
                                 },
                                 {
-                                    "label": "Korean",
+                                    "label": {
+                                    	"en": "Korean",
+                                    	"fr": "Coréen"
+                                    },
                                     "value": "Korean"
                                 },
                                 {
-                                    "label": "Other",
+                                    "label": {
+                                    	"en": "Other",
+                                    	"fr": "Autre"
+                                    },
                                     "value": "Other"
                                 },
                                 {
-                                    "label": "Don''t know",
+                                    "label": {
+                                    	"en": "Don''t know",
+                                    	"fr": "Je ne sais pas"
+                                    },
                                     "value": "Don''t know"
                                 },
                                 {
-                                    "label": "Prefer not to answer",
+                                    "label": {
+                                    	"en": "Prefer not to answer",
+                                    	"fr": "Je préfère ne pas répondre"
+                                    },
                                     "value": "Prefer not to answer"
                                 }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Which of the following languages do you consider yourself fluent in (can read and speak)? Select all that apply.",
+                            "title": {
+                            	"en": "Which of the following languages do you consider yourself fluent in (can read and speak)? Select all that apply.",
+                            	"fr": "Laquelle des langues suivantes considérez-vous maîtriser (savoir lire et parler)? Sélectionnez tout ce qui s''y rapporte."
+                            },
                             "key": "fluentLan",
                             "validation": {
                                 "required": true
@@ -14367,85 +15727,133 @@ UPDATE tasks SET
                             "allowMultipleSelections": true,
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "English",
+                                    "label": {
+                                    	"en": "English",
+                                    	"fr": "Anglais"
+                                    },
                                     "value": "English"
                                 },
                                 {
-                                    "label": "French",
+                                    "label": {
+                                    	"en": "French",
+                                    	"fr": "Français"
+                                    },
                                     "value": "French"
                                 },
                                 {
-                                    "label": "Neither",
+                                    "label": {
+                                    	"en": "Neither",
+                                    	"fr": "Aucun d''eux"
+                                    },
                                     "value": "Neither"
                                 }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Do you have color-blindness?",
+                            "title": {
+                            	"en": "Do you have color-blindness?",
+                            	"fr": "Avez-vous le daltonisme?"
+                            },
                             "key": "colorBlindnss",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "No",
-                                    "value": "No"
-                                },
-                                {
-                                    "label": "Yes",
+                                    "label": {
+                                    	"en": "Yes",
+                                    	"fr": "Oui"
+                                    },
                                     "value": "Yes"
                                 },
                                 {
-                                    "label": "Unsure",
+                                    "label": {
+                                    	"en": "No",
+                                    	"fr": "Non"
+                                    },
+                                    "value": "No"
+                                },
+                                {
+                                    "label": {
+                                    	"en": "Unsure",
+                                    	"fr": "Je ne sais pas"
+                                    },
                                     "value": "Unsure"
                                 }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Do you feel that your memory and thinking have gotten worse?",
-                            "textContent": "If you have Parkinson''s disease, consider the change since your diagnosis, or, if you don''t have Parkinson''s disease, consider the change in the last few years.",
+                            "title": {
+                            	"en": "Do you feel that your memory and thinking have gotten worse?",
+                            	"fr": "Avez-vous l''impression que votre mémoire et votre pensée se sont détériorées?"
+                            },
+                            "textContent": {
+                            	"en": "If you have Parkinson''s disease, consider the change since your diagnosis, or, if you don''t have Parkinson''s disease, consider the change in the last few years.",
+                            	"fr": "Si vous êtes atteint de la maladie de Parkinson, considérez le changement depuis votre diagnostic ou, si vous n''êtes pas atteint de la maladie de Parkinson, considérez le changement au cours des dernières années."
+                            },
                             "key": "memory",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Yes",
+                                    "label": {
+                                    	"en": "Yes",
+                                    	"fr": "Oui"
+                                    },
                                     "value": "Yes"
                                 },
                                 {
-                                    "label": "No",
+                                    "label": {
+                                    	"en": "No",
+                                    	"fr": "Non"
+                                    },
                                     "value": "No"
                                 },
                                 {
-                                    "label": "Not sure",
+                                    "label": {
+                                    	"en": "Not sure",
+                                    	"fr": "Je ne sais pas"
+                                    },
                                     "value": "Not sure"
                                 }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Would you like to be contacted by email about future opportunities to participate in online research?",
+                            "title": {
+                            	"en": "Would you like to be contacted by email about future opportunities to participate in online research?",
+                            	"fr": "Souhaitez-vous être contacté par e-mail au sujet des opportunités futures de participer à la recherche en ligne?"
+                            },
                             "key": "futureOnlineResearch",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Yes",
+                                    "label": {
+                                    	"en": "Yes",
+                                    	"fr": "Oui"
+                                    },
                                     "value": "Yes"
                                 },
                                 {
-                                    "label": "No",
+                                    "label": {
+                                    	"en": "No",
+                                    	"fr": "Non"
+                                    },
                                     "value": "No"
                                 }
                             ]
                         },
                         {
                             "questionType": "freeTextResponse",
-                            "title": "If you answered yes, and would also be willing to receive a phone call, please include it here:",
+                            "title": {
+                            	"en": "If you answered yes, and would also be willing to receive a phone call, please include it here:",
+                            	"fr": "Si vous avez répondu oui et que vous souhaiteriez également recevoir un appel téléphonique, veuillez l''inclure ici:"
+                            },
                             "key": "futureOnlineResearchPhone",
                             "label": "eg. 123-456-7890",
                             "validation": {
@@ -14454,18 +15862,27 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Would you like to receive updates about the findings from this study?",
+                            "title": {
+                            	"en": "Would you like to receive updates about the findings from this study?",
+                            	"fr": "Souhaitez-vous recevoir des mises à jour sur les résultats de cette étude?"
+                            },
                             "key": "updateFindings",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Yes",
+                                    "label": {
+                                    	"en": "Yes",
+                                    	"fr": "Oui"
+                                    },
                                     "value": "Yes"
                                 },
                                 {
-                                    "label": "No",
+                                    "label": {
+                                    	"en": "No",
+                                    	"fr": "Non"
+                                    },
                                     "value": "No"
                                 }
                             ]
@@ -15567,24 +16984,39 @@ UPDATE tasks SET
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Welcome to the Spot The Number Game!",
+                    "title": {
+                        "en": "Welcome to the Spot The Number Game!",
+                        "fr": "Bienvenue dans le jeu Spot The Number!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You will see numbers flash on the screen very quickly, followed by an X."
+                            "textContent": {
+                                    "en": "You will see numbers flash on the screen very quickly, followed by an X.",
+                                    "fr": "Vous verrez des chiffres clignoter très rapidement à l''écran, suivis d''un X."
+                                }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Your job is to press the LEFT arrow ( ⬅️ ) for every number <b>EXCEPT</b> for the <b>number 3</b>."
+                            "textContent": {
+                                    "en": "Your job is to press the LEFT arrow ( ⬅️ ) for every number <b>EXCEPT</b> for the <b>number 3</b>.",
+                                    "fr": "Vous devez appuyer sur la flèche GAUCHE ( ⬅️ ) pour chaque numéro <b>SAUF</b> pour le <b>numéro 3</b>."
+                                }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "When you see the <b>number 3</b> you must <b>NOT</b> press any key at all, simply wait for the next number."
+                            "textContent": {
+                                    "en": "When you see the <b>number 3</b> you must <b>NOT</b> press any key at all, simply wait for the next number.",
+                                    "fr": "Quand vous voyez le <b>numéro 3</b>, vous <b>NE DEVEZ PAS</b> appuyer sur aucune touche, attendez simplement le numéro suivant."
+                                }
                         },
                         {
                             "sectionType": "image-horizontal",
                             "imageAlignment": "left",
-                            "imagePath": "/assets/images/instructions/SART/visual_instructions.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/SART/visual_instructions_en.png",
+                                "fr": "/assets/images/instructions/SART/visual_instructions_fr.png"
+                            }
                         }
                     ],
                     "buttons": {
@@ -15597,23 +17029,38 @@ UPDATE tasks SET
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Let''s practice!",
+                    "title": {
+                            "en": "Let''s practice!",
+                            "fr": "Pratiquons!"
+                        },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Remember, press the ( ⬅️ ) for all numbers except for 3"
+                            "textContent": {
+                                    "en": "Remember, press the ( ⬅️ ) for all numbers except for 3",
+                                    "fr": "N''oubliez pas d''appuyer sur ( ⬅️ ) pour tous les numéros sauf le 3"
+                                }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "When you see 3, don''t press anything and wait for the next number to appear."
+                            "textContent": {
+                                    "en": "When you see 3, don''t press anything and wait for the next number to appear.",
+                                    "fr": "Quand vous voyez le numéro 3, vous ne devez pas appuyer sur aucune touche, attendez simplement le numéro suivant."
+                                }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The numbers will appear very quickly, so be ready!"
+                            "textContent": {
+                                    "en": "The numbers will appear very quickly, so be ready!",
+                                    "fr": "Les chiffres vont apparaître très rapidement, alors soyez prêt!"
+                                }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click START to begin the practice"
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ],
                     "buttons": {
@@ -15642,23 +17089,38 @@ UPDATE tasks SET
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Well done!",
+                    "title": {
+                        "en": "Well done!",
+                        "fr": "Bravo!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Now you are ready for the real game"
+                            "textContent": {
+                                "en": "Now you are ready for the real game.",
+                                "fr": "Vous êtes prêt pour le vrai jeu."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Remember, press the ( ⬅️ ) key for all numbers except for 3"
+                            "textContent": {
+                                "en": "Remember, press the ( ⬅️ ) key for all numbers except for 3",
+                                "fr": "N''oubliez pas d''appuyer sur ( ⬅️ ) pour tous les numéros sauf le 3"
+                                }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "When you see 3, don''t press anything and wait for the next number to appear"
+                            "textContent": {
+                                "en": "When you see 3, don''t press anything and wait for the next number to appear",
+                                "fr": "Quand vous voyez le numéro 3, vous ne devez pas appuyer sur aucune touche, attendez simplement le numéro suivant."
+                                }
                         },
                         {
                             "sectionType": "",
-                            "textContent": "Click START to begin"
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the actual game",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -15688,7 +17150,10 @@ UPDATE tasks SET
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "It''s break time",
+                    "title": {
+                        "en": "It''s break time",
+                        "fr": "C''est l''heure de la pause"
+                    },
                     "timerConfig": {
                         "timer": 35000,
                         "showTimer": true,
@@ -15698,15 +17163,24 @@ UPDATE tasks SET
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You have to wait for at least 20 seconds before being able to continue"
+                            "textContent": {
+                                "en": "You have to wait for at least 20 seconds before being able to continue",
+                                "fr": "Vous devez attendre au moins 20 secondes avant de pouvoir continuer"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The next round will automatically start in 35 seconds unless you choose to continue sooner"
+                            "textContent": {
+                                "en": "The next round will automatically start in 35 seconds unless you choose to continue sooner.",
+                                "fr": "Le prochain tour commencera automatiquement dans 35 secondes, sauf si vous choisissez de continuer plus tôt."
+                            } 
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click START when you are ready"
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the actual game",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -15736,11 +17210,17 @@ UPDATE tasks SET
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "You have completed the task, thank you!",
+                    "title": {
+                        "en": "You have completed the game, thank you!",
+                        "fr": "Vous avez terminé le jeu, merci!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Click next to continue"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ]
                 }
