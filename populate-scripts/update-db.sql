@@ -18991,3 +18991,1366 @@ UPDATE tasks SET
         ]
     }'
 WHERE id = 56;
+-- Everyday Choice Clinical Info Questionnaire
+UPDATE tasks SET
+    from_platform = "PSHARPLAB",
+    task_type = "QUESTIONNAIRE",
+    name = "Everyday Choice Clinical Info Questionnaire",
+    description = "",
+    external_url = "",
+    config = '{
+        "taskConfig": {},
+        "metadata": [
+            {
+                "componentName": "QUESTIONNAIRECOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "Everyday Choice Clinical Info Questionnaire",
+                        "fr": ""
+                    },
+                    "questions": [
+                        {
+                            "questionType": "displayText",
+                            "title": {
+                                "en": "The following questions are related to your physical and mental health. If you don''t have Parkinson''s disease (PD), not all of them will apply to you, so select the \\"I don''t have Parkinson''s disease\\" option.",
+                                "fr": "Les questions suivantes sont liées à votre santé physique et mentale. Si vous n''êtes pas atteint de la maladie de Parkinson (MP), toutes ne s''appliqueront pas à vous, alors sélectionnez l''option \\"Je n''ai pas la maladie de Parkinson\\"."
+                            }
+                        },
+                        {
+                            "questionType": "radiobuttons",
+                            "title": {
+                                "en": "Do you have a diagnosis of Parkinson''s disease given to you by a doctor (e.g. family doctor or neurologist)?",
+                                "fr": "Avez-vous un diagnostic de la maladie de Parkinson qui vous a été donné par un médecin (par exemple, un médecin de famille ou un neurologue)?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "radiobuttonPresentation": "vertical",
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No, but I think I have Parkinson''s disease",
+                                        "fr": "Non, mais je pense avoir la maladie de Parkinson"
+                                    },
+                                    "value": "No, but I think I have Parkinson''s disease"
+                                }
+                            ],
+                            "key": "havePD"
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "Are you currently taking any of the following prescription medications to treat your Parkinson''s disease symptoms? (Please check all that apply)",
+                                "fr": "Prenez-vous actuellement l''un des médicaments sur ordonnance suivants pour traiter vos symptômes de la maladie de Parkinson? (Veuillez cocher toutes les cases qui s''appliquent)"
+                            },
+                            "key": "PDMeds",
+                            "validation": {
+                                "required": true
+                            },
+                            "allowMultipleSelections": true,
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "I don''t have Parkinson''s disease",
+                                        "fr": "Je n''ai pas la maladie de Parkinson"
+                                    },
+                                    "value": "No PD"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No, I don''t take any prescription medications to treat my Parkinson''s disease",
+                                        "fr": ""
+                                    },
+                                    "value": "Has PD, No medications"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sinemet or Carbidopa-Levodopa or Parcopa (Oral)",
+                                        "fr": ""
+                                    },
+                                    "value": "Sinemet or Carbidopa-Levodopa or Parcopa (Oral)"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sinemet CR or Carbidopa-Levodopa, Extended Release (Oral)",
+                                        "fr": ""
+                                    },
+                                    "value": "Sinemet CR or Carbidopa-Levodopa, Extended Release (Oral)"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Rytary or Numient (i.e. Carbidopa-Levodopa, Extended Release, Oral)",
+                                        "fr": ""
+                                    },
+                                    "value": "Rytary or Numient"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Duopa or Duodopa (i.e. Carbidopa-Levodopa Intestinal Gel)",
+                                        "fr": ""
+                                    },
+                                    "value": "Duopa or Duodopa"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Stalevo (i.e. combination of Carbidopa, Levodopa, and entacapone)",
+                                        "fr": ""
+                                    },
+                                    "value": "Stalevo"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Madopar or Levodopa-Benserazide",
+                                        "fr": ""
+                                    },
+                                    "value": "Madopar or Levodopa-Benserazide"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Entacapone or Comtan",
+                                        "fr": ""
+                                    },
+                                    "value": "Entacapone or Comtan"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Tolcapone or Tasmar",
+                                        "fr": ""
+                                    },
+                                    "value": "Tolcapone or Tasmar"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Rasagiline or Azilect",
+                                        "fr": ""
+                                    },
+                                    "value": "Rasagiline or Azilect"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Selegiline or Deprenyl or Elderpryl or Zelapar or Emasm",
+                                        "fr": ""
+                                    },
+                                    "value": "Selegiline or Deprenyl or Elderpryl or Zelapar or Emasm"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Pramipexole or Mirapex",
+                                        "fr": ""
+                                    },
+                                    "value": "Pramipexole or Mirapex"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Ropinirole or Requip",
+                                        "fr": ""
+                                    },
+                                    "value": "Ropinirole or Requip"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Neupro patch or Rotigotine patch",
+                                        "fr": ""
+                                    },
+                                    "value": "Neupro patch or Rotigotine patch"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Amantadine or Symmetrel or Gocovri",
+                                        "fr": ""
+                                    },
+                                    "value": "Amantadine or Symmetrel or Gocovri"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Apokyn or Kinmobi or Apomorphine",
+                                        "fr": ""
+                                    },
+                                    "value": "Apokyn or Kinmobi or Apomorphine"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Bromocriptine or Parlodel",
+                                        "fr": ""
+                                    },
+                                    "value": "Bromocriptine or Parlodel"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Onstryv or Xadago or Safinamide",
+                                        "fr": ""
+                                    },
+                                    "value": "Onstryv or Xadago or Safinamide"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Trihexyphenidyl or Artane",
+                                        "fr": ""
+                                    },
+                                    "value": "Trihexyphenidyl or Artane"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Rivastigmine or Exelon",
+                                        "fr": ""
+                                    },
+                                    "value": "Rivastigmine or Exelon"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Donepezil or Aricept",
+                                        "fr": ""
+                                    },
+                                    "value": "Donepezil or Aricept"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Galantamine or Razadyne or Reminyl",
+                                        "fr": ""
+                                    },
+                                    "value": "Galantamine or Razadyne or Reminyl"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Memantine or Namenda or Ebixa",
+                                        "fr": ""
+                                    },
+                                    "value": "Memantine or Namenda or Ebixa"
+                                },
+                                {
+                                    "label": {
+                                        "en": "I take other medications for my Parkinson''s disease that are not on this list",
+                                        "fr": ""
+                                    },
+                                    "value": "I take other medications for my Parkinson''s disease that are not on this list"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "freeTextResponse",
+                            "title": {
+                                "en": "If you take medications for Parkinson''s disease that are not on the list, please write it below.",
+                                "fr": ""
+                            },
+                            "textContent": {
+                                "en": "If you do not take any Parkinson''s disease medication or already listed it above, please skip to the next question.",
+                                "fr": ""
+                            },
+                            "key": "PDMedsOthers",
+                            "validation": {
+                                "required": false
+                            }
+                        },
+                        {
+                            "questionType": "displayText",
+                            "title": {
+                                "en": "If you answered previously that you do take Parkinson''s disease medication, how long ago did you take it?",
+                                "fr": "Si vous avez répondu précédemment que vous prenez des médicaments contre la maladie de Parkinson, depuis combien de temps les avez-vous pris?"
+                            }
+                        },
+                        {
+                            "questionType": "input",
+                            "textContent": {
+                                "en": "If you answered that you don''t take any Parkinson''s medication in the last question, please write \\"0\\".",
+                                "fr": "Si vous avez répondu que vous ne prenez aucun médicament contre la maladie de Parkinson à la dernière question, veuillez écrire \\"0\\"."
+                            },
+                            "key": "lastDoseHour",
+                            "label": {
+                                "en": "Hours",
+                                "fr": "Heures"
+                            },
+                            "validation": {
+                                "required": true,
+                                "isNumeric": true,
+                                "max": 24,
+                                "min": 0
+                            }
+                        },
+                        {
+                            "questionType": "input",
+                            "key": "lastDoseMinute",
+                            "label": {
+                                "en": "Minutes",
+                                "fr": "Minutes"
+                            },
+                            "validation": {
+                                "required": true,
+                                "isNumeric": true,
+                                "max": 60,
+                                "min": 0
+                            }
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "Do you feel ON (i.e. can feel that the PD medications are taking effect) or OFF (i.e. medications are not currently taking effect)?",
+                                "fr": "Vous sentez-vous ''ON'' (c''est-à-dire que vous pouvez sentir que les médicaments contre la maladie de Parkinson font effet) ou ''OFF'' (c''est-à-dire que les médicaments ne font pas actuellement effet)?"
+                            },
+                            "key": "onOffMed",
+                            "validation": {
+                                "required": true
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "I don''t have Parkinson''s disease",
+                                        "fr": "Je n''ai pas la maladie de Parkinson"
+                                    },
+                                    "value": "I don''t have Parkinson''s disease"
+                                },
+                                {
+                                    "label": {
+                                        "en": "I have PD but don''t take medications for it",
+                                        "fr": "J''ai la maladie de Parkinson mais je ne prends pas de médicaments pour ça"
+                                    },
+                                    "value": "I have PD but don''t take medications for it"
+                                },
+                                {
+                                    "label": {
+                                        "en": "I feel ON",
+                                        "fr": "Je me sens ''ON''"
+                                    },
+                                    "value": "I feel ON"
+                                },
+                                {
+                                    "label": {
+                                        "en": "I feel OFF",
+                                        "fr": "Je me sens ''OFF''"
+                                    },
+                                    "value": "I feel OFF"
+                                },
+                                {
+                                    "label": {
+                                        "en": "I cannot tell the difference",
+                                        "fr": "Je ne peux pas faire la différence"
+                                    },
+                                    "value": "I cannot tell the difference"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "Have you ever undergone any of these PD surgeries or procedures? (Please check all that apply)",
+                                "fr":  ""
+                            },
+                            "key": "PDSurgeries",
+                            "validation": {
+                                "required": true
+                            },
+                            "allowMultipleSelections": true,
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Deep brain stimulation",
+                                        "fr":  ""
+                                    },
+                                    "value": "Deep brain stimulation"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Pallidotomy",
+                                        "fr":  ""
+                                    },
+                                    "value": "Pallidotomy"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Thalamotomy",
+                                        "fr":  ""
+                                    },
+                                    "value": "Thalamotomy"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Focused ultrasound",
+                                        "fr": ""
+                                    },
+                                    "value": "Focused ultrasound"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Gamma knife radiosurgery",
+                                        "fr": ""
+                                    },
+                                    "value": "Gamma knife radiosurgery"
+                                },
+                                {
+                                    "label": {
+                                        "en": "I have not undergone any of the PD procedures listed above",
+                                        "fr": ""
+                                    },
+                                    "value": "I have not undergone any of the PD procedures listed above"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "Do you have a family history of Parkinson’s disease?",
+                                "fr": "Avez-vous des antécédents familiaux de maladie de Parkinson?"
+                            },
+                            "key": "familyHistory",
+                            "validation": {
+                                "required": true
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Yes, my biological mother or father has/had Parkinson’s disease",
+                                        "fr": "Oui, ma mère ou mon père biologique a eu la maladie de Parkinson"
+                                    },
+                                    "value": "Yes, biological mother or father"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Yes, one of my siblings has/had Parkinson’s disease",
+                                        "fr": "Oui, un de mes frères et sœurs a eu la maladie de Parkinson"
+                                    },
+                                    "value": "Yes, siblings"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Yes, one of my children has/had Parkinson’s disease",
+                                        "fr": "Oui, un de mes enfants a eu la maladie de Parkinson"
+                                    },
+                                    "value": "Yes, children"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Yes, an uncle/aunt/cousin or other blood relative has/had Parkinson’s disease",
+                                        "fr": "Oui, un oncle/une tante/un cousin ou un autre parent par le sang a eu la maladie de Parkinson"
+                                    },
+                                    "value": "Yes, relative"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No, no family history",
+                                        "fr": "Non, pas d''antécédents familiaux"
+                                    },
+                                    "value": "No"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "Are you currently taking medications (prescription or over the counter) for any of the following conditions? (Please check all that apply)",
+                                "fr": ""
+                            },
+                            "key": "otherMeds",
+                            "validation": {
+                                "required": true
+                            },
+                            "allowMultipleSelections": true,
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Depression",
+                                        "fr": ""
+                                    },
+                                    "value": "Depression"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Anxiety",
+                                        "fr": ""
+                                    },
+                                    "value": "Anxiety"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sleep Problems",
+                                        "fr": ""
+                                    },
+                                    "value": "Sleep Problems"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Problems with cognition (e.g. trouble thinking or focusing or trouble with memory",
+                                        "fr": ""
+                                    },
+                                    "value": "Problems with cognition"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Hallucinations (e.g. seeing or hearing things that you know or are told are not there)",
+                                        "fr": ""
+                                    },
+                                    "value": "Hallucinations"
+                                },
+                                {
+                                    "label": {
+                                        "en": "I am not taking medication to treat any of the conditions listed above",
+                                        "fr": ""
+                                    },
+                                    "value": "I am not taking medication to treat any of the conditions listed above"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "Do you feel that your memory and thinking have gotten worse?",
+                                "fr": "Avez-vous l''impression que votre mémoire et votre pensée se sont détériorées?"
+                            },
+                            "textContent": {
+                                "en": "If you have Parkinson''s disease, consider the change since your diagnosis, or, if you don''t have Parkinson''s disease, consider the change in the last few years.",
+                                "fr": "Si vous êtes atteint de la maladie de Parkinson, considérez le changement depuis votre diagnostic ou, si vous n''êtes pas atteint de la maladie de Parkinson, considérez le changement au cours des dernières années."
+                            },
+                            "key": "memory",
+                            "validation": {
+                                "required": true
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": "Je ne sais pas"
+                                    },
+                                    "value": "Not sure"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "Do you have a diagnosis of dementia or Alzheimer''s disease given to you by a doctor?",
+                                "fr": "Avez-vous un diagnostic de démence ou de maladie d''Alzheimer qui vous a été donné par un médecin?"
+                            },
+                            "key": "diagnosisPD",
+                            "validation": {
+                                "required": true
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No, but I think I have dementia",
+                                        "fr": "Non, mais je pense que j''ai la démence"
+                                    },
+                                    "value": "No, but I think I have dementia"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "Do you have a diagnosis of Mild Cognitive Impairment (MCI) given to you by a doctor?",
+                                "fr": "Avez-vous un diagnostic de trouble cognitif léger (MCI) qui vous a été remis par un médecin?"
+                            },
+                            "key": "diagnosisMCI",
+                            "validation": {
+                                "required": true
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No, but I think I have cognitive impairment",
+                                        "fr": "Non, mais je pense avoir des troubles cognitifs"
+                                    },
+                                    "value": "No, but I think I have cognitive impairment"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    }'
+WHERE id = 57;
+-- Everyday Choice Demographics Questionnaire
+UPDATE tasks SET
+    from_platform = "PSHARPLAB",
+    task_type = "QUESTIONNAIRE",
+    name = "Everyday Choice Demographics Questionnaire",
+    description = "",
+    external_url = "",
+    config = '{
+        "taskConfig": {},
+        "metadata": [
+            {
+                "componentName": "QUESTIONNAIRECOMPONENT",
+                "componentConfig": {
+                    "title": "Everyday Choice Demographic Questionnaire",
+                    "questions": [
+                        {
+                            "questionType": "input",
+                            "title": {
+                                "en": "What is your age (in years)?",
+                                "fr": "Quel est votre âge actuel?"
+                            },
+                            "validation": {
+                                "required": true,
+                                "isNumeric": true,
+                                "min": 18
+                            },
+                            "key": "age"
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "What sex were you assigned at birth?",
+                                "fr": "Quel sexe vous a été assigné à la naissance?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "sex",
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Female",
+                                        "fr": "Femme"
+                                    },
+                                    "value": "female"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Male",
+                                        "fr": "Homme"
+                                    },
+                                    "value": "male"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "How do you describe yourself?",
+                                "fr": "Comment vous décrivez-vous?"
+                            },
+                            "key": "gender",
+                            "validation": {
+                                "required": true
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Female",
+                                        "fr": "Femme"
+                                    },
+                                    "value": "female"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Male",
+                                        "fr": "Homme"
+                                    },
+                                    "value": "male"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Transgender",
+                                        "fr": "Transgenre"
+                                    },
+                                    "value": "transgender"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Do not identify as female, male, or transgender",
+                                        "fr": "Ne vous identifiez pas comme femme, homme ou transgenre"
+                                    },
+                                    "value": "Do not identify as female, male, or transgender"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "input",
+                            "key": "yearsOfEducation",
+                            "title": {
+                                "en": "How many years of education do you have (completing high school equals 12 years)?",
+                                "fr": ""
+                            },
+                            "validation": {
+                                "isNumeric": true,
+                                "required": true
+                            }
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "currentEmploymentStatus",
+                            "title": "What is your current employment status?",
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Employed Full-time (30+ hours a week)",
+                                        "fr": ""
+                                    },
+                                    "value": "Full-time"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Employed Part-time",
+                                        "fr": ""
+                                    },
+                                    "value": "Part-time"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Unemployed",
+                                        "fr": ""
+                                    },
+                                    "value": "Unemployed"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Disability Leave",
+                                        "fr": ""
+                                    },
+                                    "value": "Disability Leave"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Homemaker",
+                                        "fr": ""
+                                    },
+                                    "value": "Homemaker"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Student",
+                                        "fr": ""
+                                    },
+                                    "value": "Student"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Volunteer",
+                                        "fr": ""
+                                    },
+                                    "value": "Volunteer"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Retired",
+                                        "fr": ""
+                                    },
+                                    "value": "Retired"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Do not wish to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "Do not wish to answer"
+                                }
+                            ],
+                            "validation": {
+                                "required": true
+                            }
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "What is your best estimate of the total household income received by all household members, from all sources, before taxes and deductions, in the past 12 months?",
+                                "fr": ""
+                            },
+                            "key": "householdIncome",
+                            "validation": {
+                                "required": true
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Less than $20,000",
+                                        "fr": ""
+                                    },
+                                    "value": "Less than $20,000"
+                                },
+                                {
+                                    "label": {
+                                        "en": "$20,000 or more, but less than $50,000",
+                                        "fr": ""
+                                    },
+                                    "value": "$20,000 or more, but less than $50,000"
+                                },
+                                {
+                                    "label": {
+                                        "en": "$50,000 or more, but less than $100,000",
+                                        "fr": ""
+                                    },
+                                    "value": "$50,000 or more, but less than $100,000"
+                                },
+                                {
+                                    "label": {
+                                        "en": "$100,000 or more, but less than $150,000",
+                                        "fr": ""
+                                    },
+                                    "value": "$100,000 or more, but less than $150,000"
+                                },
+                                {
+                                    "label": {
+                                        "en": "$150,000 or more",
+                                        "fr": ""
+                                    },
+                                    "value": "$150,000 or more"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Do not know",
+                                        "fr": ""
+                                    },
+                                    "value": "Do not know"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Do not wish to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "Do not wish to answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "What is your current marital/partner status?",
+                                "fr": ""
+                            },
+                            "key": "marital",
+                            "validation": {
+                                "required": true
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Single, never married, or never lived with a partner",
+                                        "fr": ""
+                                    },
+                                    "value": "Single, never married, or never lived with a partner"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Married/Living with a partner in a domestic relationship",
+                                        "fr": ""
+                                    },
+                                    "value": "Married/Living with a partner in a domestic relationship"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Widowed",
+                                        "fr": ""
+                                    },
+                                    "value": "Widowed"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Divorced/Separated",
+                                        "fr": ""
+                                    },
+                                    "value": "Divorced/Separated"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Do not wish to disclose",
+                                        "fr": ""
+                                    },
+                                    "value": "Do not wish to disclose"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": "Which best describes your living situation?",
+                            "key": "living",
+                            "validation": {
+                                "required": true
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Living alone",
+                                        "fr": ""
+                                    },
+                                    "value": "Living alone"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Living with spouse/partner/significant other",
+                                        "fr": ""
+                                    },
+                                    "value": "Living with spouse/partner/significant other"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Living with adult child/children",
+                                        "fr": ""
+                                    },
+                                    "value": "Living with adult child/children"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Living with other family",
+                                        "fr": ""
+                                    },
+                                    "value": "Living with other family"
+                                },
+                                {
+                                    "label": {
+                                        "en":  "Living with paid in-home care provider/aide",
+                                        "fr": ""
+                                    },
+                                    "value": "Living with paid in-home care provider/aide"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Living in assisted living facility",
+                                        "fr": ""
+                                    },
+                                    "value": "Living in assisted living facility"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Living in nursing home",
+                                        "fr": ""
+                                    },
+                                    "value": "Living in nursing home"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": ""
+                                    },
+                                    "value": "Other"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "What is your handedness?",
+                                "fr": "Quelle est votre latéralité?"
+                            },
+                            "key": "handedness",
+                            "validation": {
+                                "required": true
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Right-handed",
+                                        "fr": "Droitier"
+                                    },
+                                    "value": "Right"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Left-handed",
+                                        "fr": "Gaucher"
+                                    },
+                                    "value": "Left"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Ambidextrous",
+                                        "fr": "Ambidextre"
+                                    },
+                                    "value": "Ambidextrous"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "How much time do you spend engaging in mental exercise (e.g. playing board games, cards, crossword puzzles, jigsaw puzzles, sudoku, playing a musical instrument)",
+                                "fr": ""
+                            },
+                            "key": "mentalExercise",
+                            "validation": {
+                                "required": true
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Every day",
+                                        "fr": ""
+                                    },
+                                    "value": "Every day"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Several times a week",
+                                        "fr": ""
+                                    },
+                                    "value": "Several times a week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Several times a month",
+                                        "fr": ""
+                                    },
+                                    "value": "Several times a month"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Several times a year",
+                                        "fr": ""
+                                    },
+                                    "value": "Several times a year"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Once a year or less",
+                                        "fr": ""
+                                    },
+                                    "value": "Once a year or less"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "How often do you exercise?",
+                                "fr": ""
+                            },
+                            "key": "exercise",
+                            "validation": {
+                                "required": true
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Less than 1 time per week",
+                                        "fr": ""
+                                    },
+                                    "value": "Less than 1 time per week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "1 to 2 days per week",
+                                        "fr": ""
+                                    },
+                                    "value": "1 to 2 days per week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "3 to 5 days per week",
+                                        "fr": ""
+                                    },
+                                    "value": "3 to 5 days per week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "6 to 7 days per week",
+                                        "fr": ""
+                                    },
+                                    "value": "6 to 7 days per week"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "How long is one exercise session approximately?",
+                                "fr": ""
+                            },
+                            "key": "exerciseSession",
+                            "validation": {
+                                "required": true
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Less than 30 minutes",
+                                        "fr": ""
+                                    },
+                                    "value": "Less than 30 minutes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "30 to 60 minutes",
+                                        "fr": ""
+                                    },
+                                    "value": "30 to 60 minutes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "1 to 2 hours",
+                                        "fr": ""
+                                    },
+                                    "value": "1 to 2 hours"
+                                },
+                                {
+                                    "label": {
+                                        "en": "More than 2 hours",
+                                        "fr": ""
+                                    },
+                                    "value": "More than 2 hours"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "We expect to reach people from many different cultural and racial backgrounds with this internet study. To which group do you belong? (Select all that apply)",
+                                "fr": "Nous prévoyons d''atteindre des personnes de nombreux horizons culturels et raciaux différents avec cette étude sur Internet. A quel groupe appartenez-vous ? (Sélectionnez tout ce qui s''y rapporte)"
+                            },
+                            "key": "background",
+                            "validation": {
+                                "required": true
+                            },
+                            "allowMultipleSelections": true,
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "White / Caucasian",
+                                        "fr": "Blanc / Caucasien"
+                                    },
+                                    "value": "White/Caucasian"
+                                },
+                                {
+                                    "label": {
+                                        "en": "French Canadian",
+                                        "fr": "Français Canadien"
+                                    },
+                                    "value": "French Canadian"
+                                },
+                                {
+                                    "label": {
+                                        "en": "First Nations",
+                                        "fr": "Premières nations"
+                                    },
+                                    "value": "First Nations"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Hispanic or Latino",
+                                        "fr": "Hispanique ou Latino"
+                                    },
+                                    "value": "Hispanic or Latino"
+                                },
+                                {
+                                    "label": {
+                                        "en": "African / Carribean / Afro American",
+                                        "fr": "Africain / Caribéen / Afro Américain"
+                                    },
+                                    "value": "African/Carribean/Afro American"
+                                },
+                                {
+                                    "label": {
+                                        "en": "North African",
+                                        "fr": "Nord-Africain"
+                                    },
+                                    "value": "North African"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Middle Eastern",
+                                        "fr": "Moyen-Orient"
+                                    },
+                                    "value": "Middle Eastern"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Chinese",
+                                        "fr": "Chinois"
+                                    },
+                                    "value": "Chinese"
+                                },
+                                {
+                                    "label": {
+                                        "en": "South Asian (E.g. Indian, Pakistani, Sri Lankan)",
+                                        "fr": "Sud-Asiatique (par exemple Indien, Pakistanais, Sri Lankais)"
+                                    },
+                                    "value": "South Asian"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Southeast Asian (E.g. Filipino, Cambodian, Indonesian, Laotian, Vietnamese)",
+                                        "fr": "Asiatique du Sud-Est (par exemple, philippin, cambodgien, indonésien, laotien, vietnamien)"
+                                    },
+                                    "value": "Southeast Asian"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Japanese",
+                                        "fr": "Japonais"
+                                    },
+                                    "value": "Japanese"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Korean",
+                                        "fr": "Coréen"
+                                    },
+                                    "value": "Korean"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": "Autre"
+                                    },
+                                    "value": "Other"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Don''t know",
+                                        "fr": "Je ne sais pas"
+                                    },
+                                    "value": "Don''t know"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": "Je préfère ne pas répondre"
+                                    },
+                                    "value": "Prefer not to answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "Which of the following languages do you consider yourself fluent in (can read and speak)? Select all that apply.",
+                                "fr": "Laquelle des langues suivantes considérez-vous maîtriser (savoir lire et parler)? Sélectionnez tout ce qui s''y rapporte."
+                            },
+                            "key": "fluentLang",
+                            "validation": {
+                                "required": true
+                            },
+                            "allowMultipleSelections": true,
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "English",
+                                        "fr": "Anglais"
+                                    },
+                                    "value": "English"
+                                },
+                                {
+                                    "label": {
+                                        "en": "French",
+                                        "fr": "Français"
+                                    },
+                                    "value": "French"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Neither",
+                                        "fr": "Aucun d''eux"
+                                    },
+                                    "value": "Neither"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    }'
+WHERE id = 58;
+-- Everyday Choice Welcome Display Page
+UPDATE tasks SET
+    from_platform = "PSHARPLAB",
+    task_type = "INFO_DISPLAY",
+    name = "Everyday Choice Welcome Display Page",
+    description = "",
+    external_url = "",
+    config = '{
+        "taskConfig": {},
+        "metadata": [
+            {
+                "componentName": "INFODISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": "Welcome to the study of Neurocognition on the Web for PD - Everyday Activities Game",
+                    "sections": [
+                        {
+                            "header": "Thank you for participating in our study!",
+                            "textContent": ""
+                        },
+                        {
+                            "header": "",
+                            "textContent": "You will be playing a game of choice between everyday activities and completing questionnaires to help us better understand decision-making and cognition in patients with Parkinson''s disease."
+                        },
+                        {
+                            "header": "",
+                            "textContent": "While we ask that you complete the study in one sitting, please feel free to take breaks! We simply ask that you wait until the end of a testing block or of a questionnaire, otherwise your data will be lost."
+                        },
+                        {
+                            "header": "",
+                            "textContent": "<b>To take a break:</b> simply close this window."
+                        },
+                        {
+                            "header": "",
+                            "textContent": "<b>To get back to it:</b> use the link you were sent in the email. It will take you to the log-in page."
+                        },
+                        {
+                            "textContent": "<b>QUESTIONS OR EXPERIENCING DIFFICULTIES?</b>"
+                        },
+                        {
+                            "header": "",
+                            "textContent": "sharplab.neuro@mcgill.ca"
+                        },
+                        {
+                            "header": "",
+                            "textContent": "To take a break now, close the window."
+                        },
+                        {
+                            "header": "",
+                            "textContent": "To continue, please click CONTINUE"
+                        }
+                    ],
+                    "buttons": {
+                        "displayContinueButton": true
+                    }
+                }
+            }
+        ]
+    }'
+WHERE id = 59;
