@@ -472,4 +472,34 @@ VALUES
     "This task is a probablistic learning task based on the reinforcement learning model. The current version is based on the paper by Frank, Woroch and Curran. (2005). Neuron, 47(4), 495-501.",
     "",
     '{}'
+),
+-- Everyday Choice Clinical Info Questionnaire
+(
+    57,
+    "PSHARPLAB",
+    "QUESTIONNAIRE",
+    "Everyday Choice Task Clinical Info Questionnaire",
+    "",
+    "",
+    '{}'
+),
+-- Everyday Choice Demographics Questionnaire
+(
+    58,
+    "PSHARPLAB",
+    "QUESTIONNAIRE",
+    "Everyday Choice Demographics Questionnaire",
+    "",
+    "",
+    '{}'
+),
+-- Everyday Choice Welcome Display Page
+(
+    59,
+    "PSHARPLAB",
+    "INFO_DISPLAY",
+    "Everyday Choice Welcome Display Page",
+    "",
+    "",
+    '{}'
 );
