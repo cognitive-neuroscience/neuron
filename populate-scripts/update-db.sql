@@ -137,7 +137,7 @@ UPDATE tasks set
                 "componentName": "DIGITSPANCOMPONENT",
                 "componentConfig": {
                     "isPractice": true,
-                    "maxResponseTime": 30000,
+                    "maxResponseTime": 50000,
                     "interTrialDelay": 0,
                     "showFeedbackAfterEachTrial": true,
                     "durationDigitPresented": 1000,
@@ -201,7 +201,7 @@ UPDATE tasks set
                 "componentName": "DIGITSPANCOMPONENT",
                 "componentConfig": {
                     "isPractice": false,
-                    "maxResponseTime": 30000,
+                    "maxResponseTime": 50000,
                     "interTrialDelay": 0,
                     "showFeedbackAfterEachTrial": false,
                     "durationDigitPresented": 1000,
@@ -302,7 +302,7 @@ UPDATE tasks set
                 "componentName": "DIGITSPANCOMPONENT",
                 "componentConfig": {
                     "isPractice": true,
-                    "maxResponseTime": 30000,
+                    "maxResponseTime": 50000,
                     "interTrialDelay": 0,
                     "showFeedbackAfterEachTrial": true,
                     "durationDigitPresented": 1000,
@@ -366,7 +366,7 @@ UPDATE tasks set
                 "componentName": "DIGITSPANCOMPONENT",
                 "componentConfig": {
                     "isPractice": false,
-                    "maxResponseTime": 30000,
+                    "maxResponseTime": 50000,
                     "interTrialDelay": 0,
                     "showFeedbackAfterEachTrial": false,
                     "durationDigitPresented": 1000,
@@ -1309,6 +1309,7 @@ UPDATE tasks set
             {
                 "componentName": "NBACKCOMPONENT",
                 "componentConfig": {
+                    "skippable": false,
                     "isPractice": true,
                     "maxResponseTime": 2000,
                     "interTrialDelay": 0,
@@ -1318,8 +1319,373 @@ UPDATE tasks set
                     "durationFixationPresented": 1000,
                     "numTrials": 15,
                     "stimuliConfig": {
-                        "type": "generated",
-                        "stimuli": null
+                        "type": "hardcoded",
+                        "stimuli": [
+                            {
+                                "trial": 1,
+                                "currentLetter": "G",
+                                "nback": null
+                            },
+                            {
+                                "trial": 2,
+                                "currentLetter": "L",
+                                "nback": null
+                            },
+                            {
+                                "trial": 3,
+                                "currentLetter": "E",
+                                "nback": "G"
+                            },
+                            {
+                                "trial": 4,
+                                "currentLetter": "L",
+                                "nback": "L"
+                            },
+                            {
+                                "trial": 5,
+                                "currentLetter": "A",
+                                "nback": "E"
+                            },
+                            {
+                                "trial": 6,
+                                "currentLetter": "Q",
+                                "nback": "L"
+                            },
+                            {
+                                "trial": 7,
+                                "currentLetter": "V",
+                                "nback": "A"
+                            },
+                            {
+                                "trial": 8,
+                                "currentLetter": "Q",
+                                "nback": "Q"
+                            },
+                            {
+                                "trial": 9,
+                                "currentLetter": "I",
+                                "nback": "V"
+                            },
+                            {
+                                "trial": 10,
+                                "currentLetter": "L",
+                                "nback": "Q"
+                            },
+                            {
+                                "trial": 11,
+                                "currentLetter": "T",
+                                "nback": "I"
+                            },
+                            {
+                                "trial": 12,
+                                "currentLetter": "V",
+                                "nback": "L"
+                            },
+                            {
+                                "trial": 13,
+                                "currentLetter": "P",
+                                "nback": "T"
+                            },
+                            {
+                                "trial": 14,
+                                "currentLetter": "V",
+                                "nback": "V"
+                            },
+                            {
+                                "trial": 15,
+                                "currentLetter": "B",
+                                "nback": "P"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": "",
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "We will repeat this round so you can get more practice.",
+                                "fr": "Nous allons répéter ce tour afin que vous puissiez vous entraîner davantage."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Remember, press:",
+                                "fr": "Rappelez vous de cliquer les clés comme suit:"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "⬅️ (left arrow) if the letter is <b>NOT THE SAME</b> as 2 letters ago",
+                                "fr": "⬅️ (clé flèche gauche) si la lettre <b>n''est pas la même</b> que celle qui a été présentée <b>2 lettres plus tôt</b>."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "➡️ (right arrow) if the letter is <b>THE SAME</b> as 2 letters ago",
+                                "fr": "➡️ (clé flèche de droite) si la lettre <b>est la même</b> que celle qui a été présentée <b>2 lettres plus tôt</b>."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"START\\" to proceed",
+                                "fr": "Cliquez sur \\"START\\" pour continuer"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": true,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "NBACKCOMPONENT",
+                "componentConfig": {
+                    "skippable": false,
+                    "isPractice": true,
+                    "maxResponseTime": 2000,
+                    "interTrialDelay": 0,
+                    "showFeedbackAfterEachTrial": true,
+                    "showScoreAfterEachTrial": false,
+                    "durationOfFeedback": 500,
+                    "durationFixationPresented": 1000,
+                    "numTrials": 15,
+                    "stimuliConfig": {
+                        "type": "hardcoded",
+                        "stimuli": [
+                            {
+                                "trial": 1,
+                                "currentLetter": "A",
+                                "nback": null
+                            },
+                            {
+                                "trial": 2,
+                                "currentLetter": "X",
+                                "nback": null
+                            },
+                            {
+                                "trial": 3,
+                                "currentLetter": "S",
+                                "nback": "A"
+                            },
+                            {
+                                "trial": 4,
+                                "currentLetter": "U",
+                                "nback": "X"
+                            },
+                            {
+                                "trial": 5,
+                                "currentLetter": "S",
+                                "nback": "S"
+                            },
+                            {
+                                "trial": 6,
+                                "currentLetter": "K",
+                                "nback": "U"
+                            },
+                            {
+                                "trial": 7,
+                                "currentLetter": "V",
+                                "nback": "S"
+                            },
+                            {
+                                "trial": 8,
+                                "currentLetter": "L",
+                                "nback": "K"
+                            },
+                            {
+                                "trial": 9,
+                                "currentLetter": "V",
+                                "nback": "V"
+                            },
+                            {
+                                "trial": 10,
+                                "currentLetter": "R",
+                                "nback": "L"
+                            },
+                            {
+                                "trial": 11,
+                                "currentLetter": "F",
+                                "nback": "V"
+                            },
+                            {
+                                "trial": 12,
+                                "currentLetter": "G",
+                                "nback": "R"
+                            },
+                            {
+                                "trial": 13,
+                                "currentLetter": "U",
+                                "nback": "F"
+                            },
+                            {
+                                "trial": 14,
+                                "currentLetter": "I",
+                                "nback": "G"
+                            },
+                            {
+                                "trial": 15,
+                                "currentLetter": "U",
+                                "nback": "U"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "skippable": true,
+                    "skippableCacheKey": "nback-should-skip",
+                    "title": {
+                        "en": "",
+                        "fr": ""
+                    },
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "We will repeat this round so you can get more practice.",
+                                "fr": "Nous allons répéter ce tour afin que vous puissiez vous entraîner davantage."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Remember, press:",
+                                "fr": "Rappelez vous de cliquer les clés comme suit:"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "⬅️ (left arrow) if the letter is <b>NOT THE SAME</b> as 2 letters ago",
+                                "fr": "⬅️ (clé flèche gauche) si la lettre <b>n''est pas la même</b> que celle qui a été présentée <b>2 lettres plus tôt</b>."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "➡️ (right arrow) if the letter is <b>THE SAME</b> as 2 letters ago",
+                                "fr": "➡️ (clé flèche de droite) si la lettre <b>est la même</b> que celle qui a été présentée <b>2 lettres plus tôt</b>."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"START\\" to proceed",
+                                "fr": "Cliquez sur \\"START\\" pour continuer"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": true,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "NBACKCOMPONENT",
+                "componentConfig": {
+                    "skippable": true,
+                    "isPractice": true,
+                    "maxResponseTime": 2000,
+                    "interTrialDelay": 0,
+                    "showFeedbackAfterEachTrial": true,
+                    "showScoreAfterEachTrial": false,
+                    "durationOfFeedback": 500,
+                    "durationFixationPresented": 1000,
+                    "numTrials": 15,
+                    "stimuliConfig": {
+                        "type": "hardcoded",
+                        "stimuli": [
+                            {
+                                "trial": 1,
+                                "currentLetter": "F",
+                                "nback": null
+                            },
+                            {
+                                "trial": 2,
+                                "currentLetter": "Z",
+                                "nback": null
+                            },
+                            {
+                                "trial": 3,
+                                "currentLetter": "Y",
+                                "nback": "F"
+                            },
+                            {
+                                "trial": 4,
+                                "currentLetter": "U",
+                                "nback": "Z"
+                            },
+                            {
+                                "trial": 5,
+                                "currentLetter": "Y",
+                                "nback": "Y"
+                            },
+                            {
+                                "trial": 6,
+                                "currentLetter": "P",
+                                "nback": "U"
+                            },
+                            {
+                                "trial": 7,
+                                "currentLetter": "T",
+                                "nback": "Y"
+                            },
+                            {
+                                "trial": 8,
+                                "currentLetter": "M",
+                                "nback": "P"
+                            },
+                            {
+                                "trial": 9,
+                                "currentLetter": "T",
+                                "nback": "T"
+                            },
+                            {
+                                "trial": 10,
+                                "currentLetter": "E",
+                                "nback": "M"
+                            },
+                            {
+                                "trial": 11,
+                                "currentLetter": "F",
+                                "nback": "T"
+                            },
+                            {
+                                "trial": 12,
+                                "currentLetter": "S",
+                                "nback": "E"
+                            },
+                            {
+                                "trial": 13,
+                                "currentLetter": "F",
+                                "nback": "F"
+                            },
+                            {
+                                "trial": 14,
+                                "currentLetter": "J",
+                                "nback": "S"
+                            },
+                            {
+                                "trial": 15,
+                                "currentLetter": "P",
+                                "nback": "F"
+                            }
+                        ]
                     }
                 }
             },
@@ -1391,6 +1757,7 @@ UPDATE tasks set
             {
                 "componentName": "NBACKCOMPONENT",
                 "componentConfig": {
+                    "skippable": false,
                     "isPractice": false,
                     "maxResponseTime": 2000,
                     "interTrialDelay": 0,
@@ -1432,8 +1799,8 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Thank you for your participation. Click \\"CONTINUE\\"",
-                                "fr": "Merci de votre participation. Cliquez sur \\"CONTINUE\\""
+                                "en": "Thank you for your participation. Click \\"NEXT\\"",
+                                "fr": "Merci de votre participation. Cliquez sur \\"NEXT\\""
                             }
                         }
                     ]
@@ -20354,3 +20721,41 @@ UPDATE tasks SET
         ]
     }'
 WHERE id = 59;
+-- PAVLOVIA DSST 1
+UPDATE tasks SET
+    from_platform = "PAVLOVIA",
+    task_type = "EXPERIMENTAL",
+    name = "DSST 1",
+    description = "Digit Symbol Substitution Task 1",
+    external_url = "https://run.pavlovia.org/Sharp_lab/digit-symbol-substitution-task/html/",
+    config = '{
+        "taskConfig": {},
+        "metadata": [
+            {
+                "componentName": "EMBEDDEDPAGECOMPONENT",
+                "componentConfig": {
+                    "externalUrl":  "https://run.pavlovia.org/Sharp_lab/digit-symbol-substitution-task/html/"
+                }
+            }
+        ]
+    }'
+WHERE id = 60;
+-- PAVLOVIA DSST 2
+UPDATE tasks SET
+    from_platform = "PAVLOVIA",
+    task_type = "EXPERIMENTAL",
+    name = "DSST 2",
+    description = "Digit Symbol Substitution Task 2",
+    external_url = "https://run.pavlovia.org/Sharp_lab/digit-symbol-substitution-task-2/html/",
+    config = '{
+        "taskConfig": {},
+        "metadata": [
+            {
+                "componentName": "EMBEDDEDPAGECOMPONENT",
+                "componentConfig": {
+                    "externalUrl":  "https://run.pavlovia.org/Sharp_lab/digit-symbol-substitution-task-2/html/"
+                }
+            }
+        ]
+    }'
+WHERE id = 61;

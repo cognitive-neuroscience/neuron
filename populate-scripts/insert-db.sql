@@ -4,28 +4,19 @@ INSERT INTO tasks (id, from_platform, task_type, name, description, external_url
 VALUES
 (
     NULL,
-    "PSHARPLAB",
-    "QUESTIONNAIRE",
-    "Everyday Choice Task Clinical Info Questionnaire",
-    "",
-    "",
+    "PAVLOVIA",
+    "EXPERIMENTAL",
+    "DSST 1",
+    "Digit Symbol Substitution Task 1",
+    "https://run.pavlovia.org/Sharp_lab/digit-symbol-substitution-task/html/",
     '{}'
 ),
 (
     NULL,
-    "PSHARPLAB",
-    "QUESTIONNAIRE",
-    "Everyday Choice Demographics Questionnaire",
-    "",
-    "",
-    '{}'
-),
-(
-    NULL,
-    "PSHARPLAB",
-    "INFO_DISPLAY",
-    "Everyday Choice Welcome Display Page",
-    "",
-    "",
+    "PAVLOVIA",
+    "EXPERIMENTAL",
+    "DSST 2",
+    "Digit Symbol Substitution Task 2",
+    "https://run.pavlovia.org/Sharp_lab/digit-symbol-substitution-task-2/html/",
     '{}'
 );
