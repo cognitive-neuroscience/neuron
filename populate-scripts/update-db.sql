@@ -21000,3 +21000,12 @@ UPDATE tasks SET
         ]
     }'
 WHERE id = 61;
+-- PAVLOVIA PLT 2
+UPDATE tasks SET
+    from_platform = "PAVLOVIA",
+    task_type = "EXPERIMENTAL",
+    name = "PLT 2",
+    description = "Probabilistic Learning Task 2",
+    external_url = "https://run.pavlovia.org/Sharp_lab/probabilistic-learning-task-2/html/",
+    config = '{}'
+WHERE id = 62;

@@ -522,4 +522,14 @@ VALUES
     "Digit Symbol Substitution Task 2",
     "https://run.pavlovia.org/Sharp_lab/digit-symbol-substitution-task-2/html/"
     '{}'
-);
+),
+-- PLT Pavlovia Task
+(
+    62,
+    "PAVLOVIA",
+    "EXPERIMENTAL",
+    "PLT 2",
+    "Probabilistic Learning Task 2",
+    "https://run.pavlovia.org/Sharp_lab/probabilistic-learning-task-2/html/",
+    '{}'
+)
