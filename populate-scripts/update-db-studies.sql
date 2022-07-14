@@ -135,7 +135,88 @@ UPDATE studies SET
             }
         ]
     }'
-WHERE id IN (40, 55);
+WHERE id = 40;
+
+UPDATE studies SET
+    config = '{
+        "title": "Welcome to the Sharp Lab | Bienvenue au Labo Sharp",
+        "sections": [
+            {
+                "header": "We study cognition in people with Parkinson''s disease."
+            },
+            {
+                "textContent": "We are inviting you to take part in an <b>online study of cognition</b>. Cognitive symptoms in people with Parkinson''s disease vary immensely from one person to the next, yet <b>we don''t understand why<b>."
+            },
+            {
+                "textContent": "We have developed <b>online brain games</b> to assess different areas of cognitive functioning and thinking (e.g. memory, multi-tasking, etc) in a <b>very large group of people</b> from all over the world. We want to understand why some people develop significant apathy or an inability to multi-task, or memory difficulties, while others don''t."
+            },
+            {
+                "textContent": "You will be asked to play a series of brain games and fill in some questionnaires. All of this is done online (NO tablets or smartphones, only computers. Sorry!)."
+            },
+            {
+                "textContent": "This takes <b>less than two hours</b>, and you can start and stop as you wish by closing the window. To pick back up, you''ll simply have to click the same link in your email."
+            },
+            {
+                "textContent": "Please try to complete the whole study <b>within ONE week</b>. You can see your progress in your dashboard when you first log in."
+            },
+            {
+                "textContent": "To proceed to the Consent Form and decide if you want to participate:"
+            },
+            {
+                "textContent": "1. <b>If you have never done a study with us</b>, please register below to log in.",
+                "indent": 1
+            },
+            {
+                "textContent": "2. If you already <b>have an account</b>, please log in to continue to the consent form.",
+                "indent": 1
+            },
+            {
+                "textContent": "This will take you to the consent form. <b>Your email will NOT be saved if you decline to participate</b>."
+            },
+            {
+                "textContent": "For any questions, please email Dr. Sharp: sharplab.neuro@mcgill.ca"
+            },
+            {
+                "hr": true
+            },
+            {
+                "header": "Nous étudions les symptômes cognitifs ces les personnes atteintes de la maladie de Parkinson."
+            },
+            {
+                "textContent": "Nous vous invitons à prendre part à cette <b>étude de cognition sur le web</b>. Les symptômes cognitifs associés à la maladie de Parkinson varient énormément d''une personne à une autre, mais nous ne comprenons toujours pas <b>pourquoi<b>."
+            },
+            {
+                "textContent": "Nous avons developpé des <b>jeux de cerveau sur le web</b> pour évaluer différentes fonctions cognitives (ex. mémoire, multi-tâches, concentration, etc.) dans un <b>très grand échantillon de personnes</b> provenant de partout dans le monde. Nous visons à comprendre pourquoi certaines personnes développent des symptômes cognitifs comme des problèmes de concentration, ou une diminution de la motivation, ou des pertes de mémoire, tandis que d''autres y échappent."
+            },
+            {
+                "textContent": "Nous vous demanderons de jouer à une série de jeux et répondre à des questionnaires. Tout ceci est fait en ligne, à partir de votre ordinateur. Malheureusement il n''est pas possible de participer à partir d''un téléphone intelligent ou d''une tablette, désolé!"
+            },
+            {
+                "textContent": "Au total, l''étude prend <b>moins de deux heures</b>, arrêter et y revenir, vous n''aurez qu''à fermer la fenêtre. Pour reprendre, il faudra cliquer à nouveau sur le lien dans votre courriel."
+            },
+            {
+                "textContent": "SVP veuillez viser compléter l''étude au complet dans un <b>délai de UNE semaine</b>. Vous pourrez voir votre progrès sur votre tableau de bord au moment de la connexion."
+            },
+            {
+                "textContent": "Pour lire le Formulaire de Consentement et décider si vous voulez participer:"
+            },
+            {
+                "textContent": "1. <b>Si vous n''avez jamais auparavant participé à une étude sur notre plateforme</b>, SVP vous enregistrer ci-dessous pour vous connecter.",
+                "indent": 1
+            },
+            {
+                "textContent": "2. Si vous avez déjà <b>un compte avec nous</b>, SVP vous connecter pour procéder.",
+                "indent": 1
+            },
+            {
+                "textContent": "Ceci vous amènera au formulaire de consentement. <b>Votre courriel ne sera PAS sauvegardé si vous décidez de ne pas participer</b>."
+            },
+            {
+                "textContent": "Pour quelconque question, n''hésitez pas à envoyer un courriel à Dr. Sharp: sharplab.neuro@mcgill.ca"
+            }
+        ]
+    }'
+WHERE id = 55;
 
 UPDATE studies SET
     config = '{
