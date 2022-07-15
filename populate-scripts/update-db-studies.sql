@@ -139,7 +139,7 @@ WHERE id = 40;
 
 UPDATE studies SET
     config = '{
-        "title": "Welcome to the Sharp Lab | Bienvenue au Labo Sharp",
+        "title": "Welcome to the Sharp Lab | Bienvenue au Labo Sharp (Defiler vers le bas pour la version française)",
         "sections": [
             {
                 "header": "We study cognition in people with Parkinson''s disease."
@@ -220,7 +220,7 @@ WHERE id = 55;
 
 UPDATE studies SET
     config = '{
-        "title": "Welcome to the Sharp Lab | Bienvenu au Labo Sharp",
+        "title": "Welcome to the Sharp Lab | Bienvenu au Labo Sharp (Defiler vers le bas pour la version française)",
         "sections": [
             {
                 "header": "We study cognition in people with Parkinson''s disease."
