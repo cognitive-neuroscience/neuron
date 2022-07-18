@@ -16910,7 +16910,7 @@ UPDATE tasks SET
                                 "en": "Do you have a diagnosis of dementia or Alzheimer''s disease given to you by a doctor?",
                                 "fr": "Avez-vous un diagnostic de démence ou de maladie de Alzheimer qui vous a été donné par un médecin?"
                             },
-                            "key": "diagnosisPD",
+                            "key": "diagnosisAD",
                             "validation": {
                                 "required": true
                             },
@@ -22575,7 +22575,7 @@ UPDATE tasks SET
                                 "en": "Do you have a diagnosis of dementia or Alzheimer''s disease given to you by a doctor?",
                                 "fr": "Avez-vous un diagnostic de démence ou de maladie d''Alzheimer qui vous a été donné par un médecin?"
                             },
-                            "key": "diagnosisPD",
+                            "key": "diagnosisAD",
                             "validation": {
                                 "required": true
                             },
