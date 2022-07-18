@@ -139,7 +139,7 @@ WHERE id = 40;
 
 UPDATE studies SET
     config = '{
-        "title": "Welcome to the Sharp Lab | Bienvenue au Labo Sharp (Defiler vers le bas pour la version française)",
+        "title": "Welcome to the Sharp Lab | Bienvenue au Labo Sharp (Défiler vers le bas pour la version française)",
         "sections": [
             {
                 "header": "We study cognition in people with Parkinson''s disease."
@@ -154,7 +154,7 @@ UPDATE studies SET
                 "textContent": "You will be asked to play a series of brain games and fill in some questionnaires. All of this is done online (NO tablets or smartphones, only computers. Sorry!)."
             },
             {
-                "textContent": "This takes <b>less than two hours</b>, and you can start and stop as you wish by closing the window. To pick back up, you''ll simply have to click the same link in your email."
+                "textContent": "This takes <b>less than two hours</b>, and you can start and stop as you wish by closing the window. To pick back up where you left off, you''ll simply have to click the same link in your email."
             },
             {
                 "textContent": "Please try to complete the whole study <b>within ONE week</b>. You can see your progress in your dashboard when you first log in."
@@ -192,7 +192,7 @@ UPDATE studies SET
                 "textContent": "Nous vous demanderons de jouer à une série de jeux et répondre à des questionnaires. Tout ceci est fait en ligne, à partir de votre ordinateur. Malheureusement il n''est pas possible de participer à partir d''un téléphone intelligent ou d''une tablette, désolé!"
             },
             {
-                "textContent": "Au total, l''étude prend <b>moins de deux heures</b>, arrêter et y revenir, vous n''aurez qu''à fermer la fenêtre. Pour reprendre, il faudra cliquer à nouveau sur le lien dans votre courriel."
+                "textContent": "Au total, l''etude prend moins de deux heures et vous pourrez commencer et arrêter comme vous le souhaitez en fermant la fenêtre. Pour rependre, il faudra cliquer à nouveau sur le lien dans votre courriel."
             },
             {
                 "textContent": "SVP veuillez viser compléter l''étude au complet dans un <b>délai de UNE semaine</b>. Vous pourrez voir votre progrès sur votre tableau de bord au moment de la connexion."
@@ -220,7 +220,7 @@ WHERE id = 55;
 
 UPDATE studies SET
     config = '{
-        "title": "Welcome to the Sharp Lab | Bienvenu au Labo Sharp (Defiler vers le bas pour la version française)",
+        "title": "Welcome to the Sharp Lab | Bienvenu au Labo Sharp (Défiler vers le bas pour la version française)",
         "sections": [
             {
                 "header": "We study cognition in people with Parkinson''s disease."
