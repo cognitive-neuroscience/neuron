@@ -216,6 +216,7 @@ func (u *UserService) UpdateStudyUser(studyUser models.StudyUser) (models.StudyU
 		return models.StudyUser{}, models.HTTPStatus{Status: http.StatusInternalServerError, Message: "there was an update error"}
 	}
 
+	queriedStudyUser.Data = studyUser.Data
 	queriedStudyUser.CompletionCode = studyUser.CompletionCode
 	queriedStudyUser.DueDate = studyUser.DueDate
 	queriedStudyUser.HasAcceptedConsent = studyUser.HasAcceptedConsent
@@ -251,7 +252,7 @@ func (u *UserService) IncrementStudyUserCurrentTaskIndex(studyUser models.StudyU
 		axonlogger.WarningLogger.Println("preventing invalid increment", queriedStudyUser)
 		return models.StudyUser{}, models.HTTPStatus{Status: http.StatusBadRequest, Message: "cannot move to next task"}
 	}
-	
+
 	queriedStudyUser.CurrentTaskIndex = queriedStudyUser.CurrentTaskIndex + 1
 
 	status := userRepositoryImpl.UpdateStudyUser(queriedStudyUser)

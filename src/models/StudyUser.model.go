@@ -22,6 +22,7 @@ var StudyUserSchema = `
 		due_date DATETIME DEFAULT(NULL),
 		has_accepted_consent BOOLEAN DEFAULT FALSE,
 		lang VARCHAR(100) NOT NULL DEFAULT '',
+		data JSON NOT NULL DEFAULT (JSON_OBJECT()),
 		PRIMARY KEY (user_id, study_id),
 		FOREIGN KEY (user_id) REFERENCES users(id),
 		FOREIGN KEY (study_id) REFERENCES studies(id)
@@ -31,15 +32,16 @@ var StudyUserSchema = `
 // StudyUser represents a join table between studys and users keeping track of the progress
 // for that user in each study that the user is part of
 type StudyUser struct {
-	UserID             uint      `json:"userId"`
-	StudyID            uint      `json:"studyId"`
-	CompletionCode     string    `json:"completionCode"`
-	RegisterDate       time.Time `json:"registerDate"`
-	DueDate            NullTime  `json:"dueDate"`
-	CurrentTaskIndex   int       `json:"currentTaskIndex"`
-	HasAcceptedConsent bool      `json:"hasAcceptedConsent"`
-	Study              Study     `json:"study"`
-	Lang               string    `json:"lang"`
+	UserID             uint               `json:"userId"`
+	StudyID            uint               `json:"studyId"`
+	CompletionCode     string             `json:"completionCode"`
+	RegisterDate       time.Time          `json:"registerDate"`
+	DueDate            NullTime           `json:"dueDate"`
+	CurrentTaskIndex   int                `json:"currentTaskIndex"`
+	HasAcceptedConsent bool               `json:"hasAcceptedConsent"`
+	Study              Study              `json:"study"`
+	Lang               string             `json:"lang"`
+	Data               MapStringInterface `json:"data"`
 }
 
 // Scan implements the Scanner interface. sql --> value
