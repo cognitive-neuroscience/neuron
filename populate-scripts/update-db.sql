@@ -7109,6 +7109,54 @@ UPDATE tasks set
                             ]
                         }
                     ],
+                    "inputs": [
+                        {
+                            "label": {
+                                "en": "Please indicate whether you would like to be contacted by email for future online studies.",
+                                "fr": "Veuillez indiquer si vous acceptez d''être contacté par courriel à propos d''autres opportunités de recherche dans le futur."
+                            },
+                            "key": "agree to be contacted for future opportunities",
+                            "options": [
+                                {
+                                    "textContent": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "yes"
+                                },
+                                {
+                                    "textContent": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "no"
+                                }
+                            ]
+                        },
+                        {
+                            "label": {
+                                "en": "Please indicate whether you would like to receive updates about the findings from the study (no more than twice per year)",
+                                "fr": "Veuillez indiquer si vous voudriez recevoir des mises à jour à propos des résultats de notre recherche (pas plus de 2 fois par année)"
+                            },
+                            "key": "would like to receive updates about study findings",
+                            "options": [
+                                {
+                                    "textContent": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "yes"
+                                },
+                                {
+                                    "textContent": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "no"
+                                }
+                            ]
+                        }
+                    ],
                     "endMessage": {
                         "en": "By clicking \\"Accept\\", you are confirming that you reviewed the information and consent form and that you agree to participate in the study in accordance with the conditions stated above.",
                         "fr": "En cliquant \\"ACCEPTER\\" ci-dessous vous confirmez que vous avez pris connaissance de l''information dans le formulaire de consentement et que vous acceptez de participer aux conditions qui y sont énoncées"
@@ -7484,6 +7532,77 @@ UPDATE tasks set
                                 {
                                     "en": "The McGill University Health Centre Research Ethics Board reviewed this research and is responsible for monitoring the study.",
                                     "fr": "Le comité d''éthique de la recherche du Centre Universitaire de santé McGill a approuvé le projet et en assurera le suivi."
+                                }
+                            ]
+                        }
+                    ],
+                    "inputs": [
+                        {
+                            "label": {
+                                "en": "Do you accept to be contacted yearly (max. 5 years) for a follow-up online testing session? (you can always decline at that time)",
+                                "fr": "Acceptez-vous d''être contacté annuellement (max. 5 années) pour un suivi en ligne? (vous pourrez toujours décliner à ce moment-là)"
+                            },
+                            "key": "agree to be contacted yearly",
+                            "options": [
+                                {
+                                    "textContent": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "yes"
+                                },
+                                {
+                                    "textContent": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "no"
+                                }
+                            ]
+                        },
+                        {
+                            "label": {
+                                "en": "Please indicate whether you would like to be contacted by email for future online research opportunities.",
+                                "fr": "Veuillez indiquer si vous acceptez d''être contacté par courriel à propos d''autres opportunités de recherche dans le futur."
+                            },
+                            "key": "agree to be contacted for future opportunities",
+                            "options": [
+                                {
+                                    "textContent": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "yes"
+                                },
+                                {
+                                    "textContent": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "no"
+                                }
+                            ]
+                        },
+                        {
+                            "label": {
+                                "en": "Please indicate whether you would like to receive updates about the findings from the study (no more than twice per year).",
+                                "fr": "Veuillez indiquer si vous voudriez recevoir des mises à jour à propos des résultats de notre recherche (pas plus de 2 fois par année)."
+                            },
+                            "key": "would like to receive updates about study findings",
+                            "options": [
+                                {
+                                    "textContent": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "yes"
+                                },
+                                {
+                                    "textContent": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "no"
                                 }
                             ]
                         }
