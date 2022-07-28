@@ -532,4 +532,14 @@ VALUES
     "Probabilistic Learning Task 2",
     "https://run.pavlovia.org/Sharp_lab/probabilistic-learning-task-2/html/",
     '{}'
-)
+),
+-- General Information Questionnaire - Reliability Study
+(
+    63,
+    "PSHARPLAB",
+    "QUESTIONNAIRE",
+    "General Information Questionnaire - Reliability Study",
+    "",
+    "",
+    '{}'
+);
