@@ -304,3 +304,73 @@ UPDATE studies SET
         ]
     }'
 WHERE id IN (59);
+
+UPDATE studies SET
+    config = '{
+        "title": "Welcome to the Sharp Lab | Bienvenue au Labo Sharp (Défiler vers le bas pour la version française)",
+        "sections": [
+            {
+                "header": "We study cognition in people with Parkinson''s disease."
+            },
+            {
+                "textContent": "We are inviting you to participate in a SECOND session of the <b>online study of cognition</b>. Having people take the tests a second time will allow us to determine the <b>reliability<b> of online testing of cognition."
+            },
+            {
+                "textContent": "If you are seeing this page, it''s because you already previously completed some or all of our online games."
+            },
+            {
+                "textContent": "You will be asked to complete some (but not all!) of same brain games and questionnaires. All of this is done online (NO tablets or smartphones, only computers. Sorry!)."
+            },
+            {
+                "textContent": "This takes <b>less than 1.25 hours</b>, and you can start and stop as you wish by closing the window. To pick back up, you''ll simply have to click the same link in your email."
+            },
+            {
+                "textContent": "Please try to complete the whole set of games and questionnaires <b>within ONE week</b>. You can see your progress in your dashboard when you first log in."
+            },
+            {
+                "textContent": "Like last time, if you participate, you will be entered in a draw to win one of ten <b>$100 Amazon gift cards!</b>"
+            },
+            {
+                "textContent": "To proceed to the Consent Form and decide if you want to participate, please log in using the same email and password as before."
+            },
+            {
+                "textContent": "If you forgot your log-in info, you will be able to request that we email it to you",
+                "indent": 1
+            },
+            {
+                "textContent": "For any questions or difficulties logging-in, please email Dr. Sharp: sharplab.neuro@mcgill.ca"
+            },
+            {
+                "header": "Nous étudions les symptômes cognitifs chez les personnes atteintes de la maladie de Parkinson."
+            },
+            {
+                "textContent": "Nous vous invitons à prendre part à cette DEUXIÈME session de <b>l''étude de cognition sur le web</b>. En participant une deuxième fois, vous nous aiderez à determiner si les tests de cognition sur le web sont <b>fiables<b>."
+            },
+            {
+                "textContent": "Si vous êtes arrivé.e à cette page, c''est parce que vous avez déjà complété certains ou tous nos jeux sur le web."
+            },
+            {
+                "textContent": "Nous vous demanderons de compléter certains des jeux et questionnaires auxquels vous avez déjà répondu. Tout ceci est fait en ligne, à partir de votre ordinateur. Malheureusement il n''est pas possible de participer à partir d''un téléphone intelligent ou d''une tablette, désolé!"
+            },
+            {
+                "textContent": "Au total, l''étude prend <b>environ 1h15</b>. Vous pourrez vous arrêter et y revenir simplement en fermant la fenêtre. Pour reprendre, il faudra utiliser à nouveau le même lien dans votre courriel."
+            },
+            {
+                "textContent": "SVP essayez de compléter tous les jeux et questionnaires dans un <b>délai de UNE semaine</b>. Vous pourrez voir votre progrès sur votre tableau de bord au moment de la connexion."
+            },
+            {
+                "textContent": "Comme la dernière fois, si vous participez, vous courrez la chance de gagner une de dix <b>cartes-cadeaux Amazon de $100!</b>"
+            },
+            {
+                "textContent": "Pour lire le Formulaire de Consentement et décider si vous voulez participer, SVP vous connecter en utilisant le même courriel et mot de passe que la dernière fois."
+            },
+            {
+                "textContent": "Si vous avez oublié votre mot de passe, vous pourrez demander qu''on vous l''envoie.",
+                "indent": 1
+            },
+            {
+                "textContent": "Pour quelconque question ou difficulté avec la connexion, n''hésitez pas à envoyer un courriel à Dr. Sharp: sharplab.neuro@mcgill.ca"
+            }
+        ]
+    }'
+WHERE id IN (66);

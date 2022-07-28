@@ -551,3 +551,75 @@ UPDATE study_tasks SET
         ]
     }'
 WHERE study_id = 40 AND task_id = 43 AND task_order = 1;
+
+UPDATE study_tasks SET
+    config = '{
+        "taskConfig": {},
+        "metadata": [
+            {
+                "componentName": "INFODISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "Welcome to the study of Neurocognition on the Web for PD",
+                        "fr": "Bienvenue à l''étude de Neurocognition sur le Web pour la MP"
+                    },
+                    "sections": [
+                        {
+                            "header": {
+                                 "en": "Thank you for participating in our study a second time!",
+                                 "fr": "Merci de participer à notre étude une deuxième fois!"
+                            },
+                            "textContent": ""
+                        },
+                        {
+                            "header": "",
+                            "textContent": {
+                                "en": "You will be completing a series of brain games and questionnaires.",
+                                "fr": "Vous devrez compléter une série de jeux de cerveau et des questionnaires."
+                            }
+                        },
+                        {
+                            "header": "",
+                            "textContent": {
+                                "en": "Please feel free to take breaks! We simply ask that you wait until the end of a game or of a questionnaire, otherwise your data will be lost.",
+                                "fr": "SVP n''hésitez-pas à prendre des pauses! Nous vous demandons simplement d''attendre jusqu''à la fin d''un jeu ou d''un questionnaire, sinon vos données seront perdues."
+                            }
+                        },
+
+                        {
+                            "header": "",
+                            "textContent": {
+                                "en": "<b>To take a break, simply close this window. To get back to it:</b> use the link you were sent in the email. It will take you to the log-in page.",
+                                "fr": "Pour prendre une pause, vous n''avez qu''à fermer cette fenêtre. </b>Pour y revenir:</b> utilisez le lien qui vous a été envoyé par courriel. Ceci vous amènera à la page de connexion."
+                            }
+                        },
+                        {
+                            "header": "",
+                            "indent": 1
+                        },
+                        {
+                            "textContent": {
+                                "en": "<b>QUESTIONS OR EXPERIENCING DIFFICULTIES?</b>",
+                                "fr": "</b>DES QUESTIONS OU DES DIFFICULTÉS?</b>"
+                            }
+                        },
+                        {
+                            "header": "",
+                            "textContent": "sharplab.neuro@mcgill.ca"
+                        },
+                        {
+                            "header": "",
+                            "textContent": {
+                                "en": "To continue, please click CONTINUE",
+                                "fr": "Pour continuer, SVP cliquez CONTINUE"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "displayContinueButton": true
+                    }
+                }
+            }
+        ]
+    }'
+WHERE study_id = 66 AND task_id = 49 AND task_order = 0;
