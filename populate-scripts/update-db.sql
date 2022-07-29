@@ -6359,27 +6359,45 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Welcome to the Everyday Activities Game",
+                    "title": {
+                        "en": "Welcome to the Everyday Activities Game",
+                        "fr": "Bienvenue au Jeu des Activités Quotidiennes"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "We are trying to understand how people fill their days with activities."
+                            "textContent": {
+                                "en": "We are trying to understand how people fill their days with activities.",
+                                "fr": "Nous essayons de comprendre comment les gens remplissent leurs journées d''activités."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "In this task we will ask you about activities that you may do in your everyday life."
+                            "textContent": {
+                                "en": "In this task we will ask you about activities that you may do in your everyday life.",
+                                "fr": "Dans ce jeu, nous allons vous interroger sur des activités qui font (ou non) partie de la vie quotidienne."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "There are two parts to the task: <br> 1) Answering questions about different activities <br> 2) Indicating your preference between different activities. <br> You will also complete some questionnaires at the end."
+                            "textContent": {
+                                "en": "There are two parts to the task: <br> 1) Answering questions about different activities <br> 2) Indicating your preference between different activities. <br> You will also complete some questionnaires at the end.",
+                                "fr": "La tâche comporte deux parties : <br> 1) Répondre à des questions sur différentes activités <br> 2) Indiquer votre préférence entre différentes activités. <br> Vous remplirez également quelques questionnaires à la fin."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Please note that Part 1 is the longest and takes around 40 minutes. The rest is much shorter, and the entire experiment will last from 1 hour to 1 hour and 20 minutess."
+                            "textContent": {
+                                "en": "Please note that Part 1 is the longest and takes around 40 minutes. The rest is much shorter, and the entire experiment will last from 1 hour to 1 hour and 20 minutess.",
+                                "fr": "Veuillez noter que la partie 1 est la plus longue et dure environ 40 minutes. Le reste est beaucoup plus court, et l''ensemble de l''expérience durera entre 1 heure et 1 heure 20 minutes."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click NEXT to continue"
+                            "textContent": {
+                                "en": "Click NEXT to continue",
+                                "fr": "Cliquez sur NEXT pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -6392,23 +6410,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "COVID-19 Disclaimer",
+                    "title": {
+                        "en": "COVID-19 Disclaimer",
+                        "fr": "Avis à propos des effets de la COVID-19"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "We recognize that what you currently do in your everyday life may be impacted by the COVID-19 pandemic."
+                            "textContent": {
+                                "en": "We recognize that what you currently do in your everyday life may be impacted by the COVID-19 pandemic.",
+                                "fr": "Nous sommes conscients que vos habitudes quotidiennes on peut-être chang.es à cause de la pandémie COVID-19."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "As a result, you may not currently be participating in some of the activities that we will ask you about."
+                            "textContent": {
+                                "en": "As a result, you may not currently be participating in some of the activities that we will ask you about.",
+                                "fr": "Par conséquent, il se peut que vous ne participiez pas actuellement à certaines des activités sur lesquelles nous vous interrogerons."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "As much as possible, please try to picture yourself doing the activities under normal (pre-pandemic circumstances)."
+                            "textContent": {
+                                "en": "As much as possible, please try to picture yourself doing the activities under normal (pre-pandemic circumstances).",
+                                "fr": "Dans la mesure du possible, essayez de vous imaginer en train de faire ces activités dans des circonstances normales (pré-pandémiques)."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click NEXT to continue"
+                            "textContent": {
+                                "en": "Click NEXT to continue",
+                                "fr": "Cliquez sur NEXT pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -6421,23 +6454,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Everyday Activities Game - Part 1",
+                    "title": {
+                        "en": "Everyday Activities Game - Part 1",
+                        "fr": "Jeu des Activités Quotidiennes - Partie 1"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Please read the following instructions carefully."
+                            "textContent": {
+                                "en": "Please read the following instructions carefully.",
+                                "fr": "Veuillez lire attentivement les instructions suivantes."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "We will ask you a series of questions about how you feel about different activities."
+                            "textContent": {
+                                "en": "We will ask you a series of questions about how you feel about different activities.",
+                                "fr": "Nous vous poserons une série de questions sur ce que vous ressentez à propos de différentes activités."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You will have to provide your response using your mouse."
+                            "textContent": {
+                                "en": "You will have to provide your response using your mouse.",
+                                "fr": "Vous devrez fournir votre réponse en utilisant votre souris."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click NEXT to continue"
+                            "textContent": {
+                                "en": "Click NEXT to continue",
+                                "fr": "Cliquez sur NEXT pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -6450,23 +6498,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Let’s walk through an example",
+                    "title": {
+                        "en": "Let’s walk through an example",
+                        "fr": "Voici un exemple"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Activity: Bring the car to the mechanic"
+                            "textContent": {
+                                "en": "Activity: Bring the car to the mechanic",
+                                "fr": "Activité : Amener la voiture chez le mécanicien"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You will be asked: How much you look forward to the outcome of it? How mentally effortful does this activity feel to you? "
+                            "textContent": {
+                                "en": "You will be asked: How much you look forward to the outcome of it? How mentally effortful does this activity feel to you? ",
+                                "fr": "On vous demandera : À quel point avez-vous hâte au résultat de cette activité ? À quel point cette activité vous demande-t-elle un effort mental ?"
+                            } 
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "We understand that this may or may not apply to you (perhaps you don’t currently own a car), but we ask that you try to picture yourself doing each activity so that you can answer the questions."
+                            "textContent": {
+                                "en": "We understand that this may or may not apply to you (perhaps you don’t currently own a car), but we ask that you try to picture yourself doing each activity so that you can answer the questions.",
+                                "fr": "Nous comprenons que cette question peut ou non s''appliquer à vous (p.ex. vous ne possédez peut-être pas de voiture), mais nous vous demandons d''essayer de vous imaginer en train de faire chaque activité afin de pouvoir répondre aux questions."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click START to practice"
+                            "textContent": {
+                                "en": "Click START to practice",
+                                "fr": "Cliquez sur START pour pratiquer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -6492,16 +6555,43 @@ UPDATE tasks set
                         "type": "hardcoded",
                         "stimuli": [
                             {
-                                "activity": "Bring the car to the mechanic",
+                                "activity": {
+                                    "en": "Bring the car to the mechanic",
+                                    "fr": "Apporter la voiture au mécanicien"
+                                },
                                 "type": "DoSomething",
                                 "questions": [
                                     {
-                                        "question": "How much do you look forward to the outcome of this activity?",
-                                        "legend": ["Not at all", "Very Much"]
+                                        "question": {
+                                            "en": "How much do you look forward to the outcome of this activity?",
+                                            "fr": "À quel point avez-vous hâte au résultat de cette activité?"
+                                        },
+                                        "legend": [
+                                            {
+                                                "en": "Not at all",
+                                                "fr": "Pas du tout"
+                                            },
+                                            {
+                                                "en": "Very much",
+                                                "fr": "Beaucoup"
+                                            }
+                                        ]
                                     },
                                     {
-                                        "question": "How mentally effortful does this activity feel to you?",
-                                        "legend": ["Not at all", "Very effortful"]
+                                        "question": {
+                                            "en": "How mentally effortful does this activity feel to you?",
+                                            "fr": "À quel point cette activité vous demande-t-elle un effort mental?"
+                                        },
+                                        "legend": [
+                                            {
+                                                "en": "Not at all",
+                                                "fr": "Pas du tout"
+                                            },
+                                            {
+                                                "en": "Very effortful",
+                                                "fr": "Beaucoup"
+                                            }
+                                        ]
                                     }
                                 ]
                             }
@@ -6516,19 +6606,31 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Now you are ready to start."
+                            "textContent": {
+                                "en": "Now you are ready to start.",
+                                "fr": "Maintenant vous êtes prêt.e à commencer."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "We will show you a total of 26 activities and ask you a series of questions about each activity."
+                            "textContent": {
+                                "en": "We will show you a total of 26 activities and ask you a series of questions about each activity.",
+                                "fr": "Nous vous montrerons un total de 26 activités et nous vous poserons une série de questions sur chaque activité."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Please take a moment to picture yourself doing each activity before answering the questions."
+                            "textContent": {
+                                "en": "Please take a moment to picture yourself doing each activity before answering the questions.",
+                                "fr": "Veuillez prendre un moment pour vous imaginer en train d''entreprendre chaque activité avant de répondre aux questions."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click START when you are ready"
+                            "textContent": {
+                                "en": "Click START when you are ready",
+                                "fr": "Cliquez sur START lorsque vous êtes prêt.e"
+                            }
                         }
                     ],
                     "buttons": {
@@ -6563,7 +6665,10 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Thank you for completing Part 1 of the game!"
+                            "textContent": {
+                                "en": "Thank you for completing Part 1 of the game!",
+                                "fr": "Merci d''avoir terminé la première partie du jeu!"
+                            }
                         }
                     ],
                     "buttons": {
@@ -6576,23 +6681,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Everyday Activities Game - Part 2",
+                    "title": {
+                        "en": "Everyday Activities Game - Part 2",
+                        "fr": "Jeu des activités quotidiennes - Partie 2"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Please read the following instructions carefully."
+                            "textContent": {
+                                "en": "Please read the following instructions carefully.",
+                                "fr": "Veuillez lire attentivement les instructions suivantes."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "For this part of the task, you will be asked to choose between two different activities."
+                            "textContent": {
+                                "en": "For this part of the task, you will be asked to choose between two different activities.",
+                                "fr": "Pour cette partie de la tâche, vous devrez choisir entre deux activités différentes."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Your job is to <b>imagine yourself faced with this choice in your everyday life, and to indicate which activity you would choose.</b>"
+                            "textContent": {
+                                "en": "Your job is to <b>imagine yourself faced with this choice in your everyday life, and to indicate which activity you would choose.</b>",
+                                "fr": "Vous devez <b>vous imaginer confronté à ce choix dans votre vie quotidienne, et indiquer quelle activité vous choisiriez.</b>"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click NEXT for an example"
+                            "textContent": {
+                                "en": "Click NEXT for an example",
+                                "fr": "Cliquez sur NEXT pour un exemple"
+                            }
                         }
                     ],
                     "buttons": {
@@ -6609,23 +6729,38 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "For example:"
+                            "textContent": {
+                                "en": "For example:",
+                                "fr": "Par exemple:"
+                            }
                         },
                         {
                             "sectionType": "image-horizontal",
-                            "imagePath": "/assets/images/instructions/everydaychoice-new/choice-example.PNG"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/everydaychoice-new/choice-example_en.png",
+                                "fr": "/assets/images/instructions/everydaychoice-new/choice-example_fr.png"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "We ask that you try to picture the choice you would make in real life, even if some of the choices may not be ones you have ever been faced with."
+                            "textContent": {
+                                "en": "We ask that you try to picture the choice you would make in real life, even if some of the choices may not be ones you have ever been faced with.",
+                                "fr": "Nous vous demandons d''essayer d''imaginer le choix que vous feriez dans la vie réelle, même si certains des choix ne sont pas ceux auxquels vous avez déjà été confronté.e."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Tell us: <b>which activity would you MOST LIKELY CHOOSE TO DO?</b>"
+                            "textContent": {
+                                "en": "Tell us: <b>which activity would you MOST LIKELY CHOOSE TO DO?</b>",
+                                "fr": "Dites-nous : quelle activité CHOISIRIEZ-VOUS LE PLUS PROBABLEMENT ?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click START to practice"
+                            "textContent": {
+                                "en": "Click START to practice",
+                                "fr": "Cliquez sur START pour vous entraîner"
+                            }
                         }
                     ],
                     "buttons": {
@@ -6649,8 +6784,14 @@ UPDATE tasks set
                         "type": "hardcoded",
                         "stimuli": [
                             {
-                                "firstActivity": "Bring the car to the mechanic",
-                                "secondActivity": "Dust your bookshelves"
+                                "firstActivity": {
+                                    "en": "Bring the car to the mechanic",
+                                    "fr": "Apporter la voiture au mécanicien"
+                                },
+                                "secondActivity": {
+                                    "en": "Dust your bookshelves",
+                                    "fr": "Dépoussiérer vos étagères"
+                                }
                             }
                         ]
                     }
@@ -6663,15 +6804,24 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You finished the practice!"
+                            "textContent": {
+                                "en": "You finished the practice!",
+                                "fr": "Vous avez terminé l''entraînement!"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Now, please picture yourself doing the activity for each of the following activities, and rate which activity you would MOST LIKELY spend time doing."
+                            "textContent": {
+                                "en": "Now, please picture yourself doing the activity for each of the following activities, and rate which activity you would MOST LIKELY spend time doing.",
+                                "fr": "Maintenant, imaginez-vous en train de faire l''activité dans la vie réelle pour chacune des activités suivantes, et indiquez laquelle vous choisiriez le PLUS PROBABLEMENT de faire."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click START when you are ready"
+                            "textContent": {
+                                "en": "Click START when you are ready",
+                                "fr": "Cliquez sur START lorsque vous êtes prêt"
+                            }
                         }
                     ],
                     "buttons": {
@@ -6704,11 +6854,24 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Hooray! You have finished the Everyday Activities Game. We appreciate your time and effort in helping with our research."
+                            "textContent": {
+                                "en": "Hooray! You have finished the Everyday Activities Game. We appreciate your time and effort in helping with our research.",
+                                "fr": "Bravo ! Vous avez terminé le Jeu des Activités Quotidiennes. Nous apprécions le temps et l''effort que vous avez consacrés à notre recherche."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Before you go, you will complete some short questionnaires."
+                            "textContent": {
+                                "en": "Before you go, you will complete some short questionnaires.",
+                                "fr": "Avant de partir, veuillez remplir quelques questionnaires."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click NEXT to continue",
+                                "fr": "Cliquez sur NEXT pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -13378,39 +13541,63 @@ UPDATE tasks SET
             {
                 "componentName": "QUESTIONNAIRECOMPONENT",
                 "componentConfig": {
-                    "title": "Questionnaire",
+                    "title": {
+                        "en": "Questionnaire",
+                        "fr": "Le Questionnaire"
+                    },
                     "questions": [
                         {
                             "questionType": "displayText",
-                            "title": "<p>Below are a number of statements. Each statement asks you to think about your life <em>over the last 2 weeks</em>.</p> <p>For each statement, select how appropriately it describes your life right now. Select \\"Completely true\\" if the statement describes you perfectly, \\"Completely untrue\\" if the statement does not describe you at all over the last 2 weeks, and use the answers in between accordingly.</p>"
+                            "title": {
+                                "en": "<p>Below are a number of statements. Each statement asks you to think about your life <em>over the last 2 weeks</em>.</p> <p>For each statement, select how appropriately it describes your life right now. Select \\"Completely true\\" if the statement describes you perfectly, \\"Completely untrue\\" if the statement does not describe you at all over the last 2 weeks, and use the answers in between accordingly.</p>",
+                                "fr": "<p>Vous trouverez ci-dessous des énoncés. Chaque énoncé vous demande de réfléchir à votre vie <em>au cours des deux dernières semaines</em>.</p> <p>Pour chacun d’eux, sélectionnez à quel point l’énoncé décrit votre vie actuellement. Sélectionnez \\"Complètement vrai\\" si l''énoncé vous décrit parfaitement, ou \\"Complètement faux\\" si l''énoncé ne vous décrit pas du tout au cours des deux dernières semaines. Utilisez aussi les réponses intermédiaires si elles sont plus appropriés à la façon dont vous vous sentez.</p>"
+                            }
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "I feel sad or upset when I hear bad news.",
+                            "title": {
+                                "en": "I feel sad or upset when I hear bad news.",
+                                "fr": "Je me sens triste ou bouleversé.e lorsque j''entends une mauvaises nouvelle."
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "I feel sad or upset when I hear bad news.",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite true",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -13418,30 +13605,48 @@ UPDATE tasks SET
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "I start conversations with random people.",
+                            "title": {
+                                "en": "I start conversations with random people.",
+                                "fr": "J''entame des conversations avec des inconnus."
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "I start conversations with random people.",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite true",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -13449,30 +13654,48 @@ UPDATE tasks SET
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "I enjoy doing things with people I have just met.",
+                            "title": {
+                                "en": "I enjoy doing things with people I have just met.",
+                                "fr": "J''aime faire des choses avec des gens que je viens de rencontrer."
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "I enjoy doing things with people I have just met.",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite true",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -13480,30 +13703,48 @@ UPDATE tasks SET
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "I suggest activities for me and my friends to do.",
+                            "title": {
+                                "en": "I suggest activities for me and my friends to do.",
+                                "fr": "Je propose des activités à faire pour moi et mes amis."
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "I suggest activities for me and my friends to do.",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite true",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -13511,30 +13752,48 @@ UPDATE tasks SET
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "I make decisions firmly and without hesitation.",
+                            "title": {
+                                "en": "I make decisions firmly and without hesitation.",
+                                "fr": "Je prends des décisions avec fermeté et sans hésitation."
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "I make decisions firmly and without hesitation.",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite true",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -13542,30 +13801,48 @@ UPDATE tasks SET
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "After making a decision, I will wonder if I have made the wrong choice.",
+                            "title": {
+                                "en": "After making a decision, I will wonder if I have made the wrong choice.",
+                                "fr": "Après avoir pris une décision, je me demande si j''ai fait le mauvais choix."
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "After making a decision, I will wonder if I have made the wrong choice.",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite true",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -13573,30 +13850,48 @@ UPDATE tasks SET
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Based on the last two weeks, I would say I care deeply about how my loved ones think of me.",
+                            "title": {
+                                "en": "Based on the last two weeks, I would say I care deeply about how my loved ones think of me.",
+                                "fr": "Basé sur les deux dernières semaines, je dirais que je me soucie beaucoup de ce que mes proches pensent de moi."
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Based on the last two weeks, I would say I care deeply about how my loved ones think of me.",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite true",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -13604,30 +13899,48 @@ UPDATE tasks SET
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "I go out with friends on a weekly basis.",
+                            "title": {
+                                "en": "I go out with friends on a weekly basis.",
+                                "fr": "Je sors avec des amis chaque semaine."
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "I go out with friends on a weekly basis.",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite true",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -13635,30 +13948,48 @@ UPDATE tasks SET
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "When I decide to do something, I am able to make an effort easily.",
+                            "title": {
+                                "en": "When I decide to do something, I am able to make an effort easily.",
+                                "fr": "Quand je décide de faire quelque chose, je suis capable d''y mettre un effort facilement."
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "When I decide to do something, I am able to make an effort easily.",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite true",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -13666,30 +13997,48 @@ UPDATE tasks SET
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "I don''t like to laze around.",
+                            "title": {
+                                "en": "I don''t like to laze around.",
+                                "fr": "Je n''aime pas paresser."
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "I don''t like to laze around.",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite true",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -13697,30 +14046,48 @@ UPDATE tasks SET
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Choose \\"quite true\\" for this question please.",
+                            "title": {
+                                "en": "Choose the option \\"Quite true\\" here. This is an attention check!",
+                                "fr": "Choisissez l''option \\"Plutôt vrai\\" ici. Ceci nous permet de vérifier que vous portez attention!"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "attentionCheck-Choose quite true for this question please",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite true",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -13728,30 +14095,48 @@ UPDATE tasks SET
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "I get things done when they need to be done, without requiring reminders from others.",
+                            "title": {
+                                "en": "I get things done when they need to be done, without requiring reminders from others.",
+                                "fr": "Je fais les choses au moment où elles doivent être faites, sans qu''on ait besoin de me le rappeler."
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "I get things done when they need to be done, without requiring reminders from others.",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite true",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -13759,30 +14144,48 @@ UPDATE tasks SET
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "When I decide to do something, I am motivated to see it through to the end.",
+                            "title": {
+                                "en": "When I decide to do something, I am motivated to see it through to the end.",
+                                "fr": "Quand je décide de faire quelque chose, je suis motivé.e d''aller jusqu''au bout."
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "When I decide to do something, I am motivated to see it through to the end.",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite TRUE",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -13790,30 +14193,48 @@ UPDATE tasks SET
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "I feel awful if I say something insensitive.",
+                            "title": {
+                                "en": "I feel awful if I say something insensitive.",
+                                "fr": "Je me sens mal si je dis quelque chose d''insensible."
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "I feel awful if I say something insensitive.",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite true",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -13821,30 +14242,48 @@ UPDATE tasks SET
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "I start conversations without being prompted.",
+                            "title": {
+                                "en": "I start conversations without being prompted.",
+                                "fr": "J''entame des conversations sans y être invité.e."
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "I start conversations without being prompted.",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite true",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -13852,30 +14291,48 @@ UPDATE tasks SET
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "When I have something I need to do, I do it straightaway so it is out of the way.",
+                            "title": {
+                                "en": "When I have something I need to do, I do it straightaway so it is out of the way.",
+                                "fr": "Quand j''ai quelque chose à faire, je le fais tout de suite pour ne pas avoir à y repenser."
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "When I have something I need to do, I do it straightaway so it is out of the way.",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite true",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -13883,30 +14340,48 @@ UPDATE tasks SET
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "I feel bad when I hear an acquaintance has an accident or illness.",
+                            "title": {
+                                "en": "I feel bad when I hear an acquaintance had an accident or illness.",
+                                "fr": "Je me sens mal quand j''apprends qu''une connaissance a subit un accident ou une maladie."
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "I feel bad when I hear an acquaintance has an accident or illness.",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite true",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -13914,30 +14389,48 @@ UPDATE tasks SET
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "I enjoy choosing what to do from a range of activities.",
+                            "title": {
+                                "en": "I enjoy choosing what to do from a range of activities.",
+                                "fr": "J''aime choisir ce que je fais faire parmi un éventail d''activités."
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "I enjoy choosing what to do from a range of activities.",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite true",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -13945,30 +14438,48 @@ UPDATE tasks SET
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "If I realise I have been unpleasant to someone, I will feel terribly guilty afterwards.",
+                            "title": {
+                                "en": "If I realise I have been unpleasant to someone, I will feel terribly guilty afterwards.",
+                                "fr": "Si je me rends compte que j''ai été désagréable avec quelqu''un, je me sens terriblement coupable par la suite."
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "If I realise I have been unpleasant to someone, I will feel terribly guilty afterwards.",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite true",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -13996,16 +14507,28 @@ UPDATE tasks SET
                     "questions": [
                         {
                             "questionType": "displayText",
-                            "title": "<p>We are still in the development stages of this research study. The goal of the study is to understand how and why people fill their time. Are people driven by pleasure? By obligation? A bit of both? These are difficult things to measure because different people enjoy different things and have different sets of obligations. Any feedback you can provide on this pilot study will be really helpful to us as we fine-tune our approach to understanding this.</p> <p> Please see below questions for some specific areas where we would like your feedback:</p>"
+                            "title": { 
+                                "en": "<p>We are still in the development stages of this research study. The goal of the study is to understand how and why people fill their time. Are people driven by pleasure? By obligation? A bit of both? These are difficult things to measure because different people enjoy different things and have different sets of obligations. Any feedback you can provide on this study will be really helpful to us as we fine-tune our approach to understanding this.</p> <p> Please see below questions for some specific areas where we would like your feedback:</p>",
+                                "fr": "<p>Nous sommes encore en phase de développement pour cette étude. L''objectif de l''étude est de comprendre comment et pourquoi les gens occupent leur temps. Les gens sont-ils motivés par le plaisir ? Par les obligations ? Un peu des deux ? Il est difficile de mesurer ces aspects, car chaque personne a des obligations et des désirs différents. Tout retour que vous pouvez donc fournir sur cette étude nous sera vraiment utile pour raffiner notre approche .</p> <p>Les questions ci-dessous adressent certains aspects spécifiques de l''étude sur lesquels nous aimerions avoir votre opinion :</p>"
+                            }
                         },
                         {
                             "questionType": "multipleChoiceSelect",
                             "key": "Q1-pandemic",
-                            "title": "1. We understand that the current pandemic has more or less affected what you do in your everyday life. How much do you think that affected your ability to complete this task? For example, did you have trouble picturing yourself doing a specific activity that you have not been able to do due to the pandemic (e.g. chat with a neighbor)?",
-                            "textContent": "Please rate <em>on a scale of 1-10</em> how much the current life situation affected your ability to complete this this task:",
+                            "title": {
+                                "en": "1. We understand that the current pandemic has more or less affected what you do in your everyday life. How much do you think that affected your ability to answer the questions of our study? For example, did you have trouble picturing yourself doing a specific activity that you have not been able to do due to the pandemic (e.g., chat with a neighbor)?",
+                                "fr": "1. Nous savons que la pandémie a probablement affecté ce que vous faites dans votre vie quotidienne. Dans quelle mesure pensez-vous que cela a affecté votre capacité à répondre aux questions de notre étude ? Par exemple, avez-vous eu du mal à vous imaginer en train de faire une activité spécifique que vous n''avez pas pu faire récemment à cause de la pandémie (par exemple, discuter avec un voisin)?"
+                            },
+                            "textContent": {
+                                "en": "Please rate <em>on a scale of 1-10</em> how much your current life situation affected your ability to answer the questions:",
+                                "fr": "Veuillez évaluer <em>sur une échelle de 1 à 10</em> dans quelle mesure votre situation de vie actuelle a affecté votre capacité à répondre aux questions :"
+                            },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "1 - Not at all: I had no difficulty picturing myself doing most of these activities",
+                                    "label": {
+                                        "en": "1 - Not at all: I had no difficulty picturing myself doing most of these activities",
+                                        "fr": "1 - Pas du tout: Je n''ai eu aucune difficulté à m''imaginer en train de faire la plupart des activités"
+                                    },
                                     "value": "1"
                                 },
                                 {
@@ -14041,24 +14564,39 @@ UPDATE tasks SET
                                     "value": "9"
                                 },
                                 {
-                                    "label": "10 - Very much so: I could not picture doing most of the activities given the present circumstances",
+                                    "label": {
+                                        "en": "10 - Very much so: I could NOT picture doing most of the activities given the present circumstances",
+                                        "fr": "10 - Beaucoup: Je ne pouvais PAS m''imaginer en train de faire la plupart des activités étant donné les circonstances actuelles"
+                                    },
                                     "value": "10"
                                 }
                             ]
                         },
                         {
                             "questionType": "freeTextResponse",
-                            "textContent": "If you have any specific comments, please include them here [OPTIONAL]",
+                            "textContent": {
+                                "en": "If you have any specific comments, please include them here [OPTIONAL]",
+                                "fr": "Si vous avez des commentaires spécifiques, veuillez les inclure ici [FACULTATIF]"
+                            },
                             "key": "Q1_comment"
                         },
                         {
                             "questionType": "multipleChoiceSelect",
                             "key": "Q2-activities",
-                            "title": "2. Our goal was to ask you about activities that are part of everyday life, but that differs from person to person. Were most of the activities listed part of your usual (i.e. pre-pandemic) everyday life? ",
-                            "textContent": "Please respond using the 1-10 scale:",
+                            "title": {
+                                "en": "2. Our goal was to ask you about activities that are part of everyday life, but that differs from person to person. Were most of the activities listed part of your usual (i.e. pre-pandemic) everyday life? ",
+                                "fr": "2. Notre objectif était de vous interroger sur les activités qui font partie de la vie quotidienne, mais ces activités diffèrent d''une personne à l''autre. La plupart des activités énumérées faisaient-elles partie de votre vie quotidienne habituelle (c''est-à-dire avant la pandémie) ? "
+                            },
+                            "textContent": {
+                                "en": "Please respond using the 1-10 scale:",
+                                "fr": "Veuillez répondre en utilisant l''échelle de 1 à 10 :"
+                            },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "1 - Most of the activities are foreign to me",
+                                    "label": {
+                                        "en": "1 - Most of the activities are foreign to me",
+                                        "fr": "1 - La plupart des activités m''étaient étrangères"
+                                    },
                                     "value": "1"
                                 },
                                 {
@@ -14094,24 +14632,39 @@ UPDATE tasks SET
                                     "value": "9"
                                 },
                                 {
-                                    "label": "10 - Most of the activities do feature in my everyday life",
+                                    "label": {
+                                        "en": "10 - Most of the activities do feature in my everyday life",
+                                        "fr": "10 - La plupart de ces activités font partie de ma vie quotidienne"
+                                    },
                                     "value": "10"
                                 }
                             ]
                         },
                         {
                             "questionType": "freeTextResponse",
-                            "textContent": "Any specific comments? (e.g. did any of the activities stand out as NOT being usual activities for you?)",
+                            "textContent": {
+                                "en": "Any specific comments? (e.g., did any of the activities stand out as NOT being usual activities for you?) [OPTIONAL]",
+                                "fr": "Commentaires additionnels ? (par exemple, est-ce que l''une des activités en particulier vous a semblé NE PAS être une activité habituelle pour vous?) [FACULTATIF]"
+                            },
                             "key": "Q2_comment"
                         },
                         {
                             "questionType": "multipleChoiceSelect",
                             "key": "Q3-choice",
-                            "title": "3. In one part of this task, you were asked to choose between two activities, but we understand these were ‘pretend’ choices.",
-                            "textContent": "Please rate on a scale of 1-10 how much you think your choices generally reflected how you would choose in real life:",
+                            "title": {
+                                "en": "3. In one part of this task, you were asked to choose between two activities, but we understand these were ''pretend'' choices.",
+                                "fr": "3. Dans une partie de l''étude, on vous a demandé de choisir entre deux activités, mais nous comprenons qu''il s''agissait de choix ''fictifs''."
+                            },
+                            "textContent": {
+                                "en": "Please rate on a scale of 1-10 how much you think your choices generally reflected how you would choose in real life:",
+                                "fr": "Veuillez évaluer sur une échelle de 1 à 10 dans quelle mesure vous pensez que vos choix reflètent généralement la façon dont vous choisiriez dans la vraie vie :"
+                            },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "1 -  Not at all reflective – I made random choices in the game",
+                                    "label": {
+                                        "en": "1 -  Not at all reflective – I made random choices in the game",
+                                        "fr": "1 -  Ne reflète pas du tout mes vrais choix – J''ai choisi au hasard pendant l''étude "
+                                    },
                                     "value": "1"
                                 },
                                 {
@@ -14147,19 +14700,28 @@ UPDATE tasks SET
                                     "value": "9"
                                 },
                                 {
-                                    "label": "10 - Exactly as I would choose in real life",
+                                    "label": {
+                                        "en": "10 - Exactly as I would choose in real life",
+                                        "fr": "10 - Exactement comme je choisirais en vrai vie"
+                                    },
                                     "value": "10"
                                 }
                             ]
                         },
                         {
                             "questionType": "freeTextResponse",
-                            "textContent": "Additional comments?",
+                            "textContent": {
+                                "en": "Additional comments?",
+                                "fr": "Commentaires additionnels ?"
+                            },
                             "key": "Q3_comment"
                         },
                         {
                             "questionType": "freeTextResponse",
-                            "title": "4. Do you have any final comments or suggestions about the task? Any specific part of it that was confusing? [OPTIONAL]",
+                            "title": {
+                                "en": "4. Do you have any final comments or suggestions about the task? Any specific part of it that was confusing? [OPTIONAL]",
+                                "fr": "4. Avez-vous des commentaires finaux ou des suggestions concernant le jeu ? Quelque chose en particulier qui était peu claire ? [FACULTATIF]"
+                            },
                             "key": "Final_comment"
                         }
                     ]
@@ -22085,21 +22647,21 @@ UPDATE tasks SET
                 "componentConfig": {
                     "title": {
                         "en": "Everyday Choice Clinical Info Questionnaire",
-                        "fr": ""
+                        "fr": "Everyday Choice Questionnaire d''information clinique"
                     },
                     "questions": [
                         {
                             "questionType": "displayText",
                             "title": {
                                 "en": "The following questions are related to your physical and mental health. If you don''t have Parkinson''s disease (PD), not all of them will apply to you, so select the \\"I don''t have Parkinson''s disease\\" option.",
-                                "fr": "Les questions suivantes sont liées à votre santé physique et mentale. Si vous n''êtes pas atteint de la maladie de Parkinson (MP), toutes ne s''appliqueront pas à vous, alors sélectionnez l''option \\"Je n''ai pas la maladie de Parkinson\\"."
+                                "fr": "Les questions suivantes sont liées à votre santé physique et mentale. Si vous n''avez pas la maladie de Parkinson (MP), certaines ne s''appliqueront pas à vous, alors sélectionnez l''option \\"Je n''ai pas la maladie de Parkinson\\"."
                             }
                         },
                         {
                             "questionType": "radiobuttons",
                             "title": {
                                 "en": "Do you have a diagnosis of Parkinson''s disease given to you by a doctor (e.g. family doctor or neurologist)?",
-                                "fr": "Avez-vous un diagnostic de la maladie de Parkinson qui vous a été donné par un médecin (par exemple, un médecin de famille ou un neurologue)?"
+                                "fr": "Avez-vous un diagnostic de la maladie de Parkinson qui vous a été donné par un médecin (p.ex. un médecin de famille ou un neurologue)?"
                             },
                             "validation": {
                                 "required": true
@@ -22123,7 +22685,7 @@ UPDATE tasks SET
                                 {
                                     "label": {
                                         "en": "No, but I think I have Parkinson''s disease",
-                                        "fr": "Non, mais je pense avoir la maladie de Parkinson"
+                                        "fr": "Non, mais je pense que j''ai la maladie de Parkinson"
                                     },
                                     "value": "No, but I think I have Parkinson''s disease"
                                 }
@@ -22131,10 +22693,28 @@ UPDATE tasks SET
                             "key": "havePD"
                         },
                         {
+                            "questionType": "input",
+                            "validation": {
+                                "required": true,
+                                "isNumeric": true,
+                                "max": 2030,
+                                "min": 1900
+                            },
+                            "label": {
+                                "en": "Year (e.g. 2009)",
+                                "fr": "Année (ex. 2009)"
+                            },
+                            "key": "diagnosisPD",
+                            "textContent": {
+                                "en": "In what year were you diagnosed with Parkinson''s disease? If you DON''T have Parkinson''s disease, please enter \\"0\\"",
+                                "fr": "En quelle année avez-vous reçu votre diagnostic de Parkinson? Si vous n''avez PAS la maladie de Parkinson, SVP inscrire \\"0\\""
+                            }
+                        },
+                        {
                             "questionType": "multipleChoiceSelect",
                             "title": {
-                                "en": "Are you currently taking any of the following prescription medications to treat your Parkinson''s disease symptoms? (Please check all that apply)",
-                                "fr": "Prenez-vous actuellement l''un des médicaments sur ordonnance suivants pour traiter vos symptômes de la maladie de Parkinson? (Veuillez cocher toutes les cases qui s''appliquent)"
+                                "en": "Are you currently taking any of the following medications to treat your Parkinson''s disease symptoms? (Please check all that apply)",
+                                "fr": "Prenez-vous actuellement l''un des ces médicaments pour traiter les symptômes de la maladie de Parkinson? (SVP sélectionner tout ce qui s''applique)"
                             },
                             "key": "PDMeds",
                             "validation": {
@@ -22151,169 +22731,169 @@ UPDATE tasks SET
                                 },
                                 {
                                     "label": {
-                                        "en": "No, I don''t take any prescription medications to treat my Parkinson''s disease",
-                                        "fr": ""
+                                        "en": "No, I DON''T take any prescription medications to treat my Parkinson''s diseas",
+                                        "fr": "Non, je ne prends PAS de médicaments sous ordonnance pour traiter ma maladie de Parkinson"
                                     },
                                     "value": "Has PD, No medications"
                                 },
                                 {
                                     "label": {
                                         "en": "Sinemet or Carbidopa-Levodopa or Parcopa (Oral)",
-                                        "fr": ""
+                                        "fr": "Sinemet ou Carbidopa-Levodopa ou Parcopa (Orale)"
                                     },
                                     "value": "Sinemet or Carbidopa-Levodopa or Parcopa (Oral)"
                                 },
                                 {
                                     "label": {
                                         "en": "Sinemet CR or Carbidopa-Levodopa, Extended Release (Oral)",
-                                        "fr": ""
+                                        "fr": "Sinemet CR ou Carbidopa-Levodopa, Extended Release (Orale)"
                                     },
                                     "value": "Sinemet CR or Carbidopa-Levodopa, Extended Release (Oral)"
                                 },
                                 {
                                     "label": {
                                         "en": "Rytary or Numient (i.e. Carbidopa-Levodopa, Extended Release, Oral)",
-                                        "fr": ""
+                                        "fr": "Rytary ou Numient (c.-à-d. Carbidopa-Levodopa, Extended Release, Orale)"
                                     },
                                     "value": "Rytary or Numient"
                                 },
                                 {
                                     "label": {
                                         "en": "Duopa or Duodopa (i.e. Carbidopa-Levodopa Intestinal Gel)",
-                                        "fr": ""
+                                        "fr": "Duopa ou Duodopa (c.-à-d. Carbidopa-Levodopa Intestinal Gel)"
                                     },
                                     "value": "Duopa or Duodopa"
                                 },
                                 {
                                     "label": {
                                         "en": "Stalevo (i.e. combination of Carbidopa, Levodopa, and entacapone)",
-                                        "fr": ""
+                                        "fr": "Stalevo (c.-à-d. la combinaison de Carbidopa, de Levodopa, et de d''entacapone)"
                                     },
                                     "value": "Stalevo"
                                 },
                                 {
                                     "label": {
                                         "en": "Madopar or Levodopa-Benserazide",
-                                        "fr": ""
+                                        "fr": "Madopar ou Levodopa-Benserazide"
                                     },
                                     "value": "Madopar or Levodopa-Benserazide"
                                 },
                                 {
                                     "label": {
                                         "en": "Entacapone or Comtan",
-                                        "fr": ""
+                                        "fr": "Entacapone ou Comtan"
                                     },
                                     "value": "Entacapone or Comtan"
                                 },
                                 {
                                     "label": {
                                         "en": "Tolcapone or Tasmar",
-                                        "fr": ""
+                                        "fr": "Tolcapone ou Tasmar"
                                     },
                                     "value": "Tolcapone or Tasmar"
                                 },
                                 {
                                     "label": {
                                         "en": "Rasagiline or Azilect",
-                                        "fr": ""
+                                        "fr": "Rasagiline ou Azilect"
                                     },
                                     "value": "Rasagiline or Azilect"
                                 },
                                 {
                                     "label": {
-                                        "en": "Selegiline or Deprenyl or Elderpryl or Zelapar or Emasm",
-                                        "fr": ""
+                                        "en": "Selegiline or Deprenyl or Elderpryl or Zelapar",
+                                        "fr": "Selegiline ou Deprenyl ou Elderpryl ou Zelapar"
                                     },
                                     "value": "Selegiline or Deprenyl or Elderpryl or Zelapar or Emasm"
                                 },
                                 {
                                     "label": {
                                         "en": "Pramipexole or Mirapex",
-                                        "fr": ""
+                                        "fr": "Pramipexole ou Mirapex"
                                     },
                                     "value": "Pramipexole or Mirapex"
                                 },
                                 {
                                     "label": {
                                         "en": "Ropinirole or Requip",
-                                        "fr": ""
+                                        "fr": "Ropinirole ou Requip"
                                     },
                                     "value": "Ropinirole or Requip"
                                 },
                                 {
                                     "label": {
                                         "en": "Neupro patch or Rotigotine patch",
-                                        "fr": ""
+                                        "fr": "timbre (\\"patch\\") de Neupro ou de Rotigotin"
                                     },
                                     "value": "Neupro patch or Rotigotine patch"
                                 },
                                 {
                                     "label": {
                                         "en": "Amantadine or Symmetrel or Gocovri",
-                                        "fr": ""
+                                        "fr": "Amantadine ou Symmetrel ou Gocovri"
                                     },
                                     "value": "Amantadine or Symmetrel or Gocovri"
                                 },
                                 {
                                     "label": {
                                         "en": "Apokyn or Kinmobi or Apomorphine",
-                                        "fr": ""
+                                        "fr": "Apokyn ou Kinmobi ou Apomorphine"
                                     },
                                     "value": "Apokyn or Kinmobi or Apomorphine"
                                 },
                                 {
                                     "label": {
                                         "en": "Bromocriptine or Parlodel",
-                                        "fr": ""
+                                        "fr": "Bromocriptine ou Parlodel"
                                     },
                                     "value": "Bromocriptine or Parlodel"
                                 },
                                 {
                                     "label": {
                                         "en": "Onstryv or Xadago or Safinamide",
-                                        "fr": ""
+                                        "fr": "Onstryv ou Xadago ou Safinamide"
                                     },
                                     "value": "Onstryv or Xadago or Safinamide"
                                 },
                                 {
                                     "label": {
                                         "en": "Trihexyphenidyl or Artane",
-                                        "fr": ""
+                                        "fr": "Trihexyphenidyl ou Artane"
                                     },
                                     "value": "Trihexyphenidyl or Artane"
                                 },
                                 {
                                     "label": {
                                         "en": "Rivastigmine or Exelon",
-                                        "fr": ""
+                                        "fr": "Rivastigmine ou Exelon"
                                     },
                                     "value": "Rivastigmine or Exelon"
                                 },
                                 {
                                     "label": {
                                         "en": "Donepezil or Aricept",
-                                        "fr": ""
+                                        "fr": "Donepezil ou Aricept"
                                     },
                                     "value": "Donepezil or Aricept"
                                 },
                                 {
                                     "label": {
                                         "en": "Galantamine or Razadyne or Reminyl",
-                                        "fr": ""
+                                        "fr": "Galantamine ou Razadyne ou Reminyl"
                                     },
                                     "value": "Galantamine or Razadyne or Reminyl"
                                 },
                                 {
                                     "label": {
                                         "en": "Memantine or Namenda or Ebixa",
-                                        "fr": ""
+                                        "fr": "Memantine ou Namenda ou Ebixa"
                                     },
                                     "value": "Memantine or Namenda or Ebixa"
                                 },
                                 {
                                     "label": {
                                         "en": "I take other medications for my Parkinson''s disease that are not on this list",
-                                        "fr": ""
+                                        "fr": "Je prends d''autres médicaments pour ma maladie de Parkinson mais ils ne sont pas inclus dans cette liste"
                                     },
                                     "value": "I take other medications for my Parkinson''s disease that are not on this list"
                                 }
@@ -22322,12 +22902,8 @@ UPDATE tasks SET
                         {
                             "questionType": "freeTextResponse",
                             "title": {
-                                "en": "If you take medications for Parkinson''s disease that are not on the list, please write it below.",
-                                "fr": ""
-                            },
-                            "textContent": {
-                                "en": "If you do not take any Parkinson''s disease medication or already listed it above, please skip to the next question.",
-                                "fr": ""
+                                "en": "If you take medications for Parkinson''s disease that are not on the list, please write it below. If not, skip to the next question.",
+                                "fr": "Si vous prenez d''autres médicaments pour votre maladie de Parkinson qui ne sont pas inclus dans cette liste, SVP écrivez-les ci-dessous. Sinon, passez à la prochaine question."
                             },
                             "key": "PDMedsOthers",
                             "validation": {
@@ -22337,8 +22913,8 @@ UPDATE tasks SET
                         {
                             "questionType": "displayText",
                             "title": {
-                                "en": "If you answered previously that you do take Parkinson''s disease medication, how long ago did you take it?",
-                                "fr": "Si vous avez répondu précédemment que vous prenez des médicaments contre la maladie de Parkinson, depuis combien de temps les avez-vous pris?"
+                                "en": "If you answered previously that you do take Parkinson''s disease medication, how long ago did you take the last dose?",
+                                "fr": "Si vous avez répondu que vous prenez des médicaments pour votre maladie de Parkinson, il y a combien de temps que vous avez pris la dernière dose?"
                             }
                         },
                         {
@@ -22377,7 +22953,7 @@ UPDATE tasks SET
                             "questionType": "multipleChoiceSelect",
                             "title": {
                                 "en": "Do you feel ON (i.e. can feel that the PD medications are taking effect) or OFF (i.e. medications are not currently taking effect)?",
-                                "fr": "Vous sentez-vous ''ON'' (c''est-à-dire que vous pouvez sentir que les médicaments contre la maladie de Parkinson font effet) ou ''OFF'' (c''est-à-dire que les médicaments ne font pas actuellement effet)?"
+                                "fr": "Vous sentez-vous «ON» (c.-à-d. sentir que les médicaments de la MP font effet) ou «OFF» (c.-à-d. sentir que les médicaments ne font pas actuellement effet)?"
                             },
                             "key": "onOffMed",
                             "validation": {
@@ -22394,7 +22970,7 @@ UPDATE tasks SET
                                 {
                                     "label": {
                                         "en": "I have PD but don''t take medications for it",
-                                        "fr": "J''ai la maladie de Parkinson mais je ne prends pas de médicaments pour ça"
+                                        "fr": "J''ai la MP mais je ne prends pas de médicaments pour ça"
                                     },
                                     "value": "I have PD but don''t take medications for it"
                                 },
@@ -22414,10 +22990,10 @@ UPDATE tasks SET
                                 },
                                 {
                                     "label": {
-                                        "en": "I cannot tell the difference",
-                                        "fr": "Je ne peux pas faire la différence"
+                                        "en": "I can not tell the difference",
+                                        "fr": "Je ne ressens pas la différence entre ON et OFF"
                                     },
-                                    "value": "I cannot tell the difference"
+                                    "value": "I can not tell the difference"
                                 }
                             ]
                         },
@@ -22425,7 +23001,7 @@ UPDATE tasks SET
                             "questionType": "multipleChoiceSelect",
                             "title": {
                                 "en": "Have you ever undergone any of these PD surgeries or procedures? (Please check all that apply)",
-                                "fr":  ""
+                                "fr": "Avez-vous déjà subi l''une des chirurgies ou procédures suivantes pour votre maladie de Parkinson? (Veuillez cocher tout ce qui s''applique)"
                             },
                             "key": "PDSurgeries",
                             "validation": {
@@ -22436,42 +23012,42 @@ UPDATE tasks SET
                                 {
                                     "label": {
                                         "en": "Deep brain stimulation",
-                                        "fr":  ""
+                                        "fr": "Chirurgie de stimulation cérébrale profonde (\\"DBS\\")"
                                     },
                                     "value": "Deep brain stimulation"
                                 },
                                 {
                                     "label": {
                                         "en": "Pallidotomy",
-                                        "fr":  ""
+                                        "fr": "Pallidotomie"
                                     },
                                     "value": "Pallidotomy"
                                 },
                                 {
                                     "label": {
                                         "en": "Thalamotomy",
-                                        "fr":  ""
+                                        "fr": "Thalamotomie"
                                     },
                                     "value": "Thalamotomy"
                                 },
                                 {
                                     "label": {
                                         "en": "Focused ultrasound",
-                                        "fr": ""
+                                        "fr": "Ultrason focalisé (\\"FUS\\")"
                                     },
                                     "value": "Focused ultrasound"
                                 },
                                 {
                                     "label": {
                                         "en": "Gamma knife radiosurgery",
-                                        "fr": ""
+                                        "fr": "Radiochirurgie au scalpel gamma"
                                     },
                                     "value": "Gamma knife radiosurgery"
                                 },
                                 {
                                     "label": {
                                         "en": "I have not undergone any of the PD procedures listed above",
-                                        "fr": ""
+                                        "fr": "Je n''ai subi aucune des procédures mentionnées ci-dessus"
                                     },
                                     "value": "I have not undergone any of the PD procedures listed above"
                                 }
@@ -22491,28 +23067,28 @@ UPDATE tasks SET
                                 {
                                     "label": {
                                         "en": "Yes, my biological mother or father has/had Parkinson’s disease",
-                                        "fr": "Oui, ma mère ou mon père biologique a eu la maladie de Parkinson"
+                                        "fr": "Oui, ma mère/mon père biologiques ont/avaient la maladie de Parkinson"
                                     },
                                     "value": "Yes, biological mother or father"
                                 },
                                 {
                                     "label": {
                                         "en": "Yes, one of my siblings has/had Parkinson’s disease",
-                                        "fr": "Oui, un de mes frères et sœurs a eu la maladie de Parkinson"
+                                        "fr": "Oui, un.e de mes frères/soeurs a/avait la maladie de Parkinson"
                                     },
                                     "value": "Yes, siblings"
                                 },
                                 {
                                     "label": {
                                         "en": "Yes, one of my children has/had Parkinson’s disease",
-                                        "fr": "Oui, un de mes enfants a eu la maladie de Parkinson"
+                                        "fr": "Oui, un de mes enfants a/avait la maladie de Parkinson"
                                     },
                                     "value": "Yes, children"
                                 },
                                 {
                                     "label": {
                                         "en": "Yes, an uncle/aunt/cousin or other blood relative has/had Parkinson’s disease",
-                                        "fr": "Oui, un oncle/une tante/un cousin ou un autre parent par le sang a eu la maladie de Parkinson"
+                                        "fr": "Oui, un oncle/tante/cousin.e ou un autre proche par le sang a/avait la maladie de Parkinson"
                                     },
                                     "value": "Yes, relative"
                                 },
@@ -22529,7 +23105,7 @@ UPDATE tasks SET
                             "questionType": "multipleChoiceSelect",
                             "title": {
                                 "en": "Are you currently taking medications (prescription or over the counter) for any of the following conditions? (Please check all that apply)",
-                                "fr": ""
+                                "fr": "Est-ce que vous prenez présentement des médicaments, soit sous ordonnance ou sans ordonnance, pour l''une ou plusieurs des conditions suivantes?"
                             },
                             "key": "otherMeds",
                             "validation": {
@@ -22540,42 +23116,42 @@ UPDATE tasks SET
                                 {
                                     "label": {
                                         "en": "Depression",
-                                        "fr": ""
+                                        "fr": "Dépression"
                                     },
                                     "value": "Depression"
                                 },
                                 {
                                     "label": {
                                         "en": "Anxiety",
-                                        "fr": ""
+                                        "fr": "Anxiété"
                                     },
                                     "value": "Anxiety"
                                 },
                                 {
                                     "label": {
                                         "en": "Sleep Problems",
-                                        "fr": ""
+                                        "fr": "Troubles du sommeil"
                                     },
                                     "value": "Sleep Problems"
                                 },
                                 {
                                     "label": {
                                         "en": "Problems with cognition (e.g. trouble thinking or focusing or trouble with memory",
-                                        "fr": ""
+                                        "fr": "Problèmes de cognition (p.ex. difficulté à penser ou à se concentrer ou troubles de mémoire)"
                                     },
                                     "value": "Problems with cognition"
                                 },
                                 {
                                     "label": {
-                                        "en": "Hallucinations (e.g. seeing or hearing things that you know or are told are not there)",
-                                        "fr": ""
+                                        "en": "Hallucinations",
+                                        "fr": "Hallucinations"
                                     },
                                     "value": "Hallucinations"
                                 },
                                 {
                                     "label": {
                                         "en": "I am not taking medication to treat any of the conditions listed above",
-                                        "fr": ""
+                                        "fr": "Je prends aucun médicament pour les conditions mentionnées ci-dessus"
                                     },
                                     "value": "I am not taking medication to treat any of the conditions listed above"
                                 }
@@ -22585,11 +23161,11 @@ UPDATE tasks SET
                             "questionType": "multipleChoiceSelect",
                             "title": {
                                 "en": "Do you feel that your memory and thinking have gotten worse?",
-                                "fr": "Avez-vous l''impression que votre mémoire et votre pensée se sont détériorées?"
+                                "fr": "Avez-vous l''impression que votre mémoire et vos pensées se sont détériorées?"
                             },
                             "textContent": {
                                 "en": "If you have Parkinson''s disease, consider the change since your diagnosis, or, if you don''t have Parkinson''s disease, consider the change in the last few years.",
-                                "fr": "Si vous êtes atteint de la maladie de Parkinson, considérez le changement depuis votre diagnostic ou, si vous n''êtes pas atteint de la maladie de Parkinson, considérez le changement au cours des dernières années."
+                                "fr": "Si vous avez la maladie de Parkinson, considérez le changement depuis votre diagnostic ou, si vous n''avez pas la maladie de Parkinson, considérez le changement au cours des dernières années."
                             },
                             "key": "memory",
                             "validation": {
@@ -22613,7 +23189,7 @@ UPDATE tasks SET
                                 {
                                     "label": {
                                         "en": "Not sure",
-                                        "fr": "Je ne sais pas"
+                                        "fr": "Pas certain.e"
                                     },
                                     "value": "Not sure"
                                 }
@@ -22647,7 +23223,7 @@ UPDATE tasks SET
                                 {
                                     "label": {
                                         "en": "No, but I think I have dementia",
-                                        "fr": "Non, mais je pense que j''ai la démence"
+                                        "fr": "Non, mais je pense je souffre de démence"
                                     },
                                     "value": "No, but I think I have dementia"
                                 }
@@ -22657,7 +23233,7 @@ UPDATE tasks SET
                             "questionType": "multipleChoiceSelect",
                             "title": {
                                 "en": "Do you have a diagnosis of Mild Cognitive Impairment (MCI) given to you by a doctor?",
-                                "fr": "Avez-vous un diagnostic de trouble cognitif léger (MCI) qui vous a été remis par un médecin?"
+                                "fr": "Avez-vous un diagnostic de trouble cognitif léger (TCL) qui vous a été donné par un médecin?"
                             },
                             "key": "diagnosisMCI",
                             "validation": {
@@ -22681,7 +23257,7 @@ UPDATE tasks SET
                                 {
                                     "label": {
                                         "en": "No, but I think I have cognitive impairment",
-                                        "fr": "Non, mais je pense avoir des troubles cognitifs"
+                                        "fr": "Non, mais je pense j''ai des troubles cognitifs"
                                     },
                                     "value": "No, but I think I have cognitive impairment"
                                 }
@@ -22706,13 +23282,16 @@ UPDATE tasks SET
             {
                 "componentName": "QUESTIONNAIRECOMPONENT",
                 "componentConfig": {
-                    "title": "Everyday Choice Demographic Questionnaire",
+                    "title": {
+                        "en": "Everyday Choice Demographic Questionnaire",
+                        "fr": "Everyday Choice Questionnaire"
+                    },
                     "questions": [
                         {
                             "questionType": "input",
                             "title": {
                                 "en": "What is your age (in years)?",
-                                "fr": "Quel est votre âge actuel?"
+                                "fr": "Quel âge avez-vous actuellement?"
                             },
                             "validation": {
                                 "required": true,
@@ -22725,7 +23304,7 @@ UPDATE tasks SET
                             "questionType": "multipleChoiceSelect",
                             "title": {
                                 "en": "What sex were you assigned at birth?",
-                                "fr": "Quel sexe vous a été assigné à la naissance?"
+                                "fr": "Quel sexe vous a-t-on attribué à la naissance?"
                             },
                             "validation": {
                                 "required": true
@@ -22783,7 +23362,7 @@ UPDATE tasks SET
                                 {
                                     "label": {
                                         "en": "Do not identify as female, male, or transgender",
-                                        "fr": "Ne vous identifiez pas comme femme, homme ou transgenre"
+                                        "fr": "Je ne m''identifie ni comme femme, ni comme homme, ni comme transgenre"
                                     },
                                     "value": "Do not identify as female, male, or transgender"
                                 }
@@ -22794,7 +23373,7 @@ UPDATE tasks SET
                             "key": "yearsOfEducation",
                             "title": {
                                 "en": "How many years of education do you have (completing high school equals 12 years)?",
-                                "fr": ""
+                                "fr": "Combien d''années d''étude avez-vous complété (fin du secondaire équivaut à 12 années)?"
                             },
                             "validation": {
                                 "isNumeric": true,
@@ -22804,68 +23383,71 @@ UPDATE tasks SET
                         {
                             "questionType": "multipleChoiceSelect",
                             "key": "currentEmploymentStatus",
-                            "title": "What is your current employment status?",
+                            "title": {
+                                "en": "What is your current employment status?",
+                                "fr": "Quelle est votre situation d''emploi actuelle?"
+                            },
                             "multipleChoiceOptions": [
                                 {
                                     "label": {
                                         "en": "Employed Full-time (30+ hours a week)",
-                                        "fr": ""
+                                        "fr": "Employé à temps plein (30+ d''heures chaque semaine)"
                                     },
                                     "value": "Full-time"
                                 },
                                 {
                                     "label": {
                                         "en": "Employed Part-time",
-                                        "fr": ""
+                                        "fr": "Employé à temps partiel"
                                     },
                                     "value": "Part-time"
                                 },
                                 {
                                     "label": {
                                         "en": "Unemployed",
-                                        "fr": ""
+                                        "fr": "Au chômage"
                                     },
                                     "value": "Unemployed"
                                 },
                                 {
                                     "label": {
                                         "en": "Disability Leave",
-                                        "fr": ""
+                                        "fr": "Congé de maladie"
                                     },
                                     "value": "Disability Leave"
                                 },
                                 {
                                     "label": {
                                         "en": "Homemaker",
-                                        "fr": ""
+                                        "fr": "Au foyer"
                                     },
                                     "value": "Homemaker"
                                 },
                                 {
                                     "label": {
                                         "en": "Student",
-                                        "fr": ""
+                                        "fr": "Étudiant.e"
                                     },
                                     "value": "Student"
                                 },
                                 {
                                     "label": {
                                         "en": "Volunteer",
-                                        "fr": ""
+                                        "fr": "Bénévole"
                                     },
                                     "value": "Volunteer"
                                 },
                                 {
                                     "label": {
                                         "en": "Retired",
-                                        "fr": ""
+                                        "fr": "Retraité.e"
                                     },
                                     "value": "Retired"
                                 },
                                 {
                                     "label": {
                                         "en": "Do not wish to answer",
-                                        "fr": ""
+                                        "fr": "Je ne souhaite pas répondre"
                                     },
                                     "value": "Do not wish to answer"
                                 }
@@ -22878,7 +23460,7 @@ UPDATE tasks SET
                             "questionType": "multipleChoiceSelect",
                             "title": {
                                 "en": "What is your best estimate of the total household income received by all household members, from all sources, before taxes and deductions, in the past 12 months?",
-                                "fr": ""
+                                "fr": "Quelle est votre meilleure estimation du revenu total du ménage reçu par tous les membres de votre ménage, de toutes sources, avant impôts et déductions, au cours des 12 derniers mois?"
                             },
                             "key": "householdIncome",
                             "validation": {
@@ -22888,49 +23470,49 @@ UPDATE tasks SET
                                 {
                                     "label": {
                                         "en": "Less than $20,000",
-                                        "fr": ""
+                                        "fr": "Moins de 20.000$"
                                     },
                                     "value": "Less than $20,000"
                                 },
                                 {
                                     "label": {
                                         "en": "$20,000 or more, but less than $50,000",
-                                        "fr": ""
+                                        "fr": "20,000$ ou plus, mais moins de 50,000$"
                                     },
                                     "value": "$20,000 or more, but less than $50,000"
                                 },
                                 {
                                     "label": {
                                         "en": "$50,000 or more, but less than $100,000",
-                                        "fr": ""
+                                        "fr": "50,000$ ou plus, mais moins de 100,000$"
                                     },
                                     "value": "$50,000 or more, but less than $100,000"
                                 },
                                 {
                                     "label": {
                                         "en": "$100,000 or more, but less than $150,000",
-                                        "fr": ""
+                                        "fr": "100,000$ ou plus, mais moins de 150,000$"
                                     },
                                     "value": "$100,000 or more, but less than $150,000"
                                 },
                                 {
                                     "label": {
                                         "en": "$150,000 or more",
-                                        "fr": ""
+                                        "fr": "150,000$ ou plus"
                                     },
                                     "value": "$150,000 or more"
                                 },
                                 {
                                     "label": {
                                         "en": "Do not know",
-                                        "fr": ""
+                                        "fr": "Je ne sais pas"
                                     },
                                     "value": "Do not know"
                                 },
                                 {
                                     "label": {
                                         "en": "Do not wish to answer",
-                                        "fr": ""
+                                        "fr": "Je ne souhaite pas répondre"
                                     },
                                     "value": "Do not wish to answer"
                                 }
@@ -22940,7 +23522,7 @@ UPDATE tasks SET
                             "questionType": "multipleChoiceSelect",
                             "title": {
                                 "en": "What is your current marital/partner status?",
-                                "fr": ""
+                                "fr": "Quel est votre état matrimonial/civil?"
                             },
                             "key": "marital",
                             "validation": {
@@ -22950,35 +23532,42 @@ UPDATE tasks SET
                                 {
                                     "label": {
                                         "en": "Single, never married, or never lived with a partner",
-                                        "fr": ""
+                                        "fr": "Célibataire, jamais marié.e, ou n''a jamais vécu avec un.e partenaire"
                                     },
                                     "value": "Single, never married, or never lived with a partner"
                                 },
                                 {
                                     "label": {
                                         "en": "Married/Living with a partner in a domestic relationship",
-                                        "fr": ""
+                                        "fr": "Marié.e/Je vis avec un.e partenaire dans une relation domestique"
                                     },
                                     "value": "Married/Living with a partner in a domestic relationship"
                                 },
                                 {
                                     "label": {
                                         "en": "Widowed",
-                                        "fr": ""
+                                        "fr": "Veuf/Veuve"
                                     },
                                     "value": "Widowed"
                                 },
                                 {
                                     "label": {
                                         "en": "Divorced/Separated",
-                                        "fr": ""
+                                        "fr": "Divorcé.e/Séparé.e"
                                     },
                                     "value": "Divorced/Separated"
                                 },
                                 {
                                     "label": {
+                                        "en": "In a relationship",
+                                        "fr": "En couple"
+                                    },
+                                    "value": "In a relationship"
+                                },
+                                {
+                                    "label": {
                                         "en": "Do not wish to disclose",
-                                        "fr": ""
+                                        "fr": "Je ne souhaite pas répondre"
                                     },
                                     "value": "Do not wish to disclose"
                                 }
@@ -22986,7 +23575,10 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Which best describes your living situation?",
+                            "title": {
+                                "en": "Which best describes your living situation?",
+                                "fr": "Lequel décrit le mieux votre situation de vie?"
+                            },
                             "key": "living",
                             "validation": {
                                 "required": true
@@ -22994,57 +23586,57 @@ UPDATE tasks SET
                             "multipleChoiceOptions": [
                                 {
                                     "label": {
-                                        "en": "Living alone",
-                                        "fr": ""
+                                        "en": "Living Alone",
+                                        "fr": "Je vis seul.e"
                                     },
                                     "value": "Living alone"
                                 },
                                 {
                                     "label": {
                                         "en": "Living with spouse/partner/significant other",
-                                        "fr": ""
+                                        "fr": "Je vis avec mon/ma conjoint.e/partenaire/autre personne chère"
                                     },
                                     "value": "Living with spouse/partner/significant other"
                                 },
                                 {
                                     "label": {
                                         "en": "Living with adult child/children",
-                                        "fr": ""
+                                        "fr": "Je vis avec enfant(s) adulte(s) "
                                     },
                                     "value": "Living with adult child/children"
                                 },
                                 {
                                     "label": {
                                         "en": "Living with other family",
-                                        "fr": ""
+                                        "fr": "Je vis avec un autre membre de ma famille"
                                     },
                                     "value": "Living with other family"
                                 },
                                 {
                                     "label": {
-                                        "en":  "Living with paid in-home care provider/aide",
-                                        "fr": ""
+                                        "en": "Living with paid in-home care provider/aide",
+                                        "fr": "Je vis avec un prestataire de soins à domicile"
                                     },
                                     "value": "Living with paid in-home care provider/aide"
                                 },
                                 {
                                     "label": {
                                         "en": "Living in assisted living facility",
-                                        "fr": ""
+                                        "fr": "Je vis en résidence, e.g. de retraités"
                                     },
                                     "value": "Living in assisted living facility"
                                 },
                                 {
                                     "label": {
                                         "en": "Living in nursing home",
-                                        "fr": ""
+                                        "fr": "Je vis en hébergement médicalisé/CHSLD"
                                     },
                                     "value": "Living in nursing home"
                                 },
                                 {
                                     "label": {
                                         "en": "Other",
-                                        "fr": ""
+                                        "fr": "Autre"
                                     },
                                     "value": "Other"
                                 }
@@ -23054,7 +23646,7 @@ UPDATE tasks SET
                             "questionType": "multipleChoiceSelect",
                             "title": {
                                 "en": "What is your handedness?",
-                                "fr": "Quelle est votre latéralité?"
+                                "fr": "Quelle est votre main dominante?"
                             },
                             "key": "handedness",
                             "validation": {
@@ -23064,14 +23656,14 @@ UPDATE tasks SET
                                 {
                                     "label": {
                                         "en": "Right-handed",
-                                        "fr": "Droitier"
+                                        "fr": "Droitier/Droitière"
                                     },
                                     "value": "Right"
                                 },
                                 {
                                     "label": {
                                         "en": "Left-handed",
-                                        "fr": "Gaucher"
+                                        "fr": "Gaucher/Gauchère"
                                     },
                                     "value": "Left"
                                 },
@@ -23088,7 +23680,7 @@ UPDATE tasks SET
                             "questionType": "multipleChoiceSelect",
                             "title": {
                                 "en": "How much time do you spend engaging in mental exercise (e.g. playing board games, cards, crossword puzzles, jigsaw puzzles, sudoku, playing a musical instrument)",
-                                "fr": ""
+                                "fr": "Combien de temps passez-vous à faire de l''exercice mental (p.ex. jeux de société, cartes, mots croisés, casse-têtes, sudoku; jouer un instrument de musique)"
                             },
                             "key": "mentalExercise",
                             "validation": {
@@ -23098,35 +23690,35 @@ UPDATE tasks SET
                                 {
                                     "label": {
                                         "en": "Every day",
-                                        "fr": ""
+                                        "fr": "Tous les jours"
                                     },
                                     "value": "Every day"
                                 },
                                 {
                                     "label": {
                                         "en": "Several times a week",
-                                        "fr": ""
+                                        "fr": "Plusieurs fois par semaine"
                                     },
                                     "value": "Several times a week"
                                 },
                                 {
                                     "label": {
                                         "en": "Several times a month",
-                                        "fr": ""
+                                        "fr": "Plusieurs fois par mois"
                                     },
                                     "value": "Several times a month"
                                 },
                                 {
                                     "label": {
                                         "en": "Several times a year",
-                                        "fr": ""
+                                        "fr": "Plusieurs fois par année"
                                     },
                                     "value": "Several times a year"
                                 },
                                 {
                                     "label": {
                                         "en": "Once a year or less",
-                                        "fr": ""
+                                        "fr": "Une fois par année ou moins"
                                     },
                                     "value": "Once a year or less"
                                 }
@@ -23136,7 +23728,7 @@ UPDATE tasks SET
                             "questionType": "multipleChoiceSelect",
                             "title": {
                                 "en": "How often do you exercise?",
-                                "fr": ""
+                                "fr": "À quelle fréquence faites-vous de l''activité physique?"
                             },
                             "key": "exercise",
                             "validation": {
@@ -23146,28 +23738,28 @@ UPDATE tasks SET
                                 {
                                     "label": {
                                         "en": "Less than 1 time per week",
-                                        "fr": ""
+                                        "fr": "Moins d''une fois par semaine"
                                     },
                                     "value": "Less than 1 time per week"
                                 },
                                 {
                                     "label": {
                                         "en": "1 to 2 days per week",
-                                        "fr": ""
+                                        "fr": "1 à 2 jours par semaine"
                                     },
                                     "value": "1 to 2 days per week"
                                 },
                                 {
                                     "label": {
                                         "en": "3 to 5 days per week",
-                                        "fr": ""
+                                        "fr": "3 à 5 jours par semaine"
                                     },
                                     "value": "3 to 5 days per week"
                                 },
                                 {
                                     "label": {
                                         "en": "6 to 7 days per week",
-                                        "fr": ""
+                                        "fr": "6 à 7 jours par semaine"
                                     },
                                     "value": "6 to 7 days per week"
                                 }
@@ -23177,7 +23769,7 @@ UPDATE tasks SET
                             "questionType": "multipleChoiceSelect",
                             "title": {
                                 "en": "How long is one exercise session approximately?",
-                                "fr": ""
+                                "fr": "Environ combien de temps dure une séance d''exercice?"
                             },
                             "key": "exerciseSession",
                             "validation": {
@@ -23187,28 +23779,28 @@ UPDATE tasks SET
                                 {
                                     "label": {
                                         "en": "Less than 30 minutes",
-                                        "fr": ""
+                                        "fr": "Moins de 30 minutes"
                                     },
                                     "value": "Less than 30 minutes"
                                 },
                                 {
                                     "label": {
                                         "en": "30 to 60 minutes",
-                                        "fr": ""
+                                        "fr": "30 à 60 minutes"
                                     },
                                     "value": "30 to 60 minutes"
                                 },
                                 {
                                     "label": {
                                         "en": "1 to 2 hours",
-                                        "fr": ""
+                                        "fr": "1 à 2 heures"
                                     },
                                     "value": "1 to 2 hours"
                                 },
                                 {
                                     "label": {
                                         "en": "More than 2 hours",
-                                        "fr": ""
+                                        "fr": "Plus de 2 heures"
                                     },
                                     "value": "More than 2 hours"
                                 }
@@ -23217,8 +23809,8 @@ UPDATE tasks SET
                         {
                             "questionType": "multipleChoiceSelect",
                             "title": {
-                                "en": "We expect to reach people from many different cultural and racial backgrounds with this internet study. To which group do you belong? (Select all that apply)",
-                                "fr": "Nous prévoyons d''atteindre des personnes de nombreux horizons culturels et raciaux différents avec cette étude sur Internet. A quel groupe appartenez-vous ? (Sélectionnez tout ce qui s''y rapporte)"
+                                "en": "We expect to reach people from many different cultural and racial backgrounds with this internet study. Which group do you identify with? (Select all that apply)",
+                                "fr": "Nous prévoyons rejoindre des personnes issues de différents milieux culturels avec cette étude en-ligne. À quel groupe vous identifiez-vous? (Sélectionnez tous ceux qui s''appliquent)"
                             },
                             "key": "background",
                             "validation": {
@@ -23236,14 +23828,14 @@ UPDATE tasks SET
                                 {
                                     "label": {
                                         "en": "French Canadian",
-                                        "fr": "Français Canadien"
+                                        "fr": "Canadien.ne Français.e"
                                     },
                                     "value": "French Canadian"
                                 },
                                 {
                                     "label": {
-                                        "en": "First Nations",
-                                        "fr": "Premières nations"
+                                        "en": "Indigenous peoples",
+                                        "fr": "Autochtones"
                                     },
                                     "value": "First Nations"
                                 },
@@ -23292,7 +23884,7 @@ UPDATE tasks SET
                                 {
                                     "label": {
                                         "en": "Southeast Asian (E.g. Filipino, Cambodian, Indonesian, Laotian, Vietnamese)",
-                                        "fr": "Asiatique du Sud-Est (par exemple, philippin, cambodgien, indonésien, laotien, vietnamien)"
+                                        "fr": "Asiatique du Sud-Est (par exemple, Philippin, Cambodgien, Indonésien, Laotien, Vietnamien)"
                                     },
                                     "value": "Southeast Asian"
                                 },
@@ -23327,7 +23919,7 @@ UPDATE tasks SET
                                 {
                                     "label": {
                                         "en": "Prefer not to answer",
-                                        "fr": "Je préfère ne pas répondre"
+                                        "fr": "Je ne préfère pas répondre"
                                     },
                                     "value": "Prefer not to answer"
                                 }
@@ -23337,9 +23929,9 @@ UPDATE tasks SET
                             "questionType": "multipleChoiceSelect",
                             "title": {
                                 "en": "Which of the following languages do you consider yourself fluent in (can read and speak)? Select all that apply.",
-                                "fr": "Laquelle des langues suivantes considérez-vous maîtriser (savoir lire et parler)? Sélectionnez tout ce qui s''y rapporte."
+                                "fr": "Laquelle des langues suivantes considérez-vous que vous parlez couramment (savoir lire et parler)? (Sélectionnez tout ce qui s''applique)"
                             },
-                            "key": "fluentLang",
+                            "key": "fluentLan",
                             "validation": {
                                 "required": true
                             },
@@ -23362,7 +23954,7 @@ UPDATE tasks SET
                                 {
                                     "label": {
                                         "en": "Neither",
-                                        "fr": "Aucun d''eux"
+                                        "fr": "Aucun des deux"
                                     },
                                     "value": "Neither"
                                 }
@@ -23387,30 +23979,55 @@ UPDATE tasks SET
             {
                 "componentName": "INFODISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Welcome to the study of Neurocognition on the Web for PD - Everyday Activities Game",
+                    "title": {
+                        "en": "Welcome to the study of Neurocognition on the Web for PD - Everyday Activities Game",
+                        "fr": "Bienvenu à l''étude de Neurocognition sur le web pour la MP - Le jeu des Activités Quotidiennes"
+                    },
                     "sections": [
                         {
-                            "header": "Thank you for participating in our study!",
+                            "header": {
+                                "en": "Thank you for participating in our study!",
+                                "fr": "Merci de participer à notre étude!"
+                            },
                             "textContent": ""
                         },
                         {
                             "header": "",
-                            "textContent": "You will be playing a game of choice between everyday activities and completing questionnaires to help us better understand decision-making and cognition in patients with Parkinson''s disease."
+                            "textContent": {
+                                "en": "You will be playing a game of choice between everyday activities and completing questionnaires to help us better understand decision-making and cognition in people with Parkinson''s disease.",
+                                "fr": "Vous allez jouer à un jeu de choix entre des activités quotidiennes et remplir des questionnaires. Ceci nous aidera à mieux comprendre le processus de prise de décision et la cognition chez les personnes atteintes de la maladie de Parkinson"
+                            }
                         },
                         {
                             "header": "",
-                            "textContent": "While we ask that you complete the study in one sitting, please feel free to take breaks! We simply ask that you wait until the end of a testing block or of a questionnaire, otherwise your data will be lost."
+                            "textContent": {
+                                "en": "While we ask that you complete the study in one sitting, please feel free to take breaks! We simply ask that you wait until the end of a testing block or of a questionnaire, otherwise your data will be lost.",
+                                "fr": "Quoiqu''on vous demande de compléter l''étude en une seule fois, SVP n''hésitez-pas à prendre des pauses! Nous vous demandons simplement d''attendre jusqu''à la fin d''une partie d''un test ou d''un questionnaire, sinon vos données seront perdues."
+                            }
                         },
                         {
                             "header": "",
-                            "textContent": "<b>To take a break:</b> simply close this window."
+                            "textContent": {
+                                "en": "<b>To take a break:</b> simply close this window.",
+                                "fr": "</b>Pour prendre une pause:</b> simplement fermez cette fenêtre."
+                            }
                         },
                         {
                             "header": "",
-                            "textContent": "<b>To get back to it:</b> use the link you were sent in the email. It will take you to the log-in page."
+                            "textContent": {
+                                "en": "<b>To get back to it:</b> use the link you were sent in the email. It will take you to the log-in page.",
+                                "fr": "</b>Pour y revenir:</b> utilisez le lien qui vous a été envoyé par courriel. Ceci va vous amener à la page de connexion."
+                            }
                         },
                         {
-                            "textContent": "<b>QUESTIONS OR EXPERIENCING DIFFICULTIES?</b>"
+                            "header": "",
+                            "indent": 1
+                        },
+                        {
+                            "textContent": {
+                                "en": "<b>QUESTIONS OR EXPERIENCING DIFFICULTIES?</b>",
+                                "fr": "</b>DES QUESTIONS OU DES DIFFICULTÉS?</b>"
+                            }
                         },
                         {
                             "header": "",
@@ -23418,11 +24035,17 @@ UPDATE tasks SET
                         },
                         {
                             "header": "",
-                            "textContent": "To take a break now, close the window."
+                            "textContent": {
+                                "en": "To take a break now, close the window.",
+                                "fr": "Pour prendre une pause maintenant, fermez cette fenêtre."
+                            }
                         },
                         {
                             "header": "",
-                            "textContent": "To continue, please click CONTINUE"
+                            "textContent": {
+                                "en": "To continue, please click CONTINUE",
+                                "fr": "Pour continuer, SVP cliquez CONTINUE"
+                            }
                         }
                     ],
                     "buttons": {
@@ -23492,13 +24115,12 @@ UPDATE tasks SET
 WHERE id = 62;
 -- General Information Questionnaire - Reliability Study
 UPDATE tasks SET
-    63,
-    "PSHARPLAB",
-    "QUESTIONNAIRE",
-    "General Information Questionnaire - Reliability Study",
-    "",
-    "",
-    '{
+    from_platform = "PSHARPLAB",
+    task_type = "QUESTIONNAIRE",
+    name = "General Information Questionnaire - Reliability Study",
+    description = "",
+    external_url = "",
+    config = '{
         "taskConfig": {},
         "metadata": [
             {
