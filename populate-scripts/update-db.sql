@@ -6707,7 +6707,7 @@ UPDATE tasks set
                         "nextDisabled": false
                     }
                 }
-            }
+            },
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
