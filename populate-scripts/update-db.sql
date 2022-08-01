@@ -6682,6 +6682,36 @@ UPDATE tasks set
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
                     "title": {
+                        "en": "You may now take a break! It is important that you leave this window open, otherwise your data and progress will be lost.",
+                        "fr": "Vous pouvez maintenant prendre une pause! SVP laissez cette fenêtre ouverte, sinon vos données et votre progrès sera perdu."
+                    },
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "We simply ask that you keep your break to under <b>10 minutes</b> or so.",
+                                "fr": "Nous vous demandons simplement de limiter la pause à environ <b>10 minutes</b>."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Press \\"START\\" when you are ready to continue",
+                                "fr": "Cliquez sur \\"START\\" lorsque vous êtes prêt à commencer"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": false,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
+                }
+            }
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": {
                         "en": "Everyday Activities Game - Part 2",
                         "fr": "Jeu des activités quotidiennes - Partie 2"
                     },
