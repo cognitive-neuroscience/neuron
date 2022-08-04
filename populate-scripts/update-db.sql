@@ -6542,6 +6542,7 @@ UPDATE tasks set
             {
                 "componentName": "RATINGCOMPONENT",
                 "componentConfig": {
+                    "numTrials": 2,
                     "isPractice": true,
                     "maxResponseTime": 150000,
                     "interTrialDelay": 100,
@@ -6643,6 +6644,56 @@ UPDATE tasks set
             {
                 "componentName": "RATINGCOMPONENT",
                 "componentConfig": {
+                    "numTrials": 13,
+                    "isPractice": false,
+                    "maxResponseTime": 15000,
+                    "interTrialDelay": 100,
+                    "interActivityDelay": 1000,
+                    "delayToShowHelpMessage": 10000,
+                    "durationHelpMessageShown": 5000,
+                    "durationOutOftimeMessageShown": 2000,
+                    "delayToShowRatingSlider": 0,
+                    "numDoSomethingActivities": 21,
+                    "stimuliConfig": {
+                        "type": "generated",
+                        "stimuli": null
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "You may now take a break! It is important that you leave this window open, otherwise your data and progress will be lost.",
+                        "fr": "Vous pouvez maintenant prendre une pause! SVP laissez cette fenêtre ouverte, sinon vos données et votre progrès sera perdu."
+                    },
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "We simply ask that you keep your break to under <b>10 minutes</b> or so.",
+                                "fr": "Nous vous demandons simplement de limiter la pause à environ <b>10 minutes</b>."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Press \\"true\\" when you are ready to continue",
+                                "fr": "Cliquez sur \\"true\\" lorsque vous êtes prêt à commencer"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": true,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "RATINGCOMPONENT",
+                "componentConfig": {
+                    "numTrials": 13,
                     "isPractice": false,
                     "maxResponseTime": 15000,
                     "interTrialDelay": 100,
@@ -6668,36 +6719,6 @@ UPDATE tasks set
                             "textContent": {
                                 "en": "Thank you for completing Part 1 of the game!",
                                 "fr": "Merci d''avoir terminé la première partie du jeu!"
-                            }
-                        }
-                    ],
-                    "buttons": {
-                        "isStart": false,
-                        "previousDisabled": true,
-                        "nextDisabled": false
-                    }
-                }
-            },
-            {
-                "componentName": "DISPLAYCOMPONENT",
-                "componentConfig": {
-                    "title": {
-                        "en": "You may now take a break! It is important that you leave this window open, otherwise your data and progress will be lost.",
-                        "fr": "Vous pouvez maintenant prendre une pause! SVP laissez cette fenêtre ouverte, sinon vos données et votre progrès sera perdu."
-                    },
-                    "sections": [
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "We simply ask that you keep your break to under <b>10 minutes</b> or so.",
-                                "fr": "Nous vous demandons simplement de limiter la pause à environ <b>10 minutes</b>."
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Press \\"NEXT\\" when you are ready to continue",
-                                "fr": "Cliquez sur \\"NEXT\\" lorsque vous êtes prêt à commencer"
                             }
                         }
                     ],
