@@ -6678,8 +6678,8 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Press \\"true\\" when you are ready to continue",
-                                "fr": "Cliquez sur \\"true\\" lorsque vous êtes prêt à commencer"
+                                "en": "Press \\"START\\" when you are ready to continue",
+                                "fr": "Cliquez sur \\"START\\" lorsque vous êtes prêt à commencer"
                             }
                         }
                     ],
