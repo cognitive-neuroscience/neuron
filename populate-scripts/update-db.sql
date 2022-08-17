@@ -6513,15 +6513,15 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "You will be asked: How much you look forward to the outcome of it? How mentally effortful does this activity feel to you? ",
-                                "fr": "On vous demandera : À quel point avez-vous hâte au résultat de cette activité ? À quel point cette activité vous demande-t-elle un effort mental ?"
-                            } 
+                                "en": "You will be asked: How much do you look forward to the outcome of it? How mentally effortful does this activity feel to you? ",
+                                "fr": "On vous demandera : À quel point avez-vous hâte au résultat de cette activité ? À quel point cette activité vous demande-t-elle un effort mental?"
+                            }
                         },
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "We understand that this may or may not apply to you (perhaps you don’t currently own a car), but we ask that you try to picture yourself doing each activity so that you can answer the questions.",
-                                "fr": "Nous comprenons que cette question peut ou non s''appliquer à vous (p.ex. vous ne possédez peut-être pas de voiture), mais nous vous demandons d''essayer de vous imaginer en train de faire chaque activité afin de pouvoir répondre aux questions."
+                                "en": "<b>We understand that this may or may not apply to you (perhaps you don’t currently own a car), but we ask that you try to picture yourself doing each activity so that you can answer the questions.</b>",
+                                "fr": "<b>Nous comprenons que cette question peut ou non s''appliquer à vous (p.ex. vous ne possédez peut-être pas de voiture), mais nous vous demandons d''essayer de vous imaginer en train de faire chaque activité afin de pouvoir répondre aux questions.</b>"
                             }
                         },
                         {
@@ -6542,6 +6542,7 @@ UPDATE tasks set
             {
                 "componentName": "RATINGCOMPONENT",
                 "componentConfig": {
+                    "numTrials": 2,
                     "isPractice": true,
                     "maxResponseTime": 150000,
                     "interTrialDelay": 100,
@@ -6628,6 +6629,13 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
+                                "en": "<b>Again, this is the longest part, and it may feel repetitive, but please be patient. There will be a break in the middle.</b>",
+                                "fr": "<b>Encore une fois, ceci est la partie la plus longue, et elle peut sembler répétitive, mais soyez patient. Il y aura une pause au milieu.</b>"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
                                 "en": "Click START when you are ready",
                                 "fr": "Cliquez sur START lorsque vous êtes prêt.e"
                             }
@@ -6643,6 +6651,56 @@ UPDATE tasks set
             {
                 "componentName": "RATINGCOMPONENT",
                 "componentConfig": {
+                    "numTrials": 13,
+                    "isPractice": false,
+                    "maxResponseTime": 15000,
+                    "interTrialDelay": 100,
+                    "interActivityDelay": 1000,
+                    "delayToShowHelpMessage": 10000,
+                    "durationHelpMessageShown": 5000,
+                    "durationOutOftimeMessageShown": 2000,
+                    "delayToShowRatingSlider": 0,
+                    "numDoSomethingActivities": 21,
+                    "stimuliConfig": {
+                        "type": "generated",
+                        "stimuli": null
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "You may now take a break! It is important that you leave this window open, otherwise your data and progress will be lost.",
+                        "fr": "Vous pouvez maintenant prendre une pause! SVP laissez cette fenêtre ouverte, sinon vos données et votre progrès sera perdu."
+                    },
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "We simply ask that you keep your break to under <b>10 minutes</b> or so.",
+                                "fr": "Nous vous demandons simplement de limiter la pause à environ <b>10 minutes</b>."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Press \\"START\\" when you are ready to continue",
+                                "fr": "Cliquez sur \\"START\\" lorsque vous êtes prêt à commencer"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": true,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "RATINGCOMPONENT",
+                "componentConfig": {
+                    "numTrials": 13,
                     "isPractice": false,
                     "maxResponseTime": 15000,
                     "interTrialDelay": 100,
@@ -17444,7 +17502,7 @@ UPDATE tasks SET
                             "questionType": "input",
                             "title": {
                                 "en": "In what year were you diagnosed with Parkinson'' disease? If you DON''T have Parkinson''s disease, please enter \\"0\\"",
-                                "fr": "En quelle année avez-vous reçu votre diagnostic de Parkinson? Si vous n''avez PAS la maladie de Parkinson, SVP inscrire \\"0\\"?"
+                                "fr": "En quelle année avez-vous reçu votre diagnostic de Parkinson? Si vous n''avez PAS la maladie de Parkinson, SVP inscrire \\"0\\"."
                             },
                             "key": "parkinsonsDiagnosisYear",
                             "label": {
@@ -24172,6 +24230,24 @@ UPDATE tasks SET
                                 }
                             ],
                             "key": "havePD"
+                        },
+                        {
+                            "questionType": "input",
+                            "title": {
+                                "en": "In what year were you diagnosed with Parkinson'' disease? If you DON''T have Parkinson''s disease, please enter \\"0\\"",
+                                "fr": "En quelle année avez-vous reçu votre diagnostic de Parkinson? Si vous n''avez PAS la maladie de Parkinson, SVP inscrire \\"0\\"."
+                            },
+                            "key": "parkinsonsDiagnosisYear",
+                            "label": {
+                                "en": "Year (e.g. 2009)",
+                                "fr": "Année (ex. 2009)"
+                            },
+                            "validation": {
+                                "required": true,
+                                "isNumeric": true,
+                                "max": 2030,
+                                "min": 1900
+                            }
                         },
                         {
                             "questionType": "displayText",
