@@ -298,7 +298,7 @@ UPDATE studies SET
 
 
 '
-WHERE id IN (59);
+WHERE id IN (59, 67);
 
 UPDATE studies SET
     config = '{
