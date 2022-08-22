@@ -17513,7 +17513,7 @@ UPDATE tasks SET
                                 "required": true,
                                 "isNumeric": true,
                                 "max": 2030,
-                                "min": 1900
+                                "min": 0
                             }
                         },
                         {
@@ -24246,7 +24246,7 @@ UPDATE tasks SET
                                 "required": true,
                                 "isNumeric": true,
                                 "max": 2030,
-                                "min": 1900
+                                "min": 0
                             }
                         },
                         {
