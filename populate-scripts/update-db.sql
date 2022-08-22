@@ -6513,8 +6513,8 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "You will be asked: How much you look forward to the outcome of it? How mentally effortful does this activity feel to you? ",
-                                "fr": "On vous demandera : À quel point avez-vous hâte au résultat de cette activité ? À quel point cette activité vous demande-t-elle un effort mental ?"
+                                "en": "You will be asked: How much do you look forward to the outcome of it? How mentally effortful does this activity feel to you? ",
+                                "fr": "On vous demandera : À quel point avez-vous hâte au résultat de cette activité ? À quel point cette activité vous demande-t-elle un effort mental?"
                             }
                         },
                         {
@@ -17513,7 +17513,7 @@ UPDATE tasks SET
                                 "required": true,
                                 "isNumeric": true,
                                 "max": 2030,
-                                "min": 1900
+                                "min": 0
                             }
                         },
                         {
@@ -24246,7 +24246,7 @@ UPDATE tasks SET
                                 "required": true,
                                 "isNumeric": true,
                                 "max": 2030,
-                                "min": 1900
+                                "min": 0
                             }
                         },
                         {

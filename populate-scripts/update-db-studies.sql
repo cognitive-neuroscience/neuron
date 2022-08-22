@@ -293,11 +293,7 @@ UPDATE studies SET
                 "textContent": "Pour quelconque question, n''hésitez pas à envoyer un courriel à Dr. Sharp: sharplab.neuro@mcgill.ca"
             }
         ]
-    }
-
-
-
-'
+    }'
 WHERE id IN (59, 67);
 
 UPDATE studies SET
