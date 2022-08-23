@@ -9,7 +9,7 @@ import (
 type MapStringInterface map[string]interface{}
 
 /* TaskSchema defines the SQL table schema for this model
- * NOTE: a task is defined as a thing within the study that the participant must do/see at a specific index 
+ * NOTE: a task is defined as a thing within the study that the participant must do/see at a specific index
  * (can be psych task, info slide, questionnaire, etc)
  */
 var TaskSchema = `

@@ -5,7 +5,7 @@ VALUES
 -- TASKS
 -- NUMBERS GAME (digit span)
 (
-    NULL,
+    1,
     "PSHARPLAB",
     "NAB",
     "Numbers Game",
@@ -15,7 +15,7 @@ VALUES
 ),
 -- FINGER TAPPING
 (
-    NULL,
+    2,
     "PSHARPLAB",
     "NAB",
     "Finger Tapping Game",
@@ -25,7 +25,7 @@ VALUES
 ),
 -- NBACK
 (
-    NULL,
+    3,
     "PSHARPLAB",
     "NAB",
     "N-Back",
@@ -35,7 +35,7 @@ VALUES
 ),
 -- STROOP
 (
-    NULL,
+    4,
     "PSHARPLAB",
     "NAB",
     "Stroop Task",
@@ -45,7 +45,7 @@ VALUES
 ),
 -- TRAIL MAKING (connect the dots)
 (
-    NULL,
+    5,
     "PSHARPLAB",
     "NAB",
     "Trail Making",
@@ -55,7 +55,7 @@ VALUES
 ),
 -- TASK SWITCHING
 (
-    NULL,
+    6,
     "PSHARPLAB",
     "EXPERIMENTAL",
     "Task Switching",
@@ -65,7 +65,7 @@ VALUES
 ),
 -- DEMAND SELECTION
 (
-    NULL,
+    7,
     "PSHARPLAB",
     "EXPERIMENTAL",
     "Demand Selection",
@@ -75,7 +75,7 @@ VALUES
 ),
 -- SMILEY FACE
 (
-    NULL,
+    8,
     "PSHARPLAB",
     "EXPERIMENTAL",
     "Smiley Face",
@@ -85,7 +85,7 @@ VALUES
 ),
 -- ODDBALL
 (
-    NULL,
+    9,
     "PSHARPLAB",
     "EXPERIMENTAL",
     "Oddball Task",
@@ -95,7 +95,7 @@ VALUES
 ),
 -- EVERYDAY CHOICE
 (
-    NULL,
+    10,
     "PSHARPLAB",
     "EXPERIMENTAL",
     "Everyday Choice",
@@ -103,10 +103,9 @@ VALUES
     "",
     '{}'
 ),
--- QUESTIONNAIRES
--- DEMOGRAPHICS
+-- DEMOGRAPHICS QUESTIONNAIRE
 (
-    NULL,
+    11,
     "PSHARPLAB",
     "QUESTIONNAIRE",
     "Demographics Questionnaire",
@@ -114,9 +113,9 @@ VALUES
     "",
     '{}'
 ),
--- PAVLOVIA TASKS
+-- CORSI PAVLOVIA TASK
 (
-    NULL, 
+    12, 
     "PAVLOVIA",
     "EXPERIMENTAL",
     "Corsi",
@@ -124,20 +123,9 @@ VALUES
     "https://run.pavlovia.org/Sharp_lab/corsi-test/html",
     '{}'
 ),
--- CONSENT FORMS
--- STRESS CLINICAL FR
+-- STRESS CLINICAL CONSENT
 (
-    NULL,
-    "PSHARPLAB",
-    "CONSENT",
-    "Stress Clinical FR",
-    "",
-    "",
-    '{}'
-),
--- STRESS CLINICAL
-(
-    NULL,
+    14,
     "PSHARPLAB",
     "CONSENT",
     "Stress Clinical",
@@ -145,9 +133,9 @@ VALUES
     "",
     '{}'
 ),
--- STRESS PILOT
+-- STRESS PILOT CONSENT
 (
-    NULL,
+    15,
     "PSHARPLAB",
     "CONSENT",
     "Stress Pilot",
@@ -155,29 +143,9 @@ VALUES
     "",
     '{}'
 ),
--- STRESS CLINICAL DEBRIEF
+-- WEB PHENO CLINICAL CONSENT
 (
-    NULL,
-    "PSHARPLAB",
-    "CONSENT",
-    "Stress Clinical Debrief",
-    "",
-    "",
-    '{}'
-),
--- WEB PHENO CLINICAL FR
-(
-    NULL,
-    "PSHARPLAB",
-    "CONSENT",
-    "Web Pheno Clinical FR",
-    "",
-    "",
-    '{}'
-),
--- WEB PHENO CLINICAL
-(
-    NULL,
+    18,
     "PSHARPLAB",
     "CONSENT",
     "Web Pheno Clinical",
@@ -185,9 +153,9 @@ VALUES
     "",
     '{}'
 ),
--- WEB PHENO PILOT
+-- WEB PHENO PILOT CONSENT
 (
-    NULL,
+    19,
     "PSHARPLAB",
     "CONSENT",
     "Web Pheno Pilot",
@@ -195,9 +163,9 @@ VALUES
     "",
     '{}'
 ),
--- APATHY AES ENGLISH CLEAN
+-- APATHY AES QUESTIONNAIRE
 (
-    NULL,
+    20,
     "PSHARPLAB",
     "QUESTIONNAIRE",
     "Apathy AES English Clean",
@@ -205,19 +173,9 @@ VALUES
     "",
     '{}'
 ),
--- APATHY AES FRENCH CLEAN
+-- BIS-11 QUESTIONNAIRE
 (
-    NULL,
-    "PSHARPLAB",
-    "QUESTIONNAIRE",
-    "Apathy AES French Clean",
-    "Apathy Evaluation Scale FR",
-    "",
-    '{}'
-),
--- BIS-11 English
-(
-    NULL,
+    22,
     "PSHARPLAB",
     "QUESTIONNAIRE",
     "BIS-11 English Version",
@@ -225,19 +183,9 @@ VALUES
     "",
     '{}'
 ),
--- BIS-11 French
+-- GDS QUESTIONNAIRE
 (
-    NULL,
-    "PSHARPLAB",
-    "QUESTIONNAIRE",
-    "BIS-11 French Version",
-    "The Barratt Impulsiveness Scale FR",
-    "",
-    '{}'
-),
--- GDS English
-(
-    NULL,
+    24,
     "PSHARPLAB",
     "QUESTIONNAIRE",
     "GDS Short Form English",
@@ -245,19 +193,9 @@ VALUES
     "",
     '{}'
 ),
--- GDS French
+-- QUIP QUESTIONNAIRE
 (
-    NULL,
-    "PSHARPLAB",
-    "QUESTIONNAIRE",
-    "GDS Short Form French",
-    "Geriatric Depression Scale French",
-    "",
-    '{}'
-),
--- QUIP English
-(
-    NULL,
+    26,
     "PSHARPLAB",
     "QUESTIONNAIRE",
     "QUIP",
@@ -265,19 +203,9 @@ VALUES
     "",
     '{}'
 ),
--- QUIP French
+-- SHAPS QUESTIONNAIRE
 (
-    NULL,
-    "PSHARPLAB",
-    "QUESTIONNAIRE",
-    "QUIP French",
-    "Questionnaire sur les troubles impulsifs-compulsifs dans la maladie de Parkinson (QUIP-RS)",
-    "",
-    '{}'
-),
--- SHAPS English
-(
-    NULL,
+    28,
     "PSHARPLAB",
     "QUESTIONNAIRE",
     "SHAPS English",
@@ -285,19 +213,9 @@ VALUES
     "",
     '{}'
 ),
--- SHAPS French
+-- PDAQ QUESTIONNAIRE
 (
-    NULL,
-    "PSHARPLAB",
-    "QUESTIONNAIRE",
-    "SHAPS French",
-    "Échelle de Plaisir de Snaith-Hamilton",
-    "",
-    '{}'
-),
--- PDAQ English
-(
-    NULL,
+    30,
     "PSHARPLAB",
     "QUESTIONNAIRE",
     "PDAQ English",
@@ -305,19 +223,9 @@ VALUES
     "",
     '{}'
 ),
--- PDAQ French
+-- AMI QUESTIONNAIRE
 (
-    NULL,
-    "PSHARPLAB",
-    "QUESTIONNAIRE",
-    "PDAQ French",
-    "Penn Parkinson's Daily Activities Questionnaire-15 French",
-    "",
-    '{}'
-),
--- AMI
-(
-    NULL,
+    32,
     "PSHARPLAB",
     "QUESTIONNAIRE",
     "AMI",
@@ -325,9 +233,9 @@ VALUES
     "",
     '{}'
 ),
--- Everyday Activities Post Test
+-- Everyday Activities Post Test QUESTIONNAIRE
 (
-    NULL,
+    33,
     "PSHARPLAB",
     "QUESTIONNAIRE",
     "Everyday Activities Post Test",
@@ -335,9 +243,9 @@ VALUES
     "",
     '{}'
 ),
--- Demographics Questionnaire With SES
+-- Demographics Questionnaire With SES QUESTIONNAIRE
 (
-    NULL,
+    34,
     "PSHARPLAB",
     "QUESTIONNAIRE",
     "Demographics Questionnaire With SES",
@@ -345,9 +253,9 @@ VALUES
     "",
     '{}'
 ),
--- PSS
+-- PSS QUESTIONNAIRE
 (
-    NULL,
+    35,
     "PSHARPLAB",
     "QUESTIONNAIRE",
     "Perceived Stress Scale",
@@ -355,9 +263,9 @@ VALUES
     "",
     '{}'
 ),
--- Holmes-Rahe Life Stress Inventory
+-- Holmes-Rahe Life Stress Inventory QUESTIONNAIRE
 (
-    NULL,
+    36,
     "PSHARPLAB",
     "QUESTIONNAIRE",
     "Holmes-Rahe Life Stress Inventory",
@@ -365,9 +273,9 @@ VALUES
     "",
     '{}'
 ),
--- PAVLOVIA TASK Stress Task Pilot Version 4
+-- PAVLOVIA TASK Stress Task Pilot Version 4 CORSI
 (
-    NULL,
+    37,
     "PAVLOVIA",
     "EXPERIMENTAL",
     "Stress Task Pilot Version 4",
@@ -375,9 +283,9 @@ VALUES
     "https://run.pavlovia.org/Sharp_lab/s_study_s_part1",
     '{}'
 ),
--- PAVLOVIA TASK Control Stress Task Pilot Version 4
+-- PAVLOVIA TASK Control Stress Task Pilot Version 4 CORSI
 (
-    NULL,
+    38,
     "PAVLOVIA",
     "EXPERIMENTAL",
     "Control Stress Task Pilot Version 4",
@@ -385,9 +293,9 @@ VALUES
     "https://run.pavlovia.org/Sharp_lab/s_study_c_part1",
     '{}'
 ),
--- PANAS
+-- MDMQ QUESTIONNAIRE
 (
-    NULL,
+    39,
     "PSHARPLAB",
     "QUESTIONNAIRE",
     "PANAS",
@@ -395,9 +303,9 @@ VALUES
     "",
     '{}'
 ),
--- Stress Study Post Test
+-- Stress Study Post Test QUESTIONNAIRE
 (
-    NULL,
+    40,
     "PSHARPLAB",
     "QUESTIONNAIRE",
     "Stress Study Post Test",
@@ -405,9 +313,9 @@ VALUES
     "",
     '{}'
 ),
--- Control Stress Debrief
+-- Control Stress Debrief PAVLOVIA
 (
-    NULL,
+    41,
     "PAVLOVIA",
     "EXPERIMENTAL",
     "Control Stress Debrief",
@@ -415,9 +323,9 @@ VALUES
     "https://run.pavlovia.org/Sharp_lab/debrief_s_pilot4",
     '{}'
 ),
--- Stress Study Debrief
+-- Stress Study Debrief PAVLOVIA
 (
-    NULL,
+    42,
     "PAVLOVIA",
     "EXPERIMENTAL",
     "Stress Study Debrief",
@@ -425,9 +333,9 @@ VALUES
     "https://run.pavlovia.org/Sharp_lab/debrief_s_s_pilot4",
     '{}'
 ),
--- Basic Background Questionnaire
+-- Basic Background Questionnaire QUESTIONNAIRE
 (
-    NULL,
+    43,
     "PSHARPLAB",
     "QUESTIONNAIRE",
     "Basic Background Questionnaire",
@@ -435,9 +343,9 @@ VALUES
     "",
     '{}'
 ),
--- Parkinsons Treatment Questionnaire
+-- Parkinsons Treatment QUESTIONNAIRE
 (
-    NULL,
+    44,
     "PSHARPLAB",
     "QUESTIONNAIRE",
     "Parkinson's treatment Questionnaire",
@@ -445,9 +353,9 @@ VALUES
     "",
     '{}'
 ),
--- General Health Questionnaire
+-- General Health QUESTIONNAIRE
 (
-    NULL,
+    45,
     "PSHARPLAB",
     "QUESTIONNAIRE",
     "General Health Questionnaire",
@@ -455,9 +363,9 @@ VALUES
     "",
     '{}'
 ),
--- Deception Debrief Info Display
+-- Deception Debrief INFO DISPLAY
 (
-    NULL,
+    46,
     "PSHARPLAB",
     "INFO_DISPLAY",
     "Deception Debrief",
@@ -465,9 +373,9 @@ VALUES
     "",
     '{}'
 ),
--- SART
+-- SART 
 (
-    NULL,
+    47,
     "PSHARPLAB",
     "NAB",
     "SART",
@@ -477,7 +385,7 @@ VALUES
 ),
 -- Break Display Slide INFO DISPLAY
 (
-    NULL,
+    48,
     "PSHARPLAB",
     "INFO_DISPLAY",
     "Break Display Slide",
@@ -487,7 +395,7 @@ VALUES
 ),
 -- Welcome Display Slide INFO DISPLAY
 (
-    NULL,
+    49,
     "PSHARPLAB",
     "INFO_DISPLAY",
     "Welcome Display Slide",
@@ -497,7 +405,7 @@ VALUES
 ),
 -- End Display Slide INFO DISPLAY
 (
-    NULL,
+    50,
     "PSHARPLAB",
     "INFO_DISPLAY",
     "End Display Slide",
@@ -505,9 +413,9 @@ VALUES
     "",
     '{}'
 ),
--- Stress Study Questionnaire
+-- Stress Study QUESTIONNAIRE
 (
-    NULL,
+    51,
     "PSHARPLAB",
     "QUESTIONNAIRE",
     "Stress Study Questionnaire",
@@ -517,7 +425,7 @@ VALUES
 ),
 -- Face Name association task
 (
-    NULL,
+    52,
     "PSHARPLAB",
     "EXPERIMENTAL",
     "Face Name Association Task",
@@ -527,7 +435,7 @@ VALUES
 ),
 -- PLT
 (
-    NULL,
+    53,
     "PAVLOVIA",
     "EXPERIMENTAL",
     "PLT",
@@ -535,11 +443,11 @@ VALUES
     "https://run.pavlovia.org/Sharp_lab/probabilistic-learning-task/html",
     '{}'
 ),
--- Stress Study: Post Manipulation Check In
+-- Stress Study: Post Manipulation Check In 
 (
-    NULL,
+    54,
     "PSHARPLAB",
-    "EXPERIMENTAL",
+    "QUESTIONNAIRE",
     "Stress Study: Post Manipulation Check In",
     "",
     "",
@@ -547,7 +455,7 @@ VALUES
 ),
 -- Stress Study Wait Slide
 (
-    NULL,
+    55,
     "PSHARPLAB",
     "INFO_DISPLAY",
     "Stress Study Wait Slide",
@@ -557,7 +465,7 @@ VALUES
 ),
 -- PLT
 (
-    NULL,
+    56,
     "PSHARPLAB",
     "EXPERIMENTAL",
     "Probabilistic Learning Task",
@@ -565,11 +473,81 @@ VALUES
     "",
     '{}'
 ),
+-- Everyday Choice Clinical Info Questionnaire
 (
-    NULL,
+    57,
     "PSHARPLAB",
     "QUESTIONNAIRE",
-    "POST PLT Questionnaire",
+    "Everyday Choice Task Clinical Info Questionnaire",
+    "",
+    "",
+    '{}'
+),
+-- Everyday Choice Demographics Questionnaire
+(
+    58,
+    "PSHARPLAB",
+    "QUESTIONNAIRE",
+    "Everyday Choice Demographics Questionnaire",
+    "",
+    "",
+    '{}'
+),
+-- Everyday Choice Welcome Display Page
+(
+    59,
+    "PSHARPLAB",
+    "INFO_DISPLAY",
+    "Everyday Choice Welcome Display Page",
+    "",
+    "",
+    '{}'
+),
+-- DSST Pavlovia Task 1
+(
+    60,
+    "PAVLOVIA",
+    "EXPERIMENTAL",
+    "DSST 1",
+    "Digit Symbol Substitution Task 1",
+    "https://run.pavlovia.org/Sharp_lab/digit-symbol-substitution-task/html/",
+    '{}'
+),
+-- DSST Pavlovia Task 2
+(
+    61,
+    "PAVLOVIA",
+    "EXPERIMENTAL",
+    "DSST 2",
+    "Digit Symbol Substitution Task 2",
+    "https://run.pavlovia.org/Sharp_lab/digit-symbol-substitution-task-2/html/"
+    '{}'
+),
+-- PLT Pavlovia Task
+(
+    62,
+    "PAVLOVIA",
+    "EXPERIMENTAL",
+    "PLT 2",
+    "Probabilistic Learning Task 2",
+    "https://run.pavlovia.org/Sharp_lab/probabilistic-learning-task-2/html/",
+    '{}'
+),
+-- General Information Questionnaire - Reliability Study
+(
+    63,
+    "PSHARPLAB",
+    "QUESTIONNAIRE",
+    "General Information Questionnaire - Reliability Study",
+    "",
+    "",
+    '{}'
+),
+(
+    64,
+    "PSHARPLAB",
+    "QUESTIONNAIRE",
+    "POST PLT Questionnaire (FOR PLT VERSION 1)",
     "Questionnaire asking the participant what they thought was the most/least likely stimulus to be correct",
     "",
     '{}'

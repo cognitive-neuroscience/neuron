@@ -1,6 +1,6 @@
 -- File used to update the DB for existing tasks
 
--- NUMBERS GAME TASK
+-- NUMBERS GAME TASK (previously the DIGIT SPAN)
 UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "NAB",
@@ -13,19 +13,31 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Welcome to the Number Game Part 1",
+                    "title": {
+                        "en": "Welcome to the Number Game Part 1",
+                        "fr": "Bienvenue au jeu des chiffres - Partie 1"
+                        },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Please read the instructions carefully"
+                            "textContent": {
+                                "en": "Please read the instructions carefully",
+                                "fr": "Lisez attentivement les instructions"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "This is a memory test"
+                            "textContent": {
+                                "en": "This is a memory test",
+                                "fr": "Ceci est un test de mémoire"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to proceed",
+                                "fr": "Cliquez sur \\"SUIVANT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -42,19 +54,32 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "A sequence of numbers appear on the screen <b>one at a time</b>. (Ex: 3, 9, 2)"
+                            "textContent": {
+                                "en": "A sequence of numbers appear on the screen <b>one at a time</b>. (Ex: 3, 9, 2)",
+                                "fr": "Une séquence de chiffres apparaîtra sur l''écran <b>un à la fois</b>. (Eg: 3, 9, 2)"
+
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Using the keypad shown on the screen, you will need to enter those same numbers <b>in the same order (Ex: 3, 9, 2)</b>."
+                            "textContent": {
+                                "en": "Using the keypad shown on the screen, you will need to enter those same numbers <b>in the same order (Ex: 3, 9, 2)</b>.",
+                                "fr": "Vous devrez mémoriser cette séquence, et, en utilisant votre souris, vous devrez saisir ces mêmes chiffres <b>dans le même ordre (Ex: 3, 9, 2)</b>."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You must click the \\"Submit\\" key to record your answer"
+                            "textContent": {
+                                "en": "You must click the \\"Submit\\" key to record your answer",
+                                "fr": "Vous devez cliquer sur \\"SUBMIT\\" pour enregistrer votre réponse."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to proceed",
+                                "fr": "Cliquez sur \\"SUIVANT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -67,23 +92,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Practice round",
+                    "title": {
+                        "en": "Practice round",
+                        "fr": "Ronde de pratique"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Let''s practice"
+                            "textContent": {
+                                "en": "Let''s practice",
+                                "fr": "Pratiquons"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Remember when the keypad is shown, you need to enter the numbers <b>in the same order</b> as they were shown and then click submit."
+                            "textContent": {
+                                "en": "Remember when the keypad is shown, you need to enter the numbers <b>in the same order</b> as they were shown and then click submit.",
+                                "fr": "Rappelez-vous que lorsque le clavier est affiché, vous devez saisir les chiffres <b>dans le même ordre</b> que l’ordre dans lequel ils ont été présentés. Ensuite, cliquez sur SUBMIT."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If you don''t remember, press skip"
+                            "textContent": {
+                                "en": "If you don''t remember, press skip",
+                                "fr": "Si vous ne vous en souvenez pas, cliquez sur \\"SKIP\\" pour passer au prochain."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round."
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ],
                     "buttons": {
@@ -97,7 +137,7 @@ UPDATE tasks set
                 "componentName": "DIGITSPANCOMPONENT",
                 "componentConfig": {
                     "isPractice": true,
-                    "maxResponseTime": 30000,
+                    "maxResponseTime": 50000,
                     "interTrialDelay": 0,
                     "showFeedbackAfterEachTrial": true,
                     "durationDigitPresented": 1000,
@@ -116,23 +156,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Good job!",
+                    "title": {
+                        "en": "Good job!",
+                        "fr": "Bon travail!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You will now play the actual game."
+                            "textContent": {
+                                "en": "You will now play the actual game.",
+                                "fr": "Vous allez maintenant commencer le jeu."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Remember when the keypad is shown, you need to enter the numbers <b>in the same order</b> as they were shown and click the <b>submit</b> button."
+                            "textContent": {
+                                "en": "Remember when the keypad is shown, you need to enter the numbers <b>in the same order</b> as they were shown and click the <b>submit</b> button.",
+                                "fr": "Rappelez-vous que quand le clavier est affiché, vous devrez saisir les chiffres <b>dans le même ordre</b> que l’ordre dans lequel ils ont été présentés, et ensuite, cliquez sur <b>Submit</b> pour soumettre votre réponse."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If you don''t remember the numbers, click skip for the next trial."
+                            "textContent": {
+                                "en": "If you don''t remember the numbers, click skip for the next trial.",
+                                "fr": "Si vous ne vous en souvenez pas, cliquez sur \\"Skip\\" pour passer au prochain tour."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready for the actual game"
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the actual game",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -146,7 +201,7 @@ UPDATE tasks set
                 "componentName": "DIGITSPANCOMPONENT",
                 "componentConfig": {
                     "isPractice": false,
-                    "maxResponseTime": 30000,
+                    "maxResponseTime": 50000,
                     "interTrialDelay": 0,
                     "showFeedbackAfterEachTrial": false,
                     "durationDigitPresented": 1000,
@@ -165,19 +220,31 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Welcome to the Number Game Part 2",
+                    "title": {
+                        "en": "Welcome to the Number Game Part 2",
+                        "fr": "Bienvenue au jeu des chiffres - Partie 2"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "A sequence of numbers appear on the screen <b>one at a time</b>. (Ex: 3, 9, 2)"
+                            "textContent": {
+                                "en": "A sequence of numbers appear on the screen <b>one at a time</b>. (Ex: 3, 9, 2)",
+                                "fr": "Une séquence de chiffres apparaîtra sur l''écran <b>un à la fois</b>. (Ex: 3, 9, 2)"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Using the keypad shown on the screen, you will need to enter those same numbers <b>in REVERSE order (Ex: 2, 9, 3)</b> and then click the \\"Submit\\" key."
+                            "textContent": {
+                                "en": "Using the keypad shown on the screen, you will need to enter those same numbers <b>in REVERSE order (Ex: 2, 9, 3)</b> and then click the \\"Submit\\" key.",
+                                "fr": "Vous devrez maintenant saisir ces mêmes chiffres <b>dans l''ordre INVERSE (Ex: 2, 9, 3)</b>. Ensuite, cliquez sur \\"Submit\\"."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to proceed",
+                                "fr": "Cliquez sur \\"SUIVANT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -190,27 +257,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Practice round pt. 2",
+                    "title": {
+                        "en": "Practice round pt. 2",
+                        "fr": "Pratique 2"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Let''s practice"
+                            "textContent": {
+                                "en": "Let''s practice",
+                                "fr": "Pratiquons"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Rememebr when the keypad is shown, you need to enter the numbers <b>in reverse order</b> as they were shown and click submit"
+                            "textContent": {
+                                "en": "Rememebr when the keypad is shown, you need to enter the numbers <b>in reverse order</b> as they were shown and click submit",
+                                "fr": "Rappelez-vous: quand le clavier est affiché, vous devez saisir les chiffres <b>dans l''ordre inverse</b> que celui dans lequel ils ont été présentés. Ensuite, cliquez sur submit."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If you don''t remember, press skip"
+                            "textContent": {
+                                "en": "If you don''t remember, press skip",
+                                "fr": "Si vous ne vous en souvenez pas, cliquez sur \\"SKIP\\" pour passer au prochain."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The game will launch in full-screen."
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready for the practice round"
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ],
                     "buttons": {
@@ -224,7 +302,7 @@ UPDATE tasks set
                 "componentName": "DIGITSPANCOMPONENT",
                 "componentConfig": {
                     "isPractice": true,
-                    "maxResponseTime": 30000,
+                    "maxResponseTime": 50000,
                     "interTrialDelay": 0,
                     "showFeedbackAfterEachTrial": true,
                     "durationDigitPresented": 1000,
@@ -243,23 +321,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Good job!",
+                    "title": {
+                        "en": "Good job!",
+                        "fr": "Bon travail!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You will now play the actual game"
+                            "textContent": {
+                                "en": "You will now play the actual game",
+                                "fr": "Vous allez maintenant commencer le vrai tour"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Remember when the keypad is shown, you need to enter the numbers <b>in reverse order</b> as they were shown and click the <b>submit</b> button"
+                            "textContent": {
+                                "en": "Remember when the keypad is shown, you need to enter the numbers <b>in reverse order</b> as they were shown and click the <b>submit</b> button",
+                                "fr": "Rappelez-vous que quand le clavier est affiché, vous devez saisir les chiffres <b>dans l''ordre inverse</b> que celui dans lequel ils ont été présentés. Ensuite, cliquez sur <b>Submit</b>."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If you don''t remember the numbers, press skip for the the next trial."
+                            "textContent": {
+                                "en": "If you don''t remember, press skip",
+                                "fr": "Si vous ne vous en souvenez pas, cliquez sur \\"SKIP\\" pour passer au prochain."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready for the actual game"
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the actual game",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -273,7 +366,7 @@ UPDATE tasks set
                 "componentName": "DIGITSPANCOMPONENT",
                 "componentConfig": {
                     "isPractice": false,
-                    "maxResponseTime": 30000,
+                    "maxResponseTime": 50000,
                     "interTrialDelay": 0,
                     "showFeedbackAfterEachTrial": false,
                     "durationDigitPresented": 1000,
@@ -292,19 +385,31 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Congratulations!",
+                    "title": {
+                        "en": "Congratulations!",
+                        "fr": "Félicitations!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You finished the game successfully"
+                            "textContent": {
+                                "en": "You finished the game successfully",
+                                "fr": "Vous avez terminé le jeu avec succès"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Thank you for your participation"
+                            "textContent": {
+                                "en": "Thank you for your participation",
+                                "fr": "Merci pour votre participation"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to continue"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -330,19 +435,31 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Welcome to the Finger Tapping Game",
+                    "title": {
+                        "en": "Welcome to the Finger Tapping Game",
+                        "fr": "Bienvenue au jeu des doigts"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Read the instructions carefully"
+                            "textContent": {
+                                "en": "Read the instructions carefully",
+                                "fr": "Lisez attentivement les instructions"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "This is a test of finger tapping speed"
+                            "textContent": {
+                                "en": "This is a test of finger tapping speed",
+                                "fr": "Ceci est un test de vitesse de des doigts"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to proceed",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -355,15 +472,24 @@ UPDATE tasks set
             {
                 "componentName": "SELECTOPTIONCOMPONENT",
                 "componentConfig": {
-                    "question": "Are you left handed or right handed?",
+                    "question": {
+                        "en": "Are you left handed or right handed?",
+                        "fr": "Es-tu gaucher ou droitier?"
+                    },
                     "cacheKey": "finger-tapping-handedness",
                     "options": [
                         {
-                            "label": "Left Handed",
+                            "label": {
+                                "en": "Left Handed",
+                                "fr": "Gaucher"
+                            },
                             "value": "LEFT"
                         },
                         {
-                            "label": "Right Handed",
+                            "label": {
+                                "en": "Right Handed",
+                                "fr": "Droitier"
+                            },
                             "value": "RIGHT"
                         }
                     ]
@@ -376,23 +502,38 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "image-horizontal",
-                            "imagePath": "/assets/images/instructions/fingertapping/index-finger-banner.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/fingertapping/index-finger-banner_en.png",
+                                "fr": "/assets/images/instructions/fingertapping/index-finger-banner_fr.png"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You will have to <b>alternatively tap</b> the <b>P</b> and <b>Q</b> keys of the keyboard <b>as fast as you can</b>"
+                            "textContent": {
+                                "en": "You will have to <b>alternatively tap</b> the <b>P</b> and <b>Q</b> keys of the keyboard <b>as fast as you can</b>",
+                                "fr": "Avec un de vos index, vous devrez taper les clés P et Q du clavier <b>en alternance et le plus vite possible</b>"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You will do 3 rounds of this."
+                            "textContent": {
+                                "en": "You will do 3 rounds of this.",
+                                "fr": "Vous ferez 3 tours."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "We will tell you which hand to use right before each round"
+                            "textContent": {
+                                "en": "We will tell you which hand to use right before each round",
+                                "fr": "Avant chaque tour, nous indiquerons si vous devez utiliser l’index droit ou gauche"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -409,15 +550,24 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "The keys you will be tapping on the keyboard are the \\"Q\\" and the \\"P\\" keys"
+                            "textContent": {
+                                "en": "The keys you will be tapping on the keyboard are the \\"Q\\" and the \\"P\\" keys",
+                                "fr": "Les touches sur lesquelles vous allez taper en alternance sont \\"Q\\" et \\"P\\""
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Please go ahead and find these keys now"
+                            "textContent": {
+                                "en": "Please go ahead and find these keys now",
+                                "fr": "Prenez un moment pour localiser ces touches sur le clavier."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -430,23 +580,31 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Practice round",
+                    "title": {
+                        "en": "Practice round",
+                        "fr": "Pratique"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "First, let''s practice"
+                            "textContent": {
+                                "en": "First, let''s practice",
+                                "fr": "Commençons par un tour d’entraînement!"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "For the practice, please use your <b>RIGHT</b> index finger"
+                            "textContent": {
+                                "en": "For the practice, please use your <b>RIGHT</b> index finger",
+                                "fr": "Veuillez utiliser votre index <b>DROIT</b>"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "(the task will launch in fullscreen)"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready for the practice round"
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ],
                     "buttons": {
@@ -459,7 +617,10 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Remember, you must use a SINGLE hand, and tap as fast as you can",
+                    "title": {
+                        "en": "Remember, you must use a SINGLE hand, and tap as fast as you can",
+                        "fr": "N''oubliez pas que vous devez utiliser une SEULE main et taper aussi vite que vous le pouvez"
+                    },
                     "timerConfig": {
                         "timer": 5000,
                         "showTimer": true,
@@ -474,7 +635,6 @@ UPDATE tasks set
                 "componentConfig": {
                     "isPractice": true,
                     "maxResponseTime": 10000,
-
                     "durationFixationPresented": 50,
                     "useHand": "RIGHT"
                 }
@@ -482,23 +642,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Main round",
+                    "title": {
+                        "en": "Main round",
+                        "fr": "Tour principal"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Good job! Now you will complete the main test."
+                            "textContent": {
+                                "en": "Good job! Now you will complete the main test.",
+                                "fr": "Bon travail! Vous êtes maintenant prêt à commencer."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You will be doing 3 rounds"
+                            "textContent": {
+                                "en": "You will be doing 3 rounds",
+                                "fr": "Vous ferez 3 tours."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You’ll get a break between each round and we will tell you which hand to use just before you begin."
+                            "textContent": {
+                                "en": "You’ll get a break between each round and we will tell you which hand to use just before you begin.",
+                                "fr": "Nous indiquerons si vous devez utiliser l’index droit ou gauche avant chaque tour et vous aurez une pause après chaque tour."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to continue"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -515,19 +690,31 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "In the <b>first two rounds</b>, you have to tap <b>as fast as you can</b> with a <b>SINGLE</b> index finger for 1 full minute"
+                            "textContent": {
+                                "en": "In the <b>first two rounds</b>, you have to tap <b>as fast as you can</b> with a <b>SINGLE</b> index finger for 1 full minute",
+                                "fr": "Pour <b>les deux premiers tours</b>, vous devrez taper le \\"P\\" et \\"Q\\" en alternance avec <b>UN SEUL</b> index pendant 1 minute, <b>le plus vite possible</b>, comme pendant l’entraînement."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "We will tell you which hand to use before each round"
+                            "textContent": {
+                                "en": "We will tell you which hand to use before each round",
+                                "fr": "Nous vous dirons quelle main utiliser avant chaque tour."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "In the <b>third round</b>, you have to use <b>BOTH</b> index fingers, one for each key, and keep tapping <b>as fast as you can</b> for 20 seconds"
+                            "textContent": {
+                                "en": "In the <b>third round</b>, you have to use <b>BOTH</b> index fingers, one for each key, and keep tapping <b>as fast as you can</b> for 20 seconds",
+                                "fr": "Pour <b>le troisième tour</b>, vous devrez utiliser les <b>DEUX</b> index, un pour \\"Q\\" et un pour \\"P\\", et taper les touches en alternance <b>aussi vite que possible</b> pendant 20 secondes."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to continue"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -540,27 +727,45 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "First Round",
+                    "title": {
+                        "en": "First Round",
+                        "fr": "Premier tour"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Please use the index finger of your <b>DOMINANT HAND</b> for this round"
+                            "textContent": {
+                                "en": "Please use the index finger of your <b>DOMINANT HAND</b> for this round",
+                                "fr": "Veuillez utiliser l''index de votre <b>MAIN DOMINANTE</b> pour ce tour."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "(if you are right-handed, that is your right hand)"
+                            "textContent": {
+                                "en": "(if you are right-handed, that is your right hand)",
+                                "fr": "(si vous utilisez principalement votre main droite pour écrire, votre main dominante est la droite)"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "REMEMBER:"
+                            "textContent": {
+                                "en": "REMEMBER:",
+                                "fr": "N''oubliez pas:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Tap the \\"P\\" and \\"Q\\" keys as fast as you can"
+                            "textContent": {
+                                "en": "Tap the \\"P\\" and \\"Q\\" keys as fast as you can",
+                                "fr": "Tapez les clés \\"P\\" et \\"Q\\" en alternance aussi vite que possible"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -573,7 +778,10 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Remember, you must use a SINGLE hand and tap as fast as you can",
+                    "title": {
+                        "en": "Remember, you must use a SINGLE hand and tap as fast as you can",
+                        "fr": "N''oubliez pas que vous devez utiliser une SEULE main et taper aussi vite que vous le pouvez"
+                    },
                     "timerConfig": {
                         "timer": 5000,
                         "showTimer": true,
@@ -595,7 +803,10 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "It''s break time",
+                    "title": {
+                        "en": "It''s break time",
+                        "fr": "C''est la pause"
+                    },
                     "timerConfig": {
                         "timer": 120000,
                         "showTimer": true,
@@ -606,23 +817,38 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "<b>Second Round:</b> Please use your <b>NON-DOMINANT</b> hand for this round."
+                            "textContent": {
+                                "en": "<b>Second Round:</b> Please use your <b>NON-DOMINANT</b> hand for this round.",
+                                "fr": "<b>Deuxième tour</b>: Veuillez utiliser votre <b>MAIN NON DOMINANTE</b> pour ce tour."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "(so if you are right-handed, that is your left hand)"
+                            "textContent": {
+                                "en": "(so if you are right-handed, that is your left hand)",
+                                "fr": "(si vous êtes droitier, c''est votre main gauche)"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You have to wait for <b> at least 30 seconds</b> before being able to continue"
+                            "textContent": {
+                                "en": "You have to wait for <b>at least 30 seconds</b> before being able to continue",
+                                "fr": "Vous devrez attendre <b>au moins 30 secondes</b> avant de cliquer \\"Start\\" pour continuer"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The next round will automatically start in 2 minutes unless you choose to continue sooner"
+                            "textContent": {
+                                "en": "The next round will automatically start in 2 minutes unless you choose to continue sooner",
+                                "fr": "Le prochain tour commencera automatiquement dans 2 minutes à moins que vous ne choisissiez de continuer plus tôt."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready"
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ]
                 }
@@ -630,7 +856,10 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "You must use a SINGLE hand and tap as fast as you can",
+                    "title": {
+                        "en": "Remember, you must use a SINGLE hand and tap as fast as you can",
+                        "fr": "N''oubliez pas que vous devez utiliser une SEULE main et taper aussi vite que vous le pouvez"
+                    },
                     "timerConfig": {
                         "timer": 5000,
                         "showTimer": true,
@@ -653,7 +882,10 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "It''s break time",
+                    "title": {
+                        "en": "It''s break time",
+                        "fr": "C''est la pause"
+                    },
                     "timerConfig": {
                         "timer": 120000,
                         "showTimer": true,
@@ -664,23 +896,38 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "<b>Third round:</b> Please use <b>BOTH INDEX FINGERS</b> for this round."
+                            "textContent": {
+                                "en": "<b>Third round:</b> Please use <b>BOTH INDEX FINGERS</b> for this round.",
+                                "fr": "<b>Troisième tour:</b> Veuillez utiliser les <b>DEUX MAINS</b> pour ce tour."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "This means you must use your LEFT finger to tap \\"Q\\" and your RIGHT finger to tap \\"P\\", and alternate between the two"
+                            "textContent": {
+                                "en": "This means you must use your LEFT finger to tap \\"Q\\" and your RIGHT finger to tap \\"P\\", and alternate between the two",
+                                "fr": "Vous devez utiliser l’index de la main GAUCHE pour appuyer sur \\"Q\\" et l’index de la main DROITE pour appuyer sur \\"P\\", et alterner entre les deux."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You have to wait <b> at least 30 seconds</b> before being able to continue"
+                            "textContent": {
+                                "en": "You have to wait <b> at least 30 seconds</b> before being able to continue",
+                                "fr": "Vous devez attendre <b>au moins 30 secondes</b> avant de pouvoir continuer."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The next round will automatically start in 2 minutes unless you choose to continue sooner"
+                            "textContent": {
+                                "en": "The next round will automatically start in 2 minutes unless you choose to continue sooner",
+                                "fr": "Le prochain tour commencera automatiquement dans 2 minutes à moins que vous ne choisissiez de continuer plus tôt."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready"
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ]
                 }
@@ -688,7 +935,10 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "You must use BOTH your index fingers, and tap as fast as you can",
+                    "title": {
+                        "en": "You must use BOTH your index fingers, and tap as fast as you can",
+                        "fr": "Vous devez utiliser les index des DEUX mains et taper en alternance aussi vite que possible."
+                    },
                     "timerConfig": {
                         "timer": 5000,
                         "showTimer": true,
@@ -706,6 +956,36 @@ UPDATE tasks set
                     "maxResponseTime": 20000,
                     "durationFixationPresented": 50,
                     "useHand": "BOTH"
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "Congratulations! You finished the game successfully",
+                        "fr": "Félicitations! Vous avez terminé le jeu avec succès."
+                    },
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Thank you for your participation.",
+                                "fr": "Merci pour votre participation."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": false,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
                 }
             }
         ]
@@ -861,7 +1141,7 @@ UPDATE tasks set
                         {
                             "sectionType": "image-horizontal",
                             "imageAlignment": "center",
-                            "imagePath": "/assets/images/instructions/nback/examplePart1.png"
+                            "imagePath": "assets/images/instructions/nback/examplePart1.png"
                         },
                         {
                             "sectionType": "text",
@@ -903,7 +1183,10 @@ UPDATE tasks set
                         {
                             "sectionType": "image-horizontal",
                             "imageAlignment": "center",
-                            "imagePath": "/assets/images/instructions/nback/examplePart2.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/nback/examplePart2_en.png",
+                                "fr": "/assets/images/instructions/nback/examplePart2_fr.jpg"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -938,7 +1221,10 @@ UPDATE tasks set
                         {
                             "sectionType": "image-horizontal",
                             "imageAlignment": "center",
-                            "imagePath": "/assets/images/instructions/nback/examplePart3.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/nback/examplePart3_en.png",
+                                "fr": "/assets/images/instructions/nback/examplePart3_fr.jpg"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -1023,6 +1309,7 @@ UPDATE tasks set
             {
                 "componentName": "NBACKCOMPONENT",
                 "componentConfig": {
+                    "skippable": false,
                     "isPractice": true,
                     "maxResponseTime": 2000,
                     "interTrialDelay": 0,
@@ -1032,8 +1319,373 @@ UPDATE tasks set
                     "durationFixationPresented": 1000,
                     "numTrials": 15,
                     "stimuliConfig": {
-                        "type": "generated",
-                        "stimuli": null
+                        "type": "hardcoded",
+                        "stimuli": [
+                            {
+                                "trial": 1,
+                                "currentLetter": "G",
+                                "nback": null
+                            },
+                            {
+                                "trial": 2,
+                                "currentLetter": "L",
+                                "nback": null
+                            },
+                            {
+                                "trial": 3,
+                                "currentLetter": "E",
+                                "nback": "G"
+                            },
+                            {
+                                "trial": 4,
+                                "currentLetter": "L",
+                                "nback": "L"
+                            },
+                            {
+                                "trial": 5,
+                                "currentLetter": "A",
+                                "nback": "E"
+                            },
+                            {
+                                "trial": 6,
+                                "currentLetter": "Q",
+                                "nback": "L"
+                            },
+                            {
+                                "trial": 7,
+                                "currentLetter": "V",
+                                "nback": "A"
+                            },
+                            {
+                                "trial": 8,
+                                "currentLetter": "Q",
+                                "nback": "Q"
+                            },
+                            {
+                                "trial": 9,
+                                "currentLetter": "I",
+                                "nback": "V"
+                            },
+                            {
+                                "trial": 10,
+                                "currentLetter": "L",
+                                "nback": "Q"
+                            },
+                            {
+                                "trial": 11,
+                                "currentLetter": "T",
+                                "nback": "I"
+                            },
+                            {
+                                "trial": 12,
+                                "currentLetter": "V",
+                                "nback": "L"
+                            },
+                            {
+                                "trial": 13,
+                                "currentLetter": "P",
+                                "nback": "T"
+                            },
+                            {
+                                "trial": 14,
+                                "currentLetter": "V",
+                                "nback": "V"
+                            },
+                            {
+                                "trial": 15,
+                                "currentLetter": "B",
+                                "nback": "P"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": "",
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "We will repeat this round so you can get more practice.",
+                                "fr": "Nous allons répéter ce tour afin que vous puissiez vous entraîner davantage."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Remember, press:",
+                                "fr": "Rappelez vous de cliquer les clés comme suit:"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "⬅️ (left arrow) if the letter is <b>NOT THE SAME</b> as 2 letters ago",
+                                "fr": "⬅️ (clé flèche gauche) si la lettre <b>n''est pas la même</b> que celle qui a été présentée <b>2 lettres plus tôt</b>."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "➡️ (right arrow) if the letter is <b>THE SAME</b> as 2 letters ago",
+                                "fr": "➡️ (clé flèche de droite) si la lettre <b>est la même</b> que celle qui a été présentée <b>2 lettres plus tôt</b>."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"START\\" to proceed",
+                                "fr": "Cliquez sur \\"START\\" pour continuer"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": true,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "NBACKCOMPONENT",
+                "componentConfig": {
+                    "skippable": false,
+                    "isPractice": true,
+                    "maxResponseTime": 2000,
+                    "interTrialDelay": 0,
+                    "showFeedbackAfterEachTrial": true,
+                    "showScoreAfterEachTrial": false,
+                    "durationOfFeedback": 500,
+                    "durationFixationPresented": 1000,
+                    "numTrials": 15,
+                    "stimuliConfig": {
+                        "type": "hardcoded",
+                        "stimuli": [
+                            {
+                                "trial": 1,
+                                "currentLetter": "A",
+                                "nback": null
+                            },
+                            {
+                                "trial": 2,
+                                "currentLetter": "X",
+                                "nback": null
+                            },
+                            {
+                                "trial": 3,
+                                "currentLetter": "S",
+                                "nback": "A"
+                            },
+                            {
+                                "trial": 4,
+                                "currentLetter": "U",
+                                "nback": "X"
+                            },
+                            {
+                                "trial": 5,
+                                "currentLetter": "S",
+                                "nback": "S"
+                            },
+                            {
+                                "trial": 6,
+                                "currentLetter": "K",
+                                "nback": "U"
+                            },
+                            {
+                                "trial": 7,
+                                "currentLetter": "V",
+                                "nback": "S"
+                            },
+                            {
+                                "trial": 8,
+                                "currentLetter": "L",
+                                "nback": "K"
+                            },
+                            {
+                                "trial": 9,
+                                "currentLetter": "V",
+                                "nback": "V"
+                            },
+                            {
+                                "trial": 10,
+                                "currentLetter": "R",
+                                "nback": "L"
+                            },
+                            {
+                                "trial": 11,
+                                "currentLetter": "F",
+                                "nback": "V"
+                            },
+                            {
+                                "trial": 12,
+                                "currentLetter": "G",
+                                "nback": "R"
+                            },
+                            {
+                                "trial": 13,
+                                "currentLetter": "U",
+                                "nback": "F"
+                            },
+                            {
+                                "trial": 14,
+                                "currentLetter": "I",
+                                "nback": "G"
+                            },
+                            {
+                                "trial": 15,
+                                "currentLetter": "U",
+                                "nback": "U"
+                            }
+                        ]
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "skippable": true,
+                    "skippableCacheKey": "nback-should-skip",
+                    "title": {
+                        "en": "",
+                        "fr": ""
+                    },
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "We will repeat this round so you can get more practice.",
+                                "fr": "Nous allons répéter ce tour afin que vous puissiez vous entraîner davantage."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Remember, press:",
+                                "fr": "Rappelez vous de cliquer les clés comme suit:"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "⬅️ (left arrow) if the letter is <b>NOT THE SAME</b> as 2 letters ago",
+                                "fr": "⬅️ (clé flèche gauche) si la lettre <b>n''est pas la même</b> que celle qui a été présentée <b>2 lettres plus tôt</b>."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "➡️ (right arrow) if the letter is <b>THE SAME</b> as 2 letters ago",
+                                "fr": "➡️ (clé flèche de droite) si la lettre <b>est la même</b> que celle qui a été présentée <b>2 lettres plus tôt</b>."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"START\\" to proceed",
+                                "fr": "Cliquez sur \\"START\\" pour continuer"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": true,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "NBACKCOMPONENT",
+                "componentConfig": {
+                    "skippable": true,
+                    "isPractice": true,
+                    "maxResponseTime": 2000,
+                    "interTrialDelay": 0,
+                    "showFeedbackAfterEachTrial": true,
+                    "showScoreAfterEachTrial": false,
+                    "durationOfFeedback": 500,
+                    "durationFixationPresented": 1000,
+                    "numTrials": 15,
+                    "stimuliConfig": {
+                        "type": "hardcoded",
+                        "stimuli": [
+                            {
+                                "trial": 1,
+                                "currentLetter": "F",
+                                "nback": null
+                            },
+                            {
+                                "trial": 2,
+                                "currentLetter": "Z",
+                                "nback": null
+                            },
+                            {
+                                "trial": 3,
+                                "currentLetter": "Y",
+                                "nback": "F"
+                            },
+                            {
+                                "trial": 4,
+                                "currentLetter": "U",
+                                "nback": "Z"
+                            },
+                            {
+                                "trial": 5,
+                                "currentLetter": "Y",
+                                "nback": "Y"
+                            },
+                            {
+                                "trial": 6,
+                                "currentLetter": "P",
+                                "nback": "U"
+                            },
+                            {
+                                "trial": 7,
+                                "currentLetter": "T",
+                                "nback": "Y"
+                            },
+                            {
+                                "trial": 8,
+                                "currentLetter": "M",
+                                "nback": "P"
+                            },
+                            {
+                                "trial": 9,
+                                "currentLetter": "T",
+                                "nback": "T"
+                            },
+                            {
+                                "trial": 10,
+                                "currentLetter": "E",
+                                "nback": "M"
+                            },
+                            {
+                                "trial": 11,
+                                "currentLetter": "F",
+                                "nback": "T"
+                            },
+                            {
+                                "trial": 12,
+                                "currentLetter": "S",
+                                "nback": "E"
+                            },
+                            {
+                                "trial": 13,
+                                "currentLetter": "F",
+                                "nback": "F"
+                            },
+                            {
+                                "trial": 14,
+                                "currentLetter": "J",
+                                "nback": "S"
+                            },
+                            {
+                                "trial": 15,
+                                "currentLetter": "P",
+                                "nback": "F"
+                            }
+                        ]
                     }
                 }
             },
@@ -1105,6 +1757,7 @@ UPDATE tasks set
             {
                 "componentName": "NBACKCOMPONENT",
                 "componentConfig": {
+                    "skippable": false,
                     "isPractice": false,
                     "maxResponseTime": 2000,
                     "interTrialDelay": 0,
@@ -1146,8 +1799,8 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Thank you for your participation. Click \\"CONTINUE\\"",
-                                "fr": "Merci de votre participation. Cliquez sur \\"CONTINUE\\""
+                                "en": "Thank you for your participation. Click \\"NEXT\\"",
+                                "fr": "Merci de votre participation. Cliquez sur \\"NEXT\\""
                             }
                         }
                     ]
@@ -1176,31 +1829,52 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Welcome to the Stroop Task",
+                    "title": {
+                        "en": "Welcome to the Stroop Task",
+                        "fr": "Bienvenue au jeu des couleurs"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Read the instructions carefully."
+                            "textContent": {
+                                "en": "Read the instructions carefully.",
+                                "fr": "Lisez attentivement les instructions."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "In this task, different words for colors (Ex. \\"BLUE\\") will be presented in different colored ink:"
+                            "textContent": {
+                                "en": "In this task, different words for colors (Ex. \\"BLUE\\") will be presented in different colored ink:",
+                                "fr": "Dans ce jeu, différents noms de couleurs (ex. \\"Bleu\\") apparaîtront à l’écran, et seront imprimés avec différentes couleurs d’encre."
+                            }
                         },
                         {
                             "sectionType": "image-square",
-                            "imagePath": "/assets/images/instructions/strooptask/stroop_ink_examples.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/strooptask/stroop_ink_examples_en.png",
+                                "fr": "/assets/images/instructions/strooptask/stroop_ink_examples_fr.png"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You have to response to the <b>COLOR</b> of the ink that the word is printed in, <b>NOT</b> the word itself."
+                            "textContent": {
+                                "en": "You have to response to the <b>COLOR</b> of the ink that the word is printed in, <b>NOT</b> the word itself.",
+                                "fr": "Vous devrez indiquer <b>la couleur de l’encre</b> sans tenir compte du nom de couleur qui est écrit."
+                            }
                         },
                         {
                             "sectionType": "image-square",
-                            "imagePath": "/assets/images/instructions/strooptask/stroop_ink_instructions.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/strooptask/stroop_ink_instructions_en.png",
+                                "fr": "/assets/images/instructions/strooptask/stroop_ink_instructions_fr.png"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to proceed",
+                                "fr": "Cliquez sur \\"SUIVANT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -1213,31 +1887,52 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Here are some examples",
+                    "title": {
+                        "en": "Here are some examples",
+                        "fr": "Voici quelques exemples"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "If you see \\"BLUE\\" with red ink then you should respond \\"1\\""
+                            "textContent": {
+                                "en": "If you see \\"BLUE\\" with red ink then you should respond \\"1\\"",
+                                "fr": "Si vous voyez \\"BLEU\\" (encre rouge) vous devez répondre \\"1\\""
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If you see \\"BLUE\\" with blue ink then you should respond \\"2\\"; etc..."
+                            "textContent": {
+                                "en": "If you see \\"BLUE\\" with blue ink then you should respond \\"2\\"",
+                                "fr": "Si vous voyez \\"BLEU\\" (encre bleu) vous devez répondre \\"2\\""
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Again, only the COLOR of the ink matters, NOT the word itself."
+                            "textContent": {
+                                "en": "Again, only the COLOR of the ink matters, NOT the word itself.",
+                                "fr": "N''oubliez pas: seule la COULEUR de l''encre compte, PAS le mot lui-même"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Please use the number keys \\"1\\", \\"2\\", \\"3\\" on your keyboard to respond"
+                            "textContent": {
+                                "en": "Please use the number keys \\"1\\", \\"2\\", \\"3\\" on your keyboard to respond",
+                                "fr": "Veuillez utiliser les touches numériques \\"1\\", \\"2\\", \\"3\\" sur votre clavier pour répondre"
+                            }
                         },
                         {
                             "sectionType": "image-square",
-                            "imagePath": "/assets/images/instructions/strooptask/stroop_ink_instructions.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/strooptask/stroop_ink_instructions_en.png",
+                                "fr": "/assets/images/instructions/strooptask/stroop_ink_instructions_fr.png"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to proceed",
+                                "fr": "Cliquez sur \\"SUIVANT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -1250,27 +1945,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Practice Round",
+                    "title": {
+                        "en": "Practice Round",
+                        "fr": "Pratique"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Let''s practice"
+                            "textContent": {
+                                "en": "Let''s practice",
+                                "fr": "Pratiquons"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Good luck! You will have very little time to respond, so be ready"
+                            "textContent": {
+                                "en": "Good luck! You will have very little time to respond, so be ready",
+                                "fr": "Vous aurez très peu de temps pour répondre, alors soyez prêts! Bonne chance!"
+                            }
                         },
                         {
                             "sectionType": "image-square",
-                            "imagePath": "/assets/images/instructions/strooptask/stroop_ink_instructions.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/strooptask/stroop_ink_instructions_en.png",
+                                "fr": "/assets/images/instructions/strooptask/stroop_ink_instructions_fr.png"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The game will launch in fullscreen"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready for the practice round"
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ],
                     "buttons": {
@@ -1301,27 +2007,45 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Practice round is now complete",
+                    "title": {
+                        "en": "Practice round is now complete",
+                        "fr": "Bon travail!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You will now play the actual game"
+                            "textContent": {
+                                "en": "You will now play the actual game",
+                                "fr": "Vous allez maintenant commencer le vrai jeu"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You will earn 10 points for every right answer"
+                            "textContent": {
+                                "en": "You will earn 10 points for every right answer",
+                                "fr": "Vous gagnerez 10 points pour chaque bonne réponse"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Good luck!"
+                            "textContent": {
+                                "en": "Good luck!",
+                                "fr": "Bonne chance!"
+                            }
                         },
                         {
                             "sectionType": "image-square",
-                            "imagePath": "/assets/images/instructions/strooptask/stroop_ink_instructions.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/strooptask/stroop_ink_instructions_en.png",
+                                "fr": "/assets/images/instructions/strooptask/stroop_ink_instructions_fr.png"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready for the actual game"
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the actual game",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -1352,21 +2076,33 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Congratulations! You finished the game successfully",
+                    "title": {
+                        "en": "Congratulations! You finished the game successfully",
+                        "fr": "Félicitations! Vous avez terminé le jeu avec succès."
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
                             "injection": "cached-string",
                             "cacheKey": "stroop-total-score",
-                            "textContent": "You scored: ??? points"
+                            "textContent": {
+                                "en": "You scored: ??? points",
+                                "fr": "Tu as: ??? points"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Thank you for your participation."
+                            "textContent": {
+                                "en": "Thank you for your participation.",
+                                "fr": "Merci pour votre participation."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -1753,23 +2489,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Welcome",
+                    "title": {
+                        "en": "Welcome",
+                        "fr": "Bienvenue"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "There are two parts to this game."
+                            "textContent": {
+                                "en": "There are two parts to this game.",
+                                "fr": "Ce jeu comporte deux parties."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "PART 1: Number game"
+                            "textContent": {
+                                "en": "PART 1: Number game",
+                                "fr": "PARTIE 1: Jeu des chiffres"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "First we will go through the instructions and then you will have some opportunity to practice."
+                            "textContent": {
+                                "en": "First we will go through the instructions and then you will have some opportunity to practice.",
+                                "fr": "Nous vous expliquerons les règles du jeu et vous aurez ensuite l''occasion de pratiquer."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -1786,19 +2537,31 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Read the instructions carefully."
+                            "textContent": {
+                                "en": "Read the instructions carefully.",
+                                "fr": "Lisez attentivement les instructions."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You will see a number on the screen. That number will either be <b>ORANGE</b> or <b>BLUE</b>"
+                            "textContent": {
+                                "en": "You will see a number on the screen. That number will either be <b>ORANGE</b> or <b>BLUE</b>.",
+                                "fr": "Vous verrez un chiffre à l''écran. Ce chiffre sera <b>ORANGE</b> ou <b>BLEU</b>."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The color is important: It will tell you what you must identify about that number."
+                            "textContent": {
+                                "en": "The color is important: It will tell you what you must identify about that number.",
+                                "fr": "La couleur est importante: elle indique ce que vous devez identifier à propos de ce numéro."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -1811,23 +2574,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Instructions continued",
+                    "title": {
+                        "en": "Instructions continued",
+                        "fr": "Instructions suite"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "<b>ORANGE NUMBER</b>"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>",
+                                "fr": "<b>Si le CHIFFRE est ORANGE</b>"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Determine if the number is less than or greater than 5"
+                            "textContent": {
+                                "en": "Determine if the number is less than or greater than 5",
+                                "fr": "Vous devez déterminez si le chiffre est inférieur ou supérieur à 5"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Lesser than (<) 5: Press the left arrow key ⬅️"
+                            "textContent": {
+                                "en": "Lesser than (<) 5: Press the left arrow key ⬅️",
+                                "fr": "Inférieur à (<) 5: Appuyez sur la touche fléchée gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Greater than (>) 5: Press the right arrow key ➡️"
+                            "textContent": {
+                                "en": "Greater than (>) 5: Press the right arrow key ➡️",
+                                "fr": "Supérieur à (>) 5: Appuyez sur la touche fléchée droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -1835,23 +2613,38 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "<b>BLUE NUMBER</b>"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>",
+                                "fr": "<b>Si le CHIFFRE est BLEU</b>"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Determine if the number is odd or even"
+                            "textContent": {
+                                "en": "Determine if the number is odd or even",
+                                "fr": "Vous devez déterminez si le chiffre est impair ou pair"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If the number is odd: Press the left arrow key ⬅️"
+                            "textContent": {
+                                "en": "If the number is odd: Press the left arrow key ⬅️",
+                                "fr": "Chiffre impair: Appuyez sur la touche fléchée gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If the number is even: Press the right arrow key ➡️"
+                            "textContent": {
+                                "en": "If the number is even: Press the right arrow key ➡️",
+                                "fr": "Chiffre pair: Appuyez sur la touche fléchée droite"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -1864,7 +2657,10 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Examples",
+                    "title": {
+                        "en": "Examples",
+                        "fr": "Exemples"
+                    },
                     "sections": [
                         {
                             "sectionType": "image-small",
@@ -1873,11 +2669,17 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Hint: The number is <b>ORANGE</b> so you must decide if it is less than or greater than 5"
+                            "textContent": {
+                                "en": "Hint: The number is <b>ORANGE</b> so you must decide if it is less than or greater than 5",
+                                "fr": "Indice: Le chiffre est <b>ORANGE</b> vous devez donc décider s''il est inférieur ou supérieur à 5"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You should choose <b>LEFT</b> arrow to indicate that it''s less than (<) 5"
+                            "textContent": {
+                                "en": "You should choose <b>LEFT</b> arrow to indicate that it''s less than (<) 5",
+                                "fr": "Vous devez taper la flèche <b>GAUCHE</b> pour indiquer qu''il est inférieur à (<) 5"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -1890,15 +2692,24 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Hint: The number is <b>BLUE</b> so you must decide if it is an odd or even number"
+                            "textContent": {
+                                "en": "Hint: The number is <b>BLUE</b> so you must decide if it is an odd or even number",
+                                "fr": "Indice: Le chiffre est <b>BLEU</b>, vous devez donc décider s''il s''agit d''un chiffre pair ou impair"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You should choose <b>RIGHT</b> arrow to indicate that it''s even"
+                            "textContent": {
+                                "en": "You should choose <b>RIGHT</b> arrow to indicate that it''s even",
+                                "fr": "Vous devez taper la flèche <b>DROITE</b> pour indiquer qu''il est pair"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -1911,7 +2722,10 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Examples",
+                    "title": {
+                        "en": "Examples",
+                        "fr": "Exemples"
+                    },
                     "sections": [
                         {
                             "sectionType": "image-small",
@@ -1920,11 +2734,17 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Hint: The number is <b>ORANGE</b> so you must decide if it is less than or greater than 5"
+                            "textContent": {
+                                "en": "Hint: The number is <b>ORANGE</b> so you must decide if it is less than or greater than 5",
+                                "fr": "Indice: Le chiffre est <b>ORANGE</b> vous devez donc décider s''il est inférieur ou supérieur à 5"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You should choose the <b>RIGHT</b> arrow to indicate that it''s greater than (>) 5"
+                            "textContent": {
+                                "en": "You should choose the <b>RIGHT</b> arrow to indicate that it''s greater than (>) 5",
+                                "fr": "Vous devez choisir la flèche <b>DROITE</b> pour indiquer qu''il est supérieur à (>) 5"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -1937,15 +2757,24 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Hint: The number is <b>BLUE</b> so you must decide if it is an odd or even number"
+                            "textContent": {
+                                "en": "Hint: The number is <b>BLUE</b> so you must decide if it is an odd or even number",
+                                "fr": "Indice: Le chiffre est <b>BLEU</b>, vous devez donc décider s''il s''agit d''un chiffre pair ou impair"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You should choose the <b>LEFT</b> arrow to indicate that it''s odd"
+                            "textContent": {
+                                "en": "You should choose the <b>LEFT</b> arrow to indicate that it''s odd",
+                                "fr": "Vous devez choisir la flèche <b>GAUCHE</b> pour indiquer qu''il est impair"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -1958,23 +2787,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Practice round",
+                    "title": {
+                        "en": "Practice round",
+                        "fr": "Pratique"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Let''s practice"
+                            "textContent": {
+                                "en": "Let''s practice",
+                                "fr": "Pratiquons"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Don''t worry, this is just to help you learn which keys to press. We will continue to give you hints."
+                            "textContent": {
+                                "en": "Don''t worry, this is just to help you learn which keys to press. We will continue to give you hints.",
+                                "fr": "Vous aurez maintenant la chance de vous habituer à appuyer sur les bonnes flèhes au bon moment. Par contre, il n''y aura plus d''indices."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "(The game will launch in fullscreen)"
+                            "textContent": {
+                                "en": "(The game will launch in fullscreen)",
+                                "fr": "(Le jeu se lancera en plein écran)"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -1991,15 +2835,24 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "<b>BLUE NUMBER</b>: is number odd or even?"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Odd: Left arrow key ⬅️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Even: Right arrow key ➡️"
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -2007,19 +2860,31 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "<b>ORANGE NUMBER</b>: is number odd or even?"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Less than 5: Left arrow key ⬅️"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Greater than 5: Right arrow key ➡️"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" to start the practice"
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ],
                     "buttons": {
@@ -2052,17 +2917,26 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "1st Practice round is now complete",
+                    "title": {
+                        "en": "1st Practice round is now complete",
+                        "fr": "Le premier tour de pratique est maintenant terminé"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
                             "injection": "cached-string",
                             "cacheKey": "task-switching-num-correct",
-                            "textContent": "You got ??? out of 5 trials correct"
+                            "textContent": {
+                                "en": "You got ??? out of 5 trials correct",
+                                "fr": "Vous avez ??? bonnes réponses sur 5"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" when you are ready for the next stage"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" when you are ready for the next stage",
+                                "fr": "Cliquez sur \\"NEXT\\" pour commencer la prochaine étape"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2075,39 +2949,70 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Practice round 2",
+                    "title": {
+                        "en": "Practice round 2",
+                        "fr": "Pratique 2"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Remember, the number''s color tells you what you must identify about the number"
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "<b>ORANGE NUMBER</b>"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Less than 5: Left arrow key ⬅️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Greater than 5: Right arrow key ➡️"
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "<b>BLUE NUMBER</b>"
+                            "textContent": "<br />"
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Odd: Left arrow key ⬅️"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Even: Right arrow key ➡️"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready for the practice round"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ],
                     "buttons": {
@@ -2145,7 +3050,10 @@ UPDATE tasks set
                             "sectionType": "text",
                             "injection": "cached-string",
                             "cacheKey": "task-switching-num-correct",
-                            "textContent": "You got ??? out of 20 trials correct"
+                            "textContent": {
+                                "en": "You got ??? out of 20 trials correct",
+                                "fr": "Vous avez ??? bonnes réponses sur 20"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2164,11 +3072,17 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "We will repeat this round so you can get more practice"
+                            "textContent": {
+                                "en": "We will repeat this round so you can get more practice",
+                                "fr": "Nous allons répéter ce tour pour que vous puissiez vous entraîner davantage"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" when you are ready for the next stage"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" when you are ready for the next stage",
+                                "fr": "Cliquez sur \\"NEXT\\" pour commencer la prochaine étape"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2183,39 +3097,70 @@ UPDATE tasks set
                 "componentConfig": {
                     "skippable": true,
                     "skippableCacheKey": "task-switching-should-skip",
-                    "title": "Practice round 2",
+                    "title": {
+                        "en": "Practice round 2",
+                        "fr": "Pratique 2"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Remember, the number''s color tells you what you must identify about the number"
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "<b>ORANGE NUMBER</b>"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Less than 5: Left arrow key ⬅️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Greater than 5: Right arrow key ➡️"
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "<b>BLUE NUMBER</b>"
+                            "textContent": "<br />"
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Odd: Left arrow key ⬅️"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Even: Right arrow key ➡️"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready for the practice round"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ],
                     "buttons": {
@@ -2248,23 +3193,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Practice round 3",
+                    "title": {
+                        "en": "Practice round 3",
+                        "fr": "Pratique 3"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Last practice"
+                            "textContent": {
+                                "en": "Last practice",
+                                "fr": "Dernière pratique"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "This time we won''t give you feedback after each answer"
+                            "textContent": {
+                                "en": "This time we won''t give you feedback after each answer",
+                                "fr": "Cette fois, nous ne vous dirons pas si vous avez répondu correctement ou incorrectement après chaque réponse."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Do your best!"
+                            "textContent": {
+                                "en": "Do your best!",
+                                "fr": "Faites de votre mieux!"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2277,39 +3237,70 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Practice round 3",
+                    "title": {
+                        "en": "Practice round 3",
+                        "fr": "Pratique 3"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Remember, the number''s color tells you what you must identify about the number"
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "<b>ORANGE NUMBER</b>"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Less than 5: Left arrow key ⬅️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Greater than 5: Right arrow key ➡️"
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "<b>BLUE NUMBER</b>"
+                            "textContent": "<br />"
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Odd: Left arrow key ⬅️"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Even: Right arrow key ➡️"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready for the practice round"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ],
                     "buttons": {
@@ -2341,19 +3332,31 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Main round",
+                    "title": {
+                        "en": "Main round",
+                        "fr": "Tour principal"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Great! All practices are complete."
+                            "textContent": {
+                                "en": "Great! All practices are complete.",
+                                "fr": "Bravo! Vous avez compléter les tours de pratique."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Now you will play the real game."
+                            "textContent": {
+                                "en": "Now you will play the real game.",
+                                "fr": "Maintenant, vous allez jouer au vrai jeu."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2366,39 +3369,70 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Recap instructions",
+                    "title": {
+                        "en": "Recap instructions",
+                        "fr": "Instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Remember, the number''s color tells you what you must identify about the number"
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "<b>ORANGE NUMBER</b>"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Less than 5: Left arrow key ⬅️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Greater than 5: Right arrow key ➡️"
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "<b>BLUE NUMBER</b>"
+                            "textContent": "<br />"
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Odd: Left arrow key ⬅️"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Even: Right arrow key ➡️"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready for the practice round"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the actual game",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2430,25 +3464,33 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Congratulations!",
+                    "title": {
+                        "en": "Congratulations!",
+                        "fr": "Félicitations!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You finished the game successfully"
+                            "textContent": {
+                                "en": "You finished the game successfully",
+                                "fr": "Vous avez terminé le jeu avec succès."
+							}
                         },
                         {
                             "sectionType": "text",
                             "injection": "cached-string",
                             "cacheKey": "task-switching-num-correct",
-                            "textContent": "You scored ??? points"
+                            "textContent": {
+                                "en": "You scored ??? points",
+                                "fr": "Vous avez ??? points"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Thank you for your participation"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2479,27 +3521,45 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Part 2: Patch Game",
+                    "title": {
+                        "en": "Part 2: Patch Game",
+                        "fr": "Partie 2: Jeu des Parcelles"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Read the instructions carefully"
+                            "textContent": {
+                                "en": "Read the instructions carefully",
+                                "fr": "Lisez attentivement les instructions"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Now you will be playing a slightly different game"
+                            "textContent": {
+                                "en": "Now you will be playing a slightly different game",
+                                "fr": "Vous allez maintenant jouer à un jeu légèrement différent"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You will see two colored patches on the screen and will have to pick one. Each patch is hiding a colored number."
+                            "textContent": {
+                                "en": "You will see two colored patches on the screen and will have to pick one. Each patch is hiding a colored number.",
+                                "fr": "Vous verrez deux parcelles colorées à l''écran et vous devrez en choisir une. Chaque parcelle cache un chiffre coloré."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Once the number appears, as before, you will have to make a decision about that number based on its color: ORANGE or BLUE"
+                            "textContent": {
+                                "en": "Once the number appears, as before, you will have to make a decision about that number based on its color: ORANGE or BLUE",
+                                "fr": "Quand le chiffre apparaît, comme avant, vous devrez réagir au chiffre en fonction de sa couleur, ORANGE ou BLEU."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2512,23 +3572,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "More instructions",
+                    "title": {
+                        "en": "More instructions",
+                        "fr": "Suite des instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "There are differences between the patches:"
+                            "textContent": {
+                                "en": "There are differences between the patches:",
+                                "fr": "Les parcelles ne sont pas pareilles:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "One patch is hiding numbers that change color <b>less</b> often"
+                            "textContent": {
+                                "en": "One patch is hiding numbers that change color <b>less</b> often",
+                                "fr": "Un parcelle cache des chiffres qui changent de couleur <b>MOINS</b> souvent."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The other patch is hiding numbers that change color <b>more</b> often"
+                            "textContent": {
+                                "en": "The other patch is hiding numbers that change color <b>more</b> often",
+                                "fr": "L''autre parcelle cache des chiffres qui changent de couleur <b>PLUS</b> souvent."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2541,23 +3616,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "More instructions",
+                    "title": {
+                        "en": "More instructions",
+                        "fr": "Suite des instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "If you develop a preference for one of the patches, feel free to continue to choose it"
+                            "textContent": {
+                                "en": "If you develop a preference for one of the patches, feel free to continue to choose it",
+                                "fr": "Si vous développez une préférence pour une des parcelles, n''hésitez pas à continuer à la choisir."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "However, we recommend that you <b>try both patches at the beginning</b>"
+                            "textContent": {
+                                "en": "However, we recommend that you <b>try both patches at the beginning</b>",
+                                "fr": "Toutefois, nous vous recommandons <b>d''essayer les deux parcelles au début</b> pour voir si vous en préférez une."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Try to avoid choosing the patch solely based on its deisgn or its location"
+                            "textContent": {
+                                "en": "Try to avoid choosing the patch solely based on its deisgn or its location",
+                                "fr": "Essayez d''éviter de choisir le parcelle uniquement en fonction de sa couleur ou de son emplacement sur l''écran."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2570,11 +3660,17 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "More instructions",
+                    "title": {
+                        "en": "More instructions",
+                        "fr": "Suite des instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Steps to select a patch:"
+                            "textContent": {
+                                "en": "Steps to select a patch:",
+                                "fr": "Comment sélectionner une parcelle:"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -2582,11 +3678,17 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "1. Move the cursor to the bullseye in the middle of the screen. This will make the patches appear"
+                            "textContent": {
+                                "en": "1. Move the cursor to the bullseye in the middle of the screen. This will make the patches appear",
+                                "fr": "1. Avec votre souris vous devez premièrement amener le curseur vers la cible au milieu de l''écran. Ceci permettra de dévoiler les parcelles."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "2. To select a patch, move the cursor to its location. The number will then appear"
+                            "textContent": {
+                                "en": "2. To select a patch, move the cursor to its location. The number will then appear",
+                                "fr": "2. Ensuite vous devez sélectionner une parcelle en plaçant le curseur par dessus. Ceci fera apparaître le chiffre caché."
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -2594,11 +3696,17 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "3. Then use the arrow keys as before to give us your answer"
+                            "textContent": {
+                                "en": "3. Then use the arrow keys as before to give us your answer",
+                                "fr": "3. Ensuite vous devez utiliser les touches fléchées selon la couleur du chiffre, comme durant la première partie du jeu."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2611,23 +3719,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "More instructions",
+                    "title": {
+                        "en": "More instructions",
+                        "fr": "Suite des instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Orange number:"
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Determine if the number is less than or greater than 5"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "LESS than (<) 5 : Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "GREATER than (>) 5: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -2635,23 +3758,31 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Blue number:"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Determine if the number is odd or even"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is ODD: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is EVEN: Press the RIGHT arrow key ➡️"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2664,15 +3795,24 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "First, a practice round",
+                    "title": {
+                        "en": "First, a practice round",
+                        "fr": "Vous allez maintenant vous pratiquer!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "(The game will launch in fullscreen)"
+                            "textContent": {
+                                "en": "(The game will launch in fullscreen)",
+                                "fr": "(Le jeu se lancera en plein écran)"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready for the practice round"
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ],
                     "buttons": {
@@ -2697,6 +3837,7 @@ UPDATE tasks set
                     "probOfShiftSecondPatch": 90,
                     "oddEvenColor": "blue",
                     "ltGtColor": "orange",
+                    "setCounterBalancePatchStringInMemory": "none",
                     "counterbalanceMode": "none",
                     "stimuliConfig": {
                         "type": "hardcoded",
@@ -2798,13 +3939,19 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Practice round is now complete",
+                    "title": {
+                        "en": "Practice round is now complete",
+                        "fr": "Le tour de pratique est maintenant terminé"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
                             "injection": "cached-string",
                             "cacheKey": "demandselection-num-correct",
-                            "textContent": "You got ??? out of 10 correct"
+                            "textContent": {
+                                "en": "You got ??? out of 10 correct",
+                                "fr": "Vous avez ??? bonne réponses sur 10"
+                            }
                         }
                     ]
                 }
@@ -2818,11 +3965,17 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "We will repeat this round so you can get more practice."
+                            "textContent": {
+                                "en": "We will repeat this round so you can get more practice.",
+                                "fr": "Nous allons répéter ce tour afin que vous puissiez vous entraîner davantage."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" when you are ready for the next stage"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" when you are ready for the next stage",
+                                "fr": "Cliquez sur \\"NEXT\\" pour commencer la prochaine étape"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2837,23 +3990,38 @@ UPDATE tasks set
                 "componentConfig": {
                     "skippable": true,
                     "skippableCacheKey": "demandselection-should-skip",
-                    "title": "More instructions",
+                    "title": {
+                        "en": "More instructions",
+                        "fr": "Suite des instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Orange number:"
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Determine if the number is less or greater than 5"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "LESS than (<) 5 : Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "GREATER than (>) 5: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -2861,23 +4029,31 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Blue number:"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Determine if the number is odd or even"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is ODD: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is EVEN: Press the RIGHT arrow key ➡️"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -2902,6 +4078,7 @@ UPDATE tasks set
                     "probOfShiftSecondPatch": 90,
                     "oddEvenColor": "blue",
                     "ltGtColor": "orange",
+                    "setCounterBalancePatchStringInMemory": "none",
                     "counterbalanceMode": "none",
                     "stimuliConfig": {
                         "type": "generated",
@@ -2920,7 +4097,10 @@ UPDATE tasks set
                             "sectionType": "text",
                             "injection": "cached-string",
                             "cacheKey": "demandselection-num-correct",
-                            "textContent": "You got ??? out of 10 correct"
+                            "textContent": {
+                                "en": "You got ??? out of 10 correct",
+                                "fr": "Vous avez ??? bonne réponses sur 10"
+                            }
                         }
                     ]
                 }
@@ -2928,19 +4108,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Instructions Recap",
+                    "title": {
+                        "en": "Recap instructions",
+                        "fr": "Instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Orange number: Determine if the number is less or greater than 5"
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "LESS than 5: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "GREATER than 5: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -2948,19 +4147,31 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Blue number: Determine if the number is odd or even"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is ODD: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is EVEN: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" to launch the practice"
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer l''entraînement."
+                            }
                         }
                     ],
                     "buttons": {
@@ -2985,6 +4196,7 @@ UPDATE tasks set
                     "probOfShiftSecondPatch": 90,
                     "oddEvenColor": "blue",
                     "ltGtColor": "orange",
+                    "setCounterBalancePatchStringInMemory": "none",
                     "counterbalanceMode": "none",
                     "stimuliConfig": {
                         "type": "generated",
@@ -2995,19 +4207,31 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Main Round",
+                    "title": {
+                        "en": "Main round",
+                        "fr": "Tour principal"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Good job! Now we will start the real game"
+                            "textContent": {
+                                "en": "Great! All practices are complete.",
+                                "fr": "Bravo! Vous avez compléter les tours de pratique."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "There are six short parts to the game, each lasting a few minutes. You can take short breaks in between each."
+                            "textContent": {
+                                "en": "There are six short parts to the game, each lasting a few minutes. You can take short breaks in between each.",
+                                "fr": "Il y a six courts tours, chacun d''une durée de quelques minutes. Vous pourrez prendre une pauses entre chaque tour."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3026,11 +4250,17 @@ UPDATE tasks set
                             "sectionType": "text",
                             "injection": "cached-string",
                             "cacheKey": "demandselection-block-num",
-                            "textContent": "This is part ??? of the game"
+                            "textContent": {
+                                "en": "This is part ??? of the game.",
+                                "fr": "Cela fait partie ??? du jeu."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ]
                 }
@@ -3038,23 +4268,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Recap Instructions",
+                    "title": {
+                        "en": "Recap instructions",
+                        "fr": "Rappel des instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Remember, first pick a patch then make a decision based on the color of the number, ORANGE or BLUE"
+                            "textContent": {
+                                "en": "Remember, first pick a patch then make a decision based on the color of the number, ORANGE or BLUE",
+                                "fr": "Rappelez-vous, choisissez d''abord un patch puis prenez une décision en fonction de la couleur du numéro, ORANGE ou BLEU"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The patches are different:"
+                            "textContent": {
+                                "en": "The patches are different:",
+                                "fr": "Les parcelles sont différentes."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The numbers hiding behind each patch change color <b>more</b> or <b>less</b> often depending on the patch"
+                            "textContent": {
+                                "en": "The numbers hiding behind each patch change color <b>more</b> or <b>less</b> often depending on the patch",
+                                "fr": "Les chiffres qui se cachent derrière chaque parcelle changent de couleur <b>plus</b> ou <b>moins</b> souvent selon la parcelle."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3067,23 +4312,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Recap Instructions",
+                    "title": {
+                        "en": "Recap instructions",
+                        "fr": "Rappel des instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "If you develop a preference for one of the patches, feel free to continue to choose it"
+                            "textContent": {
+                                "en": "If you develop a preference for one of the patches, feel free to continue to choose it.",
+                                "fr": "Si vous développez une préférence pour une des parcelles, n''hésitez pas à continuer à la choisir."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "However, we recommend that <b>you try both patches at the beginning</b>"
+                            "textContent": {
+                                "en": "However, we recommend that <b>you try both patches at the beginning</b>.",
+                                "fr": "Toutefois, nous vous recommandons d''essayer les deux parcelles au début."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Try to avoid choosing the patch solely based on how they look or on their location"
+                            "textContent": {
+                                "en": "Try to avoid choosing the patch solely based on how they look or on their location.",
+                                "fr": "Essayez d''éviter de choisir une parcelle uniquement en fonction de sa couleur ou de son emplacement"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3096,19 +4356,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Recap Instructions",
+                    "title": {
+                        "en": "Recap instructions",
+                        "fr": "Rappel des instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Orange number: Determine if the number is less than or greater than 5"
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "LESS than 5: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "GREATER than 5: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -3116,19 +4395,31 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Blue number: Determine if the number is odd or even"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is ODD: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is EVEN: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3152,6 +4443,7 @@ UPDATE tasks set
                     "probOfShiftSecondPatch": 90,
                     "oddEvenColor": "blue",
                     "ltGtColor": "orange",
+                    "setCounterBalancePatchStringInMemory": "none",
                     "counterbalanceMode": "none",
                     "stimuliConfig": {
                         "type": "generated",
@@ -3162,11 +4454,17 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Congrats, you have finished this part",
+                    "title": {
+                        "en": "Congrats, you have finished this part.",
+                        "fr": "Le premier tour est maintenant terminé."
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3185,11 +4483,17 @@ UPDATE tasks set
                             "sectionType": "text",
                             "injection": "cached-string",
                             "cacheKey": "demandselection-block-num",
-                            "textContent": "This is part ??? of the game"
+                            "textContent": {
+                                "en": "This is part ??? of the game.",
+                                "fr": "Cela fait partie ??? du jeu."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3202,19 +4506,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Recap Instructions",
+                    "title": {
+                        "en": "Recap instructions",
+                        "fr": "Rappel des instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Orange number: Determine if the number is less than or greater than 5"
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "LESS than 5: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "GREATER than 5: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -3222,19 +4545,31 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Blue number: Determine if the number is odd or even"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is ODD: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is EVEN: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready"
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the actual game",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3258,6 +4593,7 @@ UPDATE tasks set
                     "probOfShiftSecondPatch": 90,
                     "oddEvenColor": "blue",
                     "ltGtColor": "orange",
+                    "setCounterBalancePatchStringInMemory": "none",
                     "counterbalanceMode": "none",
                     "stimuliConfig": {
                         "type": "generated",
@@ -3268,11 +4604,17 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Congrats, you have finished this part",
+                    "title": {
+                        "en": "Congrats, you have finished this part",
+                        "fr": "Félicitations, vous avez terminé cette partie"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3291,11 +4633,17 @@ UPDATE tasks set
                             "sectionType": "text",
                             "injection": "cached-string",
                             "cacheKey": "demandselection-block-num",
-                            "textContent": "This is part ??? of the game"
+                            "textContent": {
+                                "en": "This is part ??? of the game.",
+                                "fr": "Cela fait partie ??? du jeu."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3308,19 +4656,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Recap Instructions",
+                    "title": {
+                        "en": "Recap instructions",
+                        "fr": "Rappel des instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Orange number: Determine if the number is less than or greater than 5"
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "LESS than 5: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "GREATER than 5: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -3328,19 +4695,31 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Blue number: Determine if the number is odd or even"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is ODD: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is EVEN: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready"
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the actual game",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3364,6 +4743,7 @@ UPDATE tasks set
                     "probOfShiftSecondPatch": 90,
                     "oddEvenColor": "blue",
                     "ltGtColor": "orange",
+                    "setCounterBalancePatchStringInMemory": "none",
                     "counterbalanceMode": "none",
                     "stimuliConfig": {
                         "type": "generated",
@@ -3374,11 +4754,17 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Congrats, you have finished this part",
+                    "title": {
+                        "en": "Congrats, you have finished this part",
+                        "fr": "Félicitations, vous avez terminé cette partie"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ]
                 }
@@ -3392,11 +4778,17 @@ UPDATE tasks set
                             "sectionType": "text",
                             "injection": "cached-string",
                             "cacheKey": "demandselection-block-num",
-                            "textContent": "This is part ??? of the game"
+                            "textContent": {
+                                "en": "This is part ??? of the game.",
+                                "fr": "Cela fait partie ??? du jeu."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ]
                 }
@@ -3404,19 +4796,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Recap Instructions",
+                    "title": {
+                        "en": "Recap instructions",
+                        "fr": "Rappel des instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Orange number: Determine if the number is less than or greater than 5"
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "LESS than 5: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "GREATER than 5: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -3424,19 +4835,31 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Blue number: Determine if the number is odd or even"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is ODD: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is EVEN: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready"
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the actual game",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3460,6 +4883,7 @@ UPDATE tasks set
                     "probOfShiftSecondPatch": 90,
                     "oddEvenColor": "blue",
                     "ltGtColor": "orange",
+                    "setCounterBalancePatchStringInMemory": "counterbalance",
                     "counterbalanceMode": "none",
                     "stimuliConfig": {
                         "type": "generated",
@@ -3470,15 +4894,24 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Congrats, you have finished this part",
+                    "title": {
+                        "en": "Congrats, you have finished this part",
+                        "fr": "Félicitations, vous avez terminé cette partie"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "<b>Please pay attention. We will be asking you to do something different!!!</b>"
+                            "textContent": {
+                                "en": "<b>Please pay attention. We will be asking you to do something different!!!</b>",
+                                "fr": "<b>Attention: Les règles vont changer pour la prochaine partie!!</b>"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3497,25 +4930,49 @@ UPDATE tasks set
                             "sectionType": "text",
                             "injection": "cached-string",
                             "cacheKey": "demandselection-block-num",
-                            "textContent": "This is part ??? of the game."
+                            "textContent": {
+                                "en": "This is part ??? of the game.",
+                                "fr": "Cela fait partie ??? du jeu."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Read these instructions."
+                            "textContent": {
+                                "en": "Read these instructions.",
+                                "fr": "Veuillez lire ces instructions."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "injection": "counterbalance",
-                            "textContent": "Find the <b>???</b> and pick that one on each trial"
+                            "injection": "cached-string",
+                            "cacheKey": "demandselection-patch-string-presented",
+                            "textContent": {
+                                "en": "You must now find the <b>???</b> and pick that one on each trial",
+                                "fr": "Vous devez maintenant identifier la parcelle qui vous semble <b>???</b> et la choisir à chaque essai."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "injection": "counterbalance",
-                            "textContent": "Remember, once you have found and selected the <b>???</b>, your goal is still to make a decision about the number that appears based on its color: ORANGE or BLUE"
+                            "textContent": {
+                                "en": "As before, start by taking the time to explore each of the patches.",
+                                "fr": "Comme d’habitude, prenez tout d’abord le temps d’explorer les deux parcelles."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "injection": "cached-string",
+                            "cacheKey": "demandselection-patch-string-presented",
+                            "textContent": {
+                                "en": "Remember, once you have found and selected the <b>???</b>, your goal is still to make a decision about the number that appears based on its color: ORANGE or BLUE",
+                                "fr": "Rappelez-vous, une fois que vous avez trouvé et sélectionné le <b>???</b>, votre objectif est toujours de prendre une décision sur le nombre qui apparaît en fonction de sa couleur : ORANGE ou BLEU"
+							}
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ]
                 }
@@ -3523,19 +4980,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Recap Instructions",
+                    "title": {
+                        "en": "Recap instructions",
+                        "fr": "Rappel des instructions"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Orange number: Determine if the number is less than or greater than 5"
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "LESS than 5: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "GREATER than 5: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -3543,19 +5019,31 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Blue number: Determine if the number is odd or even"
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is ODD: Press the LEFT arrow key ⬅️"
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "If number is EVEN: Press the RIGHT arrow key ➡️"
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready"
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the actual game",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3579,116 +5067,7 @@ UPDATE tasks set
                     "probOfShiftSecondPatch": 90,
                     "oddEvenColor": "blue",
                     "ltGtColor": "orange",
-                    "counterbalanceMode": "counterbalance-alternative",
-                    "stimuliConfig": {
-                        "type": "generated",
-                        "stimuli": null
-                    }
-                }
-            },
-            {
-                "componentName": "DISPLAYCOMPONENT",
-                "componentConfig": {
-                    "title": "Congrats, you have finished this part",
-                    "sections": [
-                        {
-                            "sectionType": "text",
-                            "textContent": "<b>Please pay attention. We will be asking you to do something different!!!</b>"
-                        }
-                    ]
-                }
-            },
-            {
-                "componentName": "DISPLAYCOMPONENT",
-                "componentConfig": {
-                    "title": "",
-                    "sections": [
-                        {
-                            "sectionType": "text",
-                            "injection": "cached-string",
-                            "cacheKey": "demandselection-block-num",
-                            "textContent": "This is part ??? of the game."
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "Read these instructions."
-                        },
-                        {
-                            "sectionType": "text",
-                            "injection": "counterbalance-alternative",
-                            "textContent": "Find the <b>???</b> and pick that one on each trial"
-                        },
-                        {
-                            "sectionType": "text",
-                            "injection": "counterbalance-alternative",
-                            "textContent": "Remember, once you have found and selected the <b>???</b>, your goal is still to make a decision about the number that appears based on its color: ORANGE or BLUE"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
-                        }
-                    ]
-                }
-            },
-            {
-                "componentName": "DISPLAYCOMPONENT",
-                "componentConfig": {
-                    "title": "Recap Instructions",
-                    "sections": [
-                        {
-                            "sectionType": "text",
-                            "textContent": "Orange number: Determine if the number is less than or greater than 5"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "LESS than 5: Press the LEFT arrow key ⬅️"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "GREATER than 5: Press the RIGHT arrow key ➡️"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "<br />"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "Blue number: Determine if the number is odd or even"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "If number is ODD: Press the LEFT arrow key ⬅️"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "If number is EVEN: Press the RIGHT arrow key ➡️"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "Click \\"START\\" when you are ready"
-                        }
-                    ],
-                    "buttons": {
-                        "isStart": false,
-                        "previousDisabled": false,
-                        "nextDisabled": false
-                    }
-                }
-            },
-            {
-                "componentName": "DEMANDSELECTIONCOMPONENT",
-                "componentConfig": {
-                    "isPractice": false,
-                    "maxResponseTime": 5000,
-                    "interTrialDelay": 0,
-                    "showFeedbackAfterEachTrial": true,
-                    "durationOfFeedback": 1000,
-                    "numTrials": 35,
-                    "delayToShowHelpMessage": 4000,
-                    "probOfShiftFirstPatch": 10,
-                    "probOfShiftSecondPatch": 90,
-                    "oddEvenColor": "blue",
-                    "ltGtColor": "orange",
+                    "setCounterBalancePatchStringInMemory": "counterbalance-alternative",
                     "counterbalanceMode": "counterbalance",
                     "stimuliConfig": {
                         "type": "generated",
@@ -3699,19 +5078,196 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Congratulations!",
+                    "title": {
+                        "en": "Congrats, you have finished this part",
+                        "fr": "Félicitations, vous avez terminé cette partie"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You finished the game successfully."
+                            "textContent": {
+                                "en": "<b>Please pay attention. We will be asking you to do something different!!!</b>",
+                                "fr": "<b>Attention: Les règles vont changer pour la prochaine partie!!</b>"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": "",
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "injection": "cached-string",
+                            "cacheKey": "demandselection-block-num",
+                            "textContent": {
+                                "en": "This is part ??? of the game.",
+                                "fr": "Cela fait partie ??? du jeu."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Thank you for your participation."
+                            "textContent": {
+                                "en": "Read these instructions.",
+                                "fr": "Veuillez lire ces instructions."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click \\"NEXT\\" to proceed"
+                            "injection": "cached-string",
+                            "cacheKey": "demandselection-patch-string-presented",
+                            "textContent": {
+                                "en": "You must now find the <b>???</b> and pick that one on each trial",
+                                "fr": "Vous devez maintenant identifier la parcelle qui vous semble <b>???</b> et la choisir à chaque essai."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "As before, start by taking the time to explore each of the patches.",
+                                "fr": "Comme d’habitude, prenez tout d’abord le temps d’explorer les deux parcelles."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "injection": "cached-string",
+                            "cacheKey": "demandselection-patch-string-presented",
+                            "textContent": {
+                                "en": "Remember, once you have found and selected the <b>???</b>, your goal is still to make a decision about the number that appears based on its color: ORANGE or BLUE",
+                                "fr": "Rappelez-vous, une fois que vous avez trouvé et sélectionné le <b>???</b>, votre objectif est toujours de prendre une décision sur le nombre qui apparaît en fonction de sa couleur : ORANGE ou BLEU"
+							}
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "Recap instructions",
+                        "fr": "Rappel des instructions"
+                    },
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "fr": "Rappel:"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite ➡"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": "<br />"
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Less than 5: Left arrow key ⬅️",
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Greater than 5: Right arrow key ➡️",
+                                "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the actual game",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": false,
+                        "previousDisabled": false,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "DEMANDSELECTIONCOMPONENT",
+                "componentConfig": {
+                    "isPractice": false,
+                    "maxResponseTime": 5000,
+                    "interTrialDelay": 0,
+                    "showFeedbackAfterEachTrial": true,
+                    "durationOfFeedback": 1000,
+                    "numTrials": 35,
+                    "delayToShowHelpMessage": 4000,
+                    "probOfShiftFirstPatch": 10,
+                    "probOfShiftSecondPatch": 90,
+                    "oddEvenColor": "blue",
+                    "ltGtColor": "orange",
+                    "setCounterBalancePatchStringInMemory": "none",
+                    "counterbalanceMode": "counterbalance-alternative",
+                    "stimuliConfig": {
+                        "type": "generated",
+                        "stimuli": null
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "Congratulations!",
+                        "fr": "Félicitations!"
+                    },
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "You finished the game successfully",
+                                "fr": "Vous avez terminé le jeu avec succès."
+							}
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -3763,7 +5319,10 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "image-horizontal",
-                            "imagePath": "/assets/images/instructions/smileyface/countdown.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/smileyface/countdown_en.png",
+                                "fr": "/assets/images/instructions/smileyface/countdown_fr.jpg"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -3825,7 +5384,10 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "image-horizontal",
-                            "imagePath": "/assets/images/instructions/smileyface/countdown.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/smileyface/countdown_en.png",
+                                "fr": "/assets/images/instructions/smileyface/countdown_fr.jpg"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -3915,7 +5477,10 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "image-horizontal",
-                            "imagePath": "/assets/images/instructions/smileyface/countdown.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/smileyface/countdown_en.png",
+                                "fr": "/assets/images/instructions/smileyface/countdown_fr.jpg"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -3990,7 +5555,10 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "image-horizontal",
-                            "imagePath": "/assets/images/instructions/smileyface/countdown.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/smileyface/countdown_en.png",
+                                "fr": "/assets/images/instructions/smileyface/countdown_fr.jpg"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -4037,7 +5605,10 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "image-horizontal",
-                            "imagePath": "/assets/images/instructions/smileyface/countdown.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/smileyface/countdown_en.png",
+                                "fr": "/assets/images/instructions/smileyface/countdown_fr.jpg"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -4070,7 +5641,10 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "image-horizontal",
-                            "imagePath": "/assets/images/instructions/smileyface/countdown.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/smileyface/countdown_en.png",
+                                "fr": "/assets/images/instructions/smileyface/countdown_fr.jpg"
+                            }
                         }
                     ]
                 }
@@ -4105,7 +5679,10 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "image-horizontal",
-                            "imagePath": "/assets/images/instructions/smileyface/countdown.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/smileyface/countdown_en.png",
+                                "fr": "/assets/images/instructions/smileyface/countdown_fr.jpg"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -4139,7 +5716,10 @@ UPDATE tasks set
                         {
                             "sectionType": "image-horizontal",
                             "imageAlignment": "center",
-                            "imagePath": "/assets/images/instructions/smileyface/countdown.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/smileyface/countdown_en.png",
+                                "fr": "/assets/images/instructions/smileyface/countdown_fr.jpg"
+                            }
                         }
                     ]
                 }
@@ -4190,7 +5770,10 @@ UPDATE tasks set
                         },
                         {
                             "sectionType": "image-horizontal",
-                            "imagePath": "/assets/images/instructions/smileyface/countdown.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/smileyface/countdown_en.png",
+                                "fr": "/assets/images/instructions/smileyface/countdown_fr.jpg"
+                            }
                         },
                         {
                             "sectionType": "text",
@@ -4776,27 +6359,45 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Welcome to the Everyday Activities Game",
+                    "title": {
+                        "en": "Welcome to the Everyday Activities Game",
+                        "fr": "Bienvenue au Jeu des Activités Quotidiennes"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "We are trying to understand how people fill their days with activities."
+                            "textContent": {
+                                "en": "We are trying to understand how people fill their days with activities.",
+                                "fr": "Nous essayons de comprendre comment les gens remplissent leurs journées d''activités."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "In this task we will ask you about activities that you may do in your everyday life."
+                            "textContent": {
+                                "en": "In this task we will ask you about activities that you may do in your everyday life.",
+                                "fr": "Dans ce jeu, nous allons vous interroger sur des activités qui font (ou non) partie de la vie quotidienne."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "There are two parts to the task: <br> 1) Answering questions about different activities <br> 2) Indicating your preference between different activities. <br> You will also complete some questionnaires at the end."
+                            "textContent": {
+                                "en": "There are two parts to the task: <br> 1) Answering questions about different activities <br> 2) Indicating your preference between different activities. <br> You will also complete some questionnaires at the end.",
+                                "fr": "La tâche comporte deux parties : <br> 1) Répondre à des questions sur différentes activités <br> 2) Indiquer votre préférence entre différentes activités. <br> Vous remplirez également quelques questionnaires à la fin."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Please note that Part 1 is the longest and takes around 40 minutes. The rest is much shorter, and the entire experiment will last from 1 hour to 1 hour and 20 minutess."
+                            "textContent": {
+                                "en": "Please note that Part 1 is the longest and takes around 40 minutes. The rest is much shorter, and the entire experiment will last from 1 hour to 1 hour and 20 minutess.",
+                                "fr": "Veuillez noter que la partie 1 est la plus longue et dure environ 40 minutes. Le reste est beaucoup plus court, et l''ensemble de l''expérience durera entre 1 heure et 1 heure 20 minutes."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click NEXT to continue"
+                            "textContent": {
+                                "en": "Click NEXT to continue",
+                                "fr": "Cliquez sur NEXT pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -4809,23 +6410,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "COVID-19 Disclaimer",
+                    "title": {
+                        "en": "COVID-19 Disclaimer",
+                        "fr": "Avis à propos des effets de la COVID-19"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "We recognize that what you currently do in your everyday life may be impacted by the COVID-19 pandemic."
+                            "textContent": {
+                                "en": "We recognize that what you currently do in your everyday life may be impacted by the COVID-19 pandemic.",
+                                "fr": "Nous sommes conscients que vos habitudes quotidiennes on peut-être chang.es à cause de la pandémie COVID-19."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "As a result, you may not currently be participating in some of the activities that we will ask you about."
+                            "textContent": {
+                                "en": "As a result, you may not currently be participating in some of the activities that we will ask you about.",
+                                "fr": "Par conséquent, il se peut que vous ne participiez pas actuellement à certaines des activités sur lesquelles nous vous interrogerons."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "As much as possible, please try to picture yourself doing the activities under normal (pre-pandemic circumstances)."
+                            "textContent": {
+                                "en": "As much as possible, please try to picture yourself doing the activities under normal (pre-pandemic circumstances).",
+                                "fr": "Dans la mesure du possible, essayez de vous imaginer en train de faire ces activités dans des circonstances normales (pré-pandémiques)."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click NEXT to continue"
+                            "textContent": {
+                                "en": "Click NEXT to continue",
+                                "fr": "Cliquez sur NEXT pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -4838,23 +6454,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Everyday Activities Game - Part 1",
+                    "title": {
+                        "en": "Everyday Activities Game - Part 1",
+                        "fr": "Jeu des Activités Quotidiennes - Partie 1"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Please read the following instructions carefully."
+                            "textContent": {
+                                "en": "Please read the following instructions carefully.",
+                                "fr": "Veuillez lire attentivement les instructions suivantes."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "We will ask you a series of questions about how you feel about different activities."
+                            "textContent": {
+                                "en": "We will ask you a series of questions about how you feel about different activities.",
+                                "fr": "Nous vous poserons une série de questions sur ce que vous ressentez à propos de différentes activités."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You will have to provide your response using your mouse."
+                            "textContent": {
+                                "en": "You will have to provide your response using your mouse.",
+                                "fr": "Vous devrez fournir votre réponse en utilisant votre souris."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click NEXT to continue"
+                            "textContent": {
+                                "en": "Click NEXT to continue",
+                                "fr": "Cliquez sur NEXT pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -4867,23 +6498,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Let’s walk through an example",
+                    "title": {
+                        "en": "Let’s walk through an example",
+                        "fr": "Voici un exemple"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Activity: Bring the car to the mechanic"
+                            "textContent": {
+                                "en": "Activity: Bring the car to the mechanic",
+                                "fr": "Activité : Amener la voiture chez le mécanicien"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You will be asked: How much you look forward to the outcome of it? How mentally effortful does this activity feel to you? "
+                            "textContent": {
+                                "en": "You will be asked: How much do you look forward to the outcome of it? How mentally effortful does this activity feel to you? ",
+                                "fr": "On vous demandera : À quel point avez-vous hâte au résultat de cette activité ? À quel point cette activité vous demande-t-elle un effort mental?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "We understand that this may or may not apply to you (perhaps you don’t currently own a car), but we ask that you try to picture yourself doing each activity so that you can answer the questions."
+                            "textContent": {
+                                "en": "<b>We understand that this may or may not apply to you (perhaps you don’t currently own a car), but we ask that you try to picture yourself doing each activity so that you can answer the questions.</b>",
+                                "fr": "<b>Nous comprenons que cette question peut ou non s''appliquer à vous (p.ex. vous ne possédez peut-être pas de voiture), mais nous vous demandons d''essayer de vous imaginer en train de faire chaque activité afin de pouvoir répondre aux questions.</b>"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click START to practice"
+                            "textContent": {
+                                "en": "Click START to practice",
+                                "fr": "Cliquez sur START pour pratiquer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -4896,6 +6542,7 @@ UPDATE tasks set
             {
                 "componentName": "RATINGCOMPONENT",
                 "componentConfig": {
+                    "numTrials": 2,
                     "isPractice": true,
                     "maxResponseTime": 150000,
                     "interTrialDelay": 100,
@@ -4909,16 +6556,43 @@ UPDATE tasks set
                         "type": "hardcoded",
                         "stimuli": [
                             {
-                                "activity": "Bring the car to the mechanic",
+                                "activity": {
+                                    "en": "Bring the car to the mechanic",
+                                    "fr": "Apporter la voiture au mécanicien"
+                                },
                                 "type": "DoSomething",
                                 "questions": [
                                     {
-                                        "question": "How much do you look forward to the outcome of this activity?",
-                                        "legend": ["Not at all", "Very Much"]
+                                        "question": {
+                                            "en": "How much do you look forward to the outcome of this activity?",
+                                            "fr": "À quel point avez-vous hâte au résultat de cette activité?"
+                                        },
+                                        "legend": [
+                                            {
+                                                "en": "Not at all",
+                                                "fr": "Pas du tout"
+                                            },
+                                            {
+                                                "en": "Very much",
+                                                "fr": "Beaucoup"
+                                            }
+                                        ]
                                     },
                                     {
-                                        "question": "How mentally effortful does this activity feel to you?",
-                                        "legend": ["Not at all", "Very effortful"]
+                                        "question": {
+                                            "en": "How mentally effortful does this activity feel to you?",
+                                            "fr": "À quel point cette activité vous demande-t-elle un effort mental?"
+                                        },
+                                        "legend": [
+                                            {
+                                                "en": "Not at all",
+                                                "fr": "Pas du tout"
+                                            },
+                                            {
+                                                "en": "Very effortful",
+                                                "fr": "Beaucoup"
+                                            }
+                                        ]
                                     }
                                 ]
                             }
@@ -4933,19 +6607,38 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Now you are ready to start."
+                            "textContent": {
+                                "en": "Now you are ready to start.",
+                                "fr": "Maintenant vous êtes prêt.e à commencer."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "We will show you a total of 26 activities and ask you a series of questions about each activity."
+                            "textContent": {
+                                "en": "We will show you a total of 26 activities and ask you a series of questions about each activity.",
+                                "fr": "Nous vous montrerons un total de 26 activités et nous vous poserons une série de questions sur chaque activité."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Please take a moment to picture yourself doing each activity before answering the questions."
+                            "textContent": {
+                                "en": "Please take a moment to picture yourself doing each activity before answering the questions.",
+                                "fr": "Veuillez prendre un moment pour vous imaginer en train d''entreprendre chaque activité avant de répondre aux questions."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click START when you are ready"
+                            "textContent": {
+                                "en": "<b>Again, this is the longest part, and it may feel repetitive, but please be patient. There will be a break in the middle.</b>",
+                                "fr": "<b>Encore une fois, ceci est la partie la plus longue, et elle peut sembler répétitive, mais soyez patient. Il y aura une pause au milieu.</b>"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click START when you are ready",
+                                "fr": "Cliquez sur START lorsque vous êtes prêt.e"
+                            }
                         }
                     ],
                     "buttons": {
@@ -4958,6 +6651,56 @@ UPDATE tasks set
             {
                 "componentName": "RATINGCOMPONENT",
                 "componentConfig": {
+                    "numTrials": 13,
+                    "isPractice": false,
+                    "maxResponseTime": 15000,
+                    "interTrialDelay": 100,
+                    "interActivityDelay": 1000,
+                    "delayToShowHelpMessage": 10000,
+                    "durationHelpMessageShown": 5000,
+                    "durationOutOftimeMessageShown": 2000,
+                    "delayToShowRatingSlider": 0,
+                    "numDoSomethingActivities": 21,
+                    "stimuliConfig": {
+                        "type": "generated",
+                        "stimuli": null
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "You may now take a break! It is important that you leave this window open, otherwise your data and progress will be lost.",
+                        "fr": "Vous pouvez maintenant prendre une pause! SVP laissez cette fenêtre ouverte, sinon vos données et votre progrès sera perdu."
+                    },
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "We simply ask that you keep your break to under <b>10 minutes</b> or so.",
+                                "fr": "Nous vous demandons simplement de limiter la pause à environ <b>10 minutes</b>."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Press \\"START\\" when you are ready to continue",
+                                "fr": "Cliquez sur \\"START\\" lorsque vous êtes prêt à commencer"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": true,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "RATINGCOMPONENT",
+                "componentConfig": {
+                    "numTrials": 13,
                     "isPractice": false,
                     "maxResponseTime": 15000,
                     "interTrialDelay": 100,
@@ -4980,7 +6723,10 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Thank you for completing Part 1 of the game!"
+                            "textContent": {
+                                "en": "Thank you for completing Part 1 of the game!",
+                                "fr": "Merci d''avoir terminé la première partie du jeu!"
+                            }
                         }
                     ],
                     "buttons": {
@@ -4993,23 +6739,38 @@ UPDATE tasks set
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Everyday Activities Game - Part 2",
+                    "title": {
+                        "en": "Everyday Activities Game - Part 2",
+                        "fr": "Jeu des activités quotidiennes - Partie 2"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Please read the following instructions carefully."
+                            "textContent": {
+                                "en": "Please read the following instructions carefully.",
+                                "fr": "Veuillez lire attentivement les instructions suivantes."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "For this part of the task, you will be asked to choose between two different activities."
+                            "textContent": {
+                                "en": "For this part of the task, you will be asked to choose between two different activities.",
+                                "fr": "Pour cette partie de la tâche, vous devrez choisir entre deux activités différentes."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Your job is to <b>imagine yourself faced with this choice in your everyday life, and to indicate which activity you would choose.</b>"
+                            "textContent": {
+                                "en": "Your job is to <b>imagine yourself faced with this choice in your everyday life, and to indicate which activity you would choose.</b>",
+                                "fr": "Vous devez <b>vous imaginer confronté à ce choix dans votre vie quotidienne, et indiquer quelle activité vous choisiriez.</b>"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click NEXT for an example"
+                            "textContent": {
+                                "en": "Click NEXT for an example",
+                                "fr": "Cliquez sur NEXT pour un exemple"
+                            }
                         }
                     ],
                     "buttons": {
@@ -5026,23 +6787,38 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "For example:"
+                            "textContent": {
+                                "en": "For example:",
+                                "fr": "Par exemple:"
+                            }
                         },
                         {
                             "sectionType": "image-horizontal",
-                            "imagePath": "/assets/images/instructions/everydaychoice-new/choice-example.PNG"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/everydaychoice-new/choice-example_en.png",
+                                "fr": "/assets/images/instructions/everydaychoice-new/choice-example_fr.png"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "We ask that you try to picture the choice you would make in real life, even if some of the choices may not be ones you have ever been faced with."
+                            "textContent": {
+                                "en": "We ask that you try to picture the choice you would make in real life, even if some of the choices may not be ones you have ever been faced with.",
+                                "fr": "Nous vous demandons d''essayer d''imaginer le choix que vous feriez dans la vie réelle, même si certains des choix ne sont pas ceux auxquels vous avez déjà été confronté.e."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Tell us: <b>which activity would you MOST LIKELY CHOOSE TO DO?</b>"
+                            "textContent": {
+                                "en": "Tell us: <b>which activity would you MOST LIKELY CHOOSE TO DO?</b>",
+                                "fr": "Dites-nous : quelle activité CHOISIRIEZ-VOUS LE PLUS PROBABLEMENT ?"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click START to practice"
+                            "textContent": {
+                                "en": "Click START to practice",
+                                "fr": "Cliquez sur START pour vous entraîner"
+                            }
                         }
                     ],
                     "buttons": {
@@ -5066,8 +6842,14 @@ UPDATE tasks set
                         "type": "hardcoded",
                         "stimuli": [
                             {
-                                "firstActivity": "Bring the car to the mechanic",
-                                "secondActivity": "Dust your bookshelves"
+                                "firstActivity": {
+                                    "en": "Bring the car to the mechanic",
+                                    "fr": "Apporter la voiture au mécanicien"
+                                },
+                                "secondActivity": {
+                                    "en": "Dust your bookshelves",
+                                    "fr": "Dépoussiérer vos étagères"
+                                }
                             }
                         ]
                     }
@@ -5080,15 +6862,24 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You finished the practice!"
+                            "textContent": {
+                                "en": "You finished the practice!",
+                                "fr": "Vous avez terminé l''entraînement!"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Now, please picture yourself doing the activity for each of the following activities, and rate which activity you would MOST LIKELY spend time doing."
+                            "textContent": {
+                                "en": "Now, please picture yourself doing the activity for each of the following activities, and rate which activity you would MOST LIKELY spend time doing.",
+                                "fr": "Maintenant, imaginez-vous en train de faire l''activité dans la vie réelle pour chacune des activités suivantes, et indiquez laquelle vous choisiriez le PLUS PROBABLEMENT de faire."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click START when you are ready"
+                            "textContent": {
+                                "en": "Click START when you are ready",
+                                "fr": "Cliquez sur START lorsque vous êtes prêt"
+                            }
                         }
                     ],
                     "buttons": {
@@ -5121,11 +6912,24 @@ UPDATE tasks set
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Hooray! You have finished the Everyday Activities Game. We appreciate your time and effort in helping with our research."
+                            "textContent": {
+                                "en": "Hooray! You have finished the Everyday Activities Game. We appreciate your time and effort in helping with our research.",
+                                "fr": "Bravo ! Vous avez terminé le Jeu des Activités Quotidiennes. Nous apprécions le temps et l''effort que vous avez consacrés à notre recherche."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Before you go, you will complete some short questionnaires."
+                            "textContent": {
+                                "en": "Before you go, you will complete some short questionnaires.",
+                                "fr": "Avant de partir, veuillez remplir quelques questionnaires."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click NEXT to continue",
+                                "fr": "Cliquez sur NEXT pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -5526,6 +7330,54 @@ UPDATE tasks set
                             ]
                         }
                     ],
+                    "inputs": [
+                        {
+                            "label": {
+                                "en": "Please indicate whether you would like to be contacted by email for future online studies.",
+                                "fr": "Veuillez indiquer si vous acceptez d''être contacté par courriel à propos d''autres opportunités de recherche dans le futur."
+                            },
+                            "key": "agree to be contacted for future opportunities",
+                            "options": [
+                                {
+                                    "textContent": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "yes"
+                                },
+                                {
+                                    "textContent": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "no"
+                                }
+                            ]
+                        },
+                        {
+                            "label": {
+                                "en": "Please indicate whether you would like to receive updates about the findings from the study (no more than twice per year)",
+                                "fr": "Veuillez indiquer si vous voudriez recevoir des mises à jour à propos des résultats de notre recherche (pas plus de 2 fois par année)"
+                            },
+                            "key": "would like to receive updates about study findings",
+                            "options": [
+                                {
+                                    "textContent": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "yes"
+                                },
+                                {
+                                    "textContent": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "no"
+                                }
+                            ]
+                        }
+                    ],
                     "endMessage": {
                         "en": "By clicking \\"Accept\\", you are confirming that you reviewed the information and consent form and that you agree to participate in the study in accordance with the conditions stated above.",
                         "fr": "En cliquant \\"ACCEPTER\\" ci-dessous vous confirmez que vous avez pris connaissance de l''information dans le formulaire de consentement et que vous acceptez de participer aux conditions qui y sont énoncées"
@@ -5659,87 +7511,6 @@ UPDATE tasks set
         ]
     }'
 WHERE id = 15;
--- STRESS CLINICAL DEBRIEF
-UPDATE tasks set
-    from_platform = "PSHARPLAB",
-    task_type = "CONSENT",
-    name = "Stress Clinical Debrief",
-    description = "Note: May want to review deleting this and changing it to an info display slide",
-    external_url = "",
-    config = '{
-        "taskconfig": {},
-        "metadata": [
-            {
-                "componentName": "CONSENT",
-                "componentConfig": {
-                    "imgPath": "../../../assets/images/consent/consentOrgs.png",
-                    "title": "DEBRIEFING ABOUT THE DECEPTION USED IN THE STUDY",
-                    "body": [
-                        {
-                            "caption": "Thank you for participating!",
-                            "words": [
-                                "Earlier, we informed you that our study was about measuring aspect of cognition. While this is true, we were specifically interested in <b>the effects of stress on cognition</b>. As a result, half of the participants in the study saw unpleasant videos and completed a very stressful math game in order to create a short-term stressful experience."
-                            ]
-                        },
-                        {
-                            "caption": "",
-                            "words": [
-                                "In order to properly study this, <b>it was required that we deceive you about the actual nature of the study</b>. We could not warn you that you would experience stress because knowing this in advance would have minimized the experience of the stress."
-                            ]
-                        },
-                        {
-                            "caption": "",
-                            "words": [
-                                "The specific deception elements in this study included:",
-                                "&nbsp;&nbsp;&nbsp;&nbsp 1) Not telling you in the consent form that this study was about the effects of stress on cognition.",
-                                "&nbsp;&nbsp;&nbsp;&nbsp 2) If you were part of the stress group:",
-                                "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a. Telling you you were doing badly on the math game no matter your actual performance.",
-                                "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b. Telling you you had to maintain a certain performance level which was not true. In fact, we are not at all interested in performance on this game. This was only to cause stress.",
-                                "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c. Watching unpleasant videos without warning."
-                            ]
-                        },
-                        {
-                            "caption": "",
-                            "words": [
-                                "Given the ubiquitous nature of stress, it is critical that we study it in order to understand the range of consequences it can hold for brain health."
-                            ]
-                        },
-                        {
-                            "caption": "",
-                            "words": [
-                                "We followed standard research procedures commonly used to cause stress in the research setting. <b>The stress was meant to be relatively mild and very short-term</b>. If you still feel lingering effects of this stress, or have any questions about the study or your rights as a participant, please contact us: <b>Madeleine Sharp, Department of Neurology and Neurosurgery, Montréal Neurological Institute, McGill University</b> <a href=\\"#\\">madeleine.sharp@mcgill.ca</a> or <a href=\\"#\\">sharplab.neuro@mcgill.ca</a>"
-                            ]
-                        },
-                        {
-                            "caption": "",
-                            "words": [
-                                "Please also consider the following mental health resource:",
-                                "Mental Health Services Locator http://store.samhsa.gov/mhlocator"
-                            ]
-                        },
-                        {
-                            "caption": "",
-                            "words": [
-                                "Finally, if you have comments, or wish to file a complaint, you may communicate with the Ombudsman of the Montreal Neurological Hospital at (514) 934-1934 ext. 22223."
-                            ]
-                        }
-                    ],
-                    "endMessage": "Thank you again for your participation!",
-                    "buttons": {
-                        "reject": {
-                            "show": false,
-                            "text": "DECLINE"
-                        },
-                        "accept": {
-                            "show": true,
-                            "text": "ACKNOWLEDGE"
-                        }
-                    }
-                }
-            }
-        ]
-    }'
-WHERE id = 16;
 -- WEB PHENO CLINICAL
 UPDATE tasks set
     from_platform = "PSHARPLAB",
@@ -5982,6 +7753,77 @@ UPDATE tasks set
                                 {
                                     "en": "The McGill University Health Centre Research Ethics Board reviewed this research and is responsible for monitoring the study.",
                                     "fr": "Le comité d''éthique de la recherche du Centre Universitaire de santé McGill a approuvé le projet et en assurera le suivi."
+                                }
+                            ]
+                        }
+                    ],
+                    "inputs": [
+                        {
+                            "label": {
+                                "en": "Do you accept to be contacted yearly (max. 5 years) for a follow-up online testing session? (you can always decline at that time)",
+                                "fr": "Acceptez-vous d''être contacté annuellement (max. 5 années) pour un suivi en ligne? (vous pourrez toujours décliner à ce moment-là)"
+                            },
+                            "key": "agree to be contacted yearly",
+                            "options": [
+                                {
+                                    "textContent": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "yes"
+                                },
+                                {
+                                    "textContent": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "no"
+                                }
+                            ]
+                        },
+                        {
+                            "label": {
+                                "en": "Please indicate whether you would like to be contacted by email for future online research opportunities.",
+                                "fr": "Veuillez indiquer si vous acceptez d''être contacté par courriel à propos d''autres opportunités de recherche dans le futur."
+                            },
+                            "key": "agree to be contacted for future opportunities",
+                            "options": [
+                                {
+                                    "textContent": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "yes"
+                                },
+                                {
+                                    "textContent": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "no"
+                                }
+                            ]
+                        },
+                        {
+                            "label": {
+                                "en": "Please indicate whether you would like to receive updates about the findings from the study (no more than twice per year).",
+                                "fr": "Veuillez indiquer si vous voudriez recevoir des mises à jour à propos des résultats de notre recherche (pas plus de 2 fois par année)."
+                            },
+                            "key": "would like to receive updates about study findings",
+                            "options": [
+                                {
+                                    "textContent": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "yes"
+                                },
+                                {
+                                    "textContent": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "no"
                                 }
                             ]
                         }
@@ -11757,39 +13599,63 @@ UPDATE tasks SET
             {
                 "componentName": "QUESTIONNAIRECOMPONENT",
                 "componentConfig": {
-                    "title": "Questionnaire",
+                    "title": {
+                        "en": "Questionnaire",
+                        "fr": "Le Questionnaire"
+                    },
                     "questions": [
                         {
                             "questionType": "displayText",
-                            "title": "<p>Below are a number of statements. Each statement asks you to think about your life <em>over the last 2 weeks</em>.</p> <p>For each statement, select how appropriately it describes your life right now. Select \\"Completely true\\" if the statement describes you perfectly, \\"Completely untrue\\" if the statement does not describe you at all over the last 2 weeks, and use the answers in between accordingly.</p>"
+                            "title": {
+                                "en": "<p>Below are a number of statements. Each statement asks you to think about your life <em>over the last 2 weeks</em>.</p> <p>For each statement, select how appropriately it describes your life right now. Select \\"Completely true\\" if the statement describes you perfectly, \\"Completely untrue\\" if the statement does not describe you at all over the last 2 weeks, and use the answers in between accordingly.</p>",
+                                "fr": "<p>Vous trouverez ci-dessous des énoncés. Chaque énoncé vous demande de réfléchir à votre vie <em>au cours des deux dernières semaines</em>.</p> <p>Pour chacun d’eux, sélectionnez à quel point l’énoncé décrit votre vie actuellement. Sélectionnez \\"Complètement vrai\\" si l''énoncé vous décrit parfaitement, ou \\"Complètement faux\\" si l''énoncé ne vous décrit pas du tout au cours des deux dernières semaines. Utilisez aussi les réponses intermédiaires si elles sont plus appropriés à la façon dont vous vous sentez.</p>"
+                            }
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "I feel sad or upset when I hear bad news.",
+                            "title": {
+                                "en": "I feel sad or upset when I hear bad news.",
+                                "fr": "Je me sens triste ou bouleversé.e lorsque j''entends une mauvaises nouvelle."
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "I feel sad or upset when I hear bad news.",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite true",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -11797,30 +13663,48 @@ UPDATE tasks SET
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "I start conversations with random people.",
+                            "title": {
+                                "en": "I start conversations with random people.",
+                                "fr": "J''entame des conversations avec des inconnus."
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "I start conversations with random people.",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite true",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -11828,30 +13712,48 @@ UPDATE tasks SET
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "I enjoy doing things with people I have just met.",
+                            "title": {
+                                "en": "I enjoy doing things with people I have just met.",
+                                "fr": "J''aime faire des choses avec des gens que je viens de rencontrer."
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "I enjoy doing things with people I have just met.",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite true",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -11859,30 +13761,48 @@ UPDATE tasks SET
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "I suggest activities for me and my friends to do.",
+                            "title": {
+                                "en": "I suggest activities for me and my friends to do.",
+                                "fr": "Je propose des activités à faire pour moi et mes amis."
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "I suggest activities for me and my friends to do.",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite true",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -11890,30 +13810,48 @@ UPDATE tasks SET
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "I make decisions firmly and without hesitation.",
+                            "title": {
+                                "en": "I make decisions firmly and without hesitation.",
+                                "fr": "Je prends des décisions avec fermeté et sans hésitation."
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "I make decisions firmly and without hesitation.",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite true",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -11921,30 +13859,48 @@ UPDATE tasks SET
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "After making a decision, I will wonder if I have made the wrong choice.",
+                            "title": {
+                                "en": "After making a decision, I will wonder if I have made the wrong choice.",
+                                "fr": "Après avoir pris une décision, je me demande si j''ai fait le mauvais choix."
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "After making a decision, I will wonder if I have made the wrong choice.",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite true",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -11952,30 +13908,48 @@ UPDATE tasks SET
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Based on the last two weeks, I would say I care deeply about how my loved ones think of me.",
+                            "title": {
+                                "en": "Based on the last two weeks, I would say I care deeply about how my loved ones think of me.",
+                                "fr": "Basé sur les deux dernières semaines, je dirais que je me soucie beaucoup de ce que mes proches pensent de moi."
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Based on the last two weeks, I would say I care deeply about how my loved ones think of me.",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite true",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -11983,30 +13957,48 @@ UPDATE tasks SET
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "I go out with friends on a weekly basis.",
+                            "title": {
+                                "en": "I go out with friends on a weekly basis.",
+                                "fr": "Je sors avec des amis chaque semaine."
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "I go out with friends on a weekly basis.",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite true",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -12014,30 +14006,48 @@ UPDATE tasks SET
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "When I decide to do something, I am able to make an effort easily.",
+                            "title": {
+                                "en": "When I decide to do something, I am able to make an effort easily.",
+                                "fr": "Quand je décide de faire quelque chose, je suis capable d''y mettre un effort facilement."
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "When I decide to do something, I am able to make an effort easily.",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite true",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -12045,30 +14055,48 @@ UPDATE tasks SET
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "I don''t like to laze around.",
+                            "title": {
+                                "en": "I don''t like to laze around.",
+                                "fr": "Je n''aime pas paresser."
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "I don''t like to laze around.",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite true",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -12076,30 +14104,48 @@ UPDATE tasks SET
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Choose \\"quite true\\" for this question please.",
+                            "title": {
+                                "en": "Choose the option \\"Quite true\\" here. This is an attention check!",
+                                "fr": "Choisissez l''option \\"Plutôt vrai\\" ici. Ceci nous permet de vérifier que vous portez attention!"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "attentionCheck-Choose quite true for this question please",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite true",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -12107,30 +14153,48 @@ UPDATE tasks SET
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "I get things done when they need to be done, without requiring reminders from others.",
+                            "title": {
+                                "en": "I get things done when they need to be done, without requiring reminders from others.",
+                                "fr": "Je fais les choses au moment où elles doivent être faites, sans qu''on ait besoin de me le rappeler."
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "I get things done when they need to be done, without requiring reminders from others.",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite true",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -12138,30 +14202,48 @@ UPDATE tasks SET
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "When I decide to do something, I am motivated to see it through to the end.",
+                            "title": {
+                                "en": "When I decide to do something, I am motivated to see it through to the end.",
+                                "fr": "Quand je décide de faire quelque chose, je suis motivé.e d''aller jusqu''au bout."
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "When I decide to do something, I am motivated to see it through to the end.",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite TRUE",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -12169,30 +14251,48 @@ UPDATE tasks SET
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "I feel awful if I say something insensitive.",
+                            "title": {
+                                "en": "I feel awful if I say something insensitive.",
+                                "fr": "Je me sens mal si je dis quelque chose d''insensible."
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "I feel awful if I say something insensitive.",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite true",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -12200,30 +14300,48 @@ UPDATE tasks SET
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "I start conversations without being prompted.",
+                            "title": {
+                                "en": "I start conversations without being prompted.",
+                                "fr": "J''entame des conversations sans y être invité.e."
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "I start conversations without being prompted.",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite true",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -12231,30 +14349,48 @@ UPDATE tasks SET
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "When I have something I need to do, I do it straightaway so it is out of the way.",
+                            "title": {
+                                "en": "When I have something I need to do, I do it straightaway so it is out of the way.",
+                                "fr": "Quand j''ai quelque chose à faire, je le fais tout de suite pour ne pas avoir à y repenser."
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "When I have something I need to do, I do it straightaway so it is out of the way.",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite true",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -12262,30 +14398,48 @@ UPDATE tasks SET
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "I feel bad when I hear an acquaintance has an accident or illness.",
+                            "title": {
+                                "en": "I feel bad when I hear an acquaintance had an accident or illness.",
+                                "fr": "Je me sens mal quand j''apprends qu''une connaissance a subit un accident ou une maladie."
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "I feel bad when I hear an acquaintance has an accident or illness.",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite true",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -12293,30 +14447,48 @@ UPDATE tasks SET
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "I enjoy choosing what to do from a range of activities.",
+                            "title": {
+                                "en": "I enjoy choosing what to do from a range of activities.",
+                                "fr": "J''aime choisir ce que je fais faire parmi un éventail d''activités."
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "I enjoy choosing what to do from a range of activities.",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite true",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -12324,30 +14496,48 @@ UPDATE tasks SET
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "If I realise I have been unpleasant to someone, I will feel terribly guilty afterwards.",
+                            "title": {
+                                "en": "If I realise I have been unpleasant to someone, I will feel terribly guilty afterwards.",
+                                "fr": "Si je me rends compte que j''ai été désagréable avec quelqu''un, je me sens terriblement coupable par la suite."
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "If I realise I have been unpleasant to someone, I will feel terribly guilty afterwards.",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Completely UNTRUE",
+                                    "label": {
+                                        "en": "Completely UNTRUE",
+                                        "fr": "Complètement FAUX"
+                                    },
                                     "value": "Completely UNTRUE"
                                 },
                                 {
-                                    "label": "Mostly untrue",
+                                    "label": {
+                                        "en": "Mostly untrue",
+                                        "fr": "Plutôt faux"
+                                    },
                                     "value": "Mostly untrue"
                                 },
                                 {
-                                    "label": "Neither true nor untrue",
+                                    "label": {
+                                        "en": "Neither true nor untrue",
+                                        "fr": "Ni vrai, ni faux"
+                                    },
                                     "value": "Neither true nor untrue"
                                 },
                                 {
-                                    "label": "Quite true",
+                                    "label": {
+                                        "en": "Quite true",
+                                        "fr": "Plutôt vrai"
+                                    }, 
                                     "value": "Quite true"
                                 },
                                 {
-                                    "label": "Completely TRUE",
+                                    "label": {
+                                        "en": "Completely TRUE",
+                                        "fr": "Complètement VRAI"
+                                    },
                                     "value": "Completely TRUE"
                                 }
                             ]
@@ -12375,16 +14565,28 @@ UPDATE tasks SET
                     "questions": [
                         {
                             "questionType": "displayText",
-                            "title": "<p>We are still in the development stages of this research study. The goal of the study is to understand how and why people fill their time. Are people driven by pleasure? By obligation? A bit of both? These are difficult things to measure because different people enjoy different things and have different sets of obligations. Any feedback you can provide on this pilot study will be really helpful to us as we fine-tune our approach to understanding this.</p> <p> Please see below questions for some specific areas where we would like your feedback:</p>"
+                            "title": { 
+                                "en": "<p>We are still in the development stages of this research study. The goal of the study is to understand how and why people fill their time. Are people driven by pleasure? By obligation? A bit of both? These are difficult things to measure because different people enjoy different things and have different sets of obligations. Any feedback you can provide on this study will be really helpful to us as we fine-tune our approach to understanding this.</p> <p> Please see below questions for some specific areas where we would like your feedback:</p>",
+                                "fr": "<p>Nous sommes encore en phase de développement pour cette étude. L''objectif de l''étude est de comprendre comment et pourquoi les gens occupent leur temps. Les gens sont-ils motivés par le plaisir ? Par les obligations ? Un peu des deux ? Il est difficile de mesurer ces aspects, car chaque personne a des obligations et des désirs différents. Tout retour que vous pouvez donc fournir sur cette étude nous sera vraiment utile pour raffiner notre approche .</p> <p>Les questions ci-dessous adressent certains aspects spécifiques de l''étude sur lesquels nous aimerions avoir votre opinion :</p>"
+                            }
                         },
                         {
                             "questionType": "multipleChoiceSelect",
                             "key": "Q1-pandemic",
-                            "title": "1. We understand that the current pandemic has more or less affected what you do in your everyday life. How much do you think that affected your ability to complete this task? For example, did you have trouble picturing yourself doing a specific activity that you have not been able to do due to the pandemic (e.g. chat with a neighbor)?",
-                            "textContent": "Please rate <em>on a scale of 1-10</em> how much the current life situation affected your ability to complete this this task:",
+                            "title": {
+                                "en": "1. We understand that the current pandemic has more or less affected what you do in your everyday life. How much do you think that affected your ability to answer the questions of our study? For example, did you have trouble picturing yourself doing a specific activity that you have not been able to do due to the pandemic (e.g., chat with a neighbor)?",
+                                "fr": "1. Nous savons que la pandémie a probablement affecté ce que vous faites dans votre vie quotidienne. Dans quelle mesure pensez-vous que cela a affecté votre capacité à répondre aux questions de notre étude ? Par exemple, avez-vous eu du mal à vous imaginer en train de faire une activité spécifique que vous n''avez pas pu faire récemment à cause de la pandémie (par exemple, discuter avec un voisin)?"
+                            },
+                            "textContent": {
+                                "en": "Please rate <em>on a scale of 1-10</em> how much your current life situation affected your ability to answer the questions:",
+                                "fr": "Veuillez évaluer <em>sur une échelle de 1 à 10</em> dans quelle mesure votre situation de vie actuelle a affecté votre capacité à répondre aux questions :"
+                            },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "1 - Not at all: I had no difficulty picturing myself doing most of these activities",
+                                    "label": {
+                                        "en": "1 - Not at all: I had no difficulty picturing myself doing most of these activities",
+                                        "fr": "1 - Pas du tout: Je n''ai eu aucune difficulté à m''imaginer en train de faire la plupart des activités"
+                                    },
                                     "value": "1"
                                 },
                                 {
@@ -12420,24 +14622,39 @@ UPDATE tasks SET
                                     "value": "9"
                                 },
                                 {
-                                    "label": "10 - Very much so: I could not picture doing most of the activities given the present circumstances",
+                                    "label": {
+                                        "en": "10 - Very much so: I could NOT picture doing most of the activities given the present circumstances",
+                                        "fr": "10 - Beaucoup: Je ne pouvais PAS m''imaginer en train de faire la plupart des activités étant donné les circonstances actuelles"
+                                    },
                                     "value": "10"
                                 }
                             ]
                         },
                         {
                             "questionType": "freeTextResponse",
-                            "textContent": "If you have any specific comments, please include them here [OPTIONAL]",
+                            "textContent": {
+                                "en": "If you have any specific comments, please include them here [OPTIONAL]",
+                                "fr": "Si vous avez des commentaires spécifiques, veuillez les inclure ici [FACULTATIF]"
+                            },
                             "key": "Q1_comment"
                         },
                         {
                             "questionType": "multipleChoiceSelect",
                             "key": "Q2-activities",
-                            "title": "2. Our goal was to ask you about activities that are part of everyday life, but that differs from person to person. Were most of the activities listed part of your usual (i.e. pre-pandemic) everyday life? ",
-                            "textContent": "Please respond using the 1-10 scale:",
+                            "title": {
+                                "en": "2. Our goal was to ask you about activities that are part of everyday life, but that differs from person to person. Were most of the activities listed part of your usual (i.e. pre-pandemic) everyday life? ",
+                                "fr": "2. Notre objectif était de vous interroger sur les activités qui font partie de la vie quotidienne, mais ces activités diffèrent d''une personne à l''autre. La plupart des activités énumérées faisaient-elles partie de votre vie quotidienne habituelle (c''est-à-dire avant la pandémie) ? "
+                            },
+                            "textContent": {
+                                "en": "Please respond using the 1-10 scale:",
+                                "fr": "Veuillez répondre en utilisant l''échelle de 1 à 10 :"
+                            },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "1 - Most of the activities are foreign to me",
+                                    "label": {
+                                        "en": "1 - Most of the activities are foreign to me",
+                                        "fr": "1 - La plupart des activités m''étaient étrangères"
+                                    },
                                     "value": "1"
                                 },
                                 {
@@ -12473,24 +14690,39 @@ UPDATE tasks SET
                                     "value": "9"
                                 },
                                 {
-                                    "label": "10 - Most of the activities do feature in my everyday life",
+                                    "label": {
+                                        "en": "10 - Most of the activities do feature in my everyday life",
+                                        "fr": "10 - La plupart de ces activités font partie de ma vie quotidienne"
+                                    },
                                     "value": "10"
                                 }
                             ]
                         },
                         {
                             "questionType": "freeTextResponse",
-                            "textContent": "Any specific comments? (e.g. did any of the activities stand out as NOT being usual activities for you?)",
+                            "textContent": {
+                                "en": "Any specific comments? (e.g., did any of the activities stand out as NOT being usual activities for you?) [OPTIONAL]",
+                                "fr": "Commentaires additionnels ? (par exemple, est-ce que l''une des activités en particulier vous a semblé NE PAS être une activité habituelle pour vous?) [FACULTATIF]"
+                            },
                             "key": "Q2_comment"
                         },
                         {
                             "questionType": "multipleChoiceSelect",
                             "key": "Q3-choice",
-                            "title": "3. In one part of this task, you were asked to choose between two activities, but we understand these were ‘pretend’ choices.",
-                            "textContent": "Please rate on a scale of 1-10 how much you think your choices generally reflected how you would choose in real life:",
+                            "title": {
+                                "en": "3. In one part of this task, you were asked to choose between two activities, but we understand these were ''pretend'' choices.",
+                                "fr": "3. Dans une partie de l''étude, on vous a demandé de choisir entre deux activités, mais nous comprenons qu''il s''agissait de choix ''fictifs''."
+                            },
+                            "textContent": {
+                                "en": "Please rate on a scale of 1-10 how much you think your choices generally reflected how you would choose in real life:",
+                                "fr": "Veuillez évaluer sur une échelle de 1 à 10 dans quelle mesure vous pensez que vos choix reflètent généralement la façon dont vous choisiriez dans la vraie vie :"
+                            },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "1 -  Not at all reflective – I made random choices in the game",
+                                    "label": {
+                                        "en": "1 -  Not at all reflective – I made random choices in the game",
+                                        "fr": "1 -  Ne reflète pas du tout mes vrais choix – J''ai choisi au hasard pendant l''étude "
+                                    },
                                     "value": "1"
                                 },
                                 {
@@ -12526,19 +14758,28 @@ UPDATE tasks SET
                                     "value": "9"
                                 },
                                 {
-                                    "label": "10 - Exactly as I would choose in real life",
+                                    "label": {
+                                        "en": "10 - Exactly as I would choose in real life",
+                                        "fr": "10 - Exactement comme je choisirais en vrai vie"
+                                    },
                                     "value": "10"
                                 }
                             ]
                         },
                         {
                             "questionType": "freeTextResponse",
-                            "textContent": "Additional comments?",
+                            "textContent": {
+                                "en": "Additional comments?",
+                                "fr": "Commentaires additionnels ?"
+                            },
                             "key": "Q3_comment"
                         },
                         {
                             "questionType": "freeTextResponse",
-                            "title": "4. Do you have any final comments or suggestions about the task? Any specific part of it that was confusing? [OPTIONAL]",
+                            "title": {
+                                "en": "4. Do you have any final comments or suggestions about the task? Any specific part of it that was confusing? [OPTIONAL]",
+                                "fr": "4. Avez-vous des commentaires finaux ou des suggestions concernant le jeu ? Quelque chose en particulier qui était peu claire ? [FACULTATIF]"
+                            },
                             "key": "Final_comment"
                         }
                     ]
@@ -12824,186 +15065,555 @@ UPDATE tasks SET
             {
                 "componentName": "QUESTIONNAIRECOMPONENT",
                 "componentConfig": {
-                    "title": "Questionnaire",
+                    "title": {
+                        "en": "Questionnaire",
+                        "fr": "Le Questionnaire"
+                    },
                     "questions": [
                         {
                             "questionType": "displayText",
-                            "title": "<p>The questions in this scale ask you about your feelings and thoughts during the last month. In each case, you will be asked to indicate how often you felt or thought a certain way.</p>"
+                            "title": {
+                                "en": "<p>The questions in this scale ask you about your feelings and thoughts during the last month. In each case, you will be asked to indicate how often you felt or thought a certain way.</p>",
+                                "fr": "<p>Les questions ci-dessous sont par rapport à vos sentiments et à vos pensées au cours du dernier mois. Dans chaque cas, il vous sera demandé d''indiquer à quelle fréquence vous avez ressenti ou pensé d''une certaine manière.</p>" 
+                            }
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "title": "In the last month, how often have you been upset because of something that happened unexpectedly?",
+                            "title": {
+                                "en": "In the last month, how often have you been upset because of something that happened unexpectedly?",
+                                "fr": "Au cours du dernier mois, combien de fois avez-vous été dérangé.e ou perturbé.e par un évènement inattendu?"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "In the last month, how often have you been upset because of something that happened unexpectedly",
                             "multipleChoiceOptions": [
-                                {"label": "0 - Never", "value": "0"},
-                                {"label": "1 - Almost never", "value": "1"},
-                                {"label": "2 - Sometimes", "value": "2"},
-                                {"label": "3 - Fairly often", "value": "3"},
-                                {"label": "4 - Very often", "value": "4"}
+                                {
+                                    "label": {
+                                        "en": "0 - Never",
+                                        "fr": "0 - Jamais"
+                                    },
+                                    "value": "0"
+                                },
+                                {
+                                    "label": {
+                                        "en": "1 - Almost Never",
+                                        "fr": "1 - Presque Jamais"
+                                    },
+                                    "value": "1"
+                                },
+                                {
+                                    "label": {
+                                        "en": "2 - Sometimes",
+                                        "fr": "2 - Parfois"
+                                    },
+                                    "value": "2"
+                                },
+                                {
+                                    "label": {
+                                        "en": "3 - Fairly Often",
+                                        "fr": "3 - Assez Souvent"
+                                    },
+                                    "value": "3"
+                                },
+                                {
+                                    "label": {
+                                        "en": "4 - Very Often",
+                                        "fr": "4 - Très Souvent"
+                                    },
+                                    "value": "4"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "title": "In the last month, how often have you felt that you were unable to control the important things in your life?",
+                            "title": {
+                                "en": "In the last month, how often have you felt that you were unable to control the important things in your life?",
+                                "fr": "Au cours du dernier mois, combien de fois vous êtes-vous senti.e incapable de contrôler les choses importantes de votre vie?"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "In the last month, how often have you felt that you were unable to control the important things in your life",
                             "multipleChoiceOptions": [
-                                {"label": "0 - Never", "value": "0"},
-                                {"label": "1 - Almost never", "value": "1"},
-                                {"label": "2 - Sometimes", "value": "2"},
-                                {"label": "3 - Fairly often", "value": "3"},
-                                {"label": "4 - Very often", "value": "4"}
+                                {
+                                    "label": {
+                                        "en": "0 - Never",
+                                        "fr": "0 - Jamais"
+                                    },
+                                    "value": "0"
+                                },
+                                {
+                                    "label": {
+                                        "en": "1 - Almost Never",
+                                        "fr": "1 - Presque Jamais"
+                                    },
+                                    "value": "1"
+                                },
+                                {
+                                    "label": {
+                                        "en": "2 - Sometimes",
+                                        "fr": "2 - Parfois"
+                                    },
+                                    "value": "2"
+                                },
+                                {
+                                    "label": {
+                                        "en": "3 - Fairly Often",
+                                        "fr": "3 - Assez Souvent"
+                                    },
+                                    "value": "3"
+                                },
+                                {
+                                    "label": {
+                                        "en": "4 - Very Often",
+                                        "fr": "4 - Très Souvent"
+                                    },
+                                    "value": "4"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "title": "In the last month, how often have you felt nervous and \\"stressed\\"?",
+                            "title": {
+                                "en": "In the last month, how often have you felt nervous and \\"stressed\\"?",
+                                "fr": "Au cours du dernier mois, combien de fois vous êtes-vous senti.e nerveux.euse et \\"stressé.e\\"?"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "In the last month, how often have you felt nervous and \\"stressed\\"",
                             "multipleChoiceOptions": [
-                                {"label": "0 - Never", "value": "0"},
-                                {"label": "1 - Almost never", "value": "1"},
-                                {"label": "2 - Sometimes", "value": "2"},
-                                {"label": "3 - Fairly often", "value": "3"},
-                                {"label": "4 - Very often", "value": "4"}
+                                {
+                                    "label": {
+                                        "en": "0 - Never",
+                                        "fr": "0 - Jamais"
+                                    },
+                                    "value": "0"
+                                },
+                                {
+                                    "label": {
+                                        "en": "1 - Almost Never",
+                                        "fr": "1 - Presque Jamais"
+                                    },
+                                    "value": "1"
+                                },
+                                {
+                                    "label": {
+                                        "en": "2 - Sometimes",
+                                        "fr": "2 - Parfois"
+                                    },
+                                    "value": "2"
+                                },
+                                {
+                                    "label": {
+                                        "en": "3 - Fairly Often",
+                                        "fr": "3 - Assez Souvent"
+                                    },
+                                    "value": "3"
+                                },
+                                {
+                                    "label": {
+                                        "en": "4 - Very Often",
+                                        "fr": "4 - Très Souvent"
+                                    },
+                                    "value": "4"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "title": "In the last month, how often have you felt confident about your ability to handle your personal problems?",
+                            "title": {
+                                "en": "In the last month, how often have you felt confident about your ability to handle your personal problems?",
+                                "fr": "Au cours du dernier mois, combien de fois vous êtes-vous senti.e confiant.e dans votre capacité à gérer vos problèmes personnels?"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "In the last month, how often have you felt confident about your ability to handle your personal problems",
                             "multipleChoiceOptions": [
-                                {"label": "0 - Never", "value": "0"},
-                                {"label": "1 - Almost never", "value": "1"},
-                                {"label": "2 - Sometimes", "value": "2"},
-                                {"label": "3 - Fairly often", "value": "3"},
-                                {"label": "4 - Very often", "value": "4"}
+                                {
+                                    "label": {
+                                        "en": "0 - Never",
+                                        "fr": "0 - Jamais"
+                                    },
+                                    "value": "0"
+                                },
+                                {
+                                    "label": {
+                                        "en": "1 - Almost Never",
+                                        "fr": "1 - Presque Jamais"
+                                    },
+                                    "value": "1"
+                                },
+                                {
+                                    "label": {
+                                        "en": "2 - Sometimes",
+                                        "fr": "2 - Parfois"
+                                    },
+                                    "value": "2"
+                                },
+                                {
+                                    "label": {
+                                        "en": "3 - Fairly Often",
+                                        "fr": "3 - Assez Souvent"
+                                    },
+                                    "value": "3"
+                                },
+                                {
+                                    "label": {
+                                        "en": "4 - Very Often",
+                                        "fr": "4 - Très Souvent"
+                                    },
+                                    "value": "4"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "title": "In the last month, how often have you felt that things were going your way?",
+                            "title": {
+                                "en": "In the last month, how often have you felt that things were going your way?",
+                                "fr": "Au cours du dernier mois, combien de fois avez-vous eu l''impression que les choses allaient comme vous le vouliez?"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "In the last month, how often have you felt that things were going your way",
                             "multipleChoiceOptions": [
-                                {"label": "0 - Never", "value": "0"},
-                                {"label": "1 - Almost never", "value": "1"},
-                                {"label": "2 - Sometimes", "value": "2"},
-                                {"label": "3 - Fairly often", "value": "3"},
-                                {"label": "4 - Very often", "value": "4"}
+                                {
+                                    "label": {
+                                        "en": "0 - Never",
+                                        "fr": "0 - Jamais"
+                                    },
+                                    "value": "0"
+                                },
+                                {
+                                    "label": {
+                                        "en": "1 - Almost Never",
+                                        "fr": "1 - Presque Jamais"
+                                    },
+                                    "value": "1"
+                                },
+                                {
+                                    "label": {
+                                        "en": "2 - Sometimes",
+                                        "fr": "2 - Parfois"
+                                    },
+                                    "value": "2"
+                                },
+                                {
+                                    "label": {
+                                        "en": "3 - Fairly Often",
+                                        "fr": "3 - Assez Souvent"
+                                    },
+                                    "value": "3"
+                                },
+                                {
+                                    "label": {
+                                        "en": "4 - Very Often",
+                                        "fr": "4 - Très Souvent"
+                                    },
+                                    "value": "4"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "title": "In the last month, how often have you found that you could not cope with all the things that you had to do?",
+                            "title": {
+                                "en": "In the last month, how often have you found that you could not cope with all the things that you had to do?",
+                                "fr": "Au cours du dernier mois, combien de fois avez-vous trouvé que vous ne pouviez pas assumer toutes les choses que vous deviez faire?"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "In the last month, how often have you found that you could not cope with all the things that you had to do",
                             "multipleChoiceOptions": [
-                                {"label": "0 - Never", "value": "0"},
-                                {"label": "1 - Almost never", "value": "1"},
-                                {"label": "2 - Sometimes", "value": "2"},
-                                {"label": "3 - Fairly often", "value": "3"},
-                                {"label": "4 - Very often", "value": "4"}
+                                {
+                                    "label": {
+                                        "en": "0 - Never",
+                                        "fr": "0 - Jamais"
+                                    },
+                                    "value": "0"
+                                },
+                                {
+                                    "label": {
+                                        "en": "1 - Almost Never",
+                                        "fr": "1 - Presque Jamais"
+                                    },
+                                    "value": "1"
+                                },
+                                {
+                                    "label": {
+                                        "en": "2 - Sometimes",
+                                        "fr": "2 - Parfois"
+                                    },
+                                    "value": "2"
+                                },
+                                {
+                                    "label": {
+                                        "en": "3 - Fairly Often",
+                                        "fr": "3 - Assez Souvent"
+                                    },
+                                    "value": "3"
+                                },
+                                {
+                                    "label": {
+                                        "en": "4 - Very Often",
+                                        "fr": "4 - Très Souvent"
+                                    },
+                                    "value": "4"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "title": "Can you select \\"very often\\" if you are paying attention?",
+                            "title": {
+                                "en": "Can you select \\"very often\\" if you are paying attention?",
+                                "fr": "Pouvez-vous sélectionner \\"très souvent\\" si vous prêtez attention?"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "attentionCheck-Can you select very often if you are paying attention",
                             "multipleChoiceOptions": [
-                                {"label": "0 - Never", "value": "0"},
-                                {"label": "1 - Almost never", "value": "1"},
-                                {"label": "2 - Sometimes", "value": "2"},
-                                {"label": "3 - Fairly often", "value": "3"},
-                                {"label": "4 - Very often", "value": "4"}
+                                {
+                                    "label": {
+                                        "en": "0 - Never",
+                                        "fr": "0 - Jamais"
+                                    },
+                                    "value": "0"
+                                },
+                                {
+                                    "label": {
+                                        "en": "1 - Almost Never",
+                                        "fr": "1 - Presque Jamais"
+                                    },
+                                    "value": "1"
+                                },
+                                {
+                                    "label": {
+                                        "en": "2 - Sometimes",
+                                        "fr": "2 - Parfois"
+                                    },
+                                    "value": "2"
+                                },
+                                {
+                                    "label": {
+                                        "en": "3 - Fairly Often",
+                                        "fr": "3 - Assez Souvent"
+                                    },
+                                    "value": "3"
+                                },
+                                {
+                                    "label": {
+                                        "en": "4 - Very Often",
+                                        "fr": "4 - Très Souvent"
+                                    },
+                                    "value": "4"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "title": "In the last month, how often have you been able to control irritations in your life?",
+                            "title": {
+                                "en": "In the last month, how often have you been able to control irritations in your life?",
+                                "fr": "Au cours du dernier mois, combien de fois avez-vous été capable de contrôler les irritants dans votre vie?"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "In the last month, how often have you been able to control irritations in your life",
                             "multipleChoiceOptions": [
-                                {"label": "0 - Never", "value": "0"},
-                                {"label": "1 - Almost never", "value": "1"},
-                                {"label": "2 - Sometimes", "value": "2"},
-                                {"label": "3 - Fairly often", "value": "3"},
-                                {"label": "4 - Very often", "value": "4"}
+                                {
+                                    "label": {
+                                        "en": "0 - Never",
+                                        "fr": "0 - Jamais"
+                                    },
+                                    "value": "0"
+                                },
+                                {
+                                    "label": {
+                                        "en": "1 - Almost Never",
+                                        "fr": "1 - Presque Jamais"
+                                    },
+                                    "value": "1"
+                                },
+                                {
+                                    "label": {
+                                        "en": "2 - Sometimes",
+                                        "fr": "2 - Parfois"
+                                    },
+                                    "value": "2"
+                                },
+                                {
+                                    "label": {
+                                        "en": "3 - Fairly Often",
+                                        "fr": "3 - Assez Souvent"
+                                    },
+                                    "value": "3"
+                                },
+                                {
+                                    "label": {
+                                        "en": "4 - Very Often",
+                                        "fr": "4 - Très Souvent"
+                                    },
+                                    "value": "4"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "title": "In the last month, how often have you felt that you were on top of things?",
+                            "title": {
+                                "en": "In the last month, how often have you felt that you were on top of things?",
+                                "fr": "Au cours du dernier mois, combien de fois vous êtes-vous senti.e au-dessus des choses?"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "In the last month, how often have you felt that you were on top of things",
                             "multipleChoiceOptions": [
-                                {"label": "0 - Never", "value": "0"},
-                                {"label": "1 - Almost never", "value": "1"},
-                                {"label": "2 - Sometimes", "value": "2"},
-                                {"label": "3 - Fairly often", "value": "3"},
-                                {"label": "4 - Very often", "value": "4"}
+                                {
+                                    "label": {
+                                        "en": "0 - Never",
+                                        "fr": "0 - Jamais"
+                                    },
+                                    "value": "0"
+                                },
+                                {
+                                    "label": {
+                                        "en": "1 - Almost Never",
+                                        "fr": "1 - Presque Jamais"
+                                    },
+                                    "value": "1"
+                                },
+                                {
+                                    "label": {
+                                        "en": "2 - Sometimes",
+                                        "fr": "2 - Parfois"
+                                    },
+                                    "value": "2"
+                                },
+                                {
+                                    "label": {
+                                        "en": "3 - Fairly Often",
+                                        "fr": "3 - Assez Souvent"
+                                    },
+                                    "value": "3"
+                                },
+                                {
+                                    "label": {
+                                        "en": "4 - Very Often",
+                                        "fr": "4 - Très Souvent"
+                                    },
+                                    "value": "4"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "title": "In the last month, how often have you been angered because of things that were outside of your control?",
+                            "title": {
+                                "en": "In the last month, how often have you been angered because of things that were outside of your control?",
+                                "fr": "Au cours du dernier mois, combien de fois avez-vous été en colère à cause de choses qui étaient en dehors de votre contrôle?"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "In the last month, how often have you been angered because of things that were outside of your control",
                             "multipleChoiceOptions": [
-                                {"label": "0 - Never", "value": "0"},
-                                {"label": "1 - Almost never", "value": "1"},
-                                {"label": "2 - Sometimes", "value": "2"},
-                                {"label": "3 - Fairly often", "value": "3"},
-                                {"label": "4 - Very often", "value": "4"}
+                                {
+                                    "label": {
+                                        "en": "0 - Never",
+                                        "fr": "0 - Jamais"
+                                    },
+                                    "value": "0"
+                                },
+                                {
+                                    "label": {
+                                        "en": "1 - Almost Never",
+                                        "fr": "1 - Presque Jamais"
+                                    },
+                                    "value": "1"
+                                },
+                                {
+                                    "label": {
+                                        "en": "2 - Sometimes",
+                                        "fr": "2 - Parfois"
+                                    },
+                                    "value": "2"
+                                },
+                                {
+                                    "label": {
+                                        "en": "3 - Fairly Often",
+                                        "fr": "3 - Assez Souvent"
+                                    },
+                                    "value": "3"
+                                },
+                                {
+                                    "label": {
+                                        "en": "4 - Very Often",
+                                        "fr": "4 - Très Souvent"
+                                    },
+                                    "value": "4"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "title": "In the last month, how often have you felt difficulties were piling up so high that you could not overcome them?",
+                            "title": {
+                                "en": "In the last month, how often have you felt difficulties were piling up so high that you could not overcome them?",
+                                "fr": "Au cours du dernier mois, combien de fois avez-vous eu l''impression que les difficultés s''accumulaient à un tel point que vous ne pourriez plus les surmonter?"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "In the last month, how often have you felt difficulties were piling up so high that you could not overcome them",
                             "multipleChoiceOptions": [
-                                {"label": "0 - Never", "value": "0"},
-                                {"label": "1 - Almost never", "value": "1"},
-                                {"label": "2 - Sometimes", "value": "2"},
-                                {"label": "3 - Fairly often", "value": "3"},
-                                {"label": "4 - Very often", "value": "4"}
+                                {
+                                    "label": {
+                                        "en": "0 - Never",
+                                        "fr": "0 - Jamais"
+                                    },
+                                    "value": "0"
+                                },
+                                {
+                                    "label": {
+                                        "en": "1 - Almost Never",
+                                        "fr": "1 - Presque Jamais"
+                                    },
+                                    "value": "1"
+                                },
+                                {
+                                    "label": {
+                                        "en": "2 - Sometimes",
+                                        "fr": "2 - Parfois"
+                                    },
+                                    "value": "2"
+                                },
+                                {
+                                    "label": {
+                                        "en": "3 - Fairly Often",
+                                        "fr": "3 - Assez Souvent"
+                                    },
+                                    "value": "3"
+                                },
+                                {
+                                    "label": {
+                                        "en": "4 - Very Often",
+                                        "fr": "4 - Très Souvent"
+                                    },
+                                    "value": "4"
+                                }
                             ]
                         } 
                     ]
@@ -13025,582 +15635,1248 @@ UPDATE tasks SET
             {
                 "componentName": "QUESTIONNAIRECOMPONENT",
                 "componentConfig": {
-                    "title": "Questionnaire",
+                    "title": {
+                        "en": "Questionnaire",
+                        "fr": "Le Questionnaire" 
+                    },
                     "questions": [
                         {
                             "questionType": "displayText",
-                            "title": "<p>Please indicate whether the following life events have happened to you during the previous year.</p>"
+                            "title": {
+                                "en": "<p>Please indicate whether the following life events have happened to you during the last year (last 12 months).</p>",
+                                "fr": "<p>Veuillez indiquer si vous avez vécu les événements de vie suivants au cours de la dernière année (12 derniers mois)." 
+                            }
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Death of spouse",
+                            "title": {
+                                "en": "Death of spouse",
+                                "fr": "Décès d''un conjoint.e" 
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Death of spouse",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Divorce",
+                            "title": {
+                                "en": "Divorce",
+                                "fr": "Divorce"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Divorce",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Marital separation from mate",
+                            "title": {
+                                "en": "Marital separation from mate",
+                                "fr": "Séparation d''un conjoint.e"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Marital separation from mate",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Detention in jail or other institution",
+                            "title": {
+                                "en": "Detention in jail or other institution",
+                                "fr": "Détention en prison ou dans une autre institution"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Detention in jail or other institution",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Death of a close family member",
+                            "title": {
+                                "en": "Death of a close family member",
+                                "fr": "Décès d''un membre de la famille proche"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Death of a close family member",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Major personal injury or illness",
+                            "title": {
+                                "en": "Major personal injury or illness",
+                                "fr": "Blessure ou maladie grave"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Major personal injury or illness",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Marriage",
+                            "title": {
+                                "en": "Marriage",
+                                "fr": "Mariage"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Marriage",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Being fired at work",
+                            "title": {
+                                "en": "Being fired at work",
+                                "fr": "Licenciement (perte d''emploi)"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Being fired at work",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Marital reconciliation with mate",
+                            "title": {
+                                "en": "Marital reconciliation with mate",
+                                "fr": "Réconciliation d''un mariage ou relation conjugale"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Marital reconciliation with mate",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Retirement from work",
+                            "title": {
+                                "en": "Retirement from work",
+                                "fr": "Prise de retraite"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Retirement from work",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Major change in the health or behaviour of a family member",
+                            "title": {
+                                "en": "Major change in the health or behaviour of a family member",
+                                "fr": "Changement majeur de la santé ou du comportement d''un membre de la famille"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Major change in the health or behaviour of a family member",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Pregnancy",
+                            "title": {
+                                "en": "Pregnancy",
+                                "fr": "Grossesse"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Pregnancy",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Sexual difficulties",
+                            "title": {
+                                "en": "Sexual difficulties",
+                                "fr": "Difficultés sexuelles"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Sexual difficulties",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Gaining a new family member (i.e…. Birth, adoption, older adult moving in, etc.)",
+                            "title": {
+                                "en": "Gaining a new family member (i.e…. Birth, adoption, older adult moving in, etc.)",
+                                "fr": "Nouveau membre dans la famille (p.ex. naissance, adoption, aménagement d''une personne âgée chez soi, etc.)"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Gaining a new family member (i.e…. Birth, adoption, older adult moving in, etc.)",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Major business readjustment",
+                            "title": {
+                                "en": "Major business readjustment",
+                                "fr": "Réajustement majeur d''une entreprise"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Major business readjustment",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Major change in financial state (i.e. a lot worse or better off than usual)",
+                            "title": {
+                                "en": "Major change in financial state (i.e. a lot worse or better off than usual)",
+                                "fr": "Changement majeur dans la situation financière (c.-à-d. beaucoup pire ou mieux que d''habitude)"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Major change in financial state (i.e. a lot worse or better off than usual)",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Death of a close friend",
+                            "title": {
+                                "en": "Death of a close friend",
+                                "fr": "Décès d''un.e ami.e proche"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Death of a close friend",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Changing to a different line of work",
+                            "title": {
+                                "en": "Changing to a different line of work",
+                                "fr": "Changement de métier"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Changing to a different line of work",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Major change in the number of arguments with spouse (i.e…. Either a lot more or a lot less than usual regarding child rearing, personal habits, etc.)",
+                            "title": {
+                                "en": "Major change in the number of arguments with spouse (i.e…. Either a lot more or a lot less than usual regarding child rearing, personal habits, etc.)",
+                                "fr": "Changement majeur dans le nombre de disputes avec son conjoint.e (c.-à-d. Soit beaucoup plus ou beaucoup moins que d''habitude concernant l''éducation des enfants, les habitudes personnelles, etc.)"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Major change in the number of arguments with spouse (i.e…. Either a lot more or a lot less than usual regarding child rearing, personal habits, etc.)",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Taking on a mortgage (for home, business, etc…)",
+                            "title": {
+                                "en": "Taking on a mortgage (for home, business, etc…)",
+                                "fr": "Prendre une hypothèque (pour une maison, une entreprise, etc.)"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Taking on a mortgage (for home, business, etc…)",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Foreclosure on a mortgage or a loan",
+                            "title": {
+                                "en": "Foreclosure on a mortgage or a loan",
+                                "fr": "Saisie hypothécaire ou d''un prêt, reprise de biens"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Foreclosure on a mortgage or a loan",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Major change in responsibilities at work (i.e. promotion, demotion, etc.)",
+                            "title": {
+                                "en": "Major change in responsibilities at work (i.e. promotion, demotion, etc.)",
+                                "fr": "Changement majeur dans les responsabilités au travail (c.-à-d. promotion, rétrogradation, etc.)"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Major change in responsibilities at work (i.e. promotion, demotion, etc.)",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Son or daughter leaving home (marriage, attending college, joined mil.)",
+                            "title": {
+                                "en": "Son or daughter leaving home (marriage, attending college, joined mil.)",
+                                "fr": "Enfant(s) ayant quitté la maison (pour cause de mariage, d''études collégiales, service militaire, etc.)"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Son or daughter leaving home (marriage, attending college, joined mil.)",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "In-law troubles",
+                            "title": {
+                                "en": "In-law troubles",
+                                "fr": "Conflits avec la belle-famille"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "In-law troubles",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Outstanding personal achievement",
+                            "title": {
+                                "en": "Outstanding personal achievement",
+                                "fr": "Réussite personnelle exceptionnelle"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Outstanding personal achievement",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Spouse beginning or ceasing work outside the home",
+                            "title": {
+                                "en": "Spouse beginning or ceasing work outside the home",
+                                "fr": "Conjoint.e qui commence ou cesse de travailler hors de la maison"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Spouse beginning or ceasing work outside the home",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Beginning or ceasing of formal schooling",
+                            "title": {
+                                "en": "Beginning or ceasing of formal schooling",
+                                "fr": "Début ou arrêt de la scolarité formelle"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Beginning or ceasing of formal schooling",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Major change in living condition (new home, remodeling, deterioration of neighborhood or home etc.)",
+                            "title": {
+                                "en": "Major change in living condition (new home, remodeling, deterioration of neighborhood or home etc.)",
+                                "fr": "Changement majeur dans les conditions de vie (p.ex. nouvelle maison, rénovation, I associate ithdétérioration du quartier ou de la maison, etc.)"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Major change in living condition (new home, remodeling, deterioration of neighborhood or home etc.)",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Revision of personal habits (dress manners, associations, quitting smoking)",
+                            "title": {
+                                "en": "Revision of personal habits (dress manners, associations, quitting smoking)",
+                                "fr": "Révision des habitudes personnelles (p.ex. la tenue vestimentaire, groupe social, arrêt du tabac)"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Revision of personal habits (dress manners, associations, quitting smoking)",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Troubles with the boss",
+                            "title": {
+                                "en": "Troubles with the boss",
+                                "fr": "Conflits avec le patron"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Troubles with the boss",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Major changes in working hours or conditions",
+                            "title": {
+                                "en": "Major changes in working hours or conditions",
+                                "fr": "Changements majeurs des horaires ou des conditions de travail"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Major changes in working hours or conditions",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Changes in residence",
+                            "title": {
+                                "en": "Changes in residence",
+                                "fr": "Changement de la résidence"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Changes in residence",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Changing to a new school",
+                            "title": {
+                                "en": "Changing to a new school",
+                                "fr": "Changement d''école"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Changing to a new school",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Choose \\"yes\\" if you are reading",
+                            "title": {
+                                "en": "Select the answer \\"yes\\". This is to make sure you are paying attention!",
+                                "fr": "Sélectionnez la réponse \\"oui\\". Ceci est pour vérifier votre niveau d''attention!"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "attentionCheck-Choose yes if you are reading",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
-                            "radiobuttonPresentation": "horizontal",
-                            "title": "Major change in usual type and/or amount of recreation",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "Major change in usual type and/or amount of recreation",
+                                "fr": "Changement majeur de le type d''activités récréatives et/ou le temps passé à en profiter"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Major change in usual type and/or amount of recreation",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Major change in religious activity (a lot more or less than usual)",
+                            "title": {
+                                "en": "Major change in religious activity (a lot more or less than usual)",
+                                "fr": "Changement majeur dans les activités religieuses (beaucoup plus ou moins que d''habitude)"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Major change in religious activity (a lot more or less than usual)",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Major change in social activities (clubs, movies, visiting, etc.)",
+                            "title": {
+                                "en": "Major change in social activities (clubs, movies, visiting, etc.)",
+                                "fr": "Changement majeur dans les activités sociales (les clubs, la cinéma, des visites, etc.)"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Major change in social activities (clubs, movies, visiting, etc.)",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Taking on a loan (car, tv, freezer, etc.)",
+                            "title": {
+                                "en": "Taking on a loan (car, tv, freezer, etc.)",
+                                "fr": "Sortir un prêt (pour la voiture, la télé, le congélateur, etc.)"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Taking on a loan (car, tv, freezer, etc.)",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Major change in sleeping habits (a lot more or a lot less than usual)",
+                            "title": {
+                                "en": "Major change in sleeping habits (a lot more or a lot less than usual)",
+                                "fr": "Changement majeur dans les habitudes de sommeil (beaucoup plus ou beaucoup moins que d''habitude)"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Major change in sleeping habits (a lot more or a lot less than usual)",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Major change in number of family get-togethers",
+                            "title": {
+                                "en": "Major change in number of family get-togethers",
+                                "fr": "Changement majeur dans le nombre de réunions de famille"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Major change in number of family get-togethers",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Major change in eating habits (a lot more or less food intake, or very different meal hours or surroundings)",
+                            "title": {
+                                "en": "Major change in eating habits (a lot more or less food intake, or very different meal hours or surroundings)",
+                                "fr": "Changement majeur dans les habitudes alimentaires (quantité beaucoup plus ou moins, heures de repas très différentes ou environnement très différent)"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Major change in eating habits (a lot more or less food intake, or very different meal hours or surroundings)",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Vacation",
+                            "title": {
+                                "en": "Vacation",
+                                "fr": "Vacances"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Vacation",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Major holidays",
+                            "title": {
+                                "en": "Major holidays",
+                                "fr": "Longues vacances"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Major holidays",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Minor violations of the law (traffic tickets, disturbing the peace, etc)",
+                            "title": {
+                                "en": "Minor violations of the law (traffic tickets, disturbing the peace, etc)",
+                                "fr": "Violations mineures à la loi (contraventions, trouble à l''ordre public, etc.)"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Minor violations of the law (traffic tickets, disturbing the peace, etc)",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         }
                     ]
@@ -13655,218 +16931,386 @@ UPDATE tasks SET
     description = "",
     external_url = "",
     config = '{
-        "taskConfig": {},
-        "metadata": [
-            {
-                "componentName": "QUESTIONNAIRECOMPONENT",
-                "componentConfig": {
-                    "title":"Questionnaire",
-                    "questions":[
-                        {
-                            "questionType": "displayText",
-                            "title": "In the following you find a list of expressions that characterize different moods. Please take a look at the list, word by word, and mark for each word the answer that represents best the actual intensity of your mood status. <br /><br /> Please pay attention to the following facts: <br /><br />- Within the list there are some attributes that possibly describe the same or similar moods. Please do not get irritated due to this fact, and judge each attribute irrespective of your answer to another attribute.<br />- Please judge only how you feel at this moment, and not how you normally or sometimes feel.<br />- If you have some difficulties in finding an answer, please mark the answer that fits best.<br /><br />Please judge each word and do not leave out a word."
-                        },
-                        {
-                            "questionType": "displayText",
-                            "title": "Use your mouse to drag the marker in order to select your answer"
-                        },
-                        {
-                            "questionType": "slider",
-                            "title": "How CONTENT do you feel?",
-                            "validation": {
-                                "required":true
-                            },
-                            "key": "How CONTENT do you feel?",
-                            "legend": [
-                                "Definitely Not Feeling This",
-                                "Extremely"
-                            ]
-                        },
-                        {
-                            "questionType": "slider",
-                            "title": "How RESTLESS do you feel?",
-                            "validation": {
-                                "required":true
-                            },
-                            "key": "How RESTLESS do you feel?",
-                            "legend": [
-                                "Definitely Not Feeling This",
-                                "Extremely"
-                            ]
-                        },
-                        {
-                            "questionType": "slider",
-                            "title": "How BAD do you feel?",
-                            "validation": {
-                                "required":true
-                            },
-                            "key": "How BAD do you feel?",
-                            "legend": [
-                                "Definitely Not Feeling This",
-                                "Extremely"
-                            ]
-                        },
-                        {
-                            "questionType": "slider",
-                            "title": "How COMPOSED do you feel?",
-                            "validation": {
-                                "required":true
-                            },
-                            "key": "How COMPOSED do you feel?",
-                            "legend": [
-                                "Definitely Not Feeling This",
-                                "Extremely"
-                            ]
-                        },
-                        {
-                            "questionType": "slider",
-                            "title": "How GREAT do you feel?",
-                            "validation": {
-                                "required":true
-                            },
-                            "key": "How GREAT do you feel?",
-                            "legend": [
-                                "Definitely Not Feeling This",
-                                "Extremely"
-                            ]
-                        },
-                        {
-                            "questionType": "slider",
-                            "title": "How UNEASY do you feel?",
-                            "validation": {
-                                "required":true
-                            },
-                            "key": "How UNEASY do you feel?",
-                            "legend": [
-                                "Definitely Not Feeling This",
-                                "Extremely"
-                            ]
-                        },
-                        {
-                            "questionType": "slider",
-                            "title": "How UNCOMFORTABLE do you feel?",
-                            "validation": {
-                                "required":true
-                            },
-                            "key": "How UNCOMFORTABLE do you feel?",
-                            "legend": [
-                                "Definitely Not Feeling This",
-                                "Extremely"
-                            ]
-                        },
-                        {
-                            "questionType": "slider",
-                            "title": "How RELAXED do you feel?",
-                            "validation": {
-                                "required":true
-                            },
-                            "key": "How RELAXED do you feel?",
-                            "legend": [
-                                "Definitely Not Feeling This",
-                                "Extremely"
-                            ]
-                        },
-                        {
-                            "questionType": "slider",
-                            "title": "How GOOD do you feel?",
-                            "validation": {
-                                "required":true
-                            },
-                            "key": "How GOOD do you feel?",
-                            "legend": [
-                                "Definitely Not Feeling This",
-                                "Extremely"
-                            ]
-                        },
-                        {
-                            "questionType": "slider",
-                            "title": "How AT EASE do you feel?",
-                            "validation": {
-                                "required":true
-                            },
-                            "key": "How AT EASE do you feel?",
-                            "legend": [
-                                "Definitely Not Feeling This",
-                                "Extremely"
-                            ]
-                        },
-                        {
-                            "questionType": "slider",
-                            "title": "How UNHAPPY do you feel?",
-                            "validation": {
-                                "required":true
-                            },
-                            "key": "How UNHAPPY do you feel?",
-                            "legend": [
-                                "Definitely Not Feeling This",
-                                "Extremely"
-                            ]
-                        },
-                        {
-                            "questionType": "slider",
-                            "title": "How DISCONTENT do you feel?",
-                            "validation": {
-                                "required":true
-                            },
-                            "key": "How DISCONTENT do you feel?",
-                            "legend": [
-                                "Definitely Not Feeling This",
-                                "Extremely"
-                            ]
-                        },
-                                {
-                            "questionType": "slider",
-                            "title": "How TENSE do you feel?",
-                            "validation": {
-                                "required":true
-                            },
-                            "key": "How TENSE do you feel?",
-                            "legend": [
-                                "Definitely Not Feeling This",
-                                "Extremely"
-                            ]
-                        },
-                        {
-                            "questionType": "slider",
-                            "title": "How HAPPY do you feel?",
-                            "validation": {
-                                "required":true
-                            },
-                            "key": "How HAPPY do you feel?",
-                            "legend": [
-                                "Definitely Not Feeling This",
-                                "Extremely"
-                            ]
-                        },
-                        {
-                            "questionType": "slider",
-                            "title": "How NERVOUS do you feel?",
-                            "validation": {
-                                "required":true
-                            },
-                            "key": "How NERVOUS do you feel?",
-                            "legend": [
-                                "Definitely Not Feeling This",
-                                "Extremely"
-                            ]
-                        },
-                        {
-                            "questionType": "slider",
-                            "title": "How CALM do you feel?",
-                            "validation": {
-                                "required":true
-                            },
-                            "key": "How CALM do you feel?",
-                            "legend": [
-                                "Definitely Not Feeling This",
-                                "Extremely"
-                            ]
+    "taskConfig": {},
+    "metadata": [
+        {
+            "componentName": "QUESTIONNAIRECOMPONENT",
+            "componentConfig": {
+                "title": {
+                    "en": "Questionnaire",
+                    "fr": "Le Questionnaire"
+                },
+                "questions":[
+                    {
+                        "questionType": "displayText",
+                        "title": {
+                            "en": "In the following you find a list of expressions that characterize different moods. Please take a look at the list, word by word, and mark for each word the answer that represents best the actual intensity of your mood status.",
+                            "fr": "Dans la prochaine partie, vous trouverez une liste des expressions qui caractérisent différentes émotions. Jetez un coup d''oeil à la liste, mot par mot, et marquez pour chaque mot la réponse qui représente le mieux l''intensité de votre état d''esprit actuellement."
                         }
-                    ]
-                }
+                    },
+                    {
+                        "questionType": "displayText",
+                        "title": {
+                            "en": "Please pay attention to the following facts:",
+                            "fr": "Veuillez prêter attention aux faits suivants:"
+                        }
+                    },
+                    {
+                        "questionType": "displayText",
+                        "title": {
+                            "en": "- Within the list there are some attributes that possibly describe the same or similar moods. Please do not get irritated due to this fact, and judge each attribute irrespective of your answer to another attribute.<br />- Please judge only how you feel at this moment, and not how you normally or sometimes feel.<br/ >- If you have some difficulties in finding an answer, please mark the answer that fits best.",
+                            "fr": "- Dans la liste, certains attributs décrivent peut-être des humeurs identiques ou similaires. Ne soyez pas irrité par ce fait et jugez chaque attribut indépendamment de votre réponse à un autre attribut.<br />- Veuillez juger uniquement ce que vous ressentez en ce moment, et non ce que vous ressentez normalement ou parfois.<br />- Si vous avez de la difficulté à choisir une réponse, veuillez marquer la réponse qui vous convient le mieux."
+                        },
+                        "indent": 1
+                    },
+                    {
+                        "questionType": "displayText",
+                        "title": {
+                            "en": "Please judge each word and do not leave out a word.",
+                            "fr": "Veuillez juger chaque mot et n''omettez aucun mot."
+                        }
+                    },
+                    {
+                        "questionType": "slider",
+                        "title": {
+                            "en": "How CONTENT do you feel?",
+                            "fr": "À quel point vous sentez-vous COMBLÉ.E?"
+                        },
+                        "validation": {
+                            "required": true
+                        },
+                        "key": "How CONTENT do you feel?",
+                        "legend": [ 
+                            {
+                                "en": "Definitely Not Feeling This",
+                                "fr": "Je ne me sens pas du tout comme ça"
+                            },
+                            {
+                                "en": "Extremely",
+                                "fr": "Extrêmement"
+                            }
+                        ]
+                    },
+                    {
+                        "questionType": "slider",
+                        "title": {
+                            "en": "How RESTLESS do you feel?",
+                            "fr": "À quel point vous sentez-vous AGITÉ.E?"
+                        },
+                        "validation": {
+                            "required": true
+                        },
+                        "key": "How RESTLESS do you feel?",
+                        "legend": [ 
+                            {
+                                "en": "Definitely Not Feeling This",
+                                "fr": "Je ne me sens pas du tout comme ça"
+                            },
+                            {
+                                "en": "Extremely",
+                                "fr": "Extrêmement"
+                            }
+                        ]
+                    },
+                    {
+                        "questionType": "slider",
+                        "title": {
+                            "en": "How BAD do you feel?",
+                             "fr": "À quel point vous sentez-vous MAL?"
+                        },
+                        "validation": {
+                            "required": true
+                        },
+                        "key": "How BAD do you feel?",
+                        "legend": [ 
+                            {
+                                "en": "Definitely Not Feeling This",
+                                "fr": "Je ne me sens pas du tout comme ça"
+                            },
+                            {
+                                "en": "Extremely",
+                                "fr": "Extrêmement"
+                            }
+                        ]
+                    },
+                    {
+                        "questionType": "slider",
+                        "title": {
+                            "en": "How COMPOSED do you feel?",
+                            "fr": "À quel point vous sentez-vous TRANQUILLE?"
+                        },
+                        "validation": {
+                            "required": true
+                        },
+                        "key": "How COMPOSED do you feel?",
+                        "legend": [ 
+                            {
+                                "en": "Definitely Not Feeling This",
+                                "fr": "Je ne me sens pas du tout comme ça"
+                            },
+                            {
+                                "en": "Extremely",
+                                "fr": "Extrêmement"
+                            }
+                        ]
+                    },
+                    {
+                        "questionType": "slider",
+                        "title": {
+                            "en": "How GREAT do you feel?",
+                            "fr": "À quel point vous sentez-vous TRÈS BIEN?"
+                        },
+                        "validation": {
+                            "required": true
+                        },
+                        "key": "How GREAT do you feel?",
+                        "legend": [ 
+                            {
+                                "en": "Definitely Not Feeling This",
+                                "fr": "Je ne me sens pas du tout comme ça"
+                            },
+                            {
+                                "en": "Extremely",
+                                "fr": "Extrêmement"
+                            }
+                        ]
+                    },
+                    {
+                        "questionType": "slider",
+                        "title": {
+                            "en": "How UNEASY do you feel?",
+                            "fr": "À quel point vous sentez-vous MAL À L''AISE"
+                        },
+                        "validation": {
+                            "required": true
+                        },
+                        "key": "How UNEASY do you feel?",
+                        "legend": [ 
+                            {
+                                "en": "Definitely Not Feeling This",
+                                "fr": "Je ne me sens pas du tout comme ça"
+                            },
+                            {
+                                "en": "Extremely",
+                                "fr": "Extrêmement"
+                            }
+                        ]
+                    },
+                    {
+                        "questionType": "slider",
+                        "title": {
+                            "en": "How UNCOMFORTABLE do you feel?",
+                            "fr": "À quel point vous sentez-vous INCONFORTABLE?"
+                        },
+                        "validation": {
+                            "required": true
+                        },
+                        "key": "How UNCOMFORTABLE do you feel?",
+                        "legend": [ 
+                            {
+                                "en": "Definitely Not Feeling This",
+                                "fr": "Je ne me sens pas du tout comme ça"
+                            },
+                            {
+                                "en": "Extremely",
+                                "fr": "Extrêmement"
+                            }
+                        ]
+                    },
+                    {
+                        "questionType": "slider",
+                        "title": {
+                            "en": "How RELAXED do you feel?",
+                            "fr": "À quel point vous sentez-vous DÉTENDU.E?"
+                        },
+                        "validation": {
+                            "required": true
+                        },
+                        "key": "How RELAXED do you feel?",
+                        "legend": [ 
+                            {
+                                "en": "Definitely Not Feeling This",
+                                "fr": "Je ne me sens pas du tout comme ça"
+                            },
+                            {
+                                "en": "Extremely",
+                                "fr": "Extrêmement"
+                            }
+                        ]
+                    },
+                    {
+                        "questionType": "slider",
+                        "title": {
+                            "en": "How GOOD do you feel?",
+                            "fr": "À quel point vous sentez-vous BIEN?"
+                        },
+                        "validation": {
+                            "required": true
+                        },
+                        "key": "How GOOD do you feel?",
+                        "legend": [ 
+                            {
+                                "en": "Definitely Not Feeling This",
+                                "fr": "Je ne me sens pas du tout comme ça"
+                            },
+                            {
+                                "en": "Extremely",
+                                "fr": "Extrêmement"
+                            }
+                        ]
+                    },
+                    {
+                        "questionType": "slider",
+                        "title": {
+                            "en": "How AT EASE do you feel?",
+                            "fr": "À quel point vous sentez-vous À L''AISE?"
+                        },
+                        "validation": {
+                            "required": true
+                        },
+                        "key": "How AT EASE do you feel?",
+                        "legend": [ 
+                            {
+                                "en": "Definitely Not Feeling This",
+                                "fr": "Je ne me sens pas du tout comme ça"
+                            },
+                            {
+                                "en": "Extremely",
+                                "fr": "Extrêmement"
+                            }
+                        ]
+                    },
+                    {
+                        "questionType": "slider",
+                        "title": {
+                            "en": "How UNHAPPY do you feel?",
+                            "fr": "À quel point vous sentez-vous MALHEUREUX.EUSE?"
+                        },
+                        "validation": {
+                            "required": true
+                        },
+                        "key": "How UNHAPPY do you feel?",
+                        "legend": [ 
+                            {
+                                "en": "Definitely Not Feeling This",
+                                "fr": "Je ne me sens pas du tout comme ça"
+                            },
+                            {
+                                "en": "Extremely",
+                                "fr": "Extrêmement"
+                            }
+                        ]
+                    },
+                    {
+                        "questionType": "slider",
+                        "title": {
+                            "en": "How DISCONTENT do you feel?",
+                            "fr": "À quel point vous sentez-vous MÉCONTENT.E?"
+                        },
+                        "validation": {
+                            "required": true
+                        },
+                        "key": "How DISCONTENT do you feel?",
+                        "legend": [ 
+                            {
+                                "en": "Definitely Not Feeling This",
+                                "fr": "Je ne me sens pas du tout comme ça"
+                            },
+                            {
+                                "en": "Extremely",
+                                "fr": "Extrêmement"
+                            }
+                        ]
+                    },
+                            {
+                        "questionType": "slider",
+                        "title": {
+                            "en": "How TENSE do you feel?",
+                            "fr": "À quel point vous sentez-vous TENDU.E?"
+                        },
+                        "validation": {
+                            "required": true
+                        },
+                        "key": "How TENSE do you feel?",
+                        "legend": [ 
+                            {
+                                "en": "Definitely Not Feeling This",
+                                "fr": "Je ne me sens pas du tout comme ça"
+                            },
+                            {
+                                "en": "Extremely",
+                                "fr": "Extrêmement"
+                            }
+                        ]
+                    },
+                    {
+                        "questionType": "slider",
+                        "title": {
+                            "en": "How HAPPY do you feel?",
+                            "fr": "À quel point vous sentez-vous HEUREUX.EUSE?"
+                        },
+                        "validation": {
+                            "required": true
+                        },
+                        "key": "How HAPPY do you feel?",
+                        "legend": [ 
+                            {
+                                "en": "Definitely Not Feeling This",
+                                "fr": "Je ne me sens pas du tout comme ça"
+                            },
+                            {
+                                "en": "Extremely",
+                                "fr": "Extrêmement"
+                            }
+                        ]
+                    },
+                    {
+                        "questionType": "slider",
+                        "title": {
+                            "en": "How NERVOUS do you feel?",
+                            "fr": "À quel point vous sentez-vous NERVEUX.EUSE?"
+                        },
+                        "validation": {
+                            "required": true
+                        },
+                        "key": "How NERVOUS do you feel?",
+                        "legend": [ 
+                            {
+                                "en": "Definitely Not Feeling This",
+                                "fr": "Je ne me sens pas du tout comme ça"
+                            },
+                            {
+                                "en": "Extremely",
+                                "fr": "Extrêmement"
+                            }
+                        ]
+                    },
+                    {
+                        "questionType": "slider",
+                        "title": {
+                            "en": "How CALM do you feel?",
+                            "fr": "À quel point vous sentez-vous CALME?"
+                        },
+                        "validation": {
+                            "required": true
+                        },
+                        "key": "How CALM do you feel?",
+                        "legend": [ 
+                            {
+                                "en": "Definitely Not Feeling This",
+                                "fr": "Je ne me sens pas du tout comme ça"
+                            },
+                            {
+                                "en": "Extremely",
+                                "fr": "Extrêmement"
+                            }
+                        ]
+                    }
+                ]
             }
-        ]
-    }'
+        }
+    ]
+}'
 WHERE id = 39;
 -- Stress Study Post Test
 UPDATE tasks SET
@@ -13881,37 +17325,73 @@ UPDATE tasks SET
             {
                 "componentName": "QUESTIONNAIRECOMPONENT",
                 "componentConfig": {
-                    "title":"Questionnaire",
-                    "questions":[
+                    "title": {
+                        "en": "Questionnaire",
+                        "fr": "Les Questions" 
+                    },
+                    "questions": [
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Did you at any point think that you were being \\"tricked\\"?",
+                            "title": {
+                                "en": "Did you at any point think that you were being \\"tricked\\"?",
+                                "fr": "Est-ce que vous avez pensé à un moment donné qu''ils y avait des \\"pièges\\" dans l''étude?"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Did you at any point think that you were being tricked",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
-                            "title": "Did you think that parts of this study were deceiving you?",
+                            "title": {
+                                "en": "Did you think that parts of this study were deceiving you?",
+                                "fr": "Est-ce que vous avez pensé à un moment donné que vous étiez en train d''être \\"trompé.e\\"?"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "Did you think that parts of this study were deceiving you",
                             "multipleChoiceOptions": [
-                                {"label": "Yes", "value": "yes"},
-                                {"label": "No", "value": "no"}
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         },
                         {
                             "questionType": "freeTextResponse",
-                            "title": "If you answered <b>YES</b> to either of the above, please describe your experience with the games and the ice water task. How did you feel and what thoughts did you have?",
+                            "title": {
+                            "en": "If you answered <b>YES</b> to either of the above, please describe your experience with the games and the ice water task. How did you feel and what thoughts did you have?",
+                            "fr": "Si vous avez répondu <b>OUI</b> à une des deux dernières questions, SVP décrivez votre expérience avec les jeux et le bain de glace. Comment vous ressentiez-vous et quelles pensées aviez-vous?"
+                            },
                             "key": "description of experiences"
                         }
                     ]
@@ -13971,53 +17451,101 @@ UPDATE tasks SET
             {
                 "componentName": "QUESTIONNAIRECOMPONENT",
                 "componentConfig": {
-                    "title": "Questionnaire",
+                    "title": {
+                        "en": "Questionnaire",
+                        "fr": "Les Questions"
+                    },
                     "questions": [
                         {
                             "questionType": "displayText",
-                            "title": "The following questions are general questions about you. If you don''t have Parkinson''s disease (PD), not all of them will apply to you, so select the \\"I don''t have Parkinson''s disease\\" option."
+                            "title": {
+                                "en": "The following questions are general questions about you. If you don''t have Parkinson''s disease (PD), not all of them will apply to you, so select the \\"I don''t have Parkinson''s disease\\" option.",
+                                "fr": "Les questions suivantes sont des questions générales sur vous. Si vous n''avez pas la maladie de Parkinson (MP), certaines ne s''appliqueront à vous, alors sélectionnez l''option \\"Je n''ai pas la maladie de Parkinson\\"."
+                            }
                         },
                         {
                             "questionType": "radiobuttons",
-                            "title": "Do you have a diagnosis of Parkinson’s disease given to you by a doctor (e.g. family doctor or neurologist)?",
+                            "title": {
+                                "en": "Do you have a diagnosis of Parkinson’s disease given to you by a doctor (e.g. family doctor or neurologist)?",
+                                "fr": "Avez-vous un diagnostic de la maladie de Parkinson qui vous a été donné par un médecin (par exemple, un médecin de famille ou un neurologue)?"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "radiobuttonPresentation": "vertical",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Yes",
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
                                     "value": "Yes"
                                 },
                                 {
-                                    "label": "No",
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
                                     "value": "No"
                                 },
                                 {
-                                    "label": "No, but I think I have Parkinson''s disease",
+                                    "label": {
+                                        "en": "No, but I think I have Parkinson''s disease",
+                                        "fr": "Non, mais je pense avoir la maladie de Parkinson"
+                                    },
                                     "value": "No, but I think I have Parkinson''s disease"
                                 }
                             ],
                             "key": "havePD"
                         },
                         {
+                            "questionType": "input",
+                            "title": {
+                                "en": "In what year were you diagnosed with Parkinson'' disease? If you DON''T have Parkinson''s disease, please enter \\"0\\"",
+                                "fr": "En quelle année avez-vous reçu votre diagnostic de Parkinson? Si vous n''avez PAS la maladie de Parkinson, SVP inscrire \\"0\\"."
+                            },
+                            "key": "parkinsonsDiagnosisYear",
+                            "label": {
+                                "en": "Year (e.g. 2009)",
+                                "fr": "Année (ex. 2009)"
+                            },
+                            "validation": {
+                                "required": true,
+                                "isNumeric": true,
+                                "max": 2030,
+                                "min": 0
+                            }
+                        },
+                        {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Do you currently take medication for Parkinson''s disease?",
+                            "title": {
+                                "en": "Do you currently take medication for Parkinson''s disease?",
+                                "fr": "Prenez-vous actuellement des médicaments pour la maladie de Parkinson?"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "takePDMed",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "I don''t have Parkinson''s disease",
+                                    "label": {
+                                        "en": "I don''t have Parkinson''s disease",
+                                        "fr": "Je n''ai pas la maladie de Parkinson"
+                                    },
                                     "value": "I don''t have Parkinson''s disease"
                                 },
                                 {
-                                    "label": "I have PD but don''t take medications for it",
+                                    "label": {
+                                        "en": "I have PD but DON''T take medications for it",
+                                        "fr": "J''ai la MP mais je ne prends PAS de médicaments pour ça"
+                                    },
                                     "value": "I have PD but don''t take medications for it"
                                 },
                                 {
-                                    "label": "I have PD and I take medications for it",
+                                    "label": {
+                                        "en": "I have PD and I DO take medications for it",
+                                        "fr": "J''ai la MP et je PRENDS des médicaments pour ça"
+                                    },
                                     "value": "I have PD and I take medications for it"
                                 }
                             ]
@@ -14027,13 +17555,22 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "displayText",
-                            "title": "If you answered previously that you do take Parkinson’s disease medication, how long ago did you take it?"
+                            "title": {
+                                "en": "If you answered previously that you do take Parkinson’s disease medication, how long ago did you take the last dose?",
+                                "fr": "Si vous avez répondu que vous prenez des médicaments pour votre maladie de Parkinson, il y a combien de temps vous avez pris la dernière dose?"
+                            }
                         },
                         {
                             "questionType": "input",
-                            "textContent": "If you answered that you don''t take any Parkinson’s medication in the last question, please write \\"0\\".",
+                            "textContent": {
+                                "en": "If you answered that you DON''T take any Parkinson’s medication, please write \\"0\\".",
+                                "fr": "Si vous avez répondu que vous ne prenez PAS de médicaments pour la maladie de Parkinson, veuillez inscrire \\"0\\"."
+                            },
                             "key": "lastDoseHour",
-                            "label": "Hours",
+                            "label": {
+                                "en": "Hours",
+                                "fr": "Heures"
+                            },
                             "validation": {
                                 "required": true,
                                 "isNumeric": true,
@@ -14044,7 +17581,10 @@ UPDATE tasks SET
                         {
                             "questionType": "input",
                             "key": "lastDoseMinute",
-                            "label": "Minutes",
+                            "label": {
+                                "en": "Minutes",
+                                "fr": "Minutes"
+                            },
                             "validation": {
                                 "required": true,
                                 "isNumeric": true,
@@ -14057,113 +17597,179 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Do you feel ON (i.e. can feel that the PD medications are taking effect) or OFF (i.e. medications are not currently taking effect)?",
+                            "title": {
+                                "en": "Do you feel ON (i.e. can feel that the PD medications are taking effect) or OFF (i.e. medications are not currently taking effect)?",
+                                "fr": "Vous sentez-vous ACTIVÉ.E (\\"ON\\") (c.-à-d. sentir que les médicaments de la MP font effet) ou INACTIVÉ.E (\\"OFF\\") (c.-à-d. Sentir que les médicaments ne font pas actuellement effet)?"
+                            },
                             "key": "onOffMed",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "I don''t have Parkinson''s disease",
+                                    "label": {
+                                        "en": "I don''t have Parkinson''s disease",
+                                        "fr": "Je n''ai pas la maladie de Parkinson"
+                                    },
                                     "value": "I don''t have Parkinson''s disease"
                                 },
                                 {
-                                    "label": "I have PD but don''t take medications for it",
+                                    "label": {
+                                        "en": "I have PD but DON''T take medications for it",
+                                        "fr": "J''ai la MP mais je ne prends PAS de médicaments pour ça"
+                                    },
                                     "value": "I have PD but don''t take medications for it"
                                 },
                                 {
-                                    "label": "I feel ON",
+                                    "label": {
+                                        "en": "I feel ON",
+                                        "fr": "Je me sens ON"
+                                    },
                                     "value": "I feel ON"
                                 },
                                 {
-                                    "label": "I feel OFF",
+                                    "label": {
+                                        "en": "I feel OFF",
+                                        "fr": "Je me sens OFF"
+                                    },
                                     "value": "I feel OFF"
                                 },
                                 {
-                                    "label": "I can not tell the difference",
-                                    "value": "I can not tell the difference"
+                                    "label": {
+                                        "en": "I cannot tell the difference between ON and OFF",
+                                        "fr": "Je ne vois pas la différence entre le ON et le OFF"
+                                    },
+                                    "value": "I cannot tell the difference"
                                 }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Do you have a diagnosis of dementia or Alzheimer''s disease given to you by a doctor?",
-                            "key": "diagnosisPD",
+                            "title": {
+                                "en": "Do you have a diagnosis of dementia or Alzheimer''s disease given to you by a doctor?",
+                                "fr": "Avez-vous un diagnostic de démence ou de maladie de Alzheimer qui vous a été donné par un médecin?"
+                            },
+                            "key": "diagnosisAD",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Yes",
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
                                     "value": "Yes"
                                 },
                                 {
-                                    "label": "No",
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
                                     "value": "No"
                                 },
                                 {
-                                    "label": "No, but I think I have dementia",
+                                    "label": {
+                                        "en": "No, but I think I have dementia",
+                                        "fr": "Non, mais je pense je souffre de démence"
+                                    },
                                     "value": "No, but I think I have dementia"
                                 }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Do you have a diagnosis of Mild Cognitive Impairment (MCI) given to you by a doctor?",
+                            "title": {
+                                "en": "Do you have a diagnosis of Mild Cognitive Impairment (MCI) given to you by a doctor?",
+                                "fr": "Avez-vous un diagnostic de trouble cognitif léger (TCL) qui vous a été donné par un médecin?"
+                            },
                             "key": "diagnosisMCI",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Yes",
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
                                     "value": "Yes"
                                 },
                                 {
-                                    "label": "No",
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
                                     "value": "No"
                                 },
                                 {
-                                    "label": "No, but I think I have cognitive impairment",
+                                    "label": {
+                                        "en": "No, but I think I have cognitive impairment",
+                                        "fr": "Non, mais je pense j''ai des troubles cognitifs"
+                                    },
                                     "value": "No, but I think I have cognitive impairment"
                                 }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Do you have a family history of Parkinson’s disease?",
+                            "title": {
+                                "en": "Do you have a family history of Parkinson’s disease?",
+                                "fr": "Avez-vous des antécédents familiaux de maladie de Parkinson?"
+                            },
                             "key": "familyHistory",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Yes, my biological mother or father has/had Parkinson’s disease",
+                                    "label": {
+                                        "en": "Yes, my biological mother or father has/had Parkinson''s disease",
+                                        "fr": "Oui, ma mère/mon père biologiques ont/avaient la maladie de Parkinson"
+                                    },
                                     "value": "Yes, biological mother or father"
                                 },
                                 {
-                                    "label": "Yes, one of my siblings has/had Parkinson’s disease",
+                                    "label": {
+                                        "en": "Yes, one of my siblings has/had Parkinson''s disease",
+                                        "fr": "Oui, un.e de mes frères/soeurs a/avait la maladie de Parkinson"
+                                    },
                                     "value": "Yes, siblings"
                                 },
                                 {
-                                    "label": "Yes, one of my children has/had Parkinson’s disease",
+                                    "label": {
+                                        "en": "Yes, one of my children has/had Parkinson''s disease",
+                                        "fr": "Oui, un de mes enfants a/avait la maladie de Parkinson"
+                                    },
                                     "value": "Yes, children"
                                 },
                                 {
-                                    "label": "Yes, an uncle/aunt/cousin or other blood relative has/had Parkinson’s disease",
+                                    "label": {
+                                        "en": "Yes, an uncle/aunt/cousin or other blood relative has/had Parkinson’s disease",
+                                        "fr": "Oui, un oncle/tante/cousin.e ou un autre proche par le sang a/avait la maladie de Parkinson"
+                                    },
                                     "value": "Yes, relative"
                                 },
                                 {
-                                    "label": "No, no family history",
+                                    "label": {
+                                        "en": "No, no family history",
+                                        "fr": "Non, pas d''antécédents familiaux"
+                                    },
                                     "value": "No"
                                 }
                             ]
                         },
                         {
                             "questionType": "input",
-                            "title": "What is your current age?",
+                            "title": {
+                                "en": "What is your current age?",
+                                "fr": "Quel âge avez-vous actuellement?"
+                            },
                             "key": "age",
-                            "label": "Age",
+                            "label": {
+                                "en": "Age",
+                                "fr": "Âge"
+                            },
                             "validation": {
                                 "required": true,
                                 "isNumeric": true,
@@ -14173,92 +17779,149 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "What sex were you assigned at birth?",
+                            "title": {
+                                "en": "What sex were you assigned at birth?",
+                                "fr": "Quel sexe vous a-t-on attribué à la naissance?"
+                            },
                             "key": "sex",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Female",
+                                    "label": {
+                                        "en": "Female",
+                                        "fr": "Féminin"
+                                    },
                                     "value": "Female"
                                 },
                                 {
-                                    "label": "Male",
+                                    "label": {
+                                        "en": "Male",
+                                        "fr": "Masculin"
+                                    },
                                     "value": "Male"
                                 }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "How do you describe yourself?",
+                            "title": {
+                                "en": "How do you describe yourself?",
+                                "fr": "Comment vous décrivez-vous?"
+                            },
                             "key": "gender",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Female",
+                                    "label": {
+                                        "en": "Female",
+                                        "fr": "Femme"
+                                    },
                                     "value": "Female"
                                 },
                                 {
-                                    "label": "Male",
+                                    "label": {
+                                        "en": "Male",
+                                        "fr": "Homme"
+                                    },
                                     "value": "Male"
                                 },
                                 {
-                                    "label": "Transgender",
+                                    "label": {
+                                        "en": "Transgender",
+                                        "fr": "Transgenres"
+                                    },
                                     "value": "Transgender"
                                 },
                                 {
-                                    "label": "Do not identify as female, male, or transgender",
+                                    "label": {
+                                        "en": "Do not identify as female, male, or transgender",
+                                        "fr": "Je ne m''identifie ni comme femme, ni comme homme, ni comme transgenres"
+                                    },
                                     "value": "Do not identify as female, male, or transgender"
                                 }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "What is the highest level of education you have completed?",
+                            "title": {
+                                "en": "What is the highest level of education you have completed?",
+                                "fr": "Quel est le plus haut niveau d''éducation que vous avez complété?"
+                            },
                             "key": "education",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "None",
+                                    "label": {
+                                        "en": "None",
+                                        "fr": "Aucun"
+                                    },
                                     "value": "None"
                                 },
                                 {
-                                    "label": "Grade (Elementary) school",
+                                    "label": {
+                                        "en": "Grade (Elementary) school",
+                                        "fr": "École primaire"
+                                    },
                                     "value": "Grade (Elementary) school"
                                 },
                                 {
-                                    "label": "High school",
+                                    "label": {
+                                        "en": "High school",
+                                        "fr": "École secondaire"
+                                    },
                                     "value": "High school"
                                 },
                                 {
-                                    "label": "Trade Certificate/Diploma",
+                                    "label": {
+                                        "en": "Trade Certificate/Diploma",
+                                        "fr": "Certificat/Diplôme de commerce"
+                                    },
                                     "value": "Trade Certificate/Diploma"
                                 },
                                 {
-                                    "label": "Non-University Diploma",
+                                    "label": {
+                                        "en": "Non-University Diploma",
+                                        "fr": "Diplôme non-universitaire"
+                                    },
                                     "value": "Non-University Diploma"
                                 },
                                 {
-                                    "label": "Bachelor''s Degree",
+                                    "label": {
+                                        "en": "Bachelor''s Degree",
+                                        "fr": "Baccalauréat"
+                                    },
                                     "value": "Bachelor''s Degree"
                                 },
                                 {
-                                    "label": "Postgraduate Degree",
+                                    "label": {
+                                        "en": "Postgraduate Degree",
+                                        "fr": "Diplôme d''études supérieures"
+                                    },
                                     "value": "Postgraduate Degree"
                                 }
                             ]
                         },
                         {
                             "questionType": "input",
-                            "title": "How many years of education did you complete?",
-                            "textContent": "E.g. completed up to grade 9 = 9 years; completed grade 12 and 3 years of university = 15 years",
+                            "title": {
+                                "en": "How many years of education did you complete?",
+                                "fr": "Combien d''années d''étude avez-vous complété?"
+                            },
+                            "textContent": {
+                                "en": "E.g. completed up to grade 9 = 9 years; completed grade 12 and 3 years of university = 15 years",
+                                "fr": "P.ex. avoir terminé jusqu''à la 9e année = 9 ans; avoir terminé la 12e année et 3 ans d''université = 15 ans"
+                            },
                             "key": "educationYears",
-                            "label": "Years of education",
+                            "label": {
+                                "en": "Years of education",
+                                "fr": "Années d''étude"
+                            },
                             "validation": {
                                 "required": true,
                                 "isNumeric": true,
@@ -14268,27 +17931,42 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "What is your handedness?",
+                            "title": {
+                                "en": "What is your handedness?",
+                                "fr": "Quelle est votre main dominante?"
+                            },
                             "key": "handedness",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [{
-                                "label": "Right-handed",
+                                "label": {
+                                    "en": "Right-handed",
+                                    "fr": "Droitier/Droitière"
+                                },
                                 "value": "Right"
                             },
                             {
-                                "label": "Left-handed",
+                                "label": {
+                                    "en": "Left-handed",
+                                    "fr": "Gaucher/Gauchère"
+                                },
                                 "value": "Left"
                             },
                             {
-                                "label": "Ambidextrous",
+                                "label": {
+                                    "en": "Ambidextrous",
+                                    "fr": "Ambidextre"
+                                },
                                 "value": "Ambidextrous"
                             }]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "We expect to reach people from many different cultural and racial backgrounds with this internet study. To which group do you belong? (Select all that apply)",
+                            "title": {
+                                "en": "To which group do you culturally belong? (Select all that apply)",
+                                "fr": "Avec quel groupe vous identifiez-vous? (Sélectionnez tous ceux qui s''appliquent)"
+                            },
                             "key": "background",
                             "validation": {
                                 "required": true
@@ -14296,70 +17974,118 @@ UPDATE tasks SET
                             "allowMultipleSelections": true,
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "White / Caucasian",
+                                    "label": {
+                                        "en": "White / Caucasian",
+                                        "fr": "Blanc / Caucasien.ne"
+                                    },
                                     "value": "White/Caucasian"
                                 },
                                 {
-                                    "label": "French Canadian",
+                                    "label": {
+                                        "en": "French Canadian",
+                                        "fr": "Canadien.ne Français.e"
+                                    },
                                     "value": "French Canadian"
                                 },
                                 {
-                                    "label": "First Nations",
+                                    "label": {
+                                        "en": "First Nations",
+                                        "fr": "Premières Nations"
+                                    },
                                     "value": "First Nations"
                                 },
                                 {
-                                    "label": "Hispanic or Latino",
+                                    "label": {
+                                        "en": "Hispanic or Latino",
+                                        "fr": "Hispanique ou Latino"
+                                    },
                                     "value": "Hispanic or Latino"
                                 },
                                 {
-                                    "label": "African / Carribean / Afro American",
+                                    "label": {
+                                        "en": "African / Carribean / Afro American",
+                                        "fr": "Africain.ne / Caribéen.ne / Afro Américain.e"
+                                    },
                                     "value": "African/Carribean/Afro American"
                                 },
                                 {
-                                    "label": "North African",
+                                    "label": {
+                                        "en": "North African",
+                                        "fr": "Nord-Africain.ne"
+                                    },
                                     "value": "North African"
                                 },
                                 {
-                                    "label": "Middle Eastern",
+                                    "label": {
+                                        "en": "Middle Eastern",
+                                        "fr": "Moyen-Orient"
+                                    },
                                     "value": "Middle Eastern"
                                 },
                                 {
-                                    "label": "Chinese",
+                                    "label": {
+                                        "en": "Chinese",
+                                        "fr": "Chinois.e"
+                                    },
                                     "value": "Chinese"
                                 },
                                 {
-                                    "label": "South Asian (E.g. Indian, Pakistani, Sri Lankan)",
+                                    "label": {
+                                        "en": "South Asian (E.g. Indian, Pakistani, Sri Lankan)",
+                                        "fr": "Sud-Asiatique (P.ex. Indien.ne, Pakistanais.e, Sri Lankais.e)"
+                                    },
                                     "value": "South Asian"
                                 },
                                 {
-                                    "label": "Southeast Asian (E.g. Filipino, Cambodian, Indonesian, Laotian, Vietnamese)",
+                                    "label": {
+                                        "en": "Southeast Asian (E.g. Filipino, Cambodian, Indonesian, Laotian, Vietnamese)",
+                                        "fr": "Asiatique du Sud-Est (P.ex. philippin.e, cambodgien.ne, indonésien.ne, laotien.ne, vietnamien.ne)"
+                                    },
                                     "value": "Southeast Asian"
                                 },
                                 {
-                                    "label": "Japanese",
+                                    "label": {
+                                        "en": "Japanese",
+                                        "fr": "Japonais.e"
+                                    },
                                     "value": "Japanese"
                                 },
                                 {
-                                    "label": "Korean",
+                                    "label": {
+                                        "en": "Korean",
+                                        "fr": "Coréen.ne"
+                                    },
                                     "value": "Korean"
                                 },
                                 {
-                                    "label": "Other",
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": "Autre"
+                                    },
                                     "value": "Other"
                                 },
                                 {
-                                    "label": "Don''t know",
+                                    "label": {
+                                        "en": "Don''t know",
+                                        "fr": "Je ne sais pas"
+                                    },
                                     "value": "Don''t know"
                                 },
                                 {
-                                    "label": "Prefer not to answer",
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": "Je ne préfère pas répondre"
+                                    },
                                     "value": "Prefer not to answer"
                                 }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Which of the following languages do you consider yourself fluent in (can read and speak)? Select all that apply.",
+                            "title": {
+                                "en": "Which of the following languages do you consider yourself fluent in (can read and speak)? Select all that apply.",
+                                "fr": "Laquelle des langues suivantes considérez-vous que vous parlez couramment (savoir lire et parler)? (Sélectionnez tout ce qui s''applique)"
+                            },
                             "key": "fluentLan",
                             "validation": {
                                 "required": true
@@ -14367,106 +18093,97 @@ UPDATE tasks SET
                             "allowMultipleSelections": true,
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "English",
+                                    "label": {
+                                        "en": "English",
+                                        "fr": "Anglais"
+                                    },
                                     "value": "English"
                                 },
                                 {
-                                    "label": "French",
+                                    "label": {
+                                        "en": "French",
+                                        "fr": "Français"
+                                    },
                                     "value": "French"
                                 },
                                 {
-                                    "label": "Neither",
+                                    "label": {
+                                        "en": "Neither",
+                                        "fr": "Aucun des deux"
+                                    },
                                     "value": "Neither"
                                 }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Do you have color-blindness?",
+                            "title": {
+                                "en": "Do you have color-blindness?",
+                                "fr": "Êtes-vous daltonien.ne (déficience de la perception des couleurs)?"
+                            },
                             "key": "colorBlindnss",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "No",
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
                                     "value": "No"
                                 },
                                 {
-                                    "label": "Yes",
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
                                     "value": "Yes"
                                 },
                                 {
-                                    "label": "Unsure",
+                                    "label": {
+                                        "en": "Unsure",
+                                        "fr": "Incertain.e"
+                                    },
                                     "value": "Unsure"
                                 }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Do you feel that your memory and thinking have gotten worse?",
-                            "textContent": "If you have Parkinson''s disease, consider the change since your diagnosis, or, if you don''t have Parkinson''s disease, consider the change in the last few years.",
+                            "title": {
+                                "en": "Do you feel that your memory and thinking have gotten worse?",
+                                "fr": "Avez-vous l''impression que votre mémoire et vos pensées se sont détériorées?"
+                            },
+                            "textContent": {
+                                "en": "If you have Parkinson''s disease, consider the change since your diagnosis, or, if you don''t have Parkinson''s disease, consider the change in the last few years.",
+                                "fr": "Si vous avez la maladie de Parkinson, considérez le changement depuis votre diagnostic ou, si vous n''avez pas la maladie de Parkinson, considérez le changement au cours des dernières années."
+                            },
                             "key": "memory",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Yes",
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
                                     "value": "Yes"
                                 },
                                 {
-                                    "label": "No",
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
                                     "value": "No"
                                 },
                                 {
-                                    "label": "Not sure",
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": "Pas certain.e"
+                                    },
                                     "value": "Not sure"
-                                }
-                            ]
-                        },
-                        {
-                            "questionType": "multipleChoiceSelect",
-                            "title": "Would you like to be contacted by email about future opportunities to participate in online research?",
-                            "key": "futureOnlineResearch",
-                            "validation": {
-                                "required": true
-                            },
-                            "multipleChoiceOptions": [
-                                {
-                                    "label": "Yes",
-                                    "value": "Yes"
-                                },
-                                {
-                                    "label": "No",
-                                    "value": "No"
-                                }
-                            ]
-                        },
-                        {
-                            "questionType": "freeTextResponse",
-                            "title": "If you answered yes, and would also be willing to receive a phone call, please include it here:",
-                            "key": "futureOnlineResearchPhone",
-                            "label": "eg. 123-456-7890",
-                            "validation": {
-                                "required": false
-                            }
-                        },
-                        {
-                            "questionType": "multipleChoiceSelect",
-                            "title": "Would you like to receive updates about the findings from this study?",
-                            "key": "updateFindings",
-                            "validation": {
-                                "required": true
-                            },
-                            "multipleChoiceOptions": [
-                                {
-                                    "label": "Yes",
-                                    "value": "Yes"
-                                },
-                                {
-                                    "label": "No",
-                                    "value": "No"
                                 }
                             ]
                         }
@@ -14489,15 +18206,24 @@ UPDATE tasks SET
             {
                 "componentName": "QUESTIONNAIRECOMPONENT",
                 "componentConfig": {
-                    "title": "Parkinson''s Treatment Questionnaire",
+                    "title": {
+                        "en": "Parkinson''s Treatment Questionnaire",
+                        "fr": "Questionnaire sur le traitement du Parkinson" 
+                    },
                     "questions": [
                         {
                             "questionType": "displayText",
-                            "title": "The following questions are about the treatment you receive for your parkinson''s disease and for related conditions."
+                            "title": {
+                                "en": "The following questions are about the treatment you receive for your parkinson''s disease and for related conditions.",
+                                "fr": "Les questions suivantes portent sur le traitement que vous recevez pour votre maladie de Parkinson et pour les symptômes associés."
+                            }
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Are you currently taking any of the following prescription medications to treat your Parkinson''s disease symptoms? (Please check all that apply)",
+                            "title": {
+                                "en": "Are you currently taking any of the following medications to treat your Parkinson''s disease symptoms? (Please check all that apply)",
+                                "fr": "Prenez-vous actuellement l''un des ces médicaments pour traiter les symptômes de la maladie de Parkinson? (SVP sélectionner tout ce qui s''applique)"
+                            },
                             "key": "PDMeds",
                             "validation": {
                                 "required": true
@@ -14505,107 +18231,181 @@ UPDATE tasks SET
                             "allowMultipleSelections": true,
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "No, I don''t take any prescription medications to treat my Parkinson''s disease",
+                                    "label": {
+                                        "en": "No, I DON''T take any prescription medications to treat my Parkinson''s disease",
+                                        "fr": "Non, je ne prends PAS de médicaments sous ordonnance pour traiter ma maladie de Parkinson"
+                                    },
                                     "value": "No medications"
                                 },
                                 {
-                                    "label": "Sinemet or Carbidopa-Levodopa or Parcopa (Oral)",
+                                    "label": {
+                                        "en": "Sinemet or carbidopa-levodopa or Parcopa (Oral)",
+                                        "fr": "Sinemet ou carbidopa-levodopa ou Parcopa (Orale)"
+                                    },
                                     "value": "Sinemet or Carbidopa-Levodopa or Parcopa (Oral)"
                                 },
                                 {
-                                    "label": "Sinemet CR or Carbidopa-Levodopa, Extended Release (Oral)",
+                                    "label": {
+                                        "en": "Sinemet CR or carbidopa-levodopa Extended Release (Oral)",
+                                        "fr": "Sinemet CR ou carbidopa-levodopa action/libération prolongée (Orale)"
+                                    },
                                     "value": "Sinemet CR or Carbidopa-Levodopa, Extended Release (Oral)"
                                 },
                                 {
-                                    "label": "Rytary or Numient (i.e. Carbidopa-Levodopa, Extended Release, Oral)",
+                                    "label": {
+                                        "en": "Rytary or Numient (i.e. carbidopa-levodopa, Extended Release, Oral)",
+                                        "fr": "Rytary ou Numient (c.-à-d. carbidopa-levodopa, Extended Release, Orale)"
+                                    },
                                     "value": "Rytary or Numient"
                                 },
                                 {
-                                    "label": "Duopa or Duodopa (i.e. Carbidopa-Levodopa Intestinal Gel)",
+                                    "label": {
+                                        "en": "Duopa or Duodopa (i.e. Intestinal gel of carbidopa-levodopa)",
+                                        "fr": "Duopa ou Duodopa (c.-à-d. Gel intestinal de carbidopa-levodopa)"
+                                    },
                                     "value": "Duopa or Duodopa"
                                 },
                                 {
-                                    "label": "Stalevo (i.e. combination of Carbidopa, Levodopa, and entacapone)",
+                                    "label": {
+                                        "en": "Stalevo (i.e. combination in one pill of carbidopa, cevodopa, and entacapone)",
+                                        "fr": "Stalevo (c.-à-d. la combinaison en une pilule de carbidopa, levodopa, et entacapone)"
+                                    },
                                     "value": "Stalevo"
                                 },
                                 {
-                                    "label": "Madopar or Levodopa-Benserazide",
+                                    "label": {
+                                        "en": "Madopar or levodopa-benserazide",
+                                        "fr": "Madopar ou levodopa-benserazide"
+                                    },
                                     "value": "Madopar or Levodopa-Benserazide"
                                 },
                                 {
-                                    "label": "Entacapone or Comtan",
+                                    "label": {
+                                        "en": "Entacapone or Comtan",
+                                        "fr": "Entacapone ou Comtan"
+                                    },
                                     "value": "Entacapone or Comtan"
                                 },
                                 {
-                                    "label": "Tolcapone or Tasmar",
+                                    "label": {
+                                        "en": "Tolcapone or Tasmar",
+                                        "fr": "Tolcapone ou Tasmar"
+                                    },
                                     "value": "Tolcapone or Tasmar"
                                 },
                                 {
-                                    "label": "Rasagiline or Azilect",
+                                    "label": {
+                                        "en": "Rasagiline or Azilect",
+                                        "fr": "Rasagiline ou Azilect"
+                                    },
                                     "value": "Rasagiline or Azilect"
                                 },
                                 {
-                                    "label": "Selegiline or Deprenyl or Elderpryl or Zelapar or Emasm",
+                                    "label": {
+                                        "en": "Selegiline or Deprenyl or Elderpryl or Zelapar",
+                                        "fr": "Selegiline ou Deprenyl ou Elderpryl ou Zelapar"
+                                    },
                                     "value": "Selegiline or Deprenyl or Elderpryl or Zelapar or Emasm"
                                 },
                                 {
-                                    "label": "Pramipexole or Mirapex",
+                                    "label": {
+                                        "en": "Pramipexole or Mirapex",
+                                        "fr": "Pramipexole ou Mirapex"
+                                    },
                                     "value": "Pramipexole or Mirapex"
                                 },
                                 {
-                                    "label": "Ropinirole or Requip",
+                                    "label": {
+                                        "en": "Ropinirole or Requip",
+                                        "fr": "Ropinirole ou Requip"
+                                    },
                                     "value": "Ropinirole or Requip"
                                 },
                                 {
-                                    "label": "Neupro patch or Rotigotine patch",
-                                    "value": "Neupro patch or Rotigotine patch"
+                                    "label": {
+                                        "en": "Neupro patch or Rotigotine patch",
+                                        "fr": "timbre (\\"patch\\") de Neupro ou Rotigotine"
+                                    },
+                                    "value": "Neupro timbre or Rotigotine timbre"
                                 },
                                 {
-                                    "label": "Amantadine or Symmetrel or Gocovri",
+                                    "label": {
+                                        "en": "Amantadine or Symmetrel or Gocovri",
+                                        "fr": "Amantadine ou Symmetrel ou Gocovri"
+                                    },
                                     "value": "Amantadine or Symmetrel or Gocovri"
                                 },
                                 {
-                                    "label": "Apokyn or Kinmobi or Apomorphine",
+                                    "label": {
+                                        "en": "Apokyn or Kinmobi or Apomorphine",
+                                        "fr": "Apokyn ou Kinmobi ou Apomorphine"
+                                    },
                                     "value": "Apokyn or Kinmobi or Apomorphine"
                                 },
                                 {
-                                    "label": "Bromocriptine or Parlodel",
+                                    "label": {
+                                        "en": "Bromocriptine or Parlodel",
+                                        "fr": "Bromocriptine ou Parlodel"
+                                    },
                                     "value": "Bromocriptine or Parlodel"
                                 },
                                 {
-                                    "label": "Onstryv or Xadago or Safinamide",
+                                    "label": {
+                                        "en": "Onstryv or Xadago or Safinamide",
+                                        "fr": "Onstryv ou Xadago ou Safinamide"
+                                    },
                                     "value": "Onstryv or Xadago or Safinamide"
                                 },
                                 {
-                                    "label": "Trihexyphenidyl or Artane",
+                                    "label": {
+                                        "en": "Trihexyphenidyl or Artane",
+                                        "fr": "Trihexyphenidyl ou Artane"
+                                    },
                                     "value": "Trihexyphenidyl or Artane"
                                 },
                                 {
-                                    "label": "Rivastigmine or Exelon",
+                                    "label": {
+                                        "en": "Rivastigmine or Exelon",
+                                        "fr": "Rivastigmine ou Exelon"
+                                    },
                                     "value": "Rivastigmine or Exelon"
                                 },
                                 {
-                                    "label": "Donepezil or Aricept",
+                                    "label": {
+                                        "en": "Donepezil or Aricept",
+                                        "fr": "Donepezil ou Aricept"
+                                    },
                                     "value": "Donepezil or Aricept"
                                 },
                                 {
-                                    "label": "Galantamine or Razadyne or Reminyl",
+                                    "label": {
+                                        "en": "Galantamine or Razadyne or Reminyl",
+                                        "fr": "Galantamine ou Razadyne ou Reminyl"
+                                    },
                                     "value": "Galantamine or Razadyne or Reminyl"
                                 },
                                 {
-                                    "label": "Memantine or Namenda or Ebixa",
+                                    "label": {
+                                        "en": "Memantine or Namenda or Ebixa",
+                                        "fr": "Memantine ou Namenda ou Ebixa"
+                                    },
                                     "value": "Memantine or Namenda or Ebixa"
                                 },
                                 {
-                                    "label": "I take other medications for my Parkinson''s disease that are not on this list",
+                                    "label": {
+                                        "en": "I take other medications for my Parkinson''s disease but they are not on this list",
+                                        "fr": "Je prends d''autres médicaments pour ma maladie de Parkinson mais ils ne sont pas inclus dans cette liste"
+                                    },
                                     "value": "I take other medications for my Parkinson''s disease that are not on this list"
                                 }
                             ]
                         },
                         {
                             "questionType": "freeTextResponse",
-                            "title": "If you take medications for Parkinson''s disease that are not on the list, please write it below.",
-                            "textContent": "If you do not take any Parkinson''s disease medication or already listed it above, please skip to the next question.",
+                            "title": {
+                                "en": "If you take medications for Parkinson''s disease that are not on the list, please write it below. If not, skip to the next question.",
+                                "fr": "Si vous prenez d''autres médicaments pour votre maladie de Parkinson qui ne sont pas inclus dans cette liste, SVP écrivez-les ci-dessous. Sinon, passez à la prochaine question."
+                            },
                             "key": "PDMedsOthers",
                             "validation": {
                                 "required": false
@@ -14613,7 +18413,10 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Are you currently taking medications (prescription or over the counter) for any of the following conditions? (Please check all that apply)",
+                            "title": {
+                                "en": "Are you currently taking medications (prescription or over the counter) for any of the following conditions? (Please check all that apply)",
+                                "fr": "Est-ce que vous prenez présentement des médicaments, soit sous ordonnance ou sans ordonnance, pour l''une ou plusieurs des conditions suivantes?"
+                            },
                             "key": "otherMeds",
                             "validation": {
                                 "required": true
@@ -14621,34 +18424,55 @@ UPDATE tasks SET
                             "allowMultipleSelections": true,
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Depression",
+                                    "label": {
+                                        "en": "Depression",
+                                        "fr": "Dépression"
+                                    },
                                     "value": "Depression"
                                 },
                                 {
-                                    "label": "Anxiety",
+                                    "label": {
+                                        "en": "Anxiety",
+                                        "fr": "Anxiété"
+                                    },
                                     "value": "Anxiety"
                                 },
                                 {
-                                    "label": "Sleep Problems",
+                                    "label": {
+                                        "en": "Sleep problems",
+                                        "fr": "Troubles du sommeil"
+                                    },
                                     "value": "Sleep Problems"
                                 },
                                 {
-                                    "label": "Problems with cognition (e.g. trouble thinking or focusing or trouble with memory",
+                                    "label": {
+                                        "en": "Problems with cognition",
+                                        "fr": "Problèmes de cognition"
+                                    },
                                     "value": "Problems with cognition"
                                 },
                                 {
-                                    "label": "Hallucinations (e.g. seeing or hearing things that you know or are told are not there)",
+                                    "label": {
+                                        "en": "Hallucinations",
+                                        "fr": "Hallucinations"
+                                    },
                                     "value": "Hallucinations"
                                 },
                                 {
-                                    "label": "I am not taking medication to treat any of the conditions listed above",
+                                    "label": {
+                                        "en": "I am not taking medication to treat any of the conditions listed above",
+                                        "fr": "Je prends aucun médicament pour les conditions mentionnées ci-dessus"
+                                    },
                                     "value": "I am not taking medication to treat any of the conditions listed above"
                                 }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Have you ever undergone any of these PD surgeries or procedures? (Please check all that apply)",
+                            "title": {
+                                "en": "Have you ever undergone any of these PD surgeries or procedures? (Please check all that apply)",
+                                "fr": "Avez-vous déjà subi l''une des chirurgies ou procédures suivantes pour votre maladie de Parkinson? (Veuillez cocher tout ce qui s''applique)"
+                            },
                             "key": "PDSurgeries",
                             "validation": {
                                 "required": true
@@ -14656,27 +18480,45 @@ UPDATE tasks SET
                             "allowMultipleSelections": true,
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Deep brain stimulation",
+                                    "label": {
+                                        "en": "Deep brain stimulation (DBS)",
+                                        "fr": "Chirurgie de stimulation cérébrale profonde (\\"DBS\\")"
+                                    },
                                     "value": "Deep brain stimulation"
                                 },
                                 {
-                                    "label": "Pallidotomy",
+                                    "label": {
+                                        "en": "Pallidotomy",
+                                        "fr": "Pallidotomie"
+                                    },
                                     "value": "Pallidotomy"
                                 },
                                 {
-                                    "label": "Thalamotomy",
+                                    "label": {
+                                        "en": "Thalamotomy",
+                                        "fr": "Thalamotomie"
+                                    },
                                     "value": "Thalamotomy"
                                 },
                                 {
-                                    "label": "Focused ultrasound",
+                                    "label": {
+                                        "en": "Focused ultrasound (FUS)",
+                                        "fr": "Ultrason focalisé (\\"FUS\\")"
+                                    },
                                     "value": "Focused ultrasound"
                                 },
                                 {
-                                    "label": "Gamma knife radiosurgery",
+                                    "label": {
+                                        "en": "Gamma knife radiosurgery",
+                                        "fr": "Radiochirurgie au scalpel gamma"
+                                    },
                                     "value": "Gamma knife radiosurgery"
                                 },
                                 {
-                                    "label": "I have not undergone any of the PD procedures listed above",
+                                    "label": {
+                                        "en": "I have not undergone any of the PD procedures listed above",
+                                        "fr": "Je n''ai subi aucune des procédures mentionnées ci-dessus"
+                                    },
                                     "value": "I have not undergone any of the PD procedures listed above"
                                 }
                             ]
@@ -14700,111 +18542,187 @@ UPDATE tasks SET
             {
                 "componentName": "QUESTIONNAIRECOMPONENT",
                 "componentConfig": {
-                    "title": "General Health Questionnaire",
+                    "title": {
+                        "en": "General Health Questionnaire",
+                        "fr": "Le questionnaire sur la santé général"
+                    },
                     "questions": [
                         {
                             "questionType": "displayText",
-                            "title": "The following questions are about your health. By health, we mean not only the absence of disease or injury, but also physical, mental, and social well-being."
+                            "title": {
+                                "en": "The following questions are about your health. By health, we mean not only the absence of disease or injury, but also physical, mental, and social well-being.",
+                                "fr": "Les questions suivantes concernent votre santé. Par «santé», nous voulons dire non seulement l''absence de maladie ou de blessure, mais aussi votre bien-être physique, mental et social."
+                            }
                         },
                         {
                             "questionType": "divider"
                         },
                         {
                             "questionType": "displayText",
-                            "title": "Physical Health"
+                            "title": {
+                                "en": "Physical Health",
+                                "fr": "La Santé Physique"
+                            }
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Have you ever been diagnosed with: (Please check all that apply)",
+                            "title": {
+                                "en": "Have you ever been diagnosed with: (Please check all that apply)",
+                                "fr": "Avez-vous déjà été diagnostiqué.e avec : (Veuillez cocher tout ce qui s''applique)"
+                            },
                             "key": "physicalHealthDiagnosis",
                             "validation": {
                                 "required": true
                             },
                             "allowMultipleSelections": true,
-                            "multipleChoiceOptions": [{
-                                "label": "Cancer",
-                                "value": "Cancer"
-                            },
-                            {
-                                "label": "Myocardial infarction or angina (heart attack)",
-                                "value": "Myocardial infarction or angina"
-                            },
-                            {
-                                "label": "Transient ischemic attack (TIA)",
-                                "value": "TIA"
-                            },
-                            {
-                                "label": "Cerebrovascular accident (stroke)",
-                                "value": "Stroke"
-                            },
-                            {
-                                "label": "Epilepsy or seizures",
-                                "value": "Epilepsy or seizures"
-                            },
-                            {
-                                "label": "Major head injury/trauma with lasting consequences",
-                                "value": "Major head injury/trauma with lasting consequences"
-                            },
-                            {
-                                "label": "Respiratory problems",
-                                "value": "Respiratory problems"
-                            },
-                            {
-                                "label": "Lung disease",
-                                "value": "Lung disease"
-                            },
-                            {
-                                "label": "Anemia or other blood disease",
-                                "value": "Anemia or other blood disease"
-                            },
-                            {
-                                "label": "Hypertension (high blood pressure)",
-                                "value": "Hypertension"
-                            },
-                            {
-                                "label": "Hypotension (low blood pressure)",
-                                "value": "Hypotension"
-                            },
-                            {
-                                "label": "Diabetes",
-                                "value": "Diabetes"
-                            },
-                            {
-                                "label": "Hypercholesterolemia (high cholesterol)",
-                                "value": "Hypercholesterolemia"
-                            },
-                            {
-                                "label": "Ulcers or stomach disease",
-                                "value": "Ulcers or stomach disease"
-                            },
-                            {
-                                "label": "Inflammatory bowel disease (IBD)",
-                                "value": "IBD"
-                            },
-                            {
-                                "label": "Liver disease",
-                                "value": "Liver disease"
-                            },
-                            {
-                                "label": "Kidney disease",
-                                "value": "Kidney disease"
-                            },
-                            {
-                                "label": "Osteoarthritis (degenerative)",
-                                "value": "Osteoarthritis (degenerative)"
-                            },
-                            {
-                                "label": "Rheumatoid Arthritis (i.e. autoimmune arthritis)",
-                                "value": "Rheumatoid Arthritis"
-                            },
-                            {
-                                "label": "Other",
-                                "value": "Other"
-                            },
-                            {
-                                "label": "None of these",
-                                "value": "None of these"
-                            }
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Cancer",
+                                        "fr": "Cancer"
+                                    },
+                                    "value": "Cancer"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Myocardial infarction or angina (heart attack)",
+                                        "fr": "Infarctus du myocarde ou angine (la crise cardiaque)"
+                                    },
+                                    "value": "Myocardial infarction or angina"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Transient ischemic attack (TIA)",
+                                        "fr": "Accident ischémique transitoire (AIT)"
+                                    },
+                                    "value": "TIA"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Cerebrovascular accident (stroke)",
+                                        "fr": "Accident vasculaire cérébral (AVC)"
+                                    },
+                                    "value": "Stroke"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Epilepsy or seizures",
+                                        "fr": "Épilepsie ou Convulsions"
+                                    },
+                                    "value": "Epilepsy or seizures"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Major head injury/trauma with lasting consequences",
+                                        "fr": "Blessure/traumatisme crânien majeur avec des conséquences à long terme"
+                                    },
+                                    "value": "Major head injury/trauma with lasting consequences"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Respiratory problems",
+                                        "fr": "Problèmes respiratoires"
+                                    },
+                                    "value": "Respiratory problems"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Lung disease",
+                                        "fr": "Maladies pulmonaires"
+                                    },
+                                    "value": "Lung disease"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Anemia or other blood disease",
+                                        "fr": "Anémie ou autre maladie du sang"
+                                    },
+                                    "value": "Anemia or other blood disease"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Hypertension (high blood pressure)",
+                                        "fr": "Hypertension (pression artérielle élevée)"
+                                    },
+                                    "value": "Hypertension"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Hypotension (low blood pressure)",
+                                        "fr": "Hypotension (pression artérielle basse)"
+                                    },
+                                    "value": "Hypotension"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Diabetes",
+                                        "fr": "Diabète"
+                                    },
+                                    "value": "Diabetes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Hypercholesterolemia (high cholesterol)",
+                                        "fr": "Hypercholestérolémie (cholestérol élevé)"
+                                    },
+                                    "value": "Hypercholesterolemia"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Ulcers or stomach disease",
+                                        "fr": "Ulcères ou maladie de l''estomac"
+                                    },
+                                    "value": "Ulcers or stomach disease"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Inflammatory bowel disease (IBD)",
+                                        "fr": "Maladie inflammatoire de l''intestin (MII)"
+                                    },
+                                    "value": "IBD"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Liver disease",
+                                        "fr": "Maladie du foie"
+                                    },
+                                    "value": "Liver disease"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Kidney disease",
+                                        "fr": "Maladie du rein"
+                                    },
+                                    "value": "Kidney disease"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Osteoarthritis (degenerative)",
+                                        "fr": "Arthrose (dégénérative)"
+                                    },
+                                    "value": "Osteoarthritis (degenerative)"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Rheumatoid Arthritis (i.e. autoimmune arthritis)",
+                                        "fr": "Polyarthrite rhumatoïde (c.-à-d. arthrite auto-immune)"
+                                    },
+                                    "value": "Rheumatoid Arthritis"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": "Autre"
+                                    },
+                                    "value": "Other"
+                                },
+                                {
+                                    "label": {
+                                        "en": "None of these",
+                                        "fr": "Aucune de ces maladies"
+                                    },
+                                    "value": "None of these"
+                                }
                             ]
                         },
                         {
@@ -14812,52 +18730,86 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "displayText",
-                            "title": "Mental Health"
+                            "title": {
+                                "en": "Mental Health",
+                                "fr": "La Santé Mentale"
+                            }
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Have you ever been diagnosed with: (Please check all that apply)",
+                            "title": {
+                                "en": "Have you ever been diagnosed with: (Please check all that apply)",
+                                "fr": "Avez-vous déjà été diagnostiqué.e avec: (Veuillez cocher tout ce qui s''applique)"
+                            },
                             "key": "mentalHealthDiagnosis",
                             "validation": {
                                 "required": true
                             },
                             "allowMultipleSelections": true,
-                            "multipleChoiceOptions": [{
-                                "label": "Depression - currently under treatment",
-                                "value": "Depression - currently under treatment"
-                            },
-                            {
-                                "label": "Depression - but not currently receiving treatment",
-                                "value": "Depression - but not currently receiving treatment"
-                            },
-                            {
-                                "label": "Anxiety - currently under treatment",
-                                "value": "Anxiety - currently under treatment"
-                            },
-                            {
-                                "label": "Anxiety - but not currently receiving treatment",
-                                "value": "Anxiety - but not currently receiving treatment"
-                            },
-                            {
-                                "label": "Obsessive Compulsive Disorder",
-                                "value": "Obsessive Compulsive Disorder"
-                            },
-                            {
-                                "label": "Bipolar Disorder",
-                                "value": "Bipolar Disorder"
-                            },
-                            {
-                                "label": "Schizophrenia",
-                                "value": "Schizophrenia"
-                            },
-                            {
-                                "label": "Other",
-                                "value": "Other"
-                            },
-                            {
-                                "label": "No history of mental health problems",
-                                "value": "No history of mental health problems"
-                            }
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Depression - currently under treatment",
+                                        "fr": "Dépression - présentement sous traitement"
+                                    },
+                                    "value": "Depression - currently under treatment"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Depression - but not currently receiving treatment",
+                                        "fr": "Dépression - mais je ne reçois pas présentement de traitement"
+                                    },
+                                    "value": "Depression - but not currently receiving treatment"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Anxiety - currently under treatment",
+                                        "fr": "Anxiété - présentement sous traitement"
+                                    },
+                                    "value": "Anxiety - currently under treatment"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Anxiety - but not currently receiving treatment",
+                                        "fr": "Anxiété - mais je ne reçois pas présentement de traitement"
+                                    },
+                                    "value": "Anxiety - but not currently receiving treatment"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Obsessive Compulsive Disorder",
+                                        "fr": "Trouble Obsessionnel Compulsif"
+                                    },
+                                    "value": "Obsessive Compulsive Disorder"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Bipolar Disorder",
+                                        "fr": "Trouble bipolaire"
+                                    },
+                                    "value": "Bipolar Disorder"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Schizophrenia",
+                                        "fr": "Schizophrénie"
+                                    },
+                                    "value": "Schizophrenia"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": "Autre"
+                                    },
+                                    "value": "Other"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No history of mental health problems",
+                                        "fr": "Aucun antécédent de problèmes de santé mentale"
+                                    },
+                                    "value": "No history of mental health problems"
+                                }
                             ]
                         },
                         {
@@ -14865,91 +18817,118 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Have you gone through menopause, meaning that your menstrual period stopped for at least one year and did not restart?",
+                            "title": {
+                                "en": "Have you gone through menopause, meaning that your menstrual period stopped for at least one year and did not restart?",
+                                "fr": "Êtes-vous déjà passée par la ménopause (c.-à-d. vos menstruations sont arrêtées depuis au moins 1 an)?"
+                            },
                             "key": "menopause",
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [{
-                                "label": "No, have not gone through menopause",
-                                "value": "No, have not gone through menopause"
-                            },
-                            {
-                                "label": "Yes, have gone through menopause",
-                                "value": "Yes, have gone through menopause"
-                            },
-                            {
-                                "label": "Not applicable",
-                                "value": "Not applicable"
-                            }
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "No, have not gone through menopause",
+                                        "fr": "Non, je ne suis pas passée par la ménopause"
+                                    },
+                                    "value": "No, have not gone through menopause"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Yes, have gone through menopause",
+                                        "fr": "Oui, je suis passée par la ménopause"
+                                    },
+                                    "value": "Yes, have gone through menopause"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not applicable",
+                                        "fr": "Ne s''applique pas"
+                                    },
+                                    "value": "Not applicable"
+                                }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Is your eyesight (including using glasses or corrective lenses if you use them):",
+                            "title": {
+                                "en": "Is your eyesight (consider your vision once corrected with glasses or corrective lenses, if you use them):",
+                                "fr": "Comment évalueriez-vous votre vue? (considérez votre vue une fois corrigée à l''aide de lunettes ou de verres correcteurs, si vous en portez)?"
+                            },
                             "key": "eyesight",
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [{
-                                "label": "Excellent",
-                                "value": "Excellent"
-                            },
-                            {
-                                "label": "Good",
-                                "value": "Good"
-                            },
-                            {
-                                "label": "Poor",
-                                "value": "Poor"
-                            }
-                            ]
-                        },
-                        {
-                            "questionType": "radiobuttons",
-                            "title": "Do you have color-blindness?",
-                            "key": "color-blindness",
-                            "validation": {
-                                "required": true
-                            },
-                            "radiobuttonPresentation": "vertical",
-                            "multipleChoiceOptions": [{
-                                "label": "Yes",
-                                "value": "Yes"
-                            },
-                            {
-                                "label": "No",
-                                "value": "No"
-                            }
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Excellent",
+                                        "fr": "Excellente"
+                                    },
+                                    "value": "Excellent"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Good",
+                                        "fr": "Bonne"
+                                    },
+                                    "value": "Good"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Poor",
+                                        "fr": "Faible"
+                                    },
+                                    "value": "Poor"
+                                }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "In the past 12 months, how many times have you been injured in a fall that limited your normal activities?",
+                            "title": {
+                                "en": "In the past 12 months, how many times have you been injured in a fall, to the point of being limited your normal activities?",
+                                "fr": "Au cours des 12 derniers mois, combien de fois avez-vous été blessé.e suite à une chute, au point où vous étiez limité.e dans vos activités normales?"
+                            },
                             "key": "injury",
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [{
-                                "label": "None",
-                                "value": "None"
-                            },
-                            {
-                                "label": "1",
-                                "value": "1"
-                            },
-                            {
-                                "label": "2 to 5",
-                                "value": "2 to 5"
-                            },
-                            {
-                                "label": "6 to 10",
-                                "value": "6 to 10"
-                            },
-                            {
-                                "label": "More than 10",
-                                "value": "More than 10"
-                            }
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "None",
+                                        "fr": "Zéro"
+                                    },
+                                    "value": "None"
+                                },
+                                {
+                                    "label": {
+                                        "en": "1",
+                                        "fr": "1"
+                                    },
+                                    "value": "1"
+                                },
+                                {
+                                    "label": {
+                                        "en": "2 to 5",
+                                        "fr": "2 à 5"
+                                    },
+                                    "value": "2 to 5"
+                                },
+                                {
+                                    "label": {
+                                        "en": "6 to 10",
+                                        "fr": "6 à 10"
+                                    },
+                                    "value": "6 to 10"
+                                },
+                                {
+                                    "label": {
+                                        "en": "More than 10",
+                                        "fr": "Plus de 10"
+                                    },
+                                    "value": "More than 10"
+                                }
                             ]
                         },
                         {
@@ -14957,437 +18936,728 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "displayText",
-                            "title": "Social situation"
+                            "title": {
+                                "en": "Social situation",
+                                "fr": "La Situation Sociale"
+                            }
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "What is your current marital/partner status?",
+                            "title": {
+                                "en": "What is your current marital/partner status?",
+                                "fr": "Quel est votre état matrimonial/civil?"
+                            },
                             "key": "marital",
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [{
-                                "label": "Single, never married, or never lived with a partner",
-                                "value": "Single, never married, or never lived with a partner"
-                            },
-                            {
-                                "label": "Married/Living with a partner in a domestic relationship",
-                                "value": "Married/Living with a partner in a domestic relationship"
-                            },
-                            {
-                                "label": "Widowed",
-                                "value": "Widowed"
-                            },
-                            {
-                                "label": "Divorced/Separated",
-                                "value": "Divorced/Separated"
-                            },
-                            {
-                                "label": "Do not wish to disclose",
-                                "value": "Do not wish to disclose"
-                            }
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Single, never married, or never lived with a partner",
+                                        "fr": "Célibataire, jamais marié.e, ou n''a jamais vécu avec un.e partenaire"
+                                    },
+                                    "value": "Single, never married, or never lived with a partner"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Married/Living with a partner in a domestic relationship",
+                                        "fr": "Marié.e/Je vis avec un.e partenaire dans une relation domestique"
+                                    },
+                                    "value": "Married/Living with a partner in a domestic relationship"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Widowed",
+                                        "fr": "Veuf/Veuve"
+                                    },
+                                    "value": "Widowed"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Divorced/Separated",
+                                        "fr": "Divorcé.e/Séparé.e"
+                                    },
+                                    "value": "Divorced/Separated"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Do not wish to disclose",
+                                        "fr": "Je ne souhaite pas répondre"
+                                    },
+                                    "value": "Do not wish to disclose"
+                                }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Which best describes your living situation?",
+                            "title": {
+                                "en": "Which best describes your living situation?",
+                                "fr": "Lequel décrit le mieux votre situation de vie?"
+                            },
                             "key": "living",
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [{
-                                "label": "Living alone",
-                                "value": "Living alone"
-                            },
-                            {
-                                "label": "Living with spouse/partner/significant other",
-                                "value": "Living with spouse/partner/significant other"
-                            },
-                            {
-                                "label": "Living with adult child/children",
-                                "value": "Living with adult child/children"
-                            },
-                            {
-                                "label": "Living with other family",
-                                "value": "Living with other family"
-                            },
-                            {
-                                "label": "Living with paid in-home care provider/aide",
-                                "value": "Living with paid in-home care provider/aide"
-                            },
-                            {
-                                "label": "Living in assisted living facility",
-                                "value": "Living in assisted living facility"
-                            },
-                            {
-                                "label": "Living in nursing home",
-                                "value": "Living in nursing home"
-                            },
-                            {
-                                "label": "Other",
-                                "value": "Other"
-                            }
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Living Alone",
+                                        "fr": "Je vis seul.e"
+                                    },
+                                    "value": "Living alone"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Living with spouse/partner/significant other",
+                                        "fr": "Je vis avec mon/ma conjoint.e/partenaire/autre personne chère"
+                                    },
+                                    "value": "Living with spouse/partner/significant other"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Living with adult child/children",
+                                        "fr": "Je vis avec enfant(s) adulte(s) "
+                                    },
+                                    "value": "Living with adult child/children"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Living with other family",
+                                        "fr": "Je vis avec un autre membre de ma famille"
+                                    },
+                                    "value": "Living with other family"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Living with paid in-home care provider/aide",
+                                        "fr": "Je vis avec un prestataire de soins à domicile"
+                                    },
+                                    "value": "Living with paid in-home care provider/aide"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Living in assisted living facility",
+                                        "fr": "Je vis en résidence, e.g. de retraités"
+                                    },
+                                    "value": "Living in assisted living facility"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Living in nursing home",
+                                        "fr": "Je vis en hébergement médicalisé/CHSLD"
+                                    },
+                                    "value": "Living in nursing home"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": "Autre"
+                                    },
+                                    "value": "Other"
+                                }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Do you consider yourself to be:",
+                            "title": {
+                                "en": "Do you consider yourself to be:",
+                                "fr": "Vous considérez-vous comme:"
+                            },
                             "key": "sexuality",
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [{
-                                "label": "Heterosexual (sexual relations with people of the opposite sex)",
-                                "value": "Heterosexual"
-                            },
-                            {
-                                "label": "Homosexual, that is lesbian or gay (sexual relations with people of your own sex)",
-                                "value": "Homosexual"
-                            },
-                            {
-                                "label": "Bisexual (sexual relations with people of both sexes)",
-                                "value": "Bisexual"
-                            },
-                            {
-                                "label": "Other",
-                                "value": "Other"
-                            },
-                            {
-                                "label": "Do not wish to answer",
-                                "value": "Do not wish to answer"
-                            }
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Heterosexual (sexual relations with people of the opposite sex)",
+                                        "fr": "Hétérosexuel (relations sexuelles avec des personnes du sexe opposé)"
+                                    },
+                                    "value": "Heterosexual"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Homosexual, that is lesbian or gay (sexual relations with people of your own sex)",
+                                        "fr": "Homosexuel, c''est-à-dire lesbienne ou gay (relations sexuelles avec des personnes de votre propre sexe)"
+                                    },
+                                    "value": "Homosexual"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Bisexual (sexual relations with people of both sexes)",
+                                        "fr": "Bisexuel (relations sexuelles avec des personnes des deux sexes)"
+                                    },
+                                    "value": "Bisexual"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": "Autre"
+                                    },
+                                    "value": "Other"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Do not wish to answer",
+                                        "fr": "Je préfère ne pas répondre"
+                                    },
+                                    "value": "Do not wish to answer"
+                                }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "What is your best estimate of the total household income received by all household members, from all sources, before taxes and deductions, in the past 12 months?",
+                            "title": {
+                                "en": "Which of these best describes your total household income, from all sources, and from all household members, in the past 12 months?",
+                                "fr": "Laquelle de ces options décrit le mieux le revenu total de votre ménage, de toutes sources, et de toutes les personnes de votre ménage, au cours des 12 derniers mois?"
+                            },
                             "key": "householdIncome",
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [{
-                                "label": "Less than $20,000",
-                                "value": "Less than $20,000"
-                            },
-                            {
-                                "label": "$20,000 or more, but less than $50,000",
-                                "value": "$20,000 or more, but less than $50,000"
-                            },
-                            {
-                                "label": "$50,000 or more, but less than $100,000",
-                                "value": "$50,000 or more, but less than $100,000"
-                            },
-                            {
-                                "label": "$100,000 or more, but less than $150,000",
-                                "value": "$100,000 or more, but less than $150,000"
-                            },
-                            {
-                                "label": "$150,000 or more",
-                                "value": "$150,000 or more"
-                            },
-                            {
-                                "label": "Do not know",
-                                "value": "Do not know"
-                            },
-                            {
-                                "label": "Do not wish to answer",
-                                "value": "Do not wish to answer"
-                            }
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Less than $20,000",
+                                        "fr": "Moins de 20.000$"
+                                    },
+                                    "value": "Less than $20,000"
+                                },
+                                {
+                                    "label": {
+                                        "en": "$20,000 or more, but less than $50,000",
+                                        "fr": "20.000$ ou plus, mais moins de 50.000$"
+                                    },
+                                    "value": "$20,000 or more, but less than $50,000"
+                                },
+                                {
+                                    "label": {
+                                        "en": "$50,000 or more, but less than $100,000",
+                                        "fr": "50.000$ ou plus, mais moins de 100.000$"
+                                    },
+                                    "value": "$50,000 or more, but less than $100,000"
+                                },
+                                {
+                                    "label": {
+                                        "en": "$100,000 or more, but less than $150,000",
+                                        "fr": "100.000$ ou plus, mais moins de 150.000$"
+                                    },
+                                    "value": "$100,000 or more, but less than $150,000"
+                                },
+                                {
+                                    "label": {
+                                        "en": "$150,000 or more",
+                                        "fr": "150.000$ ou plus"
+                                    },
+                                    "value": "$150,000 or more"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Do not know",
+                                        "fr": "Je ne sais pas"
+                                    },
+                                    "value": "Do not know"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Do not wish to answer",
+                                        "fr": "Je préfère ne pas répondre"
+                                    },
+                                    "value": "Do not wish to answer"
+                                }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "What is your current employment status?",
-                            "key": "employment",
+                            "key": "currentEmploymentStatus",
+                            "title": {
+                                "en": "What is your current employment status?",
+                                "fr": "Quelle est votre situation d''emploi actuelle?"
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Employed Full-time (30+ hours a week)",
+                                        "fr": "Employé à temps plein (30+ heures par semaine)"
+                                    },
+                                    "value": "Full-time"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Employed Part-time",
+                                        "fr": "Employé à temps partiel"
+                                    },
+                                    "value": "Part-time"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Unemployed",
+                                        "fr": "Au chômage"
+                                    },
+                                    "value": "Unemployed"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Disability Leave",
+                                        "fr": "Congé de maladie"
+                                    },
+                                    "value": "Disability Leave"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Homemaker",
+                                        "fr": "Au foyer"
+                                    },
+                                    "value": "Homemaker"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Student",
+                                        "fr": "Étudiant.e"
+                                    },
+                                    "value": "Student"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Volunteer",
+                                        "fr": "Bénévole"
+                                    },
+                                    "value": "Volunteer"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Retired",
+                                        "fr": "Retraité.e"
+                                    },
+                                    "value": "Retired"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Do not wish to answer",
+                                        "fr": "Je préfère ne pas répondre"
+                                    },
+                                    "value": "Do not wish to answer"
+                                }
+                            ],
                             "validation": {
                                 "required": true
-                            },
-                            "multipleChoiceOptions": [{
-                                "label": "Employed Full-time (30+ hours a week)",
-                                "value": "Full-time"
-                            },
-                            {
-                                "label": "Employed Part-time",
-                                "value": "Part-time"
-                            },
-                            {
-                                "label": "Unemployed",
-                                "value": "Unemployed"
-                            },
-                            {
-                                "label": "Disability Leave",
-                                "value": "Disability Leave"
-                            },
-                            {
-                                "label": "Homemaker",
-                                "value": "Homemaker"
-                            },
-                            {
-                                "label": "Student",
-                                "value": "Student"
-                            },
-                            {
-                                "label": "Volunteer",
-                                "value": "Volunteer"
-                            },
-                            {
-                                "label": "Retired",
-                                "value": "Retired"
-                            },
-                            {
-                                "label": "Do not wish to answer",
-                                "value": "Do not wish to answer"
                             }
-                            ]
                         },
                         {
                             "questionType": "divider"
                         },
                         {
                             "questionType": "displayText",
-                            "title": "Habits"
+                            "title": {
+                                "en": "Habits",
+                                "fr": "Habitudes de vie"
+                            }
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Do you currently use any of the following? (check all that apply)",
+                            "title": {
+                                "en": "Do you currently use any of the following? (check all that apply)",
+                                "fr": "Consommez-vous actuellement l''un des suivants? (Veuillez cocher tout ce qui s''applique)"
+                            },
                             "key": "substanceUse",
                             "validation": {
                                 "required": true
                             },
                             "allowMultipleSelections": true,
-                            "multipleChoiceOptions": [{
-                                "label": "Alcohol",
-                                "value": "Alcohol"
-                            },
-                            {
-                                "label": "Cigarettes",
-                                "value": "Cigarettes"
-                            },
-                            {
-                                "label": "Other tobacco products",
-                                "value": "Other tobacco products"
-                            },
-                            {
-                                "label": "Recreational drugs",
-                                "value": "Recreational drugs"
-                            },
-                            {
-                                "label": "Cannabis",
-                                "value": "Cannabis"
-                            },
-                            {
-                                "label": "None of the above",
-                                "value": "None of the above"
-                            }
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Alcohol",
+                                        "fr": "Alcool"
+                                    },
+                                    "value": "Alcohol"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Cigarettes",
+                                        "fr": "Cigarettes"
+                                    },
+                                    "value": "Cigarettes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other tobacco products",
+                                        "fr": "Autres produits de tabac"
+                                    },
+                                    "value": "Other tobacco products"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Recreational drugs",
+                                        "fr": "Drogues récréatives"
+                                    },
+                                    "value": "Recreational drugs"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Cannabis",
+                                        "fr": "Cannabis"
+                                    },
+                                    "value": "Cannabis"
+                                },
+                                {
+                                    "label": {
+                                        "en": "None of the above",
+                                        "fr": "Aucune de ces réponses"
+                                    },
+                                    "value": "None of the above"
+                                }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Have you smoked at least 100 cigarettes in your life?",
+                            "title": {
+                                "en": "Have you smoked at least 100 cigarettes in your life?",
+                                "fr": "Avez-vous fumé au moins 100 cigarettes dans votre vie?"
+                            },
                             "key": "cigarettes",
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [{
-                                "label": "Yes",
-                                "value": "Yes"
-                            },
-                            {
-                                "label": "No",
-                                "value": "No"
-                            },
-                            {
-                                "label": "Don''t know",
-                                "value": "Don''t know"
-                            }]
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Don''t know",
+                                        "fr": "Je ne sais pas"
+                                    },
+                                    "value": "Don''t know"
+                                }
+                            ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "What is your current smoking status?",
+                            "title": {
+                                "en": "What is your current smoking status?",
+                                "fr": "Quel est votre statut de fumeur actuel?"
+                            },
                             "key": "smoking",
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [{
-                                "label": "Not a smoker",
-                                "value": "Not a smoker"
-                            },
-                            {
-                                "label": "Current smoker: 20 or more cigarettes per day",
-                                "value": "Current smoker: 20 or more cigarettes per day"
-                            },
-                            {
-                                "label": "Current smoker: 10-19 cigarettes per day",
-                                "value": "Current smoker: 10-19 cigarettes per day"
-                            },
-                            {
-                                "label": "Current smoker: 0-9 cigarettes per day",
-                                "value": "Current smoker: 0-9 cigarettes per day"
-                            },
-                            {
-                                "label": "Quit in last year",
-                                "value": "Quit in last year"
-                            },
-                            {
-                                "label": "Quit in last 5 years",
-                                "value": "Quit in last 5 years"
-                            },
-                            {
-                                "label": "Quit in last 15 years",
-                                "value": "Quit in last 15 years"
-                            },
-                            {
-                                "label": "Quit in last 15 years",
-                                "value": "Quit in last 15 years"
-                            },
-                            {
-                                "label": "Quit >25 years ago",
-                                "value": "Quit >25 years ago"
-                            }
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Not a smoker",
+                                        "fr": "Je ne fume pas"
+                                    },
+                                    "value": "Not a smoker"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Current smoker: 20 or more cigarettes per day",
+                                        "fr": "Fumeur actuel : 20 cigarettes ou plus par jour"
+                                    },
+                                    "value": "Current smoker: 20 or more cigarettes per day"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Current smoker: 10-19 cigarettes per day",
+                                        "fr": "Fumeur actuel : 10 à 19 cigarettes par jour"
+                                    },
+                                    "value": "Current smoker: 10-19 cigarettes per day"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Current smoker: 0-9 cigarettes per day",
+                                        "fr": "Fumeur actuel : 0 à 9 cigarettes par jour"
+                                    },
+                                    "value": "Current smoker: 0-9 cigarettes per day"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Quit in last year",
+                                        "fr": "J''ai arrêté l''année dernière"
+                                    },
+                                    "value": "Quit in last year"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Quit in last 5 years",
+                                        "fr": "J''ai arrêté au cours des 5 dernières années"
+                                    },
+                                    "value": "Quit in last 5 years"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Quit in last 15 years",
+                                        "fr": "J''ai arrêté au cours des 15 dernières années"
+                                    },
+                                    "value": "Quit in last 15 years"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Quit in last 25 years",
+                                        "fr": "J''ai arrêté au cours des 25 dernières années"
+                                    },
+                                    "value": "Quit in last 25 years"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Quit >25 years ago",
+                                        "fr": "J''ai arrêté il y a plus de 25 ans"
+                                    },
+                                    "value": "Quit >25 years ago"
+                                }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Have you ever drank alcohol?",
+                            "title": {
+                                "en": "Have you ever drank alcohol?",
+                                "fr": "Avez-vous déjà consommé de l''alcool?"
+                            },
                             "key": "alcohol",
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [{
-                                "label": "Yes",
-                                "value": "Yes"
-                            },
-                            {
-                                "label": "No",
-                                "value": "No"
-                            },
-                            {
-                                "label": "Do not wish to answer",
-                                "value": "Do not wish to answer"
-                            }]
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Do not wish to answer",
+                                        "fr": "Je ne souhaite pas répondre"
+                                    },
+                                    "value": "Do not wish to answer"
+                                }
+                            ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "About how often during the past 12 months did you drink alcohol?",
+                            "title": {
+                                "en": "About how often during the past 12 months did you drink alcohol?",
+                                "fr": "À quelle fréquence (approximativement) au cours des 12 derniers mois avez-vous consommé de l''alcool?"
+                            },
                             "key": "alcoholUse",
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [{
-                                "label": "Almost every day (6-7 times a week)",
-                                "value": "Almost every day"
-                            },
-                            {
-                                "label": "4-5 times a week",
-                                "value": "4-5 times a week"
-                            },
-                            {
-                                "label": "2-3 times a week",
-                                "value": "2-3 times a week"
-                            },
-                            {
-                                "label": "Once a week",
-                                "value": "Once a week"
-                            },
-                            {
-                                "label": "2-3 times a month",
-                                "value": "2-3 times a month"
-                            },
-                            {
-                                "label": "About once a month",
-                                "value": "Once a month"
-                            },
-                            {
-                                "label": "Less than once a month",
-                                "value": "Less than once a month"
-                            },
-                            {
-                                "label": "Never",
-                                "value": "Never"
-                            },
-                            {
-                                "label": "Do not wish to answer",
-                                "value": "Do not wish to answer"
-                            }
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Almost every day (6-7 times a week)",
+                                        "fr": "Presque tous les jours (6-7 fois par semaine)"
+                                    },
+                                    "value": "Almost every day"
+                                },
+                                {
+                                    "label": {
+                                        "en": "4-5 times a week",
+                                        "fr": "4-5 fois par semaine"
+                                    },
+                                    "value": "4-5 times a week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "2-3 times a week",
+                                        "fr": "2-3 fois par semaine"
+                                    },
+                                    "value": "2-3 times a week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Once a week",
+                                        "fr": "Une fois par semaine"
+                                    },
+                                    "value": "Once a week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "2-3 times a month",
+                                        "fr": "2-3 fois par mois"
+                                    },
+                                    "value": "2-3 times a month"
+                                },
+                                {
+                                    "label": {
+                                        "en": "About once a month",
+                                        "fr": "Environ une fois par mois"
+                                    },
+                                    "value": "Once a month"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Less than once a month",
+                                        "fr": "Moins d''une fois par mois"
+                                    },
+                                    "value": "Less than once a month"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Never",
+                                        "fr": "Jamais"
+                                    },
+                                    "value": "Never"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Do not wish to answer",
+                                        "fr": "Je ne souhaite pas répondre"
+                                    },
+                                    "value": "Do not wish to answer"
+                                }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "How much time do you spend engaging in mental exercise (e.g. playing board games, cards, crossword puzzles, jigsaw puzzles, sudoku, playing a musical instrument)",
+                            "title": {
+                                "en": "How much time do you spend engaging in mental exercise (e.g. playing board games, cards, crossword puzzles, jigsaw puzzles, sudoku, playing a musical instrument, etc.)",
+                                "fr": "Combien de temps passez-vous à faire de l''exercice mental (p.ex. jeux de société, cartes, mots croisés, casse-têtes, sudoku; jouer un instrument de musique, etc.)"
+                            },
                             "key": "mentalExercise",
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [{
-                                "label": "Every day",
-                                "value": "Every day"
-                            },
-                            {
-                                "label": "Several times a week",
-                                "value": "Several times a week"
-                            },
-                            {
-                                "label": "Several times a month",
-                                "value": "Several times a month"
-                            },
-                            {
-                                "label": "Several times a year",
-                                "value": "Several times a year"
-                            },
-                            {
-                                "label": "Once a year or less",
-                                "value": "Once a year or less"
-                            }
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Every day",
+                                        "fr": "Tous les jours"
+                                    },
+                                    "value": "Every day"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Several times a week",
+                                        "fr": "Plusieurs fois par semaine"
+                                    },
+                                    "value": "Several times a week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Several times a month",
+                                        "fr": "Plusieurs fois par mois"
+                                    },
+                                    "value": "Several times a month"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Several times a year",
+                                        "fr": "Plusieurs fois par année"
+                                    },
+                                    "value": "Several times a year"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Once a year or less",
+                                        "fr": "Une fois par année ou moins"
+                                    },
+                                    "value": "Once a year or less"
+                                }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "How often do you exercise?",
+                            "title": {
+                                "en": "How often do you exercise?",
+                                "fr": "À quelle fréquence faites-vous de l''activité physique?"
+                            },
                             "key": "exercise",
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [{
-                                "label": "Less than 1 time per week",
-                                "value": "Less than 1 time per week"
-                            },
-                            {
-                                "label": "1 to 2 days per week",
-                                "value": "1 to 2 days per week"
-                            },
-                            {
-                                "label": "3 to 5 days per week",
-                                "value": "3 to 5 days per week"
-                            },
-                            {
-                                "label": "6 to 7 days per week",
-                                "value": "6 to 7 days per week"
-                            }
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Less than 1 time per week",
+                                        "fr": "Moins d''une fois par semaine"
+                                    },
+                                    "value": "Less than 1 time per week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "1 to 2 days per week",
+                                        "fr": "1 à 2 jours par semaine"
+                                    },
+                                    "value": "1 to 2 days per week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "3 to 5 days per week",
+                                        "fr": "3 à 5 jours par semaine"
+                                    },
+                                    "value": "3 to 5 days per week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "6 to 7 days per week",
+                                        "fr": "6 à 7 jours par semaine"
+                                    },
+                                    "value": "6 to 7 days per week"
+                                }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "How long is one exercise session approximately?",
+                            "title": {
+                                "en": "How long is one exercise session approximately?",
+                                "fr": "Environ combien de temps dure une séance d''exercice?"
+                            },
                             "key": "exerciseSession",
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [{
-                                "label": "Less than 30 minutes",
-                                "value": "Less than 30 minutes"
-                            },
-                            {
-                                "label": "30 to 60 minutes",
-                                "value": "30 to 60 minutes"
-                            },
-                            {
-                                "label": "1 to 2 hours",
-                                "value": "1 to 2 hours"
-                            },
-                            {
-                                "label": "More than 2 hours",
-                                "value": "More than 2 hours"
-                            }
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Less than 30 minutes",
+                                        "fr": "Moins de 30 minutes"
+                                    },
+                                    "value": "Less than 30 minutes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "30 to 60 minutes",
+                                        "fr": "30 à 60 minutes"
+                                    },
+                                    "value": "30 to 60 minutes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "1 to 2 hours",
+                                        "fr": "1 à 2 heures"
+                                    },
+                                    "value": "1 to 2 hours"
+                                },
+                                {
+                                    "label": {
+                                        "en": "More than 2 hours",
+                                        "fr": "Plus de 2 heures"
+                                    },
+                                    "value": "More than 2 hours"
+                                }
                             ]
                         },
                         {
@@ -15395,49 +19665,78 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "displayText",
-                            "title": "Sleep"
+                            "title": {
+                                "en": "Sleep",
+                                "fr": "Le Sommeil"
+                            }
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "How often is your sleep restless?",
+                            "title": {
+                                "en": "How often is your sleep restless?",
+                                "fr": "À quelle fréquence votre sommeil est-il agité?"
+                            },
                             "key": "restlessSleep",
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [{
-                                "label": "All of the time (5-7 days per week)",
-                                "value": "All of the time"
-                            },
-                            {
-                                "label": "Occasionally (3-4 days per week)",
-                                "value": "Occasionally"
-                            },
-                            {
-                                "label": "Some of the time (1-2 days per week)",
-                                "value": "Some of the time"
-                            },
-                            {
-                                "label": "Rarely or never (less than 1 day per week)",
-                                "value": "Rarely or never"
-                            }
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "All of the time (5-7 days per week)",
+                                        "fr": "Tout le temps (5 à 7 jours par semaine)"
+                                    },
+                                    "value": "All of the time"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Occasionally (3-4 days per week)",
+                                        "fr": "Parfois (3 à 4 jours par semaine)"
+                                    },
+                                    "value": "Occasionally"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Some of the time (1-2 days per week)",
+                                        "fr": "Quelques fois (1 à 2 jours par semaine)"
+                                    },
+                                    "value": "Some of the time"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Rarely or never (less than 1 day per week)",
+                                        "fr": "Rarement ou jamais (moins de 1 jours par semaine"
+                                    },
+                                    "value": "Rarely or never"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
-                            "title": "Have you ever been told, or suspected yourself, that you seem to ''act out your dreams'' while asleep (for example, punching, flailing your arms in the air, making running movements, etc.)?",
+                            "title": {
+                                "en": "Have you ever been told, or suspected yourself, that you seem to \\"act out your dreams\\" while asleep (for example, punching, flailing your arms in the air, making running movements, etc.)?",
+                                "fr": "Vous a-t-on déjà dit ou avez-vous déjà remarqué que vous reproduisiez physiquement la gestuelle de vos rêves / mouvements lorsque vous rêvez? (Exemple : coup de poing dans le vide, fouetter dans l''air, mouvements de courir)"
+                            },
                             "key": "actOutSleep",
                             "validation": {
                                 "required": true
                             },
                             "radiobuttonPresentation": "vertical",
-                            "multipleChoiceOptions": [{
-                                "label": "Yes",
-                                "value": "Yes"
-                            },
-                            {
-                                "label": "No",
-                                "value": "No"
-                            }
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
                             ]
                         }
                     ]
@@ -15459,86 +19758,143 @@ UPDATE tasks SET
             {
                 "componentName": "INFODISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Debriefing About The Deception Used In The Study",
+                    "title": {
+                        "en": "Debriefing About The Deception Used In The Study",
+                        "fr": "Compte rendu de la tromperie utilisée dans la recherche"
+                    },
                     "sections": [
                         {
                             "header": "",
-                            "textContent": "Thank you for participating!"
+                            "textContent": {
+                                "en": "Thank you for participating!",
+                                "fr": "Merci d''avoir participé!"
+                            }
                         },
                         {
                             "header": "",
-                            "textContent": "Earlier, we informed you that our study was about measuring aspect of cognition. While this is true, we were specifically interested in <b>the effects of stress on cognition</b>. As a result, one of the two sessions involved the participants placing their hand in ice water and being socially evaluated in order to create a short-term stressful experience."
+                            "textContent": {
+                                "en": "Earlier, we informed you that our study was about measuring aspects of cognition. While this is true, we were specifically interested in <b>the effects of stress on cognition</b>. As a result, one of the two sessions involved the participants placing their hand in ice water and being socially evaluated in order to create a short-term stressful experience.",
+                                "fr": "Nous avions partagé avec vous que cette étude portait sur la la cognition. Bien que cela soit vrai, le but spécifique de l''étude était de mesurer les <b>effets du stress sur la cognition</b>. Pour faire cela, l''une des deux sessions impliquait que les participants placent leur main dans un bac d''eau glacée et soient socialement évalués afin de créer une expérience stressante à court terme."
+                            }
                         },
                         {
                             "header": "",
-                            "textContent": "In order to properly study this, <b>it was required that we deceive you about the actual nature of the study</b>. We could not warn you that you would experience stress because knowing this in advance would have minimized the experience of the stress."
+                            "textContent": {
+                                "en": "In order to properly study this, <b>it was required that we deceive you about the actual nature of the study</b>. We could not warn you that you would experience stress because knowing this in advance would have minimized the experience of the stress.",
+                                "fr": "Afin de bien étudier l''effet du stress, <b>il était nécessaire que nous vous trompions sur l''objectif réel de l''étude</b>. Nous ne pouvions pas vous avertir que vous éprouveriez du stress, car le savoir à l''avance aurait minimisé l''expérience du stress."
+                            }
                         },
                         {
                             "header": "",
-                            "textContent": "The specific deception elements in this study included:"
+                            "textContent": {
+                                "en": "The specific deception elements in this study included:",
+                                "fr": "Les éléments spécifiques de tromperie de cette étude étaient:"
+                            }
                         },
                         {
                             "header": "",
-                            "textContent": "1. Not telling you in the consent form that this study was about the effect of stress on cognition."
+                            "textContent": {
+                                "en": "1. Not telling you in the consent form that this study was about the effect of stress on cognition.",
+                                "fr": "1. Ne pas vous dire dans le formulaire de consentement que cette étude portait sur les effets du stress sur la cognition."
+                            }
                         },
                         {
                             "header": "",
-                            "textContent": "2. Ice water task: "
-                        },
-                        {
-                            "header": "",
-                            "indent": 1,
-                            "textContent": "a. We withheld the amount of time that we required you keep your hand in the ice water, which was a maximum of three minutes."
-                        },
-                        {
-                            "header": "",
-                            "indent": 1,
-                            "textContent": "b. We refused to answer any questions you had throughout the task."
-                        },
-                        {
-                            "header": "",
-                            "indent": 1,
-                            "textContent": "c. We said that removing your hand from the ice water would impact our study when in fact it was only used to induce stress."
-                        },
-                        {
-                            "header": "",
-                            "indent": 1,
-                            "textContent": "d. We instructed the research assistant to behave in a cold, stoic matter and act like they were evaluating your behavior when in fact they were only pretending to do so to add an element of social stress."
-                        },
-                        {
-                            "header": "",
-                            "indent": 1,
-                            "textContent": "e. We told you that you were being filmed to have the videos analyzed but the videos were deleted immediately after recording and were only used to add to the stress of the experience."
+                            "textContent": {
+                                "en": "2. Ice water task: ",
+                                "fr": "2. Tâche d''eau glacée"
+                            }
                         },
                         {
                             "header": "",
                             "indent": 1,
-                            "textContent": "f. We told you the goal of the ice water task was to measure pain tolerance when it was actually our means of inducing stress."
-                        },
-                        {
-                            "header": "",
-                            "textContent": "Given the ubiquitous nature of stress, it is critical that we study it in order to understand the range of consequences it can hold for brain health."
-                        },
-                        {
-                            "header": "",
-                            "textContent": "We followed standard research procedures commonly used to cause stress in the research setting. <b>The stress was meant to be relatively mild and very short-term</b>. If you still feel lingering effects of this stress, or have any questions about the study or your rights as a participant, please contact us:"
+                            "textContent": {
+                                "en": "a. We withheld the amount of time that we required you keep your hand in the ice water, which was a maximum of three minutes.",
+                                "fr": "a. Nous n''avons pas partagé avec vous la durée de temps durant lequel il vous faudrait garder la main dans l''eau glacée, soit un maximum de trois minutes."
+                            }
                         },
                         {
                             "header": "",
                             "indent": 1,
-                            "textContent": "<b>Madeleine Sharp, Department of Neurology and Neurosurgery, Montreal Neurological Institute, McGill University: madeleine.sharp@mcgill.ca or sharplab.neuro@mcgill.ca"
+                            "textContent": {
+                                "en": "b. We refused to answer any questions you had throughout the task.",
+                                "fr": "b. Nous avons refusé de répondre aux questions que vous aviez pendant cette partie de l''étude."
+                            }
                         },
                         {
                             "header": "",
-                            "textContent": "Please also consider the following mental health resource: Mental Health Services Locator - http://store.samhsa.gov/mhlocator"
+                            "indent": 1,
+                            "textContent": {
+                                "en": "c. We said that removing your hand from the ice water would impact our study when in fact it was only used to induce stress.",
+                                "fr": "c. Nous vous avons laissé croire que retirer votre main de l''eau glacée aurait un impact sur notre étude alors qu''en fait elle n''était utilisée que pour provoquer du stress."
+                            }
                         },
                         {
                             "header": "",
-                            "textContent": "Finally, if you have comments, or wish to file a complaint, you may communicate with the Ombudsman of the Montreal Neurological Hospital at (514) 934-1934 ext. 22223."
+                            "indent": 1,
+                            "textContent": {
+                                "en": "d. We instructed the research assistant to behave in a cold, stoic matter and act like they were evaluating your behavior when in fact they were only pretending to do so to add an element of social stress.",
+                                "fr": "d. Nous avons demandé à l''assistant de recherche de se comporter de manière froide et stoïque et d''agir comme s''il évaluait votre comportement alors qu''en fait il faisait semblant de le faire simplement pour ajouter un élément de stress social."
+                            }
                         },
                         {
                             "header": "",
-                            "textContent": "Thank you again for your participation!"
+                            "indent": 1,
+                            "textContent": {
+                                "en": "e. We told you that you were being filmed to have the videos analyzed but the videos were deleted immediately after recording and were only used to add to the stress of the experience.",
+                                "fr": "e. Nous vous avons dit que vous étiez filmé pour analyser vos réactions, mais les vidéos ont été supprimées immédiatement après l''enregistrement et n''ont été utilisées que pour ajouter un autre élément de stress."
+                            }
+                        },
+                        {
+                            "header": "",
+                            "indent": 1,
+                            "textContent": {
+                                "en": "f. We told you the goal of the ice water task was to measure pain tolerance when it was actually our means of inducing stress.",
+                                "fr": "f. Nous vous avons dit que le but de la tâche de l''eau glacée était de mesurer la tolérance à la douleur alors que c''était en fait notre moyen d''induire le stress."
+                            }
+                        },
+                        {
+                            "header": "",
+                            "textContent": {
+                                "en": "Given the ubiquitous nature of stress, it is critical that we study it in order to understand the range of consequences it can hold for brain health.",
+                                "fr": "Compte tenu de la nature omniprésente du stress, il est essentiel que nous l''étudions afin de comprendre l''éventail des conséquences qu''il peut avoir sur la santé du cerveau."
+                            }
+                        },
+                        {
+                            "header": "",
+                            "textContent": {
+                                "en": "We followed standard research procedures commonly used to cause stress in the research setting. <b>The stress was meant to be relatively mild and very short-term</b>. If you still feel lingering effects of this stress, or have any questions about the study or your rights as a participant, please contact us:",
+                                "fr": "Nous avons suivi des procédures de recherche standard couramment utilisées pour causer du stress dans le cadre de la recherche. <b>Le stress devait être relativement léger et de très courte durée</b>. Si vous ressentez toujours des effets persistants de ce stress, ou si vous avez des questions sur l''étude ou sur vos droits en tant que participant.e, veuillez nous contacter:"
+                            }
+                        },
+                        {
+                            "header": "",
+                            "indent": 1,
+                            "textContent": {
+                                "en": "<b>Madeleine Sharp, Department of Neurology and Neurosurgery, Montreal Neurological Institute, McGill University: madeleine.sharp@mcgill.ca or sharplab.neuro@mcgill.ca",
+                                "fr": "<b>Madeleine Sharp, Département de Neurologie et de Neurochirurgie, Institut Neurologique de Montréal, Université McGill: madeleine.sharp@mcgill.ca ou sharplab.neuro@mcgill.ca"
+                            }
+                        },
+                        {
+                            "header": "",
+                            "textContent": {
+                                "en": "Please also consider the following mental health resource: Mental Health Services Locator - http://store.samhsa.gov/mhlocator",
+                                "fr": "Veuillez également considérer la ressource de santé mentale suivante : Localisateur des services de santé mentale - http://store.samhsa.gov/mhlocator"
+                            }
+                        },
+                        {
+                            "header": "",
+                            "textContent": {
+                                "en": "Finally, if you have comments, or wish to file a complaint, you may communicate with the Ombudsman of the Montreal Neurological Hospital at (514) 934-1934 ext. 22223.",
+                                "fr": "Finalement, si vous avez des commentaires, ou souhaitez déposer une plainte, vous pouvez communiquer avec l''ombudsman de l''Hôpital Neurologique de Montréal au (514) 934-1934 ext. 22223."
+                            }
+                        },
+                        {
+                            "header": "",
+                            "textContent": {
+                                "en": "Thank you again for your participation!",
+                                "fr": "Merci encore pour votre participation!"
+                            }
                         }
                     ],
                     "buttons": {
@@ -15567,24 +19923,39 @@ UPDATE tasks SET
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Welcome to the Spot The Number Game!",
+                    "title": {
+                        "en": "Welcome to the Spot The Number Game!",
+                        "fr": "Bienvenue au jeu Recherche des Chiffres!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You will see numbers flash on the screen very quickly, followed by an X."
+                            "textContent": {
+                                "en": "You will see numbers flash on the screen very quickly, followed by an X.",
+                                "fr": "Vous verrez des chiffres apparaître à l''écran très rapidement, suivis d''un X."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Your job is to press the LEFT arrow ( ⬅️ ) for every number <b>EXCEPT</b> for the <b>number 3</b>."
+                            "textContent": {
+                                "en": "Your job is to press the LEFT arrow ( ⬅️ ) for every number <b>EXCEPT</b> for the <b>number 3</b>.",
+                                "fr": "Votre travail consiste à appuyer sur la flèche GAUCHE ( ⬅️ ) pour chaque chiffre <b>SAUF</b> pour le <b>chiffre 3</b>."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "When you see the <b>number 3</b> you must <b>NOT</b> press any key at all, simply wait for the next number."
+                            "textContent": {
+                                "en": "When you see the <b>number 3</b> you must <b>NOT</b> press any key at all, simply wait for the next number.",
+                                "fr": "Quand vous voyez le <b>chiffre 3</b>, vous <b>NE DEVEZ PAS</b> appuyer sur aucune touche, attendez simplement le chiffre suivant."
+                            }
                         },
                         {
                             "sectionType": "image-horizontal",
                             "imageAlignment": "left",
-                            "imagePath": "/assets/images/instructions/SART/visual_instructions.png"
+                            "imagePath": {
+                                "en": "/assets/images/instructions/SART/visual_instructions_en.png",
+                                "fr": "/assets/images/instructions/SART/visual_instructions_fr.png"
+                            }
                         }
                     ],
                     "buttons": {
@@ -15597,23 +19968,38 @@ UPDATE tasks SET
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Let''s practice!",
+                    "title": {
+                        "en": "Let''s practice!",
+                        "fr": "Pratiquons-nous!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Remember, press the ( ⬅️ ) for all numbers except for 3"
+                            "textContent": {
+                                "en": "Remember, press the ( ⬅️ ) for all numbers except for 3",
+                                "fr": "N''oubliez pas d''appuyer sur ( ⬅️ ) pour tous les chiffres sauf pour le 3"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "When you see 3, don''t press anything and wait for the next number to appear."
+                            "textContent": {
+                                "en": "When you see 3, don''t press anything and wait for the next number to appear.",
+                                "fr": "Quand vous voyez le chiffre 3, vous ne devez pas appuyer sur aucune touche, attendez simplement le chiffre suivant."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The numbers will appear very quickly, so be ready!"
+                            "textContent": {
+                                "en": "The numbers will appear very quickly, so be ready!",
+                                "fr": "Les chiffres vont apparaître très rapidement, alors soyez prêt.e!"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click START to begin the practice"
+                            "textContent": {
+                                "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer la pratique."
+                            }
                         }
                     ],
                     "buttons": {
@@ -15642,23 +20028,38 @@ UPDATE tasks SET
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Well done!",
+                    "title": {
+                        "en": "Well done!",
+                        "fr": "Bravo!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Now you are ready for the real game"
+                            "textContent": {
+                                "en": "Now you are ready for the real game.",
+                                "fr": "Vous êtes prêt.e pour le vrai jeu."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Remember, press the ( ⬅️ ) key for all numbers except for 3"
+                            "textContent": {
+                                "en": "Remember, press the ( ⬅️ ) key for all numbers except for 3",
+                                "fr": "N''oubliez pas d''appuyer sur ( ⬅️ ) pour tous les chiffres sauf pour le 3"
+                                }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "When you see 3, don''t press anything and wait for the next number to appear"
+                            "textContent": {
+                                "en": "When you see 3, don''t press anything and wait for the next number to appear",
+                                "fr": "Quand vous voyez le chiffre 3, vous ne devez pas appuyer sur aucune touche, attendez simplement le chiffre suivant."
+                                }
                         },
                         {
                             "sectionType": "",
-                            "textContent": "Click START to begin"
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the actual game",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -15688,7 +20089,10 @@ UPDATE tasks SET
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "It''s break time",
+                    "title": {
+                        "en": "It''s break time",
+                        "fr": "C''est l''heure de la pause"
+                    },
                     "timerConfig": {
                         "timer": 35000,
                         "showTimer": true,
@@ -15698,15 +20102,24 @@ UPDATE tasks SET
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You have to wait for at least 20 seconds before being able to continue"
+                            "textContent": {
+                                "en": "You have to wait for at least 20 seconds before being able to continue",
+                                "fr": "Vous devez attendre au moins 20 secondes avant de pouvoir continuer"
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "The next round will automatically start in 35 seconds unless you choose to continue sooner"
+                            "textContent": {
+                                "en": "The next round will automatically start in 35 seconds unless you choose to continue sooner.",
+                                "fr": "Le prochain tour commencera automatiquement dans 35 secondes, sauf si vous choisissez de continuer plus tôt."
+                            } 
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Click START when you are ready"
+                            "textContent": {
+                                "en": "Click \\"START\\" when you are ready for the actual game",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -15736,11 +20149,17 @@ UPDATE tasks SET
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "You have completed the task, thank you!",
+                    "title": {
+                        "en": "You have completed the game, thank you!",
+                        "fr": "Vous avez terminé le jeu, merci!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Click next to continue"
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ]
                 }
@@ -15761,40 +20180,64 @@ UPDATE tasks SET
             {
                 "componentName": "INFODISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Thank you for your participation and for sticking with it so far!",
+                    "title": {
+                        "en": "Thank you for your participation and for sticking with it so far!",
+                        "fr": "Merci pour votre participation et d''avoir persévéré jusqu''à présent!"
+                    },
                     "sections": [
                         {
-                            "header": "A few reminders:",
+                            "header": {
+                                "en": "A few reminders:",
+                                "fr": "Quelques rappels:"
+                            },
                             "textContent": ""
                         },
                         {
                             "header": "",
                             "indent": 1,
-                            "textContent": "1. You can take breaks if you want to. We simply ask that you <b>wait until the end of a game or of a questionnaire</b>, otherwise your data will be lost."
+                            "textContent": {
+                                "en": "1. You can take breaks if you want to. We simply ask that you <b>wait until the end of a game or of a questionnaire</b>, otherwise your data will be lost.",
+                                "fr": "1. Vous pouvez prendre des pauses si vous le souhaitez. Par contre, nous vous demandons d''<b>attendre la fin d''un jeu ou d''un questionnaire</b>, sinon vos données seront perdues."
+                            }
                         },
                         {
                             "header": "",
                             "indent": 2,
-                            "textContent": "<b>To take a break:</b> simply close this window."
+                            "textContent": {
+                                "en": "<b>To take a break:</b> simply close this window.",
+                                "fr": "<b>Pour prendre une pause:</b> fermez simplement cette fenêtre."
+                            }
                         },
                         {
                             "header": "",
                             "indent": 2,
-                            "textContent": "<b>To get back to it:</b> use the link you were sent in the email. It will take you to the log-in page."
+                            "textContent": {
+                                "en": "<b>To get back to it:</b> use the link you were sent in the email. It will take you to the log-in page.",
+                                "fr": "<b>Pour y revenir:</b> utilisez le lien qui vous a été envoyé dans le courriel. Cela vous amènera à la page de connexion."
+                            }
                         },
                         {
                             "header": "",
                             "indent": 1,
-                            "textContent": "2. Please complete the full set of brain games within 1 week from when you started."
+                            "textContent": {
+                                "en": "2. Please complete the full set of brain games within ONE week from when you started.",
+                                "fr": "2. Veuillez compléter l''ensemble complet des jeux et questionnaires dans un délai de UNE semaine."
+                            }
                         },
                         {
                             "header": "",
                             "indent": 1,
-                            "textContent": "3. We also ask that you do the games when you are feeling ''ON'', i.e. when the PD medications are in effect (typically best about 1-2 hours after your last dose). If you don''t take PD medications, then please choose the time that works best for you."
+                            "textContent": {
+                                "en": "3. We also ask that you do the games when you are feeling ''ON'', i.e. when you feel that your PD medications are in effect (typically best about 1-2 hours after your last dose). If you don''t take PD medications, then please choose the time that works best for you.",
+                                "fr": "3. Nous vous demandons également de compléter les jeux à un moment où vous vous sentez ''ON'', c''est-à-dire lorsque vous sentez que vos médicaments pour la maladie de Parkinson ont pris effet (généralement 1 à 2 heures après votre dernière dose). Si vous ne prenez pas de médicaments pour la maladie de Parkinson, veuillez choisir le moment qui vous convient le mieux."
+                            }
                         },
                         {
                             "header": "",
-                            "textContent": "<b>QUESTIONS OR EXPERIENCING DIFFICULTIES?</b>"
+                            "textContent": {
+                                "en": "<b>QUESTIONS OR EXPERIENCING DIFFICULTIES?</b>",
+                                "fr": "<b>DES QUESTIONS OU DES DIFFICULTÉS ?</b>"
+                            }
                         },
                         {
                             "header": "",
@@ -15802,11 +20245,17 @@ UPDATE tasks SET
                         },
                         {
                             "header": "",
-                            "textContent": "To take a break now, close the window."
+                            "textContent": {
+                                "en": "To take a break now, close the window.",
+                                "fr": "Pour prendre une pause maintenant, fermez la fenêtre."
+                            }
                         },
                         {
                             "header": "",
-                            "textContent": "To continue, please click CONTINUE"
+                            "textContent": {
+                                "en": "To continue, please click CONTINUE",
+                                "fr": "Pour continuer, veuillez cliquer sur ''CONTINUE''"
+                            }
                         }
                     ],
                     "buttons": {
@@ -15830,43 +20279,73 @@ UPDATE tasks SET
             {
                 "componentName": "INFODISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Welcome to the study of Neurocognition on the Web for PD - Evaluation of Reliability",
+                    "title": {
+                        "en": "Welcome to the study of Neurocognition on the Web for Parkinson''s disease",
+                        "fr": "Bienvenue à l''étude de Neurocognition sur le Web pour la maladie de Parkinson"
+                    },
                     "sections": [
                         {
-                            "header": "Thank you for participating in our study!",
+                            "header": {
+                                "en": "Thank you for participating in our study!",
+                                "fr": "Merci de participer à notre étude!"
+                            },
                             "textContent": ""
                         },
                         {
                             "header": "",
-                            "textContent": "You will be playing a series of brain games to help us better understand the thinking and memory changes experienced by people with Parkinson''s disease."
+                            "textContent": {
+                                "en": "You will be playing a series of brain games to help us better understand the thinking and memory changes experienced by people with Parkinson''s disease.",
+                                "fr": "Vous allez jouer à une série de jeux cognitifs pour nous aider à mieux comprendre les changements cognitifs (ex. de pensée, de mémoire) vécus par les personnes atteintes de la maladie de Parkinson."
+                            }
                         },
                         {
                             "header": "",
-                            "textContent": "You can do this all in one sitting, or leave (by closing the window) and come back another day."
+                            "textContent": {
+                                "en": "You can do this all in one sitting, or leave (by closing the window) and come back later to finish the study.",
+                                "fr": "Vous pouvez compléter le tout en une seule séance, ou partir (en fermant la fenêtre) et revenir plus tard pour compléter l''étude."
+                            }
                         },
                         {
                             "header": "",
-                            "textContent": "Please aim to do all the games over the course of one week. You can see your progress in your dashboard when you first log in."
+                            "textContent": {
+                                "en": "Please aim to complete all the games and questionnaires within ONE week from when you started. You''ll be able to see your progress in your dashboard when you log in.",
+                                "fr": "Veuillez viser de compléter l''ensemble complet des jeux et questionnaires dans un délai de UNE semaine. Vous pourrez voir votre progression sur votre tableau de bord au moment de votre connexion."
+                            }
                         },
                         {
                             "header": "",
-                            "textContent": "Throughout this study, please feel free to take breaks! We simply ask that you wait until the end of a game or of a questionnaire, otherwise your data will be lost."
+                            "textContent": {
+                                "en": "Throughout the study please feel free to take breaks! We simply ask that you wait until the end of a game or of a questionnaire, otherwise your data will be lost.",
+                                "fr": "Tout au long de cette étude, n''hésitez pas à prendre des pauses! Par contre, nous vous demandons d''attendre la fin d''un jeu ou d''un questionnaire, sinon vos données seront perdues."
+                            }
                         },
                         {
                             "header": "",
-                            "textContent": "<b>To take a break:</b> simply close this window."
+                            "textContent": {
+                                "en": "<b>To take a break:</b> simply close this window.",
+                                "fr": "<b>Pour prendre une pause :</b> fermez simplement cette fenêtre."
+                            }
                         },
                         {
                             "header": "",
-                            "textContent": "<b>To get back to it:</b> use the link you were sent in the email. It will take you to the log-in page."
+                            "textContent": {
+                                "en": "<b>To get back to it:</b> use the link you were sent in the email. It will take you to the log-in page.",
+                                "fr": "<b>Pour y revenir :</b> utilisez le lien qui vous a été envoyé dans le courriel. Cela vous amènera à la page de connexion."
+                            }
                         },
                         {
                             "header": "",
                             "indent": 1,
-                            "textContent": "We also ask that you do the games when you are feeling ''ON'', i.e. when the PD medications are in effect (typically best about 1-2 hours after your last dose)."
+                            "textContent": {
+                                "en": "We also ask that you do the games when you are feeling ''ON'', i.e. when you feel that your PD medications are in effect (typically best about 1-2 hours after your last dose). If you don''t take PD medications, then please choose the time that works best for you.",
+                                "fr": "Nous vous demandons également de compléter les jeux à un moment où vous vous sentez ''ON'', c''est-à-dire lorsque vous sentez que vos médicaments pour la maladie de Parkinson ont pris effet (généralement 1 à 2 heures après votre dernière dose). Si vous ne prenez pas de médicaments pour la maladie de Parkinson, veuillez choisir le moment qui vous convient le mieux."
+                            }
                         },
                         {
-                            "textContent": "<b>QUESTIONS OR EXPERIENCING DIFFICULTIES?</b>"
+                            "textContent": {
+                                "en": "<b>QUESTIONS OR EXPERIENCING DIFFICULTIES?</b>",
+                                "fr": "<b>DES QUESTIONS OU DES DIFFICULTÉS?</b>"
+                            }
                         },
                         {
                             "header": "",
@@ -15874,11 +20353,17 @@ UPDATE tasks SET
                         },
                         {
                             "header": "",
-                            "textContent": "To take a break now, close the window."
+                            "textContent": {
+                                "en": "To take a break now, close the window.",
+                                "fr": "Pour prendre une pause maintenant, fermez la fenêtre."
+                            }
                         },
                         {
                             "header": "",
-                            "textContent": "To continue, please click CONTINUE"
+                            "textContent": {
+                                "en": "To continue, please click CONTINUE",
+                                "fr": "Pour continuer, veuillez cliquer sur ''CONTINUE''"
+                            }
                         }
                     ],
                     "buttons": {
@@ -15902,39 +20387,59 @@ UPDATE tasks SET
             {
                 "componentName": "INFODISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "You have successfully completed the Neurocognition on the Web study!",
+                    "title": {
+                        "en": "You have successfully completed the Neurocognition on the Web study!",
+                        "fr": "Vous avez terminé avec succès l''étude de la Neurocognition sur le Web!"
+                    },
                     "sections": [
                         {
-                            "header": "Thank you for participating in our study!",
+                            "header": {
+                                "en": "Thank you for participating in our study! You will be entered in a draw to win a $100 Amazon gift card.",
+                                "fr": "Merci d''avoir participé à notre étude! Vous serez inscrit à un tirage au sort pour gagner une carte-cadeau Amazon de 100$."
+                            },
                             "textContent": ""
                         },
                         {
                             "header": "",
-                            "textContent": "If you have any questions about our study, please feel free to contact us through our email."
+                            "textContent": {
+                                "en": "If you have any questions about our study, please feel free to contact us through our email.",
+                                "fr": "Si vous avez des questions sur notre étude, n''hésitez pas à nous contacter par courriel."
+                            }
                         },
                         {
                             "header": "",
-                            "textContent": "If you reside in <b>Montreal</b>, and you haven''t already, please also contact us (sharplab.neuro@mcgill.ca) to schedule your in-person session."
+                            "textContent": {
+                                "en": "If you reside in the region of <b>Montreal</b>, and might be interested in participating in part two of this study which takes place in person, please also contact us (sharplab.neuro@mcgill.ca).",
+                                "fr": "Si vous habitez dans la région de <b>Montréal</b>, et que vous seriez peut-être intéressé.e de participer à une deuxième session en personne, veuillez également nous contacter (sharplab.neuro@mcgill.ca)."
+                            }
                         },
                         {
                             "header": "",
-                            "textContent": "If you <b>do not</b> reside in <b>Montreal</b>, then no need to worry, you have successfully completed all the games!"
+                            "textContent": {
+                                "en": "Furthermore, we would love to hear your feedback and your experience using our platform, as this project is still a work in progress.",
+                                "fr": "De plus, nous aimerions entendre vos commentaires et votre expérience d''utilisation de notre plateforme, car ce projet est toujours en cours."
+                            }
                         },
                         {
                             "header": "",
-                            "textContent": "Furthermore, we would love to hear your feedback and your experience using our platform, as this project is still a work in progress."
+                            "textContent": {
+                                "en": "If you are in full-screen mode, you can press ''esc'' to exit, then close the window or browser. You can also click \\"Continue\\" which will bring you back to your dashboard.",
+                                "fr": "Si vous êtes en mode plein écran, vous pouvez appuyer sur ''esc'' pour quitter, puis fermer la fenêtre ou le navigateur. Vous pouvez également cliquer sur \\"Continuer\\" qui vous ramènera à votre tableau de bord."
+                            }
                         },
                         {
                             "header": "",
-                            "textContent": "If you are in full-screen mode, you can press ''esc'' to exit, then close the window or browser. You can also click \\"Continue\\" which will bring you back to your dashboard."
+                            "textContent": {
+                                "en": "Thank you so much for participating!",
+                                "fr": "Merci beaucoup d''avoir participé!"
+                            }
                         },
                         {
                             "header": "",
-                            "textContent": "Thank you so much for participating!"
-                        },
-                        {
-                            "header": "",
-                            "textContent": "<b>Contact Email:</b> sharplab.neuro@mcgill.ca"
+                            "textContent": {
+                                "en": "<b>Contact Email:</b> sharplab.neuro@mcgill.ca",
+                                "fr": "<b>Courriel pour nous contacter :</b> sharplab.neuro@mcgill.ca"
+                            }
                         }
                     ],
                     "buttons": {
@@ -15958,11 +20463,17 @@ UPDATE tasks SET
             {
                 "componentName": "QUESTIONNAIRECOMPONENT",
                 "componentConfig": {
-                    "title": "Questionnaire",
+                    "title": {
+                        "en": "Questionnaire",
+                        "fr": "Le Questionnaire"
+                    },
                     "questions": [
                         {
                             "questionType": "input",
-                            "title": "What is your age (in years)?",
+                            "title": {
+                                "en": "What is your age (in years)?",
+                                "fr": "Quel âge avez-vous (en années)?"
+                            },
                             "validation": {
                                 "required": true,
                                 "isNumeric": true,
@@ -15972,39 +20483,65 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "What sex were you assigned at birth?",
+                            "title": {
+                                "en": "What sex were you assigned at birth?",
+                                "fr": "Quel sexe vous a-t-on attribué à la naissance?"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "sex",
-                            "multipleChoiceOptions": [{
-                                    "label": "Female",
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Female",
+                                        "fr": "Féminin"
+                                    },
                                     "value": "female"
                                 },
                                 {
-                                    "label": "Male",
+                                    "label": {
+                                        "en": "Male",
+                                        "fr": "Masculin"
+                                    },
                                     "value": "male"
                                 }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "How do you describe yourself?",
+                            "title": {
+                                "en": "How do you describe yourself?",
+                                "fr": "Comment vous décrivez-vous?"
+                            },
                             "key": "selfIdentification",
-                            "multipleChoiceOptions": [{
-                                    "label": "Female",
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Female",
+                                        "fr": "Femme"
+                                    },
                                     "value": "female"
                                 },
                                 {
-                                    "label": "Male",
+                                    "label": {
+                                        "en": "Male",
+                                        "fr": "Homme"
+                                    },
                                     "value": "male"
                                 },
                                 {
-                                    "label": "Nonbinary",
+                                    "label": {
+                                        "en": "Nonbinary",
+                                        "fr": "Non-binaire"
+                                    },
                                     "value": "Nonbinary"
                                 },
                                 {
-                                    "label": "Do not identify as female, male, or Nonbinary",
+                                    "label": {
+                                        "en": "Do not identify as female, male, or Nonbinary",
+                                        "fr": "Je ne m''identifie ni comme femme, ni comme homme, ni comme non-binaire"
+                                    },
                                     "value": "none"
                                 }
                             ],
@@ -16014,37 +20551,59 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Do you consider yourself to be:",
+                            "title": {
+                                "en": "Do you consider yourself to be:",
+                                "fr": "Vous considérez-vous comme:"
+                            },
                             "key": "sexuality",
                             "validation": {
                             "required": true
                             },
-                            "multipleChoiceOptions": [{
-                                "label": "Heterosexual (sexual relations with people of the opposite sex)",
-                                "value": "Heterosexual"
-                            },
-                            {
-                                "label": "Homosexual, that is lesbian or gay (sexual relations with people of your own sex)",
-                                "value": "Homosexual"
-                            },
-                            {
-                                "label": "Bisexual (sexual relations with people of both sexes)",
-                                "value": "Bisexual"
-                            },
-                            {
-                                "label": "Other",
-                                "value": "Other"
-                            },
-                            {
-                                "label": "Do not wish to answer",
-                                "value": "Do not wish to answer"
-                            }
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Heterosexual (sexual relations with people of the opposite sex)",
+                                        "fr": "Hétérosexuel (relations sexuelles avec des personnes du sexe opposé)"
+                                    },
+                                    "value": "Heterosexual"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Homosexual, that is lesbian or gay (sexual relations with people of your own sex)",
+                                        "fr": "Homosexuel, c''est-à-dire lesbienne ou gay (relations sexuelles avec des personnes de votre propre sexe)"
+                                    },
+                                    "value": "Homosexual"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Bisexual (sexual relations with people of both sexes)",
+                                        "fr": "Bisexuel (relations sexuelles avec des personnes des deux sexes)"
+                                    },
+                                    "value": "Bisexual"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": "Autre"
+                                    },
+                                    "value": "Other"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Do not wish to answer",
+                                        "fr": "Je ne souhaite pas répondre"
+                                    },
+                                    "value": "Do not wish to answer"
+                                }
                             ]
                         },
                         {
                             "questionType": "input",
                             "key": "yearsOfEducation",
-                            "title": "How many years of education do you have (completing high school equals 12 years)?",
+                            "title": {
+                                "en": "How many years of education do you have (completing high school equals 12 years)?",
+                                "fr": "Combien d''années d''études avez-vous (la fin du secondaire équivaut à 12 ans)?"
+                            },
                             "validation": {
                                 "isNumeric": true,
                                 "required": true
@@ -16053,43 +20612,74 @@ UPDATE tasks SET
                         {
                             "questionType": "multipleChoiceSelect",
                             "key": "currentEmploymentStatus",
-                            "title": "What is your current employment status?",
-                            "multipleChoiceOptions": [{
-                                "label": "Employed Full-time (30+ hours a week)",
-                                "value": "Full-time"
+                            "title": {
+                                "en": "What is your current employment status?",
+                                "fr": "Quelle est votre situation d''emploi actuelle?"
                             },
-                            {
-                                "label": "Employed Part-time",
-                                "value": "Part-time"
-                            },
-                            {
-                                "label": "Unemployed",
-                                "value": "Unemployed"
-                            },
-                            {
-                                "label": "Disability Leave",
-                                "value": "Disability Leave"
-                            },
-                            {
-                                "label": "Homemaker",
-                                "value": "Homemaker"
-                            },
-                            {
-                                "label": "Student",
-                                "value": "Student"
-                            },
-                            {
-                                "label": "Volunteer",
-                                "value": "Volunteer"
-                            },
-                            {
-                                "label": "Retired",
-                                "value": "Retired"
-                            },
-                            {
-                                "label": "Do not wish to answer",
-                                "value": "Do not wish to answer"
-                            }
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Employed Full-time (30+ hours a week)",
+                                        "fr": "Employé à temps plein (30+ d''heures chaque semaine)"
+                                    },
+                                    "value": "Full-time"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Employed Part-time",
+                                        "fr": "Employé à temps partiel"
+                                    },
+                                    "value": "Part-time"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Unemployed",
+                                        "fr": "Au chômage"
+                                    },
+                                    "value": "Unemployed"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Disability Leave",
+                                        "fr": "Congé de maladie"
+                                    },
+                                    "value": "Disability Leave"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Homemaker",
+                                        "fr": "Au foyer"
+                                    },
+                                    "value": "Homemaker"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Student",
+                                        "fr": "Étudiant.e"
+                                    },
+                                    "value": "Student"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Volunteer",
+                                        "fr": "Bénévole"
+                                    },
+                                    "value": "Volunteer"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Retired",
+                                        "fr": "Retraité.e"
+                                    },
+                                    "value": "Retired"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Do not wish to answer",
+                                        "fr": "Je ne souhaite pas répondre"
+                                    },
+                                    "value": "Do not wish to answer"
+                                }
                             ],
                             "validation": {
                                 "required": true
@@ -16097,218 +20687,366 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "What is your best estimate of the total household income received by all household members, from all sources, before taxes and deductions, in the past 12 months?",
+                            "title": {
+                                "en": "What is your best estimate of the total household income received by all household members, from all sources, before taxes and deductions, in the past 12 months?",
+                                "fr": "Quelle est votre meilleure estimation du revenu total du ménage reçu par tous les membres de votre ménage, de toutes sources, avant impôts et déductions, au cours des 12 derniers mois?"
+                            },
                             "key": "householdIncome",
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [{
-                                "label": "Less than $20,000",
-                                "value": "Less than $20,000"
-                            },
-                            {
-                                "label": "$20,000 or more, but less than $50,000",
-                                "value": "$20,000 or more, but less than $50,000"
-                            },
-                            {
-                                "label": "$50,000 or more, but less than $100,000",
-                                "value": "$50,000 or more, but less than $100,000"
-                            },
-                            {
-                                "label": "$100,000 or more, but less than $150,000",
-                                "value": "$100,000 or more, but less than $150,000"
-                            },
-                            {
-                                "label": "$150,000 or more",
-                                "value": "$150,000 or more"
-                            },
-                            {
-                                "label": "Do not know",
-                                "value": "Do not know"
-                            },
-                            {
-                                "label": "Do not wish to answer",
-                                "value": "Do not wish to answer"
-                            }
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Less than $20,000",
+                                        "fr": "Moins de 20.000$"
+                                    },
+                                    "value": "Less than $20,000"
+                                },
+                                {
+                                    "label": {
+                                        "en": "$20,000 or more, but less than $50,000",
+                                        "fr": "20,000$ ou plus, mais moins de 50,000$"
+                                    },
+                                    "value": "$20,000 or more, but less than $50,000"
+                                },
+                                {
+                                    "label": {
+                                        "en": "$50,000 or more, but less than $100,000",
+                                        "fr": "50,000$ ou plus, mais moins de 100,000$"
+                                    },
+                                    "value": "$50,000 or more, but less than $100,000"
+                                },
+                                {
+                                    "label": {
+                                        "en": "$100,000 or more, but less than $150,000",
+                                        "fr": "100,000$ ou plus, mais moins de 150,000$"
+                                    },
+                                    "value": "$100,000 or more, but less than $150,000"
+                                },
+                                {
+                                    "label": {
+                                        "en": "$150,000 or more",
+                                        "fr": "150,000$ ou plus"
+                                    },
+                                    "value": "$150,000 or more"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Do not know",
+                                        "fr": "Je ne sais pas"
+                                    },
+                                    "value": "Do not know"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Do not wish to answer",
+                                        "fr": "Je ne souhaite pas répondre"
+                                    },
+                                    "value": "Do not wish to answer"
+                                }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "What is your current marital/partner status?",
+                            "title": {
+                                "en": "What is your current marital/partner status?",
+                                "fr": "Quel est votre état matrimonial/civil?"
+                            },
                             "key": "marital",
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [{
-                                "label": "Single, never married, or never lived with a partner",
-                                "value": "Single, never married, or never lived with a partner"
-                            },
-                            {
-                                "label": "Married/Living with a partner in a domestic relationship",
-                                "value": "Married/Living with a partner in a domestic relationship"
-                            },
-                            {
-                                "label": "Widowed",
-                                "value": "Widowed"
-                            },
-                            {
-                                "label": "Divorced/Separated",
-                                "value": "Divorced/Separated"
-                            },
-                            {
-                                "label": "In a relationship",
-                                "value": "In a relationship"
-                            },
-                            {
-                                "label": "Do not wish to disclose",
-                                "value": "Do not wish to disclose"
-                            }
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Single, never married, or never lived with a partner",
+                                        "fr": "Célibataire, jamais marié.e, ou n''a jamais vécu avec un.e partenaire"
+                                    },
+                                    "value": "Single, never married, or never lived with a partner"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Married/Living with a partner in a domestic relationship",
+                                        "fr": "Marié.e/Je vis avec un.e partenaire dans une relation familiale"
+                                    },
+                                    "value": "Married/Living with a partner in a domestic relationship"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Widowed",
+                                        "fr": "Veuf/Veuve"
+                                    },
+                                    "value": "Widowed"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Divorced/Separated",
+                                        "fr": "Divorcé.e/Séparé.e"
+                                    },
+                                    "value": "Divorced/Separated"
+                                },
+                                {
+                                    "label": {
+                                        "en": "In a relationship",
+                                        "fr": "En couple"
+                                    },
+                                    "value": "In a relationship"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Do not wish to disclose",
+                                        "fr": "Je ne souhaite pas répondre"
+                                    },
+                                    "value": "Do not wish to disclose"
+                                }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Which best describes your living situation?",
+                            "title": {
+                                "en": "Which best describes your living situation?",
+                                "fr": "Lequel décrit le mieux votre situation de vie?"
+                            },
                             "key": "living",
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [{
-                                "label": "Living alone",
-                                "value": "Living alone"
-                            },
-                            {
-                                "label": "Living with spouse/partner/significant other",
-                                "value": "Living with spouse/partner/significant other"
-                            },
-                            {
-                                "label": "Living with adult child/children",
-                                "value": "Living with adult child/children"
-                            },
-                            {
-                                "label": "Living with other family",
-                                "value": "Living with other family"
-                            },
-                            {
-                                "label": "Living with paid in-home care provider/aide",
-                                "value": "Living with paid in-home care provider/aide"
-                            },
-                            {
-                                "label": "Living in assisted living facility",
-                                "value": "Living in assisted living facility"
-                            },
-                            {
-                                "label": "Living in nursing home",
-                                "value": "Living in nursing home"
-                            },
-                            {
-                                "label": "Other",
-                                "value": "Other"
-                            }
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Living Alone",
+                                        "fr": "Je vis seul.e"
+                                    },
+                                    "value": "Living alone"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Living with spouse/partner/significant other",
+                                        "fr": "Je vis avec mon/ma conjoint.e/partenaire/autre personne chère"
+                                    },
+                                    "value": "Living with spouse/partner/significant other"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Living with adult child/children",
+                                        "fr": "Je vis avec enfant(s) adulte(s) "
+                                    },
+                                    "value": "Living with adult child/children"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Living with other family",
+                                        "fr": "Je vis avec un autre membre de ma famille"
+                                    },
+                                    "value": "Living with other family"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Living with paid in-home care provider/aide",
+                                        "fr": "Je vis avec un prestataire de soins à domicile"
+                                    },
+                                    "value": "Living with paid in-home care provider/aide"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Living in assisted living facility",
+                                        "fr": "Je vis en résidence, e.g. de retraités"
+                                    },
+                                    "value": "Living in assisted living facility"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Living in nursing home",
+                                        "fr": "Je vis en hébergement médicalisé/CHSLD"
+                                    },
+                                    "value": "Living in nursing home"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": "Autre"
+                                    },
+                                    "value": "Other"
+                                }
                             ]
                         },
                         {
                             "questionType": "displayText",
-                            "title": "The following questions are about your health. By health, we mean not only the absence of disease or injury, but also physical, mental, and social well-being."
+                            "title": {
+                                "en": "The following questions are about your health. By health, we mean not only the absence of disease or injury, but also physical, mental, and social well-being.",
+                                "fr": "Les questions suivantes concernent votre santé. Par «santé», nous entendons non seulement l''absence de maladie ou de blessure, mais aussi le bien-être physique, mental et social."
+                            }
                         },
                         {
                             "questionType": "divider"
                         },
                         {
                             "questionType": "displayText",
-                            "title": "Physical Health"
+                            "title": {
+                                "en": "Physical Health",
+                                "fr": "La Santé Physique"
+                            }
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Have you ever been diagnosed with: (Please check all that apply)",
+                            "title": {
+                                "en": "Have you ever been diagnosed with: (Please check all that apply)",
+                                "fr": "Avez-vous déjà été diagnostiqué.e avec: (Veuillez cocher tout ce qui s''applique)"
+                            },
                             "key": "physicalHealthDiagnosis",
                             "validation": {
                                 "required": true
                             },
                             "allowMultipleSelections": true,
-                            "multipleChoiceOptions": [{
-                                "label": "Cancer",
-                                "value": "Cancer"
-                            },
-                            {
-                                "label": "Myocardial infarction or angina (heart attack)",
-                                "value": "Myocardial infarction or angina"
-                            },
-                            {
-                                "label": "Transient ischemic attack (TIA)",
-                                "value": "TIA"
-                            },
-                            {
-                                "label": "Cerebrovascular accident (stroke)",
-                                "value": "Stroke"
-                            },
-                            {
-                                "label": "Epilepsy or seizures",
-                                "value": "Epilepsy or seizures"
-                            },
-                            {
-                                "label": "Major head injury/trauma with lasting consequences",
-                                "value": "Major head injury/trauma with lasting consequences"
-                            },
-                            {
-                                "label": "Respiratory problems",
-                                "value": "Respiratory problems"
-                            },
-                            {
-                                "label": "Lung disease",
-                                "value": "Lung disease"
-                            },
-                            {
-                                "label": "Anemia or other blood disease",
-                                "value": "Anemia or other blood disease"
-                            },
-                            {
-                                "label": "Hypertension (high blood pressure)",
-                                "value": "Hypertension"
-                            },
-                            {
-                                "label": "Hypotension (low blood pressure)",
-                                "value": "Hypotension"
-                            },
-                            {
-                                "label": "Diabetes",
-                                "value": "Diabetes"
-                            },
-                            {
-                                "label": "Hypercholesterolemia (high cholesterol)",
-                                "value": "Hypercholesterolemia"
-                            },
-                            {
-                                "label": "Ulcers or stomach disease",
-                                "value": "Ulcers or stomach disease"
-                            },
-                            {
-                                "label": "Inflammatory bowel disease (IBD)",
-                                "value": "IBD"
-                            },
-                            {
-                                "label": "Liver disease",
-                                "value": "Liver disease"
-                            },
-                            {
-                                "label": "Kidney disease",
-                                "value": "Kidney disease"
-                            },
-                            {
-                                "label": "Osteoarthritis (degenerative)",
-                                "value": "Osteoarthritis (degenerative)"
-                            },
-                            {
-                                "label": "Rheumatoid Arthritis (i.e. autoimmune arthritis)",
-                                "value": "Rheumatoid Arthritis"
-                            },
-                            {
-                                "label": "Other",
-                                "value": "Other"
-                            },
-                            {
-                                "label": "None of these",
-                                "value": "None of these"
-                            }
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Cancer",
+                                        "fr": "Cancer"
+                                    },
+                                    "value": "Cancer"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Myocardial infarction or angina (heart attack)",
+                                        "fr": "Infarctus du myocarde ou angine (crise cardiaque)"
+                                    },
+                                    "value": "Myocardial infarction or angina"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Transient ischemic attack (TIA)",
+                                        "fr": "Accident ischémique transitoire (AIT)"
+                                    },
+                                    "value": "TIA"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Cerebrovascular accident (stroke)",
+                                        "fr": "Accident vasculaire cérébral (AVC)"
+                                    },
+                                    "value": "Stroke"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Epilepsy or seizures",
+                                        "fr": "Épilepsie ou Convulsions"
+                                    },
+                                    "value": "Epilepsy or seizures"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Major head injury/trauma with lasting consequences",
+                                        "fr": "Blessure/traumatisme crânien majeur avec des conséquences à long terme"
+                                    },
+                                    "value": "Major head injury/trauma with lasting consequences"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Respiratory problems",
+                                        "fr": "Problèmes respiratoires"
+                                    },
+                                    "value": "Respiratory problems"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Lung disease",
+                                        "fr": "Des maladies pulmonaires"
+                                    },
+                                    "value": "Lung disease"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Anemia or other blood disease",
+                                        "fr": "Anémie ou autre maladie du sang"
+                                    },
+                                    "value": "Anemia or other blood disease"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Hypertension (high blood pressure)",
+                                        "fr": "Hypertension (pression artérielle élevée)"
+                                    },
+                                    "value": "Hypertension"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Hypotension (low blood pressure)",
+                                        "fr": "Hypotension (pression artérielle basse)"
+                                    },
+                                    "value": "Hypotension"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Diabetes",
+                                        "fr": "Diabète"
+                                    },
+                                    "value": "Diabetes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Hypercholesterolemia (high cholesterol)",
+                                        "fr": "Hypercholestérolémie (cholestérol élevé)"
+                                    },
+                                    "value": "Hypercholesterolemia"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Ulcers or stomach disease",
+                                        "fr": "Ulcères ou autre maladie de l''estomac"
+                                    },
+                                    "value": "Ulcers or stomach disease"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Inflammatory bowel disease (IBD)",
+                                        "fr": "Maladie inflammatoire de l''intestin (MII)"
+                                    },
+                                    "value": "IBD"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Liver disease",
+                                        "fr": "Maladie du foie"
+                                    },
+                                    "value": "Liver disease"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Kidney disease",
+                                        "fr": "Maladie des reins"
+                                    },
+                                    "value": "Kidney disease"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Osteoarthritis (degenerative)",
+                                        "fr": "Arthrose ou arthrite (dégénérative)"
+                                    },
+                                    "value": "Osteoarthritis (degenerative)"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Rheumatoid Arthritis (i.e. autoimmune arthritis)",
+                                        "fr": "Polyarthrite rhumatoïde (c.-à-d. arthrite auto-immune)"
+                                    },
+                                    "value": "Rheumatoid Arthritis"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": "Autre"
+                                    },
+                                    "value": "Other"
+                                },
+                                {
+                                    "label": {
+                                        "en": "None of these",
+                                        "fr": "Aucune de ces maladies"
+                                    },
+                                    "value": "None of these"
+                                }
                             ]
                         },
                         {
@@ -16316,468 +21054,786 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "displayText",
-                            "title": "Mental Health"
+                            "title": {
+                                "en": "Mental Health",
+                                "fr": "La Santé Mentale"
+                            }
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Have you ever been diagnosed with: (Please check all that apply)",
+                            "title": {
+                                "en": "Have you ever been diagnosed with: (Please check all that apply)",
+                                "fr": "Avez-vous déjà été diagnostiqué.e avec: (Veuillez cocher tout ce qui s''applique)"
+                            },
                             "key": "mentalHealthDiagnosis",
                             "validation": {
                                 "required": true
                             },
                             "allowMultipleSelections": true,
-                            "multipleChoiceOptions": [{
-                                "label": "Depression - currently under treatment",
-                                "value": "Depression - currently under treatment"
-                            },
-                            {
-                                "label": "Depression - but not currently receiving treatment",
-                                "value": "Depression - but not currently receiving treatment"
-                            },
-                            {
-                                "label": "Anxiety - currently under treatment",
-                                "value": "Anxiety - currently under treatment"
-                            },
-                            {
-                                "label": "Anxiety - but not currently receiving treatment",
-                                "value": "Anxiety - but not currently receiving treatment"
-                            },
-                            {
-                                "label": "Obsessive Compulsive Disorder",
-                                "value": "Obsessive Compulsive Disorder"
-                            },
-                            {
-                                "label": "Bipolar Disorder",
-                                "value": "Bipolar Disorder"
-                            },
-                            {
-                                "label": "Schizophrenia",
-                                "value": "Schizophrenia"
-                            },
-                            {
-                                "label": "Other",
-                                "value": "Other"
-                            },
-                            {
-                                "label": "No history of mental health problems",
-                                "value": "No history of mental health problems"
-                            }
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Depression - currently under treatment",
+                                        "fr": "Dépression - actuellement sous traitement"
+                                    },
+                                    "value": "Depression - currently under treatment"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Depression - but not currently receiving treatment",
+                                        "fr": "Dépression - mais je ne reçois pas actuellement de traitement"
+                                    },
+                                    "value": "Depression - but not currently receiving treatment"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Anxiety - currently under treatment",
+                                        "fr": "Anxiété - actuellement sous traitement"
+                                    },
+                                    "value": "Anxiety - currently under treatment"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Anxiety - but not currently receiving treatment",
+                                        "fr": "Anxiété - mais je ne reçois pas actuellement de traitement"
+                                    },
+                                    "value": "Anxiety - but not currently receiving treatment"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Obsessive Compulsive Disorder",
+                                        "fr": "Trouble Obsessionnel Compulsif"
+                                    },
+                                    "value": "Obsessive Compulsive Disorder"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Bipolar Disorder",
+                                        "fr": "Trouble bipolaire"
+                                    },
+                                    "value": "Bipolar Disorder"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Schizophrenia",
+                                        "fr": "Schizophrénie"
+                                    },
+                                    "value": "Schizophrenia"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": "Autre"
+                                    },
+                                    "value": "Other"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No history of mental health problems",
+                                        "fr": "Aucun antécédent de problèmes de santé mentale"
+                                    },
+                                    "value": "No history of mental health problems"
+                                }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Is your eyesight (including using glasses or corrective lenses if you use them):",
+                            "title": {
+                                "en": "Is your eyesight (consider it after correction with use of glasses or corrective lenses if you use them):",
+                                "fr": "Comment évalueriez-vous votre vue (après correction avec lunettes ou verres correcteurs si vous en portez)?"
+                            },
                             "key": "eyesight",
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [{
-                                "label": "Excellent",
-                                "value": "Excellent"
-                            },
-                            {
-                                "label": "Good",
-                                "value": "Good"
-                            },
-                            {
-                                "label": "Poor",
-                                "value": "Poor"
-                            }
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Excellent",
+                                        "fr": "Excellente"
+                                    },
+                                    "value": "Excellent"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Good",
+                                        "fr": "Bonne"
+                                    },
+                                    "value": "Good"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Poor",
+                                        "fr": "Faible"
+                                    },
+                                    "value": "Poor"
+                                }
                             ]
                         },
                         {
                             "questionType": "radiobuttons",
-                            "title": "Do you have color-blindness?",
+                            "title": {
+                                "en": "Do you have color-blindness?",
+                                    "fr": "Avez-vous le daltonisme (déficience de la vision des couleurs)?"
+                                },
                             "key": "color-blindness",
-                            "validation": {
-                                "required": true
-                            },
-                            "radiobuttonPresentation": "vertical",
-                            "multipleChoiceOptions": [{
-                                "label": "Yes",
-                                "value": "Yes"
-                            },
-                            {
-                                "label": "No",
-                                "value": "No"
-                            }
-                            ]
-                        },
-                        {
-                            "questionType": "multipleChoiceSelect",
-                            "title": "In the past 12 months, how many times have you been injured in a fall that limited your normal activities?",
-                            "key": "injury",
-                            "validation": {
-                                "required": true
-                            },
-                            "multipleChoiceOptions": [{
-                                "label": "None",
-                                "value": "None"
-                            },
-                            {
-                                "label": "1",
-                                "value": "1"
-                            },
-                            {
-                                "label": "2 to 5",
-                                "value": "2 to 5"
-                            },
-                            {
-                                "label": "6 to 10",
-                                "value": "6 to 10"
-                            },
-                            {
-                                "label": "More than 10",
-                                "value": "More than 10"
-                            }
-                            ]
-                        },
-                        {
-                            "questionType": "displayText",
-                            "title": "Habits"
-                        },
-                        {
-                            "questionType": "multipleChoiceSelect",
-                            "title": "Do you currently use any of the following? (check all that apply)",
-                            "key": "substanceUse",
-                            "validation": {
-                                "required": true
-                            },
-                            "allowMultipleSelections": true,
-                            "multipleChoiceOptions": [{
-                                "label": "Alcohol",
-                                "value": "Alcohol"
-                            },
-                            {
-                                "label": "Cigarettes",
-                                "value": "Cigarettes"
-                            },
-                            {
-                                "label": "Other tobacco products",
-                                "value": "Other tobacco products"
-                            },
-                            {
-                                "label": "Recreational drugs",
-                                "value": "Recreational drugs"
-                            },
-                            {
-                                "label": "Cannabis",
-                                "value": "Cannabis"
-                            },
-                            {
-                                "label": "None of the above",
-                                "value": "None of the above"
-                            }
-                            ]
-                        },
-                        {
-                            "questionType": "multipleChoiceSelect",
-                            "title": "Have you smoked at least 100 cigarettes in your life?",
-                            "key": "cigarettes",
-                            "validation": {
-                                "required": true
-                            },
-                            "multipleChoiceOptions": [{
-                                "label": "Yes",
-                                "value": "Yes"
-                            },
-                            {
-                                "label": "No",
-                                "value": "No"
-                            },
-                            {
-                                "label": "Don''t know",
-                                "value": "Don''t know"
-                            }]
-                        },
-                        {
-                            "questionType": "multipleChoiceSelect",
-                            "title": "What is your current smoking status?",
-                            "key": "smoking",
-                            "validation": {
-                                "required": true
-                            },
-                            "multipleChoiceOptions": [{
-                                "label": "Current smoker: 20 or more cigarettes per day",
-                                "value": "Current smoker: 20 or more cigarettes per day"
-                            },
-                            {
-                                "label": "Current smoker: 10-19 cigarettes per day",
-                                "value": "Current smoker: 10-19 cigarettes per day"
-                            },
-                            {
-                                "label": "Current smoker: 0-9 cigarettes per day",
-                                "value": "Current smoker: 0-9 cigarettes per day"
-                            },
-                            {
-                                "label": "Quit in last year",
-                                "value": "Quit in last year"
-                            },
-                            {
-                                "label": "Quit in last 5 years",
-                                "value": "Quit in last 5 years"
-                            },
-                            {
-                                "label": "Quit in last 10 years",
-                                "value": "Quit in last 10 years"
-                            },
-                            {
-                                "label": "Quit in last 15 years",
-                                "value": "Quit in last 15 years"
-                            },
-                            {
-                                "label": "Quit in last 20 years",
-                                "value": "Quit in last 20 years"
-                            },
-                            {
-                                "label": "Quit >25 years ago",
-                                "value": "Quit >25 years ago"
-                            },
-                            {
-                                "label": "Does not smoke",
-                                "value": "Does not smoke"
-                            }
-                            ]
-                        },
-                        {
-                            "questionType": "multipleChoiceSelect",
-                            "title": "Have you ever drank alcohol?",
-                            "key": "alcohol",
-                            "validation": {
-                                "required": true
-                            },
-                            "multipleChoiceOptions": [{
-                                "label": "Yes",
-                                "value": "Yes"
-                            },
-                            {
-                                "label": "No",
-                                "value": "No"
-                            },
-                            {
-                                "label": "Do not wish to answer",
-                                "value": "Do not wish to answer"
-                            }]
-                        },
-                        {
-                            "questionType": "multipleChoiceSelect",
-                            "title": "About how often during the past 12 months did you drink alcohol?",
-                            "key": "alcoholUse",
-                            "validation": {
-                                "required": true
-                            },
-                            "multipleChoiceOptions": [{
-                                "label": "Almost every day (6-7 times a week)",
-                                "value": "Almost every day"
-                            },
-                            {
-                                "label": "4-5 times a week",
-                                "value": "4-5 times a week"
-                            },
-                            {
-                                "label": "2-3 times a week",
-                                "value": "2-3 times a week"
-                            },
-                            {
-                                "label": "Once a week",
-                                "value": "Once a week"
-                            },
-                            {
-                                "label": "2-3 times a month",
-                                "value": "2-3 times a month"
-                            },
-                            {
-                                "label": "About once a month",
-                                "value": "Once a month"
-                            },
-                            {
-                                "label": "Less than once a month",
-                                "value": "Less than once a month"
-                            },
-                            {
-                                "label": "Never",
-                                "value": "Never"
-                            },
-                            {
-                                "label": "Do not wish to answer",
-                                "value": "Do not wish to answer"
-                            }
-                            ]
-                        },
-                        {
-                            "questionType": "multipleChoiceSelect",
-                            "title": "How much time do you spend engaging in mental exercise (e.g. playing board games, cards, crossword puzzles, jigsaw puzzles, sudoku, playing a musical instrument)",
-                            "key": "mentalExercise",
-                            "validation": {
-                                "required": true
-                            },
-                            "multipleChoiceOptions": [{
-                                "label": "Every day",
-                                "value": "Every day"
-                            },
-                            {
-                                "label": "Several times a week",
-                                "value": "Several times a week"
-                            },
-                            {
-                                "label": "Several times a month",
-                                "value": "Several times a month"
-                            },
-                            {
-                                "label": "Several times a year",
-                                "value": "Several times a year"
-                            },
-                            {
-                                "label": "Once a year or less",
-                                "value": "Once a year or less"
-                            }
-                            ]
-                        },
-                        {
-                            "questionType": "multipleChoiceSelect",
-                            "title": "How often do you exercise?",
-                            "key": "exercise",
-                            "validation": {
-                                "required": true
-                            },
-                            "multipleChoiceOptions": [{
-                                "label": "Less than 1 time per week",
-                                "value": "Less than 1 time per week"
-                            },
-                            {
-                                "label": "1 to 2 days per week",
-                                "value": "1 to 2 days per week"
-                            },
-                            {
-                                "label": "3 to 5 days per week",
-                                "value": "3 to 5 days per week"
-                            },
-                            {
-                                "label": "6 to 7 days per week",
-                                "value": "6 to 7 days per week"
-                            }
-                            ]
-                        },
-                        {
-                            "questionType": "multipleChoiceSelect",
-                            "title": "How long is one exercise session approximately?",
-                            "key": "exerciseSession",
-                            "validation": {
-                                "required": true
-                            },
-                            "multipleChoiceOptions": [{
-                                "label": "Less than 30 minutes",
-                                "value": "Less than 30 minutes"
-                            },
-                            {
-                                "label": "30 to 60 minutes",
-                                "value": "30 to 60 minutes"
-                            },
-                            {
-                                "label": "1 to 2 hours",
-                                "value": "1 to 2 hours"
-                            },
-                            {
-                                "label": "More than 2 hours",
-                                "value": "More than 2 hours"
-                            }
-                            ]
-                        },
-                        {
-                            "questionType": "divider"
-                        },
-                        {
-                            "questionType": "displayText",
-                            "title": "Sleep"
-                        },
-                        {
-                            "questionType": "multipleChoiceSelect",
-                            "title": "How often is your sleep restless?",
-                            "key": "restlessSleep",
-                            "validation": {
-                                "required": true
-                            },
-                            "multipleChoiceOptions": [{
-                                "label": "All of the time (5-7 days per week)",
-                                "value": "All of the time"
-                            },
-                            {
-                                "label": "Occasionally (3-4 days per week)",
-                                "value": "Occasionally"
-                            },
-                            {
-                                "label": "Some of the time (1-2 days per week)",
-                                "value": "Some of the time"
-                            },
-                            {
-                                "label": "Rarely or never (less than 1 day per week)",
-                                "value": "Rarely or never"
-                            }
-                            ]
-                        },
-                        {
-                            "questionType": "radiobuttons",
-                            "title": "Have you ever been told, or suspected yourself, that you seem to \\"act out your dreams\\" while asleep (for example, talking, punching, flailing your arms in the air, making running movements, etc.)?",
-                            "key": "actOutSleep",
-                            "validation": {
-                                "required": true
-                            },
-                            "radiobuttonPresentation": "vertical",
-                            "multipleChoiceOptions": [{
-                                "label": "Yes",
-                                "value": "Yes"
-                            },
-                            {
-                                "label": "No",
-                                "value": "No"
-                            }
-                            ]
-                        },
-                        {
-                            "questionType": "displayText",
-                            "title": "The following questions are general questions about you. If you don''t have Parkinson''s disease (PD), not all of them will apply to you, so select the \\"I don''t have Parkinson''s disease\\" option."
-                        },
-                        {
-                            "questionType": "radiobuttons",
-                            "title": "Do you have a diagnosis of Parkinson’s disease given to you by a doctor (e.g. family doctor or neurologist)?",
                             "validation": {
                                 "required": true
                             },
                             "radiobuttonPresentation": "vertical",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Yes",
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
                                     "value": "Yes"
                                 },
                                 {
-                                    "label": "No",
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "In the past 12 months, how many times have you been injured in a fall that limited your normal activities?",
+                                "fr": "Au cours des 12 derniers mois, combien de fois avez-vous été blessé.e suite à une chute au point où vous étiez limité dans vos activités normales?"
+                            },
+                            "key": "injury",
+                            "validation": {
+                                "required": true
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "None",
+                                        "fr": "Zéro"
+                                    },
+                                    "value": "None"
+                                },
+                                {
+                                    "label": {
+                                        "en": "1",
+                                        "fr": "1"
+                                    },
+                                    "value": "1"
+                                },
+                                {
+                                    "label": {
+                                        "en": "2 to 5",
+                                        "fr": "2 à 5"
+                                    },
+                                    "value": "2 to 5"
+                                },
+                                {
+                                    "label": {
+                                        "en": "6 to 10",
+                                        "fr": "6 à 10"
+                                    },
+                                    "value": "6 to 10"
+                                },
+                                {
+                                    "label": {
+                                        "en": "More than 10",
+                                        "fr": "Plus de 10"
+                                    },
+                                    "value": "More than 10"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "divider"
+                        },
+                        {
+                            "questionType": "displayText",
+                            "title": {
+                                "en": "Habits",
+                                "fr": "Les Habitudes"
+                            }
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "Do you currently use any of the following? (check all that apply)",
+                                "fr": "Consommez-vous actuellement l''un des suivants? (Veuillez cocher tout ce qui s''applique)"
+                            },
+                            "key": "substanceUse",
+                            "validation": {
+                                "required": true
+                            },
+                            "allowMultipleSelections": true,
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Alcohol",
+                                        "fr": "Alcool"
+                                    },
+                                    "value": "Alcohol"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Cigarettes",
+                                        "fr": "Cigarettes"
+                                    },
+                                    "value": "Cigarettes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other tobacco products",
+                                        "fr": "D''autres produits du tabac"
+                                    },
+                                    "value": "Other tobacco products"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Recreational drugs",
+                                        "fr": "Drogues récréatives"
+                                    },
+                                    "value": "Recreational drugs"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Cannabis",
+                                        "fr": "Cannabis"
+                                    },
+                                    "value": "Cannabis"
+                                },
+                                {
+                                    "label": {
+                                        "en": "None of the above",
+                                        "fr": "Aucune de ces substances"
+                                    },
+                                    "value": "None of the above"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "Have you smoked at least 100 cigarettes in your life?",
+                                "fr": "Avez-vous fumé au moins 100 cigarettes dans votre vie?"
+                            },
+                            "key": "cigarettes",
+                            "validation": {
+                                "required": true
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
                                     "value": "No"
                                 },
                                 {
-                                    "label": "No, but I think I have Parkinson''s disease",
+                                    "label": {
+                                        "en": "Don''t know",
+                                        "fr": "Je ne sais pas"
+                                    },
+                                    "value": "Don''t know"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "What is your current smoking status?",
+                                "fr": "Quel est votre statut de fumeur actuellement?"
+                            },
+                            "key": "smoking",
+                            "validation": {
+                                "required": true
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Current smoker: 20 or more cigarettes per day",
+                                        "fr": "Fumeur actuel : 20 cigarettes ou plus par jour"
+                                    },
+                                    "value": "Current smoker: 20 or more cigarettes per day"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Current smoker: 10-19 cigarettes per day",
+                                        "fr": "Fumeur actuel : 10 à 19 cigarettes par jour"
+                                    },
+                                    "value": "Current smoker: 10-19 cigarettes per day"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Current smoker: 0-9 cigarettes per day",
+                                        "fr": "Fumeur actuel : 0 à 9 cigarettes par jour"
+                                    },
+                                    "value": "Current smoker: 0-9 cigarettes per day"
+                                },
+                                {
+                                    "label": {
+                                    "en": "Quit in last year",
+                                    "fr": "J''ai arrêté l''année dernière"
+                                },
+                                    "value": "Quit in last year"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Quit in last 5 years",
+                                        "fr": "J''ai arrêté au cours des 5 dernières années"
+                                    },
+                                    "value": "Quit in last 5 years"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Quit in last 10 years",
+                                        "fr": "J''ai arrêté au cours des 10 dernières années"
+                                    },
+                                    "value": "Quit in last 10 years"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Quit in last 15 years",
+                                        "fr": "J''ai arrêté au cours des 15 dernières années"
+                                    },
+                                    "value": "Quit in last 15 years"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Quit in last 20 years",
+                                        "fr": "J''ai arrêté au cours des 20 dernières années"
+                                    },
+                                    "value": "Quit in last 20 years"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Quit >25 years ago",
+                                        "fr": "J''ai arrêté, il y a plus de 25 ans"
+                                    },
+                                    "value": "Quit >25 years ago"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Do not smoke",
+                                        "fr": "Je ne fume pas"
+                                    },
+                                    "value": "Does not smoke"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "Have you ever drank alcohol?",
+                                "fr": "Avez-vous déjà consommé de l''alcool?"
+                            },
+                            "key": "alcohol",
+                            "validation": {
+                                "required": true
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Do not wish to answer",
+                                        "fr": "Je ne souhaite pas répondre"
+                                    },
+                                    "value": "Do not wish to answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "About how often during the past 12 months did you drink alcohol?",
+                                "fr": "À quelle fréquence (approximativement) au cours des 12 derniers mois avez-vous consommé de l''alcool?"
+                            },
+                            "key": "alcoholUse",
+                            "validation": {
+                                "required": true
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Almost every day (6-7 times a week)",
+                                        "fr": "Presque tous les jours (6-7 fois par semaine)"
+                                    },
+                                    "value": "Almost every day"
+                                },
+                                {
+                                    "label": {
+                                        "en": "4-5 times a week",
+                                        "fr": "4-5 fois par semaine"
+                                    },
+                                    "value": "4-5 times a week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "2-3 times a week",
+                                        "fr": "2-3 fois par semaine"
+                                    },
+                                    "value": "2-3 times a week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Once a week",
+                                        "fr": "Une fois par semaine"
+                                    },
+                                    "value": "Once a week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "2-3 times a month",
+                                        "fr": "2-3 fois par mois"
+                                    },
+                                    "value": "2-3 times a month"
+                                },
+                                {
+                                    "label": {
+                                        "en": "About once a month",
+                                        "fr": "Environ une fois par mois"
+                                    },
+                                    "value": "Once a month"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Less than once a month",
+                                        "fr": "Moins d''une fois par mois"
+                                    },
+                                    "value": "Less than once a month"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Never",
+                                        "fr": "Jamais"
+                                    },
+                                    "value": "Never"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Do not wish to answer",
+                                        "fr": "Je ne souhaite pas répondre"
+                                    },
+                                    "value": "Do not wish to answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "How much time do you spend engaging in mental exercise (e.g. playing board games, cards, crossword puzzles, jigsaw puzzles, sudoku, playing a musical instrument)",
+                                "fr": "Combien de temps passez-vous à faire de l''exercice mental (p.ex. jeux de société, cartes, mots croisés, casse-têtes, sudoku; jouer un instrument de musique)"
+                            },
+                            "key": "mentalExercise",
+                            "validation": {
+                                "required": true
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Every day",
+                                        "fr": "Tous les jours"
+                                    },
+                                    "value": "Every day"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Several times a week",
+                                        "fr": "Plusieurs fois par semaine"
+                                    },
+                                    "value": "Several times a week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Several times a month",
+                                        "fr": "Plusieurs fois par mois"
+                                    },
+                                    "value": "Several times a month"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Several times a year",
+                                        "fr": "Plusieurs fois par année"
+                                    },
+                                    "value": "Several times a year"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Once a year or less",
+                                        "fr": "Une fois par année ou moins"
+                                    },
+                                    "value": "Once a year or less"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "How often do you exercise?",
+                                "fr": "À quelle fréquence faites-vous de l''activité physique?"
+                            },
+                            "key": "exercise",
+                            "validation": {
+                                "required": true
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Less than 1 time per week",
+                                        "fr": "Moins d''une fois par semaine"
+                                    },
+                                    "value": "Less than 1 time per week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "1 to 2 days per week",
+                                        "fr": "1 à 2 jours par semaine"
+                                    },
+                                    "value": "1 to 2 days per week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "3 to 5 days per week",
+                                        "fr": "3 à 5 jours par semaine"
+                                    },
+                                    "value": "3 to 5 days per week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "6 to 7 days per week",
+                                        "fr": "6 à 7 jours par semaine"
+                                    },
+                                    "value": "6 to 7 days per week"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "How long is one exercise session approximately?",
+                                "fr": "Environ combien de temps dure une séance d''exercice?"
+                            },
+                            "key": "exerciseSession",
+                            "validation": {
+                                "required": true
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Less than 30 minutes",
+                                        "fr": "Moins de 30 minutes"
+                                    },
+                                    "value": "Less than 30 minutes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "30 to 60 minutes",
+                                        "fr": "30 à 60 minutes"
+                                    },
+                                    "value": "30 to 60 minutes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "1 to 2 hours",
+                                        "fr": "1 à 2 heures"
+                                    },
+                                    "value": "1 to 2 hours"
+                                },
+                                {
+                                    "label": {
+                                        "en": "More than 2 hours",
+                                        "fr": "Plus de 2 heures"
+                                    },
+                                    "value": "More than 2 hours"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "divider"
+                        },
+                        {
+                            "questionType": "displayText",
+                            "title": {
+                                "en": "Sleep",
+                                "fr": "Le Sommeil"
+                            }
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "How often is your sleep restless?",
+                                "fr": "À quelle fréquence votre sommeil est-il agité?"
+                            },
+                            "key": "restlessSleep",
+                            "validation": {
+                                "required": true
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "All of the time (5-7 days per week)",
+                                        "fr": "Tout le temps (5 à 7 jours par semaine)"
+                                    },
+                                    "value": "All of the time"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Occasionally (3-4 days per week)",
+                                        "fr": "Parfois (3 à 4 jours par semaine)"
+                                    },
+                                    "value": "Occasionally"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Some of the time (1-2 days per week)",
+                                        "fr": "Quelques fois (1 à 2 jours par semaine)"
+                                    },
+                                    "value": "Some of the time"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Rarely or never (less than 1 day per week)",
+                                        "fr": "Rarement ou jamais (moins de 1 jours par semaine"
+                                    },
+                                    "value": "Rarely or never"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "radiobuttons",
+                            "title": {
+                                "en": "Have you ever been told, or suspected yourself, that you seem to \\"act out your dreams\\" while asleep (for example, talking, punching, flailing your arms in the air, making running movements, etc.)?",
+                                "fr": "Est-ce que quelqu''un vous a déjà dit ou vous avez suspecté vous-même que vous sembliez agir pendant vos rêves (p.ex. parler, donner des coups, mettre vos bras en l''air, faire des mouvements de course, etc.)?"
+                            },
+                            "key": "actOutSleep",
+                            "validation": {
+                                "required": true
+                            },
+                            "radiobuttonPresentation": "vertical",
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "displayText",
+                            "title": {
+                                "en": "The following questions are general questions about you. If you don''t have Parkinson''s disease (PD), not all of them will apply to you, so select the \\"I don''t have Parkinson''s disease\\" option.",
+                                "fr": "Les questions suivantes sont des questions générales sur vous. Si vous n''avez pas la maladie de Parkinson (MP), elles ne s''appliqueront pas toutes à vous, alors sélectionnez l''option \\"Je n''ai pas la maladie de Parkinson\\"."
+                            }
+                        },
+                        {
+                            "questionType": "radiobuttons",
+                            "title": {
+                                "en": "Do you have a diagnosis of Parkinson’s disease given to you by a doctor (e.g. family doctor or neurologist)?",
+                                "fr": "Avez-vous été donné un diagnostic de la maladie de Parkinson par un médecin (par exemple, un médecin de famille ou neurologue)?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "radiobuttonPresentation": "vertical",
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                    "en": "No",
+                                    "fr": "Non"
+                                },
+                                    "value": "No"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No, but I think I have Parkinson''s disease",
+                                        "fr": "Non, mais je pense que j''ai la maladie de Parkinson"
+                                    },
                                     "value": "No, but I think I have Parkinson''s disease"
                                 }
                             ],
                             "key": "havePD"
                         },
                         {
+                            "questionType": "input",
+                            "title": {
+                                "en": "In what year were you given your diagnosis of Parkinson''s disease? Please enter zero (0) if you DON''T have Parkinson''s disease.",
+                                "fr": "En quelle année avez-vous reçu votre diagnostic de la maladie de Parkinson? Si vous n''avez PAS la maladie de Parkinson, entrez zéro (0)"
+                            },
+                            "validation": {
+                                "required": true,
+                                "isNumeric": true,
+                                "min": 0,
+                                "max": 2050
+                            },
+                            "key": "parkinsonsDiagnosisYear"
+                        },
+                        {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Do you currently take medication for Parkinson''s disease?",
+                            "title": {
+                                "en": "Do you currently take medication for Parkinson''s disease?",
+                                "fr": "Prenez-vous actuellement des médicaments pour la maladie de Parkinson?"
+                            },
                             "validation": {
                                 "required": true
                             },
                             "key": "takePDMed",
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "I don''t have Parkinson''s disease",
+                                    "label": {
+                                        "en": "I don''t have Parkinson''s disease",
+                                        "fr": "Je n''ai pas la maladie de Parkinson"
+                                    },
                                     "value": "I don''t have Parkinson''s disease"
                                 },
                                 {
-                                    "label": "I have PD but don''t take medications for it",
+                                    "label": {
+                                        "en": "I have PD but don''t take medications for it",
+                                        "fr": "J''ai la MP mais je ne prends pas de médicaments pour ça"
+                                    },
                                     "value": "I have PD but don''t take medications for it"
                                 },
                                 {
-                                    "label": "I have PD and I take medications for it",
+                                    "label": {
+                                        "en": "I have PD and I take medications for it",
+                                        "fr": "J''ai la MP et je prend des médicaments pour ça"
+                                    },
                                     "value": "I have PD and I take medications for it"
                                 }
                             ]
@@ -16787,13 +21843,22 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "displayText",
-                            "title": "If you answered previously that you do take Parkinson''s disease medication, how long ago did you take it?"
+                            "title": {
+                                "en": "If you answered previously that you do take Parkinson''s disease medication, how long ago did you take it?",
+                                "fr": "Si vous avez répondu précédemment que vous prenez des médicaments pour votre maladie de Parkinson, quand avez-vous pris votre dernière dose?"
+                            }
                         },
                         {
                             "questionType": "input",
-                            "textContent": "If you answered that you don''t take any Parkinson''s medication in the last question, please write \\"0\\".",
+                            "textContent": {
+                                "en": "If you answered that you don''t take any Parkinson''s medication in the last question, please write \\"0\\".",
+                                "fr": "Si vous avez répondu que vous ne prenez aucun médicament pour la maladie de Parkinson à la dernière question, veuillez écrire \\"0\\"."
+                            },
                             "key": "lastDoseHour",
-                            "label": "Hours",
+                            "label": {
+                                "en": "Hours",
+                                "fr": "Heures"
+                            },
                             "validation": {
                                 "required": true,
                                 "isNumeric": true,
@@ -16804,7 +21869,10 @@ UPDATE tasks SET
                         {
                             "questionType": "input",
                             "key": "lastDoseMinute",
-                            "label": "Minutes",
+                            "label": {
+                                "en": "Minutes",
+                                "fr": "Minutes"
+                            },
                             "validation": {
                                 "required": true,
                                 "isNumeric": true,
@@ -16817,109 +21885,174 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Do you feel ON (i.e. can feel that the PD medications are taking effect) or OFF (i.e. medications are not currently taking effect)?",
+                            "title": {
+                                "en": "Do you feel ON (i.e. can feel that the PD medications are taking effect) or OFF (i.e. medications are not currently taking effect)?",
+                                "fr": "Vous sentez-vous «ON» (c.-à-d. sentir que les médicaments de la MP font effet) ou «OFF» (c.-à-d. sentir que les médicaments ne font pas actuellement effet)?"
+                            },
                             "key": "onOffMed",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "I don''t have Parkinson''s disease",
+                                    "label": {
+                                        "en": "I don''t have Parkinson''s disease",
+                                        "fr": "Je n''ai pas la maladie de Parkinson"
+                                    },
                                     "value": "I don''t have Parkinson''s disease"
                                 },
                                 {
-                                    "label": "I have PD but don''t take medications for it",
+                                    "label": {
+                                        "en": "I have PD but don''t take medications for it",
+                                        "fr": "J''ai la MP mais je ne prends pas de médicaments pour ça"
+                                    },
                                     "value": "I have PD but don''t take medications for it"
                                 },
                                 {
-                                    "label": "I feel ON",
+                                    "label": {
+                                        "en": "I feel ON",
+                                        "fr": "Je me sens «ON»"
+                                    },
                                     "value": "I feel ON"
                                 },
                                 {
-                                    "label": "I feel OFF",
+                                    "label": {
+                                        "en": "I feel OFF",
+                                        "fr": "Je me sens «OFF»"
+                                    },
                                     "value": "I feel OFF"
                                 },
                                 {
-                                    "label": "I can not tell the difference",
+                                    "label": {
+                                        "en": "I cannot tell the difference between ON and OFF",
+                                        "fr": "Je ne ressens pas la différence entre ON et OFF"
+                                    },
                                     "value": "I can not tell the difference"
                                 }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Do you have a diagnosis of Mild Cognitive Impairment (MCI) given to you by a doctor?",
+                            "title": {
+                                "en": "Do you have a diagnosis of Mild Cognitive Impairment (MCI) given to you by a doctor?",
+                                "fr": "Avez-vous un diagnostic de trouble cognitif léger (TCL) qui vous a été donné par un médecin?"
+                            },
                             "key": "diagnosisMCI",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Yes",
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
                                     "value": "Yes"
                                 },
                                 {
-                                    "label": "No",
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
                                     "value": "No"
                                 },
                                 {
-                                    "label": "No, but I think I have cognitive impairment",
+                                    "label": {
+                                        "en": "No, but I think I have cognitive impairment",
+                                        "fr": "Non, mais je pense j''ai une déficience cognitive"
+                                    },
                                     "value": "No, but I think I have cognitive impairment"
                                 }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Do you have a family history of Parkinson’s disease?",
+                            "title": {
+                                "en": "Do you have a family history of Parkinson’s disease?",
+                                "fr": "Avez-vous des antécédents familiaux de maladie de Parkinson?"
+                            },
                             "key": "familyHistory",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Yes, my biological mother or father has/had Parkinson’s disease",
+                                    "label": {
+                                        "en": "Yes, my biological mother or father has/had Parkinson’s disease",
+                                        "fr": "Oui, ma mère/mon père biologiques ont/avaient la maladie de Parkinson"
+                                    },
                                     "value": "Yes, biological mother or father"
                                 },
                                 {
-                                    "label": "Yes, one of my siblings has/had Parkinson’s disease",
+                                    "label": {
+                                        "en": "Yes, one of my siblings has/had Parkinson’s disease",
+                                        "fr": "Oui, un.e de mes frères/sœurs a/avait la maladie de Parkinson"
+                                    },
                                     "value": "Yes, siblings"
                                 },
                                 {
-                                    "label": "Yes, one of my children has/had Parkinson’s disease",
+                                    "label": {
+                                        "en": "Yes, one of my children has/had Parkinson’s disease",
+                                        "fr": "Oui, un.e de mes enfants a/avait la maladie de Parkinson"
+                                    },
                                     "value": "Yes, children"
                                 },
                                 {
-                                    "label": "Yes, an uncle/aunt/cousin or other blood relative has/had Parkinson’s disease",
+                                    "label": {
+                                        "en": "Yes, an uncle/aunt/cousin or other blood relative has/had Parkinson’s disease",
+                                        "fr": "Oui, un oncle/tante/cousin.e ou un autre proche par le sang a/avait la maladie de Parkinson"
+                                    },
                                     "value": "Yes, relative"
                                 },
                                 {
-                                    "label": "No, no family history",
+                                    "label": {
+                                        "en": "No, no family history",
+                                        "fr": "Non, pas d''antécédents familiaux"
+                                    },
                                     "value": "No"
                                 }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "What is your handedness?",
+                            "title": {
+                                "en": "What is your handedness?",
+                                "fr": "Quelle est votre main dominante?"
+                            },
                             "key": "handedness",
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [{
-                                "label": "Right-handed",
-                                "value": "Right"
-                            },
-                            {
-                                "label": "Left-handed",
-                                "value": "Left"
-                            },
-                            {
-                                "label": "Ambidextrous",
-                                "value": "Ambidextrous"
-                            }]
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Right-handed",
+                                        "fr": "Droitier/Droitière"
+                                    },
+                                    "value": "Right"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Left-handed",
+                                        "fr": "Gaucher/Gauchère"
+                                    },
+                                    "value": "Left"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Ambidextrous",
+                                        "fr": "Ambidextre"
+                                    },
+                                    "value": "Ambidextrous"
+                                }
+                        ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "To which group do you culturally belong or identify with? (Select all that apply)",
+                            "title": {
+                                "en": "To which group do you culturally belong or identify with? (Select all that apply)",
+                                "fr": "Avec quel groupe vous identifiez-vous? (Sélectionnez tous ceux ce qui s''appliquent)"
+                            },
                             "key": "background",
                             "validation": {
                                 "required": true
@@ -16927,141 +22060,118 @@ UPDATE tasks SET
                             "allowMultipleSelections": true,
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "White / Caucasian",
+                                    "label": {
+                                        "en": "White / Caucasian",
+                                        "fr": "Blanc / Caucasien.ne"
+                                    },
                                     "value": "White/Caucasian"
                                 },
                                 {
-                                    "label": "French Canadian",
+                                    "label": {
+                                        "en": "French Canadian",
+                                        "fr": "Canadien.ne Français.e"
+                                    },
                                     "value": "French Canadian"
                                 },
                                 {
-                                    "label": "First Nations",
+                                    "label": {
+                                        "en": "First Nations",
+                                        "fr": "Premières Nations"
+                                    },
                                     "value": "First Nations"
                                 },
                                 {
-                                    "label": "Hispanic or Latino",
-                                    "value": "Hispanic or Latino"
+                                    "label": {
+                                        "en": "Hispanic or Latino",
+                                        "fr": "Hispanique ou Latino"
+                                    },
+                                    "value": "Hispanic/Hispanique or Latino"
                                 },
                                 {
-                                    "label": "African / Carribean / Afro American",
+                                    "label": {
+                                        "en": "African / Carribean / Afro American",
+                                        "fr": "Africain.ne / Caribéen.ne / Afro Américain.e"
+                                    },
                                     "value": "African/Carribean/Afro American"
                                 },
                                 {
-                                    "label": "North African",
+                                    "label": {
+                                        "en": "North African",
+                                        "fr": "Nord-Africain.ne"
+                                    },
                                     "value": "North African"
                                 },
                                 {
-                                    "label": "Middle Eastern",
+                                    "label": {
+                                        "en": "Middle Eastern",
+                                        "fr": "Moyen-Orient"
+                                    },
                                     "value": "Middle Eastern"
                                 },
                                 {
-                                    "label": "Chinese",
+                                    "label": {
+                                        "en": "Chinese",
+                                        "fr": "Chinois.e"
+                                    },
                                     "value": "Chinese"
                                 },
                                 {
-                                    "label": "South Asian (E.g. Indian, Pakistani, Sri Lankan)",
+                                    "label": {
+                                        "en": "South Asian (E.g. Indian, Pakistani, Sri Lankan)",
+                                        "fr": "Sud-Asiatique (P.ex. Indien.ne, Pakistanais.e, Sri Lankais.e)"
+                                    },
                                     "value": "South Asian"
                                 },
                                 {
-                                    "label": "Southeast Asian (E.g. Filipino, Cambodian, Indonesian, Laotian, Vietnamese)",
+                                    "label": {
+                                        "en": "Southeast Asian (E.g. Filipino, Cambodian, Indonesian, Laotian, Vietnamese)",
+                                        "fr": "Asiatique du Sud-Est (P.ex. philippin.e, cambodgien.ne, indonésien.ne, laotien.ne, vietnamien.ne)"
+                                    },
                                     "value": "Southeast Asian"
                                 },
                                 {
-                                    "label": "Japanese",
+                                    "label": {
+                                        "en": "Japanese",
+                                        "fr": "Japonais.e"
+                                    },
                                     "value": "Japanese"
                                 },
                                 {
-                                    "label": "Korean",
+                                    "label": {
+                                        "en": "Korean",
+                                        "fr": "Coréen.ne"
+                                    },
                                     "value": "Korean"
                                 },
                                 {
-                                    "label": "Other",
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": "Autre"
+                                    },
                                     "value": "Other"
                                 },
                                 {
-                                    "label": "Don''t know",
+                                    "label": {
+                                        "en": "Don''t know",
+                                        "fr": "Je ne sais pas"
+                                    },
                                     "value": "Don''t know"
                                 },
                                 {
-                                    "label": "Prefer not to answer",
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": "Je préfère ne pas répondre"
+                                    },
                                     "value": "Prefer not to answer"
                                 }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "To which ethnicity do you belong or identify with? (Select all that apply)",
-                            "key": "background",
-                            "validation": {
-                                "required": true
+                            "title": {
+                                "en": "Which of the following languages do you consider yourself fluent in (can read and speak)? Select all that apply.",
+                                "fr": "Laquelle des langues suivantes considérez-vous que vous parlez couramment (savoir lire et parler)? (Sélectionnez tout ce qui s''applique)"
                             },
-                            "allowMultipleSelections": true,
-                            "multipleChoiceOptions": [
-                                {
-                                    "label": "White / Caucasian",
-                                    "value": "White/Caucasian"
-                                },
-                                {
-                                    "label": "French Canadian",
-                                    "value": "French Canadian"
-                                },
-                                {
-                                    "label": "First Nations",
-                                    "value": "First Nations"
-                                },
-                                {
-                                    "label": "Hispanic or Latino",
-                                    "value": "Hispanic or Latino"
-                                },
-                                {
-                                    "label": "African / Carribean / Afro American",
-                                    "value": "African/Carribean/Afro American"
-                                },
-                                {
-                                    "label": "North African",
-                                    "value": "North African"
-                                },
-                                {
-                                    "label": "Middle Eastern",
-                                    "value": "Middle Eastern"
-                                },
-                                {
-                                    "label": "Chinese",
-                                    "value": "Chinese"
-                                },
-                                {
-                                    "label": "South Asian (E.g. Indian, Pakistani, Sri Lankan)",
-                                    "value": "South Asian"
-                                },
-                                {
-                                    "label": "Southeast Asian (E.g. Filipino, Cambodian, Indonesian, Laotian, Vietnamese)",
-                                    "value": "Southeast Asian"
-                                },
-                                {
-                                    "label": "Japanese",
-                                    "value": "Japanese"
-                                },
-                                {
-                                    "label": "Korean",
-                                    "value": "Korean"
-                                },
-                                {
-                                    "label": "Other",
-                                    "value": "Other"
-                                },
-                                {
-                                    "label": "Don''t know",
-                                    "value": "Don''t know"
-                                },
-                                {
-                                    "label": "Prefer not to answer",
-                                    "value": "Prefer not to answer"
-                                }
-                            ]
-                        },
-                        {
-                            "questionType": "multipleChoiceSelect",
-                            "title": "Which of the following languages do you consider yourself fluent in (can read and speak)? Select all that apply.",
                             "key": "fluentLan",
                             "validation": {
                                 "required": true
@@ -17069,38 +22179,62 @@ UPDATE tasks SET
                             "allowMultipleSelections": true,
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "English",
+                                    "label": {
+                                        "en": "English",
+                                        "fr": "Anglais"
+                                    },
                                     "value": "English"
                                 },
                                 {
-                                    "label": "French",
+                                    "label": {
+                                        "en": "French",
+                                        "fr": "Français"
+                                    },
                                     "value": "French"
                                 },
                                 {
-                                    "label": "Neither",
+                                    "label": {
+                                        "en": "Neither",
+                                        "fr": "Aucun des deux"
+                                    },
                                     "value": "Neither"
                                 }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Do you feel that your memory and thinking have gotten worse?",
-                            "textContent": "If you have Parkinson''s disease, consider the change since your diagnosis, or, if you don''t have Parkinson''s disease, consider the change in the last few years.",
+                            "title": {
+                                "en": "Do you feel that your memory and thinking have gotten worse?",
+                                "fr": "Avez-vous l''impression que votre mémoire et votre fonctionnement cognitif se sont détériorés?"
+                            },
+                            "textContent": {
+                                "en": "If you have Parkinson''s disease, consider the change since your diagnosis, or, if you don''t have Parkinson''s disease, consider the change in the last few years.",
+                                "fr": "Si vous avez la maladie de Parkinson, considérez le changement depuis votre diagnostic ou, si vous n''avez pas la maladie de Parkinson, considérez le changement au cours des dernières années."
+                            },
                             "key": "memory",
                             "validation": {
                                 "required": true
                             },
                             "multipleChoiceOptions": [
                                 {
-                                    "label": "Yes",
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
                                     "value": "Yes"
                                 },
                                 {
-                                    "label": "No",
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
                                     "value": "No"
                                 },
                                 {
-                                    "label": "Not sure",
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": "Pas certain.e"
+                                    },
                                     "value": "Not sure"
                                 }
                             ]
@@ -17272,7 +22406,7 @@ UPDATE tasks SET
         ]
     }'
 WHERE id = 53;
--- Stress Study: Post Manipulation Check In Questionnaire
+-- Stress Study Post Manipulation Check In Questionnaire
 UPDATE tasks SET
     from_platform = "PSHARPLAB",
     task_type = "QUESTIONNAIRE",
@@ -17285,50 +22419,86 @@ UPDATE tasks SET
             {
                 "componentName": "QUESTIONNAIRECOMPONENT",
                 "componentConfig": {
-                    "title":"Questionnaire",
+                    "title": {
+                        "en": "Questionnaire",
+                        "fr": "Le Questionnaire"
+                    },
                     "questions": [
                         {
                             "questionType": "displayText",
-                            "title": "With regards to the situation you just experienced, please consider how you are feeling in this current moment when answering the following questions. Drag the marker to the appropriate position on the 0-100 scale with 0 being \\"not feeling this at all\\" and 100 being \\"extremely feeling this\\"."
+                            "title": {
+                                "en": "With regards to the situation you just experienced, please consider how you are feeling in this current moment when answering the following questions. Drag the marker to the appropriate position on the 0-100 scale with 0 being \\"not feeling this at all\\" and 100 being \\"extremely feeling this\\".",
+                                "fr": "Par rapport à la situation que vous venez de vivre, veuillez considérer comment vous vous sentez en ce moment en répondant aux questions suivantes. Faites glisser le marqueur vers la position appropriée sur l''échelle de 0 à 100, 0 étant \\"ne ressentant pas du tout cette émotion\\" et 100 étant \\"la ressentant beaucoup\\"."
+                            }
                         },
                         {
                             "questionType": "displayText",
-                            "title": "Use your mouse to drag the marker in order to select your answer"
+                            "title": {
+                                "en": "Use your mouse to drag the marker in order to select your answer",
+                                "fr": "Utilisez votre souris pour faire glisser le marqueur afin de sélectionner votre réponse"
+                            }
                         },
                         {
                             "questionType": "slider",
-                            "title": "How stressed do you feel?",
+                            "title": {
+                                "en": "How stressed do you feel?",
+                                "fr": "À quel point vous sentez-vous stressé.e?"
+                            },
                             "validation": {
-                                "required":true
+                                "required": true
                             },
                             "key": "How stressed do you feel?",
-                            "legend": [
-                                "Not feeling this at all",
-                                "Extremely feeling this"
+                            "legend": [ 
+                                {
+                                    "en": "Definitely Not Feeling This",
+                                    "fr": "Je ne ressens pas du tout ça"
+                                },
+                                {
+                                    "en": "Extremely",
+                                    "fr": "Extrêmement"
+                                }
                             ]
                         },
                         {
                             "questionType": "slider",
-                            "title": "How pleased do you feel?",
+                            "title": {
+                                "en": "How pleased do you feel?",
+                                "fr": "À quel point vous sentez-vous content.e?"
+                            },
                             "validation": {
                                 "required":true
                             },
                             "key": "How pleased do you feel?",
-                            "legend": [
-                                "Not feeling this at all",
-                                "Extremely feeling this"
+                            "legend": [ 
+                                {
+                                    "en": "Definitely Not Feeling This",
+                                    "fr": "Je ne ressens pas du tout ça"
+                                },
+                                {
+                                    "en": "Extremely",
+                                    "fr": "Extrêmement"
+                                }
                             ]
                         },
                         {
                             "questionType": "slider",
-                            "title": "How calm do you feel?",
+                            "title": {
+                                "en": "How calm do you feel?",
+                                "fr": "À quel point vous sentez-vous calme?"
+                            },
                             "validation": {
                                 "required":true
                             },
                             "key": "How calm do you feel?",
-                            "legend": [
-                                "Not feeling this at all",
-                                "Extremely feeling this"
+                            "legend": [ 
+                                {
+                                    "en": "Definitely Not Feeling This",
+                                    "fr": "Je ne ressens pas du tout ça"
+                                },
+                                {
+                                    "en": "Extremely",
+                                    "fr": "Extrêmement"
+                                }
                             ]
                         }
                     ]
@@ -17350,13 +22520,22 @@ UPDATE tasks SET
             {
                 "componentName": "INFODISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Thank you for all your participation so far!",
+                    "title": {
+                        "en": "Thank you for all your participation so far!",
+                        "fr": "Merci pour votre participation jusqu''ici!" 
+                    },
                     "sections": [
                         {
-                            "textContent": "Once you have reached this slide, please <b>wait</b> and <b>do not</b> press any buttons until you are instructed by the researcher to proceed to the next task."
+                            "textContent": {
+                                "en": "Once you have reached this slide, please <b>wait</b> and <b>do not</b> press any buttons until you are instructed by the researcher to proceed to the next task.",
+                                "fr": "Une fois arrivé à cet écran, veuillez <b>attendre</b> et <b>n''appuyez sur aucun</b> bouton. La chercheuse vous dira quand vous pourrez passer à la tâche suivante." 
+                            }
                         },
                         {
-                            "textContent": "The researcher will return shortly."
+                            "textContent": {
+                                "en": "The researcher will return shortly.",
+                                "fr": "La chercheuse va revenir bientôt." 
+                            }
                         }
                     ],
                     "buttons": {
@@ -17375,7 +22554,9 @@ UPDATE tasks SET
     description = "This task is a probablistic learning task based on the reinforcement learning model. The current version is based on the paper by Frank, Woroch and Curran. (2005). Neuron, 47(4), 495-501.",
     external_url = "",
     config = '{
-        "taskConfig": {},
+        "taskConfig": {
+            "version": 1
+        },
         "metadata": [
             {
                 "componentName": "DISPLAYCOMPONENT",
@@ -17511,11 +22692,1712 @@ UPDATE tasks SET
         ]
     }'
 WHERE id = 56;
+-- Everyday Choice Clinical Info Questionnaire
+UPDATE tasks SET
+    from_platform = "PSHARPLAB",
+    task_type = "QUESTIONNAIRE",
+    name = "Everyday Choice Clinical Info Questionnaire",
+    description = "",
+    external_url = "",
+    config = '{
+        "taskConfig": {},
+        "metadata": [
+            {
+                "componentName": "QUESTIONNAIRECOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "Everyday Choice Clinical Info Questionnaire",
+                        "fr": "Everyday Choice Questionnaire d''information clinique"
+                    },
+                    "questions": [
+                        {
+                            "questionType": "displayText",
+                            "title": {
+                                "en": "The following questions are related to your physical and mental health. If you don''t have Parkinson''s disease (PD), not all of them will apply to you, so select the \\"I don''t have Parkinson''s disease\\" option.",
+                                "fr": "Les questions suivantes sont liées à votre santé physique et mentale. Si vous n''avez pas la maladie de Parkinson (MP), certaines ne s''appliqueront pas à vous, alors sélectionnez l''option \\"Je n''ai pas la maladie de Parkinson\\"."
+                            }
+                        },
+                        {
+                            "questionType": "radiobuttons",
+                            "title": {
+                                "en": "Do you have a diagnosis of Parkinson''s disease given to you by a doctor (e.g. family doctor or neurologist)?",
+                                "fr": "Avez-vous un diagnostic de la maladie de Parkinson qui vous a été donné par un médecin (p.ex. un médecin de famille ou un neurologue)?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "radiobuttonPresentation": "vertical",
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No, but I think I have Parkinson''s disease",
+                                        "fr": "Non, mais je pense que j''ai la maladie de Parkinson"
+                                    },
+                                    "value": "No, but I think I have Parkinson''s disease"
+                                }
+                            ],
+                            "key": "havePD"
+                        },
+                        {
+                            "questionType": "input",
+                            "validation": {
+                                "required": true,
+                                "isNumeric": true,
+                                "max": 2030,
+                                "min": 0
+                            },
+                            "label": {
+                                "en": "Year (e.g. 2009)",
+                                "fr": "Année (ex. 2009)"
+                            },
+                            "key": "diagnosisPD",
+                            "textContent": {
+                                "en": "In what year were you diagnosed with Parkinson''s disease? If you DON''T have Parkinson''s disease, please enter \\"0\\"",
+                                "fr": "En quelle année avez-vous reçu votre diagnostic de Parkinson? Si vous n''avez PAS la maladie de Parkinson, SVP inscrire \\"0\\""
+                            }
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "Are you currently taking any of the following medications to treat your Parkinson''s disease symptoms? (Please check all that apply)",
+                                "fr": "Prenez-vous actuellement l''un des ces médicaments pour traiter les symptômes de la maladie de Parkinson? (SVP sélectionner tout ce qui s''applique)"
+                            },
+                            "key": "PDMeds",
+                            "validation": {
+                                "required": true
+                            },
+                            "allowMultipleSelections": true,
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "I don''t have Parkinson''s disease",
+                                        "fr": "Je n''ai pas la maladie de Parkinson"
+                                    },
+                                    "value": "No PD"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No, I DON''T take any prescription medications to treat my Parkinson''s diseas",
+                                        "fr": "Non, je ne prends PAS de médicaments sous ordonnance pour traiter ma maladie de Parkinson"
+                                    },
+                                    "value": "Has PD, No medications"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sinemet or Carbidopa-Levodopa or Parcopa (Oral)",
+                                        "fr": "Sinemet ou Carbidopa-Levodopa ou Parcopa (Orale)"
+                                    },
+                                    "value": "Sinemet or Carbidopa-Levodopa or Parcopa (Oral)"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sinemet CR or Carbidopa-Levodopa, Extended Release (Oral)",
+                                        "fr": "Sinemet CR ou Carbidopa-Levodopa, Extended Release (Orale)"
+                                    },
+                                    "value": "Sinemet CR or Carbidopa-Levodopa, Extended Release (Oral)"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Rytary or Numient (i.e. Carbidopa-Levodopa, Extended Release, Oral)",
+                                        "fr": "Rytary ou Numient (c.-à-d. Carbidopa-Levodopa, Extended Release, Orale)"
+                                    },
+                                    "value": "Rytary or Numient"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Duopa or Duodopa (i.e. Carbidopa-Levodopa Intestinal Gel)",
+                                        "fr": "Duopa ou Duodopa (c.-à-d. Carbidopa-Levodopa Intestinal Gel)"
+                                    },
+                                    "value": "Duopa or Duodopa"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Stalevo (i.e. combination of Carbidopa, Levodopa, and entacapone)",
+                                        "fr": "Stalevo (c.-à-d. la combinaison de Carbidopa, de Levodopa, et de d''entacapone)"
+                                    },
+                                    "value": "Stalevo"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Madopar or Levodopa-Benserazide",
+                                        "fr": "Madopar ou Levodopa-Benserazide"
+                                    },
+                                    "value": "Madopar or Levodopa-Benserazide"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Entacapone or Comtan",
+                                        "fr": "Entacapone ou Comtan"
+                                    },
+                                    "value": "Entacapone or Comtan"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Tolcapone or Tasmar",
+                                        "fr": "Tolcapone ou Tasmar"
+                                    },
+                                    "value": "Tolcapone or Tasmar"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Rasagiline or Azilect",
+                                        "fr": "Rasagiline ou Azilect"
+                                    },
+                                    "value": "Rasagiline or Azilect"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Selegiline or Deprenyl or Elderpryl or Zelapar",
+                                        "fr": "Selegiline ou Deprenyl ou Elderpryl ou Zelapar"
+                                    },
+                                    "value": "Selegiline or Deprenyl or Elderpryl or Zelapar or Emasm"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Pramipexole or Mirapex",
+                                        "fr": "Pramipexole ou Mirapex"
+                                    },
+                                    "value": "Pramipexole or Mirapex"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Ropinirole or Requip",
+                                        "fr": "Ropinirole ou Requip"
+                                    },
+                                    "value": "Ropinirole or Requip"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Neupro patch or Rotigotine patch",
+                                        "fr": "timbre (\\"patch\\") de Neupro ou de Rotigotin"
+                                    },
+                                    "value": "Neupro patch or Rotigotine patch"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Amantadine or Symmetrel or Gocovri",
+                                        "fr": "Amantadine ou Symmetrel ou Gocovri"
+                                    },
+                                    "value": "Amantadine or Symmetrel or Gocovri"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Apokyn or Kinmobi or Apomorphine",
+                                        "fr": "Apokyn ou Kinmobi ou Apomorphine"
+                                    },
+                                    "value": "Apokyn or Kinmobi or Apomorphine"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Bromocriptine or Parlodel",
+                                        "fr": "Bromocriptine ou Parlodel"
+                                    },
+                                    "value": "Bromocriptine or Parlodel"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Onstryv or Xadago or Safinamide",
+                                        "fr": "Onstryv ou Xadago ou Safinamide"
+                                    },
+                                    "value": "Onstryv or Xadago or Safinamide"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Trihexyphenidyl or Artane",
+                                        "fr": "Trihexyphenidyl ou Artane"
+                                    },
+                                    "value": "Trihexyphenidyl or Artane"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Rivastigmine or Exelon",
+                                        "fr": "Rivastigmine ou Exelon"
+                                    },
+                                    "value": "Rivastigmine or Exelon"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Donepezil or Aricept",
+                                        "fr": "Donepezil ou Aricept"
+                                    },
+                                    "value": "Donepezil or Aricept"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Galantamine or Razadyne or Reminyl",
+                                        "fr": "Galantamine ou Razadyne ou Reminyl"
+                                    },
+                                    "value": "Galantamine or Razadyne or Reminyl"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Memantine or Namenda or Ebixa",
+                                        "fr": "Memantine ou Namenda ou Ebixa"
+                                    },
+                                    "value": "Memantine or Namenda or Ebixa"
+                                },
+                                {
+                                    "label": {
+                                        "en": "I take other medications for my Parkinson''s disease that are not on this list",
+                                        "fr": "Je prends d''autres médicaments pour ma maladie de Parkinson mais ils ne sont pas inclus dans cette liste"
+                                    },
+                                    "value": "I take other medications for my Parkinson''s disease that are not on this list"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "freeTextResponse",
+                            "title": {
+                                "en": "If you take medications for Parkinson''s disease that are not on the list, please write it below. If not, skip to the next question.",
+                                "fr": "Si vous prenez d''autres médicaments pour votre maladie de Parkinson qui ne sont pas inclus dans cette liste, SVP écrivez-les ci-dessous. Sinon, passez à la prochaine question."
+                            },
+                            "key": "PDMedsOthers",
+                            "validation": {
+                                "required": false
+                            }
+                        },
+                        {
+                            "questionType": "displayText",
+                            "title": {
+                                "en": "If you answered previously that you do take Parkinson''s disease medication, how long ago did you take the last dose?",
+                                "fr": "Si vous avez répondu que vous prenez des médicaments pour votre maladie de Parkinson, il y a combien de temps que vous avez pris la dernière dose?"
+                            }
+                        },
+                        {
+                            "questionType": "input",
+                            "textContent": {
+                                "en": "If you answered that you don''t take any Parkinson''s medication in the last question, please write \\"0\\".",
+                                "fr": "Si vous avez répondu que vous ne prenez aucun médicament contre la maladie de Parkinson à la dernière question, veuillez écrire \\"0\\"."
+                            },
+                            "key": "lastDoseHour",
+                            "label": {
+                                "en": "Hours",
+                                "fr": "Heures"
+                            },
+                            "validation": {
+                                "required": true,
+                                "isNumeric": true,
+                                "max": 24,
+                                "min": 0
+                            }
+                        },
+                        {
+                            "questionType": "input",
+                            "key": "lastDoseMinute",
+                            "label": {
+                                "en": "Minutes",
+                                "fr": "Minutes"
+                            },
+                            "validation": {
+                                "required": true,
+                                "isNumeric": true,
+                                "max": 60,
+                                "min": 0
+                            }
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "Do you feel ON (i.e. can feel that the PD medications are taking effect) or OFF (i.e. medications are not currently taking effect)?",
+                                "fr": "Vous sentez-vous «ON» (c.-à-d. sentir que les médicaments de la MP font effet) ou «OFF» (c.-à-d. sentir que les médicaments ne font pas actuellement effet)?"
+                            },
+                            "key": "onOffMed",
+                            "validation": {
+                                "required": true
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "I don''t have Parkinson''s disease",
+                                        "fr": "Je n''ai pas la maladie de Parkinson"
+                                    },
+                                    "value": "I don''t have Parkinson''s disease"
+                                },
+                                {
+                                    "label": {
+                                        "en": "I have PD but don''t take medications for it",
+                                        "fr": "J''ai la MP mais je ne prends pas de médicaments pour ça"
+                                    },
+                                    "value": "I have PD but don''t take medications for it"
+                                },
+                                {
+                                    "label": {
+                                        "en": "I feel ON",
+                                        "fr": "Je me sens ''ON''"
+                                    },
+                                    "value": "I feel ON"
+                                },
+                                {
+                                    "label": {
+                                        "en": "I feel OFF",
+                                        "fr": "Je me sens ''OFF''"
+                                    },
+                                    "value": "I feel OFF"
+                                },
+                                {
+                                    "label": {
+                                        "en": "I can not tell the difference",
+                                        "fr": "Je ne ressens pas la différence entre ON et OFF"
+                                    },
+                                    "value": "I can not tell the difference"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "Have you ever undergone any of these PD surgeries or procedures? (Please check all that apply)",
+                                "fr": "Avez-vous déjà subi l''une des chirurgies ou procédures suivantes pour votre maladie de Parkinson? (Veuillez cocher tout ce qui s''applique)"
+                            },
+                            "key": "PDSurgeries",
+                            "validation": {
+                                "required": true
+                            },
+                            "allowMultipleSelections": true,
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Deep brain stimulation",
+                                        "fr": "Chirurgie de stimulation cérébrale profonde (\\"DBS\\")"
+                                    },
+                                    "value": "Deep brain stimulation"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Pallidotomy",
+                                        "fr": "Pallidotomie"
+                                    },
+                                    "value": "Pallidotomy"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Thalamotomy",
+                                        "fr": "Thalamotomie"
+                                    },
+                                    "value": "Thalamotomy"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Focused ultrasound",
+                                        "fr": "Ultrason focalisé (\\"FUS\\")"
+                                    },
+                                    "value": "Focused ultrasound"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Gamma knife radiosurgery",
+                                        "fr": "Radiochirurgie au scalpel gamma"
+                                    },
+                                    "value": "Gamma knife radiosurgery"
+                                },
+                                {
+                                    "label": {
+                                        "en": "I have not undergone any of the PD procedures listed above",
+                                        "fr": "Je n''ai subi aucune des procédures mentionnées ci-dessus"
+                                    },
+                                    "value": "I have not undergone any of the PD procedures listed above"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "Do you have a family history of Parkinson’s disease?",
+                                "fr": "Avez-vous des antécédents familiaux de maladie de Parkinson?"
+                            },
+                            "key": "familyHistory",
+                            "validation": {
+                                "required": true
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Yes, my biological mother or father has/had Parkinson’s disease",
+                                        "fr": "Oui, ma mère/mon père biologiques ont/avaient la maladie de Parkinson"
+                                    },
+                                    "value": "Yes, biological mother or father"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Yes, one of my siblings has/had Parkinson’s disease",
+                                        "fr": "Oui, un.e de mes frères/soeurs a/avait la maladie de Parkinson"
+                                    },
+                                    "value": "Yes, siblings"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Yes, one of my children has/had Parkinson’s disease",
+                                        "fr": "Oui, un de mes enfants a/avait la maladie de Parkinson"
+                                    },
+                                    "value": "Yes, children"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Yes, an uncle/aunt/cousin or other blood relative has/had Parkinson’s disease",
+                                        "fr": "Oui, un oncle/tante/cousin.e ou un autre proche par le sang a/avait la maladie de Parkinson"
+                                    },
+                                    "value": "Yes, relative"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No, no family history",
+                                        "fr": "Non, pas d''antécédents familiaux"
+                                    },
+                                    "value": "No"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "Are you currently taking medications (prescription or over the counter) for any of the following conditions? (Please check all that apply)",
+                                "fr": "Est-ce que vous prenez présentement des médicaments, soit sous ordonnance ou sans ordonnance, pour l''une ou plusieurs des conditions suivantes?"
+                            },
+                            "key": "otherMeds",
+                            "validation": {
+                                "required": true
+                            },
+                            "allowMultipleSelections": true,
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Depression",
+                                        "fr": "Dépression"
+                                    },
+                                    "value": "Depression"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Anxiety",
+                                        "fr": "Anxiété"
+                                    },
+                                    "value": "Anxiety"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sleep Problems",
+                                        "fr": "Troubles du sommeil"
+                                    },
+                                    "value": "Sleep Problems"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Problems with cognition (e.g. trouble thinking or focusing or trouble with memory",
+                                        "fr": "Problèmes de cognition (p.ex. difficulté à penser ou à se concentrer ou troubles de mémoire)"
+                                    },
+                                    "value": "Problems with cognition"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Hallucinations",
+                                        "fr": "Hallucinations"
+                                    },
+                                    "value": "Hallucinations"
+                                },
+                                {
+                                    "label": {
+                                        "en": "I am not taking medication to treat any of the conditions listed above",
+                                        "fr": "Je prends aucun médicament pour les conditions mentionnées ci-dessus"
+                                    },
+                                    "value": "I am not taking medication to treat any of the conditions listed above"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "Do you feel that your memory and thinking have gotten worse?",
+                                "fr": "Avez-vous l''impression que votre mémoire et vos pensées se sont détériorées?"
+                            },
+                            "textContent": {
+                                "en": "If you have Parkinson''s disease, consider the change since your diagnosis, or, if you don''t have Parkinson''s disease, consider the change in the last few years.",
+                                "fr": "Si vous avez la maladie de Parkinson, considérez le changement depuis votre diagnostic ou, si vous n''avez pas la maladie de Parkinson, considérez le changement au cours des dernières années."
+                            },
+                            "key": "memory",
+                            "validation": {
+                                "required": true
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": "Pas certain.e"
+                                    },
+                                    "value": "Not sure"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "Do you have a diagnosis of dementia or Alzheimer''s disease given to you by a doctor?",
+                                "fr": "Avez-vous un diagnostic de démence ou de maladie d''Alzheimer qui vous a été donné par un médecin?"
+                            },
+                            "key": "diagnosisAD",
+                            "validation": {
+                                "required": true
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No, but I think I have dementia",
+                                        "fr": "Non, mais je pense je souffre de démence"
+                                    },
+                                    "value": "No, but I think I have dementia"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "Do you have a diagnosis of Mild Cognitive Impairment (MCI) given to you by a doctor?",
+                                "fr": "Avez-vous un diagnostic de trouble cognitif léger (TCL) qui vous a été donné par un médecin?"
+                            },
+                            "key": "diagnosisMCI",
+                            "validation": {
+                                "required": true
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No, but I think I have cognitive impairment",
+                                        "fr": "Non, mais je pense j''ai des troubles cognitifs"
+                                    },
+                                    "value": "No, but I think I have cognitive impairment"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    }'
+WHERE id = 57;
+-- Everyday Choice Demographics Questionnaire
+UPDATE tasks SET
+    from_platform = "PSHARPLAB",
+    task_type = "QUESTIONNAIRE",
+    name = "Everyday Choice Demographics Questionnaire",
+    description = "",
+    external_url = "",
+    config = '{
+        "taskConfig": {},
+        "metadata": [
+            {
+                "componentName": "QUESTIONNAIRECOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "Everyday Choice Demographic Questionnaire",
+                        "fr": "Everyday Choice Questionnaire"
+                    },
+                    "questions": [
+                        {
+                            "questionType": "input",
+                            "title": {
+                                "en": "What is your age (in years)?",
+                                "fr": "Quel âge avez-vous actuellement?"
+                            },
+                            "validation": {
+                                "required": true,
+                                "isNumeric": true,
+                                "min": 18
+                            },
+                            "key": "age"
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "What sex were you assigned at birth?",
+                                "fr": "Quel sexe vous a-t-on attribué à la naissance?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "sex",
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Female",
+                                        "fr": "Femme"
+                                    },
+                                    "value": "female"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Male",
+                                        "fr": "Homme"
+                                    },
+                                    "value": "male"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "How do you describe yourself?",
+                                "fr": "Comment vous décrivez-vous?"
+                            },
+                            "key": "gender",
+                            "validation": {
+                                "required": true
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Female",
+                                        "fr": "Femme"
+                                    },
+                                    "value": "female"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Male",
+                                        "fr": "Homme"
+                                    },
+                                    "value": "male"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Transgender",
+                                        "fr": "Transgenre"
+                                    },
+                                    "value": "transgender"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Do not identify as female, male, or transgender",
+                                        "fr": "Je ne m''identifie ni comme femme, ni comme homme, ni comme transgenre"
+                                    },
+                                    "value": "Do not identify as female, male, or transgender"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "input",
+                            "key": "yearsOfEducation",
+                            "title": {
+                                "en": "How many years of education do you have (completing high school equals 12 years)?",
+                                "fr": "Combien d''années d''étude avez-vous complété (fin du secondaire équivaut à 12 années)?"
+                            },
+                            "validation": {
+                                "isNumeric": true,
+                                "required": true
+                            }
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "currentEmploymentStatus",
+                            "title": {
+                                "en": "What is your current employment status?",
+                                "fr": "Quelle est votre situation d''emploi actuelle?"
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Employed Full-time (30+ hours a week)",
+                                        "fr": "Employé à temps plein (30+ d''heures chaque semaine)"
+                                    },
+                                    "value": "Full-time"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Employed Part-time",
+                                        "fr": "Employé à temps partiel"
+                                    },
+                                    "value": "Part-time"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Unemployed",
+                                        "fr": "Au chômage"
+                                    },
+                                    "value": "Unemployed"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Disability Leave",
+                                        "fr": "Congé de maladie"
+                                    },
+                                    "value": "Disability Leave"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Homemaker",
+                                        "fr": "Au foyer"
+                                    },
+                                    "value": "Homemaker"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Student",
+                                        "fr": "Étudiant.e"
+                                    },
+                                    "value": "Student"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Volunteer",
+                                        "fr": "Bénévole"
+                                    },
+                                    "value": "Volunteer"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Retired",
+                                        "fr": "Retraité.e"
+                                    },
+                                    "value": "Retired"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Do not wish to answer",
+                                        "fr": "Je ne souhaite pas répondre"
+                                    },
+                                    "value": "Do not wish to answer"
+                                }
+                            ],
+                            "validation": {
+                                "required": true
+                            }
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "What is your best estimate of the total household income received by all household members, from all sources, before taxes and deductions, in the past 12 months?",
+                                "fr": "Quelle est votre meilleure estimation du revenu total du ménage reçu par tous les membres de votre ménage, de toutes sources, avant impôts et déductions, au cours des 12 derniers mois?"
+                            },
+                            "key": "householdIncome",
+                            "validation": {
+                                "required": true
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Less than $20,000",
+                                        "fr": "Moins de 20.000$"
+                                    },
+                                    "value": "Less than $20,000"
+                                },
+                                {
+                                    "label": {
+                                        "en": "$20,000 or more, but less than $50,000",
+                                        "fr": "20,000$ ou plus, mais moins de 50,000$"
+                                    },
+                                    "value": "$20,000 or more, but less than $50,000"
+                                },
+                                {
+                                    "label": {
+                                        "en": "$50,000 or more, but less than $100,000",
+                                        "fr": "50,000$ ou plus, mais moins de 100,000$"
+                                    },
+                                    "value": "$50,000 or more, but less than $100,000"
+                                },
+                                {
+                                    "label": {
+                                        "en": "$100,000 or more, but less than $150,000",
+                                        "fr": "100,000$ ou plus, mais moins de 150,000$"
+                                    },
+                                    "value": "$100,000 or more, but less than $150,000"
+                                },
+                                {
+                                    "label": {
+                                        "en": "$150,000 or more",
+                                        "fr": "150,000$ ou plus"
+                                    },
+                                    "value": "$150,000 or more"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Do not know",
+                                        "fr": "Je ne sais pas"
+                                    },
+                                    "value": "Do not know"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Do not wish to answer",
+                                        "fr": "Je ne souhaite pas répondre"
+                                    },
+                                    "value": "Do not wish to answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "What is your current marital/partner status?",
+                                "fr": "Quel est votre état matrimonial/civil?"
+                            },
+                            "key": "marital",
+                            "validation": {
+                                "required": true
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Single, never married, or never lived with a partner",
+                                        "fr": "Célibataire, jamais marié.e, ou n''a jamais vécu avec un.e partenaire"
+                                    },
+                                    "value": "Single, never married, or never lived with a partner"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Married/Living with a partner in a domestic relationship",
+                                        "fr": "Marié.e/Je vis avec un.e partenaire dans une relation domestique"
+                                    },
+                                    "value": "Married/Living with a partner in a domestic relationship"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Widowed",
+                                        "fr": "Veuf/Veuve"
+                                    },
+                                    "value": "Widowed"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Divorced/Separated",
+                                        "fr": "Divorcé.e/Séparé.e"
+                                    },
+                                    "value": "Divorced/Separated"
+                                },
+                                {
+                                    "label": {
+                                        "en": "In a relationship",
+                                        "fr": "En couple"
+                                    },
+                                    "value": "In a relationship"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Do not wish to disclose",
+                                        "fr": "Je ne souhaite pas répondre"
+                                    },
+                                    "value": "Do not wish to disclose"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "Which best describes your living situation?",
+                                "fr": "Lequel décrit le mieux votre situation de vie?"
+                            },
+                            "key": "living",
+                            "validation": {
+                                "required": true
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Living Alone",
+                                        "fr": "Je vis seul.e"
+                                    },
+                                    "value": "Living alone"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Living with spouse/partner/significant other",
+                                        "fr": "Je vis avec mon/ma conjoint.e/partenaire/autre personne chère"
+                                    },
+                                    "value": "Living with spouse/partner/significant other"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Living with adult child/children",
+                                        "fr": "Je vis avec enfant(s) adulte(s) "
+                                    },
+                                    "value": "Living with adult child/children"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Living with other family",
+                                        "fr": "Je vis avec un autre membre de ma famille"
+                                    },
+                                    "value": "Living with other family"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Living with paid in-home care provider/aide",
+                                        "fr": "Je vis avec un prestataire de soins à domicile"
+                                    },
+                                    "value": "Living with paid in-home care provider/aide"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Living in assisted living facility",
+                                        "fr": "Je vis en résidence, e.g. de retraités"
+                                    },
+                                    "value": "Living in assisted living facility"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Living in nursing home",
+                                        "fr": "Je vis en hébergement médicalisé/CHSLD"
+                                    },
+                                    "value": "Living in nursing home"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": "Autre"
+                                    },
+                                    "value": "Other"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "What is your handedness?",
+                                "fr": "Quelle est votre main dominante?"
+                            },
+                            "key": "handedness",
+                            "validation": {
+                                "required": true
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Right-handed",
+                                        "fr": "Droitier/Droitière"
+                                    },
+                                    "value": "Right"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Left-handed",
+                                        "fr": "Gaucher/Gauchère"
+                                    },
+                                    "value": "Left"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Ambidextrous",
+                                        "fr": "Ambidextre"
+                                    },
+                                    "value": "Ambidextrous"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "How much time do you spend engaging in mental exercise (e.g. playing board games, cards, crossword puzzles, jigsaw puzzles, sudoku, playing a musical instrument)",
+                                "fr": "Combien de temps passez-vous à faire de l''exercice mental (p.ex. jeux de société, cartes, mots croisés, casse-têtes, sudoku; jouer un instrument de musique)"
+                            },
+                            "key": "mentalExercise",
+                            "validation": {
+                                "required": true
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Every day",
+                                        "fr": "Tous les jours"
+                                    },
+                                    "value": "Every day"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Several times a week",
+                                        "fr": "Plusieurs fois par semaine"
+                                    },
+                                    "value": "Several times a week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Several times a month",
+                                        "fr": "Plusieurs fois par mois"
+                                    },
+                                    "value": "Several times a month"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Several times a year",
+                                        "fr": "Plusieurs fois par année"
+                                    },
+                                    "value": "Several times a year"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Once a year or less",
+                                        "fr": "Une fois par année ou moins"
+                                    },
+                                    "value": "Once a year or less"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "How often do you exercise?",
+                                "fr": "À quelle fréquence faites-vous de l''activité physique?"
+                            },
+                            "key": "exercise",
+                            "validation": {
+                                "required": true
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Less than 1 time per week",
+                                        "fr": "Moins d''une fois par semaine"
+                                    },
+                                    "value": "Less than 1 time per week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "1 to 2 days per week",
+                                        "fr": "1 à 2 jours par semaine"
+                                    },
+                                    "value": "1 to 2 days per week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "3 to 5 days per week",
+                                        "fr": "3 à 5 jours par semaine"
+                                    },
+                                    "value": "3 to 5 days per week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "6 to 7 days per week",
+                                        "fr": "6 à 7 jours par semaine"
+                                    },
+                                    "value": "6 to 7 days per week"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "How long is one exercise session approximately?",
+                                "fr": "Environ combien de temps dure une séance d''exercice?"
+                            },
+                            "key": "exerciseSession",
+                            "validation": {
+                                "required": true
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Less than 30 minutes",
+                                        "fr": "Moins de 30 minutes"
+                                    },
+                                    "value": "Less than 30 minutes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "30 to 60 minutes",
+                                        "fr": "30 à 60 minutes"
+                                    },
+                                    "value": "30 to 60 minutes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "1 to 2 hours",
+                                        "fr": "1 à 2 heures"
+                                    },
+                                    "value": "1 to 2 hours"
+                                },
+                                {
+                                    "label": {
+                                        "en": "More than 2 hours",
+                                        "fr": "Plus de 2 heures"
+                                    },
+                                    "value": "More than 2 hours"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "We expect to reach people from many different cultural and racial backgrounds with this internet study. Which group do you identify with? (Select all that apply)",
+                                "fr": "Nous prévoyons rejoindre des personnes issues de différents milieux culturels avec cette étude en-ligne. À quel groupe vous identifiez-vous? (Sélectionnez tous ceux qui s''appliquent)"
+                            },
+                            "key": "background",
+                            "validation": {
+                                "required": true
+                            },
+                            "allowMultipleSelections": true,
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "White / Caucasian",
+                                        "fr": "Blanc / Caucasien"
+                                    },
+                                    "value": "White/Caucasian"
+                                },
+                                {
+                                    "label": {
+                                        "en": "French Canadian",
+                                        "fr": "Canadien.ne Français.e"
+                                    },
+                                    "value": "French Canadian"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Indigenous peoples",
+                                        "fr": "Autochtones"
+                                    },
+                                    "value": "First Nations"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Hispanic or Latino",
+                                        "fr": "Hispanique ou Latino"
+                                    },
+                                    "value": "Hispanic or Latino"
+                                },
+                                {
+                                    "label": {
+                                        "en": "African / Carribean / Afro American",
+                                        "fr": "Africain / Caribéen / Afro Américain"
+                                    },
+                                    "value": "African/Carribean/Afro American"
+                                },
+                                {
+                                    "label": {
+                                        "en": "North African",
+                                        "fr": "Nord-Africain"
+                                    },
+                                    "value": "North African"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Middle Eastern",
+                                        "fr": "Moyen-Orient"
+                                    },
+                                    "value": "Middle Eastern"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Chinese",
+                                        "fr": "Chinois"
+                                    },
+                                    "value": "Chinese"
+                                },
+                                {
+                                    "label": {
+                                        "en": "South Asian (E.g. Indian, Pakistani, Sri Lankan)",
+                                        "fr": "Sud-Asiatique (par exemple Indien, Pakistanais, Sri Lankais)"
+                                    },
+                                    "value": "South Asian"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Southeast Asian (E.g. Filipino, Cambodian, Indonesian, Laotian, Vietnamese)",
+                                        "fr": "Asiatique du Sud-Est (par exemple, Philippin, Cambodgien, Indonésien, Laotien, Vietnamien)"
+                                    },
+                                    "value": "Southeast Asian"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Japanese",
+                                        "fr": "Japonais"
+                                    },
+                                    "value": "Japanese"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Korean",
+                                        "fr": "Coréen"
+                                    },
+                                    "value": "Korean"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": "Autre"
+                                    },
+                                    "value": "Other"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Don''t know",
+                                        "fr": "Je ne sais pas"
+                                    },
+                                    "value": "Don''t know"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": "Je ne préfère pas répondre"
+                                    },
+                                    "value": "Prefer not to answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "Which of the following languages do you consider yourself fluent in (can read and speak)? Select all that apply.",
+                                "fr": "Laquelle des langues suivantes considérez-vous que vous parlez couramment (savoir lire et parler)? (Sélectionnez tout ce qui s''applique)"
+                            },
+                            "key": "fluentLan",
+                            "validation": {
+                                "required": true
+                            },
+                            "allowMultipleSelections": true,
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "English",
+                                        "fr": "Anglais"
+                                    },
+                                    "value": "English"
+                                },
+                                {
+                                    "label": {
+                                        "en": "French",
+                                        "fr": "Français"
+                                    },
+                                    "value": "French"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Neither",
+                                        "fr": "Aucun des deux"
+                                    },
+                                    "value": "Neither"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    }'
+WHERE id = 58;
+-- Everyday Choice Welcome Display Page
+UPDATE tasks SET
+    from_platform = "PSHARPLAB",
+    task_type = "INFO_DISPLAY",
+    name = "Everyday Choice Welcome Display Page",
+    description = "",
+    external_url = "",
+    config = '{
+        "taskConfig": {},
+        "metadata": [
+            {
+                "componentName": "INFODISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "Welcome to the study of Neurocognition on the Web for PD - Everyday Activities Game",
+                        "fr": "Bienvenu à l''étude de Neurocognition sur le web pour la MP - Le jeu des Activités Quotidiennes"
+                    },
+                    "sections": [
+                        {
+                            "header": {
+                                "en": "Thank you for participating in our study!",
+                                "fr": "Merci de participer à notre étude!"
+                            },
+                            "textContent": ""
+                        },
+                        {
+                            "header": "",
+                            "textContent": {
+                                "en": "You will be playing a game of choice between everyday activities and completing questionnaires to help us better understand decision-making and cognition in people with Parkinson''s disease.",
+                                "fr": "Vous allez jouer à un jeu de choix entre des activités quotidiennes et remplir des questionnaires. Ceci nous aidera à mieux comprendre le processus de prise de décision et la cognition chez les personnes atteintes de la maladie de Parkinson"
+                            }
+                        },
+                        {
+                            "header": "",
+                            "textContent": {
+                                "en": "While we ask that you complete the study in one sitting, please feel free to take breaks! We simply ask that you wait until the end of a testing block or of a questionnaire, otherwise your data will be lost.",
+                                "fr": "Quoiqu''on vous demande de compléter l''étude en une seule fois, SVP n''hésitez-pas à prendre des pauses! Nous vous demandons simplement d''attendre jusqu''à la fin d''une partie d''un test ou d''un questionnaire, sinon vos données seront perdues."
+                            }
+                        },
+                        {
+                            "header": "",
+                            "textContent": {
+                                "en": "<b>To take a break:</b> simply close this window.",
+                                "fr": "</b>Pour prendre une pause:</b> simplement fermez cette fenêtre."
+                            }
+                        },
+                        {
+                            "header": "",
+                            "textContent": {
+                                "en": "<b>To get back to it:</b> use the link you were sent in the email. It will take you to the log-in page.",
+                                "fr": "</b>Pour y revenir:</b> utilisez le lien qui vous a été envoyé par courriel. Ceci va vous amener à la page de connexion."
+                            }
+                        },
+                        {
+                            "header": "",
+                            "indent": 1
+                        },
+                        {
+                            "textContent": {
+                                "en": "<b>QUESTIONS OR EXPERIENCING DIFFICULTIES?</b>",
+                                "fr": "</b>DES QUESTIONS OU DES DIFFICULTÉS?</b>"
+                            }
+                        },
+                        {
+                            "header": "",
+                            "textContent": "sharplab.neuro@mcgill.ca"
+                        },
+                        {
+                            "header": "",
+                            "textContent": {
+                                "en": "To take a break now, close the window.",
+                                "fr": "Pour prendre une pause maintenant, fermez cette fenêtre."
+                            }
+                        },
+                        {
+                            "header": "",
+                            "textContent": {
+                                "en": "To continue, please click CONTINUE",
+                                "fr": "Pour continuer, SVP cliquez CONTINUE"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "displayContinueButton": true
+                    }
+                }
+            }
+        ]
+    }'
+WHERE id = 59;
+-- PAVLOVIA DSST 1
+UPDATE tasks SET
+    from_platform = "PAVLOVIA",
+    task_type = "EXPERIMENTAL",
+    name = "DSST 1",
+    description = "Digit Symbol Substitution Task 1",
+    external_url = "https://run.pavlovia.org/Sharp_lab/digit-symbol-substitution-task/html/",
+    config = '{
+        "taskConfig": {},
+        "metadata": [
+            {
+                "componentName": "EMBEDDEDPAGECOMPONENT",
+                "componentConfig": {
+                    "externalUrl":  "https://run.pavlovia.org/Sharp_lab/digit-symbol-substitution-task/html/"
+                }
+            }
+        ]
+    }'
+WHERE id = 60;
+-- PAVLOVIA DSST 2
+UPDATE tasks SET
+    from_platform = "PAVLOVIA",
+    task_type = "EXPERIMENTAL",
+    name = "DSST 2",
+    description = "Digit Symbol Substitution Task 2",
+    external_url = "https://run.pavlovia.org/Sharp_lab/digit-symbol-substitution-task-2/html/",
+    config = '{
+        "taskConfig": {},
+        "metadata": [
+            {
+                "componentName": "EMBEDDEDPAGECOMPONENT",
+                "componentConfig": {
+                    "externalUrl":  "https://run.pavlovia.org/Sharp_lab/digit-symbol-substitution-task-2/html/"
+                }
+            }
+        ]
+    }'
+WHERE id = 61;
+-- PAVLOVIA PLT 2
+UPDATE tasks SET
+    from_platform = "PAVLOVIA",
+    task_type = "EXPERIMENTAL",
+    name = "PLT 2",
+    description = "Probabilistic Learning Task 2",
+    external_url = "https://run.pavlovia.org/Sharp_lab/probabilistic-learning-task-2/html/",
+    config = '{
+        "taskConfig": {},
+        "metadata": [
+            {
+                "componentName": "EMBEDDEDPAGECOMPONENT",
+                "componentConfig": {
+                    "externalUrl":  "https://run.pavlovia.org/Sharp_lab/probabilistic-learning-task-2/html/"
+                }
+            }
+        ]
+    }'
+WHERE id = 62;
+-- General Information Questionnaire - Reliability Study
+UPDATE tasks SET
+    from_platform = "PSHARPLAB",
+    task_type = "QUESTIONNAIRE",
+    name = "General Information Questionnaire - Reliability Study",
+    description = "",
+    external_url = "",
+    config = '{
+        "taskConfig": {},
+        "metadata": [
+            {
+                "componentName": "QUESTIONNAIRECOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "General Information Questionnaire - Reliability study",
+                        "fr": "Questionnaire d''information générale - Étude de fiabilité"
+                    },
+                    "questions": [
+                        {
+                            "questionType": "displayText",
+                            "title": {
+                                "en": "We just need to ask you a few questions again. If you don''t have Parkinson''s disease (PD), not all of them will apply to you, so select the \\"I don''t have Parkinson''s disease\\" option.",
+                                "fr": "Nous devons vous re-demander seulement quelques questions. Si vous n''avez pas la maladie de Parkinson (MP), certaines des questions ne s''appliqueront pas à vous, alors sélectionnez l''option \\"Je n''ai pas la maladie de Parkinson\\"."
+                            }
+                        },
+                        {
+                            "questionType": "radiobuttons",
+                            "title": {
+                                "en": "Do you have a diagnosis of Parkinson''s disease given to you by a doctor (e.g. family doctor or neurologist)?",
+                                "fr": "Avez-vous un diagnostic de la maladie de Parkinson qui vous a été donné par un médecin (p.ex. un médecin de famille ou un neurologue)?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "radiobuttonPresentation": "vertical",
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No, but I think I have Parkinson''s disease",
+                                        "fr": "Non, mais je pense que j''ai la maladie de Parkinson"
+                                    },
+                                    "value": "No, but I think I have Parkinson''s disease"
+                                }
+                            ],
+                            "key": "havePD"
+                        },
+                        {
+                            "questionType": "input",
+                            "title": {
+                                "en": "In what year were you diagnosed with Parkinson'' disease? If you DON''T have Parkinson''s disease, please enter \\"0\\"",
+                                "fr": "En quelle année avez-vous reçu votre diagnostic de Parkinson? Si vous n''avez PAS la maladie de Parkinson, SVP inscrire \\"0\\"."
+                            },
+                            "key": "parkinsonsDiagnosisYear",
+                            "label": {
+                                "en": "Year (e.g. 2009)",
+                                "fr": "Année (ex. 2009)"
+                            },
+                            "validation": {
+                                "required": true,
+                                "isNumeric": true,
+                                "max": 2030,
+                                "min": 0
+                            }
+                        },
+                        {
+                            "questionType": "displayText",
+                            "title": {
+                                "en": "If you take Parkinson’s disease medication, how long ago did you take the last dose?",
+                                "fr": "Si vous prenez des médicaments pour votre maladie de Parkinson, il y a combien de temps que vous avez pris la dernière dose?"
+                            }
+                        },
+                        {
+                            "questionType": "input",
+                            "textContent": {
+                                "en": "If you don''t take any Parkinson’s medication, please write \\"0\\".",
+                                "fr": "Si vous ne prenez aucun médicament contre la maladie de Parkinson, veuillez écrire \\"0\\"."
+                            },
+                            "key": "lastDoseHour",
+                            "label": {
+                                "en": "Hours",
+                                "fr": "Heures"
+                            },
+                            "validation": {
+                                "required": true,
+                                "isNumeric": true,
+                                "max": 24,
+                                "min": 0
+                            }
+                        },
+                        {
+                            "questionType": "input",
+                            "key": "lastDoseMinute",
+                            "label": {
+                                "en": "Minutes",
+                                "fr": "Minutes"
+                            },
+                            "validation": {
+                                "required": true,
+                                "isNumeric": true,
+                                "max": 60,
+                                "min": 0
+                            }
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "Do you currently feel ON (i.e. can feel that the PD medications are taking effect) or OFF (i.e. medications are not currently taking effect)?",
+                                "fr": "Vous sentez-vous présentement ''ON'' (c.-à-d. sentir que les médicaments de la MP font effet) ou ''OFF'' (c.-à-d. sentir que les médicaments ne font pas actuellement effet)?"
+                            },
+                            "key": "onOffMed",
+                            "validation": {
+                                "required": true
+                            },
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "I don''t have Parkinson''s disease",
+                                        "fr": "Je n''ai pas la maladie de Parkinson"
+                                    },
+                                    "value": "I don''t have Parkinson''s disease"
+                                },
+                                {
+                                    "label": {
+                                        "en": "I have PD but don''t take medications for it",
+                                        "fr": "J''ai la MP mais je ne prends pas de médicaments pour ça"
+                                    },
+                                    "value": "I have PD but don''t take medications for it"
+                                },
+                                {
+                                    "label": {
+                                        "en": "I feel ON",
+                                        "fr": "Je me sens ''ON''"
+                                    },
+                                    "value": "I feel ON"
+                                },
+                                {
+                                    "label": {
+                                        "en": "I feel OFF",
+                                        "fr": "Je me sens ''OFF''"
+                                    },
+                                    "value": "I feel OFF"
+                                },
+                                {
+                                    "label": {
+                                        "en": "I can not tell the difference",
+                                        "fr": "Je ne ressens pas la différence entre ON et OFF"
+                                    },
+                                    "value": "I can not tell the difference"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "Have there been any major changes to your Parkinson''s disease treatment, or to your health more generally, in the last few months that you think could affect your performance on the brain games or how you respond to the questionnaires about mood? (Select all that apply)",
+                                "fr": "Y a-t-il eu, au cours des derniers mois, des changements importants dans votre traitement pour le Parkinson, ou plus généralement dans votre santé, qui pourraient, selon vous, affecter votre performance dans les jeux de cerveau ou vos réponses dans les questionnaires sur l''humeur? (Veuillez sélectionner toutes les réponses qui s''appliquent)"
+                            },
+                            "key": "otherMeds",
+                            "validation": {
+                                "required": true
+                            },
+                            "allowMultipleSelections": true,
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": {
+                                        "en": "No major changes",
+                                        "fr": "Aucun changement important"
+                                    },
+                                    "value": "No change"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Significant increase or decrease in PD medications",
+                                        "fr": "Augmentation ou diminution importante de mes médicaments pour la MP"
+                                    },
+                                    "value": "PD medication change"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Significant mood changes",
+                                        "fr": "Changements importants d''humeur"
+                                    },
+                                    "value": "Mood change"
+                                },
+                                {
+                                    "label": {
+                                        "en": "New medication for mood symptoms, or increase of existing medication",
+                                        "fr": "Prescription d''un nouveau médicament pour les symptômes d''humeur, ou augmentation de médicament existant"
+                                    },
+                                    "value": "Med for mood"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": "Autre"
+                                    },
+                                    "value": "Other"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    }'
+WHERE id = 63;
 -- PLT Questionnaire
 UPDATE tasks SET
     from_platform = "PSHARPLAB",
     task_type = "QUESTIONNAIRE",
-    name = "POST PLT Questionnaire",
+    name = "POST PLT Questionnaire (FOR PLT VERSION 1)",
     description = "Questionnaire asking the participant what they thought was the most/least likely stimulus to be correct",
     external_url = "",
     config = '{
@@ -17524,16 +24406,16 @@ UPDATE tasks SET
             {
                 "componentName": "QUESTIONNAIRECOMPONENT",
                 "componentConfig": {
-                    "title":"Questionnaire",
-                    "questions":[
+                    "title": "Questionnaire",
+                    "questions": [
                         {
-                            "questionType":"radiobuttons",
-                            "title":"Which image was <b>LEAST</b> likely to be correct?",
+                            "questionType": "radiobuttons",
+                            "title": "Which image was <b>LEAST</b> likely to be correct?",
                             "validation": {
                                 "required": true
                             },
                             "radiobuttonPresentation": "horizontal",
-                            "key":"image_least_likely_correct",
+                            "key": "image_least_likely_correct",
                             "radioButtonImageOptions": [
                                 "/assets/images/stimuli/plt/image1.jpg",
                                 "/assets/images/stimuli/plt/image2.jpg",
@@ -17567,16 +24449,14 @@ UPDATE tasks SET
                                     "label": "6",
                                     "value": "image6"
                                 }
-                            ]
-                        },
-                        {
-                            "questionType":"radiobuttons",
-                            "title":"Which image was <b>MOST</b> likely to be correct?",
+                            ],
+                            "questionType": "radiobuttons",
+                            "title": "Which image was <b>MOST</b> likely to be correct?",
                             "validation": {
                                 "required": true
                             },
                             "radiobuttonPresentation": "horizontal",
-                            "key":"image_most_likely_correct",
+                            "key": "image_most_likely_correct",
                             "radioButtonImageOptions": [
                                 "/assets/images/stimuli/plt/image1.jpg",
                                 "/assets/images/stimuli/plt/image2.jpg",
@@ -17617,4 +24497,4 @@ UPDATE tasks SET
             }
         ]
     }'
-WHERE id = 57;
+WHERE id = 64;

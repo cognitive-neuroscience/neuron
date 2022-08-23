@@ -156,7 +156,7 @@ func (u *UserRepository) GetCrowdSourcedUsersByStudyId(studyId uint) ([]models.C
 
 func (u *UserRepository) SaveStudyUser(studyUser models.StudyUser) models.HTTPStatus {
 	db := db.DB
-	var saveStudyUserQuery = `INSERT INTO study_users (user_id, study_id, completion_code, current_task_index, register_date, due_date, has_accepted_consent, lang) VALUES (?, ?, ?, ?, ?, ?, ?, ?);`
+	var saveStudyUserQuery = `INSERT INTO study_users (user_id, study_id, completion_code, current_task_index, register_date, due_date, has_accepted_consent, lang, data) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);`
 	_, err := db.Exec(
 		saveStudyUserQuery,
 		studyUser.UserID,
@@ -167,6 +167,7 @@ func (u *UserRepository) SaveStudyUser(studyUser models.StudyUser) models.HTTPSt
 		sql.NullString{},
 		studyUser.HasAcceptedConsent,
 		studyUser.Lang,
+		studyUser.Data,
 	)
 	if err != nil {
 		msg := "there was an error registering the study user"
@@ -188,12 +189,12 @@ func (u *UserRepository) SaveStudyUser(studyUser models.StudyUser) models.HTTPSt
 
 func (u *UserRepository) UpdateStudyUser(studyUser models.StudyUser) models.HTTPStatus {
 	db := db.DB
-	var updateStudyUserQuery = `UPDATE study_users SET completion_code = ?, current_task_index = ?, has_accepted_consent = ?, due_date = ?, lang = ? WHERE study_id = ? AND user_id = ?;`
-	if _, err := db.Exec(updateStudyUserQuery, studyUser.CompletionCode, studyUser.CurrentTaskIndex, studyUser.HasAcceptedConsent, studyUser.DueDate, studyUser.Lang, studyUser.StudyID, studyUser.UserID); err != nil {
+	var updateStudyUserQuery = `UPDATE study_users SET completion_code = ?, current_task_index = ?, has_accepted_consent = ?, due_date = ?, lang = ?, data = ? WHERE study_id = ? AND user_id = ?;`
+	if _, err := db.Exec(updateStudyUserQuery, studyUser.CompletionCode, studyUser.CurrentTaskIndex, studyUser.HasAcceptedConsent, studyUser.DueDate, studyUser.Lang, studyUser.Data, studyUser.StudyID, studyUser.UserID); err != nil {
 		axonlogger.ErrorLogger.Println("There was an error updating the study user", err)
 		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "there was an update error"}
 	}
-	axonlogger.InfoLogger.Println("Successfully updated study user:", studyUser.CurrentTaskIndex, studyUser.DueDate, studyUser.HasAcceptedConsent, studyUser.CompletionCode)
+	axonlogger.InfoLogger.Println("Successfully updated study user:", studyUser.CurrentTaskIndex, studyUser.DueDate, studyUser.HasAcceptedConsent, studyUser.CompletionCode, studyUser.Data)
 	return models.HTTPStatus{Status: http.StatusOK, Message: "successfully updated"}
 }
 
@@ -203,7 +204,7 @@ func (u *UserRepository) GetAllStudyUsersByUserId(userId uint) ([]models.StudyUs
 	db := db.DB
 	studyRepositoryImpl := StudyRepository{}
 	studyUsers := []models.StudyUser{}
-	var getStudyUsersByStudyIdAndUserIdQuery = `SELECT user_id, study_id, completion_code, current_task_index, register_date, due_date, has_accepted_consent, lang FROM study_users WHERE user_id = ?;`
+	var getStudyUsersByStudyIdAndUserIdQuery = `SELECT user_id, study_id, completion_code, current_task_index, register_date, due_date, has_accepted_consent, lang, data FROM study_users WHERE user_id = ?;`
 	rows, err := db.Query(getStudyUsersByStudyIdAndUserIdQuery, userId)
 	if err != nil {
 		axonlogger.ErrorLogger.Println("There was an error getting users from the DB", err)
@@ -221,6 +222,7 @@ func (u *UserRepository) GetAllStudyUsersByUserId(userId uint) ([]models.StudyUs
 			&studyUser.DueDate,
 			&studyUser.HasAcceptedConsent,
 			&studyUser.Lang,
+			&studyUser.Data,
 		); err != nil {
 			axonlogger.ErrorLogger.Println("Could not scan rows when retrieving users", err)
 			return studyUsers, errors.New("there was an error retrieving users")
@@ -247,7 +249,7 @@ func (u *UserRepository) GetAllStudyUsersByUserId(userId uint) ([]models.StudyUs
 func (u *UserRepository) GetStudyUserById(studyUserId uint, studyId uint) (models.StudyUser, error) {
 	db := db.DB
 	studyUser := models.StudyUser{}
-	var getStudyUsersByIdQuery = `SELECT user_id, study_id, completion_code, current_task_index, register_date, due_date, has_accepted_consent, lang FROM study_users WHERE user_id = ? AND study_id = ?;`
+	var getStudyUsersByIdQuery = `SELECT user_id, study_id, completion_code, current_task_index, register_date, due_date, has_accepted_consent, lang, data FROM study_users WHERE user_id = ? AND study_id = ?;`
 
 	rowErr := db.QueryRow(getStudyUsersByIdQuery, studyUserId, studyId).Scan(
 		&studyUser.UserID,
@@ -258,6 +260,7 @@ func (u *UserRepository) GetStudyUserById(studyUserId uint, studyId uint) (model
 		&studyUser.DueDate,
 		&studyUser.HasAcceptedConsent,
 		&studyUser.Lang,
+		&studyUser.Data,
 	)
 
 	if rowErr == sql.ErrNoRows {
@@ -274,7 +277,7 @@ func (u *UserRepository) GetStudyUserById(studyUserId uint, studyId uint) (model
 func (u *UserRepository) GetStudyUsersByStudyId(studyId uint) ([]models.StudyUser, error) {
 	db := db.DB
 	studyUsers := []models.StudyUser{}
-	var getStudyUsersByStudyIdQuery = `SELECT user_id, study_id, completion_code, current_task_index, register_date, due_date, has_accepted_consent, lang FROM study_users WHERE study_id = ?;`
+	var getStudyUsersByStudyIdQuery = `SELECT user_id, study_id, completion_code, current_task_index, register_date, due_date, has_accepted_consent, lang, data FROM study_users WHERE study_id = ?;`
 	rows, err := db.Query(getStudyUsersByStudyIdQuery, studyId)
 	if err != nil {
 		axonlogger.ErrorLogger.Println("There was an error getting study users from the DB", err)
@@ -292,6 +295,7 @@ func (u *UserRepository) GetStudyUsersByStudyId(studyId uint) ([]models.StudyUse
 			&studyUser.DueDate,
 			&studyUser.HasAcceptedConsent,
 			&studyUser.Lang,
+			&studyUser.Data,
 		); err != nil {
 			axonlogger.ErrorLogger.Println("Could not scan rows when retrieving study users", err)
 			return studyUsers, errors.New("there was an error retrieving study users")
