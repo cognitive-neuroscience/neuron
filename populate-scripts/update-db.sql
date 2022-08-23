@@ -16931,386 +16931,386 @@ UPDATE tasks SET
     description = "",
     external_url = "",
     config = '{
-    "taskConfig": {},
-    "metadata": [
-        {
-            "componentName": "QUESTIONNAIRECOMPONENT",
-            "componentConfig": {
-                "title": {
-                    "en": "Questionnaire",
-                    "fr": "Le Questionnaire"
-                },
-                "questions":[
-                    {
-                        "questionType": "displayText",
-                        "title": {
-                            "en": "In the following you find a list of expressions that characterize different moods. Please take a look at the list, word by word, and mark for each word the answer that represents best the actual intensity of your mood status.",
-                            "fr": "Dans la prochaine partie, vous trouverez une liste des expressions qui caractérisent différentes émotions. Jetez un coup d''oeil à la liste, mot par mot, et marquez pour chaque mot la réponse qui représente le mieux l''intensité de votre état d''esprit actuellement."
+        "taskConfig": {},
+        "metadata": [
+            {
+                "componentName": "QUESTIONNAIRECOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "Questionnaire",
+                        "fr": "Le Questionnaire"
+                    },
+                    "questions":[
+                        {
+                            "questionType": "displayText",
+                            "title": {
+                                "en": "In the following you find a list of expressions that characterize different moods. Please take a look at the list, word by word, and mark for each word the answer that represents best the actual intensity of your mood status.",
+                                "fr": "Dans la prochaine partie, vous trouverez une liste des expressions qui caractérisent différentes émotions. Jetez un coup d''oeil à la liste, mot par mot, et marquez pour chaque mot la réponse qui représente le mieux l''intensité de votre état d''esprit actuellement."
+                            }
+                        },
+                        {
+                            "questionType": "displayText",
+                            "title": {
+                                "en": "Please pay attention to the following facts:",
+                                "fr": "Veuillez prêter attention aux faits suivants:"
+                            }
+                        },
+                        {
+                            "questionType": "displayText",
+                            "title": {
+                                "en": "- Within the list there are some attributes that possibly describe the same or similar moods. Please do not get irritated due to this fact, and judge each attribute irrespective of your answer to another attribute.<br />- Please judge only how you feel at this moment, and not how you normally or sometimes feel.<br/ >- If you have some difficulties in finding an answer, please mark the answer that fits best.",
+                                "fr": "- Dans la liste, certains attributs décrivent peut-être des humeurs identiques ou similaires. Ne soyez pas irrité par ce fait et jugez chaque attribut indépendamment de votre réponse à un autre attribut.<br />- Veuillez juger uniquement ce que vous ressentez en ce moment, et non ce que vous ressentez normalement ou parfois.<br />- Si vous avez de la difficulté à choisir une réponse, veuillez marquer la réponse qui vous convient le mieux."
+                            },
+                            "indent": 1
+                        },
+                        {
+                            "questionType": "displayText",
+                            "title": {
+                                "en": "Please judge each word and do not leave out a word.",
+                                "fr": "Veuillez juger chaque mot et n''omettez aucun mot."
+                            }
+                        },
+                        {
+                            "questionType": "slider",
+                            "title": {
+                                "en": "How CONTENT do you feel?",
+                                "fr": "À quel point vous sentez-vous COMBLÉ.E?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "How CONTENT do you feel?",
+                            "legend": [ 
+                                {
+                                    "en": "Definitely Not Feeling This",
+                                    "fr": "Je ne me sens pas du tout comme ça"
+                                },
+                                {
+                                    "en": "Extremely",
+                                    "fr": "Extrêmement"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "slider",
+                            "title": {
+                                "en": "How RESTLESS do you feel?",
+                                "fr": "À quel point vous sentez-vous AGITÉ.E?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "How RESTLESS do you feel?",
+                            "legend": [ 
+                                {
+                                    "en": "Definitely Not Feeling This",
+                                    "fr": "Je ne me sens pas du tout comme ça"
+                                },
+                                {
+                                    "en": "Extremely",
+                                    "fr": "Extrêmement"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "slider",
+                            "title": {
+                                "en": "How BAD do you feel?",
+                                "fr": "À quel point vous sentez-vous MAL?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "How BAD do you feel?",
+                            "legend": [ 
+                                {
+                                    "en": "Definitely Not Feeling This",
+                                    "fr": "Je ne me sens pas du tout comme ça"
+                                },
+                                {
+                                    "en": "Extremely",
+                                    "fr": "Extrêmement"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "slider",
+                            "title": {
+                                "en": "How COMPOSED do you feel?",
+                                "fr": "À quel point vous sentez-vous TRANQUILLE?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "How COMPOSED do you feel?",
+                            "legend": [ 
+                                {
+                                    "en": "Definitely Not Feeling This",
+                                    "fr": "Je ne me sens pas du tout comme ça"
+                                },
+                                {
+                                    "en": "Extremely",
+                                    "fr": "Extrêmement"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "slider",
+                            "title": {
+                                "en": "How GREAT do you feel?",
+                                "fr": "À quel point vous sentez-vous TRÈS BIEN?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "How GREAT do you feel?",
+                            "legend": [ 
+                                {
+                                    "en": "Definitely Not Feeling This",
+                                    "fr": "Je ne me sens pas du tout comme ça"
+                                },
+                                {
+                                    "en": "Extremely",
+                                    "fr": "Extrêmement"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "slider",
+                            "title": {
+                                "en": "How UNEASY do you feel?",
+                                "fr": "À quel point vous sentez-vous MAL À L''AISE"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "How UNEASY do you feel?",
+                            "legend": [ 
+                                {
+                                    "en": "Definitely Not Feeling This",
+                                    "fr": "Je ne me sens pas du tout comme ça"
+                                },
+                                {
+                                    "en": "Extremely",
+                                    "fr": "Extrêmement"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "slider",
+                            "title": {
+                                "en": "How UNCOMFORTABLE do you feel?",
+                                "fr": "À quel point vous sentez-vous INCONFORTABLE?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "How UNCOMFORTABLE do you feel?",
+                            "legend": [ 
+                                {
+                                    "en": "Definitely Not Feeling This",
+                                    "fr": "Je ne me sens pas du tout comme ça"
+                                },
+                                {
+                                    "en": "Extremely",
+                                    "fr": "Extrêmement"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "slider",
+                            "title": {
+                                "en": "How RELAXED do you feel?",
+                                "fr": "À quel point vous sentez-vous DÉTENDU.E?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "How RELAXED do you feel?",
+                            "legend": [ 
+                                {
+                                    "en": "Definitely Not Feeling This",
+                                    "fr": "Je ne me sens pas du tout comme ça"
+                                },
+                                {
+                                    "en": "Extremely",
+                                    "fr": "Extrêmement"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "slider",
+                            "title": {
+                                "en": "How GOOD do you feel?",
+                                "fr": "À quel point vous sentez-vous BIEN?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "How GOOD do you feel?",
+                            "legend": [ 
+                                {
+                                    "en": "Definitely Not Feeling This",
+                                    "fr": "Je ne me sens pas du tout comme ça"
+                                },
+                                {
+                                    "en": "Extremely",
+                                    "fr": "Extrêmement"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "slider",
+                            "title": {
+                                "en": "How AT EASE do you feel?",
+                                "fr": "À quel point vous sentez-vous À L''AISE?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "How AT EASE do you feel?",
+                            "legend": [ 
+                                {
+                                    "en": "Definitely Not Feeling This",
+                                    "fr": "Je ne me sens pas du tout comme ça"
+                                },
+                                {
+                                    "en": "Extremely",
+                                    "fr": "Extrêmement"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "slider",
+                            "title": {
+                                "en": "How UNHAPPY do you feel?",
+                                "fr": "À quel point vous sentez-vous MALHEUREUX.EUSE?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "How UNHAPPY do you feel?",
+                            "legend": [ 
+                                {
+                                    "en": "Definitely Not Feeling This",
+                                    "fr": "Je ne me sens pas du tout comme ça"
+                                },
+                                {
+                                    "en": "Extremely",
+                                    "fr": "Extrêmement"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "slider",
+                            "title": {
+                                "en": "How DISCONTENT do you feel?",
+                                "fr": "À quel point vous sentez-vous MÉCONTENT.E?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "How DISCONTENT do you feel?",
+                            "legend": [ 
+                                {
+                                    "en": "Definitely Not Feeling This",
+                                    "fr": "Je ne me sens pas du tout comme ça"
+                                },
+                                {
+                                    "en": "Extremely",
+                                    "fr": "Extrêmement"
+                                }
+                            ]
+                        },
+                                {
+                            "questionType": "slider",
+                            "title": {
+                                "en": "How TENSE do you feel?",
+                                "fr": "À quel point vous sentez-vous TENDU.E?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "How TENSE do you feel?",
+                            "legend": [ 
+                                {
+                                    "en": "Definitely Not Feeling This",
+                                    "fr": "Je ne me sens pas du tout comme ça"
+                                },
+                                {
+                                    "en": "Extremely",
+                                    "fr": "Extrêmement"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "slider",
+                            "title": {
+                                "en": "How HAPPY do you feel?",
+                                "fr": "À quel point vous sentez-vous HEUREUX.EUSE?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "How HAPPY do you feel?",
+                            "legend": [ 
+                                {
+                                    "en": "Definitely Not Feeling This",
+                                    "fr": "Je ne me sens pas du tout comme ça"
+                                },
+                                {
+                                    "en": "Extremely",
+                                    "fr": "Extrêmement"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "slider",
+                            "title": {
+                                "en": "How NERVOUS do you feel?",
+                                "fr": "À quel point vous sentez-vous NERVEUX.EUSE?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "How NERVOUS do you feel?",
+                            "legend": [ 
+                                {
+                                    "en": "Definitely Not Feeling This",
+                                    "fr": "Je ne me sens pas du tout comme ça"
+                                },
+                                {
+                                    "en": "Extremely",
+                                    "fr": "Extrêmement"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "slider",
+                            "title": {
+                                "en": "How CALM do you feel?",
+                                "fr": "À quel point vous sentez-vous CALME?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "How CALM do you feel?",
+                            "legend": [ 
+                                {
+                                    "en": "Definitely Not Feeling This",
+                                    "fr": "Je ne me sens pas du tout comme ça"
+                                },
+                                {
+                                    "en": "Extremely",
+                                    "fr": "Extrêmement"
+                                }
+                            ]
                         }
-                    },
-                    {
-                        "questionType": "displayText",
-                        "title": {
-                            "en": "Please pay attention to the following facts:",
-                            "fr": "Veuillez prêter attention aux faits suivants:"
-                        }
-                    },
-                    {
-                        "questionType": "displayText",
-                        "title": {
-                            "en": "- Within the list there are some attributes that possibly describe the same or similar moods. Please do not get irritated due to this fact, and judge each attribute irrespective of your answer to another attribute.<br />- Please judge only how you feel at this moment, and not how you normally or sometimes feel.<br/ >- If you have some difficulties in finding an answer, please mark the answer that fits best.",
-                            "fr": "- Dans la liste, certains attributs décrivent peut-être des humeurs identiques ou similaires. Ne soyez pas irrité par ce fait et jugez chaque attribut indépendamment de votre réponse à un autre attribut.<br />- Veuillez juger uniquement ce que vous ressentez en ce moment, et non ce que vous ressentez normalement ou parfois.<br />- Si vous avez de la difficulté à choisir une réponse, veuillez marquer la réponse qui vous convient le mieux."
-                        },
-                        "indent": 1
-                    },
-                    {
-                        "questionType": "displayText",
-                        "title": {
-                            "en": "Please judge each word and do not leave out a word.",
-                            "fr": "Veuillez juger chaque mot et n''omettez aucun mot."
-                        }
-                    },
-                    {
-                        "questionType": "slider",
-                        "title": {
-                            "en": "How CONTENT do you feel?",
-                            "fr": "À quel point vous sentez-vous COMBLÉ.E?"
-                        },
-                        "validation": {
-                            "required": true
-                        },
-                        "key": "How CONTENT do you feel?",
-                        "legend": [ 
-                            {
-                                "en": "Definitely Not Feeling This",
-                                "fr": "Je ne me sens pas du tout comme ça"
-                            },
-                            {
-                                "en": "Extremely",
-                                "fr": "Extrêmement"
-                            }
-                        ]
-                    },
-                    {
-                        "questionType": "slider",
-                        "title": {
-                            "en": "How RESTLESS do you feel?",
-                            "fr": "À quel point vous sentez-vous AGITÉ.E?"
-                        },
-                        "validation": {
-                            "required": true
-                        },
-                        "key": "How RESTLESS do you feel?",
-                        "legend": [ 
-                            {
-                                "en": "Definitely Not Feeling This",
-                                "fr": "Je ne me sens pas du tout comme ça"
-                            },
-                            {
-                                "en": "Extremely",
-                                "fr": "Extrêmement"
-                            }
-                        ]
-                    },
-                    {
-                        "questionType": "slider",
-                        "title": {
-                            "en": "How BAD do you feel?",
-                             "fr": "À quel point vous sentez-vous MAL?"
-                        },
-                        "validation": {
-                            "required": true
-                        },
-                        "key": "How BAD do you feel?",
-                        "legend": [ 
-                            {
-                                "en": "Definitely Not Feeling This",
-                                "fr": "Je ne me sens pas du tout comme ça"
-                            },
-                            {
-                                "en": "Extremely",
-                                "fr": "Extrêmement"
-                            }
-                        ]
-                    },
-                    {
-                        "questionType": "slider",
-                        "title": {
-                            "en": "How COMPOSED do you feel?",
-                            "fr": "À quel point vous sentez-vous TRANQUILLE?"
-                        },
-                        "validation": {
-                            "required": true
-                        },
-                        "key": "How COMPOSED do you feel?",
-                        "legend": [ 
-                            {
-                                "en": "Definitely Not Feeling This",
-                                "fr": "Je ne me sens pas du tout comme ça"
-                            },
-                            {
-                                "en": "Extremely",
-                                "fr": "Extrêmement"
-                            }
-                        ]
-                    },
-                    {
-                        "questionType": "slider",
-                        "title": {
-                            "en": "How GREAT do you feel?",
-                            "fr": "À quel point vous sentez-vous TRÈS BIEN?"
-                        },
-                        "validation": {
-                            "required": true
-                        },
-                        "key": "How GREAT do you feel?",
-                        "legend": [ 
-                            {
-                                "en": "Definitely Not Feeling This",
-                                "fr": "Je ne me sens pas du tout comme ça"
-                            },
-                            {
-                                "en": "Extremely",
-                                "fr": "Extrêmement"
-                            }
-                        ]
-                    },
-                    {
-                        "questionType": "slider",
-                        "title": {
-                            "en": "How UNEASY do you feel?",
-                            "fr": "À quel point vous sentez-vous MAL À L''AISE"
-                        },
-                        "validation": {
-                            "required": true
-                        },
-                        "key": "How UNEASY do you feel?",
-                        "legend": [ 
-                            {
-                                "en": "Definitely Not Feeling This",
-                                "fr": "Je ne me sens pas du tout comme ça"
-                            },
-                            {
-                                "en": "Extremely",
-                                "fr": "Extrêmement"
-                            }
-                        ]
-                    },
-                    {
-                        "questionType": "slider",
-                        "title": {
-                            "en": "How UNCOMFORTABLE do you feel?",
-                            "fr": "À quel point vous sentez-vous INCONFORTABLE?"
-                        },
-                        "validation": {
-                            "required": true
-                        },
-                        "key": "How UNCOMFORTABLE do you feel?",
-                        "legend": [ 
-                            {
-                                "en": "Definitely Not Feeling This",
-                                "fr": "Je ne me sens pas du tout comme ça"
-                            },
-                            {
-                                "en": "Extremely",
-                                "fr": "Extrêmement"
-                            }
-                        ]
-                    },
-                    {
-                        "questionType": "slider",
-                        "title": {
-                            "en": "How RELAXED do you feel?",
-                            "fr": "À quel point vous sentez-vous DÉTENDU.E?"
-                        },
-                        "validation": {
-                            "required": true
-                        },
-                        "key": "How RELAXED do you feel?",
-                        "legend": [ 
-                            {
-                                "en": "Definitely Not Feeling This",
-                                "fr": "Je ne me sens pas du tout comme ça"
-                            },
-                            {
-                                "en": "Extremely",
-                                "fr": "Extrêmement"
-                            }
-                        ]
-                    },
-                    {
-                        "questionType": "slider",
-                        "title": {
-                            "en": "How GOOD do you feel?",
-                            "fr": "À quel point vous sentez-vous BIEN?"
-                        },
-                        "validation": {
-                            "required": true
-                        },
-                        "key": "How GOOD do you feel?",
-                        "legend": [ 
-                            {
-                                "en": "Definitely Not Feeling This",
-                                "fr": "Je ne me sens pas du tout comme ça"
-                            },
-                            {
-                                "en": "Extremely",
-                                "fr": "Extrêmement"
-                            }
-                        ]
-                    },
-                    {
-                        "questionType": "slider",
-                        "title": {
-                            "en": "How AT EASE do you feel?",
-                            "fr": "À quel point vous sentez-vous À L''AISE?"
-                        },
-                        "validation": {
-                            "required": true
-                        },
-                        "key": "How AT EASE do you feel?",
-                        "legend": [ 
-                            {
-                                "en": "Definitely Not Feeling This",
-                                "fr": "Je ne me sens pas du tout comme ça"
-                            },
-                            {
-                                "en": "Extremely",
-                                "fr": "Extrêmement"
-                            }
-                        ]
-                    },
-                    {
-                        "questionType": "slider",
-                        "title": {
-                            "en": "How UNHAPPY do you feel?",
-                            "fr": "À quel point vous sentez-vous MALHEUREUX.EUSE?"
-                        },
-                        "validation": {
-                            "required": true
-                        },
-                        "key": "How UNHAPPY do you feel?",
-                        "legend": [ 
-                            {
-                                "en": "Definitely Not Feeling This",
-                                "fr": "Je ne me sens pas du tout comme ça"
-                            },
-                            {
-                                "en": "Extremely",
-                                "fr": "Extrêmement"
-                            }
-                        ]
-                    },
-                    {
-                        "questionType": "slider",
-                        "title": {
-                            "en": "How DISCONTENT do you feel?",
-                            "fr": "À quel point vous sentez-vous MÉCONTENT.E?"
-                        },
-                        "validation": {
-                            "required": true
-                        },
-                        "key": "How DISCONTENT do you feel?",
-                        "legend": [ 
-                            {
-                                "en": "Definitely Not Feeling This",
-                                "fr": "Je ne me sens pas du tout comme ça"
-                            },
-                            {
-                                "en": "Extremely",
-                                "fr": "Extrêmement"
-                            }
-                        ]
-                    },
-                            {
-                        "questionType": "slider",
-                        "title": {
-                            "en": "How TENSE do you feel?",
-                            "fr": "À quel point vous sentez-vous TENDU.E?"
-                        },
-                        "validation": {
-                            "required": true
-                        },
-                        "key": "How TENSE do you feel?",
-                        "legend": [ 
-                            {
-                                "en": "Definitely Not Feeling This",
-                                "fr": "Je ne me sens pas du tout comme ça"
-                            },
-                            {
-                                "en": "Extremely",
-                                "fr": "Extrêmement"
-                            }
-                        ]
-                    },
-                    {
-                        "questionType": "slider",
-                        "title": {
-                            "en": "How HAPPY do you feel?",
-                            "fr": "À quel point vous sentez-vous HEUREUX.EUSE?"
-                        },
-                        "validation": {
-                            "required": true
-                        },
-                        "key": "How HAPPY do you feel?",
-                        "legend": [ 
-                            {
-                                "en": "Definitely Not Feeling This",
-                                "fr": "Je ne me sens pas du tout comme ça"
-                            },
-                            {
-                                "en": "Extremely",
-                                "fr": "Extrêmement"
-                            }
-                        ]
-                    },
-                    {
-                        "questionType": "slider",
-                        "title": {
-                            "en": "How NERVOUS do you feel?",
-                            "fr": "À quel point vous sentez-vous NERVEUX.EUSE?"
-                        },
-                        "validation": {
-                            "required": true
-                        },
-                        "key": "How NERVOUS do you feel?",
-                        "legend": [ 
-                            {
-                                "en": "Definitely Not Feeling This",
-                                "fr": "Je ne me sens pas du tout comme ça"
-                            },
-                            {
-                                "en": "Extremely",
-                                "fr": "Extrêmement"
-                            }
-                        ]
-                    },
-                    {
-                        "questionType": "slider",
-                        "title": {
-                            "en": "How CALM do you feel?",
-                            "fr": "À quel point vous sentez-vous CALME?"
-                        },
-                        "validation": {
-                            "required": true
-                        },
-                        "key": "How CALM do you feel?",
-                        "legend": [ 
-                            {
-                                "en": "Definitely Not Feeling This",
-                                "fr": "Je ne me sens pas du tout comme ça"
-                            },
-                            {
-                                "en": "Extremely",
-                                "fr": "Extrêmement"
-                            }
-                        ]
-                    }
-                ]
+                    ]
+                }
             }
-        }
-    ]
-}'
+        ]
+    }'
 WHERE id = 39;
 -- Stress Study Post Test
 UPDATE tasks SET
@@ -22546,12 +22546,12 @@ UPDATE tasks SET
         ]
     }'
 WHERE id = 55;
--- PLT
+-- PLT (version 1)
 UPDATE tasks SET
     from_platform = "PSHARPLAB",
     task_type = "EXPERIMENTAL",
-    name = "Probabilistic Learning Task",
-    description = "This task is a probablistic learning task based on the reinforcement learning model. The current version is based on the paper by Frank, Woroch and Curran. (2005). Neuron, 47(4), 495-501.",
+    name = "Probabilistic Learning Task (VERSION 1)",
+    description = "This task is a probablistic learning task based on the reinforcement learning model. The current version is based on the paper by Frank, Woroch and Curran. (2005). Neuron, 47(4), 495-501. To see the image set associated with this version of the PLT, visit this link: https://github.com/cognitive-neuroscience/axon/tree/master/src/assets/images/stimuli/version1/plt",
     external_url = "",
     config = '{
         "taskConfig": {
@@ -24393,7 +24393,7 @@ UPDATE tasks SET
         ]
     }'
 WHERE id = 63;
--- PLT Questionnaire
+-- POST PLT Questionnaire (version 1)
 UPDATE tasks SET
     from_platform = "PSHARPLAB",
     task_type = "QUESTIONNAIRE",
@@ -24417,12 +24417,12 @@ UPDATE tasks SET
                             "radiobuttonPresentation": "horizontal",
                             "key": "image_least_likely_correct",
                             "radioButtonImageOptions": [
-                                "/assets/images/stimuli/plt/image1.jpg",
-                                "/assets/images/stimuli/plt/image2.jpg",
-                                "/assets/images/stimuli/plt/image3.jpg",
-                                "/assets/images/stimuli/plt/image4.jpg",
-                                "/assets/images/stimuli/plt/image5.jpg",
-                                "/assets/images/stimuli/plt/image6.jpg"
+                                "/assets/images/stimuli/plt/version1/image1.jpg",
+                                "/assets/images/stimuli/plt/version1/image2.jpg",
+                                "/assets/images/stimuli/plt/version1/image3.jpg",
+                                "/assets/images/stimuli/plt/version1/image4.jpg",
+                                "/assets/images/stimuli/plt/version1/image5.jpg",
+                                "/assets/images/stimuli/plt/version1/image6.jpg"
                             ],
                             "multipleChoiceOptions": [
                                 {
@@ -24449,7 +24449,9 @@ UPDATE tasks SET
                                     "label": "6",
                                     "value": "image6"
                                 }
-                            ],
+                            ]
+                        },
+                        {
                             "questionType": "radiobuttons",
                             "title": "Which image was <b>MOST</b> likely to be correct?",
                             "validation": {
@@ -24458,12 +24460,12 @@ UPDATE tasks SET
                             "radiobuttonPresentation": "horizontal",
                             "key": "image_most_likely_correct",
                             "radioButtonImageOptions": [
-                                "/assets/images/stimuli/plt/image1.jpg",
-                                "/assets/images/stimuli/plt/image2.jpg",
-                                "/assets/images/stimuli/plt/image3.jpg",
-                                "/assets/images/stimuli/plt/image4.jpg",
-                                "/assets/images/stimuli/plt/image5.jpg",
-                                "/assets/images/stimuli/plt/image6.jpg"
+                                "/assets/images/stimuli/plt/version1/image1.jpg",
+                                "/assets/images/stimuli/plt/version1/image2.jpg",
+                                "/assets/images/stimuli/plt/version1/image3.jpg",
+                                "/assets/images/stimuli/plt/version1/image4.jpg",
+                                "/assets/images/stimuli/plt/version1/image5.jpg",
+                                "/assets/images/stimuli/plt/version1/image6.jpg"
                             ],
                             "multipleChoiceOptions": [
                                 {
@@ -24498,3 +24500,256 @@ UPDATE tasks SET
         ]
     }'
 WHERE id = 64;
+-- PLT (version 2)
+UPDATE tasks SET
+    from_platform = "PSHARPLAB",
+    task_type = "EXPERIMENTAL",
+    name = "Probabilistic Learning Task (VERSION 2)",
+    description = "This task is a probablistic learning task based on the reinforcement learning model. The current version is based on the paper by Frank, Woroch and Curran. (2005). Neuron, 47(4), 495-501. To see the image set associated with this version of the PLT, visit this link: https://github.com/cognitive-neuroscience/axon/tree/master/src/assets/images/stimuli/version2/plt",
+    external_url = "",
+    config = '{
+        "taskConfig": {
+            "version": 2
+        },
+        "metadata": [
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": "Welcome to the pairs game",
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": "Thank you for participating and welcome to the pairs game. Click \\"START\\" to get started."
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": "MORE INSTRUCTIONS WILL BE INSERTED HERE IN THE FUTURE"
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": true,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "PLTCOMPONENT",
+                "componentConfig": {
+                    "isPractice": true,
+                    "maxResponseTime": 4000,
+                    "phase": "practice-phase",
+                    "interTrialDelay": 0,
+                    "durationFeedbackPresented": 1000,
+                    "durationFixationJitteredLowerBound": 500,
+                    "durationFixationJitteredUpperBound": 500,
+                    "showFeedbackAfterEachTrial": true,
+                    "stimuliConfig": {
+                        "type": "generated",
+                        "stimuli": null
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": "Second block",
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": "Congratulations, you finished the practice."
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": "Now you will be doing some more trials with different pairs."
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": true,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "PLTCOMPONENT",
+                "componentConfig": {
+                    "isPractice": false,
+                    "maxResponseTime": 4000,
+                    "phase": "training-phase",
+                    "interTrialDelay": 0,
+                    "durationFeedbackPresented": 1000,
+                    "durationFixationJitteredLowerBound": 300,
+                    "durationFixationJitteredUpperBound": 800,
+                    "showFeedbackAfterEachTrial": true,
+                    "stimuliConfig": {
+                        "type": "generated",
+                        "stimuli": null
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": "Second block",
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": "Congratulations, you finished the block."
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": "Finally, you will be doing even more trials with different pairs."
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": true,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "PLTCOMPONENT",
+                "componentConfig": {
+                    "isPractice": false,
+                    "maxResponseTime": 4000,
+                    "phase": "test-phase",
+                    "interTrialDelay": 0,
+                    "durationFeedbackPresented": 1000,
+                    "durationFixationJitteredLowerBound": 300,
+                    "durationFixationJitteredUpperBound": 800,
+                    "showFeedbackAfterEachTrial": false,
+                    "stimuliConfig": {
+                        "type": "generated",
+                        "stimuli": null
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": "Finished",
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": "Congratulations, you completed the task."
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": false,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
+                }
+            }
+        ]
+    }'
+WHERE id = 65;
+-- POST PLT Questionnaire (version 2)
+UPDATE tasks SET
+    from_platform = "PSHARPLAB",
+    task_type = "QUESTIONNAIRE",
+    name = "POST PLT Questionnaire (FOR PLT VERSION 2)",
+    description = "Questionnaire asking the participant what they thought was the most/least likely stimulus to be correct",
+    external_url = "",
+    config = '{
+        "taskConfig": {},
+        "metadata": [
+            {
+                "componentName": "QUESTIONNAIRECOMPONENT",
+                "componentConfig": {
+                    "title": "Questionnaire",
+                    "questions": [
+                        {
+                            "questionType": "radiobuttons",
+                            "title": "Which image was <b>LEAST</b> likely to be correct?",
+                            "validation": {
+                                "required": true
+                            },
+                            "radiobuttonPresentation": "horizontal",
+                            "key": "image_least_likely_correct",
+                            "radioButtonImageOptions": [
+                                "/assets/images/stimuli/plt/version2/image1.jpg",
+                                "/assets/images/stimuli/plt/version2/image2.jpg",
+                                "/assets/images/stimuli/plt/version2/image3.jpg",
+                                "/assets/images/stimuli/plt/version2/image4.jpg",
+                                "/assets/images/stimuli/plt/version2/image5.jpg",
+                                "/assets/images/stimuli/plt/version2/image6.jpg"
+                            ],
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": "1",
+                                    "value": "image1"
+                                },
+                                {
+                                    "label": "2",
+                                    "value": "image2"
+                                },
+                                {
+                                    "label": "3",
+                                    "value": "image3"
+                                },
+                                {
+                                    "label": "4",
+                                    "value": "image4"
+                                },
+                                {
+                                    "label": "5",
+                                    "value": "image5"
+                                },
+                                {
+                                    "label": "6",
+                                    "value": "image6"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "radiobuttons",
+                            "title": "Which image was <b>MOST</b> likely to be correct?",
+                            "validation": {
+                                "required": true
+                            },
+                            "radiobuttonPresentation": "horizontal",
+                            "key": "image_most_likely_correct",
+                            "radioButtonImageOptions": [
+                                "/assets/images/stimuli/plt/version2/image1.jpg",
+                                "/assets/images/stimuli/plt/version2/image2.jpg",
+                                "/assets/images/stimuli/plt/version2/image3.jpg",
+                                "/assets/images/stimuli/plt/version2/image4.jpg",
+                                "/assets/images/stimuli/plt/version2/image5.jpg",
+                                "/assets/images/stimuli/plt/version2/image6.jpg"
+                            ],
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": "1",
+                                    "value": "image1"
+                                },
+                                {
+                                    "label": "2",
+                                    "value": "image2"
+                                },
+                                {
+                                    "label": "3",
+                                    "value": "image3"
+                                },
+                                {
+                                    "label": "4",
+                                    "value": "image4"
+                                },
+                                {
+                                    "label": "5",
+                                    "value": "image5"
+                                },
+                                {
+                                    "label": "6",
+                                    "value": "image6"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    }'
+WHERE id = 66;
