@@ -16931,386 +16931,386 @@ UPDATE tasks SET
     description = "",
     external_url = "",
     config = '{
-    "taskConfig": {},
-    "metadata": [
-        {
-            "componentName": "QUESTIONNAIRECOMPONENT",
-            "componentConfig": {
-                "title": {
-                    "en": "Questionnaire",
-                    "fr": "Le Questionnaire"
-                },
-                "questions":[
-                    {
-                        "questionType": "displayText",
-                        "title": {
-                            "en": "In the following you find a list of expressions that characterize different moods. Please take a look at the list, word by word, and mark for each word the answer that represents best the actual intensity of your mood status.",
-                            "fr": "Dans la prochaine partie, vous trouverez une liste des expressions qui caractérisent différentes émotions. Jetez un coup d''oeil à la liste, mot par mot, et marquez pour chaque mot la réponse qui représente le mieux l''intensité de votre état d''esprit actuellement."
+        "taskConfig": {},
+        "metadata": [
+            {
+                "componentName": "QUESTIONNAIRECOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "Questionnaire",
+                        "fr": "Le Questionnaire"
+                    },
+                    "questions":[
+                        {
+                            "questionType": "displayText",
+                            "title": {
+                                "en": "In the following you find a list of expressions that characterize different moods. Please take a look at the list, word by word, and mark for each word the answer that represents best the actual intensity of your mood status.",
+                                "fr": "Dans la prochaine partie, vous trouverez une liste des expressions qui caractérisent différentes émotions. Jetez un coup d''oeil à la liste, mot par mot, et marquez pour chaque mot la réponse qui représente le mieux l''intensité de votre état d''esprit actuellement."
+                            }
+                        },
+                        {
+                            "questionType": "displayText",
+                            "title": {
+                                "en": "Please pay attention to the following facts:",
+                                "fr": "Veuillez prêter attention aux faits suivants:"
+                            }
+                        },
+                        {
+                            "questionType": "displayText",
+                            "title": {
+                                "en": "- Within the list there are some attributes that possibly describe the same or similar moods. Please do not get irritated due to this fact, and judge each attribute irrespective of your answer to another attribute.<br />- Please judge only how you feel at this moment, and not how you normally or sometimes feel.<br/ >- If you have some difficulties in finding an answer, please mark the answer that fits best.",
+                                "fr": "- Dans la liste, certains attributs décrivent peut-être des humeurs identiques ou similaires. Ne soyez pas irrité par ce fait et jugez chaque attribut indépendamment de votre réponse à un autre attribut.<br />- Veuillez juger uniquement ce que vous ressentez en ce moment, et non ce que vous ressentez normalement ou parfois.<br />- Si vous avez de la difficulté à choisir une réponse, veuillez marquer la réponse qui vous convient le mieux."
+                            },
+                            "indent": 1
+                        },
+                        {
+                            "questionType": "displayText",
+                            "title": {
+                                "en": "Please judge each word and do not leave out a word.",
+                                "fr": "Veuillez juger chaque mot et n''omettez aucun mot."
+                            }
+                        },
+                        {
+                            "questionType": "slider",
+                            "title": {
+                                "en": "How CONTENT do you feel?",
+                                "fr": "À quel point vous sentez-vous COMBLÉ.E?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "How CONTENT do you feel?",
+                            "legend": [ 
+                                {
+                                    "en": "Definitely Not Feeling This",
+                                    "fr": "Je ne me sens pas du tout comme ça"
+                                },
+                                {
+                                    "en": "Extremely",
+                                    "fr": "Extrêmement"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "slider",
+                            "title": {
+                                "en": "How RESTLESS do you feel?",
+                                "fr": "À quel point vous sentez-vous AGITÉ.E?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "How RESTLESS do you feel?",
+                            "legend": [ 
+                                {
+                                    "en": "Definitely Not Feeling This",
+                                    "fr": "Je ne me sens pas du tout comme ça"
+                                },
+                                {
+                                    "en": "Extremely",
+                                    "fr": "Extrêmement"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "slider",
+                            "title": {
+                                "en": "How BAD do you feel?",
+                                "fr": "À quel point vous sentez-vous MAL?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "How BAD do you feel?",
+                            "legend": [ 
+                                {
+                                    "en": "Definitely Not Feeling This",
+                                    "fr": "Je ne me sens pas du tout comme ça"
+                                },
+                                {
+                                    "en": "Extremely",
+                                    "fr": "Extrêmement"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "slider",
+                            "title": {
+                                "en": "How COMPOSED do you feel?",
+                                "fr": "À quel point vous sentez-vous TRANQUILLE?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "How COMPOSED do you feel?",
+                            "legend": [ 
+                                {
+                                    "en": "Definitely Not Feeling This",
+                                    "fr": "Je ne me sens pas du tout comme ça"
+                                },
+                                {
+                                    "en": "Extremely",
+                                    "fr": "Extrêmement"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "slider",
+                            "title": {
+                                "en": "How GREAT do you feel?",
+                                "fr": "À quel point vous sentez-vous TRÈS BIEN?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "How GREAT do you feel?",
+                            "legend": [ 
+                                {
+                                    "en": "Definitely Not Feeling This",
+                                    "fr": "Je ne me sens pas du tout comme ça"
+                                },
+                                {
+                                    "en": "Extremely",
+                                    "fr": "Extrêmement"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "slider",
+                            "title": {
+                                "en": "How UNEASY do you feel?",
+                                "fr": "À quel point vous sentez-vous MAL À L''AISE"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "How UNEASY do you feel?",
+                            "legend": [ 
+                                {
+                                    "en": "Definitely Not Feeling This",
+                                    "fr": "Je ne me sens pas du tout comme ça"
+                                },
+                                {
+                                    "en": "Extremely",
+                                    "fr": "Extrêmement"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "slider",
+                            "title": {
+                                "en": "How UNCOMFORTABLE do you feel?",
+                                "fr": "À quel point vous sentez-vous INCONFORTABLE?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "How UNCOMFORTABLE do you feel?",
+                            "legend": [ 
+                                {
+                                    "en": "Definitely Not Feeling This",
+                                    "fr": "Je ne me sens pas du tout comme ça"
+                                },
+                                {
+                                    "en": "Extremely",
+                                    "fr": "Extrêmement"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "slider",
+                            "title": {
+                                "en": "How RELAXED do you feel?",
+                                "fr": "À quel point vous sentez-vous DÉTENDU.E?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "How RELAXED do you feel?",
+                            "legend": [ 
+                                {
+                                    "en": "Definitely Not Feeling This",
+                                    "fr": "Je ne me sens pas du tout comme ça"
+                                },
+                                {
+                                    "en": "Extremely",
+                                    "fr": "Extrêmement"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "slider",
+                            "title": {
+                                "en": "How GOOD do you feel?",
+                                "fr": "À quel point vous sentez-vous BIEN?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "How GOOD do you feel?",
+                            "legend": [ 
+                                {
+                                    "en": "Definitely Not Feeling This",
+                                    "fr": "Je ne me sens pas du tout comme ça"
+                                },
+                                {
+                                    "en": "Extremely",
+                                    "fr": "Extrêmement"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "slider",
+                            "title": {
+                                "en": "How AT EASE do you feel?",
+                                "fr": "À quel point vous sentez-vous À L''AISE?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "How AT EASE do you feel?",
+                            "legend": [ 
+                                {
+                                    "en": "Definitely Not Feeling This",
+                                    "fr": "Je ne me sens pas du tout comme ça"
+                                },
+                                {
+                                    "en": "Extremely",
+                                    "fr": "Extrêmement"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "slider",
+                            "title": {
+                                "en": "How UNHAPPY do you feel?",
+                                "fr": "À quel point vous sentez-vous MALHEUREUX.EUSE?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "How UNHAPPY do you feel?",
+                            "legend": [ 
+                                {
+                                    "en": "Definitely Not Feeling This",
+                                    "fr": "Je ne me sens pas du tout comme ça"
+                                },
+                                {
+                                    "en": "Extremely",
+                                    "fr": "Extrêmement"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "slider",
+                            "title": {
+                                "en": "How DISCONTENT do you feel?",
+                                "fr": "À quel point vous sentez-vous MÉCONTENT.E?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "How DISCONTENT do you feel?",
+                            "legend": [ 
+                                {
+                                    "en": "Definitely Not Feeling This",
+                                    "fr": "Je ne me sens pas du tout comme ça"
+                                },
+                                {
+                                    "en": "Extremely",
+                                    "fr": "Extrêmement"
+                                }
+                            ]
+                        },
+                                {
+                            "questionType": "slider",
+                            "title": {
+                                "en": "How TENSE do you feel?",
+                                "fr": "À quel point vous sentez-vous TENDU.E?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "How TENSE do you feel?",
+                            "legend": [ 
+                                {
+                                    "en": "Definitely Not Feeling This",
+                                    "fr": "Je ne me sens pas du tout comme ça"
+                                },
+                                {
+                                    "en": "Extremely",
+                                    "fr": "Extrêmement"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "slider",
+                            "title": {
+                                "en": "How HAPPY do you feel?",
+                                "fr": "À quel point vous sentez-vous HEUREUX.EUSE?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "How HAPPY do you feel?",
+                            "legend": [ 
+                                {
+                                    "en": "Definitely Not Feeling This",
+                                    "fr": "Je ne me sens pas du tout comme ça"
+                                },
+                                {
+                                    "en": "Extremely",
+                                    "fr": "Extrêmement"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "slider",
+                            "title": {
+                                "en": "How NERVOUS do you feel?",
+                                "fr": "À quel point vous sentez-vous NERVEUX.EUSE?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "How NERVOUS do you feel?",
+                            "legend": [ 
+                                {
+                                    "en": "Definitely Not Feeling This",
+                                    "fr": "Je ne me sens pas du tout comme ça"
+                                },
+                                {
+                                    "en": "Extremely",
+                                    "fr": "Extrêmement"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "slider",
+                            "title": {
+                                "en": "How CALM do you feel?",
+                                "fr": "À quel point vous sentez-vous CALME?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "How CALM do you feel?",
+                            "legend": [ 
+                                {
+                                    "en": "Definitely Not Feeling This",
+                                    "fr": "Je ne me sens pas du tout comme ça"
+                                },
+                                {
+                                    "en": "Extremely",
+                                    "fr": "Extrêmement"
+                                }
+                            ]
                         }
-                    },
-                    {
-                        "questionType": "displayText",
-                        "title": {
-                            "en": "Please pay attention to the following facts:",
-                            "fr": "Veuillez prêter attention aux faits suivants:"
-                        }
-                    },
-                    {
-                        "questionType": "displayText",
-                        "title": {
-                            "en": "- Within the list there are some attributes that possibly describe the same or similar moods. Please do not get irritated due to this fact, and judge each attribute irrespective of your answer to another attribute.<br />- Please judge only how you feel at this moment, and not how you normally or sometimes feel.<br/ >- If you have some difficulties in finding an answer, please mark the answer that fits best.",
-                            "fr": "- Dans la liste, certains attributs décrivent peut-être des humeurs identiques ou similaires. Ne soyez pas irrité par ce fait et jugez chaque attribut indépendamment de votre réponse à un autre attribut.<br />- Veuillez juger uniquement ce que vous ressentez en ce moment, et non ce que vous ressentez normalement ou parfois.<br />- Si vous avez de la difficulté à choisir une réponse, veuillez marquer la réponse qui vous convient le mieux."
-                        },
-                        "indent": 1
-                    },
-                    {
-                        "questionType": "displayText",
-                        "title": {
-                            "en": "Please judge each word and do not leave out a word.",
-                            "fr": "Veuillez juger chaque mot et n''omettez aucun mot."
-                        }
-                    },
-                    {
-                        "questionType": "slider",
-                        "title": {
-                            "en": "How CONTENT do you feel?",
-                            "fr": "À quel point vous sentez-vous COMBLÉ.E?"
-                        },
-                        "validation": {
-                            "required": true
-                        },
-                        "key": "How CONTENT do you feel?",
-                        "legend": [ 
-                            {
-                                "en": "Definitely Not Feeling This",
-                                "fr": "Je ne me sens pas du tout comme ça"
-                            },
-                            {
-                                "en": "Extremely",
-                                "fr": "Extrêmement"
-                            }
-                        ]
-                    },
-                    {
-                        "questionType": "slider",
-                        "title": {
-                            "en": "How RESTLESS do you feel?",
-                            "fr": "À quel point vous sentez-vous AGITÉ.E?"
-                        },
-                        "validation": {
-                            "required": true
-                        },
-                        "key": "How RESTLESS do you feel?",
-                        "legend": [ 
-                            {
-                                "en": "Definitely Not Feeling This",
-                                "fr": "Je ne me sens pas du tout comme ça"
-                            },
-                            {
-                                "en": "Extremely",
-                                "fr": "Extrêmement"
-                            }
-                        ]
-                    },
-                    {
-                        "questionType": "slider",
-                        "title": {
-                            "en": "How BAD do you feel?",
-                             "fr": "À quel point vous sentez-vous MAL?"
-                        },
-                        "validation": {
-                            "required": true
-                        },
-                        "key": "How BAD do you feel?",
-                        "legend": [ 
-                            {
-                                "en": "Definitely Not Feeling This",
-                                "fr": "Je ne me sens pas du tout comme ça"
-                            },
-                            {
-                                "en": "Extremely",
-                                "fr": "Extrêmement"
-                            }
-                        ]
-                    },
-                    {
-                        "questionType": "slider",
-                        "title": {
-                            "en": "How COMPOSED do you feel?",
-                            "fr": "À quel point vous sentez-vous TRANQUILLE?"
-                        },
-                        "validation": {
-                            "required": true
-                        },
-                        "key": "How COMPOSED do you feel?",
-                        "legend": [ 
-                            {
-                                "en": "Definitely Not Feeling This",
-                                "fr": "Je ne me sens pas du tout comme ça"
-                            },
-                            {
-                                "en": "Extremely",
-                                "fr": "Extrêmement"
-                            }
-                        ]
-                    },
-                    {
-                        "questionType": "slider",
-                        "title": {
-                            "en": "How GREAT do you feel?",
-                            "fr": "À quel point vous sentez-vous TRÈS BIEN?"
-                        },
-                        "validation": {
-                            "required": true
-                        },
-                        "key": "How GREAT do you feel?",
-                        "legend": [ 
-                            {
-                                "en": "Definitely Not Feeling This",
-                                "fr": "Je ne me sens pas du tout comme ça"
-                            },
-                            {
-                                "en": "Extremely",
-                                "fr": "Extrêmement"
-                            }
-                        ]
-                    },
-                    {
-                        "questionType": "slider",
-                        "title": {
-                            "en": "How UNEASY do you feel?",
-                            "fr": "À quel point vous sentez-vous MAL À L''AISE"
-                        },
-                        "validation": {
-                            "required": true
-                        },
-                        "key": "How UNEASY do you feel?",
-                        "legend": [ 
-                            {
-                                "en": "Definitely Not Feeling This",
-                                "fr": "Je ne me sens pas du tout comme ça"
-                            },
-                            {
-                                "en": "Extremely",
-                                "fr": "Extrêmement"
-                            }
-                        ]
-                    },
-                    {
-                        "questionType": "slider",
-                        "title": {
-                            "en": "How UNCOMFORTABLE do you feel?",
-                            "fr": "À quel point vous sentez-vous INCONFORTABLE?"
-                        },
-                        "validation": {
-                            "required": true
-                        },
-                        "key": "How UNCOMFORTABLE do you feel?",
-                        "legend": [ 
-                            {
-                                "en": "Definitely Not Feeling This",
-                                "fr": "Je ne me sens pas du tout comme ça"
-                            },
-                            {
-                                "en": "Extremely",
-                                "fr": "Extrêmement"
-                            }
-                        ]
-                    },
-                    {
-                        "questionType": "slider",
-                        "title": {
-                            "en": "How RELAXED do you feel?",
-                            "fr": "À quel point vous sentez-vous DÉTENDU.E?"
-                        },
-                        "validation": {
-                            "required": true
-                        },
-                        "key": "How RELAXED do you feel?",
-                        "legend": [ 
-                            {
-                                "en": "Definitely Not Feeling This",
-                                "fr": "Je ne me sens pas du tout comme ça"
-                            },
-                            {
-                                "en": "Extremely",
-                                "fr": "Extrêmement"
-                            }
-                        ]
-                    },
-                    {
-                        "questionType": "slider",
-                        "title": {
-                            "en": "How GOOD do you feel?",
-                            "fr": "À quel point vous sentez-vous BIEN?"
-                        },
-                        "validation": {
-                            "required": true
-                        },
-                        "key": "How GOOD do you feel?",
-                        "legend": [ 
-                            {
-                                "en": "Definitely Not Feeling This",
-                                "fr": "Je ne me sens pas du tout comme ça"
-                            },
-                            {
-                                "en": "Extremely",
-                                "fr": "Extrêmement"
-                            }
-                        ]
-                    },
-                    {
-                        "questionType": "slider",
-                        "title": {
-                            "en": "How AT EASE do you feel?",
-                            "fr": "À quel point vous sentez-vous À L''AISE?"
-                        },
-                        "validation": {
-                            "required": true
-                        },
-                        "key": "How AT EASE do you feel?",
-                        "legend": [ 
-                            {
-                                "en": "Definitely Not Feeling This",
-                                "fr": "Je ne me sens pas du tout comme ça"
-                            },
-                            {
-                                "en": "Extremely",
-                                "fr": "Extrêmement"
-                            }
-                        ]
-                    },
-                    {
-                        "questionType": "slider",
-                        "title": {
-                            "en": "How UNHAPPY do you feel?",
-                            "fr": "À quel point vous sentez-vous MALHEUREUX.EUSE?"
-                        },
-                        "validation": {
-                            "required": true
-                        },
-                        "key": "How UNHAPPY do you feel?",
-                        "legend": [ 
-                            {
-                                "en": "Definitely Not Feeling This",
-                                "fr": "Je ne me sens pas du tout comme ça"
-                            },
-                            {
-                                "en": "Extremely",
-                                "fr": "Extrêmement"
-                            }
-                        ]
-                    },
-                    {
-                        "questionType": "slider",
-                        "title": {
-                            "en": "How DISCONTENT do you feel?",
-                            "fr": "À quel point vous sentez-vous MÉCONTENT.E?"
-                        },
-                        "validation": {
-                            "required": true
-                        },
-                        "key": "How DISCONTENT do you feel?",
-                        "legend": [ 
-                            {
-                                "en": "Definitely Not Feeling This",
-                                "fr": "Je ne me sens pas du tout comme ça"
-                            },
-                            {
-                                "en": "Extremely",
-                                "fr": "Extrêmement"
-                            }
-                        ]
-                    },
-                            {
-                        "questionType": "slider",
-                        "title": {
-                            "en": "How TENSE do you feel?",
-                            "fr": "À quel point vous sentez-vous TENDU.E?"
-                        },
-                        "validation": {
-                            "required": true
-                        },
-                        "key": "How TENSE do you feel?",
-                        "legend": [ 
-                            {
-                                "en": "Definitely Not Feeling This",
-                                "fr": "Je ne me sens pas du tout comme ça"
-                            },
-                            {
-                                "en": "Extremely",
-                                "fr": "Extrêmement"
-                            }
-                        ]
-                    },
-                    {
-                        "questionType": "slider",
-                        "title": {
-                            "en": "How HAPPY do you feel?",
-                            "fr": "À quel point vous sentez-vous HEUREUX.EUSE?"
-                        },
-                        "validation": {
-                            "required": true
-                        },
-                        "key": "How HAPPY do you feel?",
-                        "legend": [ 
-                            {
-                                "en": "Definitely Not Feeling This",
-                                "fr": "Je ne me sens pas du tout comme ça"
-                            },
-                            {
-                                "en": "Extremely",
-                                "fr": "Extrêmement"
-                            }
-                        ]
-                    },
-                    {
-                        "questionType": "slider",
-                        "title": {
-                            "en": "How NERVOUS do you feel?",
-                            "fr": "À quel point vous sentez-vous NERVEUX.EUSE?"
-                        },
-                        "validation": {
-                            "required": true
-                        },
-                        "key": "How NERVOUS do you feel?",
-                        "legend": [ 
-                            {
-                                "en": "Definitely Not Feeling This",
-                                "fr": "Je ne me sens pas du tout comme ça"
-                            },
-                            {
-                                "en": "Extremely",
-                                "fr": "Extrêmement"
-                            }
-                        ]
-                    },
-                    {
-                        "questionType": "slider",
-                        "title": {
-                            "en": "How CALM do you feel?",
-                            "fr": "À quel point vous sentez-vous CALME?"
-                        },
-                        "validation": {
-                            "required": true
-                        },
-                        "key": "How CALM do you feel?",
-                        "legend": [ 
-                            {
-                                "en": "Definitely Not Feeling This",
-                                "fr": "Je ne me sens pas du tout comme ça"
-                            },
-                            {
-                                "en": "Extremely",
-                                "fr": "Extrêmement"
-                            }
-                        ]
-                    }
-                ]
+                    ]
+                }
             }
-        }
-    ]
-}'
+        ]
+    }'
 WHERE id = 39;
 -- Stress Study Post Test
 UPDATE tasks SET
@@ -22546,33 +22546,186 @@ UPDATE tasks SET
         ]
     }'
 WHERE id = 55;
--- PLT
+-- PLT (version 1)
 UPDATE tasks SET
     from_platform = "PSHARPLAB",
     task_type = "EXPERIMENTAL",
-    name = "Probabilistic Learning Task",
-    description = "This task is a probablistic learning task based on the reinforcement learning model. The current version is based on the paper by Frank, Woroch and Curran. (2005). Neuron, 47(4), 495-501.",
+    name = "Probabilistic Learning Task (VERSION 1)",
+    description = "This task is a probablistic learning task based on the reinforcement learning model. The current version is based on the paper by Frank, Woroch and Curran. (2005). Neuron, 47(4), 495-501. To see the image set associated with this version of the PLT, visit this link: https://github.com/cognitive-neuroscience/axon/tree/master/src/assets/images/stimuli/version1/plt",
     external_url = "",
     config = '{
-        "taskConfig": {},
+        "taskConfig": {
+            "version": 1
+        },
         "metadata": [
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Welcome to the pairs game",
+                    "title": {
+                        "en": "Welcome to the learning task!",
+                        "fr": "Bienvenue au Jeu d''apprentissage!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Thank you for participating and welcome to the pairs game. Click \\"START\\" to get started."
+                            "textContent": {
+                                "en": "Your goal is to find the symbols that give you the most <b>points<b/>.",
+                                "fr": "Votre objectif est de trouver les symboles qui offrent le plus de <b>points</b>."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "MORE INSTRUCTIONS WILL BE INSERTED HERE IN THE FUTURE"
+                            "textContent": {
+                                "en": "In this game, you will see sets of symbols.",
+                                "fr": "Dans ce jeu, vous verrez des paires de symboles."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "For example:",
+                                "fr": "Par exemple:"
+                            }
+                        },
+                        {
+                            "sectionType": "image-horizontal",
+                            "imagePath": "/assets/images/instructions/plt/example1.png"
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Some symbols will be <b>more likely</b> to give you <b>points</b> than others.",
+                                "fr": "Un des symboles sera <b>plus susceptible</b> de vous donner des <b>points</b> que l’autre."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": false,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": "",
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "You want to pick the symbol most likely to <b>give</b> you points.",
+                                "fr": "Votre objectif est de choisir le symbole qui est le plus susceptible de vous <b>donner</b> des points."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "To select a symbol on a given side of the screen, use the keys below:",
+                                "fr": "Pour choisir un symbole, utilisez les touches du clavier comme suit:"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "indent": 1,
+                                "en": "Z: LEFT SIDE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; M: RIGHT SIDE",
+                                "fr": "Z: Celui à gauche &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; M: Celui à droite"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": false,
+                        "previousDisabled": false,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": "",
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "At first, it will feel like you are guessing. With each guess, you will learn if you won points.",
+                                "fr": "Au début, vous aurez l’impression d’y aller au pif. Après chaque choix, on vous dira si vous avez gagné des points."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Over time, you will learn which symbols are better or worse.",
+                                "fr": "Avec le temps, vous apprendrez quels symboles sont les plus susceptibles de vous donner des points."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": false,
+                        "previousDisabled": false,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": "",
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "You will begin with a practice session",
+                                "fr": "Vous commencerez par une session d’entraînement."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Remember, to select a symbol on a given side of the screen, use the keys below:",
+                                "fr": "N’oubliez pas: pour choisir un symbole, utilisez les touches du clavier comme suit:"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Z: LEFT SIDE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; M: RIGHT SIDE",
+                                "fr": "Z: Celui à gauche &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; M: Celui à droite"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"START\\" to begin",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
                         }
                     ],
                     "buttons": {
                         "isStart": true,
-                        "previousDisabled": true,
+                        "previousDisabled": false,
                         "nextDisabled": false
                     }
                 }
@@ -22597,20 +22750,84 @@ UPDATE tasks SET
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Second block",
+                    "title": {
+                        "en": "Well done!",
+                        "fr": "Bravo!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Congratulations, you finished the practice."
+                            "textContent": {
+                                "en": "You may have noticed that one of the symbols was more likely to <b>give you points.</b>",
+                                "fr": "Vous avez peut-être remarqué que l’un des symboles vous donnait plus souvent des points que l’autre."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Now you will be doing some more trials with different pairs."
+                            "textContent": {
+                                "en": "But this was not always the case. Sometimes it gave you none, but it was still the better symbol because it gave you points <b>most often</b>.",
+                                "fr": "Mais cela n’était pas toujours le cas. Parfois il ne vous donnait rien, mais c’était quand-même le meilleur des deux parce qu’il vous donnait des points le plus souvent."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": false,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": "",
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "The real game is similar to the practice except you will see 3 pairs of symbols.",
+                                "fr": "Le vrai jeu est similaire à l’entraînement sauf que vous verrez trois paires de symboles."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Remember: some symbols will be <b>BETTER</b>, but even these symbols will still not always give you what you want.",
+                                "fr": "N’oubliez pas: certains symboles offriront plus souvent des points, mais même ces symboles-là ne vous donneront pas toujours ce que vous voulez."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Use buttons:",
+                                "fr": "Utilisez les touches:"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Z (Left) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; M (Right)",
+                                "fr": "Z (Gauche) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; M (Droite)"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"START\\" to begin",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
                         }
                     ],
                     "buttons": {
                         "isStart": true,
-                        "previousDisabled": true,
+                        "previousDisabled": false,
                         "nextDisabled": false
                     }
                 }
@@ -22635,20 +22852,91 @@ UPDATE tasks SET
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Second block",
+                    "title": {
+                        "en": "Well done!",
+                        "fr": "Bravo!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Congratulations, you finished the block."
+                            "textContent": {
+                                "en": "The next part of this game is the same except you will no longer receive feedback.",
+                                "fr": "La prochaine étape du jeu est pareille sauf que vous ne recevrez plus de ‘feedback’."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Finally, you will be doing even more trials with different pairs."
+                            "textContent": {
+                                "en": "Use what you just learned to pick the symbol most likely to give you points.",
+                                "fr": "Utilisez ce que vous venez d’apprendre à propos des symboles pour choisir celui qui est le plus susceptible de vous offrir des points."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": false,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": "",
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "You will see the same symbols again though they may sometimes appear in different combinations.",
+                                "fr": "Vous verrez à nouveau les mêmes symboles, sauf que les paires seront parfois réarrangées."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Reminder: pick the symbol that is the most <b>LIKELY</b> to <b>give you points</b>",
+                                "fr": "N’oubliez pas: choisissez le symbole le plus susceptible d’offrir de des points."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Use buttons:",
+                                "fr": "Utilisez les touches:"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Z (Left) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; M (Right)",
+                                "fr": "Z (Gauche) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; M (Droite)"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "If you are unsure, go with your gut feeling.",
+                                "fr": "Si vous n’êtes pas sûr.e, allez-y avec votre instinct."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"START\\" to begin",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
                         }
                     ],
                     "buttons": {
                         "isStart": true,
-                        "previousDisabled": true,
+                        "previousDisabled": false,
                         "nextDisabled": false
                     }
                 }
@@ -22673,11 +22961,17 @@ UPDATE tasks SET
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Finished",
+                    "title": {
+                        "en": "Well done!",
+                        "fr": "Bravo!"
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "Congratulations, you completed the task."
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -24391,3 +24685,681 @@ UPDATE tasks SET
         ]
     }'
 WHERE id = 63;
+-- POST PLT Questionnaire (version 1)
+UPDATE tasks SET
+    from_platform = "PSHARPLAB",
+    task_type = "QUESTIONNAIRE",
+    name = "POST PLT Questionnaire (FOR PLT VERSION 1)",
+    description = "Questionnaire asking the participant what they thought was the most/least likely stimulus to be correct",
+    external_url = "",
+    config = '{
+        "taskConfig": {},
+        "metadata": [
+            {
+                "componentName": "QUESTIONNAIRECOMPONENT",
+                "componentConfig": {
+                    "title": "Questionnaire",
+                    "questions": [
+                        {
+                            "questionType": "displayText",
+                            "title": {
+                                "en": "Now think about the symbols you saw",
+                                "fr": "Pensez aux symboles que vous avez vus."
+                            }
+                        },
+                        {
+                            "questionType": "radiobuttons",
+                            "title": {
+                                "en": "Which image was <b>LEAST</b> likely to be correct?",
+                                "fr": "Quel symbole était le <b>MOINS</b> susceptible de vous offrir des points?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "radiobuttonPresentation": "horizontal",
+                            "key": "image_least_likely_correct",
+                            "radioButtonImageOptions": [
+                                "/assets/images/stimuli/plt/version1/image1.jpg",
+                                "/assets/images/stimuli/plt/version1/image2.jpg",
+                                "/assets/images/stimuli/plt/version1/image3.jpg",
+                                "/assets/images/stimuli/plt/version1/image4.jpg",
+                                "/assets/images/stimuli/plt/version1/image5.jpg",
+                                "/assets/images/stimuli/plt/version1/image6.jpg"
+                            ],
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": "1",
+                                    "value": "image1"
+                                },
+                                {
+                                    "label": "2",
+                                    "value": "image2"
+                                },
+                                {
+                                    "label": "3",
+                                    "value": "image3"
+                                },
+                                {
+                                    "label": "4",
+                                    "value": "image4"
+                                },
+                                {
+                                    "label": "5",
+                                    "value": "image5"
+                                },
+                                {
+                                    "label": "6",
+                                    "value": "image6"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "radiobuttons",
+                            "title": {
+                                "en": "Which image was <b>MOST</b> likely to be correct?",
+                                "fr": "Quel symbole était le <b>PLUS</b> susceptible de vous offrir des points?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "radiobuttonPresentation": "horizontal",
+                            "key": "image_most_likely_correct",
+                            "radioButtonImageOptions": [
+                                "/assets/images/stimuli/plt/version1/image1.jpg",
+                                "/assets/images/stimuli/plt/version1/image2.jpg",
+                                "/assets/images/stimuli/plt/version1/image3.jpg",
+                                "/assets/images/stimuli/plt/version1/image4.jpg",
+                                "/assets/images/stimuli/plt/version1/image5.jpg",
+                                "/assets/images/stimuli/plt/version1/image6.jpg"
+                            ],
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": "1",
+                                    "value": "image1"
+                                },
+                                {
+                                    "label": "2",
+                                    "value": "image2"
+                                },
+                                {
+                                    "label": "3",
+                                    "value": "image3"
+                                },
+                                {
+                                    "label": "4",
+                                    "value": "image4"
+                                },
+                                {
+                                    "label": "5",
+                                    "value": "image5"
+                                },
+                                {
+                                    "label": "6",
+                                    "value": "image6"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    }'
+WHERE id = 64;
+-- PLT (version 2)
+UPDATE tasks SET
+    from_platform = "PSHARPLAB",
+    task_type = "EXPERIMENTAL",
+    name = "Probabilistic Learning Task (VERSION 2)",
+    description = "This task is a probablistic learning task based on the reinforcement learning model. The current version is based on the paper by Frank, Woroch and Curran. (2005). Neuron, 47(4), 495-501. To see the image set associated with this version of the PLT, visit this link: https://github.com/cognitive-neuroscience/axon/tree/master/src/assets/images/stimuli/version2/plt",
+    external_url = "",
+    config = '{
+        "taskConfig": {
+            "version": 1
+        },
+        "metadata": [
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "Welcome to the learning task!",
+                        "fr": "Bienvenue au Jeu d''apprentissage!"
+                    },
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Your goal is to find the symbols that give you the most <b>points<b/>.",
+                                "fr": "Votre objectif est de trouver les symboles qui offrent le plus de <b>points</b>."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "In this game, you will see sets of symbols.",
+                                "fr": "Dans ce jeu, vous verrez des paires de symboles."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "For example:",
+                                "fr": "Par exemple:"
+                            }
+                        },
+                        {
+                            "sectionType": "image-horizontal",
+                            "imagePath": "/assets/images/instructions/plt/example1.png"
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Some symbols will be <b>more likely</b> to give you <b>points</b> than others.",
+                                "fr": "Un des symboles sera <b>plus susceptible</b> de vous donner des <b>points</b> que l’autre."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": false,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": "",
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "You want to pick the symbol most likely to <b>give</b> you points.",
+                                "fr": "Votre objectif est de choisir le symbole qui est le plus susceptible de vous <b>donner</b> des points."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "To select a symbol on a given side of the screen, use the keys below:",
+                                "fr": "Pour choisir un symbole, utilisez les touches du clavier comme suit:"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "indent": 1,
+                                "en": "Z: LEFT SIDE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; M: RIGHT SIDE",
+                                "fr": "Z: Celui à gauche &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; M: Celui à droite"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": false,
+                        "previousDisabled": false,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": "",
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "At first, it will feel like you are guessing. With each guess, you will learn if you won points.",
+                                "fr": "Au début, vous aurez l’impression d’y aller au pif. Après chaque choix, on vous dira si vous avez gagné des points."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Over time, you will learn which symbols are better or worse.",
+                                "fr": "Avec le temps, vous apprendrez quels symboles sont les plus susceptibles de vous donner des points."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": false,
+                        "previousDisabled": false,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": "",
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "You will begin with a practice session",
+                                "fr": "Vous commencerez par une session d’entraînement."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Remember, to select a symbol on a given side of the screen, use the keys below:",
+                                "fr": "N’oubliez pas: pour choisir un symbole, utilisez les touches du clavier comme suit:"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Z: LEFT SIDE &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; M: RIGHT SIDE",
+                                "fr": "Z: Celui à gauche &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; M: Celui à droite"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"START\\" to begin",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": true,
+                        "previousDisabled": false,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "PLTCOMPONENT",
+                "componentConfig": {
+                    "isPractice": true,
+                    "maxResponseTime": 4000,
+                    "phase": "practice-phase",
+                    "interTrialDelay": 0,
+                    "durationFeedbackPresented": 1000,
+                    "durationFixationJitteredLowerBound": 500,
+                    "durationFixationJitteredUpperBound": 500,
+                    "showFeedbackAfterEachTrial": true,
+                    "stimuliConfig": {
+                        "type": "generated",
+                        "stimuli": null
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "Well done!",
+                        "fr": "Bravo!"
+                    },
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "You may have noticed that one of the symbols was more likely to <b>give you points.</b>",
+                                "fr": "Vous avez peut-être remarqué que l’un des symboles vous donnait plus souvent des points que l’autre."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "But this was not always the case. Sometimes it gave you none, but it was still the better symbol because it gave you points <b>most often</b>.",
+                                "fr": "Mais cela n’était pas toujours le cas. Parfois il ne vous donnait rien, mais c’était quand-même le meilleur des deux parce qu’il vous donnait des points le plus souvent."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": false,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": "",
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "The real game is similar to the practice except you will see 3 pairs of symbols.",
+                                "fr": "Le vrai jeu est similaire à l’entraînement sauf que vous verrez trois paires de symboles."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Remember: some symbols will be <b>BETTER</b>, but even these symbols will still not always give you what you want.",
+                                "fr": "N’oubliez pas: certains symboles offriront plus souvent des points, mais même ces symboles-là ne vous donneront pas toujours ce que vous voulez."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Use buttons:",
+                                "fr": "Utilisez les touches:"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Z (Left) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; M (Right)",
+                                "fr": "Z (Gauche) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; M (Droite)"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"START\\" to begin",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": true,
+                        "previousDisabled": false,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "PLTCOMPONENT",
+                "componentConfig": {
+                    "isPractice": false,
+                    "maxResponseTime": 4000,
+                    "phase": "training-phase",
+                    "interTrialDelay": 0,
+                    "durationFeedbackPresented": 1000,
+                    "durationFixationJitteredLowerBound": 300,
+                    "durationFixationJitteredUpperBound": 800,
+                    "showFeedbackAfterEachTrial": true,
+                    "stimuliConfig": {
+                        "type": "generated",
+                        "stimuli": null
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "Well done!",
+                        "fr": "Bravo!"
+                    },
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "The next part of this game is the same except you will no longer receive feedback.",
+                                "fr": "La prochaine étape du jeu est pareille sauf que vous ne recevrez plus de ‘feedback’."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Use what you just learned to pick the symbol most likely to give you points.",
+                                "fr": "Utilisez ce que vous venez d’apprendre à propos des symboles pour choisir celui qui est le plus susceptible de vous offrir des points."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": false,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": "",
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "You will see the same symbols again though they may sometimes appear in different combinations.",
+                                "fr": "Vous verrez à nouveau les mêmes symboles, sauf que les paires seront parfois réarrangées."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Reminder: pick the symbol that is the most <b>LIKELY</b> to <b>give you points</b>",
+                                "fr": "N’oubliez pas: choisissez le symbole le plus susceptible d’offrir de des points."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Use buttons:",
+                                "fr": "Utilisez les touches:"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Z (Left) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; M (Right)",
+                                "fr": "Z (Gauche) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; M (Droite)"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "If you are unsure, go with your gut feeling.",
+                                "fr": "Si vous n’êtes pas sûr.e, allez-y avec votre instinct."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"START\\" to begin",
+                                "fr": "Cliquez sur \\"START\\" pour commencer"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": true,
+                        "previousDisabled": false,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "PLTCOMPONENT",
+                "componentConfig": {
+                    "isPractice": false,
+                    "maxResponseTime": 4000,
+                    "phase": "test-phase",
+                    "interTrialDelay": 0,
+                    "durationFeedbackPresented": 1000,
+                    "durationFixationJitteredLowerBound": 300,
+                    "durationFixationJitteredUpperBound": 800,
+                    "showFeedbackAfterEachTrial": false,
+                    "stimuliConfig": {
+                        "type": "generated",
+                        "stimuli": null
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "Well done!",
+                        "fr": "Bravo!"
+                    },
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": false,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
+                }
+            }
+        ]
+    }'
+WHERE id = 65;
+-- POST PLT Questionnaire (version 2)
+UPDATE tasks SET
+    from_platform = "PSHARPLAB",
+    task_type = "QUESTIONNAIRE",
+    name = "POST PLT Questionnaire (FOR PLT VERSION 2)",
+    description = "Questionnaire asking the participant what they thought was the most/least likely stimulus to be correct",
+    external_url = "",
+    config = '{
+        "taskConfig": {},
+        "metadata": [
+            {
+                "componentName": "QUESTIONNAIRECOMPONENT",
+                "componentConfig": {
+                    "title": "Questionnaire",
+                    "questions": [
+                        {
+                            "questionType": "displayText",
+                            "title": {
+                                "en": "Now think about the symbols you saw",
+                                "fr": "Pensez aux symboles que vous avez vus."
+                            }
+                        },
+                        {
+                            "questionType": "radiobuttons",
+                            "title": {
+                                "en": "Which image was <b>LEAST</b> likely to be correct?",
+                                "fr": "Quel symbole était le <b>MOINS</b> susceptible de vous offrir des points?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "radiobuttonPresentation": "horizontal",
+                            "key": "image_least_likely_correct",
+                            "radioButtonImageOptions": [
+                                "/assets/images/stimuli/plt/version2/image1.jpg",
+                                "/assets/images/stimuli/plt/version2/image2.jpg",
+                                "/assets/images/stimuli/plt/version2/image3.jpg",
+                                "/assets/images/stimuli/plt/version2/image4.jpg",
+                                "/assets/images/stimuli/plt/version2/image5.jpg",
+                                "/assets/images/stimuli/plt/version2/image6.jpg"
+                            ],
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": "1",
+                                    "value": "image1"
+                                },
+                                {
+                                    "label": "2",
+                                    "value": "image2"
+                                },
+                                {
+                                    "label": "3",
+                                    "value": "image3"
+                                },
+                                {
+                                    "label": "4",
+                                    "value": "image4"
+                                },
+                                {
+                                    "label": "5",
+                                    "value": "image5"
+                                },
+                                {
+                                    "label": "6",
+                                    "value": "image6"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "radiobuttons",
+                            "title": {
+                                "en": "Which image was <b>MOST</b> likely to be correct?",
+                                "fr": "Quel symbole était le <b>PLUS</b> susceptible de vous offrir des points?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "radiobuttonPresentation": "horizontal",
+                            "key": "image_most_likely_correct",
+                            "radioButtonImageOptions": [
+                                "/assets/images/stimuli/plt/version2/image1.jpg",
+                                "/assets/images/stimuli/plt/version2/image2.jpg",
+                                "/assets/images/stimuli/plt/version2/image3.jpg",
+                                "/assets/images/stimuli/plt/version2/image4.jpg",
+                                "/assets/images/stimuli/plt/version2/image5.jpg",
+                                "/assets/images/stimuli/plt/version2/image6.jpg"
+                            ],
+                            "multipleChoiceOptions": [
+                                {
+                                    "label": "1",
+                                    "value": "image1"
+                                },
+                                {
+                                    "label": "2",
+                                    "value": "image2"
+                                },
+                                {
+                                    "label": "3",
+                                    "value": "image3"
+                                },
+                                {
+                                    "label": "4",
+                                    "value": "image4"
+                                },
+                                {
+                                    "label": "5",
+                                    "value": "image5"
+                                },
+                                {
+                                    "label": "6",
+                                    "value": "image6"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    }'
+WHERE id = 66;
