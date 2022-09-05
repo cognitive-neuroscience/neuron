@@ -520,7 +520,7 @@ VALUES
     "EXPERIMENTAL",
     "DSST 2",
     "Digit Symbol Substitution Task 2",
-    "https://run.pavlovia.org/Sharp_lab/digit-symbol-substitution-task-2/html/"
+    "https://run.pavlovia.org/Sharp_lab/digit-symbol-substitution-task-2/html/",
     '{}'
 ),
 -- PLT Pavlovia Task
