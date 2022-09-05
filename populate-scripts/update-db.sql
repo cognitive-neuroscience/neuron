@@ -1911,6 +1911,13 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
+                                "en": "If you see \\"BLUE\\" with green ink then you should respond \\"3\\"",
+                                "fr": "Si vous voyez \\"BLEU\\" (encre vert) vous devez répondre \\"3\\""
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
                                 "en": "Again, only the COLOR of the ink matters, NOT the word itself.",
                                 "fr": "N''oubliez pas: seule la COULEUR de l''encre compte, PAS le mot lui-même"
                             }
@@ -2864,7 +2871,7 @@ UPDATE tasks set
                             "sectionType": "text",
                             "textContent": {
                                 "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
-                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
+                                "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il inférieur ou supérieur à 5?"
                             }
                         },
                         {
@@ -13440,7 +13447,7 @@ UPDATE tasks set
                             "radiobuttonPresentation": "horizontal",
                             "title": {
                                 "en": "Can you choose \\"a little\\" if you are reading the questions?",
-                                "fr": "Pouvez-vous choisir « un peu » si vous lisez les questions?"
+                                "fr": "Pouvez-vous choisir « un peu » si vous lisez les questions?"
                             },
                             "validation": {
                                 "required":true
@@ -18462,8 +18469,8 @@ UPDATE tasks SET
                                 },
                                 {
                                     "label": {
-                                        "en": "I am not taking medication to treat any of the conditions listed above",
-                                        "fr": "Je prends aucun médicament pour les conditions mentionnées ci-dessus"
+                                        "en": "I am not taking medication to treat any of the conditions listed above/ I have not been diagnosed with any of the following conditions",
+                                        "fr": "Je prends aucun médicament pour les conditions mentionnées ci-dessus/ Je n''étais pas diagnostiqué.e par aucune de ces conditions"
                                     },
                                     "value": "I am not taking medication to treat any of the conditions listed above"
                                 }
@@ -23504,8 +23511,8 @@ UPDATE tasks SET
                                 },
                                 {
                                     "label": {
-                                        "en": "I am not taking medication to treat any of the conditions listed above",
-                                        "fr": "Je prends aucun médicament pour les conditions mentionnées ci-dessus"
+                                        "en": "I am not taking medication to treat any of the conditions listed above/ I have not been diagnosed with any of the following conditions",
+                                        "fr": "Je prends aucun médicament pour les conditions mentionnées ci-dessus/ Je n''étais pas diagnostiqué.e par aucune de ces conditions"
                                     },
                                     "value": "I am not taking medication to treat any of the conditions listed above"
                                 }
