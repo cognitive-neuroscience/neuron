@@ -22391,7 +22391,7 @@ WHERE id = 52;
 UPDATE tasks SET
     from_platform = "PAVLOVIA",
     task_type = "EXPERIMENTAL",
-    name = "PLT",
+    name = "PLT 1",
     description = "This task is a probablistic learning task based on the reinforcement learning model. The current version is based on the paper by Frank, Woroch and Curran. (2005). Neuron, 47(4), 495-501.",
     external_url = "https://run.pavlovia.org/Sharp_lab/probabilistic-learning-task/html",
     config = '{
@@ -25363,3 +25363,98 @@ UPDATE tasks SET
         ]
     }'
 WHERE id = 66;
+-- PAVLOVIA DSST 1 FR
+UPDATE tasks SET
+    from_platform = "PAVLOVIA",
+    task_type = "EXPERIMENTAL",
+    name = "DSST 1 FR",
+    description = "Pavlovia Digit Symbol Substitution Task 1 (FR)",
+    external_url = "",
+    config = '{
+        "taskConfig": {},
+        "metadata": [
+            {
+                "componentName": "EMBEDDEDPAGECOMPONENT",
+                "componentConfig": {
+                    "externalUrl":  "https://run.pavlovia.org/Sharp_lab/dsst-1-Fr/html"
+                }
+            }
+        ]
+    }'
+WHERE id = 67;
+-- PAVLOVIA DSST 2 FR
+UPDATE tasks SET
+    from_platform = "PAVLOVIA",
+    task_type = "EXPERIMENTAL",
+    name = "DSST 2 FR",
+    description = "Pavlovia Digit Symbol Substitution Task 2 (FR)",
+    external_url = "",
+    config = '{
+        "taskConfig": {},
+        "metadata": [
+            {
+                "componentName": "EMBEDDEDPAGECOMPONENT",
+                "componentConfig": {
+                    "externalUrl":  "https://run.pavlovia.org/Sharp_lab/dsst-2-fr/html"
+                }
+            }
+        ]
+    }'
+WHERE id = 68;
+-- PAVLOVIA Corsi FR
+UPDATE tasks SET
+    from_platform = "PAVLOVIA",
+    task_type = "EXPERIMENTAL",
+    name = "Corsi FR",
+    description = "Pavlovia Corsi FR",
+    external_url = "",
+    config = '{
+        "taskConfig": {},
+        "metadata": [
+            {
+                "componentName": "EMBEDDEDPAGECOMPONENT",
+                "componentConfig": {
+                    "externalUrl":  "https://run.pavlovia.org/Sharp_lab/corsi-fr/html"
+                }
+            }
+        ]
+    }'
+WHERE id = 69;
+-- PAVLOVIA PLT 1 FR
+UPDATE tasks SET
+    from_platform = "PAVLOVIA",
+    task_type = "EXPERIMENTAL",
+    name = "PLT 1 FR",
+    description = "Pavlovia PLT 1 FR",
+    external_url = "",
+    config = '{
+        "taskConfig": {},
+        "metadata": [
+            {
+                "componentName": "EMBEDDEDPAGECOMPONENT",
+                "componentConfig": {
+                    "externalUrl":  "https://run.pavlovia.org/Sharp_lab/plt-1-fr/html"
+                }
+            }
+        ]
+    }'
+WHERE id = 70;
+-- PAVLOVIA PLT 2 FR
+UPDATE tasks SET
+    from_platform = "PAVLOVIA",
+    task_type = "EXPERIMENTAL",
+    name = "PLT 2 FR",
+    description = "Pavlovia PLT 2 FR",
+    external_url = "",
+    config = '{
+        "taskConfig": {},
+        "metadata": [
+            {
+                "componentName": "EMBEDDEDPAGECOMPONENT",
+                "componentConfig": {
+                    "externalUrl":  "https://run.pavlovia.org/Sharp_lab/plt-2-fr/html"
+                }
+            }
+        ]
+    }'
+WHERE id = 71;
