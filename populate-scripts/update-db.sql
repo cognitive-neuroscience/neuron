@@ -25478,7 +25478,7 @@ UPDATE tasks set
                     "title": {
                         "en": "Welcome to the Number Game Part 1",
                         "fr": "Bienvenue au jeu des chiffres - Partie 1"
-                        },
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
