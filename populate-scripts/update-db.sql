@@ -25369,7 +25369,7 @@ UPDATE tasks SET
     task_type = "EXPERIMENTAL",
     name = "DSST 1 FR",
     description = "Pavlovia Digit Symbol Substitution Task 1 (FR)",
-    external_url = "",
+    external_url = "https://run.pavlovia.org/Sharp_lab/dsst-1-Fr/html",
     config = '{
         "taskConfig": {},
         "metadata": [
@@ -25388,7 +25388,7 @@ UPDATE tasks SET
     task_type = "EXPERIMENTAL",
     name = "DSST 2 FR",
     description = "Pavlovia Digit Symbol Substitution Task 2 (FR)",
-    external_url = "",
+    external_url = "https://run.pavlovia.org/Sharp_lab/dsst-2-fr/html",
     config = '{
         "taskConfig": {},
         "metadata": [
@@ -25407,7 +25407,7 @@ UPDATE tasks SET
     task_type = "EXPERIMENTAL",
     name = "Corsi FR",
     description = "Pavlovia Corsi FR",
-    external_url = "",
+    external_url = "https://run.pavlovia.org/Sharp_lab/corsi-fr/html",
     config = '{
         "taskConfig": {},
         "metadata": [
@@ -25426,7 +25426,7 @@ UPDATE tasks SET
     task_type = "EXPERIMENTAL",
     name = "PLT 1 FR",
     description = "Pavlovia PLT 1 FR",
-    external_url = "",
+    external_url = "https://run.pavlovia.org/Sharp_lab/plt-1-fr/html",
     config = '{
         "taskConfig": {},
         "metadata": [
@@ -25445,7 +25445,7 @@ UPDATE tasks SET
     task_type = "EXPERIMENTAL",
     name = "PLT 2 FR",
     description = "Pavlovia PLT 2 FR",
-    external_url = "",
+    external_url = "https://run.pavlovia.org/Sharp_lab/plt-2-fr/html",
     config = '{
         "taskConfig": {},
         "metadata": [
