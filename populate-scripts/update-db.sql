@@ -10647,7 +10647,7 @@ UPDATE tasks set
                             "questionType": "displayText",
                             "title": {
                                 "en": "1. How much do you think about the following behaviors (such as having trouble keeping thoughts out of your mind or feeling guilty)?",
-                                "fr": "1. À quel point pensez-vous aux comportements suivant (c’est-à-dire avoir de la difficulté à garder des pensées hors de votre esprit, ou vous sentir coupable en relation à ces activités)?"
+                                "fr": "1. À quel point pensez-vous aux comportements suivant (c''est-à-dire avoir de la difficulté à garder des pensées hors de votre esprit, ou vous sentir coupable en relation à ces activités)?"
                             }
                         },
                         {
@@ -10703,7 +10703,7 @@ UPDATE tasks set
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "<b>Sex?</b> <br /> Making sexual demads on others, promiscuity, prostitution, change in sexual orientation, masturbation, internet and telephone sexual activities, pornography",
+                                "en": "<b>Sex?</b> <br /> Making sexual demands on others, promiscuity, prostitution, change in sexual orientation, masturbation, internet and telephone sexual activities, pornography",
                                 "fr": "<b>Sexe?</b> <br /> Faire des demandes sexuelles à autrui, promiscuité, prostitution, changement d''orientation sexuelle, masturbation, activités sexuelles sur Internet et par téléphone, pornographie"
                             },
                             "validation": {
@@ -10990,6 +10990,13 @@ UPDATE tasks set
                                         "fr": "Très souvent"
                                     },
                                     "value": "very often"
+                                },
+                                {	
+                                    "label": {	
+                                        "en": "Not diagnosed with Parkison''s",	
+                                        "fr": "Pas diagnostiqué avec Parkinson''s"	
+                                    },	
+                                    "value": "no parkinson''s" 	
                                 }
                             ]
                         },
@@ -11056,7 +11063,7 @@ UPDATE tasks set
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "<b>Sex?</b> <br /> Making sexual demads on others, promiscuity, prostitution, change in sexual orientation, masturbation, internet and telephone sexual activities, pornography",
+                                "en": "<b>Sex?</b> <br /> Making sexual demands on others, promiscuity, prostitution, change in sexual orientation, masturbation, internet and telephone sexual activities, pornography",
                                 "fr": "<b>Sexe?</b> <br /> Faire des demandes sexuelles à autrui, promiscuité, prostitution, changement d''orientation sexuelle, masturbation, activités sexuelles sur Internet et par téléphone, pornographie"
                             },
                             "validation": {
@@ -11343,6 +11350,13 @@ UPDATE tasks set
                                         "fr": "Très souvent"
                                     },
                                     "value": "very often"
+                                },
+	                            {	
+                                    "label": {	
+                                        "en": "Not diagnosed with Parkison''s",	
+                                        "fr": "Pas diagnostiqué avec Parkinson''s"	
+                                    },	
+                                    "value": "no parkinson''s" 	
                                 }
                             ]
                         },
@@ -11409,7 +11423,7 @@ UPDATE tasks set
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "<b>Sex?</b> <br /> Making sexual demads on others, promiscuity, prostitution, change in sexual orientation, masturbation, internet and telephone sexual activities, pornography",
+                                "en": "<b>Sex?</b> <br /> Making sexual demands on others, promiscuity, prostitution, change in sexual orientation, masturbation, internet and telephone sexual activities, pornography",
                                 "fr": "<b>Sexe?</b> <br /> Faire des demandes sexuelles à autrui, promiscuité, prostitution, changement d''orientation sexuelle, masturbation, activités sexuelles sur Internet et par téléphone, pornographie"
                             },
                             "validation": {
@@ -11745,6 +11759,13 @@ UPDATE tasks set
                                         "fr": "Très souvent"
                                     },
                                     "value": "very often"
+                                },
+                                {
+                                    "label": {	
+                                        "en": "Not diagnosed with Parkison''s",	
+                                        "fr": "Pas diagnostiqué avec Parkinson''s"	
+                                    },	
+                                    "value": "no parkinson''s" 	
                                 }
                             ]
                         },
@@ -11755,7 +11776,7 @@ UPDATE tasks set
                             "questionType": "displayText",
                             "title": {
                                 "en": "4. Do you engage in activities specifically to continue the following behaviors (such as hiding what you are doing, lying, hoarding things, borrowing from others, accumulating debt, stealing, or being involved in illegal acts)?",
-                                "fr": "4. Vous livrez-vous à des comportements expressément pour poursuivre les activités suivantes (par exemple, cacher ce que vous faîtes, mentir, accumuler des choses, emprunter aux autres, accumuler des dettes, voler ou participer à des actes illicites)?"
+                                "fr": "4. Avez vous des moyens pour vous permettre spécifiquement de poursuivre les activités suivantes (comme cacher ce que vous faites, mentir, accumuler des choses, emprunter aux autres, accumuler des dettes, voler ou être impliqué dans des actes illégaux)?"
                             }
                         },
                         {
@@ -11811,7 +11832,7 @@ UPDATE tasks set
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "<b>Sex?</b> <br /> Making sexual demads on others, promiscuity, prostitution, change in sexual orientation, masturbation, internet and telephone sexual activities, pornography",
+                                "en": "<b>Sex?</b> <br /> Making sexual demands on others, promiscuity, prostitution, change in sexual orientation, masturbation, internet and telephone sexual activities, pornography",
                                 "fr": "<b>Sexe?</b> <br /> Faire des demandes sexuelles à autrui, promiscuité, prostitution, changement d''orientation sexuelle, masturbation, activités sexuelles sur Internet et par téléphone, pornographie"
                             },
                             "validation": {
@@ -12098,6 +12119,13 @@ UPDATE tasks set
                                         "fr": "Très souvent"
                                     },
                                     "value": "very often"
+                                },
+                                {	
+                                    "label": {	
+                                        "en": "Not diagnosed with Parkison''s",	
+                                        "fr": "Pas diagnostiqué avec Parkinson''s"	
+                                    },	
+                                    "value": "no parkinson''s" 	
                                 }
                             ]
                         }
