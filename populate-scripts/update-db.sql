@@ -10631,27 +10631,15 @@ UPDATE tasks set
                     "questions":[
                         {
                             "questionType": "displayText",
-                            "title": "Description Of Behaviors",
-                            "textContent": {
-                                "en": "A. <b>Gambling</b>: casinos, internet gambling lotteries, scratch tickets, betting, slot or poker machines <br /> B. <b>Sex</b>: making sexual demads on others, promiscuity, prostitution, change in sexual orientation, masturbation, internet and telephone sexual activities, pornography <br /> C. <b>Buying</b>: too much of the same thing or things you don’t need or use <br /> D. <b>Eating</b>: eating larger amounts or different types of food than in the past, more rapidly than normal, at different times (such as overnight), until feeling uncomfortable full or when not hungry <br /> E. <b>Hobbyism</b>: specific tasks, hobbies or other organized activities, such as writing, painting, gardening, repairing or dismantling things, collecting, computer use, working on projects, etc. <br /> F. <b>Punding</b>: repeating cetain simple motor activities, such as cleaning, tidying, handling, examining, sorting, ordering, collecting, hoarding, or arranging objects, etc. <br /> G. <b>Medication Use</b>: consistently taking too much of your Parkinson’s medications, or increasing on your own, without medical advice, your overall intake of PD medications",
-                                "fr": "A. <b>Jeu (''gambling'')</b>: casinos, loteries sur Internet, tickets à gratter, paris, machines à sous ou poker <br /> B. <b>Sexe</b>: faire des demandes sexuelles à autrui, promiscuité, prostitution, changement d''orientation sexuelle, masturbation, activités sexuelles sur Internet et par téléphone, pornographie <br /> C. <b>Achats compulsifs</b>: trop de la même chose ou des choses dont vous n''avez pas besoin ou que vous n''utilisez pas <br /> D. <b>Manger</b>: nt que d''habitude, à des moments différents (comme la nuit), jusqu''à ce que vous vous sentiez mal ou sans avoir faim <br /> E. <b>Hobbyisme - Exécuter des tâches ou pratiquer des passe-temps</b>: tâches spécifiques, passe-temps ou autres activités organisées, comme écrire, peindre, jardiner, réparer ou démonter des objets, collectionner, utiliser un ordinateur, travailler sur des projets, etc. <br /> F. <b> Répéter des activités simples</b>: répéter certaines activités motrices simples, comme nettoyer, ranger, manipuler, examiner, trier, ramasser, amasser, démonter des objets, etc. <br /> G. <b>Consommation de médicaments pour PD</b>: régulièrement prendre trop de médicaments pour le Parkinson ou augmenter vous-même, sans avis médical, votre consommation de médicaments pour le Parkinson"
+                            "title": {
+                                "en": "Frequency Of Behaviours <br /> <br /><b>Never</b>: not at all <br /><b>Rarely</b>: 1 day/week <br /><b>Sometimes</b>: 2-3 days/week <br /><b>Often</b>: 4-5 days/week <br /><b>Very Often</b>: 6-7 days/week <br />",
+                                "fr": "Fréquence des comportements <br /> <br /> <b>Jamais</b>: pas du tout <br /><b>Rarement</b>: 1 jour/semaine <br /><b>Parfois</b>: 2-3 jours/semaine <br /><b>Souvent</b>: 4-5 jours/semaine <br /><b>Très souvent</b>: 6-7 jours/semaine <br />"
                             }
                         },
                         {
                             "questionType": "displayText",
                             "title": {
-                                "en": "Frequency Of Behaviours",
-                                "fr": "Fréquence des comportements"
-                            },
-                            "textContent": {
-                                "en": "<b>Never</b>: not at all <br /><b>Rarely</b>: 1 day/week <br /><b>Sometimes</b>: 2-3 days/week <br /><b>Often</b>: 4-5 days/week <br /><b>Very Often</b>: 6-7 days/week <br />",
-                                "fr": "<b>Jamais</b>: pas du tout <br /><b>Rarement</b>: 1 jour/semaine <br /><b>Parfois</b>: 2-3 jours/semaine <br /><b>Souvent</b>: 4-5 jours/semaine <br /><b>Très souvent</b>: 6-7 jours/semaine <br />"
-                            }
-                        },
-                        {
-                            "questionType": "displayText",
-                            "title": {
-                                "en": "In the last 4 weeks...(see definitions above)",
+                                "en": "In the last 4 weeks...",
                                 "fr": "Dans les 4 dernières semaines..."
                             }
                         },
@@ -10665,9 +10653,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "textContent": {
-                                "en": "Gambling?",
-                                "fr": "Jeu (''gambling'')?"
+                            "title": {
+                                "en": "<b>Gambling?</b> <br /> Casinos, internet gambling lotteries, scratch tickets, betting, slot or poker machines",
+                                "fr": "<b>Jeu (''gambling'')?</b> <br /> Casinos, loteries sur Internet, tickets à gratter, paris, machines à sous ou poker"
                             },
                             "validation": {
                                 "required":true
@@ -10714,9 +10702,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "textContent": {
-                                "en": "Sex?",
-                                "fr": "Sexe?"
+                            "title": {
+                                "en": "<b>Sex?</b> <br /> Making sexual demads on others, promiscuity, prostitution, change in sexual orientation, masturbation, internet and telephone sexual activities, pornography",
+                                "fr": "<b>Sexe?</b> <br /> Faire des demandes sexuelles à autrui, promiscuité, prostitution, changement d''orientation sexuelle, masturbation, activités sexuelles sur Internet et par téléphone, pornographie"
                             },
                             "validation": {
                                 "required":true
@@ -10763,9 +10751,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "textContent": {
-                                "en": "Buying?",
-                                "fr": "Achats compulsifs?"
+                            "title": {
+                                "en": "<b>Buying?</b> <br /> Too much of the same thing or things you don’t need or use",
+                                "fr": "<b>Achats compulsifs?</b> <br /> Trop de la même chose ou des choses dont vous n''avez pas besoin ou que vous n''utilisez pas"
                             },
                             "validation": {
                                 "required":true
@@ -10812,9 +10800,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "textContent": {
-                                "en": "Eating?",
-                                "fr": "Manger?"
+                            "title": {
+                                "en": "<b>Eating?</b> <br /> Eating larger amounts or different types of food than in the past, more rapidly than normal, at different times (such as overnight), until feeling uncomfortable full or when not hungry",
+                                "fr": "<b>Manger?</b> <br /> Nt que d''habitude, à des moments différents (comme la nuit), jusqu''à ce que vous vous sentiez mal ou sans avoir faim"
                             },
                             "validation": {
                                 "required":true
@@ -10861,9 +10849,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "textContent": {
-                                "en": "Performing tasks or hobbies?",
-                                "fr": "Exécuter des tâches ou pratiquer des passe-temps?"
+                            "title": {
+                                "en": "<b>Performing tasks or hobbies?</b> <br /> Specific tasks, hobbies or other organized activities, such as writing, painting, gardening, repairing or dismantling things, collecting, computer use, working on projects, etc.",
+                                "fr": "<b>Exécuter des tâches ou pratiquer des passe-temps?</b> <br /> Tâches spécifiques, passe-temps ou autres activités organisées, comme écrire, peindre, jardiner, réparer ou démonter des objets, collectionner, utiliser un ordinateur, travailler sur des projets, etc."
                             },
                             "validation": {
                                 "required":true
@@ -10910,9 +10898,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "textContent": {
-                                "en": "Repeating simple activities?",
-                                "fr": "Répéter des activités simples?"
+                            "title": {
+                                "en": "<b>Repeating simple activities?</b> <br /> Repeating cetain simple motor activities, such as cleaning, tidying, handling, examining, sorting, ordering, collecting, hoarding, or arranging objects, etc.",
+                                "fr": "<b>Répéter des activités simples?</b> <br /> Répéter certaines activités motrices simples, comme nettoyer, ranger, manipuler, examiner, trier, ramasser, amasser, démonter des objets, etc."
                             },
                             "validation": {
                                 "required":true
@@ -10959,9 +10947,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "textContent": {
-                                "en": "Taking your PD medications?",
-                                "fr": "Prendre vos médicaments contre le Parkinson?"
+                            "title": {
+                                "en": "<b>Taking your PD medications?</b> <br /> Consistently taking too much of your Parkinson’s medications, or increasing on your own, without medical advice, your overall intake of PD medications",
+                                "fr": "<b>Prendre vos médicaments contre le Parkinson?</b> <br /> Régulièrement prendre trop de médicaments pour le Parkinson ou augmenter vous-même, sans avis médical, votre consommation de médicaments pour le Parkinson"
                             },
                             "validation": {
                                 "required":true
@@ -11018,9 +11006,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "textContent": {
-                                "en": "Gambling?",
-                                "fr": "Jeu (''gambling'')?"
+                            "title": {
+                                "en": "<b>Gambling?</b> <br /> Casinos, internet gambling lotteries, scratch tickets, betting, slot or poker machines",
+                                "fr": "<b>Jeu (''gambling'')?</b> <br /> Casinos, loteries sur Internet, tickets à gratter, paris, machines à sous ou poker"
                             },
                             "validation": {
                                 "required":true
@@ -11067,9 +11055,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "textContent": {
-                                "en": "Sex?",
-                                "fr": "Sexe?"
+                            "title": {
+                                "en": "<b>Sex?</b> <br /> Making sexual demads on others, promiscuity, prostitution, change in sexual orientation, masturbation, internet and telephone sexual activities, pornography",
+                                "fr": "<b>Sexe?</b> <br /> Faire des demandes sexuelles à autrui, promiscuité, prostitution, changement d''orientation sexuelle, masturbation, activités sexuelles sur Internet et par téléphone, pornographie"
                             },
                             "validation": {
                                 "required":true
@@ -11116,9 +11104,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "textContent": {
-                                "en": "Buying?",
-                                "fr": "Achats compulsifs?"
+                            "title": {
+                                "en": "<b>Buying?</b> <br /> Too much of the same thing or things you don’t need or use",
+                                "fr": "<b>Achats compulsifs?</b> <br /> Trop de la même chose ou des choses dont vous n''avez pas besoin ou que vous n''utilisez pas"
                             },
                             "validation": {
                                 "required":true
@@ -11165,9 +11153,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "textContent": {
-                                "en": "Eating?",
-                                "fr": "Manger?"
+                            "title": {
+                                "en": "<b>Eating?</b> <br /> Eating larger amounts or different types of food than in the past, more rapidly than normal, at different times (such as overnight), until feeling uncomfortable full or when not hungry",
+                                "fr": "<b>Manger?</b> <br /> Nt que d''habitude, à des moments différents (comme la nuit), jusqu''à ce que vous vous sentiez mal ou sans avoir faim"
                             },
                             "validation": {
                                 "required":true
@@ -11214,9 +11202,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "textContent": {
-                                "en": "Performing tasks or hobbies?",
-                                "fr": "Exécuter des tâches ou pratiquer des passe-temps?"
+                            "title": {
+                                "en": "<b>Performing tasks or hobbies?</b> <br /> Specific tasks, hobbies or other organized activities, such as writing, painting, gardening, repairing or dismantling things, collecting, computer use, working on projects, etc.",
+                                "fr": "<b>Exécuter des tâches ou pratiquer des passe-temps?</b> <br /> Tâches spécifiques, passe-temps ou autres activités organisées, comme écrire, peindre, jardiner, réparer ou démonter des objets, collectionner, utiliser un ordinateur, travailler sur des projets, etc."
                             },
                             "validation": {
                                 "required":true
@@ -11263,9 +11251,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "textContent": {
-                                "en": "Repeating simple activities?",
-                                "fr": "Répéter des activités simples?"
+                            "title": {
+                                "en": "<b>Repeating simple activities?</b> <br /> Repeating cetain simple motor activities, such as cleaning, tidying, handling, examining, sorting, ordering, collecting, hoarding, or arranging objects, etc.",
+                                "fr": "<b>Répéter des activités simples?</b> <br /> Répéter certaines activités motrices simples, comme nettoyer, ranger, manipuler, examiner, trier, ramasser, amasser, démonter des objets, etc."
                             },
                             "validation": {
                                 "required":true
@@ -11312,9 +11300,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "textContent": {
-                                "en": "Taking your PD medications?",
-                                "fr": "Prendre vos médicaments contre le Parkinson?"
+                            "title": {
+                                "en": "<b>Taking your PD medications?</b> <br /> Consistently taking too much of your Parkinson’s medications, or increasing on your own, without medical advice, your overall intake of PD medications",
+                                "fr": "<b>Prendre vos médicaments contre le Parkinson?</b> <br /> Régulièrement prendre trop de médicaments pour le Parkinson ou augmenter vous-même, sans avis médical, votre consommation de médicaments pour le Parkinson"
                             },
                             "validation": {
                                 "required":true
@@ -11371,9 +11359,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "textContent": {
-                                "en": "Gambling?",
-                                "fr": "Jeu (''gambling'')?"
+                            "title": {
+                                "en": "<b>Gambling?</b> <br /> Casinos, internet gambling lotteries, scratch tickets, betting, slot or poker machines",
+                                "fr": "<b>Jeu (''gambling'')?</b> <br /> Casinos, loteries sur Internet, tickets à gratter, paris, machines à sous ou poker"
                             },
                             "validation": {
                                 "required":true
@@ -11420,9 +11408,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "textContent": {
-                                "en": "Sex?",
-                                "fr": "Sexe?"
+                            "title": {
+                                "en": "<b>Sex?</b> <br /> Making sexual demads on others, promiscuity, prostitution, change in sexual orientation, masturbation, internet and telephone sexual activities, pornography",
+                                "fr": "<b>Sexe?</b> <br /> Faire des demandes sexuelles à autrui, promiscuité, prostitution, changement d''orientation sexuelle, masturbation, activités sexuelles sur Internet et par téléphone, pornographie"
                             },
                             "validation": {
                                 "required":true
@@ -11469,9 +11457,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "textContent": {
-                                "en": "Buying?",
-                                "fr": "Achats compulsifs?"
+                            "title": {
+                                "en": "<b>Buying?</b> <br /> Too much of the same thing or things you don’t need or use",
+                                "fr": "<b>Achats compulsifs?</b> <br /> Trop de la même chose ou des choses dont vous n''avez pas besoin ou que vous n''utilisez pas"
                             },
                             "validation": {
                                 "required":true
@@ -11518,9 +11506,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "textContent": {
-                                "en": "Eating?",
-                                "fr": "Manger?"
+                            "title": {
+                                "en": "<b>Eating?</b> <br /> Eating larger amounts or different types of food than in the past, more rapidly than normal, at different times (such as overnight), until feeling uncomfortable full or when not hungry",
+                                "fr": "<b>Manger?</b> <br /> Nt que d''habitude, à des moments différents (comme la nuit), jusqu''à ce que vous vous sentiez mal ou sans avoir faim"
                             },
                             "validation": {
                                 "required":true
@@ -11567,9 +11555,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "textContent": {
-                                "en": "Performing tasks or hobbies?",
-                                "fr": "Exécuter des tâches ou pratiquer des passe-temps?"
+                            "title": {
+                                "en": "<b>Performing tasks or hobbies?</b> <br /> Specific tasks, hobbies or other organized activities, such as writing, painting, gardening, repairing or dismantling things, collecting, computer use, working on projects, etc.",
+                                "fr": "<b>Exécuter des tâches ou pratiquer des passe-temps?</b> <br /> Tâches spécifiques, passe-temps ou autres activités organisées, comme écrire, peindre, jardiner, réparer ou démonter des objets, collectionner, utiliser un ordinateur, travailler sur des projets, etc."
                             },
                             "validation": {
                                 "required":true
@@ -11616,7 +11604,7 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "textContent": {
+                            "title": {
                                 "en": "Select \\"rarely\\" here",
                                 "fr": "Sélectionnez « rarement » ici"
                             },
@@ -11665,9 +11653,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "textContent": {
-                                "en": "Repeating simple activities?",
-                                "fr": "Répéter des activités simples?"
+                            "title": {
+                                "en": "<b>Repeating simple activities?</b> <br /> Repeating cetain simple motor activities, such as cleaning, tidying, handling, examining, sorting, ordering, collecting, hoarding, or arranging objects, etc.",
+                                "fr": "<b>Répéter des activités simples?</b> <br /> Répéter certaines activités motrices simples, comme nettoyer, ranger, manipuler, examiner, trier, ramasser, amasser, démonter des objets, etc."
                             },
                             "validation": {
                                 "required":true
@@ -11714,9 +11702,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "textContent": {
-                                "en": "Taking your PD medications?",
-                                "fr": "Prendre vos médicaments contre le Parkinson?"
+                            "title": {
+                                "en": "<b>Taking your PD medications?</b> <br /> Consistently taking too much of your Parkinson’s medications, or increasing on your own, without medical advice, your overall intake of PD medications",
+                                "fr": "<b>Prendre vos médicaments contre le Parkinson?</b> <br /> Régulièrement prendre trop de médicaments pour le Parkinson ou augmenter vous-même, sans avis médical, votre consommation de médicaments pour le Parkinson"
                             },
                             "validation": {
                                 "required":true
@@ -11773,9 +11761,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "textContent": {
-                                "en": "Gambling?",
-                                "fr": "Jeu (''gambling'')?"
+                            "title": {
+                                "en": "<b>Gambling?</b> <br /> Casinos, internet gambling lotteries, scratch tickets, betting, slot or poker machines",
+                                "fr": "<b>Jeu (''gambling'')?</b> <br /> Casinos, loteries sur Internet, tickets à gratter, paris, machines à sous ou poker"
                             },
                             "validation": {
                                 "required":true
@@ -11822,9 +11810,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "textContent": {
-                                "en": "Sex?",
-                                "fr": "Sexe?"
+                            "title": {
+                                "en": "<b>Sex?</b> <br /> Making sexual demads on others, promiscuity, prostitution, change in sexual orientation, masturbation, internet and telephone sexual activities, pornography",
+                                "fr": "<b>Sexe?</b> <br /> Faire des demandes sexuelles à autrui, promiscuité, prostitution, changement d''orientation sexuelle, masturbation, activités sexuelles sur Internet et par téléphone, pornographie"
                             },
                             "validation": {
                                 "required":true
@@ -11871,9 +11859,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "textContent": {
-                                "en": "Buying?",
-                                "fr": "Achats compulsifs?"
+                            "title": {
+                                "en": "<b>Buying?</b> <br /> Too much of the same thing or things you don’t need or use",
+                                "fr": "<b>Achats compulsifs?</b> <br /> Trop de la même chose ou des choses dont vous n''avez pas besoin ou que vous n''utilisez pas"
                             },
                             "validation": {
                                 "required":true
@@ -11920,9 +11908,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "textContent": {
-                                "en": "Eating?",
-                                "fr": "Manger?"
+                            "title": {
+                                "en": "<b>Eating?</b> <br /> Eating larger amounts or different types of food than in the past, more rapidly than normal, at different times (such as overnight), until feeling uncomfortable full or when not hungry",
+                                "fr": "<b>Manger?</b> <br /> Nt que d''habitude, à des moments différents (comme la nuit), jusqu''à ce que vous vous sentiez mal ou sans avoir faim"
                             },
                             "validation": {
                                 "required":true
@@ -11969,9 +11957,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "textContent": {
-                                "en": "Performing tasks or hobbies?",
-                                "fr": "Exécuter des tâches ou pratiquer des passe-temps?"
+                            "title": {
+                                "en": "<b>Performing tasks or hobbies?</b> <br /> Specific tasks, hobbies or other organized activities, such as writing, painting, gardening, repairing or dismantling things, collecting, computer use, working on projects, etc.",
+                                "fr": "<b>Exécuter des tâches ou pratiquer des passe-temps?</b> <br /> Tâches spécifiques, passe-temps ou autres activités organisées, comme écrire, peindre, jardiner, réparer ou démonter des objets, collectionner, utiliser un ordinateur, travailler sur des projets, etc."
                             },
                             "validation": {
                                 "required":true
@@ -12018,9 +12006,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "textContent": {
-                                "en": "Repeating simple activities?",
-                                "fr": "Répéter des activités simples?"
+                            "title": {
+                                "en": "<b>Repeating simple activities?</b> <br /> Repeating cetain simple motor activities, such as cleaning, tidying, handling, examining, sorting, ordering, collecting, hoarding, or arranging objects, etc.",
+                                "fr": "<b>Répéter des activités simples?</b> <br /> Répéter certaines activités motrices simples, comme nettoyer, ranger, manipuler, examiner, trier, ramasser, amasser, démonter des objets, etc."
                             },
                             "validation": {
                                 "required":true
@@ -12067,9 +12055,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "textContent": {
-                                "en": "Taking your PD medications?",
-                                "fr": "Prendre vos médicaments contre le Parkinson?"
+                            "title": {
+                                "en": "<b>Taking your PD medications?</b> <br /> Consistently taking too much of your Parkinson’s medications, or increasing on your own, without medical advice, your overall intake of PD medications",
+                                "fr": "<b>Prendre vos médicaments contre le Parkinson?</b> <br /> Régulièrement prendre trop de médicaments pour le Parkinson ou augmenter vous-même, sans avis médical, votre consommation de médicaments pour le Parkinson"
                             },
                             "validation": {
                                 "required":true
