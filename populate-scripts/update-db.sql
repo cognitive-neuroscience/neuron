@@ -10993,7 +10993,7 @@ UPDATE tasks set
                                 },
                                 {	
                                     "label": {	
-                                        "en": "Not diagnosed with Parkison''s",	
+                                        "en": "Not diagnosed with Parkinson''s",	
                                         "fr": "Pas diagnostiqué avec Parkinson''s"	
                                     },	
                                     "value": "no parkinson''s" 	
@@ -11353,7 +11353,7 @@ UPDATE tasks set
                                 },
 	                            {	
                                     "label": {	
-                                        "en": "Not diagnosed with Parkison''s",	
+                                        "en": "Not diagnosed with Parkinson''s",	
                                         "fr": "Pas diagnostiqué avec Parkinson''s"	
                                     },	
                                     "value": "no parkinson''s" 	
@@ -11762,7 +11762,7 @@ UPDATE tasks set
                                 },
                                 {
                                     "label": {	
-                                        "en": "Not diagnosed with Parkison''s",	
+                                        "en": "Not diagnosed with Parkinson''s",	
                                         "fr": "Pas diagnostiqué avec Parkinson''s"	
                                     },	
                                     "value": "no parkinson''s" 	
@@ -12122,7 +12122,7 @@ UPDATE tasks set
                                 },
                                 {	
                                     "label": {	
-                                        "en": "Not diagnosed with Parkison''s",	
+                                        "en": "Not diagnosed with Parkinson''s",	
                                         "fr": "Pas diagnostiqué avec Parkinson''s"	
                                     },	
                                     "value": "no parkinson''s" 	
