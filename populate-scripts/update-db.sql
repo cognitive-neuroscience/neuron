@@ -5613,6 +5613,13 @@ UPDATE tasks set
                     },
                     "sections": [
                         {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Reminder: If you need to take a longer break, please wait until the end of this game to close the window, otherwise your progress will not be saved. Thanks!",
+                                "fr": "Rappel: Si vous voulez prendre une plus longue pause, SVP attendre la fin du jeu pour fermer la fenêtre. Sinon, votre progrès ne sera pas sauvegardé. Merci!"
+                            }
+                        },
+                        {
                             "sectionType": "image-horizontal",
                             "imagePath": {
                                 "en": "/assets/images/instructions/smileyface/countdown_en.png",
@@ -5686,6 +5693,13 @@ UPDATE tasks set
                         "fr": "Vous pouvez prendre une pause avant de continuer. Nous vous demandons de limiter la pause à <b>2 minutes</b>."
                     },
                     "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Reminder: If you need to take a longer break, please wait until the end of this game to close the window, otherwise your progress will not be saved. Thanks!",
+                                "fr": "Rappel: Si vous voulez prendre une plus longue pause, SVP attendre la fin du jeu pour fermer la fenêtre. Sinon, votre progrès ne sera pas sauvegardé. Merci!"
+                            }
+                        },
                         {
                             "sectionType": "image-horizontal",
                             "imagePath": {
@@ -6124,6 +6138,13 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
+                                "en": "Reminder: If you need to take a longer break, please wait until the end of this game to close the window, otherwise your progress will not be saved. Thanks!",
+                                "fr": "Rappel: Si vous voulez prendre une plus longue pause, SVP attendre la fin du jeu pour fermer la fenêtre. Sinon, votre progrès ne sera pas sauvegardé. Merci!"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
                                 "en": "<b>Remember:</b>",
                                 "fr": "<b>Rappelez-vous:</b>"
                             }
@@ -6198,6 +6219,13 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
+                                "en": "Reminder: If you need to take a longer break, please wait until the end of this game to close the window, otherwise your progress will not be saved. Thanks!",
+                                "fr": "Rappel: Si vous voulez prendre une plus longue pause, SVP attendre la fin du jeu pour fermer la fenêtre. Sinon, votre progrès ne sera pas sauvegardé. Merci!"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
                                 "en": "<b>Remember:</b>",
                                 "fr": "<b>Rappelez-vous:</b>"
                             }
@@ -6267,6 +6295,13 @@ UPDATE tasks set
                             "textContent": {
                                 "en": "You may take a 30 second break",
                                 "fr": "Vous pouvez prendre une pause avant de passer au bloc suivant."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Reminder: If you need to take a longer break, please wait until the end of this game to close the window, otherwise your progress will not be saved. Thanks!",
+                                "fr": "Rappel: Si vous voulez prendre une plus longue pause, SVP attendre la fin du jeu pour fermer la fenêtre. Sinon, votre progrès ne sera pas sauvegardé. Merci!"
                             }
                         },
                         {
