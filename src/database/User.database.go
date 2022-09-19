@@ -309,6 +309,42 @@ func (u *UserRepository) GetStudyUsersByStudyId(studyId uint) ([]models.StudyUse
 	return studyUsers, nil
 }
 
+// GetAllStudyUsers gets all study users
+func (u *UserRepository) GetAllStudyUsers() ([]models.StudyUser, error) {
+	db := db.DB
+	studyUsers := []models.StudyUser{}
+	var getAllStudyUsers = `SELECT user_id, study_id, completion_code, current_task_index, register_date, due_date, has_accepted_consent, lang, data FROM study_users;`
+	rows, err := db.Query(getAllStudyUsers)
+	if err != nil {
+		axonlogger.ErrorLogger.Println("There was an error getting all study users from the DB", err)
+		return studyUsers, errors.New("there was an error retrieving study users")
+	}
+	defer rows.Close()
+	for rows.Next() {
+		studyUser := models.StudyUser{}
+		if err := rows.Scan(
+			&studyUser.UserID,
+			&studyUser.StudyID,
+			&studyUser.CompletionCode,
+			&studyUser.CurrentTaskIndex,
+			&studyUser.RegisterDate,
+			&studyUser.DueDate,
+			&studyUser.HasAcceptedConsent,
+			&studyUser.Lang,
+			&studyUser.Data,
+		); err != nil {
+			axonlogger.ErrorLogger.Println("Could not scan rows when retrieving all study users", err)
+			return studyUsers, errors.New("there was an error retrieving study users")
+		}
+		studyUsers = append(studyUsers, studyUser)
+	}
+	if err := rows.Err(); err != nil {
+		axonlogger.ErrorLogger.Println("Error when iterating over rows", err)
+		return studyUsers, errors.New("there was an error retrieving study users")
+	}
+	return studyUsers, nil
+}
+
 // GetGuests retrieves all users of Role Guest from the DB
 func (u *UserRepository) GetGuests() ([]models.User, error) {
 	db := db.DB

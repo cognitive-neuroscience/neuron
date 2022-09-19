@@ -256,3 +256,14 @@ func (u *UserController) GetUser(e echo.Context) error {
 	}
 	return common.SendHTTPOkWithBody(e, result)
 }
+
+// USER SUMMARY
+
+// GetStudyUserSummary retrieves a mapping of user IDs to the studyIDs that they have participated in
+func (u *UserController) GetStudyUserSummary(e echo.Context) error {
+	studyUserSummary, err := userServiceImpl.GetStudyUserSummary()
+	if err != nil {
+		axonlogger.ErrorLogger.Println("Could not get study user summary", err)
+	}
+	return common.SendHTTPOkWithBody(e, studyUserSummary)
+}

@@ -285,7 +285,34 @@ func (u *UserService) GetStudyUsersByStudyId(studyId string) ([]models.StudyUser
 		return []models.StudyUser{}, errors.New("there was an error getting study users")
 	}
 	return userRepositoryImpl.GetStudyUsersByStudyId(parsedId)
+}
 
+func(u *UserService) GetStudyUserSummary() ([]models.StudyUserSummary, error) {
+	allStudyUsers, err := userRepositoryImpl.GetAllStudyUsers()
+	if err != nil {
+		return nil, err
+	}
+
+	// create mapping of USERID to slice of study IDs
+	var userStudiesMap = make(map[uint][]uint)
+	for _, studyTask := range allStudyUsers {
+		if value, ok := userStudiesMap[studyTask.UserID]; ok {
+			userStudiesMap[studyTask.UserID] = append(value, studyTask.StudyID)
+		} else {
+			userStudiesMap[studyTask.UserID] = []uint{ studyTask.StudyID }
+		}
+	}
+
+	// turn the mapping into the study user summary model
+	var studyUserSummary = make([]models.StudyUserSummary, len(userStudiesMap))
+	index := 0
+	for key, studiesSlice := range userStudiesMap {
+		studyUserSummary[index].UserId = key
+		studyUserSummary[index].Studies = studiesSlice
+		index++
+	}
+
+	return studyUserSummary, nil
 }
 
 func isEmailValid(email string) bool {
