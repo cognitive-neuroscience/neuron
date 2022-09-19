@@ -44,6 +44,12 @@ type StudyUser struct {
 	Data               MapStringInterface `json:"data"`
 }
 
+// StudyUserSummary 
+type StudyUserSummary struct {
+	UserId 	uint 	`json:"userId"`
+	Studies []uint 	`json:"studies"`
+}
+
 // Scan implements the Scanner interface. sql --> value
 func (nt *NullTime) Scan(value interface{}) error {
 	nt.Time, nt.Valid = value.(time.Time)

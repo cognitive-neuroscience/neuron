@@ -41,6 +41,7 @@ func setUpStudyUserRoutes(group *echo.Group) {
 	studyUsers.PATCH("", userControllerImpl.UpdateStudyUser)
 	studyUsers.PATCH("/increment", userControllerImpl.IncrementStudyUserCurrentTaskIndex)
 	studyUsers.POST("", userControllerImpl.SaveStudyUser)
+	studyUsers.GET("/summary", userControllerImpl.GetStudyUserSummary)
 }
 
 func setUpCrowdsourceUserRoutes(group *echo.Group) {
