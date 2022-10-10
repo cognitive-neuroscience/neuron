@@ -25,12 +25,5 @@ jobs:
     - name: Get dependencies
       run: go mod download
 
-    - name: Codecov
-      uses: codecov/codecov-action@v1.0.6
-      with:
-        token: a9a77d27-9bb5-4d2c-95b2-da0313661053
-        file: coverage.txt
-        fail_ci_if_error: true
-
     - name: Build
       run: go build src/main/main.go
