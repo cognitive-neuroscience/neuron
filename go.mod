@@ -4,8 +4,8 @@ go 1.14
 
 require (
 	github.com/casbin/casbin/v2 v2.31.10
-	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/go-sql-driver/mysql v1.6.0
+	github.com/golang-jwt/jwt v3.2.2+incompatible
 	github.com/golang/mock v1.6.0 // indirect
 	github.com/jmoiron/sqlx v1.3.4
 	github.com/joho/godotenv v1.3.0

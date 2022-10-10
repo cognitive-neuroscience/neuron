@@ -1,6 +1,6 @@
 package models
 
-import jwt "github.com/dgrijalva/jwt-go"
+import "github.com/golang-jwt/jwt"
 
 // Claims represents a model for JWT
 type Claims struct {
