@@ -8027,7 +8027,7 @@ UPDATE tasks set
                             "questionType": "displayText",
                             "title": {
                                 "en": "Instructions: For each statement, select the answer that best describes your thoughts, feelings, and activity in the past 4 weeks.",
-                                "fr": "Instructions: Pour chacun des énoncés suivants mettez un X dans la case qui décrit le mieux vos pensées, sentiments et activités au cours des 4 dernières semaines."
+                                "fr": "Instructions: Pour chacun des énoncés suivants, sélectionnez l’option qui décrit le mieux vos pensées, sentiments et activités au cours des 4 dernières semaines."
                             }
                         },
                         {
@@ -8454,8 +8454,8 @@ UPDATE tasks set
                             "questionType":"radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "Select \\"somewhat\\" for this question please.",
-                                "fr": "Sélectionnez « un peu » pour cette question s’il vous plaît."
+                                "en": "Select \\"Somewhat\\". This is simply to ensure you are paying attention!",
+                                "fr": "Sélectionnez « Assez ».  Ceci sert à vérifier votre niveau d’attention!"
                             },
                             "validation":{
                                 "required":true
@@ -8581,7 +8581,7 @@ UPDATE tasks set
                             "radiobuttonPresentation": "horizontal",
                             "title": {
                                 "en": "Getting together with friends is important to me.",
-                                "fr": "C’est important pour moi de rencontrer mes amis."
+                                "fr": "C’est important pour moi de passer du temps mes amis."
                             },
                             "validation":{
                                 "required":true
@@ -8623,7 +8623,7 @@ UPDATE tasks set
                             "radiobuttonPresentation": "horizontal",
                             "title": {
                                 "en": "When something good happens, I get excited.",
-                                "fr": "Quand quelque chose de bon m’arrive, je suis excité(e)."
+                                "fr": "Quand quelque chose de bien m’arrive, je suis excité(e)."
                             },
                             "validation":{
                                 "required":true
@@ -8665,7 +8665,7 @@ UPDATE tasks set
                             "radiobuttonPresentation": "horizontal",
                             "title": {
                                 "en": "I have an accurate understanding of my problems.",
-                                "fr": "J’ai une compréhension précise de mes problèmes."
+                                "fr": "J’ai une bonne compréhension de mes problèmes."
                             },
                             "validation":{
                                 "required":true
@@ -8856,7 +8856,7 @@ UPDATE tasks set
                             "questionType": "displayText",
                             "title": {
                                 "en": "DIRECTIONS: People differ in the ways they act and think in different situations. This is a test to measure some of the ways in which you act and think. Read each statement and choose the appropriate answer. Do not spend too much time on any statement. Answer quickly and honestly.",
-                                "fr": "Instructions: Pour chacun des énoncés suivant cliquez la case appropriée. Ne passez pas trop de temps sur les énoncés. Répondez rapidement et honnêtement."
+                                "fr": "Instructions: Les gens n''ont pas tous la même façon d''agir et de penser dans différentes situations. Ce test vise à mesurer certaines de vos façons d''agir et de penser. Lisez chaque énoncé et choisissez la réponse appropriée. Ne vous attardez pas trop sur les énoncés. Répondez rapidement et honnêtement."
                             }
                         },
                         {
@@ -9074,7 +9074,7 @@ UPDATE tasks set
                             "radiobuttonPresentation": "horizontal",
                             "title": {
                                 "en": "I have \\"racing\\" thoughts.",
-                                "fr": "Mes pensées se suivent rapidement."
+                                "fr": "J’ai des pensées qui se \\"bousculent\\""
                             },
                             "validation":{
                                 "required":true
@@ -9997,8 +9997,8 @@ UPDATE tasks set
                             "questionType":"radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "Select the first option if you are paying attention.",
-                                "fr": "Sélectionnez la première option si vous faites attention."
+                                "en": "Select \\"Rarely/Never\\". This is simply to ensure you are paying attention!",
+                                "fr": "Sélectionnez « Rarement/Jamais ». Ceci sert à vérifier votre niveau d’attention!"
                             },
                             "validation":{
                                 "required":true
@@ -10392,8 +10392,8 @@ UPDATE tasks set
                             "questionType":"radiobuttons",
                             "radiobuttonPresentation": "vertical",
                             "title": {
-                                "en": "Choose \\"no\\" if you are paying attention",
-                                "fr": "Choisissez « non » si vous êtes attentif(ve)"
+                                "en": "Select \\"No\\". This is simply to ensure you are paying attention!",
+                                "fr": "Sélectionnez « Non ». Ceci sert à vérifier votre niveau d’attention!"
                             },
                             "validation":{
                                 "required":true
@@ -10668,7 +10668,7 @@ UPDATE tasks set
                             "questionType": "displayText",
                             "title": {
                                 "en": "Frequency Of Behaviours <br /> <br /><b>Never</b>: not at all <br /><b>Rarely</b>: 1 day/week <br /><b>Sometimes</b>: 2-3 days/week <br /><b>Often</b>: 4-5 days/week <br /><b>Very Often</b>: 6-7 days/week <br />",
-                                "fr": "Fréquence des comportements <br /> <br /> <b>Jamais</b>: pas du tout <br /><b>Rarement</b>: 1 jour/semaine <br /><b>Parfois</b>: 2-3 jours/semaine <br /><b>Souvent</b>: 4-5 jours/semaine <br /><b>Très souvent</b>: 6-7 jours/semaine <br />"
+                                "fr": "Fréquence des Comportements <br /> <br /> <b>Jamais</b>: pas du tout <br /><b>Rarement</b>: 1 jour/semaine <br /><b>Parfois</b>: 2-3 jours/semaine <br /><b>Souvent</b>: 4-5 jours/semaine <br /><b>Très Souvent</b>: 6-7 jours/semaine <br />"
                             }
                         },
                         {
@@ -10689,8 +10689,8 @@ UPDATE tasks set
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "<b>Gambling?</b> <br /> Casinos, internet gambling lotteries, scratch tickets, betting, slot or poker machines",
-                                "fr": "<b>Jeu (''gambling'')?</b> <br /> Casinos, loteries sur Internet, tickets à gratter, paris, machines à sous ou poker"
+                                "en": "How much do you think about...<b>Gambling?</b> <br /> Casinos, internet gambling lotteries, scratch tickets, betting, slot or poker machines",
+                                "fr": "À quel point pensez-vous au...<b>Jeu (''gambling'')?</b> <br /> Casinos, loteries sur Internet, tickets à gratter, paris, machines à sous ou poker"
                             },
                             "validation": {
                                 "required":true
@@ -10728,7 +10728,7 @@ UPDATE tasks set
                                 {
                                     "label": {
                                         "en": "Very Often",
-                                        "fr": "Très souvent"
+                                        "fr": "Très Souvent"
                                     },
                                     "value": "very often"
                                 }
@@ -10738,8 +10738,8 @@ UPDATE tasks set
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "<b>Sex?</b> <br /> Making sexual demands on others, promiscuity, prostitution, change in sexual orientation, masturbation, internet and telephone sexual activities, pornography",
-                                "fr": "<b>Sexe?</b> <br /> Faire des demandes sexuelles à autrui, promiscuité, prostitution, changement d''orientation sexuelle, masturbation, activités sexuelles sur Internet et par téléphone, pornographie"
+                                "en": "How much do you think about...<b>Sex?</b> <br /> Making sexual demands on others, promiscuity, prostitution, change in sexual orientation, masturbation, internet and telephone sexual activities, pornography",
+                                "fr": "À quel point pensez-vous au...<b>Sexe?</b> <br /> Faire des demandes sexuelles à autrui, promiscuité, prostitution, changement d''orientation sexuelle, masturbation, activités sexuelles sur Internet et par téléphone, pornographie"
                             },
                             "validation": {
                                 "required":true
@@ -10777,7 +10777,7 @@ UPDATE tasks set
                                 {
                                     "label": {
                                         "en": "Very Often",
-                                        "fr": "Très souvent"
+                                        "fr": "Très Souvent"
                                     },
                                     "value": "very often"
                                 }
@@ -10787,8 +10787,8 @@ UPDATE tasks set
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "<b>Buying?</b> <br /> Too much of the same thing or things you don’t need or use",
-                                "fr": "<b>Achats compulsifs?</b> <br /> Trop de la même chose ou des choses dont vous n''avez pas besoin ou que vous n''utilisez pas"
+                                "en": "How much do you think about...<b>Buying?</b> <br /> Too much of the same thing or things you don’t need or use",
+                                "fr": "À quel point pensez-vous aux...<b>Achats compulsifs?</b> <br /> Trop de la même chose ou des choses dont vous n''avez pas besoin ou que vous n''utilisez pas"
                             },
                             "validation": {
                                 "required":true
@@ -10826,7 +10826,7 @@ UPDATE tasks set
                                 {
                                     "label": {
                                         "en": "Very Often",
-                                        "fr": "Très souvent"
+                                        "fr": "Très Souvent"
                                     },
                                     "value": "very often"
                                 }
@@ -10836,8 +10836,8 @@ UPDATE tasks set
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "<b>Eating?</b> <br /> Eating larger amounts or different types of food than in the past, more rapidly than normal, at different times (such as overnight), until feeling uncomfortable full or when not hungry",
-                                "fr": "<b>Manger?</b> <br /> Nt que d''habitude, à des moments différents (comme la nuit), jusqu''à ce que vous vous sentiez mal ou sans avoir faim"
+                                "en": "How much do you think about...<b>Eating?</b> <br /> Eating larger amounts or different types of food than in the past, more rapidly than normal, at different times (such as overnight), until feeling uncomfortable full or when not hungry",
+                                "fr": "À quel point pensez-vous à...<b>Manger?</b> <br /> Manger plus que d''habitude, ou des aliments différents, à une vitesse augmentée, à des moments différents (comme la nuit), jusqu''à ce que vous vous sentiez mal ou sans avoir faim"
                             },
                             "validation": {
                                 "required":true
@@ -10875,7 +10875,7 @@ UPDATE tasks set
                                 {
                                     "label": {
                                         "en": "Very Often",
-                                        "fr": "Très souvent"
+                                        "fr": "Très Souvent"
                                     },
                                     "value": "very often"
                                 }
@@ -10885,8 +10885,8 @@ UPDATE tasks set
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "<b>Performing tasks or hobbies?</b> <br /> Specific tasks, hobbies or other organized activities, such as writing, painting, gardening, repairing or dismantling things, collecting, computer use, working on projects, etc.",
-                                "fr": "<b>Exécuter des tâches ou pratiquer des passe-temps?</b> <br /> Tâches spécifiques, passe-temps ou autres activités organisées, comme écrire, peindre, jardiner, réparer ou démonter des objets, collectionner, utiliser un ordinateur, travailler sur des projets, etc."
+                                "en": "How much do you think about...<b>Performing tasks or hobbies?</b> <br /> Specific tasks, hobbies or other organized activities, such as writing, painting, gardening, repairing or dismantling things, collecting, computer use, working on projects, etc.",
+                                "fr": "À quel point pensez-vous à...<b>L''exécution de tâches ou de passe-temps?</b> <br /> Tâches spécifiques, passe-temps ou autres activités organisées, comme écrire, peindre, jardiner, réparer ou démonter des objets, collectionner, utiliser un ordinateur, travailler sur des projets, etc."
                             },
                             "validation": {
                                 "required":true
@@ -10924,7 +10924,7 @@ UPDATE tasks set
                                 {
                                     "label": {
                                         "en": "Very Often",
-                                        "fr": "Très souvent"
+                                        "fr": "Très Souvent"
                                     },
                                     "value": "very often"
                                 }
@@ -10934,8 +10934,8 @@ UPDATE tasks set
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "<b>Repeating simple activities?</b> <br /> Repeating cetain simple motor activities, such as cleaning, tidying, handling, examining, sorting, ordering, collecting, hoarding, or arranging objects, etc.",
-                                "fr": "<b>Répéter des activités simples?</b> <br /> Répéter certaines activités motrices simples, comme nettoyer, ranger, manipuler, examiner, trier, ramasser, amasser, démonter des objets, etc."
+                                "en": "How much do you think about...<b>Repeating simple activities?</b> <br /> Repeating cetain simple motor activities, such as cleaning, tidying, handling, examining, sorting, ordering, collecting, hoarding, or arranging objects, etc.",
+                                "fr": "À quel point pensez-vous à...<b>Répéter des activités simples?</b> <br /> Répéter certaines activités motrices simples, comme nettoyer, ranger, manipuler, examiner, trier, ramasser, amasser, arranger des objets, etc."
                             },
                             "validation": {
                                 "required":true
@@ -10973,7 +10973,7 @@ UPDATE tasks set
                                 {
                                     "label": {
                                         "en": "Very Often",
-                                        "fr": "Très souvent"
+                                        "fr": "Très Souvent"
                                     },
                                     "value": "very often"
                                 }
@@ -10983,8 +10983,8 @@ UPDATE tasks set
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "<b>Taking your PD medications?</b> <br /> Consistently taking too much of your Parkinson’s medications, or increasing on your own, without medical advice, your overall intake of PD medications",
-                                "fr": "<b>Prendre vos médicaments contre le Parkinson?</b> <br /> Régulièrement prendre trop de médicaments pour le Parkinson ou augmenter vous-même, sans avis médical, votre consommation de médicaments pour le Parkinson"
+                                "en": "How much do you think about...<b>Taking your PD medications?</b> <br /> Consistently taking too much of your Parkinson’s medications, or increasing on your own, without medical advice, your overall intake of PD medications",
+                                "fr": "À quel point pensez-vous à...<b>Prendre vos médicaments contre le Parkinson?</b> <br /> Régulièrement prendre trop de médicaments pour le Parkinson ou augmenter vous-même, sans avis médical, votre consommation de médicaments pour le Parkinson"
                             },
                             "validation": {
                                 "required":true
@@ -11022,7 +11022,7 @@ UPDATE tasks set
                                 {
                                     "label": {
                                         "en": "Very Often",
-                                        "fr": "Très souvent"
+                                        "fr": "Très Souvent"
                                     },
                                     "value": "very often"
                                 },
@@ -11049,8 +11049,8 @@ UPDATE tasks set
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "<b>Gambling?</b> <br /> Casinos, internet gambling lotteries, scratch tickets, betting, slot or poker machines",
-                                "fr": "<b>Jeu (''gambling'')?</b> <br /> Casinos, loteries sur Internet, tickets à gratter, paris, machines à sous ou poker"
+                                "en": "Do you have excessive urges/desires for...<b>Gambling?</b> <br /> Casinos, internet gambling lotteries, scratch tickets, betting, slot or poker machines",
+                                "fr": "Avez-vous des pulsions pour le...<b>Jeu (''gambling'')?</b> <br /> Casinos, loteries sur Internet, tickets à gratter, paris, machines à sous ou poker"
                             },
                             "validation": {
                                 "required":true
@@ -11088,7 +11088,7 @@ UPDATE tasks set
                                 {
                                     "label": {
                                         "en": "Very Often",
-                                        "fr": "Très souvent"
+                                        "fr": "Très Souvent"
                                     },
                                     "value": "very often"
                                 }
@@ -11098,8 +11098,8 @@ UPDATE tasks set
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "<b>Sex?</b> <br /> Making sexual demands on others, promiscuity, prostitution, change in sexual orientation, masturbation, internet and telephone sexual activities, pornography",
-                                "fr": "<b>Sexe?</b> <br /> Faire des demandes sexuelles à autrui, promiscuité, prostitution, changement d''orientation sexuelle, masturbation, activités sexuelles sur Internet et par téléphone, pornographie"
+                                "en": "Do you have excessive urges/desires for...<b>Sex?</b> <br /> Making sexual demands on others, promiscuity, prostitution, change in sexual orientation, masturbation, internet and telephone sexual activities, pornography",
+                                "fr": "Avez-vous des pulsions pour le...<b>Sexe?</b> <br /> Faire des demandes sexuelles à autrui, promiscuité, prostitution, changement d''orientation sexuelle, masturbation, activités sexuelles sur Internet et par téléphone, pornographie"
                             },
                             "validation": {
                                 "required":true
@@ -11137,7 +11137,7 @@ UPDATE tasks set
                                 {
                                     "label": {
                                         "en": "Very Often",
-                                        "fr": "Très souvent"
+                                        "fr": "Très Souvent"
                                     },
                                     "value": "very often"
                                 }
@@ -11147,8 +11147,8 @@ UPDATE tasks set
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "<b>Buying?</b> <br /> Too much of the same thing or things you don’t need or use",
-                                "fr": "<b>Achats compulsifs?</b> <br /> Trop de la même chose ou des choses dont vous n''avez pas besoin ou que vous n''utilisez pas"
+                                "en": "Do you have excessive urges/desires for...<b>Buying?</b> <br /> Too much of the same thing or things you don’t need or use",
+                                "fr": "Avez-vous des pulsions pour les...<b>Achats compulsifs?</b> <br /> Trop de la même chose ou des choses dont vous n''avez pas besoin ou que vous n''utilisez pas"
                             },
                             "validation": {
                                 "required":true
@@ -11186,7 +11186,7 @@ UPDATE tasks set
                                 {
                                     "label": {
                                         "en": "Very Often",
-                                        "fr": "Très souvent"
+                                        "fr": "Très Souvent"
                                     },
                                     "value": "very often"
                                 }
@@ -11196,8 +11196,8 @@ UPDATE tasks set
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "<b>Eating?</b> <br /> Eating larger amounts or different types of food than in the past, more rapidly than normal, at different times (such as overnight), until feeling uncomfortable full or when not hungry",
-                                "fr": "<b>Manger?</b> <br /> Nt que d''habitude, à des moments différents (comme la nuit), jusqu''à ce que vous vous sentiez mal ou sans avoir faim"
+                                "en": "Do you have excessive urges/desires for...<b>Eating?</b> <br /> Eating larger amounts or different types of food than in the past, more rapidly than normal, at different times (such as overnight), until feeling uncomfortable full or when not hungry",
+                                "fr": "Avez-vous des pulsions pour...<b>Manger?</b> <br /> Manger plus que d''habitude, ou des aliments différents, à une vitesse augmentée, à des moments différents (comme la nuit), jusqu''à ce que vous vous sentiez mal ou sans avoir faim"
                             },
                             "validation": {
                                 "required":true
@@ -11235,7 +11235,7 @@ UPDATE tasks set
                                 {
                                     "label": {
                                         "en": "Very Often",
-                                        "fr": "Très souvent"
+                                        "fr": "Très Souvent"
                                     },
                                     "value": "very often"
                                 }
@@ -11245,8 +11245,8 @@ UPDATE tasks set
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "<b>Performing tasks or hobbies?</b> <br /> Specific tasks, hobbies or other organized activities, such as writing, painting, gardening, repairing or dismantling things, collecting, computer use, working on projects, etc.",
-                                "fr": "<b>Exécuter des tâches ou pratiquer des passe-temps?</b> <br /> Tâches spécifiques, passe-temps ou autres activités organisées, comme écrire, peindre, jardiner, réparer ou démonter des objets, collectionner, utiliser un ordinateur, travailler sur des projets, etc."
+                                "en": "Do you have excessive urges/desires for...<b>Performing tasks or hobbies?</b> <br /> Specific tasks, hobbies or other organized activities, such as writing, painting, gardening, repairing or dismantling things, collecting, computer use, working on projects, etc.",
+                                "fr": "Avez-vous des pulsions pour...<b>L''exécution de tâches ou de passe-temps?</b> <br /> Tâches spécifiques, passe-temps ou autres activités organisées, comme écrire, peindre, jardiner, réparer ou démonter des objets, collectionner, utiliser un ordinateur, travailler sur des projets, etc."
                             },
                             "validation": {
                                 "required":true
@@ -11284,7 +11284,7 @@ UPDATE tasks set
                                 {
                                     "label": {
                                         "en": "Very Often",
-                                        "fr": "Très souvent"
+                                        "fr": "Très Souvent"
                                     },
                                     "value": "very often"
                                 }
@@ -11294,8 +11294,8 @@ UPDATE tasks set
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "<b>Repeating simple activities?</b> <br /> Repeating cetain simple motor activities, such as cleaning, tidying, handling, examining, sorting, ordering, collecting, hoarding, or arranging objects, etc.",
-                                "fr": "<b>Répéter des activités simples?</b> <br /> Répéter certaines activités motrices simples, comme nettoyer, ranger, manipuler, examiner, trier, ramasser, amasser, démonter des objets, etc."
+                                "en": "Do you have excessive urges/desires for...<b>Repeating simple activities?</b> <br /> Repeating cetain simple motor activities, such as cleaning, tidying, handling, examining, sorting, ordering, collecting, hoarding, or arranging objects, etc.",
+                                "fr": "Avez-vous des pulsions pour...<b>Répéter des activités simples?</b> <br /> Répéter certaines activités motrices simples, comme nettoyer, ranger, manipuler, examiner, trier, ramasser, amasser, arranger des objets, etc."
                             },
                             "validation": {
                                 "required":true
@@ -11333,7 +11333,7 @@ UPDATE tasks set
                                 {
                                     "label": {
                                         "en": "Very Often",
-                                        "fr": "Très souvent"
+                                        "fr": "Très Souvent"
                                     },
                                     "value": "very often"
                                 }
@@ -11343,8 +11343,8 @@ UPDATE tasks set
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "<b>Taking your PD medications?</b> <br /> Consistently taking too much of your Parkinson’s medications, or increasing on your own, without medical advice, your overall intake of PD medications",
-                                "fr": "<b>Prendre vos médicaments contre le Parkinson?</b> <br /> Régulièrement prendre trop de médicaments pour le Parkinson ou augmenter vous-même, sans avis médical, votre consommation de médicaments pour le Parkinson"
+                                "en": "Do you have excessive urges/desires for...<b>Taking your PD medications?</b> <br /> Consistently taking too much of your Parkinson’s medications, or increasing on your own, without medical advice, your overall intake of PD medications",
+                                "fr": "Avez-vous des pulsions pour...<b>Prendre vos médicaments contre le Parkinson?</b> <br /> Régulièrement prendre trop de médicaments pour le Parkinson ou augmenter vous-même, sans avis médical, votre consommation de médicaments pour le Parkinson"
                             },
                             "validation": {
                                 "required":true
@@ -11382,7 +11382,7 @@ UPDATE tasks set
                                 {
                                     "label": {
                                         "en": "Very Often",
-                                        "fr": "Très souvent"
+                                        "fr": "Très Souvent"
                                     },
                                     "value": "very often"
                                 },
@@ -11402,15 +11402,15 @@ UPDATE tasks set
                             "questionType": "displayText",
                             "title": {
                                 "en": "3. Do you have difficulty controlling the following behaviors (such as increasing them over time, or having trouble cutting down or stopping them)?",
-                                "fr": "3. Avez-vous de la difficulté à contrôler les comportements suivants (par exemple, la fréquence de votre participation augmente fil du temps, ou vous avez de la difficulté à les réduire ou les arrêter)?"
+                                "fr": "3. Avez-vous de la difficulté à contrôler les comportements suivants (par exemple, la fréquence de votre participation augmente au fil du temps, ou vous avez de la difficulté à les réduire ou les cesser)?"
                             }
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "<b>Gambling?</b> <br /> Casinos, internet gambling lotteries, scratch tickets, betting, slot or poker machines",
-                                "fr": "<b>Jeu (''gambling'')?</b> <br /> Casinos, loteries sur Internet, tickets à gratter, paris, machines à sous ou poker"
+                                "en": "Do you have difficulty controlling...<b>Gambling?</b> <br /> Casinos, internet gambling lotteries, scratch tickets, betting, slot or poker machines",
+                                "fr": "Avez-vous de la difficulté à contrôler le...<b>Jeu (''gambling'')?</b> <br /> Casinos, loteries sur Internet, tickets à gratter, paris, machines à sous ou poker"
                             },
                             "validation": {
                                 "required":true
@@ -11448,7 +11448,7 @@ UPDATE tasks set
                                 {
                                     "label": {
                                         "en": "Very Often",
-                                        "fr": "Très souvent"
+                                        "fr": "Très Souvent"
                                     },
                                     "value": "very often"
                                 }
@@ -11458,8 +11458,8 @@ UPDATE tasks set
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "<b>Sex?</b> <br /> Making sexual demands on others, promiscuity, prostitution, change in sexual orientation, masturbation, internet and telephone sexual activities, pornography",
-                                "fr": "<b>Sexe?</b> <br /> Faire des demandes sexuelles à autrui, promiscuité, prostitution, changement d''orientation sexuelle, masturbation, activités sexuelles sur Internet et par téléphone, pornographie"
+                                "en": "Do you have difficulty controlling...<b>Sex?</b> <br /> Making sexual demands on others, promiscuity, prostitution, change in sexual orientation, masturbation, internet and telephone sexual activities, pornography",
+                                "fr": "Avez-vous de la difficulté à contrôler le...<b>Sexe?</b> <br /> Faire des demandes sexuelles à autrui, promiscuité, prostitution, changement d''orientation sexuelle, masturbation, activités sexuelles sur Internet et par téléphone, pornographie"
                             },
                             "validation": {
                                 "required":true
@@ -11497,7 +11497,7 @@ UPDATE tasks set
                                 {
                                     "label": {
                                         "en": "Very Often",
-                                        "fr": "Très souvent"
+                                        "fr": "Très Souvent"
                                     },
                                     "value": "very often"
                                 }
@@ -11507,8 +11507,8 @@ UPDATE tasks set
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "<b>Buying?</b> <br /> Too much of the same thing or things you don’t need or use",
-                                "fr": "<b>Achats compulsifs?</b> <br /> Trop de la même chose ou des choses dont vous n''avez pas besoin ou que vous n''utilisez pas"
+                                "en": "Do you have difficulty controlling...<b>Buying?</b> <br /> Too much of the same thing or things you don’t need or use",
+                                "fr": "Avez-vous de la difficulté à contrôler les...<b>Achats compulsifs?</b> <br /> Trop de la même chose ou des choses dont vous n''avez pas besoin ou que vous n''utilisez pas"
                             },
                             "validation": {
                                 "required":true
@@ -11546,7 +11546,7 @@ UPDATE tasks set
                                 {
                                     "label": {
                                         "en": "Very Often",
-                                        "fr": "Très souvent"
+                                        "fr": "Très Souvent"
                                     },
                                     "value": "very often"
                                 }
@@ -11556,8 +11556,8 @@ UPDATE tasks set
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "<b>Eating?</b> <br /> Eating larger amounts or different types of food than in the past, more rapidly than normal, at different times (such as overnight), until feeling uncomfortable full or when not hungry",
-                                "fr": "<b>Manger?</b> <br /> Nt que d''habitude, à des moments différents (comme la nuit), jusqu''à ce que vous vous sentiez mal ou sans avoir faim"
+                                "en": "Do you have difficulty controlling...<b>Eating?</b> <br /> Eating larger amounts or different types of food than in the past, more rapidly than normal, at different times (such as overnight), until feeling uncomfortable full or when not hungry",
+                                "fr": "Avez-vous de la difficulté à contrôler...<b>Manger?</b> <br /> Manger plus que d''habitude, ou des aliments différents, à une vitesse augmentée, à des moments différents (comme la nuit), jusqu''à ce que vous vous sentiez mal ou sans avoir faim"
                             },
                             "validation": {
                                 "required":true
@@ -11595,7 +11595,7 @@ UPDATE tasks set
                                 {
                                     "label": {
                                         "en": "Very Often",
-                                        "fr": "Très souvent"
+                                        "fr": "Très Souvent"
                                     },
                                     "value": "very often"
                                 }
@@ -11605,8 +11605,8 @@ UPDATE tasks set
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "<b>Performing tasks or hobbies?</b> <br /> Specific tasks, hobbies or other organized activities, such as writing, painting, gardening, repairing or dismantling things, collecting, computer use, working on projects, etc.",
-                                "fr": "<b>Exécuter des tâches ou pratiquer des passe-temps?</b> <br /> Tâches spécifiques, passe-temps ou autres activités organisées, comme écrire, peindre, jardiner, réparer ou démonter des objets, collectionner, utiliser un ordinateur, travailler sur des projets, etc."
+                                "en": "Do you have difficulty controlling...<b>Performing tasks or hobbies?</b> <br /> Specific tasks, hobbies or other organized activities, such as writing, painting, gardening, repairing or dismantling things, collecting, computer use, working on projects, etc.",
+                                "fr": "Avez-vous de la difficulté à contrôler...<b>L''exécution de tâches ou de passe-temps?</b> <br /> Tâches spécifiques, passe-temps ou autres activités organisées, comme écrire, peindre, jardiner, réparer ou démonter des objets, collectionner, utiliser un ordinateur, travailler sur des projets, etc."
                             },
                             "validation": {
                                 "required":true
@@ -11644,7 +11644,7 @@ UPDATE tasks set
                                 {
                                     "label": {
                                         "en": "Very Often",
-                                        "fr": "Très souvent"
+                                        "fr": "Très Souvent"
                                     },
                                     "value": "very often"
                                 }
@@ -11654,8 +11654,8 @@ UPDATE tasks set
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "Select \\"rarely\\" here",
-                                "fr": "Sélectionnez « rarement » ici"
+                                "en": "Select \\"Rarely\\". This is simply to ensure that you are paying attention!",
+                                "fr": "Sélectionnez « Rarement » ici. Ceci sert à vérifier votre niveau d''attention!"
                             },
                             "validation": {
                                 "required":true
@@ -11693,7 +11693,7 @@ UPDATE tasks set
                                 {
                                     "label": {
                                         "en": "Very Often",
-                                        "fr": "Très souvent"
+                                        "fr": "Très Souvent"
                                     },
                                     "value": "very often"
                                 }
@@ -11703,8 +11703,8 @@ UPDATE tasks set
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "<b>Repeating simple activities?</b> <br /> Repeating cetain simple motor activities, such as cleaning, tidying, handling, examining, sorting, ordering, collecting, hoarding, or arranging objects, etc.",
-                                "fr": "<b>Répéter des activités simples?</b> <br /> Répéter certaines activités motrices simples, comme nettoyer, ranger, manipuler, examiner, trier, ramasser, amasser, démonter des objets, etc."
+                                "en": "Do you have difficulty controlling...<b>Repeating simple activities?</b> <br /> Repeating cetain simple motor activities, such as cleaning, tidying, handling, examining, sorting, ordering, collecting, hoarding, or arranging objects, etc.",
+                                "fr": "Avez-vous de la difficulté à contrôler...<b>Répéter des activités simples?</b> <br /> Répéter certaines activités motrices simples, comme nettoyer, ranger, manipuler, examiner, trier, ramasser, amasser, arranger des objets, etc."
                             },
                             "validation": {
                                 "required":true
@@ -11742,7 +11742,7 @@ UPDATE tasks set
                                 {
                                     "label": {
                                         "en": "Very Often",
-                                        "fr": "Très souvent"
+                                        "fr": "Très Souvent"
                                     },
                                     "value": "very often"
                                 }
@@ -11752,8 +11752,8 @@ UPDATE tasks set
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "<b>Taking your PD medications?</b> <br /> Consistently taking too much of your Parkinson’s medications, or increasing on your own, without medical advice, your overall intake of PD medications",
-                                "fr": "<b>Prendre vos médicaments contre le Parkinson?</b> <br /> Régulièrement prendre trop de médicaments pour le Parkinson ou augmenter vous-même, sans avis médical, votre consommation de médicaments pour le Parkinson"
+                                "en": "Do you have difficulty controlling...<b>Taking your PD medications?</b> <br /> Consistently taking too much of your Parkinson’s medications, or increasing on your own, without medical advice, your overall intake of PD medications",
+                                "fr": "Avez-vous de la difficulté à contrôler...<b>Prendre de vos médicaments contre le Parkinson?</b> <br /> Régulièrement prendre trop de médicaments pour le Parkinson ou augmenter vous-même, sans avis médical, votre consommation de médicaments pour le Parkinson"
                             },
                             "validation": {
                                 "required":true
@@ -11791,7 +11791,7 @@ UPDATE tasks set
                                 {
                                     "label": {
                                         "en": "Very Often",
-                                        "fr": "Très souvent"
+                                        "fr": "Très Souvent"
                                     },
                                     "value": "very often"
                                 },
@@ -11811,15 +11811,15 @@ UPDATE tasks set
                             "questionType": "displayText",
                             "title": {
                                 "en": "4. Do you engage in activities specifically to continue the following behaviors (such as hiding what you are doing, lying, hoarding things, borrowing from others, accumulating debt, stealing, or being involved in illegal acts)?",
-                                "fr": "4. Avez vous des moyens pour vous permettre spécifiquement de poursuivre les activités suivantes (comme cacher ce que vous faites, mentir, accumuler des choses, emprunter aux autres, accumuler des dettes, voler ou être impliqué dans des actes illégaux)?"
+                                "fr": "4. Prenez-vous des moyens spécifiquement pour vous permettre de poursuivre les activités suivantes (comme cacher ce que vous faites, mentir, accumuler des choses, emprunter aux autres, accumuler des dettes, voler ou être impliqué dans des actes illégaux)?"
                             }
                         },
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "<b>Gambling?</b> <br /> Casinos, internet gambling lotteries, scratch tickets, betting, slot or poker machines",
-                                "fr": "<b>Jeu (''gambling'')?</b> <br /> Casinos, loteries sur Internet, tickets à gratter, paris, machines à sous ou poker"
+                                "en": "Do you engage in activities specifically to pursue...<b>Gambling?</b> <br /> Casinos, internet gambling lotteries, scratch tickets, betting, slot or poker machines",
+                                "fr": "Prenez-vous des moyens pour vous permettre de poursuivre le...<b>Jeu (''gambling'')?</b> <br /> Casinos, loteries sur Internet, tickets à gratter, paris, machines à sous ou poker"
                             },
                             "validation": {
                                 "required":true
@@ -11857,7 +11857,7 @@ UPDATE tasks set
                                 {
                                     "label": {
                                         "en": "Very Often",
-                                        "fr": "Très souvent"
+                                        "fr": "Très Souvent"
                                     },
                                     "value": "very often"
                                 }
@@ -11867,8 +11867,8 @@ UPDATE tasks set
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "<b>Sex?</b> <br /> Making sexual demands on others, promiscuity, prostitution, change in sexual orientation, masturbation, internet and telephone sexual activities, pornography",
-                                "fr": "<b>Sexe?</b> <br /> Faire des demandes sexuelles à autrui, promiscuité, prostitution, changement d''orientation sexuelle, masturbation, activités sexuelles sur Internet et par téléphone, pornographie"
+                                "en": "Do you engage in activities specifically to pursue...<b>Sex?</b> <br /> Making sexual demands on others, promiscuity, prostitution, change in sexual orientation, masturbation, internet and telephone sexual activities, pornography",
+                                "fr": "Prenez-vous des moyens pour vous permettre de poursuivre le...<b>Sexe?</b> <br /> Faire des demandes sexuelles à autrui, promiscuité, prostitution, changement d''orientation sexuelle, masturbation, activités sexuelles sur Internet et par téléphone, pornographie"
                             },
                             "validation": {
                                 "required":true
@@ -11906,7 +11906,7 @@ UPDATE tasks set
                                 {
                                     "label": {
                                         "en": "Very Often",
-                                        "fr": "Très souvent"
+                                        "fr": "Très Souvent"
                                     },
                                     "value": "very often"
                                 }
@@ -11916,8 +11916,8 @@ UPDATE tasks set
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "<b>Buying?</b> <br /> Too much of the same thing or things you don’t need or use",
-                                "fr": "<b>Achats compulsifs?</b> <br /> Trop de la même chose ou des choses dont vous n''avez pas besoin ou que vous n''utilisez pas"
+                                "en": "Do you engage in activities specifically to pursue...<b>Buying?</b> <br /> Too much of the same thing or things you don’t need or use",
+                                "fr": "Prenez-vous des moyens pour vous permettre de poursuivre les...<b>Achats compulsifs?</b> <br /> Trop de la même chose ou des choses dont vous n''avez pas besoin ou que vous n''utilisez pas"
                             },
                             "validation": {
                                 "required":true
@@ -11955,7 +11955,7 @@ UPDATE tasks set
                                 {
                                     "label": {
                                         "en": "Very Often",
-                                        "fr": "Très souvent"
+                                        "fr": "Très Souvent"
                                     },
                                     "value": "very often"
                                 }
@@ -11965,8 +11965,8 @@ UPDATE tasks set
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "<b>Eating?</b> <br /> Eating larger amounts or different types of food than in the past, more rapidly than normal, at different times (such as overnight), until feeling uncomfortable full or when not hungry",
-                                "fr": "<b>Manger?</b> <br /> Nt que d''habitude, à des moments différents (comme la nuit), jusqu''à ce que vous vous sentiez mal ou sans avoir faim"
+                                "en": "Do you engage in activities specifically to pursue...<b>Eating?</b> <br /> Eating larger amounts or different types of food than in the past, more rapidly than normal, at different times (such as overnight), until feeling uncomfortable full or when not hungry",
+                                "fr": "Prenez-vous des moyens pour vous permettre de poursuivre le...<b>Manger?</b> <br /> Manger plus que d''habitude, ou des aliments différents, à une vitesse augmentée, à des moments différents (comme la nuit), jusqu''à ce que vous vous sentiez mal ou sans avoir faim"
                             },
                             "validation": {
                                 "required":true
@@ -12004,7 +12004,7 @@ UPDATE tasks set
                                 {
                                     "label": {
                                         "en": "Very Often",
-                                        "fr": "Très souvent"
+                                        "fr": "Très Souvent"
                                     },
                                     "value": "very often"
                                 }
@@ -12014,8 +12014,8 @@ UPDATE tasks set
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "<b>Performing tasks or hobbies?</b> <br /> Specific tasks, hobbies or other organized activities, such as writing, painting, gardening, repairing or dismantling things, collecting, computer use, working on projects, etc.",
-                                "fr": "<b>Exécuter des tâches ou pratiquer des passe-temps?</b> <br /> Tâches spécifiques, passe-temps ou autres activités organisées, comme écrire, peindre, jardiner, réparer ou démonter des objets, collectionner, utiliser un ordinateur, travailler sur des projets, etc."
+                                "en": "Do you engage in activities specifically to pursue...<b>Performing tasks or hobbies?</b> <br /> Specific tasks, hobbies or other organized activities, such as writing, painting, gardening, repairing or dismantling things, collecting, computer use, working on projects, etc.",
+                                "fr": "Prenez-vous des moyens pour vous permettre de poursuivre...<b>L''exécution de tâches ou de passe-temps?</b> <br /> Tâches spécifiques, passe-temps ou autres activités organisées, comme écrire, peindre, jardiner, réparer ou démonter des objets, collectionner, utiliser un ordinateur, travailler sur des projets, etc."
                             },
                             "validation": {
                                 "required":true
@@ -12053,7 +12053,7 @@ UPDATE tasks set
                                 {
                                     "label": {
                                         "en": "Very Often",
-                                        "fr": "Très souvent"
+                                        "fr": "Très Souvent"
                                     },
                                     "value": "very often"
                                 }
@@ -12063,8 +12063,8 @@ UPDATE tasks set
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "<b>Repeating simple activities?</b> <br /> Repeating cetain simple motor activities, such as cleaning, tidying, handling, examining, sorting, ordering, collecting, hoarding, or arranging objects, etc.",
-                                "fr": "<b>Répéter des activités simples?</b> <br /> Répéter certaines activités motrices simples, comme nettoyer, ranger, manipuler, examiner, trier, ramasser, amasser, démonter des objets, etc."
+                                "en": "Do you engage in activities specifically to pursue...<b>Repeating simple activities?</b> <br /> Repeating cetain simple motor activities, such as cleaning, tidying, handling, examining, sorting, ordering, collecting, hoarding, or arranging objects, etc.",
+                                "fr": "Prenez-vous des moyens pour vous permettre de poursuivre...<b>Répéter des activités simples?</b> <br /> Répéter certaines activités motrices simples, comme nettoyer, ranger, manipuler, examiner, trier, ramasser, amasser, arranger des objets, etc."
                             },
                             "validation": {
                                 "required":true
@@ -12102,7 +12102,7 @@ UPDATE tasks set
                                 {
                                     "label": {
                                         "en": "Very Often",
-                                        "fr": "Très souvent"
+                                        "fr": "Très Souvent"
                                     },
                                     "value": "very often"
                                 }
@@ -12112,8 +12112,8 @@ UPDATE tasks set
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "<b>Taking your PD medications?</b> <br /> Consistently taking too much of your Parkinson’s medications, or increasing on your own, without medical advice, your overall intake of PD medications",
-                                "fr": "<b>Prendre vos médicaments contre le Parkinson?</b> <br /> Régulièrement prendre trop de médicaments pour le Parkinson ou augmenter vous-même, sans avis médical, votre consommation de médicaments pour le Parkinson"
+                                "en": "Do you engage in activities specifically to pursue...<b>Taking your PD medications?</b> <br /> Consistently taking too much of your Parkinson’s medications, or increasing on your own, without medical advice, your overall intake of PD medications",
+                                "fr": "Prenez-vous des moyens pour vous permettre de poursuivre...<b>Prendre vos médicaments contre le Parkinson?</b> <br /> Régulièrement prendre trop de médicaments pour le Parkinson ou augmenter vous-même, sans avis médical, votre consommation de médicaments pour le Parkinson"
                             },
                             "validation": {
                                 "required":true
@@ -12151,7 +12151,7 @@ UPDATE tasks set
                                 {
                                     "label": {
                                         "en": "Very Often",
-                                        "fr": "Très souvent"
+                                        "fr": "Très Souvent"
                                     },
                                     "value": "very often"
                                 },
@@ -12191,7 +12191,7 @@ UPDATE tasks set
                         {
                             "questionType": "displayText",
                             "title": {
-                                "en": "This questionnaire is designed to measure your ability to experience pleasure in the last few days. Please read each  statement very carefully. Tick one of the boxes to indicate how much you agree or disagree with each statement.",
+                                "en": "This questionnaire is designed to measure your ability to experience pleasure in the \\"LAST FEW DAYS\\". Please read each  statement very carefully. Tick one of the boxes to indicate how much you agree or disagree with each statement.",
                                 "fr": "Ce questionnaire a été conçu pour mesurer votre capacité à éprouver du plaisir <b> au cours des ces derniers jours</b>. Il est important de lire chaque énoncé <b> très attentivement </b>. Cochez l''une des cases pour préciser votre degré d’accord ou de désaccord pour chacun des énoncés."
                             }
                         },
@@ -12494,7 +12494,7 @@ UPDATE tasks set
                             "radiobuttonPresentation": "vertical",
                             "title": {
                                 "en": "I would enjoy looking smart when I have made an effort with my appearance:",
-                                "fr": "J’apprécie beaucoup de paraître élégant(s) quand j’ai fait un effort pour soigner mon apparence:"
+                                "fr": "J’apprécie beaucoup de paraître élégant(e) quand j’ai fait un effort pour soigner mon apparence:"
                             },
                             "validation": {
                                 "required":true
@@ -12577,8 +12577,8 @@ UPDATE tasks set
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
                             "title": {
-                                "en": "Select \\"disagree\\" to indicate that you are reading the questions:",
-                                "fr": "Sélectionnez « en désaccord » pour indiquer que vous lisez bien les questions:"
+                                "en": "Select \\"Disagree\\". This is simply to ensure that you are paying attention!",
+                                "fr": "Sélectionnez « En Désaccord ». Ceci sert à vérifier votre niveau d’attention!"
                             },
                             "validation": {
                                 "required":true
@@ -12852,7 +12852,7 @@ UPDATE tasks set
                         {
                             "questionType": "displayText",
                             "title": {
-                                "en": "Please check or fill in the following that best describes YOU.",
+                                "en": "The following are questions about your daily activities. Please choose the option that best describes YOU.",
                                 "fr": "Voici des questions sur des activités de tous les jours. Veuillez indiquer ce qui VOUS décrit le mieux"
                             }
                         },
@@ -13497,8 +13497,8 @@ UPDATE tasks set
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "Can you choose \\"a little\\" if you are reading the questions?",
-                                "fr": "Pouvez-vous choisir « un peu » si vous lisez les questions?"
+                                "en": "Select \\"A Little\\". This is simply to ensure you are paying attention!",
+                                "fr": " Sélectionnez « Un Peu ». Ceci sert à vérifier votre niveau d’attention!"
                             },
                             "validation": {
                                 "required":true
@@ -14165,8 +14165,8 @@ UPDATE tasks SET
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
                             "title": {
-                                "en": "Choose the option \\"Quite true\\" here. This is an attention check!",
-                                "fr": "Choisissez l''option \\"Plutôt vrai\\" ici. Ceci nous permet de vérifier que vous portez attention!"
+                                "en": "Select \\"Quite True\\". This is simply to ensure you are paying attention!",
+                                "fr": "Sélectionnez « Plutôt Vrai ». Ceci sert à vérifier votre niveau d’attention!"
                             },
                             "validation": {
                                 "required": true
@@ -15435,8 +15435,8 @@ UPDATE tasks SET
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "Can you select \\"very often\\" if you are paying attention?",
-                                "fr": "Pouvez-vous sélectionner \\"très souvent\\" si vous prêtez attention?"
+                                "en": "Select \\"Very Often\\". This is simply to ensure you are paying attention!",
+                                "fr": "Sélectionnez « Très Souvent ». Ceci sert à vérifier votre niveau d’attention!"
                             },
                             "validation": {
                                 "required": true
@@ -16635,8 +16635,8 @@ UPDATE tasks SET
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "vertical",
                             "title": {
-                                "en": "Select the answer \\"yes\\". This is to make sure you are paying attention!",
-                                "fr": "Sélectionnez la réponse \\"oui\\". Ceci est pour vérifier votre niveau d''attention!"
+                                "en": "Select \\"Yes\\". This is simply to ensure you are paying attention!",
+                                "fr": "Sélectionnez « Oui ». Ceci sert à vérifier votre niveau d’attention!"
                             },
                             "validation": {
                                 "required": true
@@ -17520,7 +17520,7 @@ UPDATE tasks SET
                             "questionType": "displayText",
                             "title": {
                                 "en": "The following questions are general questions about you. If you don''t have Parkinson''s disease (PD), not all of them will apply to you, so select the \\"I don''t have Parkinson''s disease\\" option.",
-                                "fr": "Les questions suivantes sont des questions générales sur vous. Si vous n''avez pas la maladie de Parkinson (MP), certaines ne s''appliqueront à vous, alors sélectionnez l''option \\"Je n''ai pas la maladie de Parkinson\\"."
+                                "fr": "Les questions suivantes sont des questions générales sur vous. Si vous n''avez pas la maladie de Parkinson (MP), certaines ne s''appliqueront pas à vous, alors sélectionnez l''option \\"Je n''ai pas la maladie de Parkinson\\"."
                             }
                         },
                         {
@@ -17561,7 +17561,7 @@ UPDATE tasks SET
                         {
                             "questionType": "input",
                             "title": {
-                                "en": "In what year were you diagnosed with Parkinson'' disease? If you DON''T have Parkinson''s disease, please enter \\"0\\"",
+                                "en": "In what year were you diagnosed with Parkinson'' disease? If you DON''T have Parkinson''s disease, please enter \\"0\\".",
                                 "fr": "En quelle année avez-vous reçu votre diagnostic de Parkinson? Si vous n''avez PAS la maladie de Parkinson, SVP inscrire \\"0\\"."
                             },
                             "key": "parkinsonsDiagnosisYear",
@@ -17617,7 +17617,7 @@ UPDATE tasks SET
                             "questionType": "displayText",
                             "title": {
                                 "en": "If you answered previously that you do take Parkinson’s disease medication, how long ago did you take the last dose?",
-                                "fr": "Si vous avez répondu que vous prenez des médicaments pour votre maladie de Parkinson, il y a combien de temps vous avez pris la dernière dose?"
+                                "fr": "Si vous avez répondu que vous prenez des médicaments pour votre maladie de Parkinson, il y a combien de temps que vous avez pris la dernière dose?"
                             }
                         },
                         {
@@ -18049,8 +18049,8 @@ UPDATE tasks SET
                                 },
                                 {
                                     "label": {
-                                        "en": "First Nations",
-                                        "fr": "Premières Nations"
+                                        "en": "Indigenous peoples",
+                                        "fr": "Autochtones"
                                     },
                                     "value": "First Nations"
                                 },
@@ -18099,7 +18099,7 @@ UPDATE tasks SET
                                 {
                                     "label": {
                                         "en": "Southeast Asian (E.g. Filipino, Cambodian, Indonesian, Laotian, Vietnamese)",
-                                        "fr": "Asiatique du Sud-Est (P.ex. philippin.e, cambodgien.ne, indonésien.ne, laotien.ne, vietnamien.ne)"
+                                        "fr": "Asiatique du Sud-Est (P.ex. Philippin.e, Cambodgien.ne, Indonésien.ne, Laotien.ne, Vietnamien.ne)"
                                     },
                                     "value": "Southeast Asian"
                                 },
@@ -18912,8 +18912,8 @@ UPDATE tasks SET
                         {
                             "questionType": "multipleChoiceSelect",
                             "title": {
-                                "en": "Is your eyesight (consider your vision once corrected with glasses or corrective lenses, if you use them):",
-                                "fr": "Comment évalueriez-vous votre vue? (considérez votre vue une fois corrigée à l''aide de lunettes ou de verres correcteurs, si vous en portez)?"
+                                "en": "How do you you consider your eyesight? (consider your vision once corrected with glasses or corrective lenses, if you use them)",
+                                "fr": "Comment évalueriez-vous votre vue? (considérez votre vue une fois corrigée à l''aide de lunettes ou de verres correcteurs, si vous en portez)"
                             },
                             "key": "eyesight",
                             "validation": {
@@ -20058,7 +20058,7 @@ UPDATE tasks SET
                             "sectionType": "text",
                             "textContent": {
                                 "en": "The game will launch in full-screen. Click \\"START\\" when you are ready for the practice round.",
-                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"Start\\" pour commencer la pratique."
+                                "fr": "Le jeu se lancera en plein écran. Cliquez sur \\"START\\" pour commencer la pratique."
                             }
                         }
                     ],
@@ -23118,8 +23118,8 @@ UPDATE tasks SET
                             },
                             "key": "diagnosisPD",
                             "textContent": {
-                                "en": "In what year were you diagnosed with Parkinson''s disease? If you DON''T have Parkinson''s disease, please enter \\"0\\"",
-                                "fr": "En quelle année avez-vous reçu votre diagnostic de Parkinson? Si vous n''avez PAS la maladie de Parkinson, SVP inscrire \\"0\\""
+                                "en": "In what year were you diagnosed with Parkinson''s disease? If you DON''T have Parkinson''s disease, please enter \\"0\\".",
+                                "fr": "En quelle année avez-vous reçu votre diagnostic de Parkinson? Si vous n''avez PAS la maladie de Parkinson, SVP inscrire \\"0\\"."
                             }
                         },
                         {
@@ -24588,7 +24588,7 @@ UPDATE tasks SET
                         {
                             "questionType": "input",
                             "title": {
-                                "en": "In what year were you diagnosed with Parkinson'' disease? If you DON''T have Parkinson''s disease, please enter \\"0\\"",
+                                "en": "In what year were you diagnosed with Parkinson'' disease? If you DON''T have Parkinson''s disease, please enter \\"0\\".",
                                 "fr": "En quelle année avez-vous reçu votre diagnostic de Parkinson? Si vous n''avez PAS la maladie de Parkinson, SVP inscrire \\"0\\"."
                             },
                             "key": "parkinsonsDiagnosisYear",
