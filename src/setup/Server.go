@@ -29,7 +29,7 @@ func CreateServer() {
 	e := echo.New()
 	e.Server.Addr = ":" + port
 
-	// retrieve jwt from cookie
+	// retrieve jwt from cookie and set context variables
 	e.Use(validateCookieMiddleware)
 
 	// configure file

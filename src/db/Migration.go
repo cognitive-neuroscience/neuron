@@ -15,11 +15,13 @@ import (
 func MakeTables() {
 	axonlogger.InfoLogger.Println("Setting up SQL Tables")
 
+	axonlogger.InfoLogger.Println("Setting up Organizations Table")
+	DB.MustExec(models.OrganizationSchema)
 	axonlogger.InfoLogger.Println("Setting up Task Table")
 	DB.MustExec(models.TaskSchema)
-	axonlogger.InfoLogger.Println("Setting up Study Table")
+	axonlogger.InfoLogger.Println("Setting up Study Table") // REF organization id
 	DB.MustExec(models.StudySchema)
-	axonlogger.InfoLogger.Println("Setting up Users Table")
+	axonlogger.InfoLogger.Println("Setting up Users Table") // REF organization id
 	DB.MustExec(models.UserSchema)
 	axonlogger.InfoLogger.Println("Setting up Crowdsource Users Table")
 	DB.MustExec(models.CrowdSourcedUserSchema)

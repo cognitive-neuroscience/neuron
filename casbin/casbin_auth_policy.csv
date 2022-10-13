@@ -3,9 +3,12 @@ p, ADMIN,       /api/*,                         *
 p, PARTICIPANT, /api/users,                     GET
 p, PARTICIPANT, /api/users/*,                   PATCH
 p, GUEST,       /api/users,                     GET
+p, *,           /api/users,                     POST
+p, *,           /api/users/changepassword,      POST
 
 p, PARTICIPANT, /api/crowdsourcedusers/*,       PATCH
 p, PARTICIPANT, /api/crowdsourcedusers/user/*,  GET
+p, *,           /api/crowdsourcedusers,         POST
 
 p, PARTICIPANT, /api/studyusers,                POST
 p, PARTICIPANT, /api/studyusers/studies,        GET
@@ -18,11 +21,8 @@ p, PARTICIPANT, /api/tasks/*,                   GET
 p, GUEST,       /api/tasks,                     GET
 
 p, GUEST,       /api/studies,                   GET
-
-p, *,           /api/users,                     POST
 p, *,           /api/studies/*,                 GET
-p, *,           /api/crowdsourcedusers,         POST
+
 p, *,           /api/login,                     POST
 p, *,           /api/logout,                    POST
 p, *,           /api/email,                     POST
-p, *,           /api/users/changepassword,      POST

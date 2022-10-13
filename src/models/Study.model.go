@@ -8,6 +8,8 @@ import (
 var StudySchema = `
 	CREATE TABLE IF NOT EXISTS studies (
 		id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+		organization_id INT UNSIGNED NOT NULL DEFAULT 0,
+		user_id INT UNSIGNED NOT NULL,
 		created_at DATETIME NOT NULL,
 		deleted_at DATETIME DEFAULT(NULL),
 		internal_name VARCHAR(255) NOT NULL,
@@ -18,21 +20,23 @@ var StudySchema = `
 		description VARCHAR(300),
 		config JSON NOT NULL DEFAULT (JSON_OBJECT()),
 		FOREIGN KEY (consent) REFERENCES tasks(id),
+		FOREIGN KEY (organization_id) REFERENCES organizations(id),
 		PRIMARY KEY (id)
 	);
 `
 
 // Experiment represents a model for a set which contains tasks
 type Study struct {
-	ID           uint       		`json:"id"`
-	CreatedAt    time.Time  		`json:"createdAt"`
-	DeletedAt    NullTime   		`json:"deletedAt"`
-	InternalName string     		`json:"internalName"`
-	ExternalName string     		`json:"externalName"`
-	Started      bool       		`json:"started"`
-	Description  string     		`json:"description"`
-	CanEdit      bool       		`json:"canEdit"`
-	Consent      uint        		`json:"consent"`
-	Config       MapStringInterface `json:"config"`
-	Tasks        []StudyTask 		`json:"tasks"`
+	ID             uint               `json:"id"`
+	OrganizationId uint               `json:"organizationId"`
+	CreatedAt      time.Time          `json:"createdAt"`
+	DeletedAt      NullTime           `json:"deletedAt"`
+	InternalName   string             `json:"internalName"`
+	ExternalName   string             `json:"externalName"`
+	Started        bool               `json:"started"`
+	Description    string             `json:"description"`
+	CanEdit        bool               `json:"canEdit"`
+	Consent        uint               `json:"consent"`
+	Config         MapStringInterface `json:"config"`
+	Tasks          []StudyTask        `json:"tasks"`
 }
