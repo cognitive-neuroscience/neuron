@@ -18522,6 +18522,7 @@ UPDATE tasks SET
                             "title": {
                                 "en": "The following questions are about some medications you might be taking. Some of these questions ask about Parkinson’s medication. If you DON’T have Parkinson’s disease, please check the appropriate box.",
                                 "fr": "Les questions suivantes portent sur certains médicaments que vous prenez peut-être. Certaines des questions concernent les médicaments pour le Parkinson. Si vous N’AVEZ PAS la maladie de Parkinson, cochez la case appropriée."
+                            }
                         },
                         {
                             "questionType": "multipleChoiceSelect",
@@ -18790,7 +18791,6 @@ UPDATE tasks SET
                                         "fr": "Je n''ai pas la maladie de Parkinson / Je n''ai subi aucune des procédures mentionnées ci-dessus"
                                     },
                                     "value": "I have not undergone any of the PD procedures listed above"
-                                },
                                 },
                                 {
                                     "label": {
