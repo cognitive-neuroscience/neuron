@@ -5866,7 +5866,7 @@ UPDATE tasks set
                             "sectionType": "text",
                             "textContent": {
                                 "en": "Your goal is to identify when the triangle appears.",
-                                "fr": "Votre but est d’identifier lorsque le triangle apparaît."
+                                "fr": "Votre but est d’identifier quand le triangle apparaît."
                             }
                         },
                         {
@@ -8581,7 +8581,7 @@ UPDATE tasks set
                             "radiobuttonPresentation": "horizontal",
                             "title": {
                                 "en": "Getting together with friends is important to me.",
-                                "fr": "C’est important pour moi de passer du temps mes amis."
+                                "fr": "C’est important pour moi de passer du temps avec mes amis."
                             },
                             "validation":{
                                 "required":true
@@ -9031,7 +9031,7 @@ UPDATE tasks set
                             "questionType":"radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "I don''t \\"pay attention\\".",
+                                "en": "I don''t pay attention.",
                                 "fr": "Je ne porte pas attention."
                             },
                             "validation":{
@@ -9073,8 +9073,8 @@ UPDATE tasks set
                             "questionType":"radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "I have \\"racing\\" thoughts.",
-                                "fr": "J’ai des pensées qui se \\"bousculent\\""
+                                "en": "I have racing thoughts.",
+                                "fr": "J’ai des pensées qui se bousculent"
                             },
                             "validation":{
                                 "required":true
@@ -9283,7 +9283,7 @@ UPDATE tasks set
                             "questionType":"radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "I \\"squirm\\" at plays or lectures.",
+                                "en": "I squirm at plays or lectures.",
                                 "fr": "Je me tortille durant les pièces de théâtre et les conférences."
                             },
                             "validation":{
@@ -9535,7 +9535,7 @@ UPDATE tasks set
                             "questionType":"radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "I act \\"on impulse.\\"",
+                                "en": "I act on impulse.",
                                 "fr": "J’agis impulsivement."
                             },
                             "validation":{
@@ -12824,7 +12824,7 @@ UPDATE tasks set
                             "radiobuttonPresentation": "vertical",
                             "title": {
                                 "en": "Select \\"Disagree\\". This is simply to ensure that you are paying attention!",
-                                "fr": "Sélectionnez « En Désaccord ». Ceci sert à vérifier votre niveau d’attention!"
+                                "fr": "Sélectionnez « En désaccord ». Ceci sert à vérifier votre niveau d’attention!"
                             },
                             "validation": {
                                 "required":true
@@ -14540,7 +14540,7 @@ UPDATE tasks SET
                                 },
                                 {
                                     "label": {
-                                        "en": "Quite TRUE",
+                                        "en": "Quite true",
                                         "fr": "Plutôt vrai"
                                     }, 
                                     "value": "Quite true"
@@ -17905,7 +17905,7 @@ UPDATE tasks SET
                             "questionType": "multipleChoiceSelect",
                             "title": {
                                 "en": "Do you feel ON (i.e. can feel that the PD medications are taking effect) or OFF (i.e. medications are not currently taking effect)?",
-                                "fr": "Vous sentez-vous ACTIVÉ.E (\\"ON\\") (c.-à-d. sentir que les médicaments de la MP font effet) ou INACTIVÉ.E (\\"OFF\\") (c.-à-d. Sentir que les médicaments ne font pas actuellement effet)?"
+                                "fr": "Vous sentez-vous ACTIVÉ.E (\\"ON\\") (c.-à-d. sentir que les médicaments de la MP font effet) ou INACTIVÉ.E (\\"OFF\\") (c.-à-d. sentir que les médicaments ne font pas actuellement effet)?"
                             },
                             "key": "onOffMed",
                             "validation": {
@@ -18520,8 +18520,8 @@ UPDATE tasks SET
                         {
                             "questionType": "displayText",
                             "title": {
-                                "en": "The following questions are about the treatment you receive for your parkinson''s disease and for related conditions.",
-                                "fr": "Les questions suivantes portent sur le traitement que vous recevez pour votre maladie de Parkinson et pour les symptômes associés."
+                                "en": "The following questions are about some medications you might be taking. Some of these questions ask about Parkinson’s medication. If you DON’T have Parkinson’s disease, please check the appropriate box.",
+                                "fr": "Les questions suivantes portent sur certains médicaments que vous prenez peut-être. Certaines des questions concernent les médicaments pour le Parkinson. Si vous N’AVEZ PAS la maladie de Parkinson, cochez la case appropriée."
                             }
                         },
                         {
@@ -18538,8 +18538,8 @@ UPDATE tasks SET
                             "multipleChoiceOptions": [
                                 {
                                     "label": {
-                                        "en": "No, I DON''T take any prescription medications to treat my Parkinson''s disease",
-                                        "fr": "Non, je ne prends PAS de médicaments sous ordonnance pour traiter ma maladie de Parkinson"
+                                        "en": "I don’t have Parkinson’s disease / I don''t take medications for my Parkinson''s disease",
+                                        "fr": "Je n’ai pas la maladie de Parkinson / Je ne prends pas de médicaments pour traiter ma maladie de Parkinson"
                                     },
                                     "value": "No medications"
                                 },
@@ -18787,7 +18787,14 @@ UPDATE tasks SET
                             "multipleChoiceOptions": [
                                 {
                                     "label": {
-                                        "en": "Deep brain stimulation (DBS)",
+                                        "en": "I don''t have Parkinson''s disease / I have not undergone any of the procedures listed above",
+                                        "fr": "Je n''ai pas la maladie de Parkinson / Je n''ai subi aucune des procédures mentionnées ci-dessus"
+                                    },
+                                    "value": "I have not undergone any of the PD procedures listed above"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Deep brain stimulation (\\"DBS\\")",
                                         "fr": "Chirurgie de stimulation cérébrale profonde (\\"DBS\\")"
                                     },
                                     "value": "Deep brain stimulation"
@@ -18808,7 +18815,7 @@ UPDATE tasks SET
                                 },
                                 {
                                     "label": {
-                                        "en": "Focused ultrasound (FUS)",
+                                        "en": "Focused ultrasound (\\"FUS\\")",
                                         "fr": "Ultrason focalisé (\\"FUS\\")"
                                     },
                                     "value": "Focused ultrasound"
