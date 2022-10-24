@@ -5866,7 +5866,7 @@ UPDATE tasks set
                             "sectionType": "text",
                             "textContent": {
                                 "en": "Your goal is to identify when the triangle appears.",
-                                "fr": "Votre but est d’identifier lorsque le triangle apparaît."
+                                "fr": "Votre but est d’identifier quand le triangle apparaît."
                             }
                         },
                         {
@@ -8581,7 +8581,7 @@ UPDATE tasks set
                             "radiobuttonPresentation": "horizontal",
                             "title": {
                                 "en": "Getting together with friends is important to me.",
-                                "fr": "C’est important pour moi de passer du temps mes amis."
+                                "fr": "C’est important pour moi de passer du temps avec mes amis."
                             },
                             "validation":{
                                 "required":true
@@ -9031,7 +9031,7 @@ UPDATE tasks set
                             "questionType":"radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "I don''t \\"pay attention\\".",
+                                "en": "I don''t pay attention.",
                                 "fr": "Je ne porte pas attention."
                             },
                             "validation":{
@@ -9073,8 +9073,8 @@ UPDATE tasks set
                             "questionType":"radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "I have \\"racing\\" thoughts.",
-                                "fr": "J’ai des pensées qui se \\"bousculent\\""
+                                "en": "I have racing thoughts.",
+                                "fr": "J’ai des pensées qui se bousculent"
                             },
                             "validation":{
                                 "required":true
@@ -9283,7 +9283,7 @@ UPDATE tasks set
                             "questionType":"radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "I \\"squirm\\" at plays or lectures.",
+                                "en": "I squirm at plays or lectures.",
                                 "fr": "Je me tortille durant les pièces de théâtre et les conférences."
                             },
                             "validation":{
@@ -9535,7 +9535,7 @@ UPDATE tasks set
                             "questionType":"radiobuttons",
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "I act \\"on impulse.\\"",
+                                "en": "I act on impulse.",
                                 "fr": "J’agis impulsivement."
                             },
                             "validation":{
@@ -10666,19 +10666,13 @@ UPDATE tasks set
                     "questions":[
                         {
                             "questionType": "displayText",
-                            "styles": {
-                                "title-font-size": "md"
-                            },
                             "title": {
                                 "en": "Frequency Of Behaviours <br /> <br /><b>Never</b>: not at all <br /><b>Rarely</b>: 1 day/week <br /><b>Sometimes</b>: 2-3 days/week <br /><b>Often</b>: 4-5 days/week <br /><b>Very Often</b>: 6-7 days/week <br />",
                                 "fr": "Fréquence des Comportements <br /> <br /> <b>Jamais</b>: pas du tout <br /><b>Rarement</b>: 1 jour/semaine <br /><b>Parfois</b>: 2-3 jours/semaine <br /><b>Souvent</b>: 4-5 jours/semaine <br /><b>Très Souvent</b>: 6-7 jours/semaine <br />"
                             }
                         },
                         {
-                            "questionType": "displayText", 
-                            "styles": {
-                                "title-font-size": "md"
-                            },
+                            "questionType": "displayText",
                             "title": {
                                 "en": "In the last 4 weeks...",
                                 "fr": "Dans les 4 dernières semaines..."
@@ -10686,9 +10680,6 @@ UPDATE tasks set
                         },
                         {
                             "questionType": "displayText",
-                            "styles": {
-                                "title-font-size": "md"
-                            },
                             "title": {
                                 "en": "1. How much do you think about the following behaviors (such as having trouble keeping thoughts out of your mind or feeling guilty)?",
                                 "fr": "1. À quel point pensez-vous aux comportements suivant (c''est-à-dire avoir de la difficulté à garder des pensées hors de votre esprit, ou vous sentir coupable en relation à ces activités)?"
@@ -10697,17 +10688,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "styles": {
-                                "title-font-size": "md",
-                                "text-content-font-size": "md"
-                            },
                             "title": {
-                                "en": "How much do you think about...<b>Gambling?</b>",
-                                "fr": "À quel point pensez-vous au...<b>Jeu (''gambling'')?</b>"
-                            },
-                            "textContent": {
-                                "en": "Casinos, internet gambling lotteries, scratch tickets, betting, slot or poker machines",
-                                "fr": "Casinos, loteries sur Internet, tickets à gratter, paris, machines à sous ou poker"
+                                "en": "How much do you think about...<b>Gambling?</b> <br /> Casinos, internet gambling lotteries, scratch tickets, betting, slot or poker machines",
+                                "fr": "À quel point pensez-vous au...<b>Jeu (''gambling'')?</b> <br /> Casinos, loteries sur Internet, tickets à gratter, paris, machines à sous ou poker"
                             },
                             "validation": {
                                 "required":true
@@ -10754,20 +10737,12 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "styles": {
-                                "title-font-size": "md",
-                                "text-content-font-size": "md"
-                            },
                             "title": {
-                                "en": "How much do you think about...<b>Sex?</b>",
-                                "fr": "À quel point pensez-vous au...<b>Sexe?</b>"
+                                "en": "How much do you think about...<b>Sex?</b> <br /> Making sexual demands on others, promiscuity, prostitution, change in sexual orientation, masturbation, internet and telephone sexual activities, pornography",
+                                "fr": "À quel point pensez-vous au...<b>Sexe?</b> <br /> Faire des demandes sexuelles à autrui, promiscuité, prostitution, changement d''orientation sexuelle, masturbation, activités sexuelles sur Internet et par téléphone, pornographie"
                             },
                             "validation": {
                                 "required":true
-                            },
-                            "textContent": {
-                                "en": "Making sexual demands on others, promiscuity, prostitution, change in sexual orientation, masturbation, internet and telephone sexual activities, pornography",
-                                "fr": "Faire des demandes sexuelles à autrui, promiscuité, prostitution, changement d''orientation sexuelle, masturbation, activités sexuelles sur Internet et par téléphone, pornographie"
                             },
                             "key": "how much do you think about sex",
                             "multipleChoiceOptions": [
@@ -10811,20 +10786,12 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "styles": {
-                                "title-font-size": "md",
-                                "text-content-font-size": "md"
-                            },
                             "title": {
-                                "en": "How much do you think about...<b>Buying?</b>",
-                                "fr": "À quel point pensez-vous aux...<b>Achats compulsifs?</b>"
+                                "en": "How much do you think about...<b>Buying?</b> <br /> Too much of the same thing or things you don’t need or use",
+                                "fr": "À quel point pensez-vous aux...<b>Achats compulsifs?</b> <br /> Trop de la même chose ou des choses dont vous n''avez pas besoin ou que vous n''utilisez pas"
                             },
                             "validation": {
                                 "required":true
-                            },
-                            "textContent": {
-                                "en": "Too much of the same thing or things you don’t need or use",
-                                "fr": "Trop de la même chose ou des choses dont vous n''avez pas besoin ou que vous n''utilisez pas"
                             },
                             "key": "how much do you think about buying",
                             "multipleChoiceOptions": [
@@ -10868,17 +10835,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "styles": {
-                                "title-font-size": "md",
-                                "text-content-font-size": "md"
-                            },
                             "title": {
-                                "en": "How much do you think about...<b>Eating?</b>",
-                                "fr": "À quel point pensez-vous à...<b>Manger?</b>"
-                            },
-                            "textContent": {
-                                "en": "Eating larger amounts or different types of food than in the past, more rapidly than normal, at different times (such as overnight), until feeling uncomfortable full or when not hungry",
-                                "fr": "Manger plus que d''habitude, ou des aliments différents, à une vitesse augmentée, à des moments différents (comme la nuit), jusqu''à ce que vous vous sentiez mal ou sans avoir faim"
+                                "en": "How much do you think about...<b>Eating?</b> <br /> Eating larger amounts or different types of food than in the past, more rapidly than normal, at different times (such as overnight), until feeling uncomfortable full or when not hungry",
+                                "fr": "À quel point pensez-vous à...<b>Manger?</b> <br /> Manger plus que d''habitude, ou des aliments différents, à une vitesse augmentée, à des moments différents (comme la nuit), jusqu''à ce que vous vous sentiez mal ou sans avoir faim"
                             },
                             "validation": {
                                 "required":true
@@ -10925,17 +10884,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "styles": {
-                                "title-font-size": "md",
-                                "text-content-font-size": "md"
-                            },
                             "title": {
-                                "en": "How much do you think about...<b>Performing tasks or hobbies?</b>",
-                                "fr": "À quel point pensez-vous à...<b>L''exécution de tâches ou de passe-temps?</b>"
-                            },
-                            "textContent": {
-                                "en": "Specific tasks, hobbies or other organized activities, such as writing, painting, gardening, repairing or dismantling things, collecting, computer use, working on projects, etc.",
-                                "fr": "Tâches spécifiques, passe-temps ou autres activités organisées, comme écrire, peindre, jardiner, réparer ou démonter des objets, collectionner, utiliser un ordinateur, travailler sur des projets, etc."
+                                "en": "How much do you think about...<b>Performing tasks or hobbies?</b> <br /> Specific tasks, hobbies or other organized activities, such as writing, painting, gardening, repairing or dismantling things, collecting, computer use, working on projects, etc.",
+                                "fr": "À quel point pensez-vous à...<b>L''exécution de tâches ou de passe-temps?</b> <br /> Tâches spécifiques, passe-temps ou autres activités organisées, comme écrire, peindre, jardiner, réparer ou démonter des objets, collectionner, utiliser un ordinateur, travailler sur des projets, etc."
                             },
                             "validation": {
                                 "required":true
@@ -10982,17 +10933,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "styles": {
-                                "title-font-size": "md",
-                                "text-content-font-size": "md"
-                            },
                             "title": {
-                                "en": "How much do you think about...<b>Repeating simple activities?</b>",
-                                "fr": "À quel point pensez-vous à...<b>Répéter des activités simples?</b>"
-                            },
-                            "textContent": {
-                                "en": "Repeating cetain simple motor activities, such as cleaning, tidying, handling, examining, sorting, ordering, collecting, hoarding, or arranging objects, etc.",
-                                "fr": "Répéter certaines activités motrices simples, comme nettoyer, ranger, manipuler, examiner, trier, ramasser, amasser, arranger des objets, etc."
+                                "en": "How much do you think about...<b>Repeating simple activities?</b> <br /> Repeating cetain simple motor activities, such as cleaning, tidying, handling, examining, sorting, ordering, collecting, hoarding, or arranging objects, etc.",
+                                "fr": "À quel point pensez-vous à...<b>Répéter des activités simples?</b> <br /> Répéter certaines activités motrices simples, comme nettoyer, ranger, manipuler, examiner, trier, ramasser, amasser, arranger des objets, etc."
                             },
                             "validation": {
                                 "required":true
@@ -11038,18 +10981,10 @@ UPDATE tasks set
                         },
                         {
                             "questionType": "radiobuttons",
-                            "styles": {
-                                "title-font-size": "md",
-                                "text-content-font-size": "md"
-                            },
                             "radiobuttonPresentation": "horizontal",
                             "title": {
-                                "en": "How much do you think about...<b>Taking your PD medications?</b>",
-                                "fr": "À quel point pensez-vous à...<b>Prendre vos médicaments contre le Parkinson?</b>"
-                            },
-                            "textContent": {
-                                "en": "Consistently taking too much of your Parkinson’s medications, or increasing on your own, without medical advice, your overall intake of PD medications",
-                                "fr": "Régulièrement prendre trop de médicaments pour le Parkinson ou augmenter vous-même, sans avis médical, votre consommation de médicaments pour le Parkinson"
+                                "en": "How much do you think about...<b>Taking your PD medications?</b> <br /> Consistently taking too much of your Parkinson’s medications, or increasing on your own, without medical advice, your overall intake of PD medications",
+                                "fr": "À quel point pensez-vous à...<b>Prendre vos médicaments contre le Parkinson?</b> <br /> Régulièrement prendre trop de médicaments pour le Parkinson ou augmenter vous-même, sans avis médical, votre consommation de médicaments pour le Parkinson"
                             },
                             "validation": {
                                 "required":true
@@ -11105,9 +11040,6 @@ UPDATE tasks set
                         },
                         {
                             "questionType": "displayText",
-                            "styles": {
-                                "title-font-size": "md"
-                            },
                             "title": {
                                 "en": "2. Do you have urges or desires for the following behaviors that you feel are excessive or cause you distress (including becoming restless or irritable when unable to participate in them)?",
                                 "fr": "2. Avez-vous des pulsions ou des désirs pour les comportements suivants que vous jugez excessifs ou qui vous causent de la détresse (y compris devenir agité ou irritable lorsque vous ne pouvez pas vous y adonner)?"
@@ -11116,17 +11048,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "styles": {
-                                "title-font-size": "md",
-                                "text-content-font-size": "md"
-                            },
                             "title": {
-                                "en": "Do you have excessive urges/desires for...<b>Gambling?</b>",
-                                "fr": "Avez-vous des pulsions pour le...<b>Jeu (''gambling'')?</b>"
-                            },
-                            "textContent": {
-                                "en": "Casinos, internet gambling lotteries, scratch tickets, betting, slot or poker machines",
-                                "fr": "Casinos, loteries sur Internet, tickets à gratter, paris, machines à sous ou poker"
+                                "en": "Do you have excessive urges/desires for...<b>Gambling?</b> <br /> Casinos, internet gambling lotteries, scratch tickets, betting, slot or poker machines",
+                                "fr": "Avez-vous des pulsions pour le...<b>Jeu (''gambling'')?</b> <br /> Casinos, loteries sur Internet, tickets à gratter, paris, machines à sous ou poker"
                             },
                             "validation": {
                                 "required":true
@@ -11173,17 +11097,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "styles": {
-                                "title-font-size": "md",
-                                "text-content-font-size": "md"
-                            },
                             "title": {
-                                "en": "Do you have excessive urges/desires for...<b>Sex?</b>",
-                                "fr": "Avez-vous des pulsions pour le...<b>Sexe?</b>"
-                            },
-                            "textContent": {
-                                "en": "Making sexual demands on others, promiscuity, prostitution, change in sexual orientation, masturbation, internet and telephone sexual activities, pornography",
-                                "fr": "Faire des demandes sexuelles à autrui, promiscuité, prostitution, changement d''orientation sexuelle, masturbation, activités sexuelles sur Internet et par téléphone, pornographie"
+                                "en": "Do you have excessive urges/desires for...<b>Sex?</b> <br /> Making sexual demands on others, promiscuity, prostitution, change in sexual orientation, masturbation, internet and telephone sexual activities, pornography",
+                                "fr": "Avez-vous des pulsions pour le...<b>Sexe?</b> <br /> Faire des demandes sexuelles à autrui, promiscuité, prostitution, changement d''orientation sexuelle, masturbation, activités sexuelles sur Internet et par téléphone, pornographie"
                             },
                             "validation": {
                                 "required":true
@@ -11230,17 +11146,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "styles": {
-                                "title-font-size": "md",
-                                "text-content-font-size": "md"
-                            },
                             "title": {
-                                "en": "Do you have excessive urges/desires for...<b>Buying?</b>",
-                                "fr": "Avez-vous des pulsions pour les...<b>Achats compulsifs?</b>"
-                            },
-                            "textContent": {
-                                "en": "Too much of the same thing or things you don’t need or use",
-                                "fr": "Trop de la même chose ou des choses dont vous n''avez pas besoin ou que vous n''utilisez pas"
+                                "en": "Do you have excessive urges/desires for...<b>Buying?</b> <br /> Too much of the same thing or things you don’t need or use",
+                                "fr": "Avez-vous des pulsions pour les...<b>Achats compulsifs?</b> <br /> Trop de la même chose ou des choses dont vous n''avez pas besoin ou que vous n''utilisez pas"
                             },
                             "validation": {
                                 "required":true
@@ -11287,17 +11195,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "styles": {
-                                "title-font-size": "md",
-                                "text-content-font-size": "md"
-                            },
                             "title": {
-                                "en": "Do you have excessive urges/desires for...<b>Eating?</b>",
-                                "fr": "Avez-vous des pulsions pour...<b>Manger?</b>"
-                            },
-                            "textContent": {
-                                "en": "Eating larger amounts or different types of food than in the past, more rapidly than normal, at different times (such as overnight), until feeling uncomfortable full or when not hungry",
-                                "fr": "Manger plus que d''habitude, ou des aliments différents, à une vitesse augmentée, à des moments différents (comme la nuit), jusqu''à ce que vous vous sentiez mal ou sans avoir faim"
+                                "en": "Do you have excessive urges/desires for...<b>Eating?</b> <br /> Eating larger amounts or different types of food than in the past, more rapidly than normal, at different times (such as overnight), until feeling uncomfortable full or when not hungry",
+                                "fr": "Avez-vous des pulsions pour...<b>Manger?</b> <br /> Manger plus que d''habitude, ou des aliments différents, à une vitesse augmentée, à des moments différents (comme la nuit), jusqu''à ce que vous vous sentiez mal ou sans avoir faim"
                             },
                             "validation": {
                                 "required":true
@@ -11344,17 +11244,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "styles": {
-                                "title-font-size": "md",
-                                "text-content-font-size": "md"
-                            },
                             "title": {
-                                "en": "Do you have excessive urges/desires for...<b>Performing tasks or hobbies?</b>",
-                                "fr": "Avez-vous des pulsions pour...<b>L''exécution de tâches ou de passe-temps?</b>"
-                            },
-                            "textContent": {
-                                "en": "Specific tasks, hobbies or other organized activities, such as writing, painting, gardening, repairing or dismantling things, collecting, computer use, working on projects, etc.",
-                                "fr": "Tâches spécifiques, passe-temps ou autres activités organisées, comme écrire, peindre, jardiner, réparer ou démonter des objets, collectionner, utiliser un ordinateur, travailler sur des projets, etc."
+                                "en": "Do you have excessive urges/desires for...<b>Performing tasks or hobbies?</b> <br /> Specific tasks, hobbies or other organized activities, such as writing, painting, gardening, repairing or dismantling things, collecting, computer use, working on projects, etc.",
+                                "fr": "Avez-vous des pulsions pour...<b>L''exécution de tâches ou de passe-temps?</b> <br /> Tâches spécifiques, passe-temps ou autres activités organisées, comme écrire, peindre, jardiner, réparer ou démonter des objets, collectionner, utiliser un ordinateur, travailler sur des projets, etc."
                             },
                             "validation": {
                                 "required":true
@@ -11401,17 +11293,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "styles": {
-                                "title-font-size": "md",
-                                "text-content-font-size": "md"
-                            },
                             "title": {
-                                "en": "Do you have excessive urges/desires for...<b>Repeating simple activities?</b>",
-                                "fr": "Avez-vous des pulsions pour...<b>Répéter des activités simples?</b>"
-                            },
-                            "textContent": {
-                                "en": "Repeating cetain simple motor activities, such as cleaning, tidying, handling, examining, sorting, ordering, collecting, hoarding, or arranging objects, etc.",
-                                "fr": "Répéter certaines activités motrices simples, comme nettoyer, ranger, manipuler, examiner, trier, ramasser, amasser, arranger des objets, etc."
+                                "en": "Do you have excessive urges/desires for...<b>Repeating simple activities?</b> <br /> Repeating cetain simple motor activities, such as cleaning, tidying, handling, examining, sorting, ordering, collecting, hoarding, or arranging objects, etc.",
+                                "fr": "Avez-vous des pulsions pour...<b>Répéter des activités simples?</b> <br /> Répéter certaines activités motrices simples, comme nettoyer, ranger, manipuler, examiner, trier, ramasser, amasser, arranger des objets, etc."
                             },
                             "validation": {
                                 "required":true
@@ -11458,17 +11342,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "styles": {
-                                "title-font-size": "md",
-                                "text-content-font-size": "md"
-                            },
                             "title": {
-                                "en": "Do you have excessive urges/desires for...<b>Taking your PD medications?</b>",
-                                "fr": "Avez-vous des pulsions pour...<b>Prendre vos médicaments contre le Parkinson?</b>"
-                            },
-                            "textContent": {
-                                "en": "Consistently taking too much of your Parkinson’s medications, or increasing on your own, without medical advice, your overall intake of PD medications",
-                                "fr": "Régulièrement prendre trop de médicaments pour le Parkinson ou augmenter vous-même, sans avis médical, votre consommation de médicaments pour le Parkinson"
+                                "en": "Do you have excessive urges/desires for...<b>Taking your PD medications?</b> <br /> Consistently taking too much of your Parkinson’s medications, or increasing on your own, without medical advice, your overall intake of PD medications",
+                                "fr": "Avez-vous des pulsions pour...<b>Prendre vos médicaments contre le Parkinson?</b> <br /> Régulièrement prendre trop de médicaments pour le Parkinson ou augmenter vous-même, sans avis médical, votre consommation de médicaments pour le Parkinson"
                             },
                             "validation": {
                                 "required":true
@@ -11524,9 +11400,6 @@ UPDATE tasks set
                         },
                         {
                             "questionType": "displayText",
-                            "styles": {
-                                "title-font-size": "md"
-                            },
                             "title": {
                                 "en": "3. Do you have difficulty controlling the following behaviors (such as increasing them over time, or having trouble cutting down or stopping them)?",
                                 "fr": "3. Avez-vous de la difficulté à contrôler les comportements suivants (par exemple, la fréquence de votre participation augmente au fil du temps, ou vous avez de la difficulté à les réduire ou les cesser)?"
@@ -11535,17 +11408,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "styles": {
-                                "title-font-size": "md",
-                                "text-content-font-size": "md"
-                            },
                             "title": {
-                                "en": "Do you have difficulty controlling...<b>Gambling?</b>",
-                                "fr": "Avez-vous de la difficulté à contrôler le...<b>Jeu (''gambling'')?</b>"
-                            },
-                            "textContent": {
-                                "en": "Casinos, internet gambling lotteries, scratch tickets, betting, slot or poker machines",
-                                "fr": "Casinos, loteries sur Internet, tickets à gratter, paris, machines à sous ou poker"
+                                "en": "Do you have difficulty controlling...<b>Gambling?</b> <br /> Casinos, internet gambling lotteries, scratch tickets, betting, slot or poker machines",
+                                "fr": "Avez-vous de la difficulté à contrôler le...<b>Jeu (''gambling'')?</b> <br /> Casinos, loteries sur Internet, tickets à gratter, paris, machines à sous ou poker"
                             },
                             "validation": {
                                 "required":true
@@ -11592,17 +11457,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "styles": {
-                                "title-font-size": "md",
-                                "text-content-font-size": "md"
-                            },
                             "title": {
-                                "en": "Do you have difficulty controlling...<b>Sex?</b>",
-                                "fr": "Avez-vous de la difficulté à contrôler le...<b>Sexe?</b>"
-                            },
-                            "textContent": {
-                                "en": "Making sexual demands on others, promiscuity, prostitution, change in sexual orientation, masturbation, internet and telephone sexual activities, pornography",
-                                "fr": "Faire des demandes sexuelles à autrui, promiscuité, prostitution, changement d''orientation sexuelle, masturbation, activités sexuelles sur Internet et par téléphone, pornographie"
+                                "en": "Do you have difficulty controlling...<b>Sex?</b> <br /> Making sexual demands on others, promiscuity, prostitution, change in sexual orientation, masturbation, internet and telephone sexual activities, pornography",
+                                "fr": "Avez-vous de la difficulté à contrôler le...<b>Sexe?</b> <br /> Faire des demandes sexuelles à autrui, promiscuité, prostitution, changement d''orientation sexuelle, masturbation, activités sexuelles sur Internet et par téléphone, pornographie"
                             },
                             "validation": {
                                 "required":true
@@ -11649,17 +11506,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "styles": {
-                                "title-font-size": "md",
-                                "text-content-font-size": "md"
-                            },
                             "title": {
-                                "en": "Do you have difficulty controlling...<b>Buying?</b>",
-                                "fr": "Avez-vous de la difficulté à contrôler les...<b>Achats compulsifs?</b>"
-                            },
-                            "textContent": {
-                                "en": "Too much of the same thing or things you don''t need or use",
-                                "fr": "Trop de la même chose ou des choses dont vous n''avez pas besoin ou que vous n''utilisez pas"
+                                "en": "Do you have difficulty controlling...<b>Buying?</b> <br /> Too much of the same thing or things you don’t need or use",
+                                "fr": "Avez-vous de la difficulté à contrôler les...<b>Achats compulsifs?</b> <br /> Trop de la même chose ou des choses dont vous n''avez pas besoin ou que vous n''utilisez pas"
                             },
                             "validation": {
                                 "required":true
@@ -11706,17 +11555,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "styles": {
-                                "title-font-size": "md",
-                                "text-content-font-size": "md"
-                            },
                             "title": {
-                                "en": "Do you have difficulty controlling...<b>Eating?</b>",
-                                "fr": "Avez-vous de la difficulté à contrôler...<b>Manger?</b>"
-                            },
-                            "textContent": {
-                                "en": "Eating larger amounts or different types of food than in the past, more rapidly than normal, at different times (such as overnight), until feeling uncomfortable full or when not hungry",
-                                "fr": "Manger plus que d''habitude, ou des aliments différents, à une vitesse augmentée, à des moments différents (comme la nuit), jusqu''à ce que vous vous sentiez mal ou sans avoir faim"
+                                "en": "Do you have difficulty controlling...<b>Eating?</b> <br /> Eating larger amounts or different types of food than in the past, more rapidly than normal, at different times (such as overnight), until feeling uncomfortable full or when not hungry",
+                                "fr": "Avez-vous de la difficulté à contrôler...<b>Manger?</b> <br /> Manger plus que d''habitude, ou des aliments différents, à une vitesse augmentée, à des moments différents (comme la nuit), jusqu''à ce que vous vous sentiez mal ou sans avoir faim"
                             },
                             "validation": {
                                 "required":true
@@ -11763,17 +11604,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "styles": {
-                                "title-font-size": "md",
-                                "text-content-font-size": "md"
-                            },
                             "title": {
-                                "en": "Do you have difficulty controlling...<b>Performing tasks or hobbies?</b>",
-                                "fr": "Avez-vous de la difficulté à contrôler...<b>L''exécution de tâches ou de passe-temps?</b>"
-                            },
-                            "textContent": {
-                                "en": "Specific tasks, hobbies or other organized activities, such as writing, painting, gardening, repairing or dismantling things, collecting, computer use, working on projects, etc.",
-                                "fr": "Tâches spécifiques, passe-temps ou autres activités organisées, comme écrire, peindre, jardiner, réparer ou démonter des objets, collectionner, utiliser un ordinateur, travailler sur des projets, etc."
+                                "en": "Do you have difficulty controlling...<b>Performing tasks or hobbies?</b> <br /> Specific tasks, hobbies or other organized activities, such as writing, painting, gardening, repairing or dismantling things, collecting, computer use, working on projects, etc.",
+                                "fr": "Avez-vous de la difficulté à contrôler...<b>L''exécution de tâches ou de passe-temps?</b> <br /> Tâches spécifiques, passe-temps ou autres activités organisées, comme écrire, peindre, jardiner, réparer ou démonter des objets, collectionner, utiliser un ordinateur, travailler sur des projets, etc."
                             },
                             "validation": {
                                 "required":true
@@ -11820,10 +11653,6 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "styles": {
-                                "title-font-size": "md",
-                                "text-content-font-size": "md"
-                            },
                             "title": {
                                 "en": "Select \\"Rarely\\". This is simply to ensure that you are paying attention!",
                                 "fr": "Sélectionnez « Rarement » ici. Ceci sert à vérifier votre niveau d''attention!"
@@ -11873,17 +11702,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "styles": {
-                                "title-font-size": "md",
-                                "text-content-font-size": "md"
-                            },
                             "title": {
-                                "en": "Do you have difficulty controlling...<b>Repeating simple activities?</b>",
-                                "fr": "Avez-vous de la difficulté à contrôler...<b>Répéter des activités simples?</b>"
-                            },
-                            "textContent": {
-                                "en": "Repeating cetain simple motor activities, such as cleaning, tidying, handling, examining, sorting, ordering, collecting, hoarding, or arranging objects, etc.",
-                                "fr": "Répéter certaines activités motrices simples, comme nettoyer, ranger, manipuler, examiner, trier, ramasser, amasser, arranger des objets, etc."
+                                "en": "Do you have difficulty controlling...<b>Repeating simple activities?</b> <br /> Repeating cetain simple motor activities, such as cleaning, tidying, handling, examining, sorting, ordering, collecting, hoarding, or arranging objects, etc.",
+                                "fr": "Avez-vous de la difficulté à contrôler...<b>Répéter des activités simples?</b> <br /> Répéter certaines activités motrices simples, comme nettoyer, ranger, manipuler, examiner, trier, ramasser, amasser, arranger des objets, etc."
                             },
                             "validation": {
                                 "required":true
@@ -11930,17 +11751,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "styles": {
-                                "title-font-size": "md",
-                                "text-content-font-size": "md"
-                            },
                             "title": {
-                                "en": "Do you have difficulty controlling...<b>Taking your PD medications?</b>",
-                                "fr": "Avez-vous de la difficulté à contrôler...<b>Prendre de vos médicaments contre le Parkinson?</b>"
-                            },
-                            "textContent": {
-                                "en": "Consistently taking too much of your Parkinson’s medications, or increasing on your own, without medical advice, your overall intake of PD medications",
-                                "fr": "Régulièrement prendre trop de médicaments pour le Parkinson ou augmenter vous-même, sans avis médical, votre consommation de médicaments pour le Parkinson"
+                                "en": "Do you have difficulty controlling...<b>Taking your PD medications?</b> <br /> Consistently taking too much of your Parkinson’s medications, or increasing on your own, without medical advice, your overall intake of PD medications",
+                                "fr": "Avez-vous de la difficulté à contrôler...<b>Prendre de vos médicaments contre le Parkinson?</b> <br /> Régulièrement prendre trop de médicaments pour le Parkinson ou augmenter vous-même, sans avis médical, votre consommation de médicaments pour le Parkinson"
                             },
                             "validation": {
                                 "required":true
@@ -11996,9 +11809,6 @@ UPDATE tasks set
                         },
                         {
                             "questionType": "displayText",
-                            "styles": {
-                                "title-font-size": "md"
-                            },
                             "title": {
                                 "en": "4. Do you engage in activities specifically to continue the following behaviors (such as hiding what you are doing, lying, hoarding things, borrowing from others, accumulating debt, stealing, or being involved in illegal acts)?",
                                 "fr": "4. Prenez-vous des moyens spécifiquement pour vous permettre de poursuivre les activités suivantes (comme cacher ce que vous faites, mentir, accumuler des choses, emprunter aux autres, accumuler des dettes, voler ou être impliqué dans des actes illégaux)?"
@@ -12007,17 +11817,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "styles": {
-                                "title-font-size": "md",
-                                "text-content-font-size": "md"
-                            },
                             "title": {
-                                "en": "Do you engage in activities specifically to pursue...<b>Gambling?</b>",
-                                "fr": "Prenez-vous des moyens pour vous permettre de poursuivre le...<b>Jeu (''gambling'')?</b>"
-                            },
-                            "textContent": {
-                                "en": "Casinos, internet gambling lotteries, scratch tickets, betting, slot or poker machines",
-                                "fr": "Casinos, loteries sur Internet, tickets à gratter, paris, machines à sous ou poker"
+                                "en": "Do you engage in activities specifically to pursue...<b>Gambling?</b> <br /> Casinos, internet gambling lotteries, scratch tickets, betting, slot or poker machines",
+                                "fr": "Prenez-vous des moyens pour vous permettre de poursuivre le...<b>Jeu (''gambling'')?</b> <br /> Casinos, loteries sur Internet, tickets à gratter, paris, machines à sous ou poker"
                             },
                             "validation": {
                                 "required":true
@@ -12064,17 +11866,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "styles": {
-                                "title-font-size": "md",
-                                "text-content-font-size": "md"
-                            },
                             "title": {
-                                "en": "Do you engage in activities specifically to pursue...<b>Sex?</b>",
-                                "fr": "Prenez-vous des moyens pour vous permettre de poursuivre le...<b>Sexe?</b>"
-                            },
-                            "textContent": {
-                                "en": "Making sexual demands on others, promiscuity, prostitution, change in sexual orientation, masturbation, internet and telephone sexual activities, pornography",
-                                "fr": "Faire des demandes sexuelles à autrui, promiscuité, prostitution, changement d''orientation sexuelle, masturbation, activités sexuelles sur Internet et par téléphone, pornographie"
+                                "en": "Do you engage in activities specifically to pursue...<b>Sex?</b> <br /> Making sexual demands on others, promiscuity, prostitution, change in sexual orientation, masturbation, internet and telephone sexual activities, pornography",
+                                "fr": "Prenez-vous des moyens pour vous permettre de poursuivre le...<b>Sexe?</b> <br /> Faire des demandes sexuelles à autrui, promiscuité, prostitution, changement d''orientation sexuelle, masturbation, activités sexuelles sur Internet et par téléphone, pornographie"
                             },
                             "validation": {
                                 "required":true
@@ -12121,17 +11915,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "styles": {
-                                "title-font-size": "md",
-                                "text-content-font-size": "md"
-                            },
                             "title": {
-                                "en": "Do you engage in activities specifically to pursue...<b>Buying?</b>",
-                                "fr": "Prenez-vous des moyens pour vous permettre de poursuivre les...<b>Achats compulsifs?</b>"
-                            },
-                            "textContent": {
-                                "en": "Too much of the same thing or things you don’t need or use",
-                                "fr": "Trop de la même chose ou des choses dont vous n''avez pas besoin ou que vous n''utilisez pas"
+                                "en": "Do you engage in activities specifically to pursue...<b>Buying?</b> <br /> Too much of the same thing or things you don’t need or use",
+                                "fr": "Prenez-vous des moyens pour vous permettre de poursuivre les...<b>Achats compulsifs?</b> <br /> Trop de la même chose ou des choses dont vous n''avez pas besoin ou que vous n''utilisez pas"
                             },
                             "validation": {
                                 "required":true
@@ -12178,17 +11964,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "styles": {
-                                "title-font-size": "md",
-                                "text-content-font-size": "md"
-                            },
                             "title": {
-                                "en": "Do you engage in activities specifically to pursue...<b>Eating?</b>",
-                                "fr": "Prenez-vous des moyens pour vous permettre de poursuivre le...<b>Manger?</b>"
-                            },
-                            "textContent": {
-                                "en": "Eating larger amounts or different types of food than in the past, more rapidly than normal, at different times (such as overnight), until feeling uncomfortable full or when not hungry",
-                                "fr": "Manger plus que d''habitude, ou des aliments différents, à une vitesse augmentée, à des moments différents (comme la nuit), jusqu''à ce que vous vous sentiez mal ou sans avoir faim"
+                                "en": "Do you engage in activities specifically to pursue...<b>Eating?</b> <br /> Eating larger amounts or different types of food than in the past, more rapidly than normal, at different times (such as overnight), until feeling uncomfortable full or when not hungry",
+                                "fr": "Prenez-vous des moyens pour vous permettre de poursuivre le...<b>Manger?</b> <br /> Manger plus que d''habitude, ou des aliments différents, à une vitesse augmentée, à des moments différents (comme la nuit), jusqu''à ce que vous vous sentiez mal ou sans avoir faim"
                             },
                             "validation": {
                                 "required":true
@@ -12235,17 +12013,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "styles": {
-                                "title-font-size": "md",
-                                "text-content-font-size": "md"
-                            },
                             "title": {
-                                "en": "Do you engage in activities specifically to pursue...<b>Performing tasks or hobbies?</b>",
-                                "fr": "Prenez-vous des moyens pour vous permettre de poursuivre...<b>L''exécution de tâches ou de passe-temps?</b>"
-                            },
-                            "textContent": {
-                                "en": "Specific tasks, hobbies or other organized activities, such as writing, painting, gardening, repairing or dismantling things, collecting, computer use, working on projects, etc.",
-                                "fr": "Tâches spécifiques, passe-temps ou autres activités organisées, comme écrire, peindre, jardiner, réparer ou démonter des objets, collectionner, utiliser un ordinateur, travailler sur des projets, etc."
+                                "en": "Do you engage in activities specifically to pursue...<b>Performing tasks or hobbies?</b> <br /> Specific tasks, hobbies or other organized activities, such as writing, painting, gardening, repairing or dismantling things, collecting, computer use, working on projects, etc.",
+                                "fr": "Prenez-vous des moyens pour vous permettre de poursuivre...<b>L''exécution de tâches ou de passe-temps?</b> <br /> Tâches spécifiques, passe-temps ou autres activités organisées, comme écrire, peindre, jardiner, réparer ou démonter des objets, collectionner, utiliser un ordinateur, travailler sur des projets, etc."
                             },
                             "validation": {
                                 "required":true
@@ -12292,17 +12062,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "styles": {
-                                "title-font-size": "md",
-                                "text-content-font-size": "md"
-                            },
                             "title": {
-                                "en": "Do you engage in activities specifically to pursue...<b>Repeating simple activities?</b>",
-                                "fr": "Prenez-vous des moyens pour vous permettre de poursuivre...<b>Répéter des activités simples?</b>"
-                            },
-                            "textContent": {
-                                "en": "Repeating cetain simple motor activities, such as cleaning, tidying, handling, examining, sorting, ordering, collecting, hoarding, or arranging objects, etc.",
-                                "fr": "Répéter certaines activités motrices simples, comme nettoyer, ranger, manipuler, examiner, trier, ramasser, amasser, arranger des objets, etc."
+                                "en": "Do you engage in activities specifically to pursue...<b>Repeating simple activities?</b> <br /> Repeating cetain simple motor activities, such as cleaning, tidying, handling, examining, sorting, ordering, collecting, hoarding, or arranging objects, etc.",
+                                "fr": "Prenez-vous des moyens pour vous permettre de poursuivre...<b>Répéter des activités simples?</b> <br /> Répéter certaines activités motrices simples, comme nettoyer, ranger, manipuler, examiner, trier, ramasser, amasser, arranger des objets, etc."
                             },
                             "validation": {
                                 "required":true
@@ -12349,17 +12111,9 @@ UPDATE tasks set
                         {
                             "questionType": "radiobuttons",
                             "radiobuttonPresentation": "horizontal",
-                            "styles": {
-                                "title-font-size": "md",
-                                "text-content-font-size": "md"
-                            },
                             "title": {
-                                "en": "Do you engage in activities specifically to pursue...<b>Taking your PD medications?</b>",
-                                "fr": "Prenez-vous des moyens pour vous permettre de poursuivre...<b>Prendre vos médicaments contre le Parkinson?</b>"
-                            },
-                            "textContent": {
-                                "en": "Consistently taking too much of your Parkinson’s medications, or increasing on your own, without medical advice, your overall intake of PD medications",
-                                "fr": "Régulièrement prendre trop de médicaments pour le Parkinson ou augmenter vous-même, sans avis médical, votre consommation de médicaments pour le Parkinson"
+                                "en": "Do you engage in activities specifically to pursue...<b>Taking your PD medications?</b> <br /> Consistently taking too much of your Parkinson’s medications, or increasing on your own, without medical advice, your overall intake of PD medications",
+                                "fr": "Prenez-vous des moyens pour vous permettre de poursuivre...<b>Prendre vos médicaments contre le Parkinson?</b> <br /> Régulièrement prendre trop de médicaments pour le Parkinson ou augmenter vous-même, sans avis médical, votre consommation de médicaments pour le Parkinson"
                             },
                             "validation": {
                                 "required":true
@@ -12824,7 +12578,7 @@ UPDATE tasks set
                             "radiobuttonPresentation": "vertical",
                             "title": {
                                 "en": "Select \\"Disagree\\". This is simply to ensure that you are paying attention!",
-                                "fr": "Sélectionnez « En Désaccord ». Ceci sert à vérifier votre niveau d’attention!"
+                                "fr": "Sélectionnez « En désaccord ». Ceci sert à vérifier votre niveau d’attention!"
                             },
                             "validation": {
                                 "required":true
@@ -14540,7 +14294,7 @@ UPDATE tasks SET
                                 },
                                 {
                                     "label": {
-                                        "en": "Quite TRUE",
+                                        "en": "Quite true",
                                         "fr": "Plutôt vrai"
                                     }, 
                                     "value": "Quite true"
@@ -17905,7 +17659,7 @@ UPDATE tasks SET
                             "questionType": "multipleChoiceSelect",
                             "title": {
                                 "en": "Do you feel ON (i.e. can feel that the PD medications are taking effect) or OFF (i.e. medications are not currently taking effect)?",
-                                "fr": "Vous sentez-vous ACTIVÉ.E (\\"ON\\") (c.-à-d. sentir que les médicaments de la MP font effet) ou INACTIVÉ.E (\\"OFF\\") (c.-à-d. Sentir que les médicaments ne font pas actuellement effet)?"
+                                "fr": "Vous sentez-vous ACTIVÉ.E (\\"ON\\") (c.-à-d. sentir que les médicaments de la MP font effet) ou INACTIVÉ.E (\\"OFF\\") (c.-à-d. sentir que les médicaments ne font pas actuellement effet)?"
                             },
                             "key": "onOffMed",
                             "validation": {
@@ -18520,8 +18274,8 @@ UPDATE tasks SET
                         {
                             "questionType": "displayText",
                             "title": {
-                                "en": "The following questions are about the treatment you receive for your parkinson''s disease and for related conditions.",
-                                "fr": "Les questions suivantes portent sur le traitement que vous recevez pour votre maladie de Parkinson et pour les symptômes associés."
+                                "en": "The following questions are about some medications you might be taking. Some of these questions ask about Parkinson’s medication. If you DON’T have Parkinson’s disease, please check the appropriate box.",
+                                "fr": "Les questions suivantes portent sur certains médicaments que vous prenez peut-être. Certaines des questions concernent les médicaments pour le Parkinson. Si vous N’AVEZ PAS la maladie de Parkinson, cochez la case appropriée."
                             }
                         },
                         {
@@ -18538,8 +18292,8 @@ UPDATE tasks SET
                             "multipleChoiceOptions": [
                                 {
                                     "label": {
-                                        "en": "No, I DON''T take any prescription medications to treat my Parkinson''s disease",
-                                        "fr": "Non, je ne prends PAS de médicaments sous ordonnance pour traiter ma maladie de Parkinson"
+                                        "en": "I don’t have Parkinson’s disease / I don''t take medications for my Parkinson''s disease",
+                                        "fr": "Je n’ai pas la maladie de Parkinson / Je ne prends pas de médicaments pour traiter ma maladie de Parkinson"
                                     },
                                     "value": "No medications"
                                 },
@@ -18787,7 +18541,14 @@ UPDATE tasks SET
                             "multipleChoiceOptions": [
                                 {
                                     "label": {
-                                        "en": "Deep brain stimulation (DBS)",
+                                        "en": "I don''t have Parkinson''s disease / I have not undergone any of the procedures listed above",
+                                        "fr": "Je n''ai pas la maladie de Parkinson / Je n''ai subi aucune des procédures mentionnées ci-dessus"
+                                    },
+                                    "value": "I have not undergone any of the PD procedures listed above"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Deep brain stimulation (\\"DBS\\")",
                                         "fr": "Chirurgie de stimulation cérébrale profonde (\\"DBS\\")"
                                     },
                                     "value": "Deep brain stimulation"
@@ -18808,7 +18569,7 @@ UPDATE tasks SET
                                 },
                                 {
                                     "label": {
-                                        "en": "Focused ultrasound (FUS)",
+                                        "en": "Focused ultrasound (\\"FUS\\")",
                                         "fr": "Ultrason focalisé (\\"FUS\\")"
                                     },
                                     "value": "Focused ultrasound"
@@ -18819,13 +18580,6 @@ UPDATE tasks SET
                                         "fr": "Radiochirurgie au scalpel gamma"
                                     },
                                     "value": "Gamma knife radiosurgery"
-                                },
-                                {
-                                    "label": {
-                                        "en": "I have not undergone any of the PD procedures listed above",
-                                        "fr": "Je n''ai subi aucune des procédures mentionnées ci-dessus"
-                                    },
-                                    "value": "I have not undergone any of the PD procedures listed above"
                                 }
                             ]
                         }
