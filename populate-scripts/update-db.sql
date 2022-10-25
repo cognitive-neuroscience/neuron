@@ -998,7 +998,7 @@ UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "NAB",
     name = "N-Back",
-    description = "The participant sees a sequence of letters and presses the left or right arrow arrow key to indicate if they saw that letter 2 letters ago",
+    description = "The participant sees a sequence of letters and presses the left or right arrow arrow key to indicate whether they saw that letter 2 letters ago",
     external_url = "",
     config = '{
         "taskConfig": {
