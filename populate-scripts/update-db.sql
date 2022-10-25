@@ -5294,7 +5294,7 @@ UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "EXPERIMENTAL",
     name = "Smiley Face",
-    description = "The participant is presented with both long and short faces. They have to hit a key to indicate a shorter smile on the screen, compared to a different key for a longer smile",
+    description = "The participant is presented with both long and short faces. They have to hit a key to indicate a shorter smile on the screen, compared to a different key to indicate a longer smile",
     external_url = "",
     config = '{
         "taskConfig": {
