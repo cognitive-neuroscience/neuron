@@ -738,7 +738,7 @@ UPDATE tasks set
                             "sectionType": "text",
                             "textContent": {
                                 "en": "Please use the index finger of your <b>DOMINANT HAND</b> for this round",
-                                "fr": "Veuillez utiliser l''index de votre <b>MAIN DOMINANTE</b> pour ce tour."
+                                "fr": "Veuillez utiliser l''index de votre <b>MAIN DOMINANTE</b> pour ce tour"
                             }
                         },
                         {
