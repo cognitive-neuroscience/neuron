@@ -5,7 +5,7 @@ UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "NAB",
     name = "Numbers Game (VERSION 1)",
-    description = "The participant reads a sequence of numbers and enters them in the same or reverse order",
+    description = "",
     external_url = "",
     config = '{
         "taskConfig": {
