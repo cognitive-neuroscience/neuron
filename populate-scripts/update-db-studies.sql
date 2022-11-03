@@ -151,6 +151,12 @@ UPDATE studies SET
                 "textContent": "We have developed <b>online brain games</b> to assess different areas of cognitive functioning and thinking (e.g. memory, multi-tasking, etc) in a <b>very large group of people</b> from all over the world. We want to understand why some people develop significant apathy or an inability to multi-task, or memory difficulties, while others don''t."
             },
             {
+                "textContent": "<b>ELIGIBILITY:</b> We invite <b>anyone with</b> or <b>without</b> Parkinson’s disease, between the ages of 50 and 90 years old."
+            },
+            {
+                "textContent": "<b>WHAT WILL BE ASKED OF YOU:</b>"
+            },
+            {
                 "textContent": "You will be asked to play a series of brain games and fill in some questionnaires. All of this is done online (NO tablets or smartphones, only computers. Sorry!)."
             },
             {
@@ -187,6 +193,12 @@ UPDATE studies SET
             },
             {
                 "textContent": "Nous avons developpé des <b>jeux de cerveau sur le web</b> pour évaluer différentes fonctions cognitives (ex. mémoire, multi-tâches, concentration, etc.) dans un <b>très grand échantillon de personnes</b> provenant de partout dans le monde. Nous visons à comprendre pourquoi certaines personnes développent des symptômes cognitifs comme des problèmes de concentration, ou une diminution de la motivation, ou des pertes de mémoire, tandis que d''autres y échappent."
+            },
+            {
+                "textContent": "<b>ELIGIBILITÉ:</b> Nous invitons <b>toutes les personnes avec</b> ou <b>sans</b> la maladie de Parkinson, ayant entre 50 et 90 ans."
+            },
+            {
+                "textContent": "<b>CE QUE VOUS DEVREZ FAIRE:</b>"
             },
             {
                 "textContent": "Nous vous demanderons de jouer à une série de jeux et répondre à des questionnaires. Tout ceci est fait en ligne, à partir de votre ordinateur. Malheureusement il n''est pas possible de participer à partir d''un téléphone intelligent ou d''une tablette, désolé!"
