@@ -16,7 +16,7 @@ UPDATE tasks set
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
                     "title": {
-                        "en": "Welcome to the Number Game Part 1",
+                        "en": "Welcome to the Number Game - Part 1",
                         "fr": "Bienvenue au jeu des chiffres - Partie 1"
                     },
                     "sections": [
