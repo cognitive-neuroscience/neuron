@@ -250,7 +250,7 @@ UPDATE studies SET
                 "textContent": "You will be asked to play a game of choice about everyday activities and fill in some questionnaires. All of this is done online (NO tablets or smartphones, only computers. Sorry!)."
             },
             {
-                "textContent": "TThe entire study takes <b>less than one hour and a half</b>. Please try to complete it <b>in one sitting</b>, but instructions on how to take breaks will follow."
+                "textContent": "The entire study takes <b>less than two hours</b>. Please try to complete it <b>in one sitting</b>, but instructions on how to take breaks will follow."
             },
             {
                 "textContent": "To proceed to the Consent Form and decide if you want to participate:"
@@ -285,7 +285,7 @@ UPDATE studies SET
                 "textContent": "Nous vous demanderons de jouer à un jeu de décisions portant sur des activités quotidiennes et de remplir des questionnaires. Tout ceci est fait en ligne, à partir de votre ordinateur. Malheureusement il n''est pas possible de participer à partir d''un téléphone intelligent ou d''une tablette, désolé!"
             },
             {
-                "textContent": "Cette étude prend <b>moins d''une heure et demie</b> à compléter. SVP essayez de la compléter <b>en une seule fois</b>, mais nous vous fournirons aussi des instructions sur comment prendre des pauses."
+                "textContent": "Cette étude prend <b>moins de deux heures</b> à compléter. SVP essayez de la compléter <b>en une seule fois</b>, mais nous vous fournirons aussi des instructions sur comment prendre des pauses."
             },
             {
                 "textContent": "Pour procéder à lire le Formulaire de Consentement et décider si vous voulez participer:"
@@ -306,7 +306,7 @@ UPDATE studies SET
             }
         ]
     }'
-WHERE id IN (59, 67);
+WHERE id IN (59, 67, 75);
 
 UPDATE studies SET
     config = '{
