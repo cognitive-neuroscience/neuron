@@ -41,6 +41,7 @@ type User struct {
 	ChangePasswordRequired bool      `json:"changePasswordRequired"`
 	CreatedAt              time.Time `json:"createdAt"`
 	Lang                   string    `json:"lang"`
+	Name                   string    `json:"name"`
 }
 
 type CrowdSourcedUser struct {

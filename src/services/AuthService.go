@@ -17,7 +17,7 @@ func (l *AuthService) GetTemporaryPassword() string {
 
 // ValidateCredentials checks to see if the email and password match by querying the db
 // for the correct email and then comparing
-func (l *AuthService) ValidateCredentials(email string, password string) (models.User, error) {
+func (l *AuthService) ValidateCredentialsAndGetUser(email string, password string) (models.User, error) {
 
 	user, err := userRepositoryImpl.GetUserByEmail(email)
 	if err != nil {

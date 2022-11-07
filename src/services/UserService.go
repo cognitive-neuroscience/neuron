@@ -76,8 +76,29 @@ func (u *UserService) UpdateUser(receivedUser models.User) (models.User, models.
 	return models.User{}, status
 }
 
-// updatePassword only updates the password for a specific user. This should not be accessible via an HTTP call and should remain private and internal
-func (u *UserService) updatePassword(email string, newPassword string, changePasswordRequired bool) error {
+func (u *UserService) ChangePassword(email string, currentPassword string, newPassword string) models.HTTPStatus {
+	userFromDB, err := userRepositoryImpl.GetUserByEmail(email)
+	if err != nil {
+		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "there was an error updating the user"}
+	}
+	if isCorrect := passwordIsCorrect(userFromDB.Password, currentPassword); !isCorrect {
+		return models.HTTPStatus{Status: http.StatusUnprocessableEntity, Message: "password is incorrect"}
+	}
+
+	hashedPassword, err := hashAndSalt(newPassword)
+	if err != nil {
+		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: err.Error()}
+	}
+
+	if err := u.updatePasswordHelper(email, hashedPassword, false); err != nil {
+		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "there was an error updating the password"}
+	}
+
+	return models.HTTPStatus{Status: http.StatusOK, Message: "updated password"}
+}
+
+// updatePasswordHelper only updates the password for a specific user. This should not be accessible via an HTTP call and should remain private and internal
+func (u *UserService) updatePasswordHelper(email string, newPassword string, changePasswordRequired bool) error {
 	userFromDB, err := userRepositoryImpl.GetUserByEmail(email)
 	if err != nil {
 		return errors.New("there was an error retrieving the user")
@@ -91,27 +112,6 @@ func (u *UserService) updatePassword(email string, newPassword string, changePas
 	}
 
 	return nil
-}
-
-func (u *UserService) ChangePassword(email string, tempPassword string, newPassword string) models.HTTPStatus {
-	userFromDB, err := userRepositoryImpl.GetUserByEmail(email)
-	if err != nil {
-		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "there was an error updating the user"}
-	}
-	if isCorrect := passwordIsCorrect(userFromDB.Password, tempPassword); !isCorrect {
-		return models.HTTPStatus{Status: http.StatusUnprocessableEntity, Message: "password is incorrect"}
-	}
-
-	hashedPassword, err := hashAndSalt(newPassword)
-	if err != nil {
-		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: err.Error()}
-	}
-
-	if err := u.updatePassword(email, hashedPassword, false); err != nil {
-		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "there was an error updating the password"}
-	}
-
-	return models.HTTPStatus{Status: http.StatusOK, Message: "updated password"}
 }
 
 func (u *UserService) RegisterCrowdsourcedUserCompletion(participantId string, studyId string) (string, error) {
@@ -158,6 +158,16 @@ func (u *UserService) GetUserByEmail(email string) (models.User, error) {
 	user.CreatedAt = time.Time{}
 	user.Password = ""
 	return user, err
+}
+
+// GetUserById retrieves the user by the given ID
+func (u *UserService) GetUserById(id string) (models.User, error) {
+	parsedId, err := convertStringToUint8(id)
+	if err != nil {
+		axonlogger.WarningLogger.Println("Could not convert id to uint", err)
+		return models.User{}, errors.New("there was an error parsing the string to a uint")
+	}
+	return userRepositoryImpl.GetUserById(parsedId)
 }
 
 func (u *UserService) GetCrowdsourcedUserById(participantId string, studyId string) (models.CrowdSourcedUser, error) {
@@ -287,7 +297,7 @@ func (u *UserService) GetStudyUsersByStudyId(studyId string) ([]models.StudyUser
 	return userRepositoryImpl.GetStudyUsersByStudyId(parsedId)
 }
 
-func(u *UserService) GetStudyUserSummary() ([]models.StudyUserSummary, error) {
+func (u *UserService) GetStudyUserSummary() ([]models.StudyUserSummary, error) {
 	allStudyUsers, err := userRepositoryImpl.GetAllStudyUsers()
 	if err != nil {
 		return nil, err
@@ -299,7 +309,7 @@ func(u *UserService) GetStudyUserSummary() ([]models.StudyUserSummary, error) {
 		if value, ok := userStudiesMap[studyTask.UserID]; ok {
 			userStudiesMap[studyTask.UserID] = append(value, studyTask.StudyID)
 		} else {
-			userStudiesMap[studyTask.UserID] = []uint{ studyTask.StudyID }
+			userStudiesMap[studyTask.UserID] = []uint{studyTask.StudyID}
 		}
 	}
 

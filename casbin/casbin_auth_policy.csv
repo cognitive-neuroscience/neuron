@@ -1,3 +1,64 @@
+p, ADMIN,              /api/*,                               *
+          
+p, ORGANIZATIONMEMBER, /api/users/{id},                      GET
+p, PARTICIPANT,        /api/users/{id},                      GET
+p, ORGANIZATIONGUEST,  /api/users/{id},                      GET
+p, ORGANIZATIONMEMBER, /api/users/{id},                      PATCH
+p, PARTICIPANT,        /api/users/{id},                      PATCH
+p, ORGANIZATIONGUEST,  /api/users/{id},                      PATCH
+p, PARTICIPANT,        /api/users/{id}/studyusers,           GET
+  
+p, PARTICIPANT,        /api/crowdsourcedusers/{id},          GET
+p, PARTICIPANT,        /api/crowdsourcedusers/{id}/complete, GET
+
+p, PARTICIPANT,        /api/studyusers/{studyId}/{userId},   PATCH
+p, PARTICIPANT,        /api/studyusers,                      POST
+
+p, ORGANIZATIONMEMBER, /api/studyusersummary,                GET
+
+p, PARTICIPANT,        /api/studydata,                       POST
+p, ORGANIZATIONMEMBER, /api/studydata/{studyId}/{taskOrder}, GET
+
+p, ORGANIZATIONMEMBER, /api/tasks,                           GET
+p, ORGANIZATIONGUEST,  /api/tasks,                           GET
+p, ORGANIZATIONMEMBER, /api/tasks/{id}                       GET
+p, ORGANIZATIONGUEST,  /api/tasks/{id}                       GET
+
+p, ORGANIZATIONMEMBER, /api/studies/{id}/crowdsourcedusers,  GET
+p, ORGANIZATIONMEMBER, /api/studies/{id}/studyusers,         GET
+p, ORGANIZATIONMEMBER, /api/studies/{id},                    GET
+p, ORGANIZATIONGUEST,  /api/studies/{id},                    GET
+p, PARTICIPANT,        /api/studies/{id},                    GET
+p, ORGANIZATIONMEMBER, /api/studies,                         POST
+p, ORGANIZATIONMEMBER, /api/studies,                         GET
+p, ORGANIZATIONGUEST,  /api/studies,                         GET
+p, ORGANIZATIONMEMBER, /api/studies/{id}                     PATCH
+p, ORGANIZATIONMEMBER, /api/studies/{id}                     DELETE
+
+p, *,                  /api/users,                           POST
+p, *,                  /api/users/password,                  PUT
+p, *,                  /api/users/sendforgotpasswordemail,   PUT
+  
+p, *,                  /api/crowdsourcedusers,               POST
+
+p, *,                  /api/authentication/login,            POST
+p, *,                  /api/authentication/logout,           POST
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 p, ADMIN,       /api/*,                         *
 
 p, PARTICIPANT, /api/users,                     GET

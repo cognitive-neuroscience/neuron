@@ -16,7 +16,7 @@ func (*EmailService) SendEmail(emailAddress string) error {
 		return err
 	}
 
-	if err := userServiceImpl.updatePassword(emailAddress, hashedTempPassword, true); err != nil {
+	if err := userServiceImpl.updatePasswordHelper(emailAddress, hashedTempPassword, true); err != nil {
 		return errors.New("error updating password for user")
 	}
 

@@ -192,7 +192,13 @@ func (u *UserController) GetGuests(e echo.Context) error {
 
 // USERS
 
-// ChangePassword takes in an email, temp password, and new password and changes the password
+func (u *UserController) GetAllUsersForOrganization(e echo.Context) error {
+	queryParam := e.QueryParam("organization")
+
+	result, err := userServiceImpl.GetAllUsersForOrganization(queryParam)
+}
+
+// ChangePassword takes in an email, a current password, and new password. It changes the password from the current to the new password
 func (u *UserController) ChangePassword(e echo.Context) error {
 	editPasswordStruct := struct {
 		Email             string `json:"email"`
@@ -242,14 +248,18 @@ func (u *UserController) UpdateUser(e echo.Context) error {
 	return common.SendHTTPWithPayload(e, status, user)
 }
 
-func (u *UserController) GetUser(e echo.Context) error {
-	email, ok := e.Get("email").(string)
+func (u *UserController) GetUserById(e echo.Context) error {
+	userCookieId, ok := e.Get("id").(string)
+	userParamId := e.Param("id")
 	if !ok {
-		axonlogger.ErrorLogger.Println("Could not parse email from context")
+		axonlogger.ErrorLogger.Println("Could not parse id from context")
 		return common.SendHTTPStatusServiceUnavailable(e)
 	}
-
-	result, err := userServiceImpl.GetUserByEmail(email)
+	if userCookieId != userParamId {
+		axonlogger.ErrorLogger.Println("User ID and cookie ID not the same")
+		return common.SendHTTPStatusServiceUnavailable(e)
+	}
+	result, err := userServiceImpl.GetUserById(userParamId)
 	if err != nil {
 		axonlogger.ErrorLogger.Println("Could not get user", err)
 		return common.SendHTTPStatusServiceUnavailable(e)

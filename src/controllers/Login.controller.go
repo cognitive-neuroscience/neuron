@@ -34,7 +34,7 @@ func (l *LoginController) Login(e echo.Context) error {
 	}
 
 	// 3: validate username and password, returns the user info and stores in model
-	dbUser, err := authServiceImpl.ValidateCredentials(user.Email, user.Password)
+	dbUser, err := authServiceImpl.ValidateCredentialsAndGetUser(user.Email, user.Password)
 	if err != nil {
 		axonlogger.ErrorLogger.Println("Error validating user login credentials:", err)
 		return common.SendHTTPWithMessage(e, models.HTTPStatus{Status: http.StatusUnprocessableEntity, Message: err.Error()})
@@ -66,11 +66,8 @@ func (l *LoginController) Login(e echo.Context) error {
 	e.SetCookie(cookie)
 
 	axonlogger.InfoLogger.Println("user logged in with set cookie", dbUser.Email)
-	return common.SendHTTPOkWithBody(e, models.User{
-		Email: dbUser.Email,
-		ID:    dbUser.ID,
-		Role:  dbUser.Role,
-	})
+	dbUser.
+	return common.SendHTTPOkWithBody(e, dbUser)
 }
 
 // Logout clears the browser

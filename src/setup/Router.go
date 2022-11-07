@@ -25,12 +25,17 @@ func registerRoutes(app *echo.Echo) {
 func setUpUserRoutes(group *echo.Group) {
 	userControllerImpl := controllers.UserController{}
 	users := group.Group("/users")
-	users.GET("", userControllerImpl.GetUser)
+
+	users.GET("", userControllerImpl.GetAllUsersForOrganization) // takes organization as a query parameter
+	users.GET("/:id", userControllerImpl.GetUserById)
 	users.POST("", userControllerImpl.SaveUser)
-	users.GET("/guests", userControllerImpl.GetGuests)
-	users.DELETE("/:id", userControllerImpl.DeleteUserById)
-	users.PATCH("/:id", userControllerImpl.UpdateUser)
-	users.POST("/changepassword", userControllerImpl.ChangePassword)
+
+	// users.GET("", userControllerImpl.GetUser)
+	// users.POST("", userControllerImpl.SaveUser)
+	// users.GET("/guests", userControllerImpl.GetGuests)
+	// users.DELETE("/:id", userControllerImpl.DeleteUserById)
+	// users.PATCH("/:id", userControllerImpl.UpdateUser)
+	// users.POST("/changepassword", userControllerImpl.ChangePassword)
 }
 
 func setUpStudyUserRoutes(group *echo.Group) {
@@ -39,7 +44,7 @@ func setUpStudyUserRoutes(group *echo.Group) {
 	studyUsers.GET("/:studyId", userControllerImpl.GetStudyUsersForStudy)
 	studyUsers.GET("/studies", userControllerImpl.GetAllStudyUsersForLoggedInUser)
 	studyUsers.PATCH("", userControllerImpl.UpdateStudyUser)
-	studyUsers.PATCH("/increment", userControllerImpl.IncrementStudyUserCurrentTaskIndex)
+	studyUsers.PATCH("/increment", userControllerImpl.IncrementStudyUserCurrentTaskIndex) // remove, replace with generic update and add checks in this update
 	studyUsers.POST("", userControllerImpl.SaveStudyUser)
 	studyUsers.GET("/summary", userControllerImpl.GetStudyUserSummary)
 }
