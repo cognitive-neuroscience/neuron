@@ -151,6 +151,12 @@ UPDATE studies SET
                 "textContent": "We have developed <b>online brain games</b> to assess different areas of cognitive functioning and thinking (e.g. memory, multi-tasking, etc) in a <b>very large group of people</b> from all over the world. We want to understand why some people develop significant apathy or an inability to multi-task, or memory difficulties, while others don''t."
             },
             {
+                "textContent": "<b>ELIGIBILITY:</b> We invite <b>anyone with</b> or <b>without</b> Parkinson’s disease, between the ages of 50 and 90 years old."
+            },
+            {
+                "textContent": "<b>WHAT WILL BE ASKED OF YOU:</b>"
+            },
+            {
                 "textContent": "You will be asked to play a series of brain games and fill in some questionnaires. All of this is done online (NO tablets or smartphones, only computers. Sorry!)."
             },
             {
@@ -187,6 +193,12 @@ UPDATE studies SET
             },
             {
                 "textContent": "Nous avons developpé des <b>jeux de cerveau sur le web</b> pour évaluer différentes fonctions cognitives (ex. mémoire, multi-tâches, concentration, etc.) dans un <b>très grand échantillon de personnes</b> provenant de partout dans le monde. Nous visons à comprendre pourquoi certaines personnes développent des symptômes cognitifs comme des problèmes de concentration, ou une diminution de la motivation, ou des pertes de mémoire, tandis que d''autres y échappent."
+            },
+            {
+                "textContent": "<b>ELIGIBILITÉ:</b> Nous invitons <b>toutes les personnes avec</b> ou <b>sans</b> la maladie de Parkinson, ayant entre 50 et 90 ans."
+            },
+            {
+                "textContent": "<b>CE QUE VOUS DEVREZ FAIRE:</b>"
             },
             {
                 "textContent": "Nous vous demanderons de jouer à une série de jeux et répondre à des questionnaires. Tout ceci est fait en ligne, à partir de votre ordinateur. Malheureusement il n''est pas possible de participer à partir d''un téléphone intelligent ou d''une tablette, désolé!"
@@ -238,7 +250,7 @@ UPDATE studies SET
                 "textContent": "You will be asked to play a game of choice about everyday activities and fill in some questionnaires. All of this is done online (NO tablets or smartphones, only computers. Sorry!)."
             },
             {
-                "textContent": "TThe entire study takes <b>less than one hour and a half</b>. Please try to complete it <b>in one sitting</b>, but instructions on how to take breaks will follow."
+                "textContent": "The entire study takes <b>less than two hours</b>. Please try to complete it <b>in one sitting</b>, but instructions on how to take breaks will follow."
             },
             {
                 "textContent": "To proceed to the Consent Form and decide if you want to participate:"
@@ -273,7 +285,7 @@ UPDATE studies SET
                 "textContent": "Nous vous demanderons de jouer à un jeu de décisions portant sur des activités quotidiennes et de remplir des questionnaires. Tout ceci est fait en ligne, à partir de votre ordinateur. Malheureusement il n''est pas possible de participer à partir d''un téléphone intelligent ou d''une tablette, désolé!"
             },
             {
-                "textContent": "Cette étude prend <b>moins d''une heure et demie</b> à compléter. SVP essayez de la compléter <b>en une seule fois</b>, mais nous vous fournirons aussi des instructions sur comment prendre des pauses."
+                "textContent": "Cette étude prend <b>moins de deux heures</b> à compléter. SVP essayez de la compléter <b>en une seule fois</b>, mais nous vous fournirons aussi des instructions sur comment prendre des pauses."
             },
             {
                 "textContent": "Pour procéder à lire le Formulaire de Consentement et décider si vous voulez participer:"
@@ -294,7 +306,7 @@ UPDATE studies SET
             }
         ]
     }'
-WHERE id IN (59, 67);
+WHERE id IN (59, 67, 75);
 
 UPDATE studies SET
     config = '{

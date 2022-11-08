@@ -18,7 +18,7 @@ UPDATE tasks set
                     "title": {
                         "en": "Welcome to the Number Game Part 1",
                         "fr": "Bienvenue au jeu des chiffres - Partie 1"
-                        },
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
@@ -738,7 +738,7 @@ UPDATE tasks set
                             "sectionType": "text",
                             "textContent": {
                                 "en": "Please use the index finger of your <b>DOMINANT HAND</b> for this round",
-                                "fr": "Veuillez utiliser l''index de votre <b>MAIN DOMINANTE</b> pour ce tour."
+                                "fr": "Veuillez utiliser l''index de votre <b>MAIN DOMINANTE</b> pour ce tour"
                             }
                         },
                         {
@@ -998,7 +998,7 @@ UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "NAB",
     name = "N-Back",
-    description = "The participant sees a sequence of letters and presses the left or right arrow arrow key to indicate if they saw that letter 2 letters ago",
+    description = "The participant sees a sequence of letters and presses the left or right arrow arrow key to indicate whether they saw that letter 2 letters ago",
     external_url = "",
     config = '{
         "taskConfig": {
@@ -2606,7 +2606,7 @@ UPDATE tasks set
                             "sectionType": "text",
                             "textContent": {
                                 "en": "Lesser than (<) 5: Press the left arrow key ⬅️",
-                                "fr": "Inférieur à (<) 5: Appuyez sur la touche fléchée gauche ⬅"
+                                "fr": "Inférieur à (<) 5: Appuyez sur la touche fléchée gauche ⬅️"
                             }
                         },
                         {
@@ -2637,15 +2637,15 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "If the number is odd: Press the left arrow key ⬅️",
-                                "fr": "Chiffre impair: Appuyez sur la touche fléchée gauche ⬅"
+                                "en": "If the number is odd: Press the left arrow key <b>on your keyboard</b> ⬅️",
+                                "fr": "Chiffre impair: Appuyez sur la touche fléchée gauche <b>sur votre clavier</b> ⬅️"
                             }
                         },
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "If the number is even: Press the right arrow key ➡️",
-                                "fr": "Chiffre pair: Appuyez sur la touche fléchée droite"
+                                "en": "If the number is even: Press the right arrow key <b>on your keyboard</b> ➡️",
+                                "fr": "Chiffre pair: Appuyez sur la touche fléchée droite <b>sur votre clavier</b> ➡️"
                             }
                         },
                         {
@@ -2860,7 +2860,7 @@ UPDATE tasks set
                             "sectionType": "text",
                             "textContent": {
                                 "en": "Even: Right arrow key ➡️",
-                                "fr": "Pair: touche fléche droite"
+                                "fr": "Pair: touche fléche droite ➡️"
                             }
                         },
                         {
@@ -2878,7 +2878,7 @@ UPDATE tasks set
                             "sectionType": "text",
                             "textContent": {
                                 "en": "Less than 5: Left arrow key ⬅️",
-                                "fr": "Inférieur à 5: touche flèche gauche ⬅"
+                                "fr": "Inférieur à 5: touche flèche gauche ⬅️"
                             }
                         },
                         {
@@ -5294,7 +5294,7 @@ UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "EXPERIMENTAL",
     name = "Smiley Face",
-    description = "The participant is presented with both long and short faces. They have to hit a key to show that they saw a shorter smile, compared to a different key for a longer smile",
+    description = "The participant is presented with both long and short faces. They have to hit a key to indicate a shorter smile on the screen, compared to a different key to indicate a longer smile",
     external_url = "",
     config = '{
         "taskConfig": {
