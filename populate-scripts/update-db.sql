@@ -26334,6 +26334,5 @@ UPDATE tasks SET
                 }
             }
         ]
-    }
-}'
+    }'
 WHERE id = 74;
