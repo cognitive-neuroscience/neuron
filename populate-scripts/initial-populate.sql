@@ -643,3 +643,23 @@ VALUES
     "",
     '{}'
 );
+-- EVERYDAY CHOICE MIDDLE INFO DISPLAY 
+(
+    74,
+    "PSHARPLAB",
+    "QUESTIONNAIRE",
+    "Online Study Recruitement Questionnaire",
+    "Questionnaire asking the participant how they were recruited to our study",
+    "",
+    '{}'
+);
+-- EVERYDAY CHOICE MIDDLE INFO DISPLAY 
+(
+    75,
+    "PSHARPLAB",
+    "INFO_DISPLAY",
+    "Game Disclaimer Info Slide",
+    "Informing about feedback in games and performance metrics",
+    "",
+    '{}'
+);
