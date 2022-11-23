@@ -26350,15 +26350,15 @@ UPDATE tasks SET
                 "componentName": "INFODISPLAYCOMPONENT",
                 "componentConfig": {
                     "title": {
-                        "en": "Disclaimer about our computer games",
-                        "fr": "Avis de non-responsabilité pour nos jeux d’ordinateur"
+                        "en": "Information message about the computer games",
+                        "fr": "Message à propos des jeux d’ordinateur"
                     },
                     "sections": [
                         {
                             "header": "",
                             "textContent": {
-                                "en": "We will be starting the computer games portion of our study. Throughout this portion, we will have many types of games. <i>Some of these games may feel more difficult than others, which is completely normal!</i>",
-                                "fr": "Nous allons commencer la partie de notre étude censée sur les jeux de cerveau. Pendant cette partie, nous aurons de nombreux types de jeux. <i>Certains de ces jeux peuvent sembler plus difficiles que d’autres, ce qui est complètement normal!</i>"
+                                "en": "We will be starting the computer games portion of our study. Throughout this portion, you will experience many types of games. <i>Some of these games may feel more difficult than others, which is completely normal!</i>",
+                                "fr": "Nous allons commencer la partie de notre étude centrée sur les jeux de cerveau. Pendant cette partie, vous verrez plusieurs types de jeux. <i>Certains de ces jeux pourront sembler plus difficiles que d’autres, ce qui est complètement normal!</i>"
                             }
                         },
                         {
@@ -26366,14 +26366,14 @@ UPDATE tasks SET
                             "indent": 1,
                             "textContent": {
                                 "en": "1. About the games and the feedback you will receive",
-                                "fr": "1. À propos des jeux et du feedback que vous recevrez"
+                                "fr": "1. À propos des jeux et du ''feedback'' que vous recevrez"
                             }
                         },
                         {
                             "header": "",
                             "textContent": {
-                                "en": "One type of game asks you to click keys on your keyboard after performing a calculation in your head. To compare results across different participants, there is a set time window for you to respond, after which words such as “No Response Detected” will appear if we do not detect a response. This is merely to remind people to aim for a certain speed. <b>This level of speed requirement is designed to feel restrictive.</b>",
-                                "fr": "Un type de jeu vous demande de taper sur les touches de votre clavier après avoir effectué un calcul dans votre tête. Afin de pouvoir comparer les résultats entre les différents participants, vous avez une plage de temps fixe dans laquelle vous pouvez répondre. Si une réponse n’est pas détectée dans cette plage, des mots comme « Trop lent » apparaîtront sur votre écran. Ceci est simplement pour rappeler aux personnes de viser une certaine vitesse. <b>Ce niveau de vitesse est conçu pour être restrictif.</b>"
+                                "en": "One type of game asks you to click keys on your keyboard after performing a calculation in your head. To compare results across different participants, there is a set time window for you to respond, after which words such as “No Response Detected” will appear if we do not detect a response. This is merely to remind participants to aim for a certain speed. <b>This level of speed requirement is designed to feel restrictive.</b>",
+                                "fr": "Certains des jeux vous demanderont de taper sur les touches de votre clavier après avoir effectué un calcul dans votre tête. Afin de pouvoir comparer les résultats entre les différents participants, vous devrez répondre à l''intérieur d''un délai fixe. Si une réponse n’est pas détectée dans ce délai, des mots comme « Trop lent » apparaîtront à votre écran. Ceci est simplement pour rappeler aux participants de viser une certaine vitesse. <b>Ce niveau de vitesse est conçu pour être difficile.</b>"
                             }
                         },
                         {
@@ -26394,15 +26394,15 @@ UPDATE tasks SET
                         {
                             "header": "",
                             "textContent": {
-                                "en": "We want to emphasize that our goal is to identify <i>patterns</i> of performance (such as an improved performance while on dopamine medication) rather than to measure the level of any individual’s performance. The games used here cannot be used to produce individualized cognitive assessments, as such we cannot send any individualized reports of performance. <b>However, we will be sending you updates on the cognitive patterns we do identify within this study.</b>",
-                                "fr": "Nous soulignons que notre objectif avec cette étude est d’identifier des <i>schémas</i> de performance (comme une amélioration de performance sous les médicaments de dopamine) plutôt que de mesurer le niveau de performance des individus. Les jeux utilisés ici ne peuvent pas être utilisés pour produire des évaluations cognitives individualisées, et nous ne pouvons donc pas vous envoyer de rapports de performance individualisés. <b>Cependant, nous vous enverrons des mises à jour sur les schémas cognitifs que nous identifions dans nos analyses.</b>"
+                                "en": "We want to emphasize that our goal is to identify <i>patterns</i> of performance (such as relationships to mood or to medications) rather than to measure any one individual’s level of performance. The games used here cannot be used to produce individualized cognitive assessments, as such we cannot send any individualized reports of performance. <b>However, we will be sending you updates on the cognitive patterns we do identify across our group of participants as soon as possible!</b>",
+                                "fr": "Nous voulons souligner que l''objectif de cette étude est d’identifier des <i>schémas</i> de performance (comme les liens avec l''humeur ou avec les différents médicaments). Ce n''est pas de mesurer le niveau de performance des individus. Les jeux utilisés ici ne peuvent pas être utilisés pour produire des évaluations cognitives individualisées, et nous ne pouvons donc pas vous envoyer de rapports de performance individualisés. <b>Cependant, nous vous enverrons des mises à jour sur nos résultats sommaires dès que possible!</b>"
                             }
                         },
                         {
                             "header": "",
                             "textContent": {
-                                "en": "If you find that any of these games are especially restrictive or have any comments, please don’t hesitate to email us at: sharplab.neuro@mcgill.ca",
-                                "fr": "Si vous trouvez que certains entre ces jeux sont particulièrement désagréable ou si vous avez des commentaires, n’hésitez pas à nous envoyer un courriel à l’adresse suivante : sharplab.neuro@mcgill.ca"
+                                "en": "If you find that any of these games are especially restrictive or have any further comments, please don’t hesitate to email us at: sharplab.neuro@mcgill.ca",
+                                "fr": "Si vous trouvez que certains entre ces jeux sont particulièrement désagréable ou si vous avez d''autres commentaires quelconques, n’hésitez pas à nous envoyer un courriel à l’adresse suivante : sharplab.neuro@mcgill.ca"
                             }
                         }
                     ],
