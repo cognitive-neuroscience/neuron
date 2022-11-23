@@ -26347,7 +26347,7 @@ UPDATE tasks SET
         "taskConfig": {},
         "metadata": [
             {
-                "componentName": "Disp",
+                "componentName": "INFODISPLAYCOMPONENT",
                 "componentConfig": {
                     "title": {
                         "en": "Disclaimer about our computer games",
