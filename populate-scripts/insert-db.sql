@@ -6,8 +6,8 @@ VALUES
     NULL,
     "PSHARPLAB",
     "INFO_DISPLAY",
-    "HOW DID YOU HEAR ABOUT US",
-    "Questionnaire asking the participant how they were recruited to our study",
+    "Game Disclaimer Info Slide",
+    "Informing about feedback in games and performance metrics",
     "",
     '{}'
 );

@@ -643,3 +643,23 @@ VALUES
     "",
     '{}'
 );
+-- HOW DID YOU HEAR ABOUT US
+(
+    74,
+    "PSHARPLAB",
+    "QUESTIONNAIRE",
+    "Online Study Recruitement Questionnaire",
+    "Questionnaire asking the participant how they were recruited to our study",
+    "",
+    '{}'
+);
+-- INFO SLIDE ABOUT COMPUTER GAMES
+(
+    75,
+    "PSHARPLAB",
+    "INFO_DISPLAY",
+    "Game Disclaimer Info Slide",
+    "Informing about feedback in games and performance metrics",
+    "",
+    '{}'
+);
