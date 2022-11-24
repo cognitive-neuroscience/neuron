@@ -26372,7 +26372,7 @@ UPDATE tasks SET
                         {
                             "header": "",
                             "textContent": {
-                                "en": "One type of game asks you to click keys on your keyboard after performing a calculation in your head. To compare results across different participants, there is a set time window for you to respond, after which words such as “No Response Detected” will appear if we do not detect a response. This is merely to remind participants to aim for a certain speed. <b>This level of speed requirement is designed to feel restrictive.</b>",
+                                "en": "One type of game asks you to click keys on your keyboard after performing a calculation in your head. To compare results across different participants, there is a set time window for you to respond, after which words such as “Too Slow“ will appear if we do not detect a response. This is merely to remind participants to aim for a certain speed. <b>This level of speed requirement is designed to feel restrictive.</b>",
                                 "fr": "Certains des jeux vous demanderont de taper sur les touches de votre clavier après avoir effectué un calcul dans votre tête. Afin de pouvoir comparer les résultats entre les différents participants, vous devrez répondre à l''intérieur d''un délai fixe. Si une réponse n’est pas détectée dans ce délai, des mots comme « Trop lent » apparaîtront à votre écran. Ceci est simplement pour rappeler aux participants de viser une certaine vitesse. <b>Ce niveau de vitesse est conçu pour être difficile.</b>"
                             }
                         },
