@@ -23,7 +23,7 @@ var ParticipantDataSchema = `
 		submitted_at DATETIME NOT NULL,
 		data JSON,
 		PRIMARY KEY (study_id, task_order, user_id),
-		FOREIGN KEY (study_id, task_order) REFERENCES study_tasks(study_id, task_order)
+		FOREIGN KEY (study_id, task_order) REFERENCES study_tasks(study_id, task_order) ON UPDATE CASCADE
 	);
 `
 

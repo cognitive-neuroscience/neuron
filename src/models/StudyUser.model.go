@@ -18,8 +18,8 @@ var StudyUserSchema = `
 		study_id INT UNSIGNED NOT NULL,
 		completion_code VARCHAR(255) DEFAULT NULL,
 		current_task_index INT DEFAULT(0),
-		register_date DATETIME NOT NULL, 
-		due_date DATETIME DEFAULT(NULL),
+		register_date DATETIME DEFAULT NULL, 
+		due_date DATETIME DEFAULT NULL,
 		has_accepted_consent BOOLEAN DEFAULT FALSE,
 		lang VARCHAR(100) NOT NULL DEFAULT '',
 		data JSON NOT NULL DEFAULT (JSON_OBJECT()),
@@ -44,10 +44,10 @@ type StudyUser struct {
 	Data               MapStringInterface `json:"data"`
 }
 
-// StudyUserSummary 
+// StudyUserSummary
 type StudyUserSummary struct {
-	UserId 	uint 	`json:"userId"`
-	Studies []uint 	`json:"studies"`
+	UserId  uint   `json:"userId"`
+	Studies []uint `json:"studies"`
 }
 
 // Scan implements the Scanner interface. sql --> value

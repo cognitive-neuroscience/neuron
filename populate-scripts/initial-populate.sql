@@ -572,4 +572,94 @@ VALUES
     "Questionnaire asking the participant what they thought was the most/least likely stimulus to be correct",
     "",
     '{}'
+),
+-- PAVLOVIA DSST 1 FR
+(
+    67,
+    "PAVLOVIA",
+    "EXPERIMENTAL",
+    "DSST 1 FR",
+    "Pavlovia Digit Symbol Substitution Task 1 (FR)",
+    "",
+    '{}'
+),
+-- PAVLOVIA DSST 2 FR
+(
+    68,
+    "PAVLOVIA",
+    "EXPERIMENTAL",
+    "DSST 2 FR",
+    "Pavlovia Digit Symbol Substitution Task 2 (FR)",
+    "",
+    '{}'
+),
+-- PAVLOVIA Corsi FR
+(
+    69,
+    "PAVLOVIA",
+    "EXPERIMENTAL",
+    "Corsi FR",
+    "Pavlovia Corsi FR",
+    "",
+    '{}'
+),
+-- PAVLOVIA PLT 1 FR
+(
+    70,
+    "PAVLOVIA",
+    "EXPERIMENTAL",
+    "PLT 1 FR",
+    "Pavlovia PLT 1 FR",
+    "",
+    '{}'
+),
+-- PAVLOVIA PLT 2 FR
+(
+    71,
+    "PAVLOVIA",
+    "EXPERIMENTAL",
+    "PLT 2 FR",
+    "Pavlovia PLT 2 FR",
+    "",
+    '{}'
+),
+-- NUMBERS GAME TASK 2 (PREVIOUSLY DIGIT SPAN)
+(
+    72,
+    "PSHARPLAB",
+    "NAB",
+    "Numbers Game (VERSION 2)",
+    "Pavlovia PLT 2 FR",
+    "",
+    '{}'
+),
+-- EVERYDAY CHOICE MIDDLE INFO DISPLAY 
+(
+    73,
+    "PSHARPLAB",
+    "INFO_DISPLAY",
+    "Everyday choice middle display",
+    "Informing about two brain games that are left",
+    "",
+    '{}'
+);
+-- HOW DID YOU HEAR ABOUT US
+(
+    74,
+    "PSHARPLAB",
+    "QUESTIONNAIRE",
+    "Online Study Recruitement Questionnaire",
+    "Questionnaire asking the participant how they were recruited to our study",
+    "",
+    '{}'
+);
+-- INFO SLIDE ABOUT COMPUTER GAMES
+(
+    75,
+    "PSHARPLAB",
+    "INFO_DISPLAY",
+    "Game Disclaimer Info Slide",
+    "Informing about feedback in games and performance metrics",
+    "",
+    '{}'
 );
