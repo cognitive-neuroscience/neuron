@@ -6432,6 +6432,13 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
+                                "en": "You <b>MUST</b> complete both parts in one sitting, otherwise your progress will be lost!!",
+                                "fr": "Vous <b>DEVEZ</b> compléter les deux parties en une seule fois, sinon vos données et votre progrès sera perdu!!"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
                                 "en": "Please note that Part 1 is the longest and takes around 40 minutes. The rest is much shorter, and the entire experiment will last from 1 hour to 1 hour and 20 minutess.",
                                 "fr": "Veuillez noter que la partie 1 est la plus longue et dure environ 40 minutes. Le reste est beaucoup plus court, et l''ensemble de l''expérience durera entre 1 heure et 1 heure 20 minutes."
                             }
