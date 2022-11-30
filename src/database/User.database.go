@@ -21,24 +21,10 @@ type UserRepository struct {
  * This file is for saving/deleting/retrieving user data
  */
 
-// UpdateUser updates the given user in the db
-func (u *UserRepository) UpdateUser(user *models.User) (operationStatus models.HTTPStatus) {
-	db := db.DB
-
-	var updateUserInDB = `UPDATE users SET email = ?, password = ?, role = ?, change_password_required = ?, lang = ? WHERE id = ?;`
-	if _, err := db.Exec(updateUserInDB, user.Email, user.Password, user.Role, user.ChangePasswordRequired, user.Lang, user.ID); err != nil {
-		axonlogger.ErrorLogger.Println("Error updating user from DB", err)
-		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "there was a problem updating the user"}
-	}
-	axonlogger.InfoLogger.Println("Successfully updated user:", user.Email, user.ID, user.Role, user.ChangePasswordRequired)
-	return models.HTTPStatus{Status: http.StatusOK, Message: "user updated"}
-}
-
 // SaveUser saves a user in the database
 func (u *UserRepository) SaveUser(user *models.User) (operationStatus models.HTTPStatus) {
 	db := db.DB
-
-	var saveUserIntoDB = `INSERT INTO users (email, password, role, created_at, change_password_required, lang) VALUES (?, ?, ?, ?, ?, ?);`
+	var saveUserIntoDB = `INSERT INTO users (name, organization_id, email, password, role, created_at, change_password_required, lang) VALUES (?, ?, ?, ?, ?, ?, ?, ?);`
 	_, err := db.Exec(saveUserIntoDB, user.Email, user.Password, user.Role, time.Now().UTC(), false, "")
 
 	if err != nil {
@@ -54,6 +40,98 @@ func (u *UserRepository) SaveUser(user *models.User) (operationStatus models.HTT
 	}
 	axonlogger.InfoLogger.Println("Successfully created user:", user.Email, user.ID, user.Role, user.CreatedAt)
 	return models.HTTPStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)}
+}
+
+// GetUserById searches the db for a user with the given the id
+func (u *UserRepository) GetUserById(id uint) (models.User, error) {
+	user := models.User{}
+	baseRespositoryImpl := BaseRepository{}
+	rowErr := baseRespositoryImpl.GetOneBy(
+		user,
+		`
+			SELECT id, name, organization_id, email, password, role, created_at, change_password_required, lang 
+			FROM users 
+			WHERE id = ?
+			LIMIT 1;
+		`,
+		id,
+	)
+	if rowErr == sql.ErrNoRows {
+		axonlogger.WarningLogger.Println("cannot retrieve user as they do not exist in DB", id)
+		return user, errors.New("user does not exist")
+	} else if rowErr != nil {
+		axonlogger.ErrorLogger.Println("Error scanning row when getting user by id", rowErr)
+		return user, errors.New("there was an error retrieving the user")
+	}
+	return user, nil
+}
+
+// GetUsersForOrganization retrieves all members and guests for a given organization
+func (u *UserRepository) GetUsersForOrganization(organizationId uint) ([]models.User, error) {
+	users := models.User{}
+	baseRespositoryImpl := BaseRepository{}
+	var getUsersForOrganization = 
+	
+	baseRespositoryImpl.GetAllBy(
+		users,
+		`	SELECT id, name, organization_id, email, password, role, created_at, change_password_required, lang
+			FROM users
+			WHERE organization_id = ?;
+		`,
+		organizationId,
+	)
+
+	rows, err := db.Query(getUsersForOrganization, organizationId)
+	if err != nil {
+		axonlogger.ErrorLogger.Println("There was an error getting users from the DB", err)
+		return users, errors.New("there was an error retrieving study users")
+	}
+	defer rows.Close()
+	for rows.Next() {
+		studyUser := models.StudyUser{}
+		if err := rows.Scan(
+			&studyUser.UserID,
+			&studyUser.StudyID,
+			&studyUser.CompletionCode,
+			&studyUser.CurrentTaskIndex,
+			&studyUser.RegisterDate,
+			&studyUser.DueDate,
+			&studyUser.HasAcceptedConsent,
+			&studyUser.Lang,
+			&studyUser.Data,
+		); err != nil {
+			axonlogger.ErrorLogger.Println("Could not scan rows when retrieving users", err)
+			return studyUsers, errors.New("there was an error retrieving users")
+		}
+		studyUsers = append(studyUsers, studyUser)
+	}
+	if err := rows.Err(); err != nil {
+		axonlogger.ErrorLogger.Println("Error when iterating over rows", err)
+		return studyUsers, errors.New("there was an error retrieving users")
+	}
+
+// 	for i, studyTask := range studyUsers {
+// 		study, err := studyRepositoryImpl.GetStudyById(studyTask.StudyID)
+// 		if err != nil {
+// 			axonlogger.ErrorLogger.Println("Error when populating study with study tasks", err)
+// 			return nil, errors.New("there was an error retrieving studies")
+// 		}
+// 		studyUsers[i].Study = study
+// 	}
+// 	return studyUsers, nil
+// }
+
+// UpdateUser updates the given user in the db
+func (u *UserRepository) UpdateUser(user *models.User) (operationStatus models.HTTPStatus) {
+	db := db.DB
+
+	var updateUserInDB = `UPDATE users SET email = ?, password = ?, role = ?, change_password_required = ?, lang = ? WHERE id = ?;`
+	if _, err := db.Exec(updateUserInDB, user.Email, user.Password, user.Role, user.ChangePasswordRequired, user.Lang, user.ID); err != nil {
+		axonlogger.ErrorLogger.Println("Error updating user from DB", err)
+		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "there was a problem updating the user"}
+	}
+	axonlogger.InfoLogger.Println("Successfully updated user:", user.Email, user.ID, user.Role, user.ChangePasswordRequired)
+	return models.HTTPStatus{Status: http.StatusOK, Message: "user updated"}
 }
 
 func (u *UserRepository) SaveCrowdsourcedUser(crowdsourcedUser *models.CrowdSourcedUser) models.HTTPStatus {
@@ -413,34 +491,6 @@ func (u *UserRepository) GetUserByEmail(email string) (models.User, error) {
 		return user, errors.New("user does not exist")
 	} else if rowErr != nil {
 		axonlogger.ErrorLogger.Println("Error scanning row when getting user by email", rowErr)
-		return user, errors.New("there was an error retrieving the user")
-	}
-
-	return user, nil
-}
-
-// GetUserById searches for a user given the id
-func (u *UserRepository) GetUserById(id uint) (models.User, error) {
-	db := db.DB
-	var user models.User
-
-	var getUserById = `SELECT id, email, password, role, created_at, change_password_required, lang FROM users WHERE id = ?;`
-
-	rowErr := db.QueryRow(getUserById, id).Scan(
-		&user.ID,
-		&user.Email,
-		&user.Password,
-		&user.Role,
-		&user.CreatedAt,
-		&user.ChangePasswordRequired,
-		&user.Lang,
-	)
-
-	if rowErr == sql.ErrNoRows {
-		axonlogger.WarningLogger.Println("cannot retrieve user as they do not exist in DB", id)
-		return user, errors.New("user does not exist")
-	} else if rowErr != nil {
-		axonlogger.ErrorLogger.Println("Error scanning row when getting user by id", rowErr)
 		return user, errors.New("there was an error retrieving the user")
 	}
 

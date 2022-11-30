@@ -66,7 +66,7 @@ func (l *LoginController) Login(e echo.Context) error {
 	e.SetCookie(cookie)
 
 	axonlogger.InfoLogger.Println("user logged in with set cookie", dbUser.Email)
-	dbUser.
+	// dbUser.
 	return common.SendHTTPOkWithBody(e, dbUser)
 }
 

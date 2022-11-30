@@ -13,6 +13,7 @@ var userRepositoryImpl = database.UserRepository{}
 var taskRespositoryImpl = database.TaskRepository{}
 var studyRepositoryImpl = database.StudyRepository{}
 var studyDataRepositoryImpl = database.StudyDataRepository{}
+var organizationRepositoryImpl = database.OrganizationRepository{}
 var emailServiceImpl = email.EmailBaseService{}
 
 func convertStringToUint8(str string) (uint, error) {

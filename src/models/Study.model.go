@@ -10,6 +10,7 @@ var StudySchema = `
 		id INT UNSIGNED NOT NULL AUTO_INCREMENT,
 		user_id INT UNSIGNED NOT NULL,
 		created_at DATETIME NOT NULL,
+		organization_id INT UNSIGNED DEFAULT (1),
 		deleted_at DATETIME DEFAULT(NULL),
 		internal_name VARCHAR(255) NOT NULL,
 		external_name VARCHAR(255) NOT NULL,
@@ -34,6 +35,7 @@ type Study struct {
 	ExternalName string             `json:"externalName"`
 	Started      bool               `json:"started"`
 	Description  string             `json:"description"`
+	Organization Organization       `json:"organization"`
 	CanEdit      bool               `json:"canEdit"`
 	Consent      uint               `json:"consent"`
 	Config       MapStringInterface `json:"config"`

@@ -25,8 +25,6 @@ func MakeTables() {
 	DB.MustExec(models.UserSchema)
 	axonlogger.InfoLogger.Println("Setting up Crowdsource Users Table")
 	DB.MustExec(models.CrowdSourcedUserSchema)
-	axonlogger.InfoLogger.Println("Setting up EmailNotifications Table")
-	DB.MustExec(models.EmailNotificationSchema) // REF study id
 	axonlogger.InfoLogger.Println("Setting up StudyTask Table")
 	DB.MustExec(models.StudyTaskSchema) // REF study id and task id
 	axonlogger.InfoLogger.Println("Setting up StudyUser Table")
