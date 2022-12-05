@@ -12,7 +12,7 @@ import (
 type AuthService struct{}
 
 func (l *AuthService) GetTemporaryPassword() string {
-	return GenerateCode(10)
+	return GenerateCode(4)
 }
 
 // ValidateCredentials checks to see if the email and password match by querying the db
