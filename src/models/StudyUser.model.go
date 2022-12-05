@@ -18,7 +18,7 @@ var StudyUserSchema = `
 		study_id INT UNSIGNED NOT NULL,
 		completion_code VARCHAR(255) DEFAULT NULL,
 		current_task_index INT DEFAULT(0),
-		register_date DATETIME DEFAULT NOT NULL, 
+		register_date DATETIME NOT NULL, 
 		due_date DATETIME DEFAULT NULL,
 		has_accepted_consent BOOLEAN DEFAULT FALSE,
 		lang VARCHAR(100) NOT NULL DEFAULT '',
