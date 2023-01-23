@@ -28,7 +28,7 @@ var emailRegex = regexp.MustCompile("^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-
 // 	return database.SaveExperimentAndParticipant(experimentUser)
 // }
 
-// SaveUser saves the user
+// SaveUser saves the user in the db
 func (u *UserService) SaveUser(user *models.User) models.HTTPStatus {
 	if user.Password == "" {
 		axonlogger.WarningLogger.Println("Did not save", user.Email, "password cannot be empty")
@@ -38,7 +38,7 @@ func (u *UserService) SaveUser(user *models.User) models.HTTPStatus {
 		axonlogger.WarningLogger.Println("Email not valid:", user.Email)
 		return models.HTTPStatus{Status: http.StatusBadRequest, Message: "Email is not valid"}
 	}
-	if user.Role != "PARTICIPANT" && user.Role != "GUEST" {
+	if user.Role != common.PARTICIPANT && user.Role != common.GUEST {
 		axonlogger.WarningLogger.Println("Role not recognized", user.Role)
 		return models.HTTPStatus{Status: http.StatusBadRequest, Message: "Role is not valid"}
 	}
@@ -50,6 +50,18 @@ func (u *UserService) SaveUser(user *models.User) models.HTTPStatus {
 	}
 	user.Password = hashedPassword
 	return userRepositoryImpl.SaveUser(user)
+}
+
+// GetUsersForOrganization gets all members and guests for a given organization
+func (u *UserService) GetUsersForOrganization(organizationId string) ([]models.User, error) {
+	// convert string into a uint
+	studyUintId, err := convertStringToUint8(organizationId)
+	if err != nil {
+		axonlogger.WarningLogger.Println("Could not convert id to uint", err)
+		return nil, errors.New("there was an error getting organization users")
+	}
+
+	return userRepositoryImpl.GetUsersForOrganization(studyUintId)
 }
 
 // UpdateUser updates the given user but not the password

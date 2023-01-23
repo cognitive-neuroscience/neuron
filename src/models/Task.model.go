@@ -20,8 +20,10 @@ var TaskSchema = `
 		name VARCHAR(255) NOT NULL CHECK(name != ""),
 		description VARCHAR(500) NOT NULL DEFAULT "",
 		external_url VARCHAR(500) NOT NULL DEFAULT "",
+		organization_id INT UNSIGNED DEFAULT (1),
 		config JSON NOT NULL DEFAULT (JSON_OBJECT()),
-		PRIMARY KEY (id)
+		PRIMARY KEY (id),
+		FOREIGN KEY (organization_id) REFERENCES organizations(id)
 	);
 `
 
@@ -32,6 +34,7 @@ type Task struct {
 	TaskType     string             `json:"taskType"`
 	Name         string             `json:"name"`
 	Description  string             `json:"description"`
+	Organization Organization       `json:"organization"`
 	ExternalURL  string             `json:"externalURL"`
 	Config       MapStringInterface `json:"config"` // will either store task metadata or questionnaire metadata
 }

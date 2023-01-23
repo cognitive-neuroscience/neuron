@@ -33,15 +33,15 @@ var CrowdSourcedUserSchema = `
 
 // User represents a model for a user
 type User struct {
-	ID                     uint      `json:"id"`
-	OrganizationId         uint      `json:"organizationId"`
-	Email                  string    `json:"email"`
-	Password               string    `json:"password"`
-	Role                   string    `json:"role"`
-	ChangePasswordRequired bool      `json:"changePasswordRequired"`
-	CreatedAt              time.Time `json:"createdAt"`
-	Lang                   string    `json:"lang"`
-	Name                   string    `json:"name"`
+	ID                     uint         `json:"id"`
+	Organization           Organization `json:"organization"`
+	Email                  string       `json:"email"`
+	Password               string       `json:"password"`
+	Role                   string       `json:"role"`
+	ChangePasswordRequired bool         `json:"changePasswordRequired"`
+	CreatedAt              time.Time    `json:"createdAt"`
+	Lang                   string       `json:"lang"`
+	Name                   string       `json:"name"`
 }
 
 type CrowdSourcedUser struct {
