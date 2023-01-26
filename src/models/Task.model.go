@@ -6,6 +6,7 @@ import (
 	"errors"
 )
 
+// we define this type in order to allow for flexible json in golang
 type MapStringInterface map[string]interface{}
 
 /* TaskSchema defines the SQL table schema for this model
@@ -20,21 +21,18 @@ var TaskSchema = `
 		name VARCHAR(255) NOT NULL CHECK(name != ""),
 		description VARCHAR(500) NOT NULL DEFAULT "",
 		external_url VARCHAR(500) NOT NULL DEFAULT "",
-		organization_id INT UNSIGNED DEFAULT (1),
 		config JSON NOT NULL DEFAULT (JSON_OBJECT()),
-		PRIMARY KEY (id),
-		FOREIGN KEY (organization_id) REFERENCES organizations(id)
+		PRIMARY KEY (id)
 	);
 `
 
 // Task represents the most basic configuration for the tasks in sharplab
 type Task struct {
-	ID           uint64             `json:"id"`
+	ID           uint               `json:"id"`
 	FromPlatform string             `json:"fromPlatform"`
 	TaskType     string             `json:"taskType"`
 	Name         string             `json:"name"`
 	Description  string             `json:"description"`
-	Organization Organization       `json:"organization"`
 	ExternalURL  string             `json:"externalURL"`
 	Config       MapStringInterface `json:"config"` // will either store task metadata or questionnaire metadata
 }

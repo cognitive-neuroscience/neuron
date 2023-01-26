@@ -1,6 +1,9 @@
 package models
 
-import "time"
+import (
+	"database/sql"
+	"time"
+)
 
 // UserSchema defines the SQL table schema for this model
 var UserSchema = `
@@ -9,9 +12,9 @@ var UserSchema = `
 		name VARCHAR(500) DEFAULT "",
 		organization_id INT UNSIGNED DEFAULT NULL,
 		email VARCHAR(255) NOT NULL UNIQUE CHECK(email != ""),
-		created_at DATETIME NOT NULL,
 		password VARCHAR(255) NOT NULL CHECK(password != ""),
-		role ENUM("ADMIN", "PARTICIPANT", "GUEST"),
+		role ENUM("ADMIN", "PARTICIPANT", "GUEST", "ORGANIZATION_MEMBER"),
+		created_at DATETIME NOT NULL,
 		change_password_required BOOLEAN DEFAULT FALSE,
 		lang VARCHAR(100) NOT NULL DEFAULT '',
 		PRIMARY KEY (id),
@@ -33,15 +36,28 @@ var CrowdSourcedUserSchema = `
 
 // User represents a model for a user
 type User struct {
-	ID                     uint         `json:"id"`
-	Organization           Organization `json:"organization"`
-	Email                  string       `json:"email"`
-	Password               string       `json:"password"`
-	Role                   string       `json:"role"`
-	ChangePasswordRequired bool         `json:"changePasswordRequired"`
-	CreatedAt              time.Time    `json:"createdAt"`
-	Lang                   string       `json:"lang"`
-	Name                   string       `json:"name"`
+	ID                     uint          `json:"id"`
+	Name                   string        `json:"name"`
+	Organization           *Organization `json:"organization"` // set to a pointer so that the returned json is null if pointer points to a nil value
+	Email                  string        `json:"email"`
+	Password               string        `json:"password"`
+	Role                   string        `json:"role"`
+	CreatedAt              time.Time     `json:"createdAt"`
+	ChangePasswordRequired bool          `json:"changePasswordRequired"`
+	Lang                   string        `json:"lang"`
+}
+
+// internal DB representation of user
+type DBUser struct {
+	ID                     uint          `json:"id"`
+	Name                   string        `json:"name"`
+	OrganizationId         sql.NullInt32 `json:"organizationId"` // this can potentially be null in the db
+	Email                  string        `json:"email"`
+	Password               string        `json:"password"`
+	Role                   string        `json:"role"`
+	CreatedAt              time.Time     `json:"createdAt"`
+	ChangePasswordRequired bool          `json:"changePasswordRequired"`
+	Lang                   string        `json:"lang"`
 }
 
 type CrowdSourcedUser struct {

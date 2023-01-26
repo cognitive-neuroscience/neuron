@@ -3,9 +3,9 @@ package models
 // OrganizationSchema defines the SQL table schema for this model
 var OrganizationSchema = `
 	CREATE TABLE IF NOT EXISTS organizations (
-		id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-		name VARCHAR(500) NOT NULL,
-		logo_path VARCHAR(500) NOT NULL,
+		id INT UNSIGNED AUTO_INCREMENT NOT NULL,
+		name VARCHAR(500) NOT NULL CHECK(name != ""),
+		logo_path VARCHAR(500),
 		PRIMARY KEY (id)
 	);
 `

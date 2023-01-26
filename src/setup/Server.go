@@ -30,7 +30,7 @@ func CreateServer() {
 	e.Server.Addr = ":" + port
 
 	// retrieve jwt from cookie and set context variables
-	e.Use(validateCookieMiddleware)
+	// e.Use(validateCookieMiddleware)
 
 	// configure file
 	e.Use(middleware.LoggerWithConfig(middleware.LoggerConfig{
@@ -40,25 +40,28 @@ func CreateServer() {
 	}))
 	defer logger.CloseLogFile()
 
-	casbinPath, err := getPathToCasbin()
-	if err != nil {
-		panic("Can't find casbin path in .env file")
-	}
+	// casbinPath, err := getPathToCasbin()
+	// if err != nil {
+	// 	panic("Can't find casbin path in .env file")
+	// }
 
 	///usr/sbin/sharplab/
-	casbinEnforcer, err := casbin.NewEnforcer(casbinPath+"/casbin_auth_model.conf", casbinPath+"/casbin_auth_policy.csv")
-	if err != nil {
-		logger.ErrorLogger.Println("could not set up casbin route protection", err)
-		panic("could not set up casbin route protection")
-	}
-	enforcer := Enforcer{enforcer: casbinEnforcer}
-	e.Use(enforcer.Enforce)
+	// casbinEnforcer, err := casbin.NewEnforcer(casbinPath+"/casbin_auth_model.conf", casbinPath+"/casbin_auth_policy.csv")
+	// if err != nil {
+	// 	logger.ErrorLogger.Println("could not set up casbin route protection", err)
+	// 	panic("could not set up casbin route protection")
+	// }
+	// enforcer := Enforcer{enforcer: casbinEnforcer}
+	// e.Use(enforcer.Enforce)
 
 	// use compression middleware
 	e.Use(middleware.Gzip())
 
 	// protect from XSS
 	e.Use(middleware.Secure())
+
+	// protect from CSRF
+	e.Use(middleware.CSRF())
 
 	// recovery from panic middleware
 	e.Use(middleware.RecoverWithConfig(middleware.RecoverConfig{

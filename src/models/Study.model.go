@@ -1,6 +1,7 @@
 package models
 
 import (
+	"database/sql"
 	"time"
 )
 
@@ -8,9 +9,8 @@ import (
 var StudySchema = `
 	CREATE TABLE IF NOT EXISTS studies (
 		id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-		user_id INT UNSIGNED NOT NULL,
+		owner_id INT UNSIGNED NOT NULL,
 		created_at DATETIME NOT NULL,
-		organization_id INT UNSIGNED DEFAULT (1),
 		deleted_at DATETIME DEFAULT(NULL),
 		internal_name VARCHAR(255) NOT NULL,
 		external_name VARCHAR(255) NOT NULL,
@@ -20,24 +20,38 @@ var StudySchema = `
 		description VARCHAR(300),
 		config JSON NOT NULL DEFAULT (JSON_OBJECT()),
 		FOREIGN KEY (consent) REFERENCES tasks(id),
-		FOREIGN KEY (organization_id) REFERENCES organizations(id),
+		FOREIGN KEY (owner_id) REFERENCES users(id),
 		PRIMARY KEY (id)
 	);
 `
 
-// Experiment represents a model for a set which contains tasks
+// Study represents a model for a set of tasks
 type Study struct {
 	ID           uint               `json:"id"`
-	User         User               `json:"user"`
+	Owner        User               `json:"owner"`
 	CreatedAt    time.Time          `json:"createdAt"`
-	DeletedAt    NullTime           `json:"deletedAt"`
+	DeletedAt    sql.NullTime       `json:"deletedAt"`
 	InternalName string             `json:"internalName"`
 	ExternalName string             `json:"externalName"`
 	Started      bool               `json:"started"`
-	Description  string             `json:"description"`
-	Organization Organization       `json:"organization"`
 	CanEdit      bool               `json:"canEdit"`
-	Consent      uint               `json:"consent"`
+	Consent      Task               `json:"consent"`
+	Description  string             `json:"description"`
 	Config       MapStringInterface `json:"config"`
-	Tasks        []StudyTask        `json:"tasks"`
+	StudyTasks   []StudyTask        `json:"studyTasks"`
+}
+
+// DBStudy is the database representation of a study
+type DBStudy struct {
+	ID           uint               `json:"id"`
+	OwnerId      uint               `json:"ownerId"`
+	CreatedAt    time.Time          `json:"createdAt"`
+	DeletedAt    sql.NullTime       `json:"deletedAt"`
+	InternalName string             `json:"internalName"`
+	ExternalName string             `json:"externalName"`
+	Started      bool               `json:"started"`
+	CanEdit      bool               `json:"canEdit"`
+	ConsentId    uint               `json:"consentId"`
+	Description  string             `json:"description"`
+	Config       MapStringInterface `json:"config"`
 }

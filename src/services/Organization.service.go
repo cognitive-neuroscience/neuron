@@ -1,6 +1,7 @@
 package services
 
 import (
+	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
 	"github.com/cognitive-neuroscience/neuron/src/models"
 )
 
@@ -10,6 +11,9 @@ import (
 
 type OrganizationService struct{}
 
-func (o *OrganizationService) GetOrganizationById(organizationId uint) (models.Organization, error) {
+// GetOrganizationById gets the organization by the given id
+func (o *OrganizationService) GetOrganizationById(organizationId uint) (models.Organization, models.HTTPStatus) {
+	axonlogger.InfoLogger.Println("ORGANIZATION SERVICE: GetOrganizationById()")
+
 	return organizationRepositoryImpl.GetOrganizationById(organizationId)
 }
