@@ -11,7 +11,8 @@ import (
 
 type StudyTaskRepository struct{}
 
-// CreateStudyTaskAsTransaction takes a given transaction and attempts to save studyTasks within the db, rolling back if an error is encountered
+// CreateStudyTaskAsTransaction takes a given transaction and attempts to save studyTasks within the db, rolling back if an error is encountered.
+// It returns a 201 or 500 status code.
 func (s *StudyTaskRepository) CreateStudyTaskAsTransaction(studyTask models.StudyTask, tx *sqlx.Tx) models.HTTPStatus {
 	axonlogger.InfoLogger.Println("STUDYUSER DATABASE: CreateStudyTaskAsTransaction()")
 

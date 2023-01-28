@@ -12,13 +12,15 @@ func registerRoutes(app *echo.Echo) {
 
 	setUpUserRoutes(api)
 	setUpCrowdsourceUserRoutes(api)
-	// setUpStudyUserRoutes(api)
+	setUpStudyUserRoutes(api)
 
 	setUpStudyRoutes(api)
 	setUpAuthRoutes(api)
-	// setUpStudyDataRoutes(api)
-	// setUpTaskRoutes(api)
+	setUpParticipantDataRoutes(api)
+	setUpTaskRoutes(api)
 	// setUpEmailRoutes(api)
+
+	setUpSummaryRoutes(api)
 }
 
 func setUpUserRoutes(group *echo.Group) {
@@ -26,11 +28,11 @@ func setUpUserRoutes(group *echo.Group) {
 	users := group.Group("/users")
 
 	users.POST("", userControllerImpl.CreateUser)
+	users.GET("", userControllerImpl.GetUsersByOrganizationId) // takes a query param (organizationId)
 	users.GET("/:userId", userControllerImpl.GetUserById)
-	users.GET("", userControllerImpl.GetUsersByOrganizationId)
 	users.PATCH("/:userId", userControllerImpl.UpdateUser)
-	users.GET("/:userId/studyusers", userControllerImpl.GetStudyUsersByUserId)
 	users.DELETE("/:userId", userControllerImpl.DeleteUserById)
+	users.GET("/:userId/studyusers", userControllerImpl.GetStudyUsersByUserId)
 	users.PUT("/password", userControllerImpl.UpdateUserPassword)
 	users.PUT("/forgotpassword", userControllerImpl.HandleForgotPassword)
 }
@@ -43,44 +45,25 @@ func setUpCrowdsourceUserRoutes(group *echo.Group) {
 	crowdsourcedusers.PATCH("/complete", crowdSourcedUserController.HandleSetComplete)
 }
 
-// func setUpUserRoutes(group *echo.Group) {
-// 	userControllerImpl := controllers.UserController{}
-// 	users := group.Group("/users")
+func setUpStudyUserRoutes(group *echo.Group) {
+	studyUserControllerImpl := controllers.StudyUserController{}
+	studyUsers := group.Group("/studyusers")
 
-// 	users.GET("", userControllerImpl.GetAllUsersForOrganization) // takes organization as a query parameter
-// 	users.GET("/:id", userControllerImpl.GetUserById)
-// 	users.POST("", userControllerImpl.SaveUser)
-
-// 	// users.GET("", userControllerImpl.GetUser)
-// 	// users.POST("", userControllerImpl.SaveUser)
-// 	// users.GET("/guests", userControllerImpl.GetGuests)
-// 	// users.DELETE("/:id", userControllerImpl.DeleteUserById)
-// 	// users.PATCH("/:id", userControllerImpl.UpdateUser)
-// 	// users.POST("/changepassword", userControllerImpl.ChangePassword)
-// }
-
-// func setUpStudyUserRoutes(group *echo.Group) {
-// 	userControllerImpl := controllers.UserController{}
-// 	studyUsers := group.Group("/studyusers")
-// 	studyUsers.GET("/:studyId", userControllerImpl.GetStudyUsersForStudy)
-// 	studyUsers.GET("/studies", userControllerImpl.GetAllStudyUsersForLoggedInUser)
-// 	studyUsers.PATCH("", userControllerImpl.UpdateStudyUser)
-// 	studyUsers.PATCH("/increment", userControllerImpl.IncrementStudyUserCurrentTaskIndex) // remove, replace with generic update and add checks in this update
-// 	studyUsers.POST("", userControllerImpl.SaveStudyUser)
-// 	studyUsers.GET("/summary", userControllerImpl.GetStudyUserSummary)
-// }
+	studyUsers.POST("", studyUserControllerImpl.CreateStudyUser)
+	studyUsers.PATCH("/:userId/:studyId", studyUserControllerImpl.UpdateStudyUser)
+}
 
 func setUpStudyRoutes(group *echo.Group) {
 	studiesControllerImpl := controllers.StudyController{}
 	studies := group.Group("/studies")
 
 	studies.POST("", studiesControllerImpl.CreateStudy)
+	studies.GET("", studiesControllerImpl.GetStudiesByOrganization) // takes a query param (organizationId)
 	studies.GET("/:studyId", studiesControllerImpl.GetStudyById)
-	// studies.POST("", studiesControllerImpl.SaveStudy)
-	// studies.GET("", studiesControllerImpl.GetAllStudies)
-	// studies.GET("/:studyId", studiesControllerImpl.GetStudyById)
-	// studies.PUT("/:id", studiesControllerImpl.UpdateStudy)
-	// studies.DELETE("/:studyId", studiesControllerImpl.DeleteStudyById)
+	studies.GET("/:studyId/crowdsourcedusers", studiesControllerImpl.GetCrowdSourcedUsersByStudyId)
+	studies.GET("/:studyId/studyusers", studiesControllerImpl.GetStudyUsersByStudyId)
+	studies.PATCH("/:studyId", studiesControllerImpl.UpdateStudy) // takes a query param (updateTasks)
+	studies.DELETE("/:studyId", studiesControllerImpl.ArchiveStudyById)
 }
 
 func setUpAuthRoutes(group *echo.Group) {
@@ -91,22 +74,22 @@ func setUpAuthRoutes(group *echo.Group) {
 	auth.GET("/csrf", authControllerImpl.CSRF)
 }
 
-// func setUpStudyDataRoutes(group *echo.Group) {
-// 	studyDataControllerImpl := controllers.StudyDataController{}
-// 	studyData := group.Group("/studydata")
-// 	studyData.POST("", studyDataControllerImpl.UploadTaskData)
-// 	studyData.GET("/:studyId/:taskOrder", studyDataControllerImpl.GetTaskData)
-// }
+func setUpParticipantDataRoutes(group *echo.Group) {
+	participantDataControllerImpl := controllers.ParticipantDataController{}
+	studyData := group.Group("/participantdata")
+	studyData.POST("", participantDataControllerImpl.CreateParticipantData)
+	studyData.GET("/:studyId/:taskOrder", participantDataControllerImpl.GetParticipantDataByStudyIdAndTaskOrder)
+}
 
-// func setUpTaskRoutes(group *echo.Group) {
-// 	taskControllerImpl := controllers.TaskController{}
-// 	task := group.Group("/tasks")
-// 	task.GET("", taskControllerImpl.GetAllTasks)
-// 	task.GET("/:taskId", taskControllerImpl.GetTaskByTaskId)
-// }
+func setUpSummaryRoutes(group *echo.Group) {
+	summaryControllerImpl := controllers.SummaryController{}
+	summary := group.Group("/summary")
+	summary.GET("/studyusersummary", summaryControllerImpl.GetStudyUsersSummary)
+}
 
-// func setUpEmailRoutes(group *echo.Group) {
-// 	emailControllerImpl := controllers.EmailController{}
-// 	email := group.Group("/email")
-// 	email.POST("", emailControllerImpl.SendEmail)
-// }
+func setUpTaskRoutes(group *echo.Group) {
+	taskControllerImpl := controllers.TaskController{}
+	task := group.Group("/tasks")
+	task.GET("", taskControllerImpl.GetAllTasks)
+	task.GET("/:taskId", taskControllerImpl.GetTaskById)
+}

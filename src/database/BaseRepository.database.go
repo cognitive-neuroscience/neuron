@@ -4,6 +4,7 @@ import (
 	"database/sql"
 	"net/http"
 	"reflect"
+	"strings"
 
 	"github.com/cognitive-neuroscience/neuron/src/db"
 	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
@@ -97,22 +98,23 @@ func rowsToStructs(rows *sql.Rows, argStructSlicePointer interface{}) error {
 // It returns a 200, 404, or 500 status code.
 func (b *BaseRepository) GetOneBy(argStruct interface{}, query string, args ...interface{}) models.HTTPStatus {
 	db := db.DB
-
 	row := db.QueryRow(query, args...)
 	rowErr := rowToStruct(row, argStruct)
 
-	if rowErr != nil {
-		axonlogger.WarningLogger.Println("Attempted Query: " + query)
-		axonlogger.WarningLogger.Println("There was an error running the query in the DB", rowErr)
-	}
 	if rowErr == sql.ErrNoRows {
 		axonlogger.WarningLogger.Println("cannot retrieve resource as it does not exist", args)
 		return models.HTTPStatus{Status: http.StatusNotFound, Message: http.StatusText(http.StatusNotFound)}
 	} else if rowErr != nil {
-		axonlogger.ErrorLogger.Println("Error scanning row when getting resource", rowErr)
+
+		if strings.Contains(rowErr.Error(), "1452") {
+			// 1452 is a mysql DB error indicating that the foreign key constraint fails - either the study or the user does not exist
+			axonlogger.WarningLogger.Println("cannot retrieve resource as it does not exist", args)
+			return models.HTTPStatus{Status: http.StatusNotFound, Message: http.StatusText(http.StatusNotFound)}
+		}
+		axonlogger.WarningLogger.Println("Attempted Query: " + query)
+		axonlogger.WarningLogger.Println("There was an error running the query in the DB", rowErr)
 		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)}
 	}
-
 	return models.HTTPStatus{Status: http.StatusOK, Message: http.StatusText(http.StatusOK)}
 }
 

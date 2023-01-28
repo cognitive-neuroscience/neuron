@@ -36,12 +36,21 @@ func (u *UserRepository) CreateUser(user *models.User) (httpStatus models.HTTPSt
 		organizationId = &user.Organization.ID
 	}
 
-	var saveUserIntoDB = `
+	_, err := db.Exec(
+		`
 			INSERT INTO users 
 			(name, organization_id, email, password, role, created_at, change_password_required, lang) 
 			VALUES (?, ?, ?, ?, ?, ?, ?, ?);
-		`
-	_, err := db.Exec(saveUserIntoDB, user.Name, organizationId, user.Email, user.Password, user.Role, time.Now().UTC(), false, "")
+		`,
+		user.Name,
+		organizationId,
+		user.Email,
+		user.Password,
+		user.Role,
+		time.Now().UTC(),
+		false,
+		"",
+	)
 
 	if err != nil {
 		axonlogger.ErrorLogger.Println("Error saving user into DB", err)
@@ -50,7 +59,7 @@ func (u *UserRepository) CreateUser(user *models.User) (httpStatus models.HTTPSt
 			Message: "there was a problem creating the user",
 		}
 		if strings.Contains(err.Error(), "1062") {
-			// 1062 is a mysql DB error indicating duplicate entry exists
+			// 1062 is a mysql DB error indicating duplicate entry exists. Either the id or the email is duplicated.
 			status.Status = http.StatusConflict
 			status.Message = http.StatusText(http.StatusConflict)
 		}

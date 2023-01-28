@@ -17,7 +17,8 @@ import (
 
 type StudyRepository struct{}
 
-// CreateStudy creates a study
+// CreateStudy creates a study.
+// It returns a 201 or 500 status code.
 func (s *StudyRepository) CreateStudy(study *models.Study) models.HTTPStatus {
 	axonlogger.InfoLogger.Println("STUDY DATABASE: CreateStudy()")
 	defer func() {
@@ -88,7 +89,8 @@ func (s *StudyRepository) CreateStudy(study *models.Study) models.HTTPStatus {
 	return models.HTTPStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)}
 }
 
-// GetStudyById retrieves a study from the database given the study id
+// GetStudyById retrieves a study from the database given the study id.
+// It returns a 200, 404, or 500 status code.
 func (s *StudyRepository) GetStudyById(studyId uint) (models.Study, models.HTTPStatus) {
 	axonlogger.InfoLogger.Println("STUDY DATABASE: GetStudyById()")
 	defer func() {
@@ -105,7 +107,8 @@ func (s *StudyRepository) GetStudyById(studyId uint) (models.Study, models.HTTPS
 		`
 			SELECT id, owner_id, created_at, deleted_at, internal_name, external_name, started, can_edit, consent, description, config 
 			FROM studies 
-			WHERE id = ?
+			WHERE id = ? 
+			LIMIT 1;
 		`,
 		studyId,
 	)
@@ -144,21 +147,184 @@ func (s *StudyRepository) GetStudyById(studyId uint) (models.Study, models.HTTPS
 	return study, models.HTTPStatus{Status: http.StatusOK, Message: http.StatusText(http.StatusOK)}
 }
 
-// func (s *StudyRepository) UpdateStudyNoTasks(study *models.Study) models.HTTPStatus {
-// 	db := db.DB
-// 	var setStudyActiveValue = `
-// 		UPDATE studies
-// 		SET internal_name = ?, external_name = ?, started = ?, description = ?, can_edit = ?, consent = ?, config = ?
-// 		WHERE id = ?;
-// 	`
+// GetStudiesByOrganizationId gets all studies for the organization.
+// It returns a 200, 404, or 500 status code.
+func (s *StudyRepository) GetStudiesByOrganizationId(organizationId uint) ([]models.Study, models.HTTPStatus) {
+	axonlogger.InfoLogger.Println("STUDY DATABASE: GetStudiesByOrganizationId()")
+	defer func() {
+		if err := recover(); err != nil {
+			axonlogger.ErrorLogger.Println("there was an error getting the study by id", err)
+		}
+	}()
 
-// 	if _, err := db.Exec(setStudyActiveValue, study.InternalName, study.ExternalName, study.Started, study.Description, study.CanEdit, study.Consent, study.Config, study.ID); err != nil {
-// 		axonlogger.ErrorLogger.Println("Could not scan rows when retrieving studies", err)
-// 		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "could not update study"}
-// 	}
+	studies := []models.Study{}
+	dbStudies := []models.DBStudy{}
 
-// 	return models.HTTPStatus{Status: http.StatusOK, Message: "successfully updated study"}
+	if httpStatus := baseRepositoryImpl.GetAllBy(
+		&dbStudies,
+		`
+			SELECT studies.id, owner_id, studies.created_at, deleted_at, internal_name, external_name, started, can_edit, consent, description, config 
+			FROM studies JOIN users 
+			ON studies.owner_id = users.id 
+			WHERE users.organization_id = ? AND deleted_at IS NULL ORDER BY created_at DESC;
+		`,
+		organizationId,
+	); !common.HTTPRequestIsSuccessful(httpStatus.Status) {
+		return []models.Study{}, httpStatus
+	}
+
+	for _, dbStudy := range dbStudies {
+		study, getStudyHttpStatus := s.GetStudyById(dbStudy.ID)
+		if !common.HTTPRequestIsSuccessful(getStudyHttpStatus.Status) {
+			return []models.Study{}, getStudyHttpStatus
+		}
+
+		studies = append(studies, study)
+	}
+	return studies, models.HTTPStatus{Status: http.StatusOK, Message: http.StatusText(http.StatusOK)}
+}
+
+// UpdateStudy updates the study. It removes all study tasks from the database and updates the study with new study tasks.
+// It returns a 200 or 500
+func (s *StudyRepository) UpdateStudy(study *models.Study) models.HTTPStatus {
+	axonlogger.InfoLogger.Println("STUDY DATABASE: UpdateStudy()")
+	defer func() {
+		if err := recover(); err != nil {
+			axonlogger.ErrorLogger.Println("there was an error getting the study by id", err)
+		}
+	}()
+
+	db := db.DB
+
+	if httpStatus := s.UpdateStudyWithoutTaskUpdate(study); !common.HTTPRequestIsSuccessful(httpStatus.Status) {
+		return httpStatus
+	}
+
+	// begin transaction
+	tx, err := db.Beginx()
+
+	if err != nil {
+		axonlogger.ErrorLogger.Println("Error starting transaction", err)
+		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)}
+	}
+
+	if _, err := tx.Exec(`DELETE FROM study_tasks WHERE study_id = ?;`, study.ID); err != nil {
+		tx.Rollback()
+		axonlogger.ErrorLogger.Println("There was an error deleting study tasks from the DB", err)
+		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)}
+	}
+
+	for _, studyTask := range study.StudyTasks {
+		if studyTask.Task.ID != study.ID {
+			axonlogger.WarningLogger.Println("study task ID received is different from parent study id")
+			return models.HTTPStatus{Status: http.StatusBadRequest, Message: http.StatusText(http.StatusBadRequest)}
+		}
+
+		if _, err := tx.Exec(
+			`INSERT INTO study_tasks (study_id, task_id, task_order, config) VALUES (?, ?, ?, ?);`,
+			studyTask.StudyID,
+			studyTask.Task.ID,
+			studyTask.TaskOrder,
+			studyTask.Config,
+		); err != nil {
+			tx.Rollback()
+			axonlogger.ErrorLogger.Println("could not save study tasks into db", err)
+			return models.HTTPStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)}
+		}
+	}
+
+	// commit transaction
+	if err := tx.Commit(); err != nil {
+		axonlogger.ErrorLogger.Println("Error committing saved study into database", err)
+		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)}
+	}
+
+	return models.HTTPStatus{Status: http.StatusOK, Message: http.StatusText(http.StatusOK)}
+}
+
+// UpdateStudyWithoutTaskUpdate updates the study. It only updates superficial fields like name, description, etc.
+// It returns a 200 or 500 status code.
+func (s *StudyRepository) UpdateStudyWithoutTaskUpdate(study *models.Study) models.HTTPStatus {
+	axonlogger.InfoLogger.Println("STUDY DATABASE: UpdateStudyWithoutTaskUpdate()")
+	defer func() {
+		if err := recover(); err != nil {
+			axonlogger.ErrorLogger.Println("there was an error getting the study by id", err)
+		}
+	}()
+
+	db := db.DB
+
+	if _, err := db.Exec(
+		`
+			UPDATE studies 
+			SET deleted_at = ?, internal_name = ?, external_name = ?, started = ?, description = ?, can_edit = ?, consent = ?, config = ? 
+			WHERE id = ?;
+		`,
+		study.DeletedAt,
+		study.InternalName,
+		study.ExternalName,
+		study.Started,
+		study.Description,
+		study.CanEdit,
+		study.Consent.ID,
+		study.Config,
+		study.ID,
+	); err != nil {
+		if err == sql.ErrNoRows {
+			return models.HTTPStatus{Status: http.StatusNotFound, Message: http.StatusText(http.StatusNotFound)}
+		}
+		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)}
+	}
+
+	return models.HTTPStatus{Status: http.StatusOK, Message: http.StatusText(http.StatusOK)}
+}
+
+// id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+// owner_id INT UNSIGNED NOT NULL,
+// created_at DATETIME NOT NULL,
+// deleted_at DATETIME DEFAULT(NULL),
+// internal_name VARCHAR(255) NOT NULL,
+// external_name VARCHAR(255) NOT NULL,
+// started BOOLEAN DEFAULT FALSE,
+// can_edit BOOLEAN DEFAULT TRUE,
+// consent INT UNSIGNED DEFAULT(NULL),
+// description VARCHAR(300),
+// config JSON NOT NULL DEFAULT (JSON_OBJECT()),
+// FOREIGN KEY (consent) REFERENCES tasks(id),
+// FOREIGN KEY (owner_id) REFERENCES users(id),
+// PRIMARY KEY (id)
+// );
+// `
+
+// // Study represents a model for a set of tasks
+// type Study struct {
+// ID           uint               `json:"id"`
+// Owner        User               `json:"owner"`
+// CreatedAt    time.Time          `json:"createdAt"`
+// DeletedAt    sql.NullTime       `json:"deletedAt"`
+// InternalName string             `json:"internalName"`
+// ExternalName string             `json:"externalName"`
+// Started      bool               `json:"started"`
+// CanEdit      bool               `json:"canEdit"`
+// Consent      Task               `json:"consent"`
+// Description  string             `json:"description"`
+// Config       MapStringInterface `json:"config"`
+// StudyTasks   []StudyTask        `json:"studyTasks"`
 // }
+
+// // DBStudy is the database representation of a study
+// type DBStudy struct {
+// ID           uint               `json:"id"`
+// OwnerId      uint               `json:"ownerId"`
+// CreatedAt    time.Time          `json:"createdAt"`
+// DeletedAt    sql.NullTime       `json:"deletedAt"`
+// InternalName string             `json:"internalName"`
+// ExternalName string             `json:"externalName"`
+// Started      bool               `json:"started"`
+// CanEdit      bool               `json:"canEdit"`
+// ConsentId    uint               `json:"consentId"`
+// Description  string             `json:"description"`
+// Config       MapStringInterface `json:"config"`
 
 // func (s *StudyRepository) UpdateStudy(study *models.Study) models.HTTPStatus {
 // 	var genericErrMessage = `There was an error updating the study`

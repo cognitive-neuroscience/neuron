@@ -1,22 +1,33 @@
 package controllers
 
+import (
+	"github.com/cognitive-neuroscience/neuron/src/common"
+	axonlogger "github.com/cognitive-neuroscience/neuron/src/logger"
+	"github.com/labstack/echo/v4"
+)
+
 type TaskController struct{}
 
-// // GetAllCustomTasks gets all CustomTasks from the DB
-// func (t *TaskController) GetAllTasks(e echo.Context) error {
-// 	tasks, err := taskServiceImpl.GetAllTasks()
-// 	if err != nil {
-// 		return common.SendHTTPStatusServiceUnavailable(e)
-// 	}
-// 	return common.SendHTTPOkWithBody(e, tasks)
-// }
+// GetAllTasks retrieves all tasks from the database
+func (t *TaskController) GetAllTasks(e echo.Context) error {
+	axonlogger.InfoLogger.Println("============= TASK CONTROLLER: GetAllTasks() =============")
+	tasks, httpStatus := taskServiceImpl.GetAllTasks()
 
-// func (t *TaskController) GetTaskByTaskId(e echo.Context) error {
-// 	taskId := e.Param("taskId")
+	if !common.HTTPRequestIsSuccessful(httpStatus.Status) {
+		return e.JSON(httpStatus.Status, httpStatus)
+	}
 
-// 	task, err := taskServiceImpl.GetTaskByTaskId(taskId)
-// 	if err != nil {
-// 		return common.SendHTTPWithMessage(e, models.HTTPStatus{Status: http.StatusInternalServerError, Message: err.Error()})
-// 	}
-// 	return common.SendHTTPOkWithBody(e, task)
-// }
+	return common.SendHTTPOkWithBody(e, tasks)
+}
+
+// GetTaskById retrieves a task with the given id
+func (t *TaskController) GetTaskById(e echo.Context) error {
+	axonlogger.InfoLogger.Println("============= TASK CONTROLLER: GetTaskById() =============")
+	taskId := e.Param("taskId")
+
+	tasks, httpStatus := taskServiceImpl.GetTaskById(taskId)
+	if !common.HTTPRequestIsSuccessful(httpStatus.Status) {
+		return e.JSON(httpStatus.Status, httpStatus)
+	}
+	return common.SendHTTPOkWithBody(e, tasks)
+}

@@ -38,13 +38,49 @@ func (t *TaskRepository) GetTaskById(taskID uint) (models.Task, models.HTTPStatu
 	return task, httpStatus
 }
 
-// id INT UNSIGNED NOT NULL AUTO_INCREMENT,
-// from_platform ENUM("PSHARPLAB", "SURVEYMONKEY", "PAVLOVIA"),
-// task_type ENUM("NAB", "EXPERIMENTAL", "QUESTIONNAIRE", "CONSENT", "INFO_DISPLAY"),
-// name VARCHAR(255) NOT NULL CHECK(name != ""),
-// description VARCHAR(500) NOT NULL DEFAULT "",
-// external_url VARCHAR(500) NOT NULL DEFAULT "",
-// config JSON NOT NULL DEFAULT (JSON_OBJECT()),
+// GetAllTasks retrieves all tasks from the database.
+// It returns a 200 or 500 status code.
+func (t *TaskRepository) GetAllTasks() ([]models.Task, models.HTTPStatus) {
+	axonlogger.InfoLogger.Println("TASK DATABASE: GetAllTasks()")
+	defer func() {
+		if err := recover(); err != nil {
+			axonlogger.ErrorLogger.Println("there was an error getting all tasks", err)
+		}
+	}()
+
+	tasks := []models.Task{}
+	httpStatus := baseRepositoryImpl.GetAllBy(
+		&tasks,
+		`SELECT id, from_platform, task_type, name, description, external_url, config 
+		FROM tasks;`,
+	)
+
+	return tasks, httpStatus
+}
+
+// GetAllTasksByStudyId gets all tasks for a given study id. Currently unused.
+// It returns a 200 or 500 status code
+func (t *TaskRepository) GetAllTasksByStudyId(studyId uint) ([]models.Task, models.HTTPStatus) {
+	axonlogger.InfoLogger.Println("TASK DATABASE: GetAllTasksByStudyId")
+	defer func() {
+		if err := recover(); err != nil {
+			axonlogger.ErrorLogger.Println("there was an error getting all tasks", err)
+		}
+	}()
+
+	tasks := []models.Task{}
+	httpStatus := baseRepositoryImpl.GetAllBy(
+		&tasks,
+		`
+			SELECT id, from_platform, task_type, name, description, external_url, config 
+			FROM tasks WHERE 
+			study_id = ?;
+		`,
+		studyId,
+	)
+
+	return tasks, httpStatus
+}
 
 // func (t *TaskRepository) GetTasksByStudyId(studyID uint) ([]models.StudyTask, error) {
 // 	db := db.DB

@@ -14,15 +14,20 @@ type UserController struct{}
 
 // CreateUser saves the given user into the database
 func (u *UserController) CreateUser(e echo.Context) error {
-	axonlogger.InfoLogger.Println("USER CONTROLLER: CreateUser()")
+	axonlogger.InfoLogger.Println("============= USER CONTROLLER: CreateUser() =============")
 
 	user := new(models.User)
+	role, getRoleIsOk := e.Get("role").(string)
 
-	if err := e.Bind(user); err != nil {
-		axonlogger.WarningLogger.Println("Could not parse user details", err)
+	if !getRoleIsOk {
+		axonlogger.WarningLogger.Println("Could not get role", role)
 		return common.SendHTTPBadRequest(e)
 	}
-	httpStatus := userServiceImpl.CreateUser(user)
+
+	if err := e.Bind(user); err != nil {
+		return common.SendHTTPBadRequest(e)
+	}
+	httpStatus := userServiceImpl.CreateUser(role, user)
 
 	if !common.HTTPRequestIsSuccessful(httpStatus.Status) {
 		axonlogger.ErrorLogger.Println("CreateUser() failed")
@@ -33,7 +38,7 @@ func (u *UserController) CreateUser(e echo.Context) error {
 // GetUserById retrieves the user by the given id. The user must be logged in first,
 // and the id of the logged in cookie must be the same as what is received in the param
 func (u *UserController) GetUserById(e echo.Context) error {
-	axonlogger.InfoLogger.Println("USER CONTROLLER: GetUserById()")
+	axonlogger.InfoLogger.Println("============= USER CONTROLLER: GetUserById() =============")
 	// userCookieId, ok := e.Get("id").(string)
 	userParamId := e.Param("userId")
 	// if !ok {
@@ -56,7 +61,7 @@ func (u *UserController) GetUserById(e echo.Context) error {
 
 // GetUsersByOrganizationId retrieves all of the given members and guests for a given organization
 func (u *UserController) GetUsersByOrganizationId(e echo.Context) error {
-	axonlogger.InfoLogger.Println("USER CONTROLLER: GetUsersByOrganizationId()")
+	axonlogger.InfoLogger.Println("============= USER CONTROLLER: GetUsersByOrganizationId() =============")
 
 	queryParam := e.QueryParam("organizationId")
 	if queryParam == "" {
@@ -75,14 +80,17 @@ func (u *UserController) GetUsersByOrganizationId(e echo.Context) error {
 
 // UpdateUser updates the given user
 func (u *UserController) UpdateUser(e echo.Context) error {
-	axonlogger.InfoLogger.Println("USER CONTROLLER: UpdateUser()")
+	axonlogger.InfoLogger.Println("============= USER CONTROLLER: UpdateUser() =============")
+
+	userParamId := e.Param("userId")
 
 	receivedUser := new(models.User)
 	if err := e.Bind(receivedUser); err != nil {
 		axonlogger.WarningLogger.Println("Could not parse user details", err)
 		return common.SendHTTPBadRequest(e)
 	}
-	user, httpStatus := userServiceImpl.UpdateUser(receivedUser)
+
+	user, httpStatus := userServiceImpl.UpdateUser(userParamId, receivedUser)
 
 	if !common.HTTPRequestIsSuccessful(httpStatus.Status) {
 		axonlogger.ErrorLogger.Println("UpdateUser() failed")
@@ -93,7 +101,7 @@ func (u *UserController) UpdateUser(e echo.Context) error {
 
 // GetStudyUsersByUserId retrieves all study users for the given user id
 func (u *UserController) GetStudyUsersByUserId(e echo.Context) error {
-	axonlogger.InfoLogger.Println("USER CONTROLLER: GetStudyUsersByUserId()")
+	axonlogger.InfoLogger.Println("============= USER CONTROLLER: GetStudyUsersByUserId() =============")
 
 	userParamId := e.Param("userId")
 	results, httpStatus := studyUserServiceImpl.GetAllStudyUsersByUserId(userParamId)
@@ -108,7 +116,7 @@ func (u *UserController) GetStudyUsersByUserId(e echo.Context) error {
 
 // DeleteUserById deletes the user with a given id. This route is only for deleting guests
 func (u *UserController) DeleteUserById(e echo.Context) error {
-	axonlogger.InfoLogger.Println("USER CONTROLLER: DeleteUserById()")
+	axonlogger.InfoLogger.Println("============= USER CONTROLLER: DeleteUserById() =============")
 
 	userParamId := e.Param("userId")
 	httpStatus := userServiceImpl.DeleteUserByID(userParamId)
@@ -123,7 +131,7 @@ func (u *UserController) DeleteUserById(e echo.Context) error {
 
 // UpdateUserPassword updates the users password with a new salted and hashed password
 func (u *UserController) UpdateUserPassword(e echo.Context) error {
-	axonlogger.InfoLogger.Println("USER CONTROLLER: UpdateUserPassword()")
+	axonlogger.InfoLogger.Println("============= USER CONTROLLER: UpdateUserPassword() =============")
 
 	changePasswordStruct := struct {
 		Email             string `json:"email"`
@@ -151,7 +159,7 @@ func (u *UserController) UpdateUserPassword(e echo.Context) error {
 
 // SendForgotPasswordEmail sends an email and sets the changePasswordRequired flag to true for the user
 func (u *UserController) HandleForgotPassword(e echo.Context) error {
-	axonlogger.InfoLogger.Println("USER CONTROLLER: SendForgotPasswordEmail()")
+	axonlogger.InfoLogger.Println("============= USER CONTROLLER: SendForgotPasswordEmail() =============")
 
 	emailStruct := struct {
 		Email string `json:"email"`

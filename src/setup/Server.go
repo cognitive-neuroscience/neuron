@@ -61,7 +61,7 @@ func CreateServer() {
 	e.Use(middleware.Secure())
 
 	// protect from CSRF
-	e.Use(middleware.CSRF())
+	// e.Use(middleware.CSRF())
 
 	// recovery from panic middleware
 	e.Use(middleware.RecoverWithConfig(middleware.RecoverConfig{

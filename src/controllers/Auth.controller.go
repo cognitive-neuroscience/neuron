@@ -19,7 +19,7 @@ type AuthController struct{}
 
 // Login is the login api entry point for logging in an existing user and attaching a JWT
 func (l *AuthController) Login(e echo.Context) error {
-	axonlogger.InfoLogger.Println("AUTH CONTROLLER: Login()")
+	axonlogger.InfoLogger.Println("============= AUTH CONTROLLER: Login() =============")
 
 	user := new(models.User)
 	// 1: parse input into user model
@@ -72,7 +72,7 @@ func (l *AuthController) Login(e echo.Context) error {
 
 // Logout clears the browser
 func (l *AuthController) Logout(e echo.Context) error {
-	axonlogger.InfoLogger.Println("AUTH CONTROLLER: Logout()")
+	axonlogger.InfoLogger.Println("============= AUTH CONTROLLER: Logout() =============")
 
 	email := e.Get("email")
 	id := e.Get("id")

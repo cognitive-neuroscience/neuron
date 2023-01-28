@@ -16,7 +16,7 @@ type CrowdSourcedUserController struct{}
 
 // CreateCrowdSourcedUserAndLogin creates a crowdsourced user and logs them in automatically
 func (c *CrowdSourcedUserController) CreateCrowdSourcedUserAndLogin(e echo.Context) error {
-	axonlogger.InfoLogger.Println("CROWDSOURCED CONTROLLER: CreateCrowdSourcedUserAndLogin()")
+	axonlogger.InfoLogger.Println("============= CROWDSOURCED CONTROLLER: CreateCrowdSourcedUserAndLogin() =============")
 
 	crowdSourcedUser := new(models.CrowdSourcedUser)
 
@@ -64,7 +64,7 @@ func (c *CrowdSourcedUserController) CreateCrowdSourcedUserAndLogin(e echo.Conte
 
 // GetCrowdSourcedUserByCrowdSourcedUserAndStudyId gets a crowd sourced user by the given id
 func (c *CrowdSourcedUserController) GetCrowdSourcedUserByCrowdSourcedUserAndStudyId(e echo.Context) error {
-	axonlogger.InfoLogger.Println("CROWDSOURCED CONTROLLER: GetCrowdSourcedUserByCrowdSourcedUserAndStudyId()")
+	axonlogger.InfoLogger.Println("============= CROWDSOURCED CONTROLLER: GetCrowdSourcedUserByCrowdSourcedUserAndStudyId() =============")
 	crowdSourcedUserParamId := e.Param("crowdSourcedUserId")
 	studyId := e.Param("studyId")
 
@@ -78,7 +78,7 @@ func (c *CrowdSourcedUserController) GetCrowdSourcedUserByCrowdSourcedUserAndStu
 
 // HandleSetComplete sets a random string as the completion code
 func (c *CrowdSourcedUserController) HandleSetComplete(e echo.Context) error {
-	axonlogger.InfoLogger.Println("CROWDSOURCED CONTROLLER: HandleSetComplete()")
+	axonlogger.InfoLogger.Println("============= CROWDSOURCED CONTROLLER: HandleSetComplete() =============")
 
 	crowdSourcedUser := new(models.CrowdSourcedUser)
 	if err := e.Bind(crowdSourcedUser); err != nil {
