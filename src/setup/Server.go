@@ -29,8 +29,14 @@ func CreateServer() {
 	e := echo.New()
 	e.Server.Addr = ":" + port
 
+	// protect from CSRF attacks.
+	// we need to set the cookie path to be "/" for client side (angular httpCsrfInterceptor)
+	e.Use(middleware.CSRFWithConfig(middleware.CSRFConfig{
+		CookiePath: "/",
+	}))
+
 	// retrieve jwt from cookie and set context variables
-	// e.Use(validateCookieMiddleware)
+	e.Use(validateCookieMiddleware)
 
 	// configure file
 	e.Use(middleware.LoggerWithConfig(middleware.LoggerConfig{
@@ -59,9 +65,6 @@ func CreateServer() {
 
 	// protect from XSS
 	e.Use(middleware.Secure())
-
-	// protect from CSRF
-	// e.Use(middleware.CSRF())
 
 	// recovery from panic middleware
 	e.Use(middleware.RecoverWithConfig(middleware.RecoverConfig{
@@ -101,7 +104,6 @@ func validateCookieMiddleware(next echo.HandlerFunc) echo.HandlerFunc {
 		} else {
 			jwt := cookie.Value
 			claims, err := tokenServiceImpl.ValidateToken(jwt)
-
 			if err != nil {
 				role = common.NONE
 			} else {

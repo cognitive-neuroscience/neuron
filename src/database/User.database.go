@@ -48,8 +48,8 @@ func (u *UserRepository) CreateUser(user *models.User) (httpStatus models.HTTPSt
 		user.Password,
 		user.Role,
 		time.Now().UTC(),
-		false,
-		"",
+		user.ChangePasswordRequired,
+		user.Lang,
 	)
 
 	if err != nil {

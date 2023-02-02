@@ -96,7 +96,7 @@ func (s *StudyUserService) UpdateStudyUser(userId string, studyId string, studyU
 // i.e. ParticipantData.Data[studyUser.currentTaskIndex] should exist.
 // This function also returns false if it encounters an error.
 func allowStudyUserCurrentTaskIndexIncrement(studyUser models.StudyUser) bool {
-	userIdAsString := convertUintToString(studyUser.User.ID)
+	userIdAsString := common.ConvertUintToString(studyUser.User.ID)
 
 	_, httpStatus := participantDataRepositoryImpl.GetParticipantDataByStudyAndUserIdAndTaskOrder(
 		studyUser.Study.ID,

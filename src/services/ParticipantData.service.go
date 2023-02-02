@@ -12,12 +12,14 @@ type ParticipantDataService struct{}
 // CreateParticipantData saves the given experiment data into a table.
 // It returns a 200 or 500 status code.
 func (s *ParticipantDataService) CreateParticipantData(participantData models.ParticipantData) models.HTTPStatus {
+	axonlogger.InfoLogger.Println("PARTICIPANTDATA SERVICE: CreateParticipantData()")
 	return participantDataRepositoryImpl.CreateParticipantData(participantData)
 }
 
 // GetParticipantDataByStudyIdAndTaskOrder gets task data given a study id and task order.
 // It returns a 200, or 500
 func (s *ParticipantDataService) GetParticipantDataByStudyIdAndTaskOrder(studyIdFromPath string, taskOrderFromPath string) ([]models.ParticipantData, models.HTTPStatus) {
+	axonlogger.InfoLogger.Println("PARTICIPANTDATA SERVICE: GetParticipantDataByStudyIdAndTaskOrder()")
 	studyId, convertStudyIdErr := convertStringToUint8(studyIdFromPath)
 	taskOrder, convertTaskOrderErr := convertStringToUint8(taskOrderFromPath)
 	if convertStudyIdErr != nil || convertTaskOrderErr != nil {

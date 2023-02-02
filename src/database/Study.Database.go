@@ -215,7 +215,7 @@ func (s *StudyRepository) UpdateStudy(study *models.Study) models.HTTPStatus {
 	}
 
 	for _, studyTask := range study.StudyTasks {
-		if studyTask.Task.ID != study.ID {
+		if studyTask.StudyID != study.ID {
 			axonlogger.WarningLogger.Println("study task ID received is different from parent study id")
 			return models.HTTPStatus{Status: http.StatusBadRequest, Message: http.StatusText(http.StatusBadRequest)}
 		}

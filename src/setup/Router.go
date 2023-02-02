@@ -18,7 +18,6 @@ func registerRoutes(app *echo.Echo) {
 	setUpAuthRoutes(api)
 	setUpParticipantDataRoutes(api)
 	setUpTaskRoutes(api)
-	// setUpEmailRoutes(api)
 
 	setUpSummaryRoutes(api)
 }
@@ -42,7 +41,7 @@ func setUpCrowdsourceUserRoutes(group *echo.Group) {
 	crowdsourcedusers := group.Group("/crowdsourcedusers")
 	crowdsourcedusers.POST("", crowdSourcedUserController.CreateCrowdSourcedUserAndLogin)
 	crowdsourcedusers.GET("/:crowdSourcedUserId/:studyId", crowdSourcedUserController.GetCrowdSourcedUserByCrowdSourcedUserAndStudyId)
-	crowdsourcedusers.PATCH("/complete", crowdSourcedUserController.HandleSetComplete)
+	crowdsourcedusers.PATCH("/:crowdSourcedUserId/:studyId/complete", crowdSourcedUserController.HandleSetComplete)
 }
 
 func setUpStudyUserRoutes(group *echo.Group) {

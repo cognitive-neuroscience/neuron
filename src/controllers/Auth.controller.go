@@ -52,6 +52,7 @@ func (l *AuthController) Login(e echo.Context) error {
 	cookie := new(http.Cookie)
 	cookie.Name = "token"
 	cookie.Value = tokenString
+	cookie.Path = "/api"
 	cookie.HttpOnly = true // not accessible by javascript
 	cookie.Secure = true   // sent over https only
 
@@ -99,5 +100,6 @@ func (l *AuthController) Logout(e echo.Context) error {
 }
 
 func (l *AuthController) CSRF(e echo.Context) error {
-	return e.JSON(http.StatusNoContent, models.HTTPStatus{Status: http.StatusNoContent, Message: http.StatusText(http.StatusNoContent)})
+
+	return e.JSON(http.StatusOK, models.HTTPStatus{Status: http.StatusOK, Message: http.StatusText(http.StatusOK)})
 }

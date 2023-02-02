@@ -35,7 +35,7 @@ func (l *AuthService) ValidateCredentialsAndGetUser(email string, password strin
 	if !passwordIsCorrect(user.Password, password) {
 		user.Password = ""
 		user.CreatedAt = time.Time{}
-		return user, models.HTTPStatus{Status: http.StatusForbidden, Message: "password is incorrect"}
+		return user, models.HTTPStatus{Status: http.StatusUnauthorized, Message: "password is incorrect"}
 	}
 	user.Password = ""
 	user.CreatedAt = time.Time{}

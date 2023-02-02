@@ -117,7 +117,7 @@ func (s *StudyService) ArchiveStudyById(studyId string, loggedInUserId string, l
 		return getStudyHttpStatus
 	}
 
-	if parsedUserId != study.Owner.ID || loggedInUserRole != common.ADMIN {
+	if parsedUserId != study.Owner.ID && loggedInUserRole != common.ADMIN {
 		axonlogger.WarningLogger.Println("user", parsedStudyId, "is not authorized to archive the study")
 		return models.HTTPStatus{Status: http.StatusForbidden, Message: http.StatusText(http.StatusForbidden)}
 	}

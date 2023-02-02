@@ -33,6 +33,15 @@ func (c *CrowdSourcedUserController) CreateCrowdSourcedUserAndLogin(e echo.Conte
 		return e.JSON(saveCrowdSourcedUserHttpStatus.Status, saveCrowdSourcedUserHttpStatus)
 	}
 
+	// TOOD: ...this is really dumb
+	res := common.ConvertUintToString(crowdSourcedUser.StudyID)
+
+	crowdSourcedUserFromDB, getCrowdSourcedUserHttpStatus := crowdSourcedUserServiceImpl.GetCrowdSourcedUserByCrowdSourcedUserAndStudyId(crowdSourcedUser.ParticipantID, res)
+	if !common.HTTPRequestIsSuccessful(getCrowdSourcedUserHttpStatus.Status) {
+		axonlogger.ErrorLogger.Println("Error fetching created crowdsourced user (create successful):", getCrowdSourcedUserHttpStatus)
+		return e.JSON(getCrowdSourcedUserHttpStatus.Status, getCrowdSourcedUserHttpStatus)
+	}
+
 	// 3: create a JWT
 	tokenString, err := tokenServiceImpl.CreateToken(crowdSourcedUser.ParticipantID, "", common.PARTICIPANT)
 	if err != nil {
@@ -59,7 +68,7 @@ func (c *CrowdSourcedUserController) CreateCrowdSourcedUserAndLogin(e echo.Conte
 	e.SetCookie(cookie)
 
 	axonlogger.InfoLogger.Println("user registered with set cookie", crowdSourcedUser.ParticipantID)
-	return common.SendHTTPStatusCreated(e)
+	return common.SendHTTPOkWithBody(e, crowdSourcedUserFromDB)
 }
 
 // GetCrowdSourcedUserByCrowdSourcedUserAndStudyId gets a crowd sourced user by the given id
@@ -80,12 +89,9 @@ func (c *CrowdSourcedUserController) GetCrowdSourcedUserByCrowdSourcedUserAndStu
 func (c *CrowdSourcedUserController) HandleSetComplete(e echo.Context) error {
 	axonlogger.InfoLogger.Println("============= CROWDSOURCED CONTROLLER: HandleSetComplete() =============")
 
-	crowdSourcedUser := new(models.CrowdSourcedUser)
-	if err := e.Bind(crowdSourcedUser); err != nil {
-		axonlogger.WarningLogger.Println("Could not parse user details", err)
-		return common.SendHTTPBadRequest(e)
-	}
-	updatedCrowdSourcedUser, httpStatus := crowdSourcedUserServiceImpl.HandleSetComplete(*crowdSourcedUser)
+	crowdSourcedUserParamId := e.Param("crowdSourcedUserId")
+	studyId := e.Param("studyId")
+	updatedCrowdSourcedUser, httpStatus := crowdSourcedUserServiceImpl.HandleSetComplete(crowdSourcedUserParamId, studyId)
 	if !common.HTTPRequestIsSuccessful(httpStatus.Status) {
 		axonlogger.ErrorLogger.Println("HandleSetComplete() failed")
 		return e.JSON(httpStatus.Status, httpStatus)

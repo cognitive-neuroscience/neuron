@@ -26,15 +26,11 @@ var crowdSourcedUserRepositoryImpl = database.CrowdSourcedUserRepository{}
 func convertStringToUint8(str string) (uint, error) {
 	parsedUint64, err := strconv.ParseUint(str, 10, 64)
 	if err != nil {
-		axonlogger.WarningLogger.Println("error parsing studyid to uint", err)
+		axonlogger.WarningLogger.Println("error parsing id to uint", err)
 		return 0, errors.New("could not parse the given string")
 	}
 	parsedUint := uint(parsedUint64)
 	return parsedUint, nil
-}
-
-func convertUintToString(number uint) string {
-	return strconv.FormatUint(uint64(number), 10)
 }
 
 // CodeCharacters represents the atomic characters that make up a short code

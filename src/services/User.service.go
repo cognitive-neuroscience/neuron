@@ -154,7 +154,7 @@ func (u *UserService) DeleteUserByID(userId string) models.HTTPStatus {
 }
 
 // UpdateUserPassword updates the user password with a new salted and hashed password.
-// It returns a 200, 400, 403, 404, or 500 status code.
+// It returns a 200, 400, 401, 404, or 500 status code.
 func (u *UserService) UpdateUserPassword(email string, passwordAttempt string, newPassword string) models.HTTPStatus {
 	axonlogger.InfoLogger.Println("USER SERVICE: UpdateUserPassword()")
 
@@ -168,7 +168,7 @@ func (u *UserService) UpdateUserPassword(email string, passwordAttempt string, n
 	}
 
 	if isCorrect := passwordIsCorrect(user.Password, passwordAttempt); !isCorrect {
-		return models.HTTPStatus{Status: http.StatusForbidden, Message: http.StatusText(http.StatusForbidden)}
+		return models.HTTPStatus{Status: http.StatusUnauthorized, Message: http.StatusText(http.StatusUnauthorized)}
 	}
 
 	hashedPassword, err := hashAndSalt(newPassword)

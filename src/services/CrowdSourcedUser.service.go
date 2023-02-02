@@ -53,10 +53,16 @@ func (c *CrowdSourcedUserService) GetCrowdSourcedUsersByStudyId(studyId string) 
 
 // HandleSetComplete sets a string as the completion code.
 // It returns a 200, 404, or 500 status code.
-func (c *CrowdSourcedUserService) HandleSetComplete(crowdSourcedUser models.CrowdSourcedUser) (models.CrowdSourcedUser, models.HTTPStatus) {
+func (c *CrowdSourcedUserService) HandleSetComplete(crowdSourcedUserId string, studyId string) (models.CrowdSourcedUser, models.HTTPStatus) {
 	axonlogger.InfoLogger.Println("CROWDSOURCEDUSER SERVICE: HandleSetComplete()")
 
-	crowdSourcedUserInDB, httpStatus := crowdSourcedUserRepositoryImpl.GetCrowdSourcedUserByCrowdSourcedUserAndStudyId(crowdSourcedUser.ParticipantID, crowdSourcedUser.StudyID)
+	parsedStudyId, err := convertStringToUint8(studyId)
+	if err != nil {
+		axonlogger.WarningLogger.Println("Could not convert id to uint", err)
+		return models.CrowdSourcedUser{}, models.HTTPStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)}
+	}
+
+	crowdSourcedUserInDB, httpStatus := crowdSourcedUserRepositoryImpl.GetCrowdSourcedUserByCrowdSourcedUserAndStudyId(crowdSourcedUserId, parsedStudyId)
 	if !common.HTTPRequestIsSuccessful(httpStatus.Status) {
 		return models.CrowdSourcedUser{}, httpStatus
 	}
