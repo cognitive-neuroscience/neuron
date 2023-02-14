@@ -200,7 +200,7 @@ func (s *StudyUserRepository) GetStudyUserByUserAndStudyId(userId uint, studyId 
 	return studyUser, models.HTTPStatus{Status: http.StatusOK, Message: http.StatusText(http.StatusOK)}
 }
 
-// UpdateStudyUser updates a study user in the db
+// UpdateStudyUser updates a study user in the db.
 // It returns a 200 or 500 status code
 func (s *StudyUserRepository) UpdateStudyUser(studyUser *models.StudyUser) models.HTTPStatus {
 	axonlogger.InfoLogger.Println("STUDYUSER DATABASE: UpdateStudyUser()")
@@ -244,7 +244,7 @@ func (s *StudyUserRepository) UpdateStudyUser(studyUser *models.StudyUser) model
 	return models.HTTPStatus{Status: http.StatusOK, Message: http.StatusText(http.StatusOK)}
 }
 
-// GetAllStudyUsers gets all study users for the database. This is used for the sumamry.
+// GetAllStudyUsers gets all study users for the database. This is used for the summary.
 // It returns a 200 or 500 status code.
 func (u *StudyUserRepository) GetAllStudyUsers() ([]models.DBStudyUser, models.HTTPStatus) {
 	axonlogger.InfoLogger.Println("STUDYUSER DATABASE: GetAllStudyUsers()")

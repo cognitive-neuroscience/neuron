@@ -63,7 +63,7 @@ func (s *StudyUserService) UpdateStudyUser(userId string, studyId string, studyU
 
 	if parsedUserId != studyUser.User.ID || parsedStudyId != studyUser.Study.ID {
 		axonlogger.WarningLogger.Println("Given id is not equivalent. User ID Param:", userId, "StudyUser User ID:", studyUser.User.ID, "Study ID Param:", studyId, "StudyUser Study ID:", studyUser.Study.ID)
-		return models.StudyUser{}, models.HTTPStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)}
+		return models.StudyUser{}, models.HTTPStatus{Status: http.StatusForbidden, Message: http.StatusText(http.StatusForbidden)}
 	}
 
 	studyUserInDB, httpStatus := studyUserRepositoryImpl.GetStudyUserByUserAndStudyId(parsedUserId, parsedStudyId)

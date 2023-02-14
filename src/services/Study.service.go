@@ -30,25 +30,64 @@ func (s *StudyService) GetStudyById(studyId string) (models.Study, models.HTTPSt
 		return models.Study{}, models.HTTPStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)}
 	}
 
-	return studyRepositoryImpl.GetStudyById(parsedId)
+	study, httpStatus := studyRepositoryImpl.GetStudyById(parsedId)
+	// scrub sensitive info
+	study.Owner.CreatedAt = time.Time{}
+	study.Owner.Email = ""
+	study.Owner.Name = ""
+	study.Owner.Password = ""
+
+	return study, httpStatus
 }
 
 // GetStudiesByOrganizationId gets all the studies for a given organization
 // It returns a 200, 404, or 500 status code.
-func (s *StudyService) GetStudiesByOrganizationId(organizationId string) ([]models.Study, models.HTTPStatus) {
-	axonlogger.InfoLogger.Println("STUDY SERVICE: GetStudiesByOrganizationId()")
+func (s *StudyService) GetStudiesByOrganizationId(organizationId string, userId string) ([]models.Study, models.HTTPStatus) {
+	axonlogger.InfoLogger.Println("STUDY SERVICE: GetS tudiesByOrganizationId()")
+	parsedUserId, parseUserIdErr := convertStringToUint8(userId)
+	if parseUserIdErr != nil {
+		axonlogger.WarningLogger.Println("Could not convert id to uint", parseUserIdErr)
+		return []models.Study{}, models.HTTPStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)}
+	}
 	parsedOrganizationId, err := convertStringToUint8(organizationId)
 	if err != nil {
 		axonlogger.WarningLogger.Println("Could not convert id to uint", err)
 		return []models.Study{}, models.HTTPStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)}
 	}
+
+	user, getUserHttpStatus := userRepositoryImpl.GetUserById(parsedUserId)
+	if !common.HTTPRequestIsSuccessful(getUserHttpStatus.Status) {
+		return []models.Study{}, getUserHttpStatus
+	}
+
+	if user.Organization.ID != parsedOrganizationId {
+		return []models.Study{}, models.HTTPStatus{Status: http.StatusForbidden, Message: http.StatusText(http.StatusForbidden)}
+	}
+
 	return studyRepositoryImpl.GetStudiesByOrganizationId(parsedOrganizationId)
 }
 
 // UpdateStudy updates the study. The study object and the study id given in the URL must be the same.
 // It returns a 200, 404, or 500 status code.
-func (s *StudyService) UpdateStudy(studyId string, shouldUpdateTasks string, study *models.Study) (models.Study, models.HTTPStatus) {
+func (s *StudyService) UpdateStudy(userId string, studyId string, shouldUpdateTasks string, study *models.Study) (models.Study, models.HTTPStatus) {
 	axonlogger.InfoLogger.Println("STUDY SERVICE: UpdateStudy()")
+
+	parsedUserId, parsedUserIdErr := convertStringToUint8(userId)
+	if parsedUserIdErr != nil {
+		axonlogger.WarningLogger.Println("Could not convert id to uint", parsedUserIdErr)
+		return models.Study{}, models.HTTPStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)}
+	}
+
+	user, getUserHttpStatus := userRepositoryImpl.GetUserById(parsedUserId)
+	if !common.HTTPRequestIsSuccessful(getUserHttpStatus.Status) {
+		return models.Study{}, getUserHttpStatus
+	}
+
+	if user.ID != study.Owner.ID && user.Role != common.ADMIN {
+		axonlogger.WarningLogger.Println("cannot update study if the user is not an owner or an admin")
+		return models.Study{}, models.HTTPStatus{Status: http.StatusForbidden, Message: http.StatusText(http.StatusForbidden)}
+	}
+
 	parsedStudyId, parsedStudyIdErr := convertStringToUint8(studyId)
 	if parsedStudyIdErr != nil {
 		axonlogger.WarningLogger.Println("Could not convert id to uint", parsedStudyIdErr)
@@ -129,87 +168,3 @@ func (s *StudyService) ArchiveStudyById(studyId string, loggedInUserId string, l
 
 	return studyRepositoryImpl.UpdateStudyWithoutTaskUpdate(&study)
 }
-
-// DeleteStudyById sets the deleted property in the db
-// func (s *StudyService) DeleteStudyById(studyId string) models.HTTPStatus {
-// 	id, err := convertStringToUint8(studyId)
-// 	if err != nil {
-// 		axonlogger.WarningLogger.Println(err)
-// 		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: "There was an error deleting the study"}
-// 	}
-// 	return studyRepositoryImpl.DeleteStudyById(id)
-// }
-
-// // GetAllStudies retrieves all studies from the db
-// func (s *StudyService) GetAllStudies(role string) ([]models.Study, error) {
-// 	studies, err := studyRepositoryImpl.GetAllStudies()
-// 	if err != nil {
-// 		return studies, err
-// 	}
-// 	if role != common.ADMIN {
-// 		for _, study := range studies {
-// 			// scrub sensitive info
-// 			study.CreatedAt = time.Time{}
-// 			study.DeletedAt.Time = time.Time{}
-// 			study.DeletedAt.Valid = true
-// 			study.InternalName = ""
-// 			study.CanEdit = false
-// 		}
-// 	}
-
-// 	return studies, err
-// }
-
-// func (s *StudyService) UpdateStudy(study *models.Study, shouldIncludeTasksUpdate string) models.HTTPStatus {
-// 	shouldUpdateTasks, err := strconv.ParseBool(shouldIncludeTasksUpdate)
-// 	if err != nil {
-// 		axonlogger.WarningLogger.Println("could not update study", err)
-// 		return models.HTTPStatus{Status: http.StatusBadRequest, Message: "could not update study, unexpected request received"}
-// 	}
-
-// 	if study.Started {
-// 		study.CanEdit = false
-// 	}
-
-// 	if shouldUpdateTasks {
-// 		return studyRepositoryImpl.UpdateStudy(study)
-// 	} else {
-// 		return studyRepositoryImpl.UpdateStudyNoTasks(study)
-// 	}
-// }
-
-// // SaveStudy saves the given study in the db
-// func (s *StudyService) SaveStudy(study *models.Study) models.HTTPStatus {
-// 	study.CanEdit = true
-// 	study.Started = false
-// 	return studyRepositoryImpl.SaveStudy(study)
-// }
-
-// func (s *StudyService) GetStudyById(studyId string, role string) (models.Study, models.HTTPStatus) {
-// 	id, err := convertStringToUint8(studyId)
-// 	if err != nil {
-// 		axonlogger.WarningLogger.Println("could not get study", err)
-// 		return models.Study{}, models.HTTPStatus{Status: http.StatusInternalServerError, Message: "could not get study"}
-// 	}
-
-// 	study, err := studyRepositoryImpl.GetStudyById(id)
-
-// 	if err == sql.ErrNoRows {
-// 		return study, models.HTTPStatus{Status: http.StatusNoContent, Message: "study does not exist"}
-// 	} else if err != nil {
-// 		return study, common.HTTPStatusServiceUnavailabStudy
-// 	}
-
-// 	// scrub sensitive info
-// 	if role != common.ADMIN {
-// 		study.CreatedAt = time.Time{}
-// 		study.DeletedAt.Time = time.Time{}
-// 		study.DeletedAt.Valid = true
-// 		study.InternalName = ""
-// 		study.CanEdit = false
-// 	}
-// 	if role == common.NONE {
-// 		study.Tasks = []models.StudyTask{}
-// 	}
-// 	return study, common.HTTPStatusOK
-// }

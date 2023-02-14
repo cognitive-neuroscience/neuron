@@ -1,89 +1,74 @@
-p, ADMIN,              /api/*,                               *
-          
-p, ORGANIZATIONMEMBER, /api/users/{id},                      GET
-p, PARTICIPANT,        /api/users/{id},                      GET
-p, ORGANIZATIONGUEST,  /api/users/{id},                      GET
-p, ORGANIZATIONMEMBER, /api/users/{id},                      PATCH
-p, PARTICIPANT,        /api/users/{id},                      PATCH
-p, ORGANIZATIONGUEST,  /api/users/{id},                      PATCH
-p, PARTICIPANT,        /api/users/{id}/studyusers,           GET
-  
-p, PARTICIPANT,        /api/crowdsourcedusers/{id},          GET
-p, PARTICIPANT,        /api/crowdsourcedusers/{id}/complete, GET
+p, ADMIN,               /api/users,                                                     GET
+p, *,                   /api/users,                                                     POST
 
-p, PARTICIPANT,        /api/studyusers/{studyId}/{userId},   PATCH
-p, PARTICIPANT,        /api/studyusers,                      POST
+p, ADMIN,               /api/users/{userId},                                            GET
+p, ORGANIZATION_MEMBER, /api/users/{userId},                                            GET
+p, PARTICIPANT,         /api/users/{userId},                                            GET
+p, GUEST,               /api/users/{userId},                                            GET
+p, ADMIN,               /api/users/{userId},                                            PATCH
+p, ORGANIZATION_MEMBER, /api/users/{userId},                                            PATCH
+p, PARTICIPANT,         /api/users/{userId},                                            PATCH
+p, GUEST,               /api/users/{userId},                                            PATCH
+p, ADMIN,               /api/users/{userId},                                            DELETE
+p, ADMIN,               /api/users/{userId}/studyusers,                                 GET
+p, ORGANIZATION_MEMBER, /api/users/{userId}/studyusers,                                 GET
+p, PARTICIPANT,         /api/users/{userId}/studyusers,                                 GET
+p, GUEST,               /api/users/{userId}/studyusers,                                 GET
+p, *,                   /api/users/forgotpassword,                                      PUT
+p, *,                   /api/users/password,                                            PUT
 
-p, ORGANIZATIONMEMBER, /api/studyusersummary,                GET
+p, ADMIN,               /api/studyusers/{userId}/{studyId},                             PATCH
+p, ORGANIZATION_MEMBER, /api/studyusers/{userId}/{studyId},                             PATCH
+p, PARTICIPANT,         /api/studyusers/{userId}/{studyId},                             PATCH
+p, GUEST,               /api/studyusers/{userId}/{studyId},                             PATCH
+p, ADMIN,               /api/studyusers,                                                POST
+p, ORGANIZATION_MEMBER, /api/studyusers,                                                POST
+p, PARTICIPANT,         /api/studyusers,                                                POST
+p, GUEST,               /api/studyusers,                                                POST
 
-p, PARTICIPANT,        /api/studydata,                       POST
-p, ORGANIZATIONMEMBER, /api/studydata/{studyId}/{taskOrder}, GET
+p, ADMIN,               /api/participantdata,                                           POST
+p, ORGANIZATION_MEMBER, /api/participantdata,                                           POST
+p, PARTICIPANT,         /api/participantdata,                                           POST
+p, GUEST,               /api/participantdata,                                           POST
+p, ADMIN,               /api/participantdata/{studyId}/{taskOrder},                     GET
+p, ORGANIZATION_MEMBER, /api/participantdata/{studyId}/{taskOrder},                     GET
 
-p, ORGANIZATIONMEMBER, /api/tasks,                           GET
-p, ORGANIZATIONGUEST,  /api/tasks,                           GET
-p, ORGANIZATIONMEMBER, /api/tasks/{id}                       GET
-p, ORGANIZATIONGUEST,  /api/tasks/{id}                       GET
+p, ADMIN,               /api/tasks,                                                     GET
+p, ORGANIZATION_MEMBER, /api/tasks,                                                     GET
+p, GUEST,               /api/tasks,                                                     GET
+p, ADMIN,               /api/tasks/{taskId},                                            GET
+p, ORGANIZATION_MEMBER, /api/tasks/{taskId},                                            GET
+p, PARTICIPANT,         /api/tasks/{taskId},                                            GET
+p, GUEST,               /api/tasks/{taskId},                                            GET
 
-p, ORGANIZATIONMEMBER, /api/studies/{id}/crowdsourcedusers,  GET
-p, ORGANIZATIONMEMBER, /api/studies/{id}/studyusers,         GET
-p, ORGANIZATIONMEMBER, /api/studies/{id},                    GET
-p, ORGANIZATIONGUEST,  /api/studies/{id},                    GET
-p, PARTICIPANT,        /api/studies/{id},                    GET
-p, ORGANIZATIONMEMBER, /api/studies,                         POST
-p, ORGANIZATIONMEMBER, /api/studies,                         GET
-p, ORGANIZATIONGUEST,  /api/studies,                         GET
-p, ORGANIZATIONMEMBER, /api/studies/{id}                     PATCH
-p, ORGANIZATIONMEMBER, /api/studies/{id}                     DELETE
+p, *,                   /api/studies/{studyId},                                         GET
+p, ADMIN,               /api/studies/{studyId},                                         PATCH
+p, ORGANIZATION_MEMBER, /api/studies/{studyId},                                         PATCH
+p, ADMIN,               /api/studies/{studyId},                                         DELETE
+p, ORGANIZATION_MEMBER, /api/studies/{studyId},                                         DELETE
+p, ADMIN,               /api/studies/{studyId}/studyusers,                              GET
+p, ORGANIZATION_MEMBER, /api/studies/{studyId}/studyusers,                              GET
+p, ADMIN,               /api/studies/{studyId}/crowdsourcedusers,                       GET
+p, ORGANIZATION_MEMBER, /api/studies/{studyId}/crowdsourcedusers,                       GET
+p, ADMIN,               /api/studies,                                                   GET
+p, ORGANIZATION_MEMBER, /api/studies,                                                   GET
+p, GUEST,               /api/studies,                                                   GET
+p, ADMIN,               /api/studies,                                                   POST
+p, ORGANIZATION_MEMBER, /api/studies,                                                   POST
 
-p, *,                  /api/users,                           POST
-p, *,                  /api/users/password,                  PUT
-p, *,                  /api/users/sendforgotpasswordemail,   PUT
-  
-p, *,                  /api/crowdsourcedusers,               POST
+p, *,                   /api/crowdsourcedusers,                                         POST
+p, ADMIN,               /api/crowdsourcedusers/{crowdSourcedUserId}/{studyId},          GET
+p, ORGANIZATION_MEMBER, /api/crowdsourcedusers/{crowdSourcedUserId}/{studyId},          GET
+p, GUEST,               /api/crowdsourcedusers/{crowdSourcedUserId}/{studyId},          GET
+p, PARTICIPANT,         /api/crowdsourcedusers/{crowdSourcedUserId}/{studyId},          GET
+p, ADMIN,               /api/crowdsourcedusers/{crowdSourcedUserId}/{studyId}/complete, PATCH
+p, ORGANIZATION_MEMBER, /api/crowdsourcedusers/{crowdSourcedUserId}/{studyId}/complete, PATCH
+p, GUEST,               /api/crowdsourcedusers/{crowdSourcedUserId}/{studyId}/complete, PATCH
+p, PARTICIPANT,         /api/crowdsourcedusers/{crowdSourcedUserId}/{studyId}/complete, PATCH
 
-p, *,                  /api/authentication/login,            POST
-p, *,                  /api/authentication/logout,           POST
+p, ADMIN,               /api/summary/studyusersummary,                                  GET
+p, ORGANIZATION_MEMBER, /api/summary/studyusersummary,                                  GET
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-p, ADMIN,       /api/*,                         *
-
-p, PARTICIPANT, /api/users,                     GET
-p, PARTICIPANT, /api/users/*,                   PATCH
-p, GUEST,       /api/users,                     GET
-p, *,           /api/users,                     POST
-p, *,           /api/users/changepassword,      POST
-
-p, PARTICIPANT, /api/crowdsourcedusers/*,       PATCH
-p, PARTICIPANT, /api/crowdsourcedusers/user/*,  GET
-p, *,           /api/crowdsourcedusers,         POST
-
-p, PARTICIPANT, /api/studyusers,                POST
-p, PARTICIPANT, /api/studyusers/studies,        GET
-p, PARTICIPANT, /api/studyusers,                PATCH
-p, PARTICIPANT, /api/studyusers/increment,      PATCH
-
-p, PARTICIPANT, /api/studydata,                 POST
-
-p, PARTICIPANT, /api/tasks/*,                   GET
-p, GUEST,       /api/tasks,                     GET
-
-p, GUEST,       /api/studies,                   GET
-p, *,           /api/studies/*,                 GET
-
-p, *,           /api/login,                     POST
-p, *,           /api/logout,                    POST
-p, *,           /api/email,                     POST
+p, *,                   /api/auth/login,                                                POST
+p, *,                   /api/auth/csrf,                                                 GET
+p, *,                   /api/auth/logout,                                               DELETE

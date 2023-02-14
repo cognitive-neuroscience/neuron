@@ -46,19 +46,19 @@ func CreateServer() {
 	}))
 	defer logger.CloseLogFile()
 
-	// casbinPath, err := getPathToCasbin()
-	// if err != nil {
-	// 	panic("Can't find casbin path in .env file")
-	// }
+	casbinPath, err := getPathToCasbin()
+	if err != nil {
+		panic("Can't find casbin path in .env file")
+	}
 
-	///usr/sbin/sharplab/
-	// casbinEnforcer, err := casbin.NewEnforcer(casbinPath+"/casbin_auth_model.conf", casbinPath+"/casbin_auth_policy.csv")
-	// if err != nil {
-	// 	logger.ErrorLogger.Println("could not set up casbin route protection", err)
-	// 	panic("could not set up casbin route protection")
-	// }
-	// enforcer := Enforcer{enforcer: casbinEnforcer}
-	// e.Use(enforcer.Enforce)
+	// usr/sbin/sharplab/
+	casbinEnforcer, err := casbin.NewEnforcer(casbinPath+"/casbin_auth_model.conf", casbinPath+"/casbin_auth_policy.csv")
+	if err != nil {
+		logger.ErrorLogger.Println("could not set up casbin route protection", err)
+		panic("could not set up casbin route protection")
+	}
+	enforcer := Enforcer{enforcer: casbinEnforcer}
+	e.Use(enforcer.Enforce)
 
 	// use compression middleware
 	e.Use(middleware.Gzip())
@@ -130,12 +130,19 @@ func (e *Enforcer) Enforce(next echo.HandlerFunc) echo.HandlerFunc {
 		path := c.Get("path")
 		method := c.Get("method")
 		result, err := e.enforcer.Enforce(role, path, method)
+
+		logger.InfoLogger.Println("CASBIN", role, path, method)
 		if err != nil {
+			logger.InfoLogger.Println("CASBIN rejected request:", role, path, method)
+			logger.InfoLogger.Println("CASBIN reject reason (ERR):", err)
 			return common.SendHTTPForbidden(c)
 		}
+
 		if result {
 			return next(c)
 		}
+
+		logger.InfoLogger.Println("CASBIN rejected request:", role, path, method)
 		return common.SendHTTPForbidden(c)
 	}
 }

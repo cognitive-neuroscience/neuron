@@ -24,11 +24,16 @@ func (s *ParticipantDataController) CreateParticipantData(e echo.Context) error 
 
 // GetParticipantDataByStudyIdAndTaskOrder gets the participant data by the study id and task order
 func (s *ParticipantDataController) GetParticipantDataByStudyIdAndTaskOrder(e echo.Context) error {
-	axonlogger.InfoLogger.Println("============= PARTICIPANTDATA CONTROLLER: CreateParticipantData() =============")
+	axonlogger.InfoLogger.Println("============= PARTICIPANTDATA CONTROLLER: GetParticipantDataByStudyIdAndTaskOrder() =============")
 	studyId := e.Param("studyId")
 	taskOrder := e.Param("taskOrder")
 
-	taskData, httpStatus := participantDataServiceImpl.GetParticipantDataByStudyIdAndTaskOrder(studyId, taskOrder)
+	userId, ok := e.Get("id").(string)
+	if !ok {
+		return common.SendHTTPBadRequest(e)
+	}
+
+	taskData, httpStatus := participantDataServiceImpl.GetParticipantDataByStudyIdAndTaskOrder(studyId, taskOrder, userId)
 	if !common.HTTPRequestIsSuccessful(httpStatus.Status) {
 		return e.JSON(httpStatus.Status, httpStatus)
 	}
