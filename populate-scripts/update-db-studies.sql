@@ -377,3 +377,116 @@ UPDATE studies SET
         ]
     }'
 WHERE id IN (66);
+
+UPDATE studies SET
+    config = '{
+        "title": "Welcome to the Sharp Lab | Bienvenue au Labo Sharp (Défiler vers le bas pour la version française)",
+        "sections": [
+            {
+                "header": "We study cognition in people with Parkinson''s disease."
+            },
+            {
+                "textContent": "<b>We need your help! You recently completed the Neurocognition online study on our platform. THANK YOU!! Part of our goal is to demonstrate these tests are RELIABLE, i.e. that they are accurate. To prove this, we need to test people TWICE on the same tests.</b>."
+            },
+            {
+                "textContent": "We call this <i>test-retest reliability.</i>"
+            },
+            {
+                "textContent": "<b>THE TESTING WILL BE SHORTER THAN LAST TIME.</b>"
+            },
+            {
+                "textContent": "Proving that the tests are reliable is really important especially because ONLINE testing is so new in the field of neurology research. We think that proving that testing can be done online, from home, will revolutionize the way research is done. <b>By making research participation so much more accessible, we will ensure research findings are meaningful to all Canadians living with Parkinson’s disease.</b>"
+            },
+            {
+                "textContent": "You should already have an account from your original completion of the Neurocognition study. Please use this account info to log in at the next step. 
+
+            },
+            {
+                "textContent": "If you run into any technical or login issues, please email the research team at: sharplab.neuro@mcgill.ca."
+
+            },
+            {
+                "textContent": "<b>WHAT WILL BE ASKED OF YOU:</b>"
+            },
+            {
+                "textContent": "You will be asked to play a series of brain games and fill in some questionnaires. All of this is done online (NO tablets or smartphones, only computers. Sorry!)."
+            },
+            {
+                "textContent": "This will take <b>around an hour (half the length of the last session)</b>, and you can start and stop as you wish by closing the window. To pick back up where you left off, you''ll simply have to click the same link in your email."
+            },
+            {
+                "textContent": "Please try to complete the whole study <b>within ONE week</b>. You can see your progress in your dashboard when you first log in."
+            },
+            {
+                "textContent": "To proceed to the Consent Form and decide if you want to participate:"
+            },
+            {
+                "textContent": "1. <b>If you have never done a study with us</b>, please register below to log in.",
+                "indent": 1
+            },
+            {
+                "textContent": "2. If you already <b>have an account</b>, please log in to continue to the consent form.",
+                "indent": 1
+            },
+            {
+                "textContent": "This will take you to the consent form. <b>Your email will NOT be saved if you decline to participate</b>."
+            },
+            {
+                "textContent": "For any questions, please email Dr. Sharp: sharplab.neuro@mcgill.ca"
+            },
+            {
+                "hr": true
+            },
+            {
+                "header": "Nous étudions les symptômes cognitifs ces les personnes atteintes de la maladie de Parkinson."
+            },
+            {
+                "textContent": "<b>Nous avons besoin de votre aide! Vous avez récemment complété l''étude en ligne de Neurocognition sur notre plateforme. MERCI !! Un de nos objectifs est de démontrer que ces tests sont FIABLES. Pour le prouver, on a besoin de tester les personnes DEUX FOIS sur les mêmes tests.</b>"
+            },
+            {
+                "textContent": "On appelle ça <i>‘test-retest reliability’.</i>"
+            },
+            {
+                "textContent": "<b>LES TESTS SERONT PLUS COURTS QUE LA DERNIÈRE FOIS.</b>"
+            },
+            {
+                "textContent": "Prouvez que les tests sont fiables est très important, notamment parce que les tests EN LIGNE sont nouveaux dans le domaine de la recherche neurologique. Nous pensons que les tests en ligne vont révolutionner la façon dont la recherche est menée. <b>En rendant la participation à la recherche plus accessible, nous espérons que nos résultats seront utiles pour tous les Canadiens atteints de la maladie de Parkinson.</b>"
+            },
+            {
+                "textContent": "Vous devriez déjà avoir un compte lié à votre premier participation à l''étude de Neurocognition. Veuillez utiliser les mêmes informations pour vous connecter à l''étape suivante."
+            },
+            {
+                "textContent": "Si vous rencontrez des problèmes techniques ou de connexion, n''hésitez pas à contacter notre équipe de recherche à : sharplab.neuro@mcgill.ca"
+            },
+            {
+                "textContent": "<b>CE QUE VOUS DEVREZ FAIRE:</b>"
+            },
+            {
+                "textContent": "Nous vous demanderons de jouer à une série de jeux et répondre à des questionnaires. Tout ceci est fait en ligne, à partir de votre ordinateur. Malheureusement il n''est pas possible de participer à partir d''un téléphone intelligent ou d''une tablette, désolé!"
+            },
+            {
+                "textContent": "Au total, l''etude prend environ une heure (la moitié de la première session) et vous pourrez commencer et arrêter comme vous le souhaitez en fermant la fenêtre. Pour rependre, il faudra cliquer à nouveau sur le lien dans votre courriel."
+            },
+            {
+                "textContent": "SVP veuillez viser compléter l''étude au complet dans un <b>délai de UNE semaine</b>. Vous pourrez voir votre progrès sur votre tableau de bord au moment de la connexion."
+            },
+            {
+                "textContent": "Pour lire le Formulaire de Consentement et décider si vous voulez participer:"
+            },
+            {
+                "textContent": "1. <b>Si vous n''avez jamais auparavant participé à une étude sur notre plateforme</b>, SVP vous enregistrer ci-dessous pour vous connecter.",
+                "indent": 1
+            },
+            {
+                "textContent": "2. Si vous avez déjà <b>un compte avec nous</b>, SVP vous connecter pour procéder.",
+                "indent": 1
+            },
+            {
+                "textContent": "Ceci vous amènera au formulaire de consentement. <b>Votre courriel ne sera PAS sauvegardé si vous décidez de ne pas participer</b>."
+            },
+            {
+                "textContent": "Pour quelconque question, n''hésitez pas à envoyer un courriel à Dr. Sharp: sharplab.neuro@mcgill.ca"
+            }
+        ]
+    }'
+WHERE id IN (82, 83);
