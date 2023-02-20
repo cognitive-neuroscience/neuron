@@ -642,7 +642,7 @@ VALUES
     "Informing about two brain games that are left",
     "",
     '{}'
-);
+),
 -- HOW DID YOU HEAR ABOUT US
 (
     74,
@@ -652,7 +652,7 @@ VALUES
     "Questionnaire asking the participant how they were recruited to our study",
     "",
     '{}'
-);
+),
 -- INFO SLIDE ABOUT COMPUTER GAMES
 (
     75,
