@@ -17,7 +17,8 @@ const (
 // GetTaskById retrieves a task from the given id.
 // It returns a 200, 404, or 500 status code.
 func (t *TaskRepository) GetTaskById(taskID uint) (models.Task, models.HTTPStatus) {
-	axonlogger.InfoLogger.Println("TASK DATABASE: GetTaskById()")
+	// commented this out because it spams the logs
+	// axonlogger.InfoLogger.Println("TASK DATABASE: GetTaskById()")
 	defer func() {
 		if err := recover(); err != nil {
 			axonlogger.ErrorLogger.Println("there was an error getting the task by id", err)
