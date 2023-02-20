@@ -29,7 +29,13 @@ func CreateServer() {
 	e := echo.New()
 	e.Server.Addr = ":" + port
 
-	// retrieve jwt from cookie
+	// protect from CSRF attacks.
+	// we need to set the cookie path to be "/" for client side (angular httpCsrfInterceptor)
+	e.Use(middleware.CSRFWithConfig(middleware.CSRFConfig{
+		CookiePath: "/",
+	}))
+
+	// retrieve jwt from cookie and set context variables
 	e.Use(validateCookieMiddleware)
 
 	// configure file
@@ -45,7 +51,7 @@ func CreateServer() {
 		panic("Can't find casbin path in .env file")
 	}
 
-	///usr/sbin/sharplab/
+	// usr/sbin/sharplab/
 	casbinEnforcer, err := casbin.NewEnforcer(casbinPath+"/casbin_auth_model.conf", casbinPath+"/casbin_auth_policy.csv")
 	if err != nil {
 		logger.ErrorLogger.Println("could not set up casbin route protection", err)
@@ -98,7 +104,6 @@ func validateCookieMiddleware(next echo.HandlerFunc) echo.HandlerFunc {
 		} else {
 			jwt := cookie.Value
 			claims, err := tokenServiceImpl.ValidateToken(jwt)
-
 			if err != nil {
 				role = common.NONE
 			} else {
@@ -125,12 +130,19 @@ func (e *Enforcer) Enforce(next echo.HandlerFunc) echo.HandlerFunc {
 		path := c.Get("path")
 		method := c.Get("method")
 		result, err := e.enforcer.Enforce(role, path, method)
+
+		logger.InfoLogger.Println("CASBIN", role, path, method)
 		if err != nil {
+			logger.InfoLogger.Println("CASBIN rejected request:", role, path, method)
+			logger.InfoLogger.Println("CASBIN reject reason (ERR):", err)
 			return common.SendHTTPForbidden(c)
 		}
+
 		if result {
 			return next(c)
 		}
+
+		logger.InfoLogger.Println("CASBIN rejected request:", role, path, method)
 		return common.SendHTTPForbidden(c)
 	}
 }

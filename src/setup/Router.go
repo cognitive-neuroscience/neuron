@@ -10,82 +10,85 @@ func registerRoutes(app *echo.Echo) {
 
 	var api = app.Group("/api")
 
-	// all user route related
 	setUpUserRoutes(api)
 	setUpCrowdsourceUserRoutes(api)
 	setUpStudyUserRoutes(api)
 
 	setUpStudyRoutes(api)
-	setUpLoginRoutes(api)
-	setUpStudyDataRoutes(api)
+	setUpAuthRoutes(api)
+	setUpParticipantDataRoutes(api)
 	setUpTaskRoutes(api)
-	setUpEmailRoutes(api)
+
+	setUpSummaryRoutes(api)
 }
 
 func setUpUserRoutes(group *echo.Group) {
 	userControllerImpl := controllers.UserController{}
 	users := group.Group("/users")
-	users.GET("", userControllerImpl.GetUser)
-	users.POST("", userControllerImpl.SaveUser)
-	users.GET("/guests", userControllerImpl.GetGuests)
-	users.DELETE("/:id", userControllerImpl.DeleteUserById)
-	users.PATCH("/:id", userControllerImpl.UpdateUser)
-	users.POST("/changepassword", userControllerImpl.ChangePassword)
-}
 
-func setUpStudyUserRoutes(group *echo.Group) {
-	userControllerImpl := controllers.UserController{}
-	studyUsers := group.Group("/studyusers")
-	studyUsers.GET("/:studyId", userControllerImpl.GetStudyUsersForStudy)
-	studyUsers.GET("/studies", userControllerImpl.GetAllStudyUsersForLoggedInUser)
-	studyUsers.PATCH("", userControllerImpl.UpdateStudyUser)
-	studyUsers.PATCH("/increment", userControllerImpl.IncrementStudyUserCurrentTaskIndex)
-	studyUsers.POST("", userControllerImpl.SaveStudyUser)
-	studyUsers.GET("/summary", userControllerImpl.GetStudyUserSummary)
+	users.POST("", userControllerImpl.CreateUser)
+	users.GET("", userControllerImpl.GetUsersByOrganizationId) // takes a query param (organizationId)
+	users.GET("/:userId", userControllerImpl.GetUserById)
+	users.PATCH("/:userId", userControllerImpl.UpdateUser)
+	users.DELETE("/:userId", userControllerImpl.DeleteUserById)
+	users.GET("/:userId/studyusers", userControllerImpl.GetStudyUsersByUserId)
+	users.PUT("/password", userControllerImpl.UpdateUserPassword)
+	users.PUT("/forgotpassword", userControllerImpl.HandleForgotPassword)
 }
 
 func setUpCrowdsourceUserRoutes(group *echo.Group) {
-	userControllerImpl := controllers.UserController{}
+	crowdSourcedUserController := controllers.CrowdSourcedUserController{}
 	crowdsourcedusers := group.Group("/crowdsourcedusers")
-	crowdsourcedusers.POST("", userControllerImpl.SaveCrowdsourcedUser)
-	crowdsourcedusers.GET("/user/:studyId", userControllerImpl.GetCrowdsourcedUser)
-	crowdsourcedusers.GET("/:studyId", userControllerImpl.GetCrowdSourcedUsersByStudyId)
-	crowdsourcedusers.PATCH("/:studyId", userControllerImpl.RegisterCrowdsourcedUserCompletion)
+	crowdsourcedusers.POST("", crowdSourcedUserController.CreateCrowdSourcedUserAndLogin)
+	crowdsourcedusers.GET("/:crowdSourcedUserId/:studyId", crowdSourcedUserController.GetCrowdSourcedUserByCrowdSourcedUserAndStudyId)
+	crowdsourcedusers.PATCH("/:crowdSourcedUserId/:studyId/complete", crowdSourcedUserController.HandleSetComplete)
+}
+
+func setUpStudyUserRoutes(group *echo.Group) {
+	studyUserControllerImpl := controllers.StudyUserController{}
+	studyUsers := group.Group("/studyusers")
+
+	studyUsers.POST("", studyUserControllerImpl.CreateStudyUser)
+	studyUsers.PATCH("/:userId/:studyId", studyUserControllerImpl.UpdateStudyUser)
 }
 
 func setUpStudyRoutes(group *echo.Group) {
 	studiesControllerImpl := controllers.StudyController{}
 	studies := group.Group("/studies")
-	studies.POST("", studiesControllerImpl.SaveStudy)
-	studies.GET("", studiesControllerImpl.GetAllStudies)
+
+	studies.POST("", studiesControllerImpl.CreateStudy)
+	studies.GET("", studiesControllerImpl.GetStudiesByOrganization) // takes a query param (organizationId)
 	studies.GET("/:studyId", studiesControllerImpl.GetStudyById)
-	studies.PUT("/:id", studiesControllerImpl.UpdateStudy)
-	studies.DELETE("/:studyId", studiesControllerImpl.DeleteStudyById)
+	studies.GET("/:studyId/crowdsourcedusers", studiesControllerImpl.GetCrowdSourcedUsersByStudyId)
+	studies.GET("/:studyId/studyusers", studiesControllerImpl.GetStudyUsersByStudyId)
+	studies.PATCH("/:studyId", studiesControllerImpl.UpdateStudy) // takes a query param (updateTasks)
+	studies.DELETE("/:studyId", studiesControllerImpl.ArchiveStudyById)
 }
 
-func setUpLoginRoutes(group *echo.Group) {
-	loginControllerImpl := controllers.LoginController{}
-	group.POST("/logout", loginControllerImpl.Logout)
-	login := group.Group("/login")
-	login.POST("", loginControllerImpl.Login)
+func setUpAuthRoutes(group *echo.Group) {
+	authControllerImpl := controllers.AuthController{}
+	auth := group.Group("/auth")
+	auth.POST("/login", authControllerImpl.Login)
+	auth.DELETE("/logout", authControllerImpl.Logout)
+	auth.GET("/csrf", authControllerImpl.CSRF)
 }
 
-func setUpStudyDataRoutes(group *echo.Group) {
-	studyDataControllerImpl := controllers.StudyDataController{}
-	studyData := group.Group("/studydata")
-	studyData.POST("", studyDataControllerImpl.UploadTaskData)
-	studyData.GET("/:studyId/:taskOrder", studyDataControllerImpl.GetTaskData)
+func setUpParticipantDataRoutes(group *echo.Group) {
+	participantDataControllerImpl := controllers.ParticipantDataController{}
+	studyData := group.Group("/participantdata")
+	studyData.POST("", participantDataControllerImpl.CreateParticipantData)
+	studyData.GET("/:studyId/:taskOrder", participantDataControllerImpl.GetParticipantDataByStudyIdAndTaskOrder)
+}
+
+func setUpSummaryRoutes(group *echo.Group) {
+	summaryControllerImpl := controllers.SummaryController{}
+	summary := group.Group("/summary")
+	summary.GET("/studyusersummary", summaryControllerImpl.GetStudyUsersSummary)
 }
 
 func setUpTaskRoutes(group *echo.Group) {
 	taskControllerImpl := controllers.TaskController{}
 	task := group.Group("/tasks")
 	task.GET("", taskControllerImpl.GetAllTasks)
-	task.GET("/:taskId", taskControllerImpl.GetTaskByTaskId)
-}
-
-func setUpEmailRoutes(group *echo.Group) {
-	emailControllerImpl := controllers.EmailController{}
-	email := group.Group("/email")
-	email.POST("", emailControllerImpl.SendEmail)
+	task.GET("/:taskId", taskControllerImpl.GetTaskById)
 }

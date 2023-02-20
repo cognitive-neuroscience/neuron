@@ -16,9 +16,16 @@ var StudyTaskSchema = `
 
 // StudyTask represents a many to many relationship between study and tasks
 type StudyTask struct {
+	StudyID   uint               `json:"studyId"` // studyTasks are often embedded within studies, so we just store the ID to prevent an infinite loop
+	Task      Task               `json:"task"`
+	TaskOrder int                `json:"taskOrder"`
+	Config    MapStringInterface `json:"config"`
+}
+
+// DBStudyTask is the database representation of a study task
+type DBStudyTask struct {
 	StudyID   uint               `json:"studyId"`
 	TaskID    uint               `json:"taskId"`
 	TaskOrder int                `json:"taskOrder"`
 	Config    MapStringInterface `json:"config"`
-	Task      Task               `json:"task"`
 }
