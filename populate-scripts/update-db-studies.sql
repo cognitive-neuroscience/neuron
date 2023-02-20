@@ -386,7 +386,7 @@ UPDATE studies SET
                 "header": "We study cognition in people with Parkinson''s disease."
             },
             {
-                "textContent": "<b>We need your help! You recently completed the Neurocognition online study on our platform. THANK YOU!! Part of our goal is to demonstrate these tests are RELIABLE, i.e. that they are accurate. To prove this, we need to test people TWICE on the same tests.</b>."
+                "textContent": "<b>We need your help! You recently completed the Neurocognition online study on our platform. THANK YOU!! Part of our goal is to demonstrate these tests are RELIABLE, i.e. that they are accurate. To prove this, we need to test people TWICE on the same tests.</b>"
             },
             {
                 "textContent": "We call this <i>test-retest reliability.</i>"
@@ -398,12 +398,10 @@ UPDATE studies SET
                 "textContent": "Proving that the tests are reliable is really important especially because ONLINE testing is so new in the field of neurology research. We think that proving that testing can be done online, from home, will revolutionize the way research is done. <b>By making research participation so much more accessible, we will ensure research findings are meaningful to all Canadians living with Parkinson’s disease.</b>"
             },
             {
-                "textContent": "You should already have an account from your original completion of the Neurocognition study. Please use this account info to log in at the next step. 
-
+                "textContent": "You should already have an account from your original completion of the Neurocognition study. Please use this account info to log in at the next step."
             },
             {
                 "textContent": "If you run into any technical or login issues, please email the research team at: sharplab.neuro@mcgill.ca."
-
             },
             {
                 "textContent": "<b>WHAT WILL BE ASKED OF YOU:</b>"
@@ -444,7 +442,7 @@ UPDATE studies SET
                 "textContent": "<b>Nous avons besoin de votre aide! Vous avez récemment complété l''étude en ligne de Neurocognition sur notre plateforme. MERCI !! Un de nos objectifs est de démontrer que ces tests sont FIABLES. Pour le prouver, on a besoin de tester les personnes DEUX FOIS sur les mêmes tests.</b>"
             },
             {
-                "textContent": "On appelle ça <i>‘test-retest reliability’.</i>"
+                "textContent": "On appelle ça <i>''test-retest reliability''.</i>"
             },
             {
                 "textContent": "<b>LES TESTS SERONT PLUS COURTS QUE LA DERNIÈRE FOIS.</b>"

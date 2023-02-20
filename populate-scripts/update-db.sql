@@ -26500,7 +26500,7 @@ UPDATE tasks SET
                                     },
                                     "value": "NoChanges"
                                 }
-                            ],
+                            ]
                         },
                         {
                             "questionType": "input",
