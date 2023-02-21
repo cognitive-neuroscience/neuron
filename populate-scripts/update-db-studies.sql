@@ -487,4 +487,4 @@ UPDATE studies SET
             }
         ]
     }'
-WHERE id IN (82, 83);
+WHERE id IN (87, 88);
