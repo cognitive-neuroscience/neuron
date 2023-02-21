@@ -5,9 +5,9 @@ VALUES
 (
     NULL,
     "PSHARPLAB",
-    "INFO_DISPLAY",
-    "Game Disclaimer Info Slide",
-    "Informing about feedback in games and performance metrics",
+    "QUESTIONNAIRE",
+    "Shortened Background Questionnaire",
+    "Shortened Background Questionnaire",
     "",
     '{}'
 );
