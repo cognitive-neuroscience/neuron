@@ -26636,3 +26636,120 @@ UPDATE tasks SET
         ]
     }'
 WHERE id = 76;
+-- Iowa Gambling Task
+UPDATE tasks SET
+    from_platform = "PSHARPLAB",
+    task_type = "EXPERIMENTAL",
+    name = "Iowa Gambling Task",
+    description = "The participant needs to choose one out of four card decks (named A,B,C, and D). The participant can win and/or lose money with each card.",
+    config = '{
+        "taskConfig": {},
+        "metadata": [
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "Welcome to the Task",
+                        "fr": ""
+                    },
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "In this task, you play a \\"gambling\\" game. You need to choose one of 4 buttons (A, B, C, or D) with the mouse.",
+                                "fr": ""
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Each time, you can win some money, but you may sometimes also have to pay a fee to the bank. After each trial, you need to collect your money which will adjust your pot of money.",
+                                "fr": ""
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "You start with a loan of $2000.",
+                                "fr": ""
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "There are <b>100 trials</b> (taking 5 minutes or so).",
+                                "fr": ""
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Go on until it stops and see how much you can make on top of the loan of $2000.",
+                                "fr": ""
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"START\\" to begin the game. Good luck!",
+                                "fr": ""
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": true,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "IOWAGAMBLINGCOMPONENT",
+                "componentConfig": {
+                    "numTrials": 100,
+                    "stimuliConfig": {
+                        "type": "generated",
+                        "stimuli": null
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "Congratulations!",
+                        "fr": "Félicitations!"
+                    },
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "You finished the game successfully",
+                                "fr": "Vous avez terminé le jeu avec succès"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Thank you for your participation",
+                                "fr": "Merci pour votre participation"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": false,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
+                }
+            }
+        ]
+    }'
+WHERE id = 77;
