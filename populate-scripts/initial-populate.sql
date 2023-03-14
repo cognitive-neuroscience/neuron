@@ -662,7 +662,7 @@ VALUES
     "Informing about feedback in games and performance metrics",
     "",
     '{}'
-);
+),
 -- SHORTENED BACKGROUND QUESTIONNAIRE
 (
     76,
@@ -670,6 +670,16 @@ VALUES
     "QUESTIONNAIRE",
     "Shortened Background Questionnaire",
     "Shortened background questionnaire for test-retest reliability",
+    "",
+    '{}'
+),
+-- Iowa Gambling Task
+(
+    77,
+    "PSHARPLAB",
+    "EXPERIMENTAL",
+    "Iowa Gambling Task",
+    "The participant needs to choose one out of four card decks (named A,B,C, and D). The participant can win and/or lose money with each card.",
     "",
     '{}'
 );
