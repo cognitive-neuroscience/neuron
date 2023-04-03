@@ -35,14 +35,15 @@ func (s *ParticipantDataRepository) CreateParticipantData(participantData models
 		if _, err := db.Exec(
 			`
 				INSERT INTO participant_data 
-				(user_id, study_id, task_order, participant_type, submitted_at, data) 
-				values (?, ?, ?, ?, ?, ?);
+				(user_id, study_id, task_order, participant_type, submitted_at, metadata, data) 
+				values (?, ?, ?, ?, ?, ?, ?);
 			`,
 			participantData.UserID,
 			participantData.StudyID,
 			participantData.TaskOrder,
 			participantData.ParticipantType,
 			time.Now().UTC(),
+			participantData.Metadata,
 			participantData.Data,
 		); err != nil {
 			axonlogger.ErrorLogger.Println("could not save participant data", err)
@@ -64,9 +65,10 @@ func (s *ParticipantDataRepository) CreateParticipantData(participantData models
 		if _, err := db.Exec(
 			`
 				UPDATE participant_data 
-				set data = ? 
+				set metadata = ?, data = ? 
 				WHERE study_id = ? AND user_id = ? AND task_order = ?;
 			`,
+			participantData.Metadata,
 			retrievedParticipantData.Data,
 			retrievedParticipantData.StudyID,
 			retrievedParticipantData.UserID,
@@ -100,7 +102,7 @@ func (s *ParticipantDataRepository) GetParticipantDataByStudyAndUserIdAndTaskOrd
 	httpStatus := baseRepositoryImpl.GetOneBy(
 		&participantData,
 		`
-			SELECT user_id, study_id, task_order, participant_type, submitted_at, data 
+			SELECT user_id, study_id, task_order, participant_type, submitted_at, metadata, data 
 			FROM participant_data 
 			WHERE study_id = ? AND user_id = ? AND task_order = ? 
 			LIMIT 1;
@@ -126,7 +128,7 @@ func (s *ParticipantDataRepository) GetAllParticipantDataByStudyIdAndTaskOrder(s
 	if httpStatus := baseRepositoryImpl.GetAllBy(
 		&participantData,
 		`
-			SELECT user_id, study_id, task_order, participant_type, submitted_at, data 
+			SELECT user_id, study_id, task_order, participant_type, submitted_at, metadata, data 
 			FROM participant_data 
 			WHERE study_id = ? AND task_order = ?;
 		`,

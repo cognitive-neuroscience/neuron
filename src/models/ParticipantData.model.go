@@ -21,6 +21,7 @@ var ParticipantDataSchema = `
 		task_order INT NOT NULL,
 		participant_type ENUM("CROWDSOURCED", "ACCOUNTHOLDER"),
 		submitted_at DATETIME NOT NULL,
+		metadata JSON NOT NULL DEFAULT (JSON_OBJECT()),
 		data JSON,
 		PRIMARY KEY (study_id, task_order, user_id),
 		FOREIGN KEY (study_id, task_order) REFERENCES study_tasks(study_id, task_order) ON UPDATE CASCADE
@@ -35,6 +36,7 @@ type ParticipantData struct {
 	TaskOrder       int                     `json:"taskOrder"`
 	ParticipantType string                  `json:"participantType"`
 	SubmittedAt     time.Time               `json:"submittedAt"`
+	Metadata        MapStringInterface      `json:"metadata"`
 	Data            SliceMapStringInterface `json:"data"`
 }
 
