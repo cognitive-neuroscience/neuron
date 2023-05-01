@@ -26753,3 +26753,219 @@ UPDATE tasks SET
         ]
     }'
 WHERE id = 77;
+-- Information Task
+UPDATE tasks SET
+    from_platform = "PSHARPLAB",
+    task_type = "EXPERIMENTAL",
+    name = "Information Task",
+    description = "The participant chooses between exploration and exploitation. They select a card from the deck and either (1) continue selecting a new card with a new value, or (2) select a selected card with known value",
+    config = '{
+        "taskConfig": {},
+        "metadata": [
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "Welcome!",
+                        "fr": ""
+                    },
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "In this card game, your goal is to choose a set of numbered cards so that you get the <b>highest total score</b> that you can.",
+                                "fr": ""
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "You will have a deck of cards at the bottom of the screen.",
+                                "fr": ""
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "On each turn, you can pick a new card from the deck by clicking on it or you can pick one of the cards you have already gotten from the deck by clicking on that card in the set of cards displayed above the deck.",
+                                "fr": ""
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": false,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "Instructions Continued",
+                        "fr": ""
+                    },
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "If you pick a new card from the deck, you will get the number of points on that card added to your score.",
+                                "fr": ""
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "On the other hand, if you pick an old card displayed on the computer screen above the deck, you will get its number of points.",
+                                "fr": ""
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Note: you will always have to choose the deck on your first turn.",
+                                "fr": ""
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": false,
+                        "previousDisabled": false,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "Instructions Continued",
+                        "fr": ""
+                    },
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Each turn: You can click the deck to choose a card (and get the points on it).",
+                                "fr": ""
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "OR",
+                                "fr": ""
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "You can click a card you have previously drawn (and get the point on it)",
+                                "fr": ""
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": false,
+                        "previousDisabled": false,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "Instructions Continued",
+                        "fr": ""
+                    },
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "The cards in the deck have numbers between 1 and 99, with each number being equally likely to turn up at every turn.",
+                                "fr": ""
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "You have 20 turns for each round, and you will get to play 30 rounds.",
+                                "fr": ""
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": false,
+                        "previousDisabled": false,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "Instructions Continued",
+                        "fr": ""
+                    },
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "The card on your table that has the highest value will be painted red. Your total score for the current round is shown at the bottom of the screen, along with how many more turns you have, remaining cards, and what numbers you have picked so far.",
+                                "fr": ""
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "These have been underlined in red:",
+                                "fr": ""
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": false,
+                        "previousDisabled": false,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "Instructions Continued",
+                        "fr": ""
+                    },
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "At the end of each round, you will be told the total amount of points you received in that round, and receive feedback about how close you were to the perfect score.",
+                                "fr": ""
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": true,
+                        "previousDisabled": false,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "INFORMATIONTASKCOMPONENT",
+                "componentConfig": {
+                    "numTrials": 20,
+                    "stimuliConfig": {
+                        "type": "generated",
+                        "stimuli": null
+                    }
+                }
+            }
+        ]
+    }'
+WHERE id = 78;

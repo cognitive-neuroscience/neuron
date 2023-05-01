@@ -5,8 +5,8 @@ INSERT INTO tasks (id, from_platform, task_type, name, description, external_url
     NULL,
     "PSHARPLAB",
     "EXPERIMENTAL",
-    "Iowa Gambling Task",
-    "The participant needs to choose one out of four card decks (named A,B,C, and D). The participant can win and/or lose money with each card.",
+    "Information Task",
+    "The participant chooses between exploration and exploitation. They select a card from the deck and either (1) continue selecting a new card with a new value, or (2) select a selected card with known value",
     "",
     '{}'
 );
