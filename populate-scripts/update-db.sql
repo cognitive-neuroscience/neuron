@@ -26960,9 +26960,107 @@ UPDATE tasks SET
                 "componentName": "INFORMATIONTASKCOMPONENT",
                 "componentConfig": {
                     "numTrials": 20,
+                    "roundNum": 1,
+                    "isPractice": false,
                     "stimuliConfig": {
-                        "type": "generated",
-                        "stimuli": null
+                        "type": "hardcoded",
+                        "stimuli": {
+                            "optimalScore": 1560,
+                            "cardValues": [
+                                { "cardValue": 10, "expectedToExploit": false },
+                                { "cardValue": 16, "expectedToExploit": false },
+                                { "cardValue": 65, "expectedToExploit": false },
+                                { "cardValue": 29, "expectedToExploit": false },
+                                { "cardValue": 90, "expectedToExploit": false },
+                                { "cardValue": 94, "expectedToExploit": true },
+                                { "cardValue": 30, "expectedToExploit": true },
+                                { "cardValue": 9,  "expectedToExploit": true },
+                                { "cardValue": 74, "expectedToExploit": true },
+                                { "cardValue": 1,  "expectedToExploit": true },
+                                { "cardValue": 41, "expectedToExploit": true },
+                                { "cardValue": 37, "expectedToExploit": true },
+                                { "cardValue": 17, "expectedToExploit": true },
+                                { "cardValue": 12, "expectedToExploit": true },
+                                { "cardValue": 55, "expectedToExploit": true },
+                                { "cardValue": 89, "expectedToExploit": true },
+                                { "cardValue": 63, "expectedToExploit": true },
+                                { "cardValue": 34, "expectedToExploit": true },
+                                { "cardValue": 73, "expectedToExploit": true },
+                                { "cardValue": 79, "expectedToExploit": true }
+                            ]
+                        }
+                    }
+                }
+            },
+            {
+                "componentName": "INFORMATIONTASKCOMPONENT",
+                "componentConfig": {
+                    "numTrials": 20,
+                    "roundNum": 2,
+                    "isPractice": false,
+                    "stimuliConfig": {
+                        "type": "hardcoded",
+                        "stimuli": {
+                            "optimalScore": 1560,
+                            "cardValues": [
+                                { "cardValue": 50, "expectedToExploit": false },
+                                { "cardValue": 52, "expectedToExploit": false },
+                                { "cardValue": 55, "expectedToExploit": false },
+                                { "cardValue": 78, "expectedToExploit": false },
+                                { "cardValue": 70, "expectedToExploit": false },
+                                { "cardValue": 14, "expectedToExploit": false },
+                                { "cardValue": 26, "expectedToExploit": false },
+                                { "cardValue": 14, "expectedToExploit": false },
+                                { "cardValue": 93, "expectedToExploit": false },
+                                { "cardValue": 87, "expectedToExploit": true },
+                                { "cardValue": 31, "expectedToExploit": true },
+                                { "cardValue": 31, "expectedToExploit": true },
+                                { "cardValue": 90, "expectedToExploit": true },
+                                { "cardValue": 13, "expectedToExploit": true },
+                                { "cardValue": 66, "expectedToExploit": true },
+                                { "cardValue": 32, "expectedToExploit": true },
+                                { "cardValue": 58, "expectedToExploit": true },
+                                { "cardValue": 37, "expectedToExploit": true },
+                                { "cardValue": 28, "expectedToExploit": true },
+                                { "cardValue": 19, "expectedToExploit": true }
+                            ]
+                        }
+                    }
+                }
+            },
+            {
+                "componentName": "INFORMATIONTASKCOMPONENT",
+                "componentConfig": {
+                    "numTrials": 20,
+                    "roundNum": 3,
+                    "isPractice": false,
+                    "stimuliConfig": {
+                        "type": "hardcoded",
+                        "stimuli": {
+                            "optimalScore": 1560,
+                            "cardValues": [
+                                { "cardValue": 94, "expectedToExploit": false },
+                                { "cardValue": 78, "expectedToExploit": true },
+                                { "cardValue": 23, "expectedToExploit": true },
+                                { "cardValue": 24, "expectedToExploit": true },
+                                { "cardValue": 95, "expectedToExploit": true },
+                                { "cardValue": 12, "expectedToExploit": true },
+                                { "cardValue": 29, "expectedToExploit": true },
+                                { "cardValue": 75, "expectedToExploit": true },
+                                { "cardValue": 89, "expectedToExploit": true },
+                                { "cardValue": 10, "expectedToExploit": true },
+                                { "cardValue": 16, "expectedToExploit": true },
+                                { "cardValue": 19, "expectedToExploit": true },
+                                { "cardValue": 81, "expectedToExploit": true },
+                                { "cardValue": 72, "expectedToExploit": true },
+                                { "cardValue": 89, "expectedToExploit": true },
+                                { "cardValue": 12, "expectedToExploit": true },
+                                { "cardValue": 18, "expectedToExploit": true },
+                                { "cardValue": 47, "expectedToExploit": true },
+                                { "cardValue": 8,  "expectedToExploit": true },
+                                { "cardValue": 76, "expectedToExploit": true }
+                            ]
+                        }
                     }
                 }
             }
