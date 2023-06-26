@@ -26649,56 +26649,109 @@ UPDATE tasks SET
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
                     "title": {
-                        "en": "Welcome to the Task",
+                        "en": "Welcome!",
                         "fr": ""
                     },
                     "sections": [
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "In this task, you play a \\"gambling\\" game. You need to choose one of 4 buttons (A, B, C, or D) with the mouse.",
+                                "en": "In this task, you play a \\"gambling\\" game. You need to choose one of 4 buttons (1, 2, 3, or 4) with the number keys.",
                                 "fr": ""
                             }
                         },
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Each time, you can win some money, but you may sometimes also have to pay a fee to the bank. After each trial, you need to collect your money which will adjust your pot of money.",
+                                "en": "Each time, you can win some money, but you may sometimes lose some money as a bank fee. After each turn you will press SPACE BAR to see how your total pot of money changes.",
                                 "fr": ""
                             }
                         },
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "You start with a loan of $2000.",
-                                "fr": ""
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "There are <b>100 trials</b> (taking 5 minutes or so).",
-                                "fr": ""
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Go on until it stops and see how much you can make on top of the loan of $2000.",
-                                "fr": ""
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Click \\"START\\" to begin the game. Good luck!",
+                                "en": "Press NEXT to continue",
                                 "fr": ""
                             }
                         }
                     ],
                     "buttons": {
-                        "isStart": true,
-                        "previousDisabled": true,
+                        "isStart": false,
+                        "previousDisabled": false,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "Instructions Continued",
+                        "fr": ""
+                    },
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Placeholder slide for pictures...",
+                                "fr": ""
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Press NEXT to continue",
+                                "fr": ""
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": false,
+                        "previousDisabled": false,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "Instructions Continued",
+                        "fr": ""
+                    },
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "You will start with a loan of $2000 and you will get 100 choices. Continue until the game stops to see how much you can make on top of the $2000 loan.",
+                                "fr": ""
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Do your best to try and receive the bonus at the end of the session!",
+                                "fr": ""
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Please ask now if you have any questions.",
+                                "fr": ""
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Press NEXT to continue",
+                                "fr": ""
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": false,
+                        "previousDisabled": false,
                         "nextDisabled": false
                     }
                 }
