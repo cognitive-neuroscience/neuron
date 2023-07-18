@@ -26649,56 +26649,67 @@ UPDATE tasks SET
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
                     "title": {
-                        "en": "Welcome to the Task",
+                        "en": "",
                         "fr": ""
                     },
                     "sections": [
                         {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "In this task, you play a \\"gambling\\" game. You need to choose one of 4 buttons (A, B, C, or D) with the mouse.",
-                                "fr": ""
+                            "sectionType": "image-fill",
+                            "imagePath": {
+                                "en": "/assets/images/instructions/iowagambling/en/1.jpeg",
+                                "fr": "/assets/images/instructions/iowagambling/fr/1.jpeg"
                             }
-                        },
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": false,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "",
+                        "fr": ""
+                    },
+                    "sections": [
                         {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Each time, you can win some money, but you may sometimes also have to pay a fee to the bank. After each trial, you need to collect your money which will adjust your pot of money.",
-                                "fr": ""
+                            "sectionType": "image-fill",
+                            "imagePath": {
+                                "en": "/assets/images/instructions/iowagambling/en/2.jpeg",
+                                "fr": "/assets/images/instructions/iowagambling/fr/2.jpeg"
                             }
-                        },
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": false,
+                        "previousDisabled": false,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "",
+                        "fr": ""
+                    },
+                    "sections": [
                         {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "You start with a loan of $2000.",
-                                "fr": ""
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "There are <b>100 trials</b> (taking 5 minutes or so).",
-                                "fr": ""
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Go on until it stops and see how much you can make on top of the loan of $2000.",
-                                "fr": ""
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Click \\"START\\" to begin the game. Good luck!",
-                                "fr": ""
+                            "sectionType": "image-fill",
+                            "imagePath": {
+                                "en": "/assets/images/instructions/iowagambling/en/3.jpeg",
+                                "fr": "/assets/images/instructions/iowagambling/fr/3.jpeg"
                             }
                         }
                     ],
                     "buttons": {
                         "isStart": true,
-                        "previousDisabled": true,
+                        "previousDisabled": false,
                         "nextDisabled": false
                     }
                 }
@@ -26766,29 +26777,15 @@ UPDATE tasks SET
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
                     "title": {
-                        "en": "Welcome!",
+                        "en": "",
                         "fr": ""
                     },
                     "sections": [
                         {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "In this card game, your goal is to choose a set of numbered cards so that you get the <b>highest total score</b> that you can.",
-                                "fr": ""
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "You will have a deck of cards at the bottom of the screen.",
-                                "fr": ""
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "On each turn, you can pick a new card from the deck by clicking on it or you can pick one of the cards you have already gotten from the deck by clicking on that card in the set of cards displayed above the deck.",
-                                "fr": ""
+                            "sectionType": "image-fill",
+                            "imagePath": {
+                                "en": "/assets/images/instructions/informationsearch/en/1.jpeg",
+                                "fr": "/assets/images/instructions/informationsearch/fr/1.jpeg"
                             }
                         }
                     ],
@@ -26803,29 +26800,15 @@ UPDATE tasks SET
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
                     "title": {
-                        "en": "Instructions Continued",
+                        "en": "",
                         "fr": ""
                     },
                     "sections": [
                         {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "If you pick a new card from the deck, you will get the number of points on that card added to your score.",
-                                "fr": ""
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "On the other hand, if you pick an old card displayed on the computer screen above the deck, you will get its number of points.",
-                                "fr": ""
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Note: you will always have to choose the deck on your first turn.",
-                                "fr": ""
+                            "sectionType": "image-fill",
+                            "imagePath": {
+                                "en": "/assets/images/instructions/informationsearch/en/2.jpeg",
+                                "fr": "/assets/images/instructions/informationsearch/fr/2.jpeg"
                             }
                         }
                     ],
@@ -26840,29 +26823,15 @@ UPDATE tasks SET
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
                     "title": {
-                        "en": "Instructions Continued",
+                        "en": "",
                         "fr": ""
                     },
                     "sections": [
                         {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Each turn: You can click the deck to choose a card (and get the points on it).",
-                                "fr": ""
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "OR",
-                                "fr": ""
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "You can click a card you have previously drawn (and get the point on it)",
-                                "fr": ""
+                            "sectionType": "image-fill",
+                            "imagePath": {
+                                "en": "/assets/images/instructions/informationsearch/en/3.jpeg",
+                                "fr": "/assets/images/instructions/informationsearch/fr/3.jpeg"
                             }
                         }
                     ],
@@ -26877,22 +26846,15 @@ UPDATE tasks SET
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
                     "title": {
-                        "en": "Instructions Continued",
+                        "en": "",
                         "fr": ""
                     },
                     "sections": [
                         {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "The cards in the deck have numbers between 1 and 99, with each number being equally likely to turn up at every turn.",
-                                "fr": ""
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "You have 20 turns for each round, and you will get to play 30 rounds.",
-                                "fr": ""
+                            "sectionType": "image-fill",
+                            "imagePath": {
+                                "en": "/assets/images/instructions/informationsearch/en/4.jpeg",
+                                "fr": "/assets/images/instructions/informationsearch/fr/4.jpeg"
                             }
                         }
                     ],
@@ -26907,22 +26869,15 @@ UPDATE tasks SET
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
                     "title": {
-                        "en": "Instructions Continued",
+                        "en": "",
                         "fr": ""
                     },
                     "sections": [
                         {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "The card on your table that has the highest value will be painted red. Your total score for the current round is shown at the bottom of the screen, along with how many more turns you have, remaining cards, and what numbers you have picked so far.",
-                                "fr": ""
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "These have been underlined in red:",
-                                "fr": ""
+                            "sectionType": "image-fill",
+                            "imagePath": {
+                                "en": "/assets/images/instructions/informationsearch/en/5.jpeg",
+                                "fr": "/assets/images/instructions/informationsearch/fr/5.jpeg"
                             }
                         }
                     ],
@@ -26937,15 +26892,15 @@ UPDATE tasks SET
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
                     "title": {
-                        "en": "Instructions Continued",
+                        "en": "",
                         "fr": ""
                     },
                     "sections": [
                         {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "At the end of each round, you will be told the total amount of points you received in that round, and receive feedback about how close you were to the perfect score.",
-                                "fr": ""
+                            "sectionType": "image-fill",
+                            "imagePath": {
+                                "en": "/assets/images/instructions/informationsearch/en/6.jpeg",
+                                "fr": "/assets/images/instructions/informationsearch/fr/6.jpeg"
                             }
                         }
                     ],
@@ -27006,7 +26961,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-total-score",
                             "textContent": {
                                 "en": "Your score was ???",
-                                "fr": "Vous marquez ??? points."
+                                "fr": "Votre score: ???"
                             }
                         },
                         {
@@ -27015,7 +26970,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-optimal-score",
                             "textContent": {
                                 "en": "The optimal score was ???",
-                                "fr": ""
+                                "fr": "Le score à battre: ???"
                             }
                         },
                         {
@@ -27080,7 +27035,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-total-score",
                             "textContent": {
                                 "en": "Your score was ???",
-                                "fr": "Vous marquez ??? points."
+                                "fr": "Votre score: ???"
                             }
                         },
                         {
@@ -27089,7 +27044,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-optimal-score",
                             "textContent": {
                                 "en": "The optimal score was ???",
-                                "fr": ""
+                                "fr": "Le score à battre: ???"
                             }
                         },
                         {
@@ -27154,7 +27109,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-total-score",
                             "textContent": {
                                 "en": "Your score was ???",
-                                "fr": "Vous marquez ??? points."
+                                "fr": "Votre score: ???"
                             }
                         },
                         {
@@ -27163,7 +27118,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-optimal-score",
                             "textContent": {
                                 "en": "The optimal score was ???",
-                                "fr": ""
+                                "fr": "Le score à battre: ???"
                             }
                         },
                         {
@@ -27228,7 +27183,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-total-score",
                             "textContent": {
                                 "en": "Your score was ???",
-                                "fr": "Vous marquez ??? points."
+                                "fr": "Votre score: ???"
                             }
                         },
                         {
@@ -27237,7 +27192,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-optimal-score",
                             "textContent": {
                                 "en": "The optimal score was ???",
-                                "fr": ""
+                                "fr": "Le score à battre: ???"
                             }
                         },
                         {
@@ -27302,7 +27257,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-total-score",
                             "textContent": {
                                 "en": "Your score was ???",
-                                "fr": "Vous marquez ??? points."
+                                "fr": "Votre score: ???"
                             }
                         },
                         {
@@ -27311,7 +27266,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-optimal-score",
                             "textContent": {
                                 "en": "The optimal score was ???",
-                                "fr": ""
+                                "fr": "Le score à battre: ???"
                             }
                         },
                         {
@@ -27376,7 +27331,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-total-score",
                             "textContent": {
                                 "en": "Your score was ???",
-                                "fr": "Vous marquez ??? points."
+                                "fr": "Votre score: ???"
                             }
                         },
                         {
@@ -27385,7 +27340,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-optimal-score",
                             "textContent": {
                                 "en": "The optimal score was ???",
-                                "fr": ""
+                                "fr": "Le score à battre: ???"
                             }
                         },
                         {
@@ -27450,7 +27405,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-total-score",
                             "textContent": {
                                 "en": "Your score was ???",
-                                "fr": "Vous marquez ??? points."
+                                "fr": "Votre score: ???"
                             }
                         },
                         {
@@ -27459,7 +27414,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-optimal-score",
                             "textContent": {
                                 "en": "The optimal score was ???",
-                                "fr": ""
+                                "fr": "Le score à battre: ???"
                             }
                         },
                         {
@@ -27524,7 +27479,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-total-score",
                             "textContent": {
                                 "en": "Your score was ???",
-                                "fr": "Vous marquez ??? points."
+                                "fr": "Votre score: ???"
                             }
                         },
                         {
@@ -27533,7 +27488,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-optimal-score",
                             "textContent": {
                                 "en": "The optimal score was ???",
-                                "fr": ""
+                                "fr": "Le score à battre: ???"
                             }
                         },
                         {
@@ -27598,7 +27553,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-total-score",
                             "textContent": {
                                 "en": "Your score was ???",
-                                "fr": "Vous marquez ??? points."
+                                "fr": "Votre score: ???"
                             }
                         },
                         {
@@ -27607,7 +27562,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-optimal-score",
                             "textContent": {
                                 "en": "The optimal score was ???",
-                                "fr": ""
+                                "fr": "Le score à battre: ???"
                             }
                         },
                         {
@@ -27672,7 +27627,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-total-score",
                             "textContent": {
                                 "en": "Your score was ???",
-                                "fr": "Vous marquez ??? points."
+                                "fr": "Votre score: ???"
                             }
                         },
                         {
@@ -27681,7 +27636,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-optimal-score",
                             "textContent": {
                                 "en": "The optimal score was ???",
-                                "fr": ""
+                                "fr": "Le score à battre: ???"
                             }
                         },
                         {
@@ -27746,7 +27701,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-total-score",
                             "textContent": {
                                 "en": "Your score was ???",
-                                "fr": "Vous marquez ??? points."
+                                "fr": "Votre score: ???"
                             }
                         },
                         {
@@ -27755,7 +27710,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-optimal-score",
                             "textContent": {
                                 "en": "The optimal score was ???",
-                                "fr": ""
+                                "fr": "Le score à battre: ???"
                             }
                         },
                         {
@@ -27820,7 +27775,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-total-score",
                             "textContent": {
                                 "en": "Your score was ???",
-                                "fr": "Vous marquez ??? points."
+                                "fr": "Votre score: ???"
                             }
                         },
                         {
@@ -27829,7 +27784,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-optimal-score",
                             "textContent": {
                                 "en": "The optimal score was ???",
-                                "fr": ""
+                                "fr": "Le score à battre: ???"
                             }
                         },
                         {
@@ -27894,7 +27849,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-total-score",
                             "textContent": {
                                 "en": "Your score was ???",
-                                "fr": "Vous marquez ??? points."
+                                "fr": "Votre score: ???"
                             }
                         },
                         {
@@ -27903,7 +27858,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-optimal-score",
                             "textContent": {
                                 "en": "The optimal score was ???",
-                                "fr": ""
+                                "fr": "Le score à battre: ???"
                             }
                         },
                         {
@@ -27968,7 +27923,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-total-score",
                             "textContent": {
                                 "en": "Your score was ???",
-                                "fr": "Vous marquez ??? points."
+                                "fr": "Votre score: ???"
                             }
                         },
                         {
@@ -27977,7 +27932,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-optimal-score",
                             "textContent": {
                                 "en": "The optimal score was ???",
-                                "fr": ""
+                                "fr": "Le score à battre: ???"
                             }
                         },
                         {
@@ -28042,7 +27997,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-total-score",
                             "textContent": {
                                 "en": "Your score was ???",
-                                "fr": "Vous marquez ??? points."
+                                "fr": "Votre score: ???"
                             }
                         },
                         {
@@ -28051,7 +28006,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-optimal-score",
                             "textContent": {
                                 "en": "The optimal score was ???",
-                                "fr": ""
+                                "fr": "Le score à battre: ???"
                             }
                         },
                         {
@@ -28116,7 +28071,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-total-score",
                             "textContent": {
                                 "en": "Your score was ???",
-                                "fr": "Vous marquez ??? points."
+                                "fr": "Votre score: ???"
                             }
                         },
                         {
@@ -28125,7 +28080,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-optimal-score",
                             "textContent": {
                                 "en": "The optimal score was ???",
-                                "fr": ""
+                                "fr": "Le score à battre: ???"
                             }
                         },
                         {
@@ -28190,7 +28145,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-total-score",
                             "textContent": {
                                 "en": "Your score was ???",
-                                "fr": "Vous marquez ??? points."
+                                "fr": "Votre score: ???"
                             }
                         },
                         {
@@ -28199,7 +28154,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-optimal-score",
                             "textContent": {
                                 "en": "The optimal score was ???",
-                                "fr": ""
+                                "fr": "Le score à battre: ???"
                             }
                         },
                         {
@@ -28264,7 +28219,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-total-score",
                             "textContent": {
                                 "en": "Your score was ???",
-                                "fr": "Vous marquez ??? points."
+                                "fr": "Votre score: ???"
                             }
                         },
                         {
@@ -28273,7 +28228,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-optimal-score",
                             "textContent": {
                                 "en": "The optimal score was ???",
-                                "fr": ""
+                                "fr": "Le score à battre: ???"
                             }
                         },
                         {
@@ -28338,7 +28293,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-total-score",
                             "textContent": {
                                 "en": "Your score was ???",
-                                "fr": "Vous marquez ??? points."
+                                "fr": "Votre score: ???"
                             }
                         },
                         {
@@ -28347,7 +28302,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-optimal-score",
                             "textContent": {
                                 "en": "The optimal score was ???",
-                                "fr": ""
+                                "fr": "Le score à battre: ???"
                             }
                         },
                         {
@@ -28412,7 +28367,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-total-score",
                             "textContent": {
                                 "en": "Your score was ???",
-                                "fr": "Vous marquez ??? points."
+                                "fr": "Votre score: ???"
                             }
                         },
                         {
@@ -28421,7 +28376,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-optimal-score",
                             "textContent": {
                                 "en": "The optimal score was ???",
-                                "fr": ""
+                                "fr": "Le score à battre: ???"
                             }
                         },
                         {
@@ -28486,7 +28441,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-total-score",
                             "textContent": {
                                 "en": "Your score was ???",
-                                "fr": "Vous marquez ??? points."
+                                "fr": "Votre score: ???"
                             }
                         },
                         {
@@ -28495,7 +28450,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-optimal-score",
                             "textContent": {
                                 "en": "The optimal score was ???",
-                                "fr": ""
+                                "fr": "Le score à battre: ???"
                             }
                         },
                         {
@@ -28560,7 +28515,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-total-score",
                             "textContent": {
                                 "en": "Your score was ???",
-                                "fr": "Vous marquez ??? points."
+                                "fr": "Votre score: ???"
                             }
                         },
                         {
@@ -28569,7 +28524,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-optimal-score",
                             "textContent": {
                                 "en": "The optimal score was ???",
-                                "fr": ""
+                                "fr": "Le score à battre: ???"
                             }
                         },
                         {
@@ -28634,7 +28589,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-total-score",
                             "textContent": {
                                 "en": "Your score was ???",
-                                "fr": "Vous marquez ??? points."
+                                "fr": "Votre score: ???"
                             }
                         },
                         {
@@ -28643,7 +28598,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-optimal-score",
                             "textContent": {
                                 "en": "The optimal score was ???",
-                                "fr": ""
+                                "fr": "Le score à battre: ???"
                             }
                         },
                         {
@@ -28708,7 +28663,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-total-score",
                             "textContent": {
                                 "en": "Your score was ???",
-                                "fr": "Vous marquez ??? points."
+                                "fr": "Votre score: ???"
                             }
                         },
                         {
@@ -28717,7 +28672,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-optimal-score",
                             "textContent": {
                                 "en": "The optimal score was ???",
-                                "fr": ""
+                                "fr": "Le score à battre: ???"
                             }
                         },
                         {
@@ -28782,7 +28737,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-total-score",
                             "textContent": {
                                 "en": "Your score was ???",
-                                "fr": "Vous marquez ??? points."
+                                "fr": "Votre score: ???"
                             }
                         },
                         {
@@ -28791,7 +28746,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-optimal-score",
                             "textContent": {
                                 "en": "The optimal score was ???",
-                                "fr": ""
+                                "fr": "Le score à battre: ???"
                             }
                         },
                         {
@@ -28856,7 +28811,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-total-score",
                             "textContent": {
                                 "en": "Your score was ???",
-                                "fr": "Vous marquez ??? points."
+                                "fr": "Votre score: ???"
                             }
                         },
                         {
@@ -28865,7 +28820,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-optimal-score",
                             "textContent": {
                                 "en": "The optimal score was ???",
-                                "fr": ""
+                                "fr": "Le score à battre: ???"
                             }
                         },
                         {
@@ -28930,7 +28885,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-total-score",
                             "textContent": {
                                 "en": "Your score was ???",
-                                "fr": "Vous marquez ??? points."
+                                "fr": "Votre score: ???"
                             }
                         },
                         {
@@ -28939,7 +28894,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-optimal-score",
                             "textContent": {
                                 "en": "The optimal score was ???",
-                                "fr": ""
+                                "fr": "Le score à battre: ???"
                             }
                         },
                         {
@@ -29004,7 +28959,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-total-score",
                             "textContent": {
                                 "en": "Your score was ???",
-                                "fr": "Vous marquez ??? points."
+                                "fr": "Votre score: ???"
                             }
                         },
                         {
@@ -29013,7 +28968,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-optimal-score",
                             "textContent": {
                                 "en": "The optimal score was ???",
-                                "fr": ""
+                                "fr": "Le score à battre: ???"
                             }
                         },
                         {
@@ -29078,7 +29033,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-total-score",
                             "textContent": {
                                 "en": "Your score was ???",
-                                "fr": "Vous marquez ??? points."
+                                "fr": "Votre score: ???"
                             }
                         },
                         {
@@ -29087,7 +29042,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-optimal-score",
                             "textContent": {
                                 "en": "The optimal score was ???",
-                                "fr": ""
+                                "fr": "Le score à battre: ???"
                             }
                         },
                         {
@@ -29152,7 +29107,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-total-score",
                             "textContent": {
                                 "en": "Your score was ???",
-                                "fr": "Vous marquez ??? points."
+                                "fr": "Votre score: ???"
                             }
                         },
                         {
@@ -29161,7 +29116,7 @@ UPDATE tasks SET
                             "cacheKey": "information-task-optimal-score",
                             "textContent": {
                                 "en": "The optimal score was ???",
-                                "fr": ""
+                                "fr": "Le score à battre: ???"
                             }
                         },
                         {
@@ -29174,6 +29129,43 @@ UPDATE tasks SET
                             }
                         }
                     ]
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "Congratulations!",
+                        "fr": "Félicitations!"
+                    },
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "You finished the game successfully",
+                                "fr": "Vous avez terminé le jeu avec succès"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Thank you for your participation",
+                                "fr": "Merci pour votre participation"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to continue",
+                                "fr": "Cliquez sur \\"NEXT\\" pour continuer"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": false,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
                 }
             }
         ]
@@ -29455,3 +29447,22 @@ UPDATE tasks SET
         ]
     }'
 WHERE id = 84;
+-- JH_Bandit task
+UPDATE tasks SET 
+    from_platform = "PAVLOVIA",
+    task_type = "EXPERIMENTAL",
+    name = "JH_Bandit Task",
+    description = "",
+    external_url = "https://run.pavlovia.org/Patrick250/jh_bandit",
+    config = '{
+        "taskConfig": {},
+        "metadata": [
+            {
+                "componentName": "EMBEDDEDPAGECOMPONENT",
+                "componentConfig": {
+                    "externalUrl": "https://run.pavlovia.org/Patrick250/jh_bandit"
+                }
+            }
+        ]
+    }'
+WHERE id = 85;
