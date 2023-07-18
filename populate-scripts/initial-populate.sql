@@ -685,57 +685,71 @@ VALUES
 ),
 -- Information Task
 (
+    78,
     "PSHARPLAB",
     "EXPERIMENTAL",
     "Information Task",
-    "The participant chooses between exploration and exploitation. They select a card from the deck and either (1) continue selecting a new card with a new value, or (2) select a selected card with known value","",
+    "The participant chooses between exploration and exploitation. They select a card from the deck and either (1) continue selecting a new card with a new value, or (2) select a selected card with known value",
+    "",
     '{}'
 ),
 -- Information Task Questionnaire Round 2
 (
+    79,
     "PSHARPLAB",
     "QUESTIONNAIRE",
     "Information Task Questionnaire For Round 2",
+    "",
     "",
     '{}'
 ),
 -- Information Task Questionnaire Round 5
 (
+    80,
     "PSHARPLAB",
     "QUESTIONNAIRE",
     "Information Task Questionnaire For Round 5",
+    "",
     "",
     '{}'
 ),
 -- Information Task Questionnaire Round 9
 (
+    81,
     "PSHARPLAB",
     "QUESTIONNAIRE",
     "Information Task Questionnaire For Round 9",
+    "",
     "",
     '{}'
 ),
 -- Information Task Questionnaire Round 13
 (
+    82,
     "PSHARPLAB",
     "QUESTIONNAIRE",
     "Information Task Questionnaire For Round 13",
+    "",
     "",
     '{}'
 ),
 -- Information Task Questionnaire Round 17
 (
+    83,
     "PSHARPLAB",
     "QUESTIONNAIRE",
     "Information Task Questionnaire For Round 17",
+    "",
     "",
     '{}'
 ),
 -- Information Task Questionnaire Round 20
 (
+    84,
     "PSHARPLAB",
     "QUESTIONNAIRE",
     "Information Task Questionnaire For Round 20",
+    "",
     "",
     '{}'
 );

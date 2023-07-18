@@ -43,7 +43,7 @@ func (s *StudyService) GetStudyById(studyId string) (models.Study, models.HTTPSt
 // GetStudiesByOrganizationId gets all the studies for a given organization
 // It returns a 200, 404, or 500 status code.
 func (s *StudyService) GetStudiesByOrganizationId(organizationId string, userId string) ([]models.Study, models.HTTPStatus) {
-	axonlogger.InfoLogger.Println("STUDY SERVICE: GetS tudiesByOrganizationId()")
+	axonlogger.InfoLogger.Println("STUDY SERVICE: GetStudiesByOrganizationId()")
 	parsedUserId, parseUserIdErr := convertStringToUint8(userId)
 	if parseUserIdErr != nil {
 		axonlogger.WarningLogger.Println("Could not convert id to uint", parseUserIdErr)
