@@ -29460,7 +29460,18 @@ UPDATE tasks SET
             {
                 "componentName": "EMBEDDEDPAGECOMPONENT",
                 "componentConfig": {
-                    "externalUrl": "https://run.pavlovia.org/Patrick250/jh_bandit"
+                    "externalUrl": "https://run.pavlovia.org/Patrick250/jh_bandit",
+                    "disableNextButtonDurationInSeconds": 1320,
+                    "buttons": {
+                        "nextButtonText": {
+                            "en": "Only press this button when the task is complete",
+                            "fr": "Appuyer suelement ce bouton lorsque vous avez terminé la tâche"
+                        },
+                        "previousButtonText": {
+                            "en": "Previous",
+                            "fr": "Précédent"
+                        }
+                    }
                 }
             }
         ]
