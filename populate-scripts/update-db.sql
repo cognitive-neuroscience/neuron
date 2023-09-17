@@ -30551,6 +30551,10 @@ UPDATE tasks SET
                             ]
                         },
                         {
+                            "questionType": "divider",
+                            "key": "divider2"
+                        },
+                        {
                             "questionType": "displayText",
                             "key": "displayText4",
                             "title": {
@@ -31193,7 +31197,7 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "divider",
-                            "key": "divider2"
+                            "key": "divider3"
                         },
                         {
                             "questionType": "displayText",
@@ -31340,7 +31344,7 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "divider",
-                            "key": "divider3"
+                            "key": "divider4"
                         },
                         {
                             "questionType": "displayText",
@@ -31390,7 +31394,7 @@ UPDATE tasks SET
                         {
                             "questionType": "slider",
                             "title": {
-                                "en": "Thinking changes. What percentage of people do you think will eventually develop <b>any degree of changes to their thinking</b> due to Parkinson''s disease? We are referring to any changes in memory, concentration, organization, orientation, or any other changes to thinking, whether mild or severe, that are sufficient to be noted by the individual or by their loved ones. These changes could be so mild that they don''t affect everyday life, to so severe that they lead to loss of independence and dementia. (The percentage you provide here should be at least as high as the number you entered in the last question).",
+                                "en": "Thinking changes: What percentage of people do you think will eventually develop <b>any degree of changes to their thinking</b> due to Parkinson''s disease? We are referring to any changes in memory, concentration, organization, orientation, or any other changes to thinking, whether mild or severe, that are sufficient to be noted by the individual or by their loved ones. These changes could be so mild that they don''t affect everyday life, to so severe that they lead to loss of independence and dementia. (The percentage you provide here should be at least as high as the number you entered in the last question).",
                                 "fr": ""
                             },
                             "styles": {
@@ -31480,7 +31484,984 @@ UPDATE tasks SET
                             ]
                         },
                         {
-                            
+                            "questionType": "slider",
+                            "title": {
+                                "en": "Mood symptoms: As people progress with PD, what percentage of people will, at some point, experience changes to their mood due to Parkinson''s disease? Mood symptoms include depression, anxiety, excessive worrying, loss of motivation, paranoia, etc.",
+                                "fr": ""
+                            },
+                            "styles": {
+                                "title-font-size": "md",
+                                "text-content-font-size": "md"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "percentage-develops-mood-changes",
+                            "legend": [ 
+                                {
+                                    "en": "0%: No one with PD develops any degree of mood symptoms",
+                                    "fr": ""
+                                },
+                                {
+                                    "en": "100%: Everyone with PD develops some degree of mood symptoms",
+                                    "fr": ""
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "treatment-of-mood-symptoms-involves",
+                            "title": {
+                                "en": "The treatment of mood symptoms in Parkinson''s disease involves: (please select all that apply)",
+                                "fr": ""
+                            },
+                            "allowMultipleSelections": true,
+                            "validation": {
+                                "required": true
+                            },
+                            "actions": {
+                                "clearOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"],
+                                "onlyDisableOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"]
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Medication to cure the mood symptoms, i.e. to permanently reverse the mood symptoms",
+                                        "fr": ""
+                                    },
+                                    "value": "medication-to-cure-mood-symptoms"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Medication to alleviate the mood symptoms",
+                                        "fr": ""
+                                    },
+                                    "value": "medication-to-alleviate-mood-symptoms"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No medications exist, but therapy that does not involve medications (e.g. talk therapy) can help cope with or reduce the symptoms",
+                                        "fr": ""
+                                    },
+                                    "value": "no-medications-exist-but-therapies-can-help-cope"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Nothing at all can be done for the mood symptoms in PD",
+                                        "fr": ""
+                                    },
+                                    "value": "nothing-can-be-done"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": ""
+                                    },
+                                    "value": "other"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "divider",
+                            "key": "divider5"
+                        },
+                        {
+                            "questionType": "displayText",
+                            "key": "displayText10",
+                            "title": {
+                                "en": "About your interaction with the healthcare team",
+                                "fr": ""
+                            }
+                        },
+                        {
+                            "questionType": "displayText",
+                            "key": "displayText11",
+                            "title": {
+                                "en": "In this section we are interested in finding out how much information you receive from your healthcare team and whether you are satisfied with your interactions with the healthcare team.",
+                                "fr": ""
+                            }
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "how-often-thinking-changes-discussed",
+                            "validation": {
+                                "required": true
+                            },
+                            "title": {
+                                "en": "How often do you discuss whether you''ve experienced changes to your thinking in your visits?",
+                                "fr": ""
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Each visit",
+                                        "fr": ""
+                                    },
+                                    "value": "each-visit"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Only when I bring it up",
+                                        "fr": ""
+                                    },
+                                    "value": "only-when-i-bring-it-up"
+                                },
+                                {
+                                    "label": {
+                                        "en": "My healthcare team occasionally brings it up",
+                                        "fr": ""
+                                    },
+                                    "value": "my-healthcare-team-occasionally-brings-it-up"
+                                },
+                                {
+                                    "label": {
+                                        "en": "I have never discussed this with my healthcare team",
+                                        "fr": ""
+                                    },
+                                    "value": "never-discussed-this-with-my-healthcare-team"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": ""
+                                    },
+                                    "value": "other"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "time-spent-discussing-thinking-changes-sufficient",
+                            "validation": {
+                                "required": true
+                            },
+                            "title": {
+                                "en": "Do you think the time you spend with your healthcare team discussing your thinking is sufficient?",
+                                "fr": ""
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": ""
+                                    },
+                                    "value": "yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": ""
+                                    },
+                                    "value": "no"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "how-often-mood-symptoms-discussed",
+                            "validation": {
+                                "required": true
+                            },
+                            "title": {
+                                "en": "How often do you discuss your mood symptoms in your visits?",
+                                "fr": ""
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Each visit",
+                                        "fr": ""
+                                    },
+                                    "value": "each-visit"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Only when I bring it up",
+                                        "fr": ""
+                                    },
+                                    "value": "only-when-i-bring-it-up"
+                                },
+                                {
+                                    "label": {
+                                        "en": "My healthcare team occasionally brings it up",
+                                        "fr": ""
+                                    },
+                                    "value": "my-healthcare-team-occasionally-brings-it-up"
+                                },
+                                {
+                                    "label": {
+                                        "en": "I have never discussed this with my healthcare team",
+                                        "fr": ""
+                                    },
+                                    "value": "never-discussed-this-with-my-healthcare-team"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": ""
+                                    },
+                                    "value": "other"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "time-spent-discussing-mood-symptoms-sufficient",
+                            "validation": {
+                                "required": true
+                            },
+                            "title": {
+                                "en": "Do you think the time you spend with your healthcare team discussing mood symptoms is sufficient?",
+                                "fr": ""
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": ""
+                                    },
+                                    "value": "yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": ""
+                                    },
+                                    "value": "no"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "care-partner-attending-medical-appointments-always-or-sometimes",
+                            "validation": {
+                                "required": true
+                            },
+                            "title": {
+                                "en": "Do you have a care partner who attends medical appointments with you some or all of the time?",
+                                "fr": ""
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": ""
+                                    },
+                                    "value": "yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": ""
+                                    },
+                                    "value": "no"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "care-partner-sufficiently-involved-in-medical-team-conversations",
+                            "validation": {
+                                "required": true
+                            },
+                            "title": {
+                                "en": "Do you find that your care partner is sufficiently involved in the conversations with the medical team?",
+                                "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "care-partner-attending-medical-appointments-always-or-sometimes",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": ["yes"]
+                                }
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": ""
+                                    },
+                                    "value": "yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No because they can''t attend often enough",
+                                        "fr": ""
+                                    },
+                                    "value": "no-they-cant-attend-often-enough"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No because the medical team does not include them enough in the discussion",
+                                        "fr": ""
+                                    },
+                                    "value": "no-medical-team-doesnt-include-them"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No because they prefer not to be involved in the discussions",
+                                        "fr": ""
+                                    },
+                                    "value": "no-they-prefer-not-to-be-involved"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No because I prefer them not to be involved in the discussions",
+                                        "fr": ""
+                                    },
+                                    "value": "no-i-prefer-them-not-to-be-involved"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": ""
+                                    },
+                                    "value": "other"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "i-view-thinking-and-mood-symptoms-i-experience",
+                            "title": {
+                                "en": "Since my time of PD diagnosis, I view the thinking and mood symptoms that I experience as: (please choose all that apply)",
+                                "fr": ""
+                            },
+                            "allowMultipleSelections": true,
+                            "validation": {
+                                "required": true
+                            },
+                            "actions": {
+                                "clearOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"],
+                                "onlyDisableOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"]
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "A part of life",
+                                        "fr": ""
+                                    },
+                                    "value": "a-part-of-life"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Related to Parkinson''s disease",
+                                        "fr": ""
+                                    },
+                                    "value": "related-to-parkinsons-disease"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Entirely under my control and therefore I would rather not discuss them with the medical team",
+                                        "fr": ""
+                                    },
+                                    "value": "under-my-control-so-i-prefer-not-discuss-them"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Without effective treatment, therefore I would rather not discuss them",
+                                        "fr": ""
+                                    },
+                                    "value": "without-effective-treatment"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Less important than my motor symptoms",
+                                        "fr": ""
+                                    },
+                                    "value": "less-important-than-my-motor-symptoms"
+                                },
+                                {
+                                    "label": {
+                                        "en": "More important than my motor symptoms",
+                                        "fr": ""
+                                    },
+                                    "value": "more-important-than-my-motor-symptoms"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Embarrassing",
+                                        "fr": ""
+                                    },
+                                    "value": "embarrassing"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": ""
+                                    },
+                                    "value": "other"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "divider",
+                            "key": "divider6"
+                        },
+                        {
+                            "questionType": "displayText",
+                            "key": "displayText12",
+                            "title": {
+                                "en": "Understanding what you would like to know",
+                                "fr": ""
+                            }
+                        },
+                        {
+                            "questionType": "displayText",
+                            "key": "displayText13",
+                            "title": {
+                                "en": "In this section, we are interested in finding out how you would ideally like the different aspects of Parkinson''s disease to be discussed with you",
+                                "fr": ""
+                            }
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "value-discussing-cognitive-and-mood-symptoms",
+                            "validation": {
+                                "required": true
+                            },
+                            "actions": {
+                                "clearOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"],
+                                "onlyDisableOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"]
+                            },
+                            "title": {
+                                "en": "<b>What</b> is the value to you of discussing your cognitive and mood symptoms with your medical team? Please choose all that apply:"
+                            },
+                            "allowMultipleSelections": true,
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "It is helpful to talk about the symptoms and have them validated",
+                                        "fr": ""
+                                    },
+                                    "value": "helpful-to-talk-about-symptoms-and-have-them-validated"
+                                },
+                                {
+                                    "label": {
+                                        "en": "It is helpful to talk about the symptoms so that they can be treated",
+                                        "fr": ""
+                                    },
+                                    "value": "helpful-to-talk-about-symptoms-so-that-they-can-be-treated"
+                                },
+                                {
+                                    "label": {
+                                        "en": "It is helpful to talk about these symptoms in front of my caregiver so that they have a better understanding of what I''m going through",
+                                        "fr": ""
+                                    },
+                                    "value": "helpful-to-talk-about-symptoms-in-front-of-my-caregiver"
+                                },
+                                {
+                                    "label": {
+                                        "en": "It is helpful for the medical team to hear my caregiver''s perspective on these issues",
+                                        "fr": ""
+                                    },
+                                    "value": "helpful-for-medical-team-to-hear-my-caregivers-perspective"
+                                },
+                                {
+                                    "label": {
+                                        "en": "It is not useful; I would prefer to focus on other symptoms of Parkinson''s disease",
+                                        "fr": ""
+                                    },
+                                    "value": "not-useful-id-prefer-to-focus-on-other-symptoms"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": ""
+                                    },
+                                    "value": "other"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "want-to-be-told-of-possibility-of-developing-thinking-mood-symptoms-at-time-of-diagnosis",
+                            "validation": {
+                                "required": true
+                            },
+                            "title": {
+                                "en": "Ideally, would you have wanted to be told about the <b><i>possibility</i></b> of developing thinking and mood symptoms as part of Parkinson''s disease <b>at the time of your diagnosis</b>",
+                                "fr": ""
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Yes, I think it''s important to be informed about the possibility of developing these symptoms, even if I was not experiencing them yet",
+                                        "fr": ""
+                                    },
+                                    "value": "yes-important-to-be-informed-even-before-experiencing-symptoms"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No, I would have preferred to wait until I develop the symptoms before being told about their link to Parkinson''s disease",
+                                        "fr": ""
+                                    },
+                                    "value": "no-preferred-to-wait-until-i-develop-symptoms"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": ""
+                                    },
+                                    "value": "other"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "divider",
+                            "key": "divider7"
+                        },
+                        {
+                            "questionType": "displayText",
+                            "key": "displayText14",
+                            "title": {
+                                "en": "In this last section, we are asking about the <b>motor</b> symptoms of Parkinson''s disease, which can include tremor, stiffness, slowness, difficulty walking, poor balance, falls, loss of dexterity, difficulty with activities such as dressing, cooking or eating, etc.",
+                                "fr": ""
+                            }
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "experienced-motor-symptoms-since-diagnosis",
+                            "validation": {
+                                "required": true
+                            },
+                            "title": {
+                                "en": "Have you experienced motor symptoms since your diagnosis with Parkinson''s disease?",
+                                "fr": ""
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": ""
+                                    },
+                                    "value": "yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": ""
+                                    },
+                                    "value": "no"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "motor-people-seem-uncomfortable",
+                            "title": {
+                                "en": "Some people seem uncomfortable with me",
+                                "fr": ""
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "experienced-motor-symptoms-since-diagnosis",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": ["yes"]
+                                }
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Never",
+                                        "fr": ""
+                                    },
+                                    "value": "never"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sometimes",
+                                        "fr": ""
+                                    },
+                                    "value": "sometimes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Always",
+                                        "fr": ""
+                                    },
+                                    "value": "always"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "motor-people-are-avoiding-me",
+                            "title": {
+                                "en": "Some people are avoiding me",
+                                "fr": ""
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "experienced-motor-symptoms-since-diagnosis",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": ["yes"]
+                                }
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Never",
+                                        "fr": ""
+                                    },
+                                    "value": "never"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sometimes",
+                                        "fr": ""
+                                    },
+                                    "value": "sometimes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Always",
+                                        "fr": ""
+                                    },
+                                    "value": "always"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "motor-i-feel-embarrassed-in-social-situations",
+                            "title": {
+                                "en": "I feel embarrassed in social situations",
+                                "fr": ""
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "experienced-motor-symptoms-since-diagnosis",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": ["yes"]
+                                }
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Never",
+                                        "fr": ""
+                                    },
+                                    "value": "never"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sometimes",
+                                        "fr": ""
+                                    },
+                                    "value": "sometimes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Always",
+                                        "fr": ""
+                                    },
+                                    "value": "always"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "motor-i-feel-left-out",
+                            "title": {
+                                "en": "I feel left out of things",
+                                "fr": ""
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "experienced-motor-symptoms-since-diagnosis",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": ["yes"]
+                                }
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Never",
+                                        "fr": ""
+                                    },
+                                    "value": "never"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sometimes",
+                                        "fr": ""
+                                    },
+                                    "value": "sometimes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Always",
+                                        "fr": ""
+                                    },
+                                    "value": "always"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "motor-burden-to-others",
+                            "title": {
+                                "en": "I worry that I am a burden to others",
+                                "fr": ""
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "experienced-motor-symptoms-since-diagnosis",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": ["yes"]
+                                }
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Never",
+                                        "fr": ""
+                                    },
+                                    "value": "never"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sometimes",
+                                        "fr": ""
+                                    },
+                                    "value": "sometimes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Always",
+                                        "fr": ""
+                                    },
+                                    "value": "always"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "displayText",
+                            "key": "displayText15",
+                            "title": {
+                                "en": "Thank you for your participation!",
+                                "fr": ""
+                            }
                         }
                     ]
                 }
