@@ -29602,7 +29602,7 @@ UPDATE tasks SET
                                     "value": "no"
                                 }
                             ],
-                            "title": {
+                            "textContent": {
                                 "en": "Do you have a neurologist following you for your Parkinson''s disease?",
                                 "fr": ""
                             },
@@ -29622,7 +29622,7 @@ UPDATE tasks SET
                             "questionType": "multipleChoiceSelect",
                             "key": "symptoms-experienced",
                             "allowMultipleSelections": true,
-                            "title": {
+                            "textContent": {
                                 "en": "Which of the following Parkinson''s disease symptoms do you currently experience? Please select all that apply.",
                                 "fr": ""
                             },
@@ -29849,7 +29849,7 @@ UPDATE tasks SET
                         {
                             "questionType": "matrix",
                             "key": "rating",
-                            "title": {
+                            "textContent": {
                                 "en": "In the prior question, you selected the following Parkinson''s symptoms because you experience them currently. Please rate how you feel these symptoms impact your quality of life.",
                                 "fr": ""
                             },
@@ -29913,19 +29913,20 @@ UPDATE tasks SET
                             "title": {
                                 "en": "Cognition",
                                 "fr": ""
-                            },
-                            "textContent": {
+                            }
+                        },
+                        {
+                            "questionType": "displayText",
+                            "key": "displaytext16",
+                            "title": {
                                 "en": "The following questions are aimed at understanding if, and how, Parkinson''s disease affects your <b>thinking</b>. <br /><br />Some examples of thinking problems might include:<br />&nbsp;&nbsp;&nbsp;&nbsp;- Memory: such as remembering what someone recently told you, familiar names, or upcoming events.<br />&nbsp;&nbsp;&nbsp;&nbsp;- Concentration: such as reading an article or book, or watching a television show or movie<br />&nbsp;&nbsp;&nbsp;&nbsp;- Organization: such as paying bills, managing medications, or organizing and completing a shopping list<br />&nbsp;&nbsp;&nbsp;&nbsp;- Making decisions and solving problems<br />&nbsp;&nbsp;&nbsp;&nbsp;- Orientation and spatial ability: such as driving or finding one''s way around an unfamiliar location<br />&nbsp;&nbsp;&nbsp;&nbsp;- Understanding language: such as making sense of conversations or finding words when talking",
                                 "fr": ""
-                            },
-                            "styles": {
-                                "text-content-font-size": "md"
                             }
                         },
                         {
                             "questionType": "multipleChoiceSelect",
                             "key": "change-from-normal-abilities",
-                            "title": {
+                            "textContent": {
                                 "en": "Have you noticed that you are having more problems with thinking, that is a change from your normal abilities?",
                                 "fr": ""
                             },
@@ -29961,7 +29962,7 @@ UPDATE tasks SET
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
                             },
-                            "title": {
+                            "textContent": {
                                 "en": "What do you attribute your thinking changes to?",
                                 "fr": ""
                             },
@@ -30024,7 +30025,7 @@ UPDATE tasks SET
                                     "populateResultsBasedOnSelectedValues": true
                                 }
                             },
-                            "title": {
+                            "textContent": {
                                 "en": "What do you MOST attribute your thinking changes to?",
                                 "fr": ""
                             },
@@ -30037,7 +30038,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "title": {
+                            "textContent": {
                                 "en": "Has your healthcare team prescribed medications for your thinking symptoms?",
                                 "fr": ""
                             },
@@ -30084,7 +30085,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "title": {
+                            "textContent": {
                                 "en": "<b>When</b> did you first learn that thinking changes are part of the symptoms of PD?",
                                 "fr": ""
                             },
@@ -30150,7 +30151,7 @@ UPDATE tasks SET
                         {
                             "questionType": "multipleChoiceSelect",
                             "key": "how-i-learned-thinking-changes-are-symptoms-of-PD",
-                            "title": {
+                            "textContent": {
                                 "en": "<b>How</b> did you first learn that thinking changes are part of the symptoms of PD? Please select all that apply",
                                 "fr": ""
                             },
@@ -30248,7 +30249,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "title": {
+                            "textContent": {
                                 "en": "Which <b>ONE</b> of the following items was the <b>MOST</b> helpful in learning that thinking changes are part of the symptoms of PD? Please select the best option.",
                                 "fr": ""
                             },
@@ -30272,18 +30273,15 @@ UPDATE tasks SET
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
                             },
-                            "textContent": {
+                            "title": {
                                 "en": "You told us earlier that you have noticed more problems with thinking, that is a change from your normal abilities. Please consider these symptoms affecting your thinking and answer the following questions. <br /><br />Because of my <b>thinking symptoms...</b>",
                                 "fr": ""
-                            },
-                            "styles": {
-                                "text-content-font-size": "md"
                             }
                         },
                         {
                             "questionType": "multipleChoiceSelect",
                             "key": "thinking-people-seem-uncomfortable",
-                            "title": {
+                            "textContent": {
                                 "en": "Some people seem uncomfortable with me",
                                 "fr": ""
                             },
@@ -30337,7 +30335,7 @@ UPDATE tasks SET
                         {
                             "questionType": "multipleChoiceSelect",
                             "key": "thinking-people-are-avoiding-me",
-                            "title": {
+                            "textContent": {
                                 "en": "Some people are avoiding me",
                                 "fr": ""
                             },
@@ -30391,7 +30389,7 @@ UPDATE tasks SET
                         {
                             "questionType": "multipleChoiceSelect",
                             "key": "thinking-i-feel-embarrassed-in-social-situations",
-                            "title": {
+                            "textContent": {
                                 "en": "I feel embarrassed in social situations",
                                 "fr": ""
                             },
@@ -30445,7 +30443,7 @@ UPDATE tasks SET
                         {
                             "questionType": "multipleChoiceSelect",
                             "key": "thinking-i-feel-left-out",
-                            "title": {
+                            "textContent": {
                                 "en": "I feel left out of things",
                                 "fr": ""
                             },
@@ -30499,7 +30497,7 @@ UPDATE tasks SET
                         {
                             "questionType": "multipleChoiceSelect",
                             "key": "thinking-burden-to-others",
-                            "title": {
+                            "textContent": {
                                 "en": "I worry that I am a burden to others",
                                 "fr": ""
                             },
@@ -30561,12 +30559,16 @@ UPDATE tasks SET
                                 "en": "Mood",
                                 "fr": ""
                             },
-                            "textContent": {
-                                "en": "We are using the term \\"mood\\" to refer to all emotional states, which can include happiness, sadness, hopelessness, depression, anger, fear, excessive worry, anxiety, irritability, loss of motivation, paranoia, difficulty controlling urges, compulsions, obsessions, etc. Please with Parkinson''s disease might experience mood changes for a variety of reasons. Some people notice very little or no changes at all, while others notice more important changes. These changes might be related or unrelated to the Parkinson''s disease. The following questions are aimed at understanding if, and how, you have experienced <b>mood changes</b> (whether related or unrelated to the Parkinson''s disease).",
-                                "fr": ""
-                            },
                             "styles": {
                                 "text-content-font-size": "md"
+                            }
+                        },
+                        {
+                            "questionType": "displayText",
+                            "key": "displaytext17",
+                            "title": {
+                                "en": "We are using the term \\"mood\\" to refer to all emotional states, which can include happiness, sadness, hopelessness, depression, anger, fear, excessive worry, anxiety, irritability, loss of motivation, paranoia, difficulty controlling urges, compulsions, obsessions, etc. Please with Parkinson''s disease might experience mood changes for a variety of reasons. Some people notice very little or no changes at all, while others notice more important changes. These changes might be related or unrelated to the Parkinson''s disease. The following questions are aimed at understanding if, and how, you have experienced <b>mood changes</b> (whether related or unrelated to the Parkinson''s disease).",
+                                "fr": ""
                             }
                         },
                         {
@@ -30575,7 +30577,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "title": {
+                            "textContent": {
                                 "en": "Have you experienced changes to your mood since your diagnosis with Parkinson''s disease",
                                 "fr": ""
                             },
@@ -30608,7 +30610,7 @@ UPDATE tasks SET
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
                             },
-                            "title": {
+                            "textContent": {
                                 "en": "What do you MOST attribute the change to your mood to?",
                                 "fr": ""
                             },
@@ -30688,7 +30690,7 @@ UPDATE tasks SET
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
                             },
-                            "title": {
+                            "textContent": {
                                 "en": "Has your healthcare team prescribed any medications for your mood symptoms?",
                                 "fr": ""
                             },
@@ -30729,7 +30731,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "title": {
+                            "textContent": {
                                 "en": "<b>When</b> did you first learn that mood changes are part of the symptoms of Parkinson''s disease?",
                                 "fr": ""
                             },
@@ -30795,7 +30797,7 @@ UPDATE tasks SET
                         {
                             "questionType": "multipleChoiceSelect",
                             "key": "how-i-learned-mood-changes-are-symptoms-of-PD",
-                            "title": {
+                            "textContent": {
                                 "en": "<b>How</b> did you first learn that mood changes are part of the symptoms of Parkinson''s disease? Please select all that apply",
                                 "fr": ""
                             },
@@ -30893,7 +30895,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "title": {
+                            "textContent": {
                                 "en": "Which <b>ONE</b> of the following items was the <b>MOST</b> helpful in learning that mood changes are part of the symptoms of Parkinson''s disease? Please select the best option.",
                                 "fr": ""
                             },
@@ -30917,7 +30919,7 @@ UPDATE tasks SET
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
                             },
-                            "textContent": {
+                            "title": {
                                 "en": "You told us earlier that you have changes to your mood. Please consider these mood symptoms and answer the following questions. <br /><br />Because of my <b>mood symptoms...</b>",
                                 "fr": ""
                             },
@@ -30928,7 +30930,7 @@ UPDATE tasks SET
                         {
                             "questionType": "multipleChoiceSelect",
                             "key": "mood-people-seem-uncomfortable",
-                            "title": {
+                            "textContent": {
                                 "en": "Some people seem uncomfortable with me",
                                 "fr": ""
                             },
@@ -30982,7 +30984,7 @@ UPDATE tasks SET
                         {
                             "questionType": "multipleChoiceSelect",
                             "key": "mood-people-are-avoiding-me",
-                            "title": {
+                            "textContent": {
                                 "en": "Some people are avoiding me",
                                 "fr": ""
                             },
@@ -31036,7 +31038,7 @@ UPDATE tasks SET
                         {
                             "questionType": "multipleChoiceSelect",
                             "key": "mood-i-feel-embarrassed-in-social-situations",
-                            "title": {
+                            "textContent": {
                                 "en": "I feel embarrassed in social situations",
                                 "fr": ""
                             },
@@ -31090,7 +31092,7 @@ UPDATE tasks SET
                         {
                             "questionType": "multipleChoiceSelect",
                             "key": "mood-i-feel-left-out",
-                            "title": {
+                            "textContent": {
                                 "en": "I feel left out of things",
                                 "fr": ""
                             },
@@ -31144,7 +31146,7 @@ UPDATE tasks SET
                         {
                             "questionType": "multipleChoiceSelect",
                             "key": "mood-burden-to-others",
-                            "title": {
+                            "textContent": {
                                 "en": "I worry that I am a burden to others",
                                 "fr": ""
                             },
@@ -31221,7 +31223,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "title": {
+                            "textContent": {
                                 "en": "How does your experience of changes to your thinking (or absence of any changes) since your diagnosis of Parkinson''s disease compare to the thinking changes you <i>expected</i> would occur as a result of having Parkinson''s disease?",
                                 "fr": ""
                             },
@@ -31283,7 +31285,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "title": {
+                            "textContent": {
                                 "en": "How does your experience of mood symptoms since your diagnosis of Parkinson''s disease compare to the mood symptoms you <i>expected</i> would occur as a result of having Parkinson''s disease?",
                                 "fr": ""
                             },
@@ -31331,7 +31333,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "title": {
+                            "textContent": {
                                 "en": "Other, please specify",
                                 "fr": ""
                             },
@@ -31364,16 +31366,8 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "slider",
-                            "title": {
-                                "en": "Dementia: As people progress with PD, what percentage of people do you think will eventually develop <b>dementia</b> due to Parkinson''s disease? Dementia refers to changes to thinking that are severe enough to cause a partial or a total loss of independence.",
-                                "fr": ""
-                            },
-                            "styles": {
-                                "title-font-size": "md",
-                                "text-content-font-size": "md"
-                            },
                             "textContent": {
-                                "en": "If you believe a few people with PD develop dementia, choose a low number. Choose a high number if you believe more people with PD eventually develop dementia.",
+                                "en": "Dementia: As people progress with PD, what percentage of people do you think will eventually develop <b>dementia</b> due to Parkinson''s disease? Dementia refers to changes to thinking that are severe enough to cause a partial or a total loss of independence. <br />If you believe a few people with PD develop dementia, choose a low number. Choose a high number if you believe more people with PD eventually develop dementia.",
                                 "fr": ""
                             },
                             "validation": {
@@ -31393,13 +31387,9 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "slider",
-                            "title": {
-                                "en": "Thinking changes: What percentage of people do you think will eventually develop <b>any degree of changes to their thinking</b> due to Parkinson''s disease? We are referring to any changes in memory, concentration, organization, orientation, or any other changes to thinking, whether mild or severe, that are sufficient to be noted by the individual or by their loved ones. These changes could be so mild that they don''t affect everyday life, to so severe that they lead to loss of independence and dementia. (The percentage you provide here should be at least as high as the number you entered in the last question).",
+                            "textContent": {
+                                "en": "Thinking changes: What percentage of people do you think will eventually develop <b>any degree of changes to their thinking</b> due to Parkinson''s disease? We are referring to any changes in memory, concentration, organization, orientation, or any other changes to thinking, whether mild or severe, that are sufficient to be noted by the individual or by their loved ones. These changes could be so mild that they don''t affect everyday life, to so severe that they lead to loss of independence and dementia. <br />(The percentage you provide here should be at least as high as the number you entered in the last question).",
                                 "fr": ""
-                            },
-                            "styles": {
-                                "title-font-size": "md",
-                                "text-content-font-size": "md"
                             },
                             "validation": {
                                 "required": true
@@ -31419,7 +31409,7 @@ UPDATE tasks SET
                         {
                             "questionType": "multipleChoiceSelect",
                             "key": "treatment-for-cognitive-changes-involves",
-                            "title": {
+                            "textContent": {
                                 "en": "The treatment for cognitive changes in Parkinson''s disease involves: (please select all that apply)",
                                 "fr": ""
                             },
@@ -31485,13 +31475,9 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "slider",
-                            "title": {
+                            "textContent": {
                                 "en": "Mood symptoms: As people progress with PD, what percentage of people will, at some point, experience changes to their mood due to Parkinson''s disease? Mood symptoms include depression, anxiety, excessive worrying, loss of motivation, paranoia, etc.",
                                 "fr": ""
-                            },
-                            "styles": {
-                                "title-font-size": "md",
-                                "text-content-font-size": "md"
                             },
                             "validation": {
                                 "required": true
@@ -31511,7 +31497,7 @@ UPDATE tasks SET
                         {
                             "questionType": "multipleChoiceSelect",
                             "key": "treatment-of-mood-symptoms-involves",
-                            "title": {
+                            "textContent": {
                                 "en": "The treatment of mood symptoms in Parkinson''s disease involves: (please select all that apply)",
                                 "fr": ""
                             },
@@ -31601,7 +31587,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "title": {
+                            "textContent": {
                                 "en": "How often do you discuss whether you''ve experienced changes to your thinking in your visits?",
                                 "fr": ""
                             },
@@ -31663,7 +31649,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "title": {
+                            "textContent": {
                                 "en": "Do you think the time you spend with your healthcare team discussing your thinking is sufficient?",
                                 "fr": ""
                             },
@@ -31704,7 +31690,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "title": {
+                            "textContent": {
                                 "en": "How often do you discuss your mood symptoms in your visits?",
                                 "fr": ""
                             },
@@ -31766,7 +31752,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "title": {
+                            "textContent": {
                                 "en": "Do you think the time you spend with your healthcare team discussing mood symptoms is sufficient?",
                                 "fr": ""
                             },
@@ -31807,7 +31793,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "title": {
+                            "textContent": {
                                 "en": "Do you have a care partner who attends medical appointments with you some or all of the time?",
                                 "fr": ""
                             },
@@ -31848,7 +31834,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "title": {
+                            "textContent": {
                                 "en": "Do you find that your care partner is sufficiently involved in the conversations with the medical team?",
                                 "fr": ""
                             },
@@ -31920,7 +31906,7 @@ UPDATE tasks SET
                         {
                             "questionType": "multipleChoiceSelect",
                             "key": "i-view-thinking-and-mood-symptoms-i-experience",
-                            "title": {
+                            "textContent": {
                                 "en": "Since my time of PD diagnosis, I view the thinking and mood symptoms that I experience as: (please choose all that apply)",
                                 "fr": ""
                             },
@@ -32035,8 +32021,9 @@ UPDATE tasks SET
                                 "clearOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"],
                                 "onlyDisableOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"]
                             },
-                            "title": {
-                                "en": "<b>What</b> is the value to you of discussing your cognitive and mood symptoms with your medical team? Please choose all that apply:"
+                            "textContent": {
+                                "en": "<b>What</b> is the value to you of discussing your cognitive and mood symptoms with your medical team? Please choose all that apply:",
+                                "fr": ""
                             },
                             "allowMultipleSelections": true,
                             "options": [
@@ -32104,7 +32091,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "title": {
+                            "textContent": {
                                 "en": "Ideally, would you have wanted to be told about the <b><i>possibility</i></b> of developing thinking and mood symptoms as part of Parkinson''s disease <b>at the time of your diagnosis</b>",
                                 "fr": ""
                             },
@@ -32164,7 +32151,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "title": {
+                            "textContent": {
                                 "en": "Have you experienced motor symptoms since your diagnosis with Parkinson''s disease?",
                                 "fr": ""
                             },
@@ -32188,7 +32175,7 @@ UPDATE tasks SET
                         {
                             "questionType": "multipleChoiceSelect",
                             "key": "motor-people-seem-uncomfortable",
-                            "title": {
+                            "textContent": {
                                 "en": "Some people seem uncomfortable with me",
                                 "fr": ""
                             },
@@ -32242,7 +32229,7 @@ UPDATE tasks SET
                         {
                             "questionType": "multipleChoiceSelect",
                             "key": "motor-people-are-avoiding-me",
-                            "title": {
+                            "textContent": {
                                 "en": "Some people are avoiding me",
                                 "fr": ""
                             },
@@ -32296,7 +32283,7 @@ UPDATE tasks SET
                         {
                             "questionType": "multipleChoiceSelect",
                             "key": "motor-i-feel-embarrassed-in-social-situations",
-                            "title": {
+                            "textContent": {
                                 "en": "I feel embarrassed in social situations",
                                 "fr": ""
                             },
@@ -32350,7 +32337,7 @@ UPDATE tasks SET
                         {
                             "questionType": "multipleChoiceSelect",
                             "key": "motor-i-feel-left-out",
-                            "title": {
+                            "textContent": {
                                 "en": "I feel left out of things",
                                 "fr": ""
                             },
@@ -32404,7 +32391,7 @@ UPDATE tasks SET
                         {
                             "questionType": "multipleChoiceSelect",
                             "key": "motor-burden-to-others",
-                            "title": {
+                            "textContent": {
                                 "en": "I worry that I am a burden to others",
                                 "fr": ""
                             },
