@@ -7007,7 +7007,7 @@ UPDATE tasks set
                 "componentName": "QUESTIONNAIRECOMPONENT",
                 "componentConfig": {
                     "title":"Questionnaire",
-                    "questions":[
+                    "questions": [
                         {
                             "questionType":"input",
                             "title":"What is your age (in years)?",
@@ -7026,14 +7026,14 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key":"sex",
-                            "multipleChoiceOptions":[
+                            "options":[
                                 {
-                                "label":"Female",
-                                "value":"female"
+                                    "label":"Female",
+                                    "value":"female"
                                 },
                                 {
-                                "label":"Male",
-                                "value":"male"
+                                    "label":"Male",
+                                    "value":"male"
                                 }
                             ]
                         },
@@ -7041,7 +7041,7 @@ UPDATE tasks set
                             "questionType":"multipleChoiceSelect",
                             "title":"How do you describe yourself?",
                             "key":"selfIdentification",
-                            "multipleChoiceOptions":[
+                            "options":[
                                 {
                                 "label":"Female",
                                 "value":"female"
@@ -7076,7 +7076,7 @@ UPDATE tasks set
                             "questionType":"multipleChoiceSelect",
                             "key":"hasNeuroConditions",
                             "title":"Do you have any of the following neurological conditions: neurodegenerative disorder (e.g. Parkinson''s or Alzheimer''s), seizures/epilepsy, brain tumor, stroke?",
-                            "multipleChoiceOptions":[
+                            "options":[
                                 {
                                 "label":"Yes",
                                 "value":"yes"
@@ -7094,7 +7094,7 @@ UPDATE tasks set
                             "questionType":"multipleChoiceSelect",
                             "key":"hasPsychConditions",
                             "title":"Do you have any of the following psychiatric conditions: currently active major depression, bipolar disorder, schizophrenia?",
-                            "multipleChoiceOptions":[
+                            "options":[
                                 {
                                 "label":"Yes",
                                 "value":"yes"
@@ -8032,6 +8032,7 @@ UPDATE tasks set
                     "questions":[
                         {
                             "questionType": "displayText",
+                            "key": "displayText1",
                             "title": {
                                 "en": "Instructions: For each statement, select the answer that best describes your thoughts, feelings, and activity in the past 4 weeks.",
                                 "fr": "Instructions: Pour chacun des énoncés suivants, sélectionnez l’option qui décrit le mieux vos pensées, sentiments et activités au cours des 4 dernières semaines."
@@ -8048,7 +8049,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I am interested in things",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Not at all",
@@ -8090,7 +8091,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I get things done during the day",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Not at all",
@@ -8132,7 +8133,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "Getting things started on my own is important to me",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Not at all",
@@ -8174,7 +8175,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I am interested in having new experiences",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Not at all",
@@ -8216,7 +8217,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I am interested in learning new things",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Not at all",
@@ -8258,7 +8259,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I put little effort into anything",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Not at all",
@@ -8300,7 +8301,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I approach life with intensity",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Not at all",
@@ -8342,7 +8343,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "Seeing a job through to the end is important to me",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Not at all",
@@ -8384,7 +8385,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I spend time doing things that interest me",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Not at all",
@@ -8426,7 +8427,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "Someone has to tell me what to do each day",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Not at all",
@@ -8468,7 +8469,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "attentionCheck-Select somewhat for this question please",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Not at all",
@@ -8510,7 +8511,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I am less concerned about my problems than I should be",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Not at all",
@@ -8552,7 +8553,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I have friends",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Not at all",
@@ -8594,7 +8595,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "Getting together with friends is important to me",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Not at all",
@@ -8636,7 +8637,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "When something good happens, I get excited",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Not at all",
@@ -8678,7 +8679,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I have an accurate understanding of my problems",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Not at all",
@@ -8720,7 +8721,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "Getting things done during the day is important to me",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Not at all",
@@ -8762,7 +8763,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I have initiative",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Not at all",
@@ -8804,7 +8805,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I have motivation",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Not at all",
@@ -8861,6 +8862,7 @@ UPDATE tasks set
                     "questions":[
                         {
                             "questionType": "displayText",
+                            "key": "displayText1",
                             "title": {
                                 "en": "DIRECTIONS: People differ in the ways they act and think in different situations. This is a test to measure some of the ways in which you act and think. Read each statement and choose the appropriate answer. Do not spend too much time on any statement. Answer quickly and honestly.",
                                 "fr": "Instructions: Les gens n''ont pas tous la même façon d''agir et de penser dans différentes situations. Ce test vise à mesurer certaines de vos façons d''agir et de penser. Lisez chaque énoncé et choisissez la réponse appropriée. Ne vous attardez pas trop sur les énoncés. Répondez rapidement et honnêtement."
@@ -8877,7 +8879,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I plan tasks carefully",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Rarely/Never",
@@ -8919,7 +8921,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I do things without thinking",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Rarely/Never",
@@ -8961,7 +8963,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I make-up my mind quickly",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Rarely/Never",
@@ -9003,7 +9005,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I am happy-go-lucky",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Rarely/Never",
@@ -9045,7 +9047,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I don''t \\"pay attention\\"",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Rarely/Never",
@@ -9087,7 +9089,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I have \\"racing\\" thoughts",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Rarely/Never",
@@ -9129,7 +9131,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I plan trips well ahead of time",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Rarely/Never",
@@ -9171,7 +9173,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I am self controlled",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Rarely/Never",
@@ -9213,7 +9215,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I concentrate easily",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Rarely/Never",
@@ -9255,7 +9257,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I save regularly",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Rarely/Never",
@@ -9297,7 +9299,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I \\"squirm\\" at plays or lectures",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Rarely/Never",
@@ -9339,7 +9341,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I am a careful thinker",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Rarely/Never",
@@ -9381,7 +9383,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I plan for job security",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Rarely/Never",
@@ -9423,7 +9425,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I say things without thinking",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Rarely/Never",
@@ -9465,7 +9467,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I like to think about complex problems",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Rarely/Never",
@@ -9507,7 +9509,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I change jobs",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Rarely/Never",
@@ -9549,7 +9551,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I act \\"on impulse\\"",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Rarely/Never",
@@ -9591,7 +9593,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I get easily bored when solving thought problems",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Rarely/Never",
@@ -9633,7 +9635,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I act on the spur of the moment",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Rarely/Never",
@@ -9675,7 +9677,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I am a steady thinker",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Rarely/Never",
@@ -9717,7 +9719,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I change residences",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Rarely/Never",
@@ -9759,7 +9761,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I buy things on impulse",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Rarely/Never",
@@ -9801,7 +9803,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I can only think about one thing at a time",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Rarely/Never",
@@ -9843,7 +9845,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I change hobbies",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Rarely/Never",
@@ -9885,7 +9887,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I spend or charge more than I earn",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Rarely/Never",
@@ -9927,7 +9929,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I often have extraneous thoughts when thinking",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Rarely/Never",
@@ -9969,7 +9971,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I am more interested in the present than the future",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Rarely/Never",
@@ -10011,7 +10013,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "attentionCheck-Select the first option if you are paying attention.",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Rarely/Never",
@@ -10053,7 +10055,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I am restless at the theater or lectures",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Rarely/Never",
@@ -10095,7 +10097,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I like puzzles",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Rarely/Never",
@@ -10137,7 +10139,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I am future oriented",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Rarely/Never",
@@ -10194,6 +10196,7 @@ UPDATE tasks set
                     "questions":[
                         {
                             "questionType": "displayText",
+                            "key": "displayText1",
                             "title": {
                                 "en": "Choose the best answer for how you have felt over the past week.",
                                 "fr": "Choisissez la réponse qui correspond à la façon dont vous vous sentiez dans la dernière semaine."
@@ -10210,7 +10213,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "Are you basically satisfied with your life?",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -10238,7 +10241,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "Have you dropped many of your activities and interests?",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -10266,7 +10269,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "Do you feel that your life is empty?",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -10294,7 +10297,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "Do you often get bored?",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -10322,7 +10325,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "Are you in good spirits most of the time?",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -10350,7 +10353,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "Are you afraid that something bad is going to happen to you?",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -10378,7 +10381,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "Do you feel happy most of the time?",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -10406,7 +10409,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "attentionCheck-Choose no if you are paying attention",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -10434,7 +10437,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "Do you often feel helpless?",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -10462,7 +10465,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "Do you prefer to stay at home rather than going out and doing new things?",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -10490,7 +10493,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "Do you feel you have more problems with memory than most?",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -10518,7 +10521,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "Do you think it is wonderful to be alive now?",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -10546,7 +10549,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "Do you feel pretty worthless the way you are now?",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -10574,7 +10577,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "Do you feel full of energy?",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -10602,7 +10605,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "Do you feel that your situation is hopeless?",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -10630,7 +10633,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "Do you think that most people are better off than you are?",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -10673,6 +10676,7 @@ UPDATE tasks set
                     "questions":[
                         {
                             "questionType": "displayText",
+                            "key": "displayText1",
                             "styles": {
                                 "title-font-size": "md"
                             },
@@ -10683,6 +10687,7 @@ UPDATE tasks set
                         },
                         {
                             "questionType": "displayText", 
+                            "key": "displayText2",
                             "styles": {
                                 "title-font-size": "md"
                             },
@@ -10693,6 +10698,7 @@ UPDATE tasks set
                         },
                         {
                             "questionType": "displayText",
+                            "key": "displayText3",
                             "styles": {
                                 "title-font-size": "md"
                             },
@@ -10720,7 +10726,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "how much do you think about gambling",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Never",
@@ -10777,7 +10783,7 @@ UPDATE tasks set
                                 "fr": "Faire des demandes sexuelles à autrui, promiscuité, prostitution, changement d''orientation sexuelle, masturbation, activités sexuelles sur Internet et par téléphone, pornographie"
                             },
                             "key": "how much do you think about sex",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Never",
@@ -10834,7 +10840,7 @@ UPDATE tasks set
                                 "fr": "Trop de la même chose ou des choses dont vous n''avez pas besoin ou que vous n''utilisez pas"
                             },
                             "key": "how much do you think about buying",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Never",
@@ -10891,7 +10897,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "how much do you think about eating",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Never",
@@ -10948,7 +10954,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "how much do you think about performing tasks or hobbies",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Never",
@@ -11005,7 +11011,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "how much do you think about repeating simple activities",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Never",
@@ -11062,7 +11068,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "how much do you think about taking your PD medications",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Never",
@@ -11108,10 +11114,12 @@ UPDATE tasks set
                             ]
                         },
                         {
-                            "questionType": "divider"
+                            "questionType": "divider",
+                            "key": "divider1"
                         },
                         {
                             "questionType": "displayText",
+                            "key": "displayText4",
                             "styles": {
                                 "title-font-size": "md"
                             },
@@ -11139,7 +11147,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "how much distress is caused by gambling",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Never",
@@ -11196,7 +11204,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "how much distress is caused by sex",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Never",
@@ -11253,7 +11261,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "how much distress is caused by buying",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Never",
@@ -11310,7 +11318,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "how much distress is caused by eating",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Never",
@@ -11367,7 +11375,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "how much distress is caused by performing tasks or hobbies",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Never",
@@ -11424,7 +11432,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "how much distress is caused by repeating simple activities",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Never",
@@ -11481,7 +11489,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "how much distress is caused by taking your PD medications",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Never",
@@ -11527,10 +11535,12 @@ UPDATE tasks set
                             ]
                         },
                         {
-                            "questionType": "divider"
+                            "questionType": "divider",
+                            "key": "divider2"
                         },
                         {
                             "questionType": "displayText",
+                            "key": "displayText5",
                             "styles": {
                                 "title-font-size": "md"
                             },
@@ -11558,7 +11568,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "how much difficulty to you have controlling gambling",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Never",
@@ -11615,7 +11625,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "how much difficulty to you have controlling sex",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Never",
@@ -11672,7 +11682,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "how much difficulty to you have controlling buying",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Never",
@@ -11729,7 +11739,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "how much difficulty to you have controlling eating",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Never",
@@ -11786,7 +11796,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "how much difficulty to you have controlling performing tasks or hobbies",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Never",
@@ -11839,7 +11849,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "attentionCheck-Select rarely here",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Never",
@@ -11896,7 +11906,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "how much difficulty to you have controlling repeating simple activities",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Never",
@@ -11953,7 +11963,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "how much difficulty to you have controlling taking your PD medications",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Never",
@@ -11999,10 +12009,12 @@ UPDATE tasks set
                             ]
                         },
                         {
-                            "questionType": "divider"
+                            "questionType": "divider",
+                            "key": "divider3"
                         },
                         {
                             "questionType": "displayText",
+                            "key": "displayText6",
                             "styles": {
                                 "title-font-size": "md"
                             },
@@ -12030,7 +12042,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "how much do you engage in activities to hide gambling",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Never",
@@ -12087,7 +12099,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "how much do you engage in activities to hide sex",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Never",
@@ -12144,7 +12156,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "how much do you engage in activities to hide buying",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Never",
@@ -12201,7 +12213,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "how much do you engage in activities to hide eating",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Never",
@@ -12258,7 +12270,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "how much do you engage in activities to hide performing tasks or hobbies",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Never",
@@ -12315,7 +12327,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "how much do you engage in activities to hide repeating simple activities",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Never",
@@ -12372,7 +12384,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "how much do you engage in activities to hide taking your PD medications",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Never",
@@ -12443,6 +12455,7 @@ UPDATE tasks set
                     "questions":[
                         {
                             "questionType": "displayText",
+                            "key": "displayText1",
                             "title": {
                                 "en": "This questionnaire is designed to measure your ability to experience pleasure in the \\"LAST FEW DAYS\\". Please read each  statement very carefully. Tick one of the boxes to indicate how much you agree or disagree with each statement.",
                                 "fr": "Ce questionnaire a été conçu pour mesurer votre capacité à éprouver du plaisir <b> au cours des ces derniers jours</b>. Il est important de lire chaque énoncé <b> très attentivement </b>. Cochez l''une des cases pour préciser votre degré d’accord ou de désaccord pour chacun des énoncés."
@@ -12459,7 +12472,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I would enjoy my favourite television or radio program",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Strongly Disagree",
@@ -12501,7 +12514,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I would enjoy being with my family or close friends",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Strongly Disagree",
@@ -12543,7 +12556,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I would find pleasure in my hobbies and pastimes",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Strongly Disagree",
@@ -12585,7 +12598,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I would be able to enjoy my favourite meal",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Strongly Disagree",
@@ -12627,7 +12640,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I would enjoy a warm bath or refreshing shower",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Strongly Disagree",
@@ -12669,7 +12682,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I would find pleasure in the scent of flowers or the smell of a fresh sea breeze or freshly baked bread",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Strongly Disagree",
@@ -12711,7 +12724,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I would enjoy seeing other people''s smiling faces",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Strongly Disagree",
@@ -12753,7 +12766,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I would enjoy looking smart when I have made an effort with my appearance",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Strongly Disagree",
@@ -12795,7 +12808,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I would enjoy reading a book, magazine or newspaper",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Strongly Disagree",
@@ -12837,7 +12850,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "attentionCheck-Select disagree to indicate that you are reading the questions",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Strongly Disagree",
@@ -12879,7 +12892,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I would enjoy a cup of tea or coffee or my favourite drink",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Strongly Disagree",
@@ -12921,7 +12934,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I would find pleasure in small things, e.g. bright sunny day, a telephone call from a friend",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Strongly Disagree",
@@ -12963,7 +12976,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I would be able to enjoy a beautiful landscape or view",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Strongly Disagree",
@@ -13005,7 +13018,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I would get pleasure from helping others",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Strongly Disagree",
@@ -13047,7 +13060,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "I would feel pleasure when I receive praise from other people",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Strongly Disagree",
@@ -13104,6 +13117,7 @@ UPDATE tasks set
                     "questions":[
                         {
                             "questionType": "displayText",
+                            "key": "displayText1",
                             "title": {
                                 "en": "The following are questions about your daily activities. Please choose the option that best describes YOU.",
                                 "fr": "Voici des questions sur des activités de tous les jours. Veuillez indiquer ce qui VOUS décrit le mieux"
@@ -13120,7 +13134,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "How much DIFFICULTY do you currently have reading the newspaper or a magazine",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "None",
@@ -13169,7 +13183,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "How much DIFFICULTY do you currently have keeping track of time (e.g. using a clock)",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "None",
@@ -13218,7 +13232,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "How much DIFFICULTY do you currently have counting the correct amount of money when making purchases",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "None",
@@ -13267,7 +13281,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "How much DIFFICULTY do you currently have reading and following complex instructions (e.g. directions for a new medication)",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "None",
@@ -13316,7 +13330,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "How much DIFFICULTY do you currently have handling an unfamiliar problem (e.g. getting the refrigerator fixed)",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "None",
@@ -13365,7 +13379,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "How much DIFFICULTY do you currently have explaining how to do something involving several steps to another person",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "None",
@@ -13414,7 +13428,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "How much DIFFICULTY do you currently have remembering a list of 4 or 5 errands without writing it down",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "None",
@@ -13463,7 +13477,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "How much DIFFICULTY do you currently have using a map to tell where to go",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "None",
@@ -13512,7 +13526,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "How much DIFFICULTY do you currently have remembering new information like phone number or simple instructions",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "None",
@@ -13561,7 +13575,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "How much DIFFICULTY do you currently have doing more than one thing at a time",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "None",
@@ -13610,7 +13624,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "How much DIFFICULTY do you currently have learning to use new gadgets or machines around the house",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "None",
@@ -13659,7 +13673,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "How much DIFFICULTY do you currently have understanding your personal financial affairs",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "None",
@@ -13708,7 +13722,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "How much DIFFICULTY do you currently have maintaining or completing a train of thought",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "None",
@@ -13757,7 +13771,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "attentionCheck-Can you choose a little if you are reading the questions?",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "None",
@@ -13806,7 +13820,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "How much DIFFICULTY do you currently have discussing a TV show, book, movie, or current events",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "None",
@@ -13855,7 +13869,7 @@ UPDATE tasks set
                                 "required":true
                             },
                             "key": "How much DIFFICULTY do you currently have remembering what day and month it is",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "None",
@@ -13919,6 +13933,7 @@ UPDATE tasks SET
                     "questions": [
                         {
                             "questionType": "displayText",
+                            "key": "displayText1",
                             "title": {
                                 "en": "<p>Below are a number of statements. Each statement asks you to think about your life <em>over the last 2 weeks</em>.</p> <p>For each statement, select how appropriately it describes your life right now. Select \\"Completely true\\" if the statement describes you perfectly, \\"Completely untrue\\" if the statement does not describe you at all over the last 2 weeks, and use the answers in between accordingly.</p>",
                                 "fr": "<p>Vous trouverez ci-dessous des énoncés. Chaque énoncé vous demande de réfléchir à votre vie <em>au cours des deux dernières semaines</em>.</p> <p>Pour chacun d’eux, sélectionnez à quel point l’énoncé décrit votre vie actuellement. Sélectionnez \\"Complètement vrai\\" si l''énoncé vous décrit parfaitement, ou \\"Complètement faux\\" si l''énoncé ne vous décrit pas du tout au cours des deux dernières semaines. Utilisez aussi les réponses intermédiaires si elles sont plus appropriés à la façon dont vous vous sentez.</p>"
@@ -13935,7 +13950,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "I feel sad or upset when I hear bad news.",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Completely UNTRUE",
@@ -13984,7 +13999,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "I start conversations with random people.",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Completely UNTRUE",
@@ -14033,7 +14048,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "I enjoy doing things with people I have just met.",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Completely UNTRUE",
@@ -14082,7 +14097,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "I suggest activities for me and my friends to do.",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Completely UNTRUE",
@@ -14131,7 +14146,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "I make decisions firmly and without hesitation.",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Completely UNTRUE",
@@ -14180,7 +14195,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "After making a decision, I will wonder if I have made the wrong choice.",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Completely UNTRUE",
@@ -14229,7 +14244,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Based on the last two weeks, I would say I care deeply about how my loved ones think of me.",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Completely UNTRUE",
@@ -14278,7 +14293,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "I go out with friends on a weekly basis.",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Completely UNTRUE",
@@ -14327,7 +14342,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "When I decide to do something, I am able to make an effort easily.",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Completely UNTRUE",
@@ -14376,7 +14391,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "I don''t like to laze around.",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Completely UNTRUE",
@@ -14425,7 +14440,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "attentionCheck-Choose quite true for this question please",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Completely UNTRUE",
@@ -14474,7 +14489,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "I get things done when they need to be done, without requiring reminders from others.",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Completely UNTRUE",
@@ -14523,7 +14538,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "When I decide to do something, I am motivated to see it through to the end.",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Completely UNTRUE",
@@ -14572,7 +14587,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "I feel awful if I say something insensitive.",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Completely UNTRUE",
@@ -14621,7 +14636,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "I start conversations without being prompted.",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Completely UNTRUE",
@@ -14670,7 +14685,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "When I have something I need to do, I do it straightaway so it is out of the way.",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Completely UNTRUE",
@@ -14719,7 +14734,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "I feel bad when I hear an acquaintance has an accident or illness.",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Completely UNTRUE",
@@ -14768,7 +14783,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "I enjoy choosing what to do from a range of activities.",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Completely UNTRUE",
@@ -14817,7 +14832,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "If I realise I have been unpleasant to someone, I will feel terribly guilty afterwards.",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Completely UNTRUE",
@@ -14878,6 +14893,7 @@ UPDATE tasks SET
                     "questions": [
                         {
                             "questionType": "displayText",
+                            "key": "displayText1",
                             "title": { 
                                 "en": "<p>We are still in the development stages of this research study. The goal of the study is to understand how and why people fill their time. Are people driven by pleasure? By obligation? A bit of both? These are difficult things to measure because different people enjoy different things and have different sets of obligations. Any feedback you can provide on this study will be really helpful to us as we fine-tune our approach to understanding this.</p> <p> Please see below questions for some specific areas where we would like your feedback:</p>",
                                 "fr": "<p>Nous sommes encore en phase de développement pour cette étude. L''objectif de l''étude est de comprendre comment et pourquoi les gens occupent leur temps. Les gens sont-ils motivés par le plaisir ? Par les obligations ? Un peu des deux ? Il est difficile de mesurer ces aspects, car chaque personne a des obligations et des désirs différents. Tout retour que vous pouvez donc fournir sur cette étude nous sera vraiment utile pour raffiner notre approche .</p> <p>Les questions ci-dessous adressent certains aspects spécifiques de l''étude sur lesquels nous aimerions avoir votre opinion :</p>"
@@ -14894,7 +14910,7 @@ UPDATE tasks SET
                                 "en": "Please rate <em>on a scale of 1-10</em> how much your current life situation affected your ability to answer the questions:",
                                 "fr": "Veuillez évaluer <em>sur une échelle de 1 à 10</em> dans quelle mesure votre situation de vie actuelle a affecté votre capacité à répondre aux questions :"
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "1 - Not at all: I had no difficulty picturing myself doing most of these activities",
@@ -14962,7 +14978,7 @@ UPDATE tasks SET
                                 "en": "Please respond using the 1-10 scale:",
                                 "fr": "Veuillez répondre en utilisant l''échelle de 1 à 10 :"
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "1 - Most of the activities are foreign to me",
@@ -15030,7 +15046,7 @@ UPDATE tasks SET
                                 "en": "Please rate on a scale of 1-10 how much you think your choices generally reflected how you would choose in real life:",
                                 "fr": "Veuillez évaluer sur une échelle de 1 à 10 dans quelle mesure vous pensez que vos choix reflètent généralement la façon dont vous choisiriez dans la vraie vie :"
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "1 -  Not at all reflective – I made random choices in the game",
@@ -15133,7 +15149,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "sex",
-                            "multipleChoiceOptions": [{
+                            "options": [{
                                     "label": "Female",
                                     "value": "female"
                                 },
@@ -15147,7 +15163,7 @@ UPDATE tasks SET
                             "questionType": "multipleChoiceSelect",
                             "title": "How do you describe yourself?",
                             "key": "selfIdentification",
-                            "multipleChoiceOptions": [{
+                            "options": [{
                                     "label": "Female",
                                     "value": "female"
                                 },
@@ -15181,7 +15197,7 @@ UPDATE tasks SET
                             "questionType": "multipleChoiceSelect",
                             "key": "hasNeuroConditions",
                             "title": "Do you have any of the following neurological conditions: neurodegenerative disorder (e.g. Parkinson''s or Alzheimer''s), seizures/epilepsy, brain tumor, stroke?",
-                            "multipleChoiceOptions": [{
+                            "options": [{
                                     "label": "Yes",
                                     "value": "yes"
                                 },
@@ -15198,7 +15214,7 @@ UPDATE tasks SET
                             "questionType": "multipleChoiceSelect",
                             "key": "hasPsychConditions",
                             "title": "Do you have any of the following psychiatric conditions: currently active major depression, bipolar disorder, schizophrenia?",
-                            "multipleChoiceOptions": [{
+                            "options": [{
                                     "label": "Yes",
                                     "value": "yes"
                                 },
@@ -15215,7 +15231,7 @@ UPDATE tasks SET
                             "questionType": "multipleChoiceSelect",
                             "key": "currentEmploymentStatus",
                             "title": "What is your current employment status?",
-                            "multipleChoiceOptions": [{
+                            "options": [{
                                 "label": "Employed Full-time (30+ hours a week)",
                                 "value": "Full-time"
                             },
@@ -15263,7 +15279,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [{
+                            "options": [{
                                 "label": "Less than $20,000",
                                 "value": "Less than $20,000"
                             },
@@ -15296,7 +15312,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [{
+                            "options": [{
                                 "label": "Single, never married, or never lived with a partner",
                                 "value": "Single, never married, or never lived with a partner"
                             },
@@ -15325,7 +15341,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [{
+                            "options": [{
                                 "label": "Living alone",
                                 "value": "Living alone"
                             },
@@ -15385,6 +15401,7 @@ UPDATE tasks SET
                     "questions": [
                         {
                             "questionType": "displayText",
+                            "key": "displayText1",
                             "title": {
                                 "en": "<p>The questions in this scale ask you about your feelings and thoughts during the last month. In each case, you will be asked to indicate how often you felt or thought a certain way.</p>",
                                 "fr": "<p>Les questions ci-dessous sont par rapport à vos sentiments et à vos pensées au cours du dernier mois. Dans chaque cas, il vous sera demandé d''indiquer à quelle fréquence vous avez ressenti ou pensé d''une certaine manière.</p>" 
@@ -15401,7 +15418,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "In the last month, how often have you been upset because of something that happened unexpectedly",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "0 - Never",
@@ -15450,7 +15467,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "In the last month, how often have you felt that you were unable to control the important things in your life",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "0 - Never",
@@ -15499,7 +15516,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "In the last month, how often have you felt nervous and \\"stressed\\"",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "0 - Never",
@@ -15548,7 +15565,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "In the last month, how often have you felt confident about your ability to handle your personal problems",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "0 - Never",
@@ -15597,7 +15614,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "In the last month, how often have you felt that things were going your way",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "0 - Never",
@@ -15646,7 +15663,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "In the last month, how often have you found that you could not cope with all the things that you had to do",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "0 - Never",
@@ -15695,7 +15712,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "attentionCheck-Can you select very often if you are paying attention",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "0 - Never",
@@ -15744,7 +15761,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "In the last month, how often have you been able to control irritations in your life",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "0 - Never",
@@ -15793,7 +15810,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "In the last month, how often have you felt that you were on top of things",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "0 - Never",
@@ -15842,7 +15859,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "In the last month, how often have you been angered because of things that were outside of your control",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "0 - Never",
@@ -15891,7 +15908,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "In the last month, how often have you felt difficulties were piling up so high that you could not overcome them",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "0 - Never",
@@ -15955,6 +15972,7 @@ UPDATE tasks SET
                     "questions": [
                         {
                             "questionType": "displayText",
+                            "key": "displayText1",
                             "title": {
                                 "en": "<p>Please indicate whether the following life events have happened to you during the last year (last 12 months).</p>",
                                 "fr": "<p>Veuillez indiquer si vous avez vécu les événements de vie suivants au cours de la dernière année (12 derniers mois)." 
@@ -15971,7 +15989,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Death of spouse",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -15999,7 +16017,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Divorce",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -16027,7 +16045,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Marital separation from mate",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -16055,7 +16073,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Detention in jail or other institution",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -16083,7 +16101,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Death of a close family member",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -16111,7 +16129,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Major personal injury or illness",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -16139,7 +16157,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Marriage",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -16167,7 +16185,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Being fired at work",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -16195,7 +16213,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Marital reconciliation with mate",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -16223,7 +16241,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Retirement from work",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -16251,7 +16269,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Major change in the health or behaviour of a family member",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -16279,7 +16297,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Pregnancy",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -16307,7 +16325,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Sexual difficulties",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -16335,7 +16353,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Gaining a new family member (i.e…. Birth, adoption, older adult moving in, etc.)",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -16363,7 +16381,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Major business readjustment",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -16391,7 +16409,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Major change in financial state (i.e. a lot worse or better off than usual)",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -16419,7 +16437,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Death of a close friend",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -16447,7 +16465,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Changing to a different line of work",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -16475,7 +16493,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Major change in the number of arguments with spouse (i.e…. Either a lot more or a lot less than usual regarding child rearing, personal habits, etc.)",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -16503,7 +16521,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Taking on a mortgage (for home, business, etc…)",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -16531,7 +16549,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Foreclosure on a mortgage or a loan",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -16559,7 +16577,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Major change in responsibilities at work (i.e. promotion, demotion, etc.)",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -16587,7 +16605,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Son or daughter leaving home (marriage, attending college, joined mil.)",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -16615,7 +16633,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "In-law troubles",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -16643,7 +16661,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Outstanding personal achievement",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -16671,7 +16689,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Spouse beginning or ceasing work outside the home",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -16699,7 +16717,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Beginning or ceasing of formal schooling",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -16727,7 +16745,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Major change in living condition (new home, remodeling, deterioration of neighborhood or home etc.)",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -16755,7 +16773,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Revision of personal habits (dress manners, associations, quitting smoking)",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -16783,7 +16801,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Troubles with the boss",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -16811,7 +16829,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Major changes in working hours or conditions",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -16839,7 +16857,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Changes in residence",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -16867,7 +16885,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Changing to a new school",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -16895,7 +16913,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "attentionCheck-Choose yes if you are reading",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -16923,7 +16941,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Major change in usual type and/or amount of recreation",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -16951,7 +16969,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Major change in religious activity (a lot more or less than usual)",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -16979,7 +16997,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Major change in social activities (clubs, movies, visiting, etc.)",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -17007,7 +17025,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Taking on a loan (car, tv, freezer, etc.)",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -17035,7 +17053,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Major change in sleeping habits (a lot more or a lot less than usual)",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -17063,7 +17081,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Major change in number of family get-togethers",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -17091,7 +17109,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Major change in eating habits (a lot more or less food intake, or very different meal hours or surroundings)",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -17119,7 +17137,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Vacation",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -17147,7 +17165,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Major holidays",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -17175,7 +17193,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Minor violations of the law (traffic tickets, disturbing the peace, etc)",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -17256,6 +17274,7 @@ UPDATE tasks SET
                     "questions":[
                         {
                             "questionType": "displayText",
+                            "key": "displayText1",
                             "title": {
                                 "en": "In the following you find a list of expressions that characterize different moods. Please take a look at the list, word by word, and mark for each word the answer that represents best the actual intensity of your mood status.",
                                 "fr": "Dans la prochaine partie, vous trouverez une liste des expressions qui caractérisent différentes émotions. Jetez un coup d''oeil à la liste, mot par mot, et marquez pour chaque mot la réponse qui représente le mieux l''intensité de votre état d''esprit actuellement."
@@ -17263,6 +17282,7 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "displayText",
+                            "key": "displayText2",
                             "title": {
                                 "en": "Please pay attention to the following facts:",
                                 "fr": "Veuillez prêter attention aux faits suivants:"
@@ -17270,6 +17290,7 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "displayText",
+                            "key": "displayText3",
                             "title": {
                                 "en": "- Within the list there are some attributes that possibly describe the same or similar moods. Please do not get irritated due to this fact, and judge each attribute irrespective of your answer to another attribute.<br />- Please judge only how you feel at this moment, and not how you normally or sometimes feel.<br/ >- If you have some difficulties in finding an answer, please mark the answer that fits best.",
                                 "fr": "- Dans la liste, certains attributs décrivent peut-être des humeurs identiques ou similaires. Ne soyez pas irrité par ce fait et jugez chaque attribut indépendamment de votre réponse à un autre attribut.<br />- Veuillez juger uniquement ce que vous ressentez en ce moment, et non ce que vous ressentez normalement ou parfois.<br />- Si vous avez de la difficulté à choisir une réponse, veuillez marquer la réponse qui vous convient le mieux."
@@ -17278,6 +17299,7 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "displayText",
+                            "key": "displayText4",
                             "title": {
                                 "en": "Please judge each word and do not leave out a word.",
                                 "fr": "Veuillez juger chaque mot et n''omettez aucun mot."
@@ -17654,7 +17676,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Did you at any point think that you were being tricked",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -17682,7 +17704,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "Did you think that parts of this study were deceiving you",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -17771,6 +17793,7 @@ UPDATE tasks SET
                     "questions": [
                         {
                             "questionType": "displayText",
+                            "key": "displayText1",
                             "title": {
                                 "en": "The following questions are general questions about you. If you don''t have Parkinson''s disease (PD), not all of them will apply to you, so select the \\"I don''t have Parkinson''s disease\\" option.",
                                 "fr": "Les questions suivantes sont des questions générales sur vous. Si vous n''avez pas la maladie de Parkinson (MP), certaines ne s''appliqueront pas à vous, alors sélectionnez l''option \\"Je n''ai pas la maladie de Parkinson\\"."
@@ -17786,7 +17809,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "radiobuttonPresentation": "vertical",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -17839,7 +17862,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "takePDMed",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "I don''t have Parkinson''s disease",
@@ -17864,10 +17887,12 @@ UPDATE tasks SET
                             ]
                         },
                         {
-                            "questionType": "divider"
+                            "questionType": "divider",
+                            "key": "divider1"
                         },
                         {
                             "questionType": "displayText",
+                            "key": "displayText2",
                             "title": {
                                 "en": "If you answered previously that you do take Parkinson’s disease medication, how long ago did you take the last dose?",
                                 "fr": "Si vous avez répondu que vous prenez des médicaments pour votre maladie de Parkinson, il y a combien de temps que vous avez pris la dernière dose?"
@@ -17906,7 +17931,8 @@ UPDATE tasks SET
                             }
                         },
                         {
-                            "questionType": "divider"
+                            "questionType": "divider",
+                            "key": "divider2"
                         },
                         {
                             "questionType": "multipleChoiceSelect",
@@ -17918,7 +17944,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "I don''t have Parkinson''s disease",
@@ -17966,7 +17992,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -18000,7 +18026,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -18034,7 +18060,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes, my biological mother or father has/had Parkinson''s disease",
@@ -18100,7 +18126,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Female",
@@ -18127,7 +18153,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Female",
@@ -18168,7 +18194,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "None",
@@ -18252,7 +18278,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [{
+                            "options": [{
                                 "label": {
                                     "en": "Right-handed",
                                     "fr": "Droitier/Droitière"
@@ -18285,7 +18311,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "allowMultipleSelections": true,
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "White / Caucasian",
@@ -18404,7 +18430,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "allowMultipleSelections": true,
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "English",
@@ -18438,7 +18464,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "No",
@@ -18476,7 +18502,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -18526,6 +18552,7 @@ UPDATE tasks SET
                     "questions": [
                         {
                             "questionType": "displayText",
+                            "key": "displayText1",
                             "title": {
                                 "en": "The following questions are about some medications you might be taking. Some of these questions ask about Parkinson’s medication. If you DON’T have Parkinson’s disease, please check the appropriate box.",
                                 "fr": "Les questions suivantes portent sur certains médicaments que vous prenez peut-être. Certaines des questions concernent les médicaments pour le Parkinson. Si vous N’AVEZ PAS la maladie de Parkinson, cochez la case appropriée."
@@ -18542,7 +18569,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "allowMultipleSelections": true,
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "I don’t have Parkinson’s disease / I don''t take medications for my Parkinson''s disease",
@@ -18735,7 +18762,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "allowMultipleSelections": true,
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Depression",
@@ -18791,7 +18818,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "allowMultipleSelections": true,
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "I don''t have Parkinson''s disease / I have not undergone any of the procedures listed above",
@@ -18869,16 +18896,19 @@ UPDATE tasks SET
                     "questions": [
                         {
                             "questionType": "displayText",
+                            "key": "displayText1",
                             "title": {
                                 "en": "The following questions are about your health. By health, we mean not only the absence of disease or injury, but also physical, mental, and social well-being.",
                                 "fr": "Les questions suivantes concernent votre santé. Par «santé», nous voulons dire non seulement l''absence de maladie ou de blessure, mais aussi votre bien-être physique, mental et social."
                             }
                         },
                         {
-                            "questionType": "divider"
+                            "questionType": "divider",
+                            "key": "divider1"
                         },
                         {
                             "questionType": "displayText",
+                            "key": "displayText2",
                             "title": {
                                 "en": "Physical Health",
                                 "fr": "La Santé Physique"
@@ -18895,7 +18925,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "allowMultipleSelections": true,
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Cancer",
@@ -19046,10 +19076,12 @@ UPDATE tasks SET
                             ]
                         },
                         {
-                            "questionType": "divider"
+                            "questionType": "divider",
+                            "key": "divider2"
                         },
                         {
                             "questionType": "displayText",
+                            "key": "displayText3",
                             "title": {
                                 "en": "Mental Health",
                                 "fr": "La Santé Mentale"
@@ -19066,7 +19098,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "allowMultipleSelections": true,
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Depression - currently under treatment",
@@ -19133,7 +19165,8 @@ UPDATE tasks SET
                             ]
                         },
                         {
-                            "questionType": "divider"
+                            "questionType": "divider",
+                            "key": "divider3"
                         },
                         {
                             "questionType": "multipleChoiceSelect",
@@ -19145,7 +19178,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "No, have not gone through menopause",
@@ -19179,7 +19212,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Excellent",
@@ -19213,7 +19246,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "None",
@@ -19252,10 +19285,12 @@ UPDATE tasks SET
                             ]
                         },
                         {
-                            "questionType": "divider"
+                            "questionType": "divider",
+                            "key": "divider4"
                         },
                         {
                             "questionType": "displayText",
+                            "key": "displayText4",
                             "title": {
                                 "en": "Social situation",
                                 "fr": "La Situation Sociale"
@@ -19271,7 +19306,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Single, never married, or never lived with a partner",
@@ -19319,7 +19354,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Living Alone",
@@ -19388,7 +19423,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Heterosexual (sexual relations with people of the opposite sex)",
@@ -19436,7 +19471,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Less than $20,000",
@@ -19495,7 +19530,7 @@ UPDATE tasks SET
                                 "en": "What is your current employment status?",
                                 "fr": "Quelle est votre situation d''emploi actuelle?"
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Employed Full-time (30+ hours a week)",
@@ -19565,10 +19600,12 @@ UPDATE tasks SET
                             }
                         },
                         {
-                            "questionType": "divider"
+                            "questionType": "divider",
+                            "key": "divider5"
                         },
                         {
                             "questionType": "displayText",
+                            "key": "displayText5",
                             "title": {
                                 "en": "Habits",
                                 "fr": "Habitudes de vie"
@@ -19585,7 +19622,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "allowMultipleSelections": true,
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Alcohol",
@@ -19640,7 +19677,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -19674,7 +19711,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Not a smoker",
@@ -19750,7 +19787,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -19784,7 +19821,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Almost every day (6-7 times a week)",
@@ -19860,7 +19897,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Every day",
@@ -19908,7 +19945,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Less than 1 time per week",
@@ -19949,7 +19986,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Less than 30 minutes",
@@ -19981,10 +20018,12 @@ UPDATE tasks SET
                             ]
                         },
                         {
-                            "questionType": "divider"
+                            "questionType": "divider",
+                            "key": "divider6"
                         },
                         {
                             "questionType": "displayText",
+                            "key": "displayText6",
                             "title": {
                                 "en": "Sleep",
                                 "fr": "Le Sommeil"
@@ -20000,7 +20039,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "All of the time (5-7 days per week)",
@@ -20042,7 +20081,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "radiobuttonPresentation": "vertical",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -20811,7 +20850,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "sex",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Female",
@@ -20835,7 +20874,7 @@ UPDATE tasks SET
                                 "fr": "Comment vous décrivez-vous?"
                             },
                             "key": "selfIdentification",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Female",
@@ -20879,7 +20918,7 @@ UPDATE tasks SET
                             "validation": {
                             "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Heterosexual (sexual relations with people of the opposite sex)",
@@ -20936,7 +20975,7 @@ UPDATE tasks SET
                                 "en": "What is your current employment status?",
                                 "fr": "Quelle est votre situation d''emploi actuelle?"
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Employed Full-time (30+ hours a week)",
@@ -21015,7 +21054,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Less than $20,000",
@@ -21077,7 +21116,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Single, never married, or never lived with a partner",
@@ -21132,7 +21171,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Living Alone",
@@ -21193,16 +21232,19 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "displayText",
+                            "key": "displayText1",
                             "title": {
                                 "en": "The following questions are about your health. By health, we mean not only the absence of disease or injury, but also physical, mental, and social well-being.",
                                 "fr": "Les questions suivantes concernent votre santé. Par «santé», nous entendons non seulement l''absence de maladie ou de blessure, mais aussi le bien-être physique, mental et social."
                             }
                         },
                         {
-                            "questionType": "divider"
+                            "questionType": "divider",
+                            "key": "divider1"
                         },
                         {
                             "questionType": "displayText",
+                            "key": "displayText2",
                             "title": {
                                 "en": "Physical Health",
                                 "fr": "La Santé Physique"
@@ -21219,7 +21261,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "allowMultipleSelections": true,
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Cancer",
@@ -21370,10 +21412,12 @@ UPDATE tasks SET
                             ]
                         },
                         {
-                            "questionType": "divider"
+                            "questionType": "divider",
+                            "key": "divider2"
                         },
                         {
                             "questionType": "displayText",
+                            "key": "displayText3",
                             "title": {
                                 "en": "Mental Health",
                                 "fr": "La Santé Mentale"
@@ -21390,7 +21434,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "allowMultipleSelections": true,
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Depression - currently under treatment",
@@ -21466,7 +21510,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Excellent",
@@ -21501,7 +21545,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "radiobuttonPresentation": "vertical",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -21528,7 +21572,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "None",
@@ -21567,10 +21611,12 @@ UPDATE tasks SET
                             ]
                         },
                         {
-                            "questionType": "divider"
+                            "questionType": "divider",
+                            "key": "divider3"
                         },
                         {
                             "questionType": "displayText",
+                            "key": "displayText4",
                             "title": {
                                 "en": "Habits",
                                 "fr": "Les Habitudes"
@@ -21587,7 +21633,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "allowMultipleSelections": true,
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Alcohol",
@@ -21642,7 +21688,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -21676,7 +21722,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Current smoker: 20 or more cigarettes per day",
@@ -21759,7 +21805,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -21793,7 +21839,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Almost every day (6-7 times a week)",
@@ -21869,7 +21915,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Every day",
@@ -21917,7 +21963,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Less than 1 time per week",
@@ -21958,7 +22004,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Less than 30 minutes",
@@ -21990,10 +22036,12 @@ UPDATE tasks SET
                             ]
                         },
                         {
-                            "questionType": "divider"
+                            "questionType": "divider",
+                            "key": "divider4"
                         },
                         {
                             "questionType": "displayText",
+                            "key": "displayText5",
                             "title": {
                                 "en": "Sleep",
                                 "fr": "Le Sommeil"
@@ -22009,7 +22057,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "All of the time (5-7 days per week)",
@@ -22051,7 +22099,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "radiobuttonPresentation": "vertical",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -22070,6 +22118,7 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "displayText",
+                            "key": "displayText6",
                             "title": {
                                 "en": "The following questions are general questions about you. If you don''t have Parkinson''s disease (PD), not all of them will apply to you, so select the \\"I don''t have Parkinson''s disease\\" option.",
                                 "fr": "Les questions suivantes sont des questions générales sur vous. Si vous n''avez pas la maladie de Parkinson (MP), elles ne s''appliqueront pas toutes à vous, alors sélectionnez l''option \\"Je n''ai pas la maladie de Parkinson\\"."
@@ -22085,7 +22134,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "radiobuttonPresentation": "vertical",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -22134,7 +22183,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "takePDMed",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "I don''t have Parkinson''s disease",
@@ -22159,10 +22208,12 @@ UPDATE tasks SET
                             ]
                         },
                         {
-                            "questionType": "divider"
+                            "questionType": "divider",
+                            "key": "divider5"
                         },
                         {
                             "questionType": "displayText",
+                            "key": "displayText7",
                             "title": {
                                 "en": "If you answered previously that you do take Parkinson''s disease medication, how long ago did you take it?",
                                 "fr": "Si vous avez répondu précédemment que vous prenez des médicaments pour votre maladie de Parkinson, quand avez-vous pris votre dernière dose?"
@@ -22201,7 +22252,8 @@ UPDATE tasks SET
                             }
                         },
                         {
-                            "questionType": "divider"
+                            "questionType": "divider",
+                            "key": "divider6"
                         },
                         {
                             "questionType": "multipleChoiceSelect",
@@ -22213,7 +22265,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "I don''t have Parkinson''s disease",
@@ -22261,7 +22313,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -22295,7 +22347,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes, my biological mother or father has/had Parkinson’s disease",
@@ -22343,7 +22395,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Right-handed",
@@ -22378,7 +22430,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "allowMultipleSelections": true,
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "White / Caucasian",
@@ -22497,7 +22549,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "allowMultipleSelections": true,
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "English",
@@ -22535,7 +22587,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -22746,6 +22798,7 @@ UPDATE tasks SET
                     "questions": [
                         {
                             "questionType": "displayText",
+                            "key": "displayText1",
                             "title": {
                                 "en": "With regards to the situation you just experienced, please consider how you are feeling in this current moment when answering the following questions. Drag the marker to the appropriate position on the 0-100 scale with 0 being \\"not feeling this at all\\" and 100 being \\"extremely feeling this\\".",
                                 "fr": "Par rapport à la situation que vous venez de vivre, veuillez considérer comment vous vous sentez en ce moment en répondant aux questions suivantes. Faites glisser le marqueur vers la position appropriée sur l''échelle de 0 à 100, 0 étant \\"ne ressentant pas du tout cette émotion\\" et 100 étant \\"la ressentant beaucoup\\"."
@@ -22753,6 +22806,7 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "displayText",
+                            "key": "displayText2",
                             "title": {
                                 "en": "Use your mouse to drag the marker in order to select your answer",
                                 "fr": "Utilisez votre souris pour faire glisser le marqueur afin de sélectionner votre réponse"
@@ -23324,6 +23378,7 @@ UPDATE tasks SET
                     "questions": [
                         {
                             "questionType": "displayText",
+                            "key": "displayText1",
                             "title": {
                                 "en": "The following questions are related to your physical and mental health. If you don''t have Parkinson''s disease (PD), not all of them will apply to you, so select the \\"I don''t have Parkinson''s disease\\" option.",
                                 "fr": "Les questions suivantes sont liées à votre santé physique et mentale. Si vous n''avez pas la maladie de Parkinson (MP), certaines ne s''appliqueront pas à vous, alors sélectionnez l''option \\"Je n''ai pas la maladie de Parkinson\\"."
@@ -23339,7 +23394,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "radiobuttonPresentation": "vertical",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -23393,7 +23448,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "allowMultipleSelections": true,
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "I don''t have Parkinson''s disease",
@@ -23584,6 +23639,7 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "displayText",
+                            "key": "displayText2",
                             "title": {
                                 "en": "If you answered previously that you do take Parkinson''s disease medication, how long ago did you take the last dose?",
                                 "fr": "Si vous avez répondu que vous prenez des médicaments pour votre maladie de Parkinson, il y a combien de temps que vous avez pris la dernière dose?"
@@ -23631,7 +23687,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "I don''t have Parkinson''s disease",
@@ -23680,7 +23736,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "allowMultipleSelections": true,
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Deep brain stimulation",
@@ -23735,7 +23791,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes, my biological mother or father has/had Parkinson’s disease",
@@ -23784,7 +23840,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "allowMultipleSelections": true,
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Depression",
@@ -23843,7 +23899,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -23877,7 +23933,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -23911,7 +23967,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -23982,7 +24038,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "key": "sex",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Female",
@@ -24009,7 +24065,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Female",
@@ -24059,7 +24115,7 @@ UPDATE tasks SET
                                 "en": "What is your current employment status?",
                                 "fr": "Quelle est votre situation d''emploi actuelle?"
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Employed Full-time (30+ hours a week)",
@@ -24138,7 +24194,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Less than $20,000",
@@ -24200,7 +24256,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Single, never married, or never lived with a partner",
@@ -24255,7 +24311,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Living Alone",
@@ -24324,7 +24380,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Right-handed",
@@ -24358,7 +24414,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Every day",
@@ -24406,7 +24462,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Less than 1 time per week",
@@ -24447,7 +24503,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Less than 30 minutes",
@@ -24489,7 +24545,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "allowMultipleSelections": true,
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "White / Caucasian",
@@ -24608,7 +24664,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "allowMultipleSelections": true,
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "English",
@@ -24805,6 +24861,7 @@ UPDATE tasks SET
                     "questions": [
                         {
                             "questionType": "displayText",
+                            "key": "displayText1",
                             "title": {
                                 "en": "We just need to ask you a few questions again. If you don''t have Parkinson''s disease (PD), not all of them will apply to you, so select the \\"I don''t have Parkinson''s disease\\" option.",
                                 "fr": "Nous devons vous re-demander seulement quelques questions. Si vous n''avez pas la maladie de Parkinson (MP), certaines des questions ne s''appliqueront pas à vous, alors sélectionnez l''option \\"Je n''ai pas la maladie de Parkinson\\"."
@@ -24820,7 +24877,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "radiobuttonPresentation": "vertical",
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Yes",
@@ -24865,6 +24922,7 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "displayText",
+                            "key": "displayText2",
                             "title": {
                                 "en": "If you take Parkinson’s disease medication, how long ago did you take the last dose?",
                                 "fr": "Si vous prenez des médicaments pour votre maladie de Parkinson, il y a combien de temps que vous avez pris la dernière dose?"
@@ -24912,7 +24970,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "I don''t have Parkinson''s disease",
@@ -24961,7 +25019,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "allowMultipleSelections": true,
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "No major changes",
@@ -25022,6 +25080,7 @@ UPDATE tasks SET
                     "questions": [
                         {
                             "questionType": "displayText",
+                            "key": "displayText1",
                             "title": {
                                 "en": "Now think about the symbols you saw",
                                 "fr": "Pensez aux symboles que vous avez vus."
@@ -25046,7 +25105,7 @@ UPDATE tasks SET
                                 "/assets/images/stimuli/plt/version1/image5.jpg",
                                 "/assets/images/stimuli/plt/version1/image6.jpg"
                             ],
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": "1",
                                     "value": "image1"
@@ -25092,7 +25151,7 @@ UPDATE tasks SET
                                 "/assets/images/stimuli/plt/version1/image5.jpg",
                                 "/assets/images/stimuli/plt/version1/image6.jpg"
                             ],
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": "1",
                                     "value": "image1"
@@ -25580,6 +25639,7 @@ UPDATE tasks SET
                     "questions": [
                         {
                             "questionType": "displayText",
+                            "key": "displayText1",
                             "title": {
                                 "en": "Now think about the symbols you saw",
                                 "fr": "Pensez aux symboles que vous avez vus."
@@ -25604,7 +25664,7 @@ UPDATE tasks SET
                                 "/assets/images/stimuli/plt/version2/image5.jpg",
                                 "/assets/images/stimuli/plt/version2/image6.jpg"
                             ],
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": "1",
                                     "value": "image1"
@@ -25650,7 +25710,7 @@ UPDATE tasks SET
                                 "/assets/images/stimuli/plt/version2/image5.jpg",
                                 "/assets/images/stimuli/plt/version2/image6.jpg"
                             ],
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": "1",
                                     "value": "image1"
@@ -26299,7 +26359,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Email from Quebec Parkinson Network (QPN)",
@@ -26450,7 +26510,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "allowMultipleSelections": true,
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "Changes in Parkinson''s disease medications",
@@ -26530,7 +26590,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "None",
@@ -26592,7 +26652,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "multipleChoiceOptions": [
+                            "options": [
                                 {
                                     "label": {
                                         "en": "I don''t have Parkinson''s disease",
@@ -26770,6 +26830,7 @@ UPDATE tasks SET
     task_type = "EXPERIMENTAL",
     name = "Information Task",
     description = "The participant chooses between exploration and exploitation. They select a card from the deck and either (1) continue selecting a new card with a new value, or (2) select a selected card with known value",
+    external_url = "", 
     config = '{
         "taskConfig": {},
         "metadata": [
@@ -29177,6 +29238,7 @@ UPDATE tasks SET
     task_type = "QUESTIONNAIRE",
     name = "Information Task Questionnaire Round 2",
     description = "The participant is presented with a questionnaire asking them about the lowest value that they would have accepted.",
+    external_url = "",
     config = '{
         "taskConfig": {},
         "metadata": [
@@ -29187,6 +29249,7 @@ UPDATE tasks SET
                     "questions": [
                         {
                             "questionType": "displayText",
+                            "key": "displayText1",
                             "title": {
                                 "en": "Thanks for playing! Now we have a few questions about your strategy during the game. At different points in the game, you may have felt satisfied with the highest value card you had drawn, so you woudl pick it instead of drawing a new card.",
                                 "fr": ""
@@ -29194,6 +29257,7 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "displayText",
+                            "key": "displayText1",
                             "title": {
                                 "en": "For example, on the first turn, if you happened to draw a 99, then you may have been satisfied enough with it to pick it for the rest of the game. For each of the turns listed below, what was the LOWEST value for a card that would have been enough for you to pick it fore the rest of the game? When you are finished, click the next button to submit your number. We will ask you about 6 different turns.",
                                 "fr": ""
@@ -29223,6 +29287,7 @@ UPDATE tasks SET
     task_type = "QUESTIONNAIRE",
     name = "Information Task Questionnaire Round 5",
     description = "The participant is presented with a questionnaire asking them about the lowest value that they would have accepted.",
+    external_url = "",
     config = '{
         "taskConfig": {},
         "metadata": [
@@ -29233,6 +29298,7 @@ UPDATE tasks SET
                     "questions": [
                         {
                             "questionType": "displayText",
+                            "key": "displayText1",
                             "title": {
                                 "en": "Thanks for playing! Now we have a few questions about your strategy during the game. At different points in the game, you may have felt satisfied with the highest value card you had drawn, so you woudl pick it instead of drawing a new card.",
                                 "fr": ""
@@ -29240,6 +29306,7 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "displayText",
+                            "key": "displayText1",
                             "title": {
                                 "en": "For example, on the first turn, if you happened to draw a 99, then you may have been satisfied enough with it to pick it for the rest of the game. For each of the turns listed below, what was the LOWEST value for a card that would have been enough for you to pick it fore the rest of the game? When you are finished, click the next button to submit your number. We will ask you about 6 different turns.",
                                 "fr": ""
@@ -29269,6 +29336,7 @@ UPDATE tasks SET
     task_type = "QUESTIONNAIRE",
     name = "Information Task Questionnaire Round 9",
     description = "The participant is presented with a questionnaire asking them about the lowest value that they would have accepted.",
+    external_url = "",
     config = '{
         "taskConfig": {},
         "metadata": [
@@ -29279,6 +29347,7 @@ UPDATE tasks SET
                     "questions": [
                         {
                             "questionType": "displayText",
+                            "key": "displayText1",
                             "title": {
                                 "en": "Thanks for playing! Now we have a few questions about your strategy during the game. At different points in the game, you may have felt satisfied with the highest value card you had drawn, so you woudl pick it instead of drawing a new card.",
                                 "fr": ""
@@ -29286,6 +29355,7 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "displayText",
+                            "key": "displayText2",
                             "title": {
                                 "en": "For example, on the first turn, if you happened to draw a 99, then you may have been satisfied enough with it to pick it for the rest of the game. For each of the turns listed below, what was the LOWEST value for a card that would have been enough for you to pick it fore the rest of the game? When you are finished, click the next button to submit your number. We will ask you about 6 different turns.",
                                 "fr": ""
@@ -29315,6 +29385,7 @@ UPDATE tasks SET
     task_type = "QUESTIONNAIRE",
     name = "Information Task Questionnaire Round 13",
     description = "The participant is presented with a questionnaire asking them about the lowest value that they would have accepted.",
+    external_url = "",
     config = '{
         "taskConfig": {},
         "metadata": [
@@ -29325,6 +29396,7 @@ UPDATE tasks SET
                     "questions": [
                         {
                             "questionType": "displayText",
+                            "key": "displayText1",
                             "title": {
                                 "en": "Thanks for playing! Now we have a few questions about your strategy during the game. At different points in the game, you may have felt satisfied with the highest value card you had drawn, so you woudl pick it instead of drawing a new card.",
                                 "fr": ""
@@ -29332,6 +29404,7 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "displayText",
+                            "key": "displayText2",
                             "title": {
                                 "en": "For example, on the first turn, if you happened to draw a 99, then you may have been satisfied enough with it to pick it for the rest of the game. For each of the turns listed below, what was the LOWEST value for a card that would have been enough for you to pick it fore the rest of the game? When you are finished, click the next button to submit your number. We will ask you about 6 different turns.",
                                 "fr": ""
@@ -29361,6 +29434,7 @@ UPDATE tasks SET
     task_type = "QUESTIONNAIRE",
     name = "Information Task Questionnaire Round 17",
     description = "The participant is presented with a questionnaire asking them about the lowest value that they would have accepted.",
+    external_url = "",
     config = '{
         "taskConfig": {},
         "metadata": [
@@ -29371,6 +29445,7 @@ UPDATE tasks SET
                     "questions": [
                         {
                             "questionType": "displayText",
+                            "key": "displayText1",
                             "title": {
                                 "en": "Thanks for playing! Now we have a few questions about your strategy during the game. At different points in the game, you may have felt satisfied with the highest value card you had drawn, so you woudl pick it instead of drawing a new card.",
                                 "fr": ""
@@ -29378,6 +29453,7 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "displayText",
+                            "key": "displayText2",
                             "title": {
                                 "en": "For example, on the first turn, if you happened to draw a 99, then you may have been satisfied enough with it to pick it for the rest of the game. For each of the turns listed below, what was the LOWEST value for a card that would have been enough for you to pick it fore the rest of the game? When you are finished, click the next button to submit your number. We will ask you about 6 different turns.",
                                 "fr": ""
@@ -29407,6 +29483,7 @@ UPDATE tasks SET
     task_type = "QUESTIONNAIRE",
     name = "Information Task Questionnaire Round 20",
     description = "The participant is presented with a questionnaire asking them about the lowest value that they would have accepted.",
+    external_url = "",
     config = '{
         "taskConfig": {},
         "metadata": [
@@ -29417,6 +29494,7 @@ UPDATE tasks SET
                     "questions": [
                         {
                             "questionType": "displayText",
+                            "key": "displayText1",
                             "title": {
                                 "en": "Thanks for playing! Now we have a few questions about your strategy during the game. At different points in the game, you may have felt satisfied with the highest value card you had drawn, so you woudl pick it instead of drawing a new card.",
                                 "fr": ""
@@ -29424,6 +29502,7 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "displayText",
+                            "key": "displayText2",
                             "title": {
                                 "en": "For example, on the first turn, if you happened to draw a 99, then you may have been satisfied enough with it to pick it for the rest of the game. For each of the turns listed below, what was the LOWEST value for a card that would have been enough for you to pick it fore the rest of the game? When you are finished, click the next button to submit your number. We will ask you about 6 different turns.",
                                 "fr": ""
@@ -29477,3 +29556,3445 @@ UPDATE tasks SET
         ]
     }'
 WHERE id = 85;
+-- PD-Percep Questionnaire
+UPDATE tasks SET
+    from_platform = "PSHARPLAB",
+    task_type = "QUESTIONNAIRE",
+    name = "PD-Percep Questionnaire",
+    description = "",
+    external_url = "",
+    config = '{
+        "taskConfig": {},
+        "metadata": [
+            {
+                "componentName": "QUESTIONNAIRECOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "Experience With Parkinson''s Disease",
+                        "fr": ""
+                    },
+                    "questions": [
+                        {
+                            "questionType": "displayText",
+                            "key": "displayText1",
+                            "title": {
+                                "en": "The following questions are intended to better understand what your experience is with Parkinson''s disease, what you know about it, and what you want to know about it.",
+                                "fr": ""
+                            }
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "1-diagnosed-with-parkinsons",
+                            "allowMultipleSelections": false,
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": ""
+                                    },
+                                    "value": "yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": ""
+                                    },
+                                    "value": "no"
+                                }
+                            ],
+                            "textContent": {
+                                "en": "Have you been diagnosed with Parkinson''s disease?",
+                                "fr": ""
+                            },
+                            "validation": {
+                                "required": true
+                            }
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "2-parkinsons-currently-treated-by",
+                            "allowMultipleSelections": true,
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            },
+                            "textContent": {
+                                "en": "My Parkinson''s disease is currently being treated by a...",
+                                "fr": ""
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Movement Disorder Specialist",
+                                        "fr": ""
+                                    },
+                                    "value": "movement-disorder-specialist"
+                                },
+                                {
+                                    "label": {
+                                        "en": "General Neurologist",
+                                        "fr": ""
+                                    },
+                                    "value": "general-neurologist"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Family Doctor/Primary Care Doctor",
+                                        "fr": ""
+                                    },
+                                    "value": "family-doctor-primary-care-doctor"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Nurse Practitioner/Physician Assistant",
+                                        "fr": ""
+                                    },
+                                    "value": "nurse-practitioner-physician-assistant"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": ""
+                                    },
+                                    "value": "other"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "displayText",
+                            "key": "displayText2",
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            },
+                            "title": {
+                                "en": "Throughout the questionnaire, we will be making reference to your \\"<b>healthcare team</b>.\\" Your <b>healthcare team</b> can include any of the health professionals that assist in the management of your Parkinson''s disease, such as neurologists, nurses, occupational therapists, social workers, primary care physicians, etc.",
+                                "fr": ""
+                            }
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "4-movement-bodily-function-symptoms-experienced",
+                            "allowMultipleSelections": true,
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            },
+                            "textContent": {
+                                "en": "Which of the following Parkinson''s disease symptoms <b>related to movement and bodily function</b> do you currently experience? Please select all that apply.",
+                                "fr": ""
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "actions": {
+                                "clearOtherOptionsWhenValueSelected": ["none-of-the-above", "not-sure", "prefer-not-to-answer"],
+                                "onlyDisableOtherOptionsWhenValueSelected": ["none-of-the-above", "not-sure", "prefer-not-to-answer"]
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Slowness of movement",
+                                        "fr": ""
+                                    },
+                                    "value": "slowness-of-movement"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Speech difficulty (e.g. low voice, slurring, mumbling)",
+                                        "fr": ""
+                                    },
+                                    "value": "speech-difficulty"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Tremors",
+                                        "fr": ""
+                                    },
+                                    "value": "tremors"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Loss of dexterity (e.g. difficulty with things like buttons, zippers, brushing teeth)",
+                                        "fr": ""
+                                    },
+                                    "value": "loss-of-dexterity"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Imbalance or tendency to fall",
+                                        "fr": ""
+                                    },
+                                    "value": "imbalance-or-tendency-to-fall"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Walking problems (e.g. slow walking, freezing)",
+                                        "fr": ""
+                                    },
+                                    "value": "walking-problems"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Visual hallucinations (e.g. seeing things that are not really there)",
+                                        "fr": ""
+                                    },
+                                    "value": "visual-hallucinations"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Reduced sense of smell",
+                                        "fr": ""
+                                    },
+                                    "value": "reduced-sense-of-smell"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Swallowing difficulty",
+                                        "fr": ""
+                                    },
+                                    "value": "swallowing-difficulty"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Bodily pain or discomfort (e.g. generalized, or of the joints)",
+                                        "fr": ""
+                                    },
+                                    "value": "bodily-pain-or-discomfort"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Urinary Problems (e.g. increased frequency, loss of bladder control)",
+                                        "fr": ""
+                                    },
+                                    "value": "urinary-problems"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Constipation",
+                                        "fr": ""
+                                    },
+                                    "value": "constipation"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Acting out dreams (e.g. punching, kicking, or shouting during sleep)",
+                                        "fr": ""
+                                    },
+                                    "value": "acting-out-dreams"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Difficulty sleeping or insomnia",
+                                        "fr": ""
+                                    },
+                                    "value": "difficulty-sleeping-or-insomnia"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Dyskinesias (e.g. unintentional movements related to the Parkinson''s medications)",
+                                        "fr": ""
+                                    },
+                                    "value": "dyskinesias"
+                                },
+                                {
+                                    "label": {
+                                        "en": "None of the above",
+                                        "fr": ""
+                                    },
+                                    "value": "none-of-the-above"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "matrix",
+                            "key": "5-rating",
+                            "textContent": {
+                                "en": "In the prior question, you selected the following Parkinson''s symptoms because you experience them currently. Please rate how you feel these symptoms impact your quality of life.",
+                                "fr": ""
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "legendTitle": "Impact",
+                            "condition": {
+                                "dependsOnKey": "4-movement-bodily-function-symptoms-experienced",
+                                "doAction": {
+                                    "onlyHideWhenEmpty": true,
+                                    "hideWhenValuesSelected": [ "none-of-the-above", "not-sure", "prefer-not-to-answer" ],
+                                    "populateResultsBasedOnSelectedValues": true
+                                }
+                            },
+                            "legend": [
+                                {
+                                    "label": {
+                                        "en": "Not at all (0)",
+                                        "fr": ""
+                                    },
+                                    "value": "0"
+                                },
+                                {
+                                    "label": {
+                                        "en": "A little (1)",
+                                        "fr": ""
+                                    },
+                                    "value": "1"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Moderately (2)",
+                                        "fr": ""
+                                    },
+                                    "value": "2"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Quite a bit (3)",
+                                        "fr": ""
+                                    },
+                                    "value": "3"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Extremely (4)",
+                                        "fr": ""
+                                    },
+                                    "value": "4"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "6-thinking-mood-symptoms-experienced",
+                            "allowMultipleSelections": true,
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            },
+                            "textContent": {
+                                "en": "Which of the following Parkinson''s disease symptoms <b>related to thinking and mood</b> do you currently experience? Please select all that apply.",
+                                "fr": ""
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "actions": {
+                                "clearOtherOptionsWhenValueSelected": ["none-of-the-above", "not-sure", "prefer-not-to-answer"],
+                                "onlyDisableOtherOptionsWhenValueSelected": ["none-of-the-above", "not-sure", "prefer-not-to-answer"]
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Difficulty with decisions or planning", 
+                                        "fr": ""
+                                    },
+                                    "value": "difficulty-with-decisions-or-planning"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Slowing of mental or information processing",
+                                        "fr": ""
+                                    },
+                                    "value": "slowing-of-mental-or-information-processing"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Memory Problems",
+                                        "fr": ""
+                                    },
+                                    "value": "memory-problems"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Difficulty with expressing your thoughts (e.g. word-finding difficulties)",
+                                        "fr": ""
+                                    },
+                                    "value": "difficulty-with-expressing-your-thoughts"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Difficulty concentrating",
+                                        "fr": ""
+                                    },
+                                    "value": "difficulty-concentrating"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Depression or sadness",
+                                        "fr": ""
+                                    },
+                                    "value": "depression-or-sadness"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Anxiety or excessive worrying",
+                                        "fr": ""
+                                    },
+                                    "value": "anxiety-or-excessive-worrying"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Physical fatigue (e.g. exhaustion or tiredness of the body)",
+                                        "fr": ""
+                                    },
+                                    "value": "physical-fatigue"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Mental fatigue (e.g. feeling weary or exhausted during a mental task)",
+                                        "fr": ""
+                                    },
+                                    "value": "mental-fatigue"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Difficulty controlling emotions or behaviours",
+                                        "fr": ""
+                                    },
+                                    "value": "difficulty-controlling-emotions-or-behaviours"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Feeling lightheaded or dizzy",
+                                        "fr": ""
+                                    },
+                                    "value": "feeling-lightheaded-or-dizzy"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Apathy (e.g. reduced motivation, needing more of a push)",
+                                        "fr": ""
+                                    },
+                                    "value": "apathy"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Difficulty with multi-tasking",
+                                        "fr": ""
+                                    },
+                                    "value": "difficulty-with-multi-tasking"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Feeling of being alone or being isolated",
+                                        "fr": ""
+                                    },
+                                    "value": "feeling-of-being-alone-or-being-isolated"
+                                },
+                                {
+                                    "label": {
+                                        "en": "None of the above",
+                                        "fr": ""
+                                    },
+                                    "value": "none-of-the-above"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "matrix",
+                            "key": "7-rating",
+                            "textContent": {
+                                "en": "In the prior question, you selected the following Parkinson''s symptoms because you experience them currently. Please rate how you feel these symptoms impact your quality of life.",
+                                "fr": ""
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "legendTitle": "Impact",
+                            "condition": {
+                                "dependsOnKey": "6-thinking-mood-symptoms-experienced",
+                                "doAction": {
+                                    "onlyHideWhenEmpty": true,
+                                    "hideWhenValuesSelected": [ "none-of-the-above", "not-sure", "prefer-not-to-answer" ],
+                                    "populateResultsBasedOnSelectedValues": true
+                                }
+                            },
+                            "legend": [
+                                {
+                                    "label": {
+                                        "en": "Not at all (0)",
+                                        "fr": ""
+                                    },
+                                    "value": "0"
+                                },
+                                {
+                                    "label": {
+                                        "en": "A little (1)",
+                                        "fr": ""
+                                    },
+                                    "value": "1"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Moderately (2)",
+                                        "fr": ""
+                                    },
+                                    "value": "2"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Quite a bit (3)",
+                                        "fr": ""
+                                    },
+                                    "value": "3"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Extremely (4)",
+                                        "fr": ""
+                                    },
+                                    "value": "4"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "divider",
+                            "key": "divider1",
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            }
+                        },
+                        {
+                            "questionType": "displayText",
+                            "key": "displayText2",
+                            "title": {
+                                "en": "Thinking",
+                                "fr": ""
+                            },
+                            "styles": {
+                                "title-font-size": "lg"
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            }
+                        },
+                        {
+                            "questionType": "displayText",
+                            "key": "displaytext16",
+                            "title": {
+                                "en": "The following questions are aimed at understanding if, and how, Parkinson''s disease affects your <b>thinking</b>. <br /><br />Some examples of thinking problems might include:<br />&nbsp;&nbsp;&nbsp;&nbsp;- <u>Memory</u>: such as remembering what someone recently told you, familiar names, or upcoming events.<br />&nbsp;&nbsp;&nbsp;&nbsp;- <u>Concentration</u>: such as reading an article or book, or watching a television show or movie<br />&nbsp;&nbsp;&nbsp;&nbsp;- <u>Organization</u>: such as paying bills, managing medications, or organizing and completing a shopping list<br />&nbsp;&nbsp;&nbsp;&nbsp;- <u>Making decisions and solving problems</u><br />&nbsp;&nbsp;&nbsp;&nbsp;- <u>Orientation and spatial ability</u>: such as driving or finding one''s way around an unfamiliar location<br />&nbsp;&nbsp;&nbsp;&nbsp;- <u>Understanding language</u>: such as making sense of conversations or finding words when talking",
+                                "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            }
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "8-change-from-normal-abilities",
+                            "textContent": {
+                                "en": "Have you noticed that you are having more problems with thinking, that is a change from your normal abilities?",
+                                "fr": ""
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": ""
+                                    },
+                                    "value": "yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": ""
+                                    },
+                                    "value": "no"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "9-attribute-thinking-changes-to",
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "8-change-from-normal-abilities",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": ["yes"]
+                                }
+                            },
+                            "textContent": {
+                                "en": "What do you attribute your thinking changes to?",
+                                "fr": ""
+                            },
+                            "actions": {
+                                "clearOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"],
+                                "onlyDisableOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"]
+                            },
+                            "indent": 1,
+                            "allowMultipleSelections": true,
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "PD",
+                                        "fr": ""
+                                    },
+                                    "value": "pd"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Aging",
+                                        "fr": ""
+                                    },
+                                    "value": "aging"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Stress and coping with the disease or with other life events",
+                                        "fr": ""
+                                    },
+                                    "value": "stress-and-coping-with-disease-or-other-life-events"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other neurological illness",
+                                        "fr": ""
+                                    },
+                                    "value": "other-neurological-illness"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": ""
+                                    },
+                                    "value": "other"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "9a-most-attribute-thinking-changes-to",
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "9-attribute-thinking-changes-to",
+                                "doAction": {
+                                    "onlyHideWhenEmpty": true,
+                                    "hideWhenValuesSelected": [ "not-sure", "prefer-not-to-answer" ],
+                                    "populateResultsBasedOnSelectedValues": true
+                                }
+                            },
+                            "textContent": {
+                                "en": "What do you MOST attribute your thinking changes to?",
+                                "fr": ""
+                            },
+                            "indent": 1,
+                            "allowMultipleSelections": false,
+                            "options": []
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "10-thinking-symptoms-prescribed-medications",
+                            "validation": {
+                                "required": true
+                            },
+                            "indent": 1,
+                            "textContent": {
+                                "en": "Has your healthcare team prescribed medications for your thinking symptoms?",
+                                "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "8-change-from-normal-abilities",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": ["yes"]
+                                }
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": ""
+                                    },
+                                    "value": "yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": ""
+                                    },
+                                    "value": "no"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "11-first-learned-thinking-changes-are-symptoms-of-PD",
+                            "validation": {
+                                "required": true
+                            },
+                            "textContent": {
+                                "en": "<b>When</b> did you first learn that thinking changes are part of the symptoms of PD?",
+                                "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "I did not know anything about cognitive changes in PD before filling out this survey",
+                                        "fr": ""
+                                    },
+                                    "value": "didnt-know-before-doing-survey"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Before PD diagnosis (I already knew about PD and its symptoms before I received my diagnosis)",
+                                        "fr": ""
+                                    },
+                                    "value": "before-pd-diagnosis"
+                                },
+                                {
+                                    "label": {
+                                        "en": "At the time of PD diagnosis; it was discussed by the medical team",
+                                        "fr": ""
+                                    },
+                                    "value": "at-the-time-of-PD-diagnosis"
+                                },
+                                {
+                                    "label": {
+                                        "en": "After my diagnosis of PD because I started to learn about the disease",
+                                        "fr": ""
+                                    },
+                                    "value": "after-my-diagnosis"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Only once I started to experience cognitive changes myself",
+                                        "fr": ""
+                                    },
+                                    "value": "only-after-experiencing-cognitive-changes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": ""
+                                    },
+                                    "value": "other"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "12-how-i-learned-thinking-changes-are-symptoms-of-PD",
+                            "textContent": {
+                                "en": "<b>How</b> did you first learn that thinking changes are part of the symptoms of PD? Please select all that apply",
+                                "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            },
+                            "allowMultipleSelections": true,
+                            "validation": {
+                                "required": true
+                            },
+                            "actions": {
+                                "clearOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"],
+                                "onlyDisableOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"]
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "By doing this survey",
+                                        "fr": ""
+                                    },
+                                    "value": "doing-this-survey"
+                                },
+                                {
+                                    "label": {
+                                        "en": "My physician",
+                                        "fr": ""
+                                    },
+                                    "value": "my-physician"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other health care worker (e.g. occupational therapist, nurse)",
+                                        "fr": ""
+                                    },
+                                    "value": "other-health-care-worker"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prined materials from clinic",
+                                        "fr": ""
+                                    },
+                                    "value": "printed-materials-from-clinic"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Information provided by foundations (e.g. webinar, printed materials)",
+                                        "fr": ""
+                                    },
+                                    "value": "info-provided-by-foundations"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Support groups",
+                                        "fr": ""
+                                    },
+                                    "value": "support-groups"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Social media",
+                                        "fr": ""
+                                    },
+                                    "value": "social-media"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Friends/family doing research",
+                                        "fr": ""
+                                    },
+                                    "value": "friends-or-family-doing-research"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": ""
+                                    },
+                                    "value": "other"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "13-most-helpful-to-learn-thinking-changes-are-part-of-symptoms-of-pd",
+                            "validation": {
+                                "required": true
+                            },
+                            "textContent": {
+                                "en": "Which <b>ONE</b> of the following items was the <b>MOST</b> helpful in learning that thinking changes are part of the symptoms of PD? Please select the best option.",
+                                "fr": ""
+                            },
+                            "indent": 1,
+                            "allowMultipleSelections": false,
+                            "condition": {
+                                "dependsOnKey": "12-how-i-learned-thinking-changes-are-symptoms-of-PD",
+                                "doAction": {
+                                    "onlyHideWhenEmpty": true,
+                                    "hideWhenValuesSelected": [ "not-sure", "prefer-not-to-answer" ],
+                                    "populateResultsBasedOnSelectedValues": true
+                                }
+                            },
+                            "options": []
+                        },
+                        {
+                            "questionType": "displayText",
+                            "key": "displayText3",
+                            "condition": {
+                                "dependsOnKey": "8-change-from-normal-abilities",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": ["yes"]
+                                }
+                            },
+                            "title": {
+                                "en": "In this section, we want to know how you think that Parkinson''s disease and its associated symptoms affect the way that other people see you. You told us earlier that you have noticed more problems with thinking, and that this is a change from your normal abilities. Please consider these symptoms affecting your thinking and answer the following questions. <br /><br />Because of my <b>thinking symptoms...</b>",
+                                "fr": ""
+                            }
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "14a-thinking-people-seem-uncomfortable",
+                            "textContent": {
+                                "en": "Some people seem uncomfortable with me",
+                                "fr": ""
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "8-change-from-normal-abilities",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": ["yes"]
+                                }
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Never",
+                                        "fr": ""
+                                    },
+                                    "value": "never"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sometimes",
+                                        "fr": ""
+                                    },
+                                    "value": "sometimes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Always",
+                                        "fr": ""
+                                    },
+                                    "value": "always"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "14b-thinking-people-are-avoiding-me",
+                            "textContent": {
+                                "en": "Some people are avoiding me",
+                                "fr": ""
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "8-change-from-normal-abilities",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": ["yes"]
+                                }
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Never",
+                                        "fr": ""
+                                    },
+                                    "value": "never"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sometimes",
+                                        "fr": ""
+                                    },
+                                    "value": "sometimes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Always",
+                                        "fr": ""
+                                    },
+                                    "value": "always"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "14c-thinking-i-feel-embarrassed-in-social-situations",
+                            "textContent": {
+                                "en": "I feel embarrassed in social situations",
+                                "fr": ""
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "8-change-from-normal-abilities",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": ["yes"]
+                                }
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Never",
+                                        "fr": ""
+                                    },
+                                    "value": "never"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sometimes",
+                                        "fr": ""
+                                    },
+                                    "value": "sometimes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Always",
+                                        "fr": ""
+                                    },
+                                    "value": "always"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "14d-thinking-i-feel-left-out",
+                            "textContent": {
+                                "en": "I feel left out of things",
+                                "fr": ""
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "8-change-from-normal-abilities",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": ["yes"]
+                                }
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Never",
+                                        "fr": ""
+                                    },
+                                    "value": "never"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sometimes",
+                                        "fr": ""
+                                    },
+                                    "value": "sometimes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Always",
+                                        "fr": ""
+                                    },
+                                    "value": "always"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "14e-thinking-burden-to-others",
+                            "textContent": {
+                                "en": "I worry that I am a burden to others",
+                                "fr": ""
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "8-change-from-normal-abilities",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": ["yes"]
+                                }
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Never",
+                                        "fr": ""
+                                    },
+                                    "value": "never"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sometimes",
+                                        "fr": ""
+                                    },
+                                    "value": "sometimes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Always",
+                                        "fr": ""
+                                    },
+                                    "value": "always"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "divider",
+                            "key": "divider2",
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            }
+                        },
+                        {
+                            "questionType": "displayText",
+                            "key": "displayText4",
+                            "title": {
+                                "en": "Mood",
+                                "fr": ""
+                            },
+                            "styles": {
+                                "title-font-size": "lg"
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            }
+                        },
+                        {
+                            "questionType": "displayText",
+                            "key": "displaytext17",
+                            "title": {
+                                "en": "We are using the term \\"mood\\" to refer to all emotional states, which can include happiness, sadness, hopelessness, depression, anger, fear, excessive worry, anxiety, irritability, loss of motivation, paranoia, difficulty controlling urges, compulsions, obsessions, etc. Please with Parkinson''s disease might experience mood changes for a variety of reasons. Some people notice very little or no changes at all, while others notice more important changes. These changes might be related or unrelated to the Parkinson''s disease. The following questions are aimed at understanding if, and how, you have experienced <b>mood changes</b> (whether related or unrelated to the Parkinson''s disease).",
+                                "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            }
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "15-experienced-changes-to-mood-since-diagnosis",
+                            "validation": {
+                                "required": true
+                            },
+                            "textContent": {
+                                "en": "Have you experienced changes to your mood since your diagnosis with Parkinson''s disease",
+                                "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": ""
+                                    },
+                                    "value": "yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": ""
+                                    },
+                                    "value": "no"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "16-most-attribute-mood-changes-to",
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "15-experienced-changes-to-mood-since-diagnosis",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": ["yes"]
+                                }
+                            },
+                            "indent": 1,
+                            "textContent": {
+                                "en": "What do you MOST believe are the reasons for the change to your mood? Please select all that apply:",
+                                "fr": ""
+                            },
+                            "actions": {
+                                "onlyDisableOtherOptionsWhenValueSelected": ["prefer-not-to-answer", "not-sure"],
+                                "clearOtherOptionsWhenValueSelected": ["prefer-not-to-answer", "not-sure"]
+                            },
+                            "allowMultipleSelections": true,
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "PD",
+                                        "fr": ""
+                                    },
+                                    "value": "pd"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Aging",
+                                        "fr": ""
+                                    },
+                                    "value": "aging"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Stress and coping with the disease",
+                                        "fr": ""
+                                    },
+                                    "value": "stress-and-coping-with-disease"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Stress related to other life events",
+                                        "fr": ""
+                                    },
+                                    "value": "stress-related-to-other-life-events"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Pre-existing psychiatric condition (e.g. major depression, bipolar disorder, schizophrenia, etc)",
+                                        "fr": ""
+                                    },
+                                    "value": "pre-existing-psychiatric-condition"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other medical illness",
+                                        "fr": ""
+                                    },
+                                    "value": "other-medical-illness"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "17-mood-symptoms-prescribed-medications",
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "15-experienced-changes-to-mood-since-diagnosis",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": ["yes"]
+                                }
+                            },
+                            "textContent": {
+                                "en": "Has your healthcare team prescribed any medications for your mood symptoms?",
+                                "fr": ""
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": ""
+                                    },
+                                    "value": "yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": ""
+                                    },
+                                    "value": "no"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "18-first-learned-mood-changes-are-symptoms-of-PD",
+                            "validation": {
+                                "required": true
+                            },
+                            "textContent": {
+                                "en": "<b>When</b> did you first learn that mood changes are part of the symptoms of Parkinson''s disease?",
+                                "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "I did not know anything about cognitive changes in PD before filling out this survey",
+                                        "fr": ""
+                                    },
+                                    "value": "didnt-know-before-doing-survey"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Before PD diagnosis (I already knew about PD and its symptoms before I received my diagnosis)",
+                                        "fr": ""
+                                    },
+                                    "value": "before-pd-diagnosis"
+                                },
+                                {
+                                    "label": {
+                                        "en": "At the time of PD diagnosis; it was discussed by the medical team",
+                                        "fr": ""
+                                    },
+                                    "value": "at-the-time-of-PD-diagnosis"
+                                },
+                                {
+                                    "label": {
+                                        "en": "After my diagnosis of PD because I started to learn about the disease",
+                                        "fr": ""
+                                    },
+                                    "value": "after-my-diagnosis"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Only once I started to experience cognitive changes myself",
+                                        "fr": ""
+                                    },
+                                    "value": "only-after-experiencing-cognitive-changes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": ""
+                                    },
+                                    "value": "other"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "19-how-i-learned-mood-changes-are-symptoms-of-PD",
+                            "textContent": {
+                                "en": "<b>How</b> did you first learn that mood changes are part of the symptoms of Parkinson''s disease? Please select all that apply",
+                                "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            },
+                            "allowMultipleSelections": true,
+                            "validation": {
+                                "required": true
+                            },
+                            "actions": {
+                                "clearOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"],
+                                "onlyDisableOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"]
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "By doing this survey",
+                                        "fr": ""
+                                    },
+                                    "value": "doing-this-survey"
+                                },
+                                {
+                                    "label": {
+                                        "en": "My physician",
+                                        "fr": ""
+                                    },
+                                    "value": "my-physician"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other health care worker (e.g. occupational therapist, nurse)",
+                                        "fr": ""
+                                    },
+                                    "value": "other-health-care-worker"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prined materials from clinic",
+                                        "fr": ""
+                                    },
+                                    "value": "printed-materials-from-clinic"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Information provided by foundations (e.g. webinar, printed materials)",
+                                        "fr": ""
+                                    },
+                                    "value": "info-provided-by-foundations"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Support groups",
+                                        "fr": ""
+                                    },
+                                    "value": "support-groups"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Social media",
+                                        "fr": ""
+                                    },
+                                    "value": "social-media"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Friends/family doing research",
+                                        "fr": ""
+                                    },
+                                    "value": "friends-or-family-doing-research"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": ""
+                                    },
+                                    "value": "other"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "20-most-helpful-to-learn-mood-changes-are-part-of-symptoms-of-pd",
+                            "validation": {
+                                "required": true
+                            },
+                            "indent": 1,
+                            "textContent": {
+                                "en": "Which <b>ONE</b> of the following items was the <b>MOST</b> helpful in learning that mood changes are part of the symptoms of Parkinson''s disease? Please select the best option.",
+                                "fr": ""
+                            },
+                            "allowMultipleSelections": false,
+                            "condition": {
+                                "dependsOnKey": "19-how-i-learned-mood-changes-are-symptoms-of-PD",
+                                "doAction": {
+                                    "onlyHideWhenEmpty": true,
+                                    "hideWhenValuesSelected": [ "not-sure", "prefer-not-to-answer" ],
+                                    "populateResultsBasedOnSelectedValues": true
+                                }
+                            },
+                            "options": []
+                        },
+                        {
+                            "questionType": "displayText",
+                            "key": "displayText5",
+                            "condition": {
+                                "dependsOnKey": "15-experienced-changes-to-mood-since-diagnosis",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": ["yes"]
+                                }
+                            },
+                            "title": {
+                                "en": "In this section we want to know how you think that Parkinson''s disease and its associated symptoms affect the way that other people see you. You told us earlier that you have changes to your mood. Please consider these mood symptoms and answer the following questions. <br /><br />Because of my <b>mood symptoms...</b>",
+                                "fr": ""
+                            }
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "21a-mood-people-seem-uncomfortable",
+                            "textContent": {
+                                "en": "Some people seem uncomfortable with me",
+                                "fr": ""
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "15-experienced-changes-to-mood-since-diagnosis",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": ["yes"]
+                                }
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Never",
+                                        "fr": ""
+                                    },
+                                    "value": "never"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sometimes",
+                                        "fr": ""
+                                    },
+                                    "value": "sometimes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Always",
+                                        "fr": ""
+                                    },
+                                    "value": "always"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "21b-mood-people-are-avoiding-me",
+                            "textContent": {
+                                "en": "Some people are avoiding me",
+                                "fr": ""
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "15-experienced-changes-to-mood-since-diagnosis",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": ["yes"]
+                                }
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Never",
+                                        "fr": ""
+                                    },
+                                    "value": "never"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sometimes",
+                                        "fr": ""
+                                    },
+                                    "value": "sometimes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Always",
+                                        "fr": ""
+                                    },
+                                    "value": "always"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "21c-mood-i-feel-embarrassed-in-social-situations",
+                            "textContent": {
+                                "en": "I feel embarrassed in social situations",
+                                "fr": ""
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "15-experienced-changes-to-mood-since-diagnosis",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": ["yes"]
+                                }
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Never",
+                                        "fr": ""
+                                    },
+                                    "value": "never"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sometimes",
+                                        "fr": ""
+                                    },
+                                    "value": "sometimes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Always",
+                                        "fr": ""
+                                    },
+                                    "value": "always"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "21d-mood-i-feel-left-out",
+                            "textContent": {
+                                "en": "I feel left out of things",
+                                "fr": ""
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "15-experienced-changes-to-mood-since-diagnosis",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": ["yes"]
+                                }
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Never",
+                                        "fr": ""
+                                    },
+                                    "value": "never"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sometimes",
+                                        "fr": ""
+                                    },
+                                    "value": "sometimes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Always",
+                                        "fr": ""
+                                    },
+                                    "value": "always"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "21e-mood-burden-to-others",
+                            "textContent": {
+                                "en": "I worry that I am a burden to others",
+                                "fr": ""
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "15-experienced-changes-to-mood-since-diagnosis",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": ["yes"]
+                                }
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Never",
+                                        "fr": ""
+                                    },
+                                    "value": "never"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sometimes",
+                                        "fr": ""
+                                    },
+                                    "value": "sometimes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Always",
+                                        "fr": ""
+                                    },
+                                    "value": "always"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "divider",
+                            "key": "divider3",
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            }
+                        },
+                        {
+                            "questionType": "displayText",
+                            "key": "displayText18",
+                            "title": {
+                                "en": "Motor",
+                                "fr": ""
+                            },
+                            "styles": {
+                                "title-font-size": "lg"
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            }
+                        },
+                        {
+                            "questionType": "displayText",
+                            "key": "displayText14",
+                            "title": {
+                                "en": "In this last section, we are asking about the <b>motor</b> symptoms of Parkinson''s disease, which can include tremor, stiffness, slowness, difficulty walking, poor balance, falls, loss of dexterity, difficulty with activities such as dressing, cooking or eating, etc.",
+                                "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            }
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "22-experienced-motor-symptoms-since-diagnosis",
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            },
+                            "textContent": {
+                                "en": "Have you experienced motor symptoms since your diagnosis with Parkinson''s disease?",
+                                "fr": ""
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": ""
+                                    },
+                                    "value": "yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": ""
+                                    },
+                                    "value": "no"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "displayText",
+                            "key": "displayText19",
+                            "title": {
+                                "en": "In this section, we want to know how you think that Parkinson''s disease and its associated symptoms affect the way that other people see you. You told us earlier that you experienced motor symptoms. Please consider your motor symptoms and tell us how often you experience the following:<br /><br />Because of my <b>motor</b> symptoms...",
+                                "fr": ""   
+                            },
+                            "condition": {
+                                "dependsOnKey": "22-experienced-motor-symptoms-since-diagnosis",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            }
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "23a-motor-people-seem-uncomfortable",
+                            "textContent": {
+                                "en": "Some people seem uncomfortable with me",
+                                "fr": ""
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "22-experienced-motor-symptoms-since-diagnosis",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": ["yes"]
+                                }
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Never",
+                                        "fr": ""
+                                    },
+                                    "value": "never"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sometimes",
+                                        "fr": ""
+                                    },
+                                    "value": "sometimes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Always",
+                                        "fr": ""
+                                    },
+                                    "value": "always"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "23b-motor-people-are-avoiding-me",
+                            "textContent": {
+                                "en": "Some people are avoiding me",
+                                "fr": ""
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "22-experienced-motor-symptoms-since-diagnosis",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": ["yes"]
+                                }
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Never",
+                                        "fr": ""
+                                    },
+                                    "value": "never"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sometimes",
+                                        "fr": ""
+                                    },
+                                    "value": "sometimes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Always",
+                                        "fr": ""
+                                    },
+                                    "value": "always"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "23c-motor-i-feel-embarrassed-in-social-situations",
+                            "textContent": {
+                                "en": "I feel embarrassed in social situations",
+                                "fr": ""
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "22-experienced-motor-symptoms-since-diagnosis",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": ["yes"]
+                                }
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Never",
+                                        "fr": ""
+                                    },
+                                    "value": "never"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sometimes",
+                                        "fr": ""
+                                    },
+                                    "value": "sometimes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Always",
+                                        "fr": ""
+                                    },
+                                    "value": "always"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "23d-motor-i-feel-left-out",
+                            "textContent": {
+                                "en": "I feel left out of things",
+                                "fr": ""
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "22-experienced-motor-symptoms-since-diagnosis",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": ["yes"]
+                                }
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Never",
+                                        "fr": ""
+                                    },
+                                    "value": "never"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sometimes",
+                                        "fr": ""
+                                    },
+                                    "value": "sometimes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Always",
+                                        "fr": ""
+                                    },
+                                    "value": "always"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "23e-motor-burden-to-others",
+                            "textContent": {
+                                "en": "I worry that I am a burden to others",
+                                "fr": ""
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "22-experienced-motor-symptoms-since-diagnosis",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": ["yes"]
+                                }
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Never",
+                                        "fr": ""
+                                    },
+                                    "value": "never"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sometimes",
+                                        "fr": ""
+                                    },
+                                    "value": "sometimes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Always",
+                                        "fr": ""
+                                    },
+                                    "value": "always"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "divider",
+                            "key": "divider8",
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            }
+                        },
+                        {
+                            "questionType": "displayText",
+                            "key": "displayText6",
+                            "title": {
+                                "en": "Your expectations about the symptoms of Parkinson''s disease.",
+                                "fr": ""
+                            },
+                            "styles": {
+                                "title-font-size": "lg"
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            }
+                        },
+                        {
+                            "questionType": "displayText",
+                            "key": "displayText7",
+                            "title": {
+                                "en": "In this section, we are interested in finding out about how you <i>expected</i> that Parkinson''s disease <i>would</i> affect you (e.g. based on what your medical team had told you, what you have read about PD, or how you have seen PD depicted in the media/culture), compared to how it <i>is</i> affecting you.",
+                                "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            }
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "24-how-experience-of-thinking-changes-compares-to-expected",
+                            "validation": {
+                                "required": true
+                            },
+                            "textContent": {
+                                "en": "How does your experience of changes to your thinking (or absence of any changes) since your diagnosis of Parkinson''s disease compare to the thinking changes you <i>expected</i> would occur as a result of having Parkinson''s disease?",
+                                "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "This is exactly what I expected",
+                                        "fr": ""
+                                    },
+                                    "value": "exactly-what-i-expected"
+                                },
+                                {
+                                    "label": {
+                                        "en": "This is not as bad as I thought it would be",
+                                        "fr": ""
+                                    },
+                                    "value": "not-as-bad-as-i-thought"
+                                },
+                                {
+                                    "label": {
+                                        "en": "I was expecting some changes to my thinking, but this is worse than I thought it would be",
+                                        "fr": ""
+                                    },
+                                    "value": "worse-than-i-thought"
+                                },
+                                {
+                                    "label": {
+                                        "en": "I didn''t know about the possibility of developing changes to my thinking",
+                                        "fr": ""
+                                    },
+                                    "value": "didnt-know-changes-to-thinking-possible"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": ""
+                                    },
+                                    "value": "other"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "25-how-experience-of-mood-symptoms-compares-to-expected",
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            },
+                            "textContent": {
+                                "en": "How does your experience of mood symptoms since your diagnosis of Parkinson''s disease compare to the mood symptoms you <i>expected</i> would occur as a result of having Parkinson''s disease?",
+                                "fr": ""
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "This is exactly what I expected",
+                                        "fr": ""
+                                    },
+                                    "value": "exactly-what-i-expected"
+                                },
+                                {
+                                    "label": {
+                                        "en": "This is not as bad as I thought it would be",
+                                        "fr": ""
+                                    },
+                                    "value": "not-as-bad-as-i-thought"
+                                },
+                                {
+                                    "label": {
+                                        "en": "I was expecting some mood symptoms, but this is worse than I thought it would be",
+                                        "fr": ""
+                                    },
+                                    "value": "worse-than-i-thought"
+                                },
+                                {
+                                    "label": {
+                                        "en": "I didn''t know about the possibility of developing mood symptoms",
+                                        "fr": ""
+                                    },
+                                    "value": "didnt-know-changes-to-mood-possible"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": ""
+                                    },
+                                    "value": "other"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "divider",
+                            "key": "divider4",
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            }
+                        },
+                        {
+                            "questionType": "displayText",
+                            "key": "displayText8",
+                            "title": {
+                                "en": "What you know about Parkinson''s disease",
+                                "fr": ""
+                            },
+                            "styles": {
+                                "title-font-size": "lg"
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            }
+                        },
+                        {
+                            "questionType": "displayText",
+                            "key": "displayText9",
+                            "title": {
+                                "en": "In this section, we are interested in finding out what you know about Parkinson''s disease. The point here is not to test you, but rather to get an idea of how well health care teams inform patients about their condition. Later we will be asking you about what you <i>want to know about PD</i>",
+                                "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            }
+                        },
+                        {
+                            "questionType": "slider",
+                            "textContent": {
+                                "en": "Dementia: As people progress with PD, what percentage of people do you think will eventually develop <b>dementia</b> due to Parkinson''s disease? Dementia refers to changes to thinking that are severe enough to cause a partial or a total loss of independence. <br />If you believe a few people with PD develop dementia, choose a low number. Choose a high number if you believe more people with PD eventually develop dementia.",
+                                "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "26-percentage-develops-dementia",
+                            "legend": [ 
+                                {
+                                    "en": "0%: No one with PD develops dementia eventually",
+                                    "fr": ""
+                                },
+                                {
+                                    "en": "100%: Everyone with PD develops dementia",
+                                    "fr": ""
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "slider",
+                            "textContent": {
+                                "en": "Thinking changes: What percentage of people do you think will eventually develop <b>any degree of changes to their thinking</b> due to Parkinson''s disease? We are referring to any changes in memory, concentration, organization, orientation, or any other changes to thinking, whether mild or severe, that are sufficient to be noted by the individual or by their loved ones. These changes could be so mild that they don''t affect everyday life, to so severe that they lead to loss of independence and dementia. <br />(The percentage you provide here should be at least as high as the number you entered in the last question).",
+                                "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "27-percentage-develops-thinking-changes",
+                            "legend": [ 
+                                {
+                                    "en": "0%: No one with PD develops any degree of thinking changes",
+                                    "fr": ""
+                                },
+                                {
+                                    "en": "100%: Everyone with PD develops some degree of thinking changes",
+                                    "fr": ""
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "28-treatment-for-cognitive-changes-involves",
+                            "textContent": {
+                                "en": "The treatment for cognitive changes in Parkinson''s disease involves: (please select all that apply)",
+                                "fr": ""
+                            },
+                            "allowMultipleSelections": true,
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            },
+                            "actions": {
+                                "clearOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"],
+                                "onlyDisableOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"]
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Medication to cure the cognitive changes, i.e. to permanently reverse the cognitive changes",
+                                        "fr": ""
+                                    },
+                                    "value": "medication-to-cure-cognitive-changes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Medication to alleviate the symptoms of cognitive changes, i.e. to reduce their severity",
+                                        "fr": ""
+                                    },
+                                    "value": "medication-to-alleviate-cognitive-change-symptoms"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No medications exist, but therapies that do not involve medications (e.g. occupational therapy) can help cope with the changes",
+                                        "fr": ""
+                                    },
+                                    "value": "no-medications-exist-but-therapies-can-help-cope"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Nothing at all can be done for the cognitive changes in PD",
+                                        "fr": ""
+                                    },
+                                    "value": "nothing-can-be-done"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": ""
+                                    },
+                                    "value": "other"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "slider",
+                            "textContent": {
+                                "en": "Mood symptoms: As people progress with PD, what percentage of people will, at some point, experience changes to their mood due to Parkinson''s disease? Mood symptoms include depression, anxiety, excessive worrying, loss of motivation, paranoia, etc.",
+                                "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "29-percentage-develops-mood-changes",
+                            "legend": [ 
+                                {
+                                    "en": "0%: No one with PD develops any degree of mood symptoms",
+                                    "fr": ""
+                                },
+                                {
+                                    "en": "100%: Everyone with PD develops some degree of mood symptoms",
+                                    "fr": ""
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "30-treatment-of-mood-symptoms-involves",
+                            "textContent": {
+                                "en": "The treatment of mood symptoms in Parkinson''s disease involves: (please select all that apply)",
+                                "fr": ""
+                            },
+                            "allowMultipleSelections": true,
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            },
+                            "actions": {
+                                "clearOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"],
+                                "onlyDisableOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"]
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Medication to cure the mood symptoms, i.e. to permanently reverse the mood symptoms",
+                                        "fr": ""
+                                    },
+                                    "value": "medication-to-cure-mood-symptoms"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Medication to alleviate the mood symptoms",
+                                        "fr": ""
+                                    },
+                                    "value": "medication-to-alleviate-mood-symptoms"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No medications exist, but therapy that does not involve medications (e.g. talk therapy) can help cope with or reduce the symptoms",
+                                        "fr": ""
+                                    },
+                                    "value": "no-medications-exist-but-therapies-can-help-cope"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Nothing at all can be done for the mood symptoms in PD",
+                                        "fr": ""
+                                    },
+                                    "value": "nothing-can-be-done"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": ""
+                                    },
+                                    "value": "other"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "divider",
+                            "key": "divider5",
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            }
+                        },
+                        {
+                            "questionType": "displayText",
+                            "key": "displayText10",
+                            "title": {
+                                "en": "About your interaction with the healthcare team",
+                                "fr": ""
+                            },
+                            "styles": {
+                                "title-font-size": "lg"
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            }
+                        },
+                        {
+                            "questionType": "displayText",
+                            "key": "displayText11",
+                            "title": {
+                                "en": "In this section we are interested in finding out how much information you receive from your healthcare team and whether you are satisfied with your interactions with the healthcare team.",
+                                "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            }
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "31-how-often-thinking-changes-discussed",
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            },
+                            "textContent": {
+                                "en": "How often do you discuss whether you''ve experienced changes to your thinking in your visits?",
+                                "fr": ""
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Each visit",
+                                        "fr": ""
+                                    },
+                                    "value": "each-visit"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Only when I bring it up",
+                                        "fr": ""
+                                    },
+                                    "value": "only-when-i-bring-it-up"
+                                },
+                                {
+                                    "label": {
+                                        "en": "My healthcare team occasionally brings it up",
+                                        "fr": ""
+                                    },
+                                    "value": "my-healthcare-team-occasionally-brings-it-up"
+                                },
+                                {
+                                    "label": {
+                                        "en": "I have never discussed this with my healthcare team",
+                                        "fr": ""
+                                    },
+                                    "value": "never-discussed-this-with-my-healthcare-team"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": ""
+                                    },
+                                    "value": "other"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "32-time-spent-discussing-thinking-changes-sufficient",
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            },
+                            "textContent": {
+                                "en": "Do you think the time you spend with your healthcare team discussing your thinking is sufficient?",
+                                "fr": ""
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": ""
+                                    },
+                                    "value": "yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": ""
+                                    },
+                                    "value": "no"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "33-how-often-mood-symptoms-discussed",
+                            "validation": {
+                                "required": true
+                            },
+                            "textContent": {
+                                "en": "How often do you discuss your mood symptoms in your visits?",
+                                "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Each visit",
+                                        "fr": ""
+                                    },
+                                    "value": "each-visit"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Only when I bring it up",
+                                        "fr": ""
+                                    },
+                                    "value": "only-when-i-bring-it-up"
+                                },
+                                {
+                                    "label": {
+                                        "en": "My healthcare team occasionally brings it up",
+                                        "fr": ""
+                                    },
+                                    "value": "my-healthcare-team-occasionally-brings-it-up"
+                                },
+                                {
+                                    "label": {
+                                        "en": "I have never discussed this with my healthcare team",
+                                        "fr": ""
+                                    },
+                                    "value": "never-discussed-this-with-my-healthcare-team"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": ""
+                                    },
+                                    "value": "other"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "34-time-spent-discussing-mood-symptoms-sufficient",
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            },
+                            "textContent": {
+                                "en": "Do you think the time you spend with your healthcare team discussing mood symptoms is sufficient?",
+                                "fr": ""
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": ""
+                                    },
+                                    "value": "yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": ""
+                                    },
+                                    "value": "no"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "35-care-partner-attending-medical-appointments-always-or-sometimes",
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            },
+                            "textContent": {
+                                "en": "Do you have a care partner who attends medical appointments with you some or all of the time?",
+                                "fr": ""
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": ""
+                                    },
+                                    "value": "yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": ""
+                                    },
+                                    "value": "no"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "35a-care-partner-sufficiently-involved-in-medical-team-conversations",
+                            "validation": {
+                                "required": true
+                            },
+                            "indent": 1,
+                            "textContent": {
+                                "en": "Do you find that your care partner is sufficiently involved in the conversations with the medical team?",
+                                "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "care-partner-attending-medical-appointments-always-or-sometimes",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": ["yes"]
+                                }
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": ""
+                                    },
+                                    "value": "yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No because they can''t attend often enough",
+                                        "fr": ""
+                                    },
+                                    "value": "no-they-cant-attend-often-enough"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No because the medical team does not include them enough in the discussion",
+                                        "fr": ""
+                                    },
+                                    "value": "no-medical-team-doesnt-include-them"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No because they prefer not to be involved in the discussions",
+                                        "fr": ""
+                                    },
+                                    "value": "no-they-prefer-not-to-be-involved"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No because I prefer them not to be involved in the discussions",
+                                        "fr": ""
+                                    },
+                                    "value": "no-i-prefer-them-not-to-be-involved"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": ""
+                                    },
+                                    "value": "other"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "36-i-view-thinking-and-mood-symptoms-i-experience",
+                            "textContent": {
+                                "en": "Since my time of PD diagnosis, I view the thinking and mood symptoms that I experience as: (please choose all that apply)",
+                                "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            },
+                            "allowMultipleSelections": true,
+                            "validation": {
+                                "required": true
+                            },
+                            "actions": {
+                                "clearOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"],
+                                "onlyDisableOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"]
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "A part of life",
+                                        "fr": ""
+                                    },
+                                    "value": "a-part-of-life"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Related to Parkinson''s disease",
+                                        "fr": ""
+                                    },
+                                    "value": "related-to-parkinsons-disease"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Entirely under my control and therefore I would rather not discuss them with the medical team",
+                                        "fr": ""
+                                    },
+                                    "value": "under-my-control-so-i-prefer-not-discuss-them"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Without effective treatment, therefore I would rather not discuss them",
+                                        "fr": ""
+                                    },
+                                    "value": "without-effective-treatment"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Less important than my motor symptoms",
+                                        "fr": ""
+                                    },
+                                    "value": "less-important-than-my-motor-symptoms"
+                                },
+                                {
+                                    "label": {
+                                        "en": "More important than my motor symptoms",
+                                        "fr": ""
+                                    },
+                                    "value": "more-important-than-my-motor-symptoms"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Embarrassing",
+                                        "fr": ""
+                                    },
+                                    "value": "embarrassing"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": ""
+                                    },
+                                    "value": "other"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "divider",
+                            "key": "divider6",
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            }
+                        },
+                        {
+                            "questionType": "displayText",
+                            "key": "displayText12",
+                            "title": {
+                                "en": "Understanding what you would like to know",
+                                "fr": ""
+                            },
+                            "styles": {
+                                "title-font-size": "lg"
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            }
+                        },
+                        {
+                            "questionType": "displayText",
+                            "key": "displayText13",
+                            "title": {
+                                "en": "In this section, we are interested in finding out how you <i>would ideally</i> like the different aspects of Parkinson''s disease to be discussed with you",
+                                "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            }
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "37-value-discussing-cognitive-and-mood-symptoms",
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            },
+                            "actions": {
+                                "clearOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"],
+                                "onlyDisableOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"]
+                            },
+                            "textContent": {
+                                "en": "<b>What</b> is the value to you of discussing your cognitive and mood symptoms with your medical team? Please choose all that apply:",
+                                "fr": ""
+                            },
+                            "allowMultipleSelections": true,
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "It is helpful to talk about the symptoms and have them validated",
+                                        "fr": ""
+                                    },
+                                    "value": "helpful-to-talk-about-symptoms-and-have-them-validated"
+                                },
+                                {
+                                    "label": {
+                                        "en": "It is helpful to talk about the symptoms so that they can be treated",
+                                        "fr": ""
+                                    },
+                                    "value": "helpful-to-talk-about-symptoms-so-that-they-can-be-treated"
+                                },
+                                {
+                                    "label": {
+                                        "en": "It is helpful to talk about these symptoms in front of my caregiver so that they have a better understanding of what I''m going through",
+                                        "fr": ""
+                                    },
+                                    "value": "helpful-to-talk-about-symptoms-in-front-of-my-caregiver"
+                                },
+                                {
+                                    "label": {
+                                        "en": "It is helpful for the medical team to hear my caregiver''s perspective on these issues",
+                                        "fr": ""
+                                    },
+                                    "value": "helpful-for-medical-team-to-hear-my-caregivers-perspective"
+                                },
+                                {
+                                    "label": {
+                                        "en": "It is not useful; I would prefer to focus on other symptoms of Parkinson''s disease",
+                                        "fr": ""
+                                    },
+                                    "value": "not-useful-id-prefer-to-focus-on-other-symptoms"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": ""
+                                    },
+                                    "value": "other"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "38-want-to-be-told-of-possibility-of-developing-thinking-mood-symptoms-at-time-of-diagnosis",
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            },
+                            "textContent": {
+                                "en": "Ideally, would you have wanted to be told about the <b><i>possibility</i></b> of developing thinking and mood symptoms as part of Parkinson''s disease <b>at the time of your diagnosis</b>?",
+                                "fr": ""
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Yes, I think it''s important to be informed about the possibility of developing these symptoms, even if I was not experiencing them yet",
+                                        "fr": ""
+                                    },
+                                    "value": "yes-important-to-be-informed-even-before-experiencing-symptoms"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No, I would have preferred to wait until I develop the symptoms before being told about their link to Parkinson''s disease",
+                                        "fr": ""
+                                    },
+                                    "value": "no-preferred-to-wait-until-i-develop-symptoms"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": ""
+                                    },
+                                    "value": "other"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "displayText",
+                            "key": "displayText15",
+                            "title": {
+                                "en": "Thank you for your participation!",
+                                "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyHideWhenEmpty": true
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }'
+WHERE id = 86;
