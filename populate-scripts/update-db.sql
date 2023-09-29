@@ -29584,7 +29584,7 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "neurologist-following-you-for-parkinsons",
+                            "key": "1-diagnosed-with-parkinsons",
                             "allowMultipleSelections": false,
                             "options": [
                                 {
@@ -29603,7 +29603,7 @@ UPDATE tasks SET
                                 }
                             ],
                             "textContent": {
-                                "en": "Do you have a neurologist following you for your Parkinson''s disease?",
+                                "en": "Have you been diagnosed with Parkinson''s disease?",
                                 "fr": ""
                             },
                             "validation": {
@@ -29611,70 +29611,102 @@ UPDATE tasks SET
                             }
                         },
                         {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "2-parkinsons-currently-treated-by",
+                            "allowMultipleSelections": true,
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            },
+                            "textContent": {
+                                "en": "My Parkinson''s disease is currently being treated by a...",
+                                "fr": ""
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Movement Disorder Specialist",
+                                        "fr": ""
+                                    },
+                                    "value": "movement-disorder-specialist"
+                                },
+                                {
+                                    "label": {
+                                        "en": "General Neurologist",
+                                        "fr": ""
+                                    },
+                                    "value": "general-neurologist"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Family Doctor/Primary Care Doctor",
+                                        "fr": ""
+                                    },
+                                    "value": "family-doctor-primary-care-doctor"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Nurse Practitioner/Physician Assistant",
+                                        "fr": ""
+                                    },
+                                    "value": "nurse-practitioner-physician-assistant"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": ""
+                                    },
+                                    "value": "other"
+                                }
+                            ]
+                        },
+                        {
                             "questionType": "displayText",
                             "key": "displayText2",
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            },
                             "title": {
-                                "en": "Throughout the questionnaire, we will be making reference to your \\"<b>healthcare team</b>.\\" Your <b>healthcare team</b> can include any of the health professionals that assist in the management of your Parkinson''s disease, such as neurologists, nurses, occupational therapists, social workers, primary care physicians etc.",
+                                "en": "Throughout the questionnaire, we will be making reference to your \\"<b>healthcare team</b>.\\" Your <b>healthcare team</b> can include any of the health professionals that assist in the management of your Parkinson''s disease, such as neurologists, nurses, occupational therapists, social workers, primary care physicians, etc.",
                                 "fr": ""
                             }
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "symptoms-experienced",
+                            "key": "4-movement-bodily-function-symptoms-experienced",
                             "allowMultipleSelections": true,
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            },
                             "textContent": {
-                                "en": "Which of the following Parkinson''s disease symptoms do you currently experience? Please select all that apply.",
+                                "en": "Which of the following Parkinson''s disease symptoms <b>related to movement and bodily function</b> do you currently experience? Please select all that apply.",
                                 "fr": ""
                             },
                             "validation": {
                                 "required": true
                             },
                             "actions": {
-                                "clearOtherOptionsWhenValueSelected": ["none-of-the-above"],
-                                "onlyDisableOtherOptionsWhenValueSelected": ["none-of-the-above"]
+                                "clearOtherOptionsWhenValueSelected": ["none-of-the-above", "not-sure", "prefer-not-to-answer"],
+                                "onlyDisableOtherOptionsWhenValueSelected": ["none-of-the-above", "not-sure", "prefer-not-to-answer"]
                             },
                             "options": [
-                                {
-                                    "label": {
-                                        "en": "Difficulty with decisions or planning", 
-                                        "fr": ""
-                                    },
-                                    "value": "difficulty-with-decisions-or-planning"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Slowing of mental or information processing",
-                                        "fr": ""
-                                    },
-                                    "value": "slowing-of-mental-or-information-processing"
-                                },
                                 {
                                     "label": {
                                         "en": "Slowness of movement",
                                         "fr": ""
                                     },
                                     "value": "slowness-of-movement"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Memory Problems",
-                                        "fr": ""
-                                    },
-                                    "value": "memory-problems"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Difficulty with expressing your thoughts (e.g. word-finding difficulties)",
-                                        "fr": ""
-                                    },
-                                    "value": "difficulty-with-expressing-your-thoughts"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Difficulty concentrating",
-                                        "fr": ""
-                                    },
-                                    "value": "difficulty-concentrating"
                                 },
                                 {
                                     "label": {
@@ -29710,20 +29742,6 @@ UPDATE tasks SET
                                         "fr": ""
                                     },
                                     "value": "walking-problems"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Depression or sadness",
-                                        "fr": ""
-                                    },
-                                    "value": "depression-or-sadness"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Anxiety or excessive worrying",
-                                        "fr": ""
-                                    },
-                                    "value": "anxiety-or-excessive-worrying"
                                 },
                                 {
                                     "label": {
@@ -29783,6 +29801,164 @@ UPDATE tasks SET
                                 },
                                 {
                                     "label": {
+                                        "en": "Dyskinesias (e.g. unintentional movements related to the Parkinson''s medications)",
+                                        "fr": ""
+                                    },
+                                    "value": "dyskinesias"
+                                },
+                                {
+                                    "label": {
+                                        "en": "None of the above",
+                                        "fr": ""
+                                    },
+                                    "value": "none-of-the-above"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "matrix",
+                            "key": "5-rating",
+                            "textContent": {
+                                "en": "In the prior question, you selected the following Parkinson''s symptoms because you experience them currently. Please rate how you feel these symptoms impact your quality of life.",
+                                "fr": ""
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "legendTitle": "Impact",
+                            "condition": {
+                                "dependsOnKey": "4-movement-bodily-function-symptoms-experienced",
+                                "doAction": {
+                                    "onlyHideWhenEmpty": true,
+                                    "hideWhenValuesSelected": [ "none-of-the-above", "not-sure", "prefer-not-to-answer" ],
+                                    "populateResultsBasedOnSelectedValues": true
+                                }
+                            },
+                            "legend": [
+                                {
+                                    "label": {
+                                        "en": "Not at all (0)",
+                                        "fr": ""
+                                    },
+                                    "value": "0"
+                                },
+                                {
+                                    "label": {
+                                        "en": "A little (1)",
+                                        "fr": ""
+                                    },
+                                    "value": "1"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Moderately (2)",
+                                        "fr": ""
+                                    },
+                                    "value": "2"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Quite a bit (3)",
+                                        "fr": ""
+                                    },
+                                    "value": "3"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Extremely (4)",
+                                        "fr": ""
+                                    },
+                                    "value": "4"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "6-thinking-mood-symptoms-experienced",
+                            "allowMultipleSelections": true,
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            },
+                            "textContent": {
+                                "en": "Which of the following Parkinson''s disease symptoms <b>related to thinking and mood</b> do you currently experience? Please select all that apply.",
+                                "fr": ""
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "actions": {
+                                "clearOtherOptionsWhenValueSelected": ["none-of-the-above", "not-sure", "prefer-not-to-answer"],
+                                "onlyDisableOtherOptionsWhenValueSelected": ["none-of-the-above", "not-sure", "prefer-not-to-answer"]
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Difficulty with decisions or planning", 
+                                        "fr": ""
+                                    },
+                                    "value": "difficulty-with-decisions-or-planning"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Slowing of mental or information processing",
+                                        "fr": ""
+                                    },
+                                    "value": "slowing-of-mental-or-information-processing"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Memory Problems",
+                                        "fr": ""
+                                    },
+                                    "value": "memory-problems"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Difficulty with expressing your thoughts (e.g. word-finding difficulties)",
+                                        "fr": ""
+                                    },
+                                    "value": "difficulty-with-expressing-your-thoughts"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Difficulty concentrating",
+                                        "fr": ""
+                                    },
+                                    "value": "difficulty-concentrating"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Depression or sadness",
+                                        "fr": ""
+                                    },
+                                    "value": "depression-or-sadness"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Anxiety or excessive worrying",
+                                        "fr": ""
+                                    },
+                                    "value": "anxiety-or-excessive-worrying"
+                                },
+                                {
+                                    "label": {
                                         "en": "Physical fatigue (e.g. exhaustion or tiredness of the body)",
                                         "fr": ""
                                     },
@@ -29832,23 +30008,30 @@ UPDATE tasks SET
                                 },
                                 {
                                     "label": {
-                                        "en": "Dyskinesias (e.g. unintentional movements related to the Parkinson''s medications)",
-                                        "fr": ""
-                                    },
-                                    "value": "dyskinesias"
-                                },
-                                {
-                                    "label": {
                                         "en": "None of the above",
                                         "fr": ""
                                     },
                                     "value": "none-of-the-above"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
                                 }
                             ]
                         },
                         {
                             "questionType": "matrix",
-                            "key": "rating",
+                            "key": "7-rating",
                             "textContent": {
                                 "en": "In the prior question, you selected the following Parkinson''s symptoms because you experience them currently. Please rate how you feel these symptoms impact your quality of life.",
                                 "fr": ""
@@ -29857,6 +30040,14 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "legendTitle": "Impact",
+                            "condition": {
+                                "dependsOnKey": "6-thinking-mood-symptoms-experienced",
+                                "doAction": {
+                                    "onlyHideWhenEmpty": true,
+                                    "hideWhenValuesSelected": [ "none-of-the-above", "not-sure", "prefer-not-to-answer" ],
+                                    "populateResultsBasedOnSelectedValues": true
+                                }
+                            },
                             "legend": [
                                 {
                                     "label": {
@@ -29893,45 +30084,64 @@ UPDATE tasks SET
                                     },
                                     "value": "4"
                                 }
-                            ],
-                            "condition": {
-                                "dependsOnKey": "symptoms-experienced",
-                                "doAction": {
-                                    "onlyHideWhenEmpty": true,
-                                    "hideWhenValuesSelected": [ "none-of-the-above" ],
-                                    "populateResultsBasedOnSelectedValues": true
-                                }
-                            }
+                            ]
                         },
                         {
                             "questionType": "divider",
-                            "key": "divider1"
+                            "key": "divider1",
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            }
                         },
                         {
                             "questionType": "displayText",
                             "key": "displayText2",
                             "title": {
-                                "en": "Cognition",
+                                "en": "Thinking",
                                 "fr": ""
+                            },
+                            "styles": {
+                                "title-font-size": "lg"
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
                             }
                         },
                         {
                             "questionType": "displayText",
                             "key": "displaytext16",
                             "title": {
-                                "en": "The following questions are aimed at understanding if, and how, Parkinson''s disease affects your <b>thinking</b>. <br /><br />Some examples of thinking problems might include:<br />&nbsp;&nbsp;&nbsp;&nbsp;- Memory: such as remembering what someone recently told you, familiar names, or upcoming events.<br />&nbsp;&nbsp;&nbsp;&nbsp;- Concentration: such as reading an article or book, or watching a television show or movie<br />&nbsp;&nbsp;&nbsp;&nbsp;- Organization: such as paying bills, managing medications, or organizing and completing a shopping list<br />&nbsp;&nbsp;&nbsp;&nbsp;- Making decisions and solving problems<br />&nbsp;&nbsp;&nbsp;&nbsp;- Orientation and spatial ability: such as driving or finding one''s way around an unfamiliar location<br />&nbsp;&nbsp;&nbsp;&nbsp;- Understanding language: such as making sense of conversations or finding words when talking",
+                                "en": "The following questions are aimed at understanding if, and how, Parkinson''s disease affects your <b>thinking</b>. <br /><br />Some examples of thinking problems might include:<br />&nbsp;&nbsp;&nbsp;&nbsp;- <u>Memory</u>: such as remembering what someone recently told you, familiar names, or upcoming events.<br />&nbsp;&nbsp;&nbsp;&nbsp;- <u>Concentration</u>: such as reading an article or book, or watching a television show or movie<br />&nbsp;&nbsp;&nbsp;&nbsp;- <u>Organization</u>: such as paying bills, managing medications, or organizing and completing a shopping list<br />&nbsp;&nbsp;&nbsp;&nbsp;- <u>Making decisions and solving problems</u><br />&nbsp;&nbsp;&nbsp;&nbsp;- <u>Orientation and spatial ability</u>: such as driving or finding one''s way around an unfamiliar location<br />&nbsp;&nbsp;&nbsp;&nbsp;- <u>Understanding language</u>: such as making sense of conversations or finding words when talking",
                                 "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
                             }
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "change-from-normal-abilities",
+                            "key": "8-change-from-normal-abilities",
                             "textContent": {
                                 "en": "Have you noticed that you are having more problems with thinking, that is a change from your normal abilities?",
                                 "fr": ""
                             },
                             "validation": {
                                 "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
                             },
                             "options": [
                                 {
@@ -29947,17 +30157,31 @@ UPDATE tasks SET
                                         "fr": ""
                                     },
                                     "value": "no"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
                                 }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "attribute-thinking-changes-to",
+                            "key": "9-attribute-thinking-changes-to",
                             "validation": {
                                 "required": true
                             },
                             "condition": {
-                                "dependsOnKey": "change-from-normal-abilities",
+                                "dependsOnKey": "8-change-from-normal-abilities",
                                 "doAction": {
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
@@ -29966,6 +30190,11 @@ UPDATE tasks SET
                                 "en": "What do you attribute your thinking changes to?",
                                 "fr": ""
                             },
+                            "actions": {
+                                "clearOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"],
+                                "onlyDisableOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"]
+                            },
+                            "indent": 1,
                             "allowMultipleSelections": true,
                             "options": [
                                 {
@@ -30005,23 +30234,31 @@ UPDATE tasks SET
                                 },
                                 {
                                     "label": {
-                                        "en": "Don''t know",
+                                        "en": "Not sure",
                                         "fr": ""
                                     },
-                                    "value": "dont-know"
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
                                 }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "most-attribute-thinking-changes-to",
+                            "key": "9a-most-attribute-thinking-changes-to",
                             "validation": {
                                 "required": true
                             },
                             "condition": {
-                                "dependsOnKey": "attribute-thinking-changes-to",
+                                "dependsOnKey": "9-attribute-thinking-changes-to",
                                 "doAction": {
                                     "onlyHideWhenEmpty": true,
+                                    "hideWhenValuesSelected": [ "not-sure", "prefer-not-to-answer" ],
                                     "populateResultsBasedOnSelectedValues": true
                                 }
                             },
@@ -30029,23 +30266,25 @@ UPDATE tasks SET
                                 "en": "What do you MOST attribute your thinking changes to?",
                                 "fr": ""
                             },
-                            "allowMultipleSelections": true,
+                            "indent": 1,
+                            "allowMultipleSelections": false,
                             "options": []
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "thinking-symptoms-prescribed-medications",
+                            "key": "10-thinking-symptoms-prescribed-medications",
                             "validation": {
                                 "required": true
                             },
+                            "indent": 1,
                             "textContent": {
                                 "en": "Has your healthcare team prescribed medications for your thinking symptoms?",
                                 "fr": ""
                             },
                             "condition": {
-                                "dependsOnKey": "attribute-thinking-changes-to",
+                                "dependsOnKey": "8-change-from-normal-abilities",
                                 "doAction": {
-                                    "onlyHideWhenEmpty": true
+                                    "onlyShowWhenValuesSelected": ["yes"]
                                 }
                             },
                             "options": [
@@ -30065,10 +30304,10 @@ UPDATE tasks SET
                                 },
                                 {
                                     "label": {
-                                        "en": "I don''t know",
+                                        "en": "Not sure",
                                         "fr": ""
                                     },
-                                    "value": "dont-know"
+                                    "value": "not-sure"
                                 },
                                 {
                                     "label": {
@@ -30081,13 +30320,19 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "first-learned-thinking-changes-are-symptoms-of-PD",
+                            "key": "11-first-learned-thinking-changes-are-symptoms-of-PD",
                             "validation": {
                                 "required": true
                             },
                             "textContent": {
                                 "en": "<b>When</b> did you first learn that thinking changes are part of the symptoms of PD?",
                                 "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
                             },
                             "options": [
                                 {
@@ -30150,10 +30395,16 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "how-i-learned-thinking-changes-are-symptoms-of-PD",
+                            "key": "12-how-i-learned-thinking-changes-are-symptoms-of-PD",
                             "textContent": {
                                 "en": "<b>How</b> did you first learn that thinking changes are part of the symptoms of PD? Please select all that apply",
                                 "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
                             },
                             "allowMultipleSelections": true,
                             "validation": {
@@ -30245,7 +30496,7 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "most-helpful-to-learn-thinking-changes-are-part-of-symptoms-of-pd",
+                            "key": "13-most-helpful-to-learn-thinking-changes-are-part-of-symptoms-of-pd",
                             "validation": {
                                 "required": true
                             },
@@ -30253,9 +30504,10 @@ UPDATE tasks SET
                                 "en": "Which <b>ONE</b> of the following items was the <b>MOST</b> helpful in learning that thinking changes are part of the symptoms of PD? Please select the best option.",
                                 "fr": ""
                             },
+                            "indent": 1,
                             "allowMultipleSelections": false,
                             "condition": {
-                                "dependsOnKey": "how-i-learned-thinking-changes-are-symptoms-of-PD",
+                                "dependsOnKey": "12-how-i-learned-thinking-changes-are-symptoms-of-PD",
                                 "doAction": {
                                     "onlyHideWhenEmpty": true,
                                     "hideWhenValuesSelected": [ "not-sure", "prefer-not-to-answer" ],
@@ -30268,19 +30520,19 @@ UPDATE tasks SET
                             "questionType": "displayText",
                             "key": "displayText3",
                             "condition": {
-                                "dependsOnKey": "change-from-normal-abilities",
+                                "dependsOnKey": "8-change-from-normal-abilities",
                                 "doAction": {
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
                             },
                             "title": {
-                                "en": "You told us earlier that you have noticed more problems with thinking, that is a change from your normal abilities. Please consider these symptoms affecting your thinking and answer the following questions. <br /><br />Because of my <b>thinking symptoms...</b>",
+                                "en": "In this section, we want to know how you think that Parkinson''s disease and its associated symptoms affect the way that other people see you. You told us earlier that you have noticed more problems with thinking, and that this is a change from your normal abilities. Please consider these symptoms affecting your thinking and answer the following questions. <br /><br />Because of my <b>thinking symptoms...</b>",
                                 "fr": ""
                             }
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "thinking-people-seem-uncomfortable",
+                            "key": "14a-thinking-people-seem-uncomfortable",
                             "textContent": {
                                 "en": "Some people seem uncomfortable with me",
                                 "fr": ""
@@ -30289,7 +30541,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "condition": {
-                                "dependsOnKey": "change-from-normal-abilities",
+                                "dependsOnKey": "8-change-from-normal-abilities",
                                 "doAction": {
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
@@ -30334,7 +30586,7 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "thinking-people-are-avoiding-me",
+                            "key": "14a-thinking-people-are-avoiding-me",
                             "textContent": {
                                 "en": "Some people are avoiding me",
                                 "fr": ""
@@ -30343,7 +30595,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "condition": {
-                                "dependsOnKey": "change-from-normal-abilities",
+                                "dependsOnKey": "8-change-from-normal-abilities",
                                 "doAction": {
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
@@ -30388,7 +30640,7 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "thinking-i-feel-embarrassed-in-social-situations",
+                            "key": "14a-thinking-i-feel-embarrassed-in-social-situations",
                             "textContent": {
                                 "en": "I feel embarrassed in social situations",
                                 "fr": ""
@@ -30397,7 +30649,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "condition": {
-                                "dependsOnKey": "change-from-normal-abilities",
+                                "dependsOnKey": "8-change-from-normal-abilities",
                                 "doAction": {
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
@@ -30442,7 +30694,7 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "thinking-i-feel-left-out",
+                            "key": "14a-thinking-i-feel-left-out",
                             "textContent": {
                                 "en": "I feel left out of things",
                                 "fr": ""
@@ -30451,7 +30703,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "condition": {
-                                "dependsOnKey": "change-from-normal-abilities",
+                                "dependsOnKey": "8-change-from-normal-abilities",
                                 "doAction": {
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
@@ -30496,7 +30748,7 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "thinking-burden-to-others",
+                            "key": "14a-thinking-burden-to-others",
                             "textContent": {
                                 "en": "I worry that I am a burden to others",
                                 "fr": ""
@@ -30505,7 +30757,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "condition": {
-                                "dependsOnKey": "change-from-normal-abilities",
+                                "dependsOnKey": "8-change-from-normal-abilities",
                                 "doAction": {
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
@@ -30550,7 +30802,13 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "divider",
-                            "key": "divider2"
+                            "key": "divider2",
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            }
                         },
                         {
                             "questionType": "displayText",
@@ -30560,7 +30818,13 @@ UPDATE tasks SET
                                 "fr": ""
                             },
                             "styles": {
-                                "text-content-font-size": "md"
+                                "title-font-size": "lg"
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
                             }
                         },
                         {
@@ -30569,17 +30833,29 @@ UPDATE tasks SET
                             "title": {
                                 "en": "We are using the term \\"mood\\" to refer to all emotional states, which can include happiness, sadness, hopelessness, depression, anger, fear, excessive worry, anxiety, irritability, loss of motivation, paranoia, difficulty controlling urges, compulsions, obsessions, etc. Please with Parkinson''s disease might experience mood changes for a variety of reasons. Some people notice very little or no changes at all, while others notice more important changes. These changes might be related or unrelated to the Parkinson''s disease. The following questions are aimed at understanding if, and how, you have experienced <b>mood changes</b> (whether related or unrelated to the Parkinson''s disease).",
                                 "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
                             }
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "experienced-changes-to-mood-since-diagnosis",
+                            "key": "15-experienced-changes-to-mood-since-diagnosis",
                             "validation": {
                                 "required": true
                             },
                             "textContent": {
                                 "en": "Have you experienced changes to your mood since your diagnosis with Parkinson''s disease",
                                 "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
                             },
                             "options": [
                                 {
@@ -30595,28 +30871,43 @@ UPDATE tasks SET
                                         "fr": ""
                                     },
                                     "value": "no"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
                                 }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "most-attribute-mood-changes-to",
+                            "key": "16-most-attribute-mood-changes-to",
                             "validation": {
                                 "required": true
                             },
                             "condition": {
-                                "dependsOnKey": "experienced-changes-to-mood-since-diagnosis",
+                                "dependsOnKey": "15-experienced-changes-to-mood-since-diagnosis",
                                 "doAction": {
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
                             },
+                            "indent": 1,
                             "textContent": {
-                                "en": "What do you MOST attribute the change to your mood to?",
+                                "en": "What do you MOST believe are the reasons for the change to your mood? Please select all that apply:",
                                 "fr": ""
                             },
                             "actions": {
-                                "onlyDisableOtherOptionsWhenValueSelected": ["prefer-not-to-answer", "dont-know"],
-                                "clearOtherOptionsWhenValueSelected": ["prefer-not-to-answer", "dont-know"]
+                                "onlyDisableOtherOptionsWhenValueSelected": ["prefer-not-to-answer", "not-sure"],
+                                "clearOtherOptionsWhenValueSelected": ["prefer-not-to-answer", "not-sure"]
                             },
                             "allowMultipleSelections": true,
                             "options": [
@@ -30664,10 +30955,10 @@ UPDATE tasks SET
                                 },
                                 {
                                     "label": {
-                                        "en": "Don''t know",
+                                        "en": "Not sure",
                                         "fr": ""
                                     },
-                                    "value": "dont-know"
+                                    "value": "not-sure"
                                 },
                                 {
                                     "label": {
@@ -30680,12 +30971,12 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "mood-symptoms-prescribed-medications",
+                            "key": "17-mood-symptoms-prescribed-medications",
                             "validation": {
                                 "required": true
                             },
                             "condition": {
-                                "dependsOnKey": "experienced-changes-to-mood-since-diagnosis",
+                                "dependsOnKey": "15-experienced-changes-to-mood-since-diagnosis",
                                 "doAction": {
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
@@ -30711,10 +31002,10 @@ UPDATE tasks SET
                                 },
                                 {
                                     "label": {
-                                        "en": "I don''t know",
+                                        "en": "Not sure",
                                         "fr": ""
                                     },
-                                    "value": "dont-know"
+                                    "value": "not-sure"
                                 },
                                 {
                                     "label": {
@@ -30727,13 +31018,19 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "first-learned-mood-changes-are-symptoms-of-PD",
+                            "key": "18-first-learned-mood-changes-are-symptoms-of-PD",
                             "validation": {
                                 "required": true
                             },
                             "textContent": {
                                 "en": "<b>When</b> did you first learn that mood changes are part of the symptoms of Parkinson''s disease?",
                                 "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
                             },
                             "options": [
                                 {
@@ -30796,10 +31093,16 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "how-i-learned-mood-changes-are-symptoms-of-PD",
+                            "key": "19-how-i-learned-mood-changes-are-symptoms-of-PD",
                             "textContent": {
                                 "en": "<b>How</b> did you first learn that mood changes are part of the symptoms of Parkinson''s disease? Please select all that apply",
                                 "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
                             },
                             "allowMultipleSelections": true,
                             "validation": {
@@ -30891,17 +31194,18 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "most-helpful-to-learn-mood-changes-are-part-of-symptoms-of-pd",
+                            "key": "20-most-helpful-to-learn-mood-changes-are-part-of-symptoms-of-pd",
                             "validation": {
                                 "required": true
                             },
+                            "indent": 1,
                             "textContent": {
                                 "en": "Which <b>ONE</b> of the following items was the <b>MOST</b> helpful in learning that mood changes are part of the symptoms of Parkinson''s disease? Please select the best option.",
                                 "fr": ""
                             },
                             "allowMultipleSelections": false,
                             "condition": {
-                                "dependsOnKey": "how-i-learned-mood-changes-are-symptoms-of-PD",
+                                "dependsOnKey": "19-how-i-learned-mood-changes-are-symptoms-of-PD",
                                 "doAction": {
                                     "onlyHideWhenEmpty": true,
                                     "hideWhenValuesSelected": [ "not-sure", "prefer-not-to-answer" ],
@@ -30914,22 +31218,19 @@ UPDATE tasks SET
                             "questionType": "displayText",
                             "key": "displayText5",
                             "condition": {
-                                "dependsOnKey": "experienced-changes-to-mood-since-diagnosis",
+                                "dependsOnKey": "15-experienced-changes-to-mood-since-diagnosis",
                                 "doAction": {
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
                             },
                             "title": {
-                                "en": "You told us earlier that you have changes to your mood. Please consider these mood symptoms and answer the following questions. <br /><br />Because of my <b>mood symptoms...</b>",
+                                "en": "In this section we want to know how you think that Parkinson''s disease and its associated symptoms affect the way that other people see you. You told us earlier that you have changes to your mood. Please consider these mood symptoms and answer the following questions. <br /><br />Because of my <b>mood symptoms...</b>",
                                 "fr": ""
-                            },
-                            "styles": {
-                                "text-content-font-size": "md"
                             }
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "mood-people-seem-uncomfortable",
+                            "key": "21a-mood-people-seem-uncomfortable",
                             "textContent": {
                                 "en": "Some people seem uncomfortable with me",
                                 "fr": ""
@@ -30938,7 +31239,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "condition": {
-                                "dependsOnKey": "experienced-changes-to-mood-since-diagnosis",
+                                "dependsOnKey": "15-experienced-changes-to-mood-since-diagnosis",
                                 "doAction": {
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
@@ -30983,7 +31284,7 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "mood-people-are-avoiding-me",
+                            "key": "21b-mood-people-are-avoiding-me",
                             "textContent": {
                                 "en": "Some people are avoiding me",
                                 "fr": ""
@@ -30992,7 +31293,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "condition": {
-                                "dependsOnKey": "experienced-changes-to-mood-since-diagnosis",
+                                "dependsOnKey": "15-experienced-changes-to-mood-since-diagnosis",
                                 "doAction": {
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
@@ -31037,7 +31338,7 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "mood-i-feel-embarrassed-in-social-situations",
+                            "key": "21c-mood-i-feel-embarrassed-in-social-situations",
                             "textContent": {
                                 "en": "I feel embarrassed in social situations",
                                 "fr": ""
@@ -31046,7 +31347,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "condition": {
-                                "dependsOnKey": "experienced-changes-to-mood-since-diagnosis",
+                                "dependsOnKey": "15-experienced-changes-to-mood-since-diagnosis",
                                 "doAction": {
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
@@ -31091,7 +31392,7 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "mood-i-feel-left-out",
+                            "key": "21d-mood-i-feel-left-out",
                             "textContent": {
                                 "en": "I feel left out of things",
                                 "fr": ""
@@ -31100,7 +31401,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "condition": {
-                                "dependsOnKey": "experienced-changes-to-mood-since-diagnosis",
+                                "dependsOnKey": "15-experienced-changes-to-mood-since-diagnosis",
                                 "doAction": {
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
@@ -31145,7 +31446,7 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "mood-burden-to-others",
+                            "key": "21e-mood-burden-to-others",
                             "textContent": {
                                 "en": "I worry that I am a burden to others",
                                 "fr": ""
@@ -31154,7 +31455,7 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "condition": {
-                                "dependsOnKey": "experienced-changes-to-mood-since-diagnosis",
+                                "dependsOnKey": "15-experienced-changes-to-mood-since-diagnosis",
                                 "doAction": {
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
@@ -31199,7 +31500,385 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "divider",
-                            "key": "divider3"
+                            "key": "divider3",
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            }
+                        },
+                        {
+                            "questionType": "displayText",
+                            "key": "displayText18",
+                            "title": {
+                                "en": "Motor",
+                                "fr": ""
+                            },
+                            "styles": {
+                                "title-font-size": "lg"
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            }
+                        },
+                        {
+                            "questionType": "displayText",
+                            "key": "displayText14",
+                            "title": {
+                                "en": "In this last section, we are asking about the <b>motor</b> symptoms of Parkinson''s disease, which can include tremor, stiffness, slowness, difficulty walking, poor balance, falls, loss of dexterity, difficulty with activities such as dressing, cooking or eating, etc.",
+                                "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            }
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "22-experienced-motor-symptoms-since-diagnosis",
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            },
+                            "textContent": {
+                                "en": "Have you experienced motor symptoms since your diagnosis with Parkinson''s disease?",
+                                "fr": ""
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": ""
+                                    },
+                                    "value": "yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": ""
+                                    },
+                                    "value": "no"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "displayText",
+                            "key": "displayText19",
+                            "title": {
+                                "en": "In this section, we want to know how you think that Parkinson''s disease and its associated symptoms affect the way that other people see you. You told us earlier that you experienced motor symptoms. Please consider your motor symptoms and tell us how often you experience the following:<br /><br />Because of my <b>motor</b> symptoms...",
+                                "fr": ""   
+                            },
+                            "condition": {
+                                "dependsOnKey": "22-experienced-motor-symptoms-since-diagnosis",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            }
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "23a-motor-people-seem-uncomfortable",
+                            "textContent": {
+                                "en": "Some people seem uncomfortable with me",
+                                "fr": ""
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "22-experienced-motor-symptoms-since-diagnosis",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": ["yes"]
+                                }
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Never",
+                                        "fr": ""
+                                    },
+                                    "value": "never"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sometimes",
+                                        "fr": ""
+                                    },
+                                    "value": "sometimes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Always",
+                                        "fr": ""
+                                    },
+                                    "value": "always"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "23b-motor-people-are-avoiding-me",
+                            "textContent": {
+                                "en": "Some people are avoiding me",
+                                "fr": ""
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "22-experienced-motor-symptoms-since-diagnosis",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": ["yes"]
+                                }
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Never",
+                                        "fr": ""
+                                    },
+                                    "value": "never"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sometimes",
+                                        "fr": ""
+                                    },
+                                    "value": "sometimes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Always",
+                                        "fr": ""
+                                    },
+                                    "value": "always"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "23c-motor-i-feel-embarrassed-in-social-situations",
+                            "textContent": {
+                                "en": "I feel embarrassed in social situations",
+                                "fr": ""
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "22-experienced-motor-symptoms-since-diagnosis",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": ["yes"]
+                                }
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Never",
+                                        "fr": ""
+                                    },
+                                    "value": "never"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sometimes",
+                                        "fr": ""
+                                    },
+                                    "value": "sometimes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Always",
+                                        "fr": ""
+                                    },
+                                    "value": "always"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "23d-motor-i-feel-left-out",
+                            "textContent": {
+                                "en": "I feel left out of things",
+                                "fr": ""
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "22-experienced-motor-symptoms-since-diagnosis",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": ["yes"]
+                                }
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Never",
+                                        "fr": ""
+                                    },
+                                    "value": "never"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sometimes",
+                                        "fr": ""
+                                    },
+                                    "value": "sometimes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Always",
+                                        "fr": ""
+                                    },
+                                    "value": "always"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "key": "23e-motor-burden-to-others",
+                            "textContent": {
+                                "en": "I worry that I am a burden to others",
+                                "fr": ""
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "22-experienced-motor-symptoms-since-diagnosis",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": ["yes"]
+                                }
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Never",
+                                        "fr": ""
+                                    },
+                                    "value": "never"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sometimes",
+                                        "fr": ""
+                                    },
+                                    "value": "sometimes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Always",
+                                        "fr": ""
+                                    },
+                                    "value": "always"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "divider",
+                            "key": "divider8",
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            }
                         },
                         {
                             "questionType": "displayText",
@@ -31207,6 +31886,15 @@ UPDATE tasks SET
                             "title": {
                                 "en": "Your expectations about the symptoms of Parkinson''s disease.",
                                 "fr": ""
+                            },
+                            "styles": {
+                                "title-font-size": "lg"
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
                             }
                         },
                         {
@@ -31215,17 +31903,29 @@ UPDATE tasks SET
                             "title": {
                                 "en": "In this section, we are interested in finding out about how you <i>expected</i> that Parkinson''s disease <i>would</i> affect you (e.g. based on what your medical team had told you, what you have read about PD, or how you have seen PD depicted in the media/culture), compared to how it <i>is</i> affecting you.",
                                 "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
                             }
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "how-experience-of-thinking-changes-compares-to-expected",
+                            "key": "24-how-experience-of-thinking-changes-compares-to-expected",
                             "validation": {
                                 "required": true
                             },
                             "textContent": {
                                 "en": "How does your experience of changes to your thinking (or absence of any changes) since your diagnosis of Parkinson''s disease compare to the thinking changes you <i>expected</i> would occur as a result of having Parkinson''s disease?",
                                 "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
                             },
                             "options": [
                                 {
@@ -31281,9 +31981,15 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "how-experience-of-mood-symptoms-compares-to-expected",
+                            "key": "25-how-experience-of-mood-symptoms-compares-to-expected",
                             "validation": {
                                 "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
                             },
                             "textContent": {
                                 "en": "How does your experience of mood symptoms since your diagnosis of Parkinson''s disease compare to the mood symptoms you <i>expected</i> would occur as a result of having Parkinson''s disease?",
@@ -31306,17 +32012,17 @@ UPDATE tasks SET
                                 },
                                 {
                                     "label": {
-                                        "en": "I was expecting some changes to my thinking, but this is worse than I thought it would be",
+                                        "en": "I was expecting some mood symptoms, but this is worse than I thought it would be",
                                         "fr": ""
                                     },
                                     "value": "worse-than-i-thought"
                                 },
                                 {
                                     "label": {
-                                        "en": "I didn''t know about the possibility of developing changes to my thinking",
+                                        "en": "I didn''t know about the possibility of developing mood symptoms",
                                         "fr": ""
                                     },
-                                    "value": "didnt-know-changes-to-thinking-possible"
+                                    "value": "didnt-know-changes-to-mood-possible"
                                 },
                                 {
                                     "label": {
@@ -31324,29 +32030,32 @@ UPDATE tasks SET
                                         "fr": ""
                                     },
                                     "value": "other"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": ""
+                                    },
+                                    "value": "not-sure"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Prefer not to answer",
+                                        "fr": ""
+                                    },
+                                    "value": "prefer-not-to-answer"
                                 }
                             ]
                         },
                         {
-                            "questionType": "input",
-                            "key": "how-experience-of-mood-symptoms-compares-to-expected-other-specify",
-                            "validation": {
-                                "required": true
-                            },
-                            "textContent": {
-                                "en": "Other, please specify",
-                                "fr": ""
-                            },
+                            "questionType": "divider",
+                            "key": "divider4",
                             "condition": {
-                                "dependsOnKey": "how-experience-of-mood-symptoms-compares-to-expected",
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
                                 "doAction": {
-                                    "onlyShowWhenValuesSelected": [ "other" ]
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             }
-                        },
-                        {
-                            "questionType": "divider",
-                            "key": "divider4"
                         },
                         {
                             "questionType": "displayText",
@@ -31354,6 +32063,15 @@ UPDATE tasks SET
                             "title": {
                                 "en": "What you know about Parkinson''s disease",
                                 "fr": ""
+                            },
+                            "styles": {
+                                "title-font-size": "lg"
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
                             }
                         },
                         {
@@ -31362,6 +32080,12 @@ UPDATE tasks SET
                             "title": {
                                 "en": "In this section, we are interested in finding out what you know about Parkinson''s disease. The point here is not to test you, but rather to get an idea of how well health care teams inform patients about their condition. Later we will be asking you about what you <i>want to know about PD</i>",
                                 "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
                             }
                         },
                         {
@@ -31370,10 +32094,16 @@ UPDATE tasks SET
                                 "en": "Dementia: As people progress with PD, what percentage of people do you think will eventually develop <b>dementia</b> due to Parkinson''s disease? Dementia refers to changes to thinking that are severe enough to cause a partial or a total loss of independence. <br />If you believe a few people with PD develop dementia, choose a low number. Choose a high number if you believe more people with PD eventually develop dementia.",
                                 "fr": ""
                             },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            },
                             "validation": {
                                 "required": true
                             },
-                            "key": "percentage-develops-dementia",
+                            "key": "26-percentage-develops-dementia",
                             "legend": [ 
                                 {
                                     "en": "0%: No one with PD develops dementia eventually",
@@ -31391,10 +32121,16 @@ UPDATE tasks SET
                                 "en": "Thinking changes: What percentage of people do you think will eventually develop <b>any degree of changes to their thinking</b> due to Parkinson''s disease? We are referring to any changes in memory, concentration, organization, orientation, or any other changes to thinking, whether mild or severe, that are sufficient to be noted by the individual or by their loved ones. These changes could be so mild that they don''t affect everyday life, to so severe that they lead to loss of independence and dementia. <br />(The percentage you provide here should be at least as high as the number you entered in the last question).",
                                 "fr": ""
                             },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            },
                             "validation": {
                                 "required": true
                             },
-                            "key": "percentage-develops-thinking-changes",
+                            "key": "27-percentage-develops-thinking-changes",
                             "legend": [ 
                                 {
                                     "en": "0%: No one with PD develops any degree of thinking changes",
@@ -31408,7 +32144,7 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "treatment-for-cognitive-changes-involves",
+                            "key": "28-treatment-for-cognitive-changes-involves",
                             "textContent": {
                                 "en": "The treatment for cognitive changes in Parkinson''s disease involves: (please select all that apply)",
                                 "fr": ""
@@ -31416,6 +32152,12 @@ UPDATE tasks SET
                             "allowMultipleSelections": true,
                             "validation": {
                                 "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
                             },
                             "actions": {
                                 "clearOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"],
@@ -31479,10 +32221,16 @@ UPDATE tasks SET
                                 "en": "Mood symptoms: As people progress with PD, what percentage of people will, at some point, experience changes to their mood due to Parkinson''s disease? Mood symptoms include depression, anxiety, excessive worrying, loss of motivation, paranoia, etc.",
                                 "fr": ""
                             },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            },
                             "validation": {
                                 "required": true
                             },
-                            "key": "percentage-develops-mood-changes",
+                            "key": "29-percentage-develops-mood-changes",
                             "legend": [ 
                                 {
                                     "en": "0%: No one with PD develops any degree of mood symptoms",
@@ -31496,7 +32244,7 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "treatment-of-mood-symptoms-involves",
+                            "key": "30-treatment-of-mood-symptoms-involves",
                             "textContent": {
                                 "en": "The treatment of mood symptoms in Parkinson''s disease involves: (please select all that apply)",
                                 "fr": ""
@@ -31504,6 +32252,12 @@ UPDATE tasks SET
                             "allowMultipleSelections": true,
                             "validation": {
                                 "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
                             },
                             "actions": {
                                 "clearOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"],
@@ -31563,7 +32317,13 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "divider",
-                            "key": "divider5"
+                            "key": "divider5",
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            }
                         },
                         {
                             "questionType": "displayText",
@@ -31571,6 +32331,15 @@ UPDATE tasks SET
                             "title": {
                                 "en": "About your interaction with the healthcare team",
                                 "fr": ""
+                            },
+                            "styles": {
+                                "title-font-size": "lg"
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
                             }
                         },
                         {
@@ -31579,13 +32348,25 @@ UPDATE tasks SET
                             "title": {
                                 "en": "In this section we are interested in finding out how much information you receive from your healthcare team and whether you are satisfied with your interactions with the healthcare team.",
                                 "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
                             }
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "how-often-thinking-changes-discussed",
+                            "key": "31-how-often-thinking-changes-discussed",
                             "validation": {
                                 "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
                             },
                             "textContent": {
                                 "en": "How often do you discuss whether you''ve experienced changes to your thinking in your visits?",
@@ -31645,9 +32426,15 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "time-spent-discussing-thinking-changes-sufficient",
+                            "key": "32-time-spent-discussing-thinking-changes-sufficient",
                             "validation": {
                                 "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
                             },
                             "textContent": {
                                 "en": "Do you think the time you spend with your healthcare team discussing your thinking is sufficient?",
@@ -31686,13 +32473,19 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "how-often-mood-symptoms-discussed",
+                            "key": "33-how-often-mood-symptoms-discussed",
                             "validation": {
                                 "required": true
                             },
                             "textContent": {
                                 "en": "How often do you discuss your mood symptoms in your visits?",
                                 "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
                             },
                             "options": [
                                 {
@@ -31748,9 +32541,15 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "time-spent-discussing-mood-symptoms-sufficient",
+                            "key": "34-time-spent-discussing-mood-symptoms-sufficient",
                             "validation": {
                                 "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
                             },
                             "textContent": {
                                 "en": "Do you think the time you spend with your healthcare team discussing mood symptoms is sufficient?",
@@ -31789,9 +32588,15 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "care-partner-attending-medical-appointments-always-or-sometimes",
+                            "key": "35-care-partner-attending-medical-appointments-always-or-sometimes",
                             "validation": {
                                 "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
                             },
                             "textContent": {
                                 "en": "Do you have a care partner who attends medical appointments with you some or all of the time?",
@@ -31830,10 +32635,11 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "care-partner-sufficiently-involved-in-medical-team-conversations",
+                            "key": "35a-care-partner-sufficiently-involved-in-medical-team-conversations",
                             "validation": {
                                 "required": true
                             },
+                            "indent": 1,
                             "textContent": {
                                 "en": "Do you find that your care partner is sufficiently involved in the conversations with the medical team?",
                                 "fr": ""
@@ -31905,10 +32711,16 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "i-view-thinking-and-mood-symptoms-i-experience",
+                            "key": "36-i-view-thinking-and-mood-symptoms-i-experience",
                             "textContent": {
                                 "en": "Since my time of PD diagnosis, I view the thinking and mood symptoms that I experience as: (please choose all that apply)",
                                 "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
                             },
                             "allowMultipleSelections": true,
                             "validation": {
@@ -31993,7 +32805,13 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "divider",
-                            "key": "divider6"
+                            "key": "divider6",
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            }
                         },
                         {
                             "questionType": "displayText",
@@ -32001,21 +32819,42 @@ UPDATE tasks SET
                             "title": {
                                 "en": "Understanding what you would like to know",
                                 "fr": ""
+                            },
+                            "styles": {
+                                "title-font-size": "lg"
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
                             }
                         },
                         {
                             "questionType": "displayText",
                             "key": "displayText13",
                             "title": {
-                                "en": "In this section, we are interested in finding out how you would ideally like the different aspects of Parkinson''s disease to be discussed with you",
+                                "en": "In this section, we are interested in finding out how you <i>would ideally</i> like the different aspects of Parkinson''s disease to be discussed with you",
                                 "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
                             }
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "value-discussing-cognitive-and-mood-symptoms",
+                            "key": "37-value-discussing-cognitive-and-mood-symptoms",
                             "validation": {
                                 "required": true
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
                             },
                             "actions": {
                                 "clearOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"],
@@ -32087,12 +32926,18 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "want-to-be-told-of-possibility-of-developing-thinking-mood-symptoms-at-time-of-diagnosis",
+                            "key": "38-want-to-be-told-of-possibility-of-developing-thinking-mood-symptoms-at-time-of-diagnosis",
                             "validation": {
                                 "required": true
                             },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyShowWhenValuesSelected": [ "yes" ]
+                                }
+                            },
                             "textContent": {
-                                "en": "Ideally, would you have wanted to be told about the <b><i>possibility</i></b> of developing thinking and mood symptoms as part of Parkinson''s disease <b>at the time of your diagnosis</b>",
+                                "en": "Ideally, would you have wanted to be told about the <b><i>possibility</i></b> of developing thinking and mood symptoms as part of Parkinson''s disease <b>at the time of your diagnosis</b>?",
                                 "fr": ""
                             },
                             "options": [
@@ -32134,320 +32979,17 @@ UPDATE tasks SET
                             ]
                         },
                         {
-                            "questionType": "divider",
-                            "key": "divider7"
-                        },
-                        {
-                            "questionType": "displayText",
-                            "key": "displayText14",
-                            "title": {
-                                "en": "In this last section, we are asking about the <b>motor</b> symptoms of Parkinson''s disease, which can include tremor, stiffness, slowness, difficulty walking, poor balance, falls, loss of dexterity, difficulty with activities such as dressing, cooking or eating, etc.",
-                                "fr": ""
-                            }
-                        },
-                        {
-                            "questionType": "multipleChoiceSelect",
-                            "key": "experienced-motor-symptoms-since-diagnosis",
-                            "validation": {
-                                "required": true
-                            },
-                            "textContent": {
-                                "en": "Have you experienced motor symptoms since your diagnosis with Parkinson''s disease?",
-                                "fr": ""
-                            },
-                            "options": [
-                                {
-                                    "label": {
-                                        "en": "Yes",
-                                        "fr": ""
-                                    },
-                                    "value": "yes"
-                                },
-                                {
-                                    "label": {
-                                        "en": "No",
-                                        "fr": ""
-                                    },
-                                    "value": "no"
-                                }
-                            ]
-                        },
-                        {
-                            "questionType": "multipleChoiceSelect",
-                            "key": "motor-people-seem-uncomfortable",
-                            "textContent": {
-                                "en": "Some people seem uncomfortable with me",
-                                "fr": ""
-                            },
-                            "validation": {
-                                "required": true
-                            },
-                            "condition": {
-                                "dependsOnKey": "experienced-motor-symptoms-since-diagnosis",
-                                "doAction": {
-                                    "onlyShowWhenValuesSelected": ["yes"]
-                                }
-                            },
-                            "options": [
-                                {
-                                    "label": {
-                                        "en": "Never",
-                                        "fr": ""
-                                    },
-                                    "value": "never"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Sometimes",
-                                        "fr": ""
-                                    },
-                                    "value": "sometimes"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Always",
-                                        "fr": ""
-                                    },
-                                    "value": "always"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Not sure",
-                                        "fr": ""
-                                    },
-                                    "value": "not-sure"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Prefer not to answer",
-                                        "fr": ""
-                                    },
-                                    "value": "prefer-not-to-answer"
-                                }
-                            ]
-                        },
-                        {
-                            "questionType": "multipleChoiceSelect",
-                            "key": "motor-people-are-avoiding-me",
-                            "textContent": {
-                                "en": "Some people are avoiding me",
-                                "fr": ""
-                            },
-                            "validation": {
-                                "required": true
-                            },
-                            "condition": {
-                                "dependsOnKey": "experienced-motor-symptoms-since-diagnosis",
-                                "doAction": {
-                                    "onlyShowWhenValuesSelected": ["yes"]
-                                }
-                            },
-                            "options": [
-                                {
-                                    "label": {
-                                        "en": "Never",
-                                        "fr": ""
-                                    },
-                                    "value": "never"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Sometimes",
-                                        "fr": ""
-                                    },
-                                    "value": "sometimes"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Always",
-                                        "fr": ""
-                                    },
-                                    "value": "always"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Not sure",
-                                        "fr": ""
-                                    },
-                                    "value": "not-sure"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Prefer not to answer",
-                                        "fr": ""
-                                    },
-                                    "value": "prefer-not-to-answer"
-                                }
-                            ]
-                        },
-                        {
-                            "questionType": "multipleChoiceSelect",
-                            "key": "motor-i-feel-embarrassed-in-social-situations",
-                            "textContent": {
-                                "en": "I feel embarrassed in social situations",
-                                "fr": ""
-                            },
-                            "validation": {
-                                "required": true
-                            },
-                            "condition": {
-                                "dependsOnKey": "experienced-motor-symptoms-since-diagnosis",
-                                "doAction": {
-                                    "onlyShowWhenValuesSelected": ["yes"]
-                                }
-                            },
-                            "options": [
-                                {
-                                    "label": {
-                                        "en": "Never",
-                                        "fr": ""
-                                    },
-                                    "value": "never"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Sometimes",
-                                        "fr": ""
-                                    },
-                                    "value": "sometimes"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Always",
-                                        "fr": ""
-                                    },
-                                    "value": "always"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Not sure",
-                                        "fr": ""
-                                    },
-                                    "value": "not-sure"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Prefer not to answer",
-                                        "fr": ""
-                                    },
-                                    "value": "prefer-not-to-answer"
-                                }
-                            ]
-                        },
-                        {
-                            "questionType": "multipleChoiceSelect",
-                            "key": "motor-i-feel-left-out",
-                            "textContent": {
-                                "en": "I feel left out of things",
-                                "fr": ""
-                            },
-                            "validation": {
-                                "required": true
-                            },
-                            "condition": {
-                                "dependsOnKey": "experienced-motor-symptoms-since-diagnosis",
-                                "doAction": {
-                                    "onlyShowWhenValuesSelected": ["yes"]
-                                }
-                            },
-                            "options": [
-                                {
-                                    "label": {
-                                        "en": "Never",
-                                        "fr": ""
-                                    },
-                                    "value": "never"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Sometimes",
-                                        "fr": ""
-                                    },
-                                    "value": "sometimes"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Always",
-                                        "fr": ""
-                                    },
-                                    "value": "always"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Not sure",
-                                        "fr": ""
-                                    },
-                                    "value": "not-sure"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Prefer not to answer",
-                                        "fr": ""
-                                    },
-                                    "value": "prefer-not-to-answer"
-                                }
-                            ]
-                        },
-                        {
-                            "questionType": "multipleChoiceSelect",
-                            "key": "motor-burden-to-others",
-                            "textContent": {
-                                "en": "I worry that I am a burden to others",
-                                "fr": ""
-                            },
-                            "validation": {
-                                "required": true
-                            },
-                            "condition": {
-                                "dependsOnKey": "experienced-motor-symptoms-since-diagnosis",
-                                "doAction": {
-                                    "onlyShowWhenValuesSelected": ["yes"]
-                                }
-                            },
-                            "options": [
-                                {
-                                    "label": {
-                                        "en": "Never",
-                                        "fr": ""
-                                    },
-                                    "value": "never"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Sometimes",
-                                        "fr": ""
-                                    },
-                                    "value": "sometimes"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Always",
-                                        "fr": ""
-                                    },
-                                    "value": "always"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Not sure",
-                                        "fr": ""
-                                    },
-                                    "value": "not-sure"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Prefer not to answer",
-                                        "fr": ""
-                                    },
-                                    "value": "prefer-not-to-answer"
-                                }
-                            ]
-                        },
-                        {
                             "questionType": "displayText",
                             "key": "displayText15",
                             "title": {
                                 "en": "Thank you for your participation!",
                                 "fr": ""
+                            },
+                            "condition": {
+                                "dependsOnKey": "1-diagnosed-with-parkinsons",
+                                "doAction": {
+                                    "onlyHideWhenEmpty": true
+                                }
                             }
                         }
                     ]
