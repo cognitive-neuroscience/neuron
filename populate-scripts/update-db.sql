@@ -30586,7 +30586,7 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "14a-thinking-people-are-avoiding-me",
+                            "key": "14b-thinking-people-are-avoiding-me",
                             "textContent": {
                                 "en": "Some people are avoiding me",
                                 "fr": ""
@@ -30640,7 +30640,7 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "14a-thinking-i-feel-embarrassed-in-social-situations",
+                            "key": "14c-thinking-i-feel-embarrassed-in-social-situations",
                             "textContent": {
                                 "en": "I feel embarrassed in social situations",
                                 "fr": ""
@@ -30694,7 +30694,7 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "14a-thinking-i-feel-left-out",
+                            "key": "14d-thinking-i-feel-left-out",
                             "textContent": {
                                 "en": "I feel left out of things",
                                 "fr": ""
@@ -30748,7 +30748,7 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "14a-thinking-burden-to-others",
+                            "key": "14e-thinking-burden-to-others",
                             "textContent": {
                                 "en": "I worry that I am a burden to others",
                                 "fr": ""
