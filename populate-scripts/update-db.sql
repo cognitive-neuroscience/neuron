@@ -29621,7 +29621,7 @@ UPDATE tasks SET
                                 }
                             },
                             "textContent": {
-                                "en": "My Parkinson''s disease is currently being treated by a...",
+                                "en": "My Parkinson''s disease is currently being treated by a... (Please select all that apply)",
                                 "fr": ""
                             },
                             "validation": {
@@ -30176,7 +30176,7 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "key": "9-attribute-thinking-changes-to",
+                            "key": "9-most-attribute-thinking-changes-to",
                             "validation": {
                                 "required": true
                             },
@@ -30187,7 +30187,7 @@ UPDATE tasks SET
                                 }
                             },
                             "textContent": {
-                                "en": "What do you attribute your thinking changes to?",
+                                "en": "What do you most attribute your thinking changes to? Please select all that apply.",
                                 "fr": ""
                             },
                             "actions": {
@@ -30247,28 +30247,6 @@ UPDATE tasks SET
                                     "value": "prefer-not-to-answer"
                                 }
                             ]
-                        },
-                        {
-                            "questionType": "multipleChoiceSelect",
-                            "key": "9a-most-attribute-thinking-changes-to",
-                            "validation": {
-                                "required": true
-                            },
-                            "condition": {
-                                "dependsOnKey": "9-attribute-thinking-changes-to",
-                                "doAction": {
-                                    "onlyHideWhenEmpty": true,
-                                    "hideWhenValuesSelected": [ "not-sure", "prefer-not-to-answer" ],
-                                    "populateResultsBasedOnSelectedValues": true
-                                }
-                            },
-                            "textContent": {
-                                "en": "What do you MOST attribute your thinking changes to?",
-                                "fr": ""
-                            },
-                            "indent": 1,
-                            "allowMultipleSelections": false,
-                            "options": []
                         },
                         {
                             "questionType": "multipleChoiceSelect",
@@ -32713,7 +32691,7 @@ UPDATE tasks SET
                             "questionType": "multipleChoiceSelect",
                             "key": "36-i-view-thinking-and-mood-symptoms-i-experience",
                             "textContent": {
-                                "en": "Since my time of PD diagnosis, I view the thinking and mood symptoms that I experience as: (please choose all that apply)",
+                                "en": "Since my time of PD diagnosis, I view the thinking and mood symptoms that I experience as: (please select all that apply)",
                                 "fr": ""
                             },
                             "condition": {
@@ -32861,7 +32839,7 @@ UPDATE tasks SET
                                 "onlyDisableOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"]
                             },
                             "textContent": {
-                                "en": "<b>What</b> is the value to you of discussing your cognitive and mood symptoms with your medical team? Please choose all that apply:",
+                                "en": "<b>What</b> is the value to you of discussing your cognitive and mood symptoms with your medical team? Please select all that apply:",
                                 "fr": ""
                             },
                             "allowMultipleSelections": true,
