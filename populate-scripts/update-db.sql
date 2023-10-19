@@ -29616,7 +29616,7 @@ UPDATE tasks SET
                             "allowMultipleSelections": true,
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             },
@@ -29670,7 +29670,7 @@ UPDATE tasks SET
                             "key": "displayText2",
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             },
@@ -29685,7 +29685,7 @@ UPDATE tasks SET
                             "allowMultipleSelections": true,
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             },
@@ -29697,8 +29697,8 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "actions": {
-                                "clearOtherOptionsWhenValueSelected": ["none-of-the-above", "not-sure", "prefer-not-to-answer"],
-                                "onlyDisableOtherOptionsWhenValueSelected": ["none-of-the-above", "not-sure", "prefer-not-to-answer"]
+                                "clearOtherOptionsWhenValueSelected": ["none-of-the-above", "prefer-not-to-answer"],
+                                "onlyDisableOtherOptionsWhenValueSelected": ["none-of-the-above", "prefer-not-to-answer"]
                             },
                             "options": [
                                 {
@@ -29842,10 +29842,12 @@ UPDATE tasks SET
                             "legendTitle": "Impact",
                             "condition": {
                                 "dependsOnKey": "4-movement-bodily-function-symptoms-experienced",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyHideWhenEmpty": true,
-                                    "hideWhenValuesSelected": [ "none-of-the-above", "not-sure", "prefer-not-to-answer" ],
-                                    "populateResultsBasedOnSelectedValues": true
+                                    "hideWhenValuesSelected": [ "none-of-the-above", "prefer-not-to-answer" ],
+                                    "populateResultsBasedOnSelectedValues": {
+                                        "valuesToHide": [ "not-sure" ]
+                                    }
                                 }
                             },
                             "legend": [
@@ -29892,7 +29894,7 @@ UPDATE tasks SET
                             "allowMultipleSelections": true,
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             },
@@ -29904,8 +29906,8 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "actions": {
-                                "clearOtherOptionsWhenValueSelected": ["none-of-the-above", "not-sure", "prefer-not-to-answer"],
-                                "onlyDisableOtherOptionsWhenValueSelected": ["none-of-the-above", "not-sure", "prefer-not-to-answer"]
+                                "clearOtherOptionsWhenValueSelected": ["none-of-the-above", "prefer-not-to-answer"],
+                                "onlyDisableOtherOptionsWhenValueSelected": ["none-of-the-above", "prefer-not-to-answer"]
                             },
                             "options": [
                                 {
@@ -30042,10 +30044,12 @@ UPDATE tasks SET
                             "legendTitle": "Impact",
                             "condition": {
                                 "dependsOnKey": "6-thinking-mood-symptoms-experienced",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyHideWhenEmpty": true,
-                                    "hideWhenValuesSelected": [ "none-of-the-above", "not-sure", "prefer-not-to-answer" ],
-                                    "populateResultsBasedOnSelectedValues": true
+                                    "hideWhenValuesSelected": [ "none-of-the-above", "prefer-not-to-answer" ],
+                                    "populateResultsBasedOnSelectedValues": {
+                                        "valuesToHide": [ "not-sure" ]
+                                    }
                                 }
                             },
                             "legend": [
@@ -30091,7 +30095,7 @@ UPDATE tasks SET
                             "key": "divider1",
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             }
@@ -30108,7 +30112,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             }
@@ -30122,7 +30126,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             }
@@ -30139,7 +30143,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             },
@@ -30182,7 +30186,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "8-change-from-normal-abilities",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
                             },
@@ -30261,7 +30265,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "8-change-from-normal-abilities",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
                             },
@@ -30308,7 +30312,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             },
@@ -30380,7 +30384,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             },
@@ -30486,10 +30490,12 @@ UPDATE tasks SET
                             "allowMultipleSelections": false,
                             "condition": {
                                 "dependsOnKey": "12-how-i-learned-thinking-changes-are-symptoms-of-PD",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyHideWhenEmpty": true,
                                     "hideWhenValuesSelected": [ "not-sure", "prefer-not-to-answer" ],
-                                    "populateResultsBasedOnSelectedValues": true
+                                    "populateResultsBasedOnSelectedValues": {
+                                        "valuesToHide": []
+                                    }
                                 }
                             },
                             "options": []
@@ -30499,7 +30505,7 @@ UPDATE tasks SET
                             "key": "displayText3",
                             "condition": {
                                 "dependsOnKey": "8-change-from-normal-abilities",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
                             },
@@ -30520,7 +30526,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "8-change-from-normal-abilities",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
                             },
@@ -30574,7 +30580,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "8-change-from-normal-abilities",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
                             },
@@ -30628,7 +30634,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "8-change-from-normal-abilities",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
                             },
@@ -30682,7 +30688,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "8-change-from-normal-abilities",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
                             },
@@ -30736,7 +30742,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "8-change-from-normal-abilities",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
                             },
@@ -30783,7 +30789,7 @@ UPDATE tasks SET
                             "key": "divider2",
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             }
@@ -30800,7 +30806,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             }
@@ -30814,7 +30820,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             }
@@ -30831,7 +30837,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             },
@@ -30874,7 +30880,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "15-experienced-changes-to-mood-since-diagnosis",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
                             },
@@ -30955,7 +30961,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "15-experienced-changes-to-mood-since-diagnosis",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
                             },
@@ -31006,7 +31012,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             },
@@ -31078,7 +31084,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             },
@@ -31184,10 +31190,12 @@ UPDATE tasks SET
                             "allowMultipleSelections": false,
                             "condition": {
                                 "dependsOnKey": "19-how-i-learned-mood-changes-are-symptoms-of-PD",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyHideWhenEmpty": true,
                                     "hideWhenValuesSelected": [ "not-sure", "prefer-not-to-answer" ],
-                                    "populateResultsBasedOnSelectedValues": true
+                                    "populateResultsBasedOnSelectedValues": {
+                                        "valuesToHide": []
+                                    }
                                 }
                             },
                             "options": []
@@ -31197,7 +31205,7 @@ UPDATE tasks SET
                             "key": "displayText5",
                             "condition": {
                                 "dependsOnKey": "15-experienced-changes-to-mood-since-diagnosis",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
                             },
@@ -31218,7 +31226,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "15-experienced-changes-to-mood-since-diagnosis",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
                             },
@@ -31272,7 +31280,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "15-experienced-changes-to-mood-since-diagnosis",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
                             },
@@ -31326,7 +31334,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "15-experienced-changes-to-mood-since-diagnosis",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
                             },
@@ -31380,7 +31388,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "15-experienced-changes-to-mood-since-diagnosis",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
                             },
@@ -31434,7 +31442,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "15-experienced-changes-to-mood-since-diagnosis",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
                             },
@@ -31481,7 +31489,7 @@ UPDATE tasks SET
                             "key": "divider3",
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             }
@@ -31498,7 +31506,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             }
@@ -31512,7 +31520,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             }
@@ -31525,7 +31533,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             },
@@ -31573,7 +31581,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "22-experienced-motor-symptoms-since-diagnosis",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             }
@@ -31590,7 +31598,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "22-experienced-motor-symptoms-since-diagnosis",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
                             },
@@ -31644,7 +31652,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "22-experienced-motor-symptoms-since-diagnosis",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
                             },
@@ -31698,7 +31706,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "22-experienced-motor-symptoms-since-diagnosis",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
                             },
@@ -31752,7 +31760,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "22-experienced-motor-symptoms-since-diagnosis",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
                             },
@@ -31806,7 +31814,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "22-experienced-motor-symptoms-since-diagnosis",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
                             },
@@ -31853,7 +31861,7 @@ UPDATE tasks SET
                             "key": "divider8",
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             }
@@ -31870,7 +31878,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             }
@@ -31884,7 +31892,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             }
@@ -31901,7 +31909,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             },
@@ -31965,7 +31973,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             },
@@ -32030,7 +32038,7 @@ UPDATE tasks SET
                             "key": "divider4",
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             }
@@ -32047,7 +32055,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             }
@@ -32061,7 +32069,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             }
@@ -32074,7 +32082,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             },
@@ -32101,7 +32109,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             },
@@ -32133,7 +32141,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             },
@@ -32201,7 +32209,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             },
@@ -32233,7 +32241,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             },
@@ -32298,7 +32306,7 @@ UPDATE tasks SET
                             "key": "divider5",
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             }
@@ -32315,7 +32323,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             }
@@ -32329,7 +32337,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             }
@@ -32342,7 +32350,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             },
@@ -32410,7 +32418,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             },
@@ -32461,7 +32469,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             },
@@ -32525,7 +32533,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             },
@@ -32572,7 +32580,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             },
@@ -32624,7 +32632,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "care-partner-attending-medical-appointments-always-or-sometimes",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": ["yes"]
                                 }
                             },
@@ -32696,7 +32704,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             },
@@ -32786,7 +32794,7 @@ UPDATE tasks SET
                             "key": "divider6",
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             }
@@ -32803,7 +32811,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             }
@@ -32817,7 +32825,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             }
@@ -32830,7 +32838,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             },
@@ -32910,7 +32918,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyShowWhenValuesSelected": [ "yes" ]
                                 }
                             },
@@ -32965,7 +32973,7 @@ UPDATE tasks SET
                             },
                             "condition": {
                                 "dependsOnKey": "1-diagnosed-with-parkinsons",
-                                "doAction": {
+                                "doConditional": {
                                     "onlyHideWhenEmpty": true
                                 }
                             }
