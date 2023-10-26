@@ -30195,8 +30195,8 @@ UPDATE tasks SET
                                 "fr": ""
                             },
                             "actions": {
-                                "clearOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"],
-                                "onlyDisableOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"]
+                                "clearOtherOptionsWhenValueSelected": ["prefer-not-to-answer"],
+                                "onlyDisableOtherOptionsWhenValueSelected": ["prefer-not-to-answer"]
                             },
                             "indent": 1,
                             "allowMultipleSelections": true,
@@ -30393,8 +30393,8 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "actions": {
-                                "clearOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"],
-                                "onlyDisableOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"]
+                                "clearOtherOptionsWhenValueSelected": ["prefer-not-to-answer"],
+                                "onlyDisableOtherOptionsWhenValueSelected": ["prefer-not-to-answer"]
                             },
                             "options": [
                                 {
@@ -30492,9 +30492,9 @@ UPDATE tasks SET
                                 "dependsOnKey": "12-how-i-learned-thinking-changes-are-symptoms-of-PD",
                                 "doConditional": {
                                     "onlyHideWhenEmpty": true,
-                                    "hideWhenValuesSelected": [ "not-sure", "prefer-not-to-answer" ],
+                                    "hideWhenValuesSelected": [ "prefer-not-to-answer" ],
                                     "populateResultsBasedOnSelectedValues": {
-                                        "valuesToHide": []
+                                        "valuesToHide": ["not-sure"]
                                     }
                                 }
                             },
@@ -30890,8 +30890,8 @@ UPDATE tasks SET
                                 "fr": ""
                             },
                             "actions": {
-                                "onlyDisableOtherOptionsWhenValueSelected": ["prefer-not-to-answer", "not-sure"],
-                                "clearOtherOptionsWhenValueSelected": ["prefer-not-to-answer", "not-sure"]
+                                "onlyDisableOtherOptionsWhenValueSelected": ["prefer-not-to-answer"],
+                                "clearOtherOptionsWhenValueSelected": ["prefer-not-to-answer"]
                             },
                             "allowMultipleSelections": true,
                             "options": [
@@ -31093,8 +31093,8 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "actions": {
-                                "clearOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"],
-                                "onlyDisableOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"]
+                                "clearOtherOptionsWhenValueSelected": ["prefer-not-to-answer"],
+                                "onlyDisableOtherOptionsWhenValueSelected": ["prefer-not-to-answer"]
                             },
                             "options": [
                                 {
@@ -31192,9 +31192,9 @@ UPDATE tasks SET
                                 "dependsOnKey": "19-how-i-learned-mood-changes-are-symptoms-of-PD",
                                 "doConditional": {
                                     "onlyHideWhenEmpty": true,
-                                    "hideWhenValuesSelected": [ "not-sure", "prefer-not-to-answer" ],
+                                    "hideWhenValuesSelected": [ "prefer-not-to-answer" ],
                                     "populateResultsBasedOnSelectedValues": {
-                                        "valuesToHide": []
+                                        "valuesToHide": ["not-sure"]
                                     }
                                 }
                             },
@@ -32146,8 +32146,8 @@ UPDATE tasks SET
                                 }
                             },
                             "actions": {
-                                "clearOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"],
-                                "onlyDisableOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"]
+                                "clearOtherOptionsWhenValueSelected": ["prefer-not-to-answer"],
+                                "onlyDisableOtherOptionsWhenValueSelected": ["prefer-not-to-answer"]
                             },
                             "options": [
                                 {
@@ -32246,8 +32246,8 @@ UPDATE tasks SET
                                 }
                             },
                             "actions": {
-                                "clearOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"],
-                                "onlyDisableOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"]
+                                "clearOtherOptionsWhenValueSelected": ["prefer-not-to-answer"],
+                                "onlyDisableOtherOptionsWhenValueSelected": ["prefer-not-to-answer"]
                             },
                             "options": [
                                 {
@@ -32713,8 +32713,8 @@ UPDATE tasks SET
                                 "required": true
                             },
                             "actions": {
-                                "clearOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"],
-                                "onlyDisableOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"]
+                                "clearOtherOptionsWhenValueSelected": ["prefer-not-to-answer"],
+                                "onlyDisableOtherOptionsWhenValueSelected": ["prefer-not-to-answer"]
                             },
                             "options": [
                                 {
@@ -32843,8 +32843,8 @@ UPDATE tasks SET
                                 }
                             },
                             "actions": {
-                                "clearOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"],
-                                "onlyDisableOtherOptionsWhenValueSelected": ["not-sure", "prefer-not-to-answer"]
+                                "clearOtherOptionsWhenValueSelected": ["prefer-not-to-answer"],
+                                "onlyDisableOtherOptionsWhenValueSelected": ["prefer-not-to-answer"]
                             },
                             "textContent": {
                                 "en": "<b>What</b> is the value to you of discussing your cognitive and mood symptoms with your medical team? Please select all that apply:",
