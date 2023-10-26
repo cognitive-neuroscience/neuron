@@ -9968,7 +9968,7 @@ UPDATE tasks set
                                 "fr": "Je m’intéresse plus au présent qu’au futur."
                             },
                             "validation":{
-                                "required":true
+                                "required": true
                             },
                             "key": "I am more interested in the present than the future",
                             "options": [
@@ -10010,9 +10010,9 @@ UPDATE tasks set
                                 "fr": "Sélectionnez « Rarement/Jamais ». Ceci sert à vérifier votre niveau d’attention!"
                             },
                             "validation":{
-                                "required":true
+                                "required": true
                             },
-                            "key": "attentionCheck-Select the first option if you are paying attention.",
+                            "key": "attentionCheck-Select rarely/never if you are paying attention",
                             "options": [
                                 {
                                     "label": {
@@ -12933,7 +12933,7 @@ UPDATE tasks set
                             "validation": {
                                 "required":true
                             },
-                            "key": "I would find pleasure in small things, e.g. bright sunny day, a telephone call from a friend",
+                            "key": "I would find pleasure in small things, eg bright sunny day, a telephone call from a friend",
                             "options": [
                                 {
                                     "label": {
@@ -13182,7 +13182,7 @@ UPDATE tasks set
                             "validation": {
                                 "required":true
                             },
-                            "key": "How much DIFFICULTY do you currently have keeping track of time (e.g. using a clock)",
+                            "key": "How much DIFFICULTY do you currently have keeping track of time (eg using a clock)",
                             "options": [
                                 {
                                     "label": {
@@ -13280,7 +13280,7 @@ UPDATE tasks set
                             "validation": {
                                 "required":true
                             },
-                            "key": "How much DIFFICULTY do you currently have reading and following complex instructions (e.g. directions for a new medication)",
+                            "key": "How much DIFFICULTY do you currently have reading and following complex instructions (eg directions for a new medication)",
                             "options": [
                                 {
                                     "label": {
@@ -13329,7 +13329,7 @@ UPDATE tasks set
                             "validation": {
                                 "required":true
                             },
-                            "key": "How much DIFFICULTY do you currently have handling an unfamiliar problem (e.g. getting the refrigerator fixed)",
+                            "key": "How much DIFFICULTY do you currently have handling an unfamiliar problem (eg getting the refrigerator fixed)",
                             "options": [
                                 {
                                     "label": {
@@ -16352,7 +16352,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "key": "Gaining a new family member (i.e…. Birth, adoption, older adult moving in, etc.)",
+                            "key": "Gaining a new family member (ie Birth, adoption, older adult moving in, etc)",
                             "options": [
                                 {
                                     "label": {
@@ -16408,7 +16408,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "key": "Major change in financial state (i.e. a lot worse or better off than usual)",
+                            "key": "Major change in financial state (ie a lot worse or better off than usual)",
                             "options": [
                                 {
                                     "label": {
@@ -16492,7 +16492,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "key": "Major change in the number of arguments with spouse (i.e…. Either a lot more or a lot less than usual regarding child rearing, personal habits, etc.)",
+                            "key": "Major change in the number of arguments with spouse (ie Either a lot more or a lot less than usual regarding child rearing, personal habits, etc)",
                             "options": [
                                 {
                                     "label": {
@@ -16576,7 +16576,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "key": "Major change in responsibilities at work (i.e. promotion, demotion, etc.)",
+                            "key": "Major change in responsibilities at work (ie promotion, demotion, etc)",
                             "options": [
                                 {
                                     "label": {
@@ -16604,7 +16604,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "key": "Son or daughter leaving home (marriage, attending college, joined mil.)",
+                            "key": "Son or daughter leaving home (marriage, attending college, joined mil)",
                             "options": [
                                 {
                                     "label": {
@@ -16744,7 +16744,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "key": "Major change in living condition (new home, remodeling, deterioration of neighborhood or home etc.)",
+                            "key": "Major change in living condition (new home, remodeling, deterioration of neighborhood or home etc)",
                             "options": [
                                 {
                                     "label": {
@@ -16996,7 +16996,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "key": "Major change in social activities (clubs, movies, visiting, etc.)",
+                            "key": "Major change in social activities (clubs, movies, visiting, etc)",
                             "options": [
                                 {
                                     "label": {
@@ -17024,7 +17024,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "key": "Taking on a loan (car, tv, freezer, etc.)",
+                            "key": "Taking on a loan (car, tv, freezer, etc)",
                             "options": [
                                 {
                                     "label": {
