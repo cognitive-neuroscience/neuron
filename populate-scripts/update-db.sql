@@ -13949,7 +13949,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "key": "I feel sad or upset when I hear bad news.",
+                            "key": "I feel sad or upset when I hear bad news",
                             "options": [
                                 {
                                     "label": {
@@ -13998,7 +13998,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "key": "I start conversations with random people.",
+                            "key": "I start conversations with random people",
                             "options": [
                                 {
                                     "label": {
@@ -14047,7 +14047,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "key": "I enjoy doing things with people I have just met.",
+                            "key": "I enjoy doing things with people I have just met",
                             "options": [
                                 {
                                     "label": {
@@ -14096,7 +14096,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "key": "I suggest activities for me and my friends to do.",
+                            "key": "I suggest activities for me and my friends to do",
                             "options": [
                                 {
                                     "label": {
@@ -14145,7 +14145,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "key": "I make decisions firmly and without hesitation.",
+                            "key": "I make decisions firmly and without hesitation",
                             "options": [
                                 {
                                     "label": {
@@ -14194,7 +14194,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "key": "After making a decision, I will wonder if I have made the wrong choice.",
+                            "key": "After making a decision, I will wonder if I have made the wrong choice",
                             "options": [
                                 {
                                     "label": {
@@ -14243,7 +14243,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "key": "Based on the last two weeks, I would say I care deeply about how my loved ones think of me.",
+                            "key": "Based on the last two weeks, I would say I care deeply about how my loved ones think of me",
                             "options": [
                                 {
                                     "label": {
@@ -14292,7 +14292,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "key": "I go out with friends on a weekly basis.",
+                            "key": "I go out with friends on a weekly basis",
                             "options": [
                                 {
                                     "label": {
@@ -14341,7 +14341,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "key": "When I decide to do something, I am able to make an effort easily.",
+                            "key": "When I decide to do something, I am able to make an effort easily",
                             "options": [
                                 {
                                     "label": {
@@ -14390,7 +14390,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "key": "I don''t like to laze around.",
+                            "key": "I don''t like to laze around",
                             "options": [
                                 {
                                     "label": {
@@ -14488,7 +14488,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "key": "I get things done when they need to be done, without requiring reminders from others.",
+                            "key": "I get things done when they need to be done, without requiring reminders from others",
                             "options": [
                                 {
                                     "label": {
@@ -14537,7 +14537,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "key": "When I decide to do something, I am motivated to see it through to the end.",
+                            "key": "When I decide to do something, I am motivated to see it through to the end",
                             "options": [
                                 {
                                     "label": {
@@ -14586,7 +14586,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "key": "I feel awful if I say something insensitive.",
+                            "key": "I feel awful if I say something insensitive",
                             "options": [
                                 {
                                     "label": {
@@ -14635,7 +14635,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "key": "I start conversations without being prompted.",
+                            "key": "I start conversations without being prompted",
                             "options": [
                                 {
                                     "label": {
@@ -14684,7 +14684,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "key": "When I have something I need to do, I do it straightaway so it is out of the way.",
+                            "key": "When I have something I need to do, I do it straightaway so it is out of the way",
                             "options": [
                                 {
                                     "label": {
@@ -14733,7 +14733,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "key": "I feel bad when I hear an acquaintance has an accident or illness.",
+                            "key": "I feel bad when I hear an acquaintance has an accident or illness",
                             "options": [
                                 {
                                     "label": {
@@ -14782,7 +14782,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "key": "I enjoy choosing what to do from a range of activities.",
+                            "key": "I enjoy choosing what to do from a range of activities",
                             "options": [
                                 {
                                     "label": {
@@ -14831,7 +14831,7 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "key": "If I realise I have been unpleasant to someone, I will feel terribly guilty afterwards.",
+                            "key": "If I realise I have been unpleasant to someone, I will feel terribly guilty afterwards",
                             "options": [
                                 {
                                     "label": {
