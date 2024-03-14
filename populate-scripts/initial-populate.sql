@@ -752,4 +752,34 @@ VALUES
     "",
     "",
     '{}'
+),
+-- JH Bandit Task
+(
+    85,
+    "PAVLOVIA",
+    "EXPERIMENTAL",
+    "JH Bandit Task",
+    "",
+    "",
+    '{}'
+),
+-- PD Percep Questionnaire
+(
+    86,
+    "PSHARPLAB",
+    "QUESTIONNAIRE",
+    "PD Percep Questionnaire",
+    "",
+    "",
+    '{}'
+),
+-- Parkinsons Anxiety Scale
+(
+    87,
+    "PSHARPLAB",
+    "QUESTIONNAIRE",
+    "Parkinson Anxiety Scale",
+    "",
+    "",
+    '{}'
 );

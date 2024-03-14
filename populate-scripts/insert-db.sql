@@ -5,11 +5,8 @@ INSERT INTO tasks (id, from_platform, task_type, name, description, external_url
     NULL,
     "PSHARPLAB",
     "QUESTIONNAIRE",
-    "PD-Percep Questionnaire",
+    "Parkinson Anxiety Scale (PAS)",
     "",
     "",
-    '{
-        "taskConfig": {},
-        "metadata": []
-    }'
+    '{}'
 );
