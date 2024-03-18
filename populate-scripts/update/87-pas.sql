@@ -296,8 +296,8 @@ UPDATE tasks SET
                             "questionType": "displayText",
                             "key": "displayText2",
                             "textContent": {
-                                "en": "In the past four weeks, did you experience episodes of the following symptoms? (Please select one answer for each question below)",
-                                "fr": "Au cours des quatre dernières semaines, avez-vous eu des épisodes où vous avez éprouvé les symptômes suivants? Veuillez cocher une réponse pour chaque item ci-dessous."
+                                "en": "In the past four weeks, did you experience episodes of the following symptoms?",
+                                "fr": "Au cours des quatre dernières semaines, avez-vous eu des épisodes où vous avez éprouvé les symptômes suivants?"
                             }
                         },
                         {
@@ -530,7 +530,7 @@ UPDATE tasks SET
                                 {
                                     "label": {
                                         "en": "Never feared/avoided",
-                                        "fr": "Jamais"
+                                        "fr": "Jamais redouté/évité"
                                     },
                                     "value": "0: never feared/avoided"
                                 },
@@ -558,7 +558,7 @@ UPDATE tasks SET
                                 {
                                     "label": {
                                         "en": "Nearly always feared/avoided",
-                                        "fr": "Presque toujours"
+                                        "fr": "Presque toujours redouté/évité"
                                     },
                                     "value": "4: nearly always feared/avoided"
                                 }
@@ -579,7 +579,7 @@ UPDATE tasks SET
                                 {
                                     "label": {
                                         "en": "Never feared/avoided",
-                                        "fr": "Jamais"
+                                        "fr": "Jamais redouté/évité"
                                     },
                                     "value": "0: never feared/avoided"
                                 },
@@ -607,7 +607,7 @@ UPDATE tasks SET
                                 {
                                     "label": {
                                         "en": "Nearly always feared/avoided",
-                                        "fr": "Presque toujours"
+                                        "fr": "Presque toujours redouté/évité"
                                     },
                                     "value": "4: nearly always feared/avoided"
                                 }
@@ -628,7 +628,7 @@ UPDATE tasks SET
                                 {
                                     "label": {
                                         "en": "Never feared/avoided",
-                                        "fr": "Jamais"
+                                        "fr": "Jamais redouté/évité"
                                     },
                                     "value": "0: never feared/avoided"
                                 },
@@ -656,7 +656,7 @@ UPDATE tasks SET
                                 {
                                     "label": {
                                         "en": "Nearly always feared/avoided",
-                                        "fr": "Presque toujours"
+                                        "fr": "Presque toujours redouté/évité"
                                     },
                                     "value": "4: nearly always feared/avoided"
                                 }
