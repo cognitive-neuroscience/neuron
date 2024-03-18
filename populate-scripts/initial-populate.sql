@@ -782,4 +782,14 @@ VALUES
     "",
     "",
     '{}'
+),
+-- Geriatric Depression Scale - Short Form
+(
+    88,
+    "PSHARPLAB",
+    "QUESTIONNAIRE",
+    "Geriatric Depression Scale - Short Form",
+    "",
+    "",
+    '{}'
 );
