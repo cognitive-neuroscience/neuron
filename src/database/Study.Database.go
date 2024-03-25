@@ -105,7 +105,7 @@ func (s *StudyRepository) GetStudyById(studyId uint) (models.Study, models.HTTPS
 	httpStatus := baseRepositoryImpl.GetOneBy(
 		&dbStudy,
 		`
-			SELECT id, owner_id, created_at, deleted_at, internal_name, external_name, started, can_edit, consent, description, config 
+			SELECT id, owner_id, created_at, deleted_at, internal_name, external_name, started, can_edit, consent, description, config, snapshots
 			FROM studies 
 			WHERE id = ? 
 			LIMIT 1;
@@ -148,6 +148,7 @@ func (s *StudyRepository) GetStudyById(studyId uint) (models.Study, models.HTTPS
 	study.Description = dbStudy.Description
 	study.Config = dbStudy.Config
 	study.StudyTasks = studyTasks
+	study.Snapshots = dbStudy.Snapshots
 
 	return study, models.HTTPStatus{Status: http.StatusOK, Message: http.StatusText(http.StatusOK)}
 }
@@ -168,7 +169,7 @@ func (s *StudyRepository) GetStudiesByOrganizationId(organizationId uint) ([]mod
 	if httpStatus := baseRepositoryImpl.GetAllBy(
 		&dbStudies,
 		`
-			SELECT studies.id, owner_id, studies.created_at, deleted_at, internal_name, external_name, started, can_edit, consent, description, config 
+			SELECT studies.id, owner_id, studies.created_at, deleted_at, internal_name, external_name, started, can_edit, consent, description, config, snapshots
 			FROM studies JOIN users 
 			ON studies.owner_id = users.id 
 			WHERE users.organization_id = ? AND deleted_at IS NULL ORDER BY created_at DESC;
@@ -262,7 +263,7 @@ func (s *StudyRepository) UpdateStudyWithoutTaskUpdate(study *models.Study) mode
 	if _, err := db.Exec(
 		`
 			UPDATE studies 
-			SET deleted_at = ?, internal_name = ?, external_name = ?, started = ?, description = ?, can_edit = ?, consent = ?, config = ? 
+			SET deleted_at = ?, internal_name = ?, external_name = ?, started = ?, description = ?, can_edit = ?, consent = ?, config = ?, snapshots = ? 
 			WHERE id = ?;
 		`,
 		study.DeletedAt,
@@ -273,6 +274,7 @@ func (s *StudyRepository) UpdateStudyWithoutTaskUpdate(study *models.Study) mode
 		study.CanEdit,
 		study.Consent.ID,
 		study.Config,
+		study.Snapshots,
 		study.ID,
 	); err != nil {
 		if err == sql.ErrNoRows {

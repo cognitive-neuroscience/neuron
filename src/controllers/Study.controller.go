@@ -138,3 +138,17 @@ func (s *StudyController) GetStudyUsersByStudyId(e echo.Context) error {
 
 	return common.SendHTTPOkWithBody(e, results)
 }
+
+// SnapshotStudyByStudyId
+func (s *StudyController) SnapshotStudyByStudyId(e echo.Context) error {
+	axonlogger.InfoLogger.Println("============= STUDY CONTROLLER: SnapshotStudyByStudyId() =============")
+
+	studyParamId := e.Param("studyId")
+	httpStatus := studyServiceImpl.SnapshotStudyByStudyId(studyParamId)
+	if !common.HTTPRequestIsSuccessful(httpStatus.Status) {
+		axonlogger.ErrorLogger.Println("GetStudyUsersByStudyId() failed")
+		return e.JSON(httpStatus.Status, httpStatus)
+	}
+
+	return common.SendHTTPOk(e)
+}
