@@ -19,7 +19,7 @@ var StudySchema = `
 		consent INT UNSIGNED DEFAULT(NULL),
 		description VARCHAR(300),
 		config JSON NOT NULL DEFAULT (JSON_OBJECT()),
-		snapshots JSON NOT NULL DEFAULT (JSON_ARRAY()),
+		snapshots JSON NOT NULL DEFAULT (JSON_OBJECT()),
 		FOREIGN KEY (consent) REFERENCES tasks(id),
 		FOREIGN KEY (owner_id) REFERENCES users(id),
 		PRIMARY KEY (id)
