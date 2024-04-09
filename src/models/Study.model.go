@@ -19,6 +19,7 @@ var StudySchema = `
 		consent INT UNSIGNED DEFAULT(NULL),
 		description VARCHAR(300),
 		config JSON NOT NULL DEFAULT (JSON_OBJECT()),
+		snapshots JSON NOT NULL DEFAULT (JSON_OBJECT()),
 		FOREIGN KEY (consent) REFERENCES tasks(id),
 		FOREIGN KEY (owner_id) REFERENCES users(id),
 		PRIMARY KEY (id)
@@ -39,6 +40,7 @@ type Study struct {
 	Description  string             `json:"description"`
 	Config       MapStringInterface `json:"config"`
 	StudyTasks   []StudyTask        `json:"studyTasks"`
+	Snapshots    MapStringInterface `json:"snapshots"`
 }
 
 // DBStudy is the database representation of a study
@@ -54,4 +56,5 @@ type DBStudy struct {
 	ConsentId    uint               `json:"consentId"`
 	Description  string             `json:"description"`
 	Config       MapStringInterface `json:"config"`
+	Snapshots    MapStringInterface `json:"snapshots"`
 }

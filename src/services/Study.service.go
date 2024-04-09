@@ -168,3 +168,47 @@ func (s *StudyService) ArchiveStudyById(studyId string, loggedInUserId string, l
 
 	return studyRepositoryImpl.UpdateStudyWithoutTaskUpdate(&study)
 }
+
+func (s *StudyService) SnapshotStudyByStudyId(studyId string) models.HTTPStatus {
+	axonlogger.InfoLogger.Println("STUDY SERVICE: SnapshotStudyByStudyId()")
+
+	parsedStudyId, parsedStudyIdErr := convertStringToUint8(studyId)
+	if parsedStudyIdErr != nil {
+		axonlogger.WarningLogger.Println("Could not convert id to uint", parsedStudyIdErr)
+		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)}
+	}
+
+	retrievedStudy, getStudyHttpStatus := studyRepositoryImpl.GetStudyById(parsedStudyId)
+	if !common.HTTPRequestIsSuccessful(getStudyHttpStatus.Status) {
+		return getStudyHttpStatus
+	}
+
+	updatedSnapshot := retrievedStudy.Snapshots
+	snapshotList := make(models.SliceMapStringInterface, 0)
+	currTime := time.Now().UTC().Format(time.RFC3339)
+
+	for _, studyTask := range retrievedStudy.StudyTasks {
+		taskSnapshot := make(models.MapStringInterface)
+		taskSnapshot["taskOrder"] = studyTask.TaskOrder
+		taskSnapshot["fromPlatform"] = studyTask.Task.FromPlatform
+		taskSnapshot["description"] = studyTask.Task.Description
+		taskSnapshot["externalURL"] = studyTask.Task.ExternalURL
+		taskSnapshot["taskType"] = studyTask.Task.TaskType
+		taskSnapshot["name"] = studyTask.Task.Name
+		taskSnapshot["id"] = studyTask.Task.ID
+
+		if len(studyTask.Config) == 0 {
+			taskSnapshot["config"] = studyTask.Task.Config
+		} else {
+			taskSnapshot["config"] = studyTask.Config
+		}
+
+		snapshotList = append(snapshotList, taskSnapshot)
+	}
+	updatedSnapshot[currTime] = snapshotList
+	studyRepositoryImpl.UpdateStudyWithoutTaskUpdate(&retrievedStudy)
+	return models.HTTPStatus{
+		Status:  http.StatusOK,
+		Message: http.StatusText(http.StatusOK),
+	}
+}
