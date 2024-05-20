@@ -3,8 +3,8 @@
 UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "QUESTIONNAIRE",
-    name = "Demographics Questionnaire",
-    description = "Demographics questionnaire without SES questions",
+    name = "[ARCHIVED] Demographics Questionnaire",
+    description = "Demographics questionnaire without SES questions. This should no longer be used.",
     external_url = "",
     config = '{
         "taskConfig": {},

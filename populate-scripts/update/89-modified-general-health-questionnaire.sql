@@ -1,10 +1,10 @@
+-- Geriatric Depression Scale Short Form
 
--- General Health Questionnaire
 UPDATE tasks SET
     from_platform = "PSHARPLAB",
     task_type = "QUESTIONNAIRE",
-    name = "[ARCHIVED] General Health Questionnaire",
-    description = "General Health Questionnaire. This should no longer be used.",
+    name = "Modified: General Health Questionnaire",
+    description = "",
     external_url = "",
     config = '{
         "taskConfig": {},
@@ -204,6 +204,124 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "displayText",
+                            "key": "cognitive-health-header",
+                            "title": {
+                                "en": "Cognitive Health",
+                                "fr": "La Santé Cognitive"
+                            }
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "Do you have a diagnosis of dementia or Alzheimer''s disease given to you by a doctor?",
+                                "fr": "Avez-vous un diagnostic de démence ou de maladie de Alzheimer qui vous a été donné par un médecin?"
+                            },
+                            "key": "do-you-have-a-diagnosis-of-dementia-or-alzheimers-disease-given-by-doctor",
+                            "validation": {
+                                "required": true
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No, but I think I have dementia",
+                                        "fr": "Non, mais je pense je souffre de démence"
+                                    },
+                                    "value": "No, but I think I have dementia"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "Do you have a diagnosis of Mild Cognitive Impairment (MCI) given to you by a doctor?",
+                                "fr": "Avez-vous un diagnostic de trouble cognitif léger (TCL) qui vous a été donné par un médecin?"
+                            },
+                            "key": "do-you-have-a-diagnosis-of-mild-cognitive-impairment-mci-given-by-doctor",
+                            "validation": {
+                                "required": true
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No, but I think I have cognitive impairment",
+                                        "fr": "Non, mais je pense j''ai des troubles cognitifs"
+                                    },
+                                    "value": "No, but I think I have cognitive impairment"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "Do you feel that your memory and thinking have gotten worse?",
+                                "fr": "Avez-vous l''impression que votre mémoire et vos pensées se sont détériorées?"
+                            },
+                            "textContent": {
+                                "en": "If you have Parkinson''s disease, consider the change since your diagnosis, or, if you don''t have Parkinson''s disease, consider the change in the last few years.",
+                                "fr": "Si vous avez la maladie de Parkinson, considérez le changement depuis votre diagnostic ou, si vous n''avez pas la maladie de Parkinson, considérez le changement au cours des dernières années."
+                            },
+                            "key": "do-you-feel-that-your-memory-and-thinking-have-gotten-worse",
+                            "validation": {
+                                "required": true
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Not sure",
+                                        "fr": "Pas certain.e"
+                                    },
+                                    "value": "Not sure"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "divider",
+                            "key": "divider2"
+                        },
+                        {
+                            "questionType": "displayText",
                             "key": "displayText3",
                             "title": {
                                 "en": "Mental Health",
@@ -290,6 +408,14 @@ UPDATE tasks SET
                         {
                             "questionType": "divider",
                             "key": "divider3"
+                        },
+                        {
+                            "questionType": "displayText",
+                            "key": "general-health-header",
+                            "title": {
+                                "en": "General Health",
+                                "fr": "Santé Générale"
+                            }
                         },
                         {
                             "questionType": "multipleChoiceSelect",
@@ -410,321 +536,6 @@ UPDATE tasks SET
                         {
                             "questionType": "divider",
                             "key": "divider4"
-                        },
-                        {
-                            "questionType": "displayText",
-                            "key": "displayText4",
-                            "title": {
-                                "en": "Social situation",
-                                "fr": "La Situation Sociale"
-                            }
-                        },
-                        {
-                            "questionType": "multipleChoiceSelect",
-                            "title": {
-                                "en": "What is your current marital/partner status?",
-                                "fr": "Quel est votre état matrimonial/civil?"
-                            },
-                            "key": "marital",
-                            "validation": {
-                                "required": true
-                            },
-                            "options": [
-                                {
-                                    "label": {
-                                        "en": "Single, never married, or never lived with a partner",
-                                        "fr": "Célibataire, jamais marié.e, ou n''a jamais vécu avec un.e partenaire"
-                                    },
-                                    "value": "Single, never married, or never lived with a partner"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Married/Living with a partner in a domestic relationship",
-                                        "fr": "Marié.e/Je vis avec un.e partenaire dans une relation domestique"
-                                    },
-                                    "value": "Married/Living with a partner in a domestic relationship"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Widowed",
-                                        "fr": "Veuf/Veuve"
-                                    },
-                                    "value": "Widowed"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Divorced/Separated",
-                                        "fr": "Divorcé.e/Séparé.e"
-                                    },
-                                    "value": "Divorced/Separated"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Do not wish to disclose",
-                                        "fr": "Je ne souhaite pas répondre"
-                                    },
-                                    "value": "Do not wish to disclose"
-                                }
-                            ]
-                        },
-                        {
-                            "questionType": "multipleChoiceSelect",
-                            "title": {
-                                "en": "Which best describes your living situation?",
-                                "fr": "Lequel décrit le mieux votre situation de vie?"
-                            },
-                            "key": "living",
-                            "validation": {
-                                "required": true
-                            },
-                            "options": [
-                                {
-                                    "label": {
-                                        "en": "Living Alone",
-                                        "fr": "Je vis seul.e"
-                                    },
-                                    "value": "Living alone"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Living with spouse/partner/significant other",
-                                        "fr": "Je vis avec mon/ma conjoint.e/partenaire/autre personne chère"
-                                    },
-                                    "value": "Living with spouse/partner/significant other"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Living with adult child/children",
-                                        "fr": "Je vis avec enfant(s) adulte(s) "
-                                    },
-                                    "value": "Living with adult child/children"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Living with other family",
-                                        "fr": "Je vis avec un autre membre de ma famille"
-                                    },
-                                    "value": "Living with other family"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Living with paid in-home care provider/aide",
-                                        "fr": "Je vis avec un prestataire de soins à domicile"
-                                    },
-                                    "value": "Living with paid in-home care provider/aide"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Living in assisted living facility",
-                                        "fr": "Je vis en résidence, e.g. de retraités"
-                                    },
-                                    "value": "Living in assisted living facility"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Living in nursing home",
-                                        "fr": "Je vis en hébergement médicalisé/CHSLD"
-                                    },
-                                    "value": "Living in nursing home"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Other",
-                                        "fr": "Autre"
-                                    },
-                                    "value": "Other"
-                                }
-                            ]
-                        },
-                        {
-                            "questionType": "multipleChoiceSelect",
-                            "title": {
-                                "en": "Do you consider yourself to be:",
-                                "fr": "Vous considérez-vous comme:"
-                            },
-                            "key": "sexuality",
-                            "validation": {
-                                "required": true
-                            },
-                            "options": [
-                                {
-                                    "label": {
-                                        "en": "Heterosexual (sexual relations with people of the opposite sex)",
-                                        "fr": "Hétérosexuel (relations sexuelles avec des personnes du sexe opposé)"
-                                    },
-                                    "value": "Heterosexual"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Homosexual, that is lesbian or gay (sexual relations with people of your own sex)",
-                                        "fr": "Homosexuel, c''est-à-dire lesbienne ou gay (relations sexuelles avec des personnes de votre propre sexe)"
-                                    },
-                                    "value": "Homosexual"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Bisexual (sexual relations with people of both sexes)",
-                                        "fr": "Bisexuel (relations sexuelles avec des personnes des deux sexes)"
-                                    },
-                                    "value": "Bisexual"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Other",
-                                        "fr": "Autre"
-                                    },
-                                    "value": "Other"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Do not wish to answer",
-                                        "fr": "Je préfère ne pas répondre"
-                                    },
-                                    "value": "Do not wish to answer"
-                                }
-                            ]
-                        },
-                        {
-                            "questionType": "multipleChoiceSelect",
-                            "title": {
-                                "en": "Which of these best describes your total household income, from all sources, and from all household members, in the past 12 months?",
-                                "fr": "Laquelle de ces options décrit le mieux le revenu total de votre ménage, de toutes sources, et de toutes les personnes de votre ménage, au cours des 12 derniers mois?"
-                            },
-                            "key": "householdIncome",
-                            "validation": {
-                                "required": true
-                            },
-                            "options": [
-                                {
-                                    "label": {
-                                        "en": "Less than $20,000",
-                                        "fr": "Moins de 20.000$"
-                                    },
-                                    "value": "Less than $20,000"
-                                },
-                                {
-                                    "label": {
-                                        "en": "$20,000 or more, but less than $50,000",
-                                        "fr": "20.000$ ou plus, mais moins de 50.000$"
-                                    },
-                                    "value": "$20,000 or more, but less than $50,000"
-                                },
-                                {
-                                    "label": {
-                                        "en": "$50,000 or more, but less than $100,000",
-                                        "fr": "50.000$ ou plus, mais moins de 100.000$"
-                                    },
-                                    "value": "$50,000 or more, but less than $100,000"
-                                },
-                                {
-                                    "label": {
-                                        "en": "$100,000 or more, but less than $150,000",
-                                        "fr": "100.000$ ou plus, mais moins de 150.000$"
-                                    },
-                                    "value": "$100,000 or more, but less than $150,000"
-                                },
-                                {
-                                    "label": {
-                                        "en": "$150,000 or more",
-                                        "fr": "150.000$ ou plus"
-                                    },
-                                    "value": "$150,000 or more"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Do not know",
-                                        "fr": "Je ne sais pas"
-                                    },
-                                    "value": "Do not know"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Do not wish to answer",
-                                        "fr": "Je préfère ne pas répondre"
-                                    },
-                                    "value": "Do not wish to answer"
-                                }
-                            ]
-                        },
-                        {
-                            "questionType": "multipleChoiceSelect",
-                            "key": "currentEmploymentStatus",
-                            "title": {
-                                "en": "What is your current employment status?",
-                                "fr": "Quelle est votre situation d''emploi actuelle?"
-                            },
-                            "options": [
-                                {
-                                    "label": {
-                                        "en": "Employed Full-time (30+ hours a week)",
-                                        "fr": "Employé à temps plein (30+ heures par semaine)"
-                                    },
-                                    "value": "Full-time"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Employed Part-time",
-                                        "fr": "Employé à temps partiel"
-                                    },
-                                    "value": "Part-time"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Unemployed",
-                                        "fr": "Au chômage"
-                                    },
-                                    "value": "Unemployed"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Disability Leave",
-                                        "fr": "Congé de maladie"
-                                    },
-                                    "value": "Disability Leave"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Homemaker",
-                                        "fr": "Au foyer"
-                                    },
-                                    "value": "Homemaker"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Student",
-                                        "fr": "Étudiant.e"
-                                    },
-                                    "value": "Student"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Volunteer",
-                                        "fr": "Bénévole"
-                                    },
-                                    "value": "Volunteer"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Retired",
-                                        "fr": "Retraité.e"
-                                    },
-                                    "value": "Retired"
-                                },
-                                {
-                                    "label": {
-                                        "en": "Do not wish to answer",
-                                        "fr": "Je préfère ne pas répondre"
-                                    },
-                                    "value": "Do not wish to answer"
-                                }
-                            ],
-                            "validation": {
-                                "required": true
-                            }
-                        },
-                        {
-                            "questionType": "divider",
-                            "key": "divider5"
                         },
                         {
                             "questionType": "displayText",
@@ -1226,4 +1037,4 @@ UPDATE tasks SET
             }
         ]
     }'
-WHERE id = 45;
+WHERE id = 89;

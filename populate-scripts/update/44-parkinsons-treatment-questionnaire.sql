@@ -3,8 +3,8 @@
 UPDATE tasks SET
     from_platform = "PSHARPLAB",
     task_type = "QUESTIONNAIRE",
-    name = "Parkinson's treatment Questionnaire",
-    description = "Parkinson's treatment Questionnaire",
+    name = "[ARCHIVED] Parkinson's treatment Questionnaire",
+    description = "Parkinson's treatment Questionnaire. This should no longer be used.",
     external_url = "",
     config = '{
         "taskConfig": {},
