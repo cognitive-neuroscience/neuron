@@ -8,7 +8,7 @@ UPDATE tasks SET
     external_url = "",
     config = '{
         "taskConfig": {
-            "version": 1
+            "version": 2
         },
         "metadata": [
             {

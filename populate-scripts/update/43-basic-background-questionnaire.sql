@@ -3,8 +3,8 @@
 UPDATE tasks SET
     from_platform = "PSHARPLAB",
     task_type = "QUESTIONNAIRE",
-    name = "Basic Background Questionnaire",
-    description = "Basic Background Questionnaire",
+    name = "[ARCHIVED] Basic Background Questionnaire",
+    description = "Basic Background Questionnaire. This should no longer be used.",
     external_url = "",
     config = '{
         "taskConfig": {},
