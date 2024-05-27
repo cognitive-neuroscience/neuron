@@ -4,7 +4,7 @@ UPDATE tasks SET
     from_platform = "PSHARPLAB",
     task_type = "QUESTIONNAIRE",
     name = "[ARCHIVED] Demographics Questionnaire With SES",
-    description = "This should no logner be used.",
+    description = "This should no longer be used.",
     external_url = "",
     config = '{
         "taskConfig": {},
