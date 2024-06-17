@@ -61,6 +61,7 @@ func setUpStudyRoutes(group *echo.Group) {
 	studies.GET("/:studyId", studiesControllerImpl.GetStudyById)
 	studies.GET("/:studyId/crowdsourcedusers", studiesControllerImpl.GetCrowdSourcedUsersByStudyId)
 	studies.GET("/:studyId/studyusers", studiesControllerImpl.GetStudyUsersByStudyId)
+	studies.PATCH("/:studyId/snapshot", studiesControllerImpl.SnapshotStudyByStudyId)
 	studies.PATCH("/:studyId", studiesControllerImpl.UpdateStudy) // takes a query param (updateTasks)
 	studies.DELETE("/:studyId", studiesControllerImpl.ArchiveStudyById)
 }

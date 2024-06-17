@@ -133,7 +133,7 @@ func (b *BaseRepository) GetAllBy(argStructSlice interface{}, query string, args
 	rowToStructErr := rowsToStructs(rows, argStructSlice)
 	if rowToStructErr != nil {
 		axonlogger.ErrorLogger.Println("Attempted Query: " + query)
-		axonlogger.ErrorLogger.Println("Error scanning rows", err)
+		axonlogger.ErrorLogger.Println("Error scanning rows", rowToStructErr)
 		return models.HTTPStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)}
 	}
 	return models.HTTPStatus{Status: http.StatusOK, Message: http.StatusText(http.StatusOK)}

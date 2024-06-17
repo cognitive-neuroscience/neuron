@@ -11,7 +11,7 @@ import (
  * This file defines structs that outline the parameters collected for each task that is administered to participants
  */
 
-type SliceMapStringInterface []map[string]interface{}
+type SliceMapStringInterface []MapStringInterface
 
 // ParticipantDataSchema defines the SQL table schema for this model
 var ParticipantDataSchema = `
@@ -44,7 +44,7 @@ type ParticipantData struct {
 // The data stored in a JSON field is returned as a []uint8
 func (s *SliceMapStringInterface) Scan(src interface{}) error {
 	var source []byte
-	var tempMapSlice []map[string]interface{}
+	var tempMapSlice SliceMapStringInterface
 
 	switch src := src.(type) {
 	case []uint8:

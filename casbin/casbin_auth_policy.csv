@@ -44,6 +44,8 @@ p, GUEST,               /api/tasks/{taskId},                                    
 p, *,                   /api/studies/{studyId},                                         GET
 p, ADMIN,               /api/studies/{studyId},                                         PATCH
 p, ORGANIZATION_MEMBER, /api/studies/{studyId},                                         PATCH
+p, ADMIN,               /api/studies/{studyId}/snapshot,                                PATCH
+p, ORGANIZATION_MEMBER, /api/studies/{studyId}/snapshot,                                PATCH
 p, ADMIN,               /api/studies/{studyId},                                         DELETE
 p, ORGANIZATION_MEMBER, /api/studies/{studyId},                                         DELETE
 p, ADMIN,               /api/studies/{studyId}/studyusers,                              GET
