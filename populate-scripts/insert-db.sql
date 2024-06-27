@@ -13,9 +13,9 @@ INSERT INTO tasks (id, from_platform, task_type, name, description, external_url
 (
     NULL,
     "PSHARPLAB",
-    "QUESTIONNAIRE",
-    "reward_mood",
-    "Reward Mood Display Slide",
+    "EXPERIMENTAL",
+    "SDMT",
+    "Symbol Digit Modalities Task",
     "",
     '{}'
 );
