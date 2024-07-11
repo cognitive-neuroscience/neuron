@@ -14,7 +14,7 @@ UPDATE tasks SET
                     "isPractice": true,
                     "maxResponseTime": 180000,
                     "numRows": 1,
-                    "numnCols": 9,
+                    "numCols": 9,
                     "stimuliConfig": {
                         "type": "generated",
                         "stimuli": null
@@ -27,7 +27,7 @@ UPDATE tasks SET
                     "isPractice": false,
                     "maxResponseTime": 120000,
                     "numRows": 1,
-                    "numnCols": 9,
+                    "numCols": 16,
                     "stimuliConfig": {
                         "type": "generated",
                         "stimuli": null
