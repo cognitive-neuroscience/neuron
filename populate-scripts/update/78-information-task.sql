@@ -118,29 +118,6 @@ UPDATE tasks SET
                         }
                     ],
                     "buttons": {
-                        "isStart": false,
-                        "previousDisabled": false,
-                        "nextDisabled": false
-                    }
-                }
-            },
-            {
-                "componentName": "DISPLAYCOMPONENT",
-                "componentConfig": {
-                    "title": {
-                        "en": "",
-                        "fr": ""
-                    },
-                    "sections": [
-                        {
-                            "sectionType": "image-fill",
-                            "imagePath": {
-                                "en": "/assets/images/instructions/informationsearch/en/6.jpeg",
-                                "fr": "/assets/images/instructions/informationsearch/fr/6.jpeg"
-                            }
-                        }
-                    ],
-                    "buttons": {
                         "isStart": true,
                         "previousDisabled": false,
                         "nextDisabled": false
