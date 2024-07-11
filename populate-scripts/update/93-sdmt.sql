@@ -26,8 +26,8 @@ UPDATE tasks SET
                 "componentConfig": {
                     "isPractice": false,
                     "maxResponseTime": 120000,
-                    "numRows": 9,
-                    "numnCols": 16,
+                    "numRows": 1,
+                    "numnCols": 9,
                     "stimuliConfig": {
                         "type": "generated",
                         "stimuli": null
