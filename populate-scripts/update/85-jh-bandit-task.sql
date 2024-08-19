@@ -12,7 +12,10 @@ UPDATE tasks SET
             {
                 "componentName": "EMBEDDEDPAGECOMPONENT",
                 "componentConfig": {
-                    "externalUrl": "https://run.pavlovia.org/Patrick250/jh_bandit",
+                    "externalUrl": {
+                        "en": "https://run.pavlovia.org/Patrick250/jh_bandit",
+                        "fr": "https://run.pavlovia.org/Patrick250/jh-bandit-french-final"
+                    },
                     "disableNextButtonDurationInSeconds": 1320,
                     "buttons": {
                         "nextButtonText": {
