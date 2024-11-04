@@ -20,7 +20,10 @@ UPDATE tasks SET
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You will start by memorizing the phase name pairings. You will see these pairs twice in random order."
+                            "textContent": {
+                                "en": "You will start by memorizing the phase name pairings. You will see these pairs twice in random order.",
+                                "fr": "en francais"
+                            }
                         }
                     ],
                     "buttons": {
