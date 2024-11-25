@@ -3,8 +3,8 @@
 UPDATE tasks SET
     from_platform = "PSHARPLAB",
     task_type = "EXPERIMENTAL",
-    name = "Face Name Association Task",
-    description = "Participants learn face name pairs and are then tested on these pairs",
+    name = "Face-Name Memory Game",
+    description = "Participants learn a set of face-name pairs and are then tested on these pairs",
     external_url = "",
     config = '{
         "taskConfig": {},
@@ -12,15 +12,99 @@ UPDATE tasks SET
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Welcome to the Face Name Association Game",
+                    "title": {
+                        "en": "Welcome to the Face-Name Memory Game",
+                        "fr": "Bienvenue au Jeu de Mémoire des Visages et Noms"
+                        },
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You will be shown a face and a name on the screen"
+                            "textContent": {
+                                "en": "Please read the instructions carefully.",
+                                "fr": "Lisez attentivement les instructions."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You will start by memorizing the phase name pairings. You will see these pairs twice in random order."
+                            "textContent": {
+                                "en": "This is a memory test.",
+                                "fr": "Ceci est un test de mémoire."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to proceed",
+                                "fr": "Cliquez sur \\"SUIVANT\\" pour continuer"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": true,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": ""
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "You will be shown a series of faces and their names, like this:",
+                                "fr": "Une séries de paires de visages et de noms sera affichée à l’écran, comme ceci:"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Your job is to remember the name that goes with each face. Each pair will only be on screen for a few seconds.",
+                                "fr": "Votre objectif est de mémoriser le nom associé à chaque visage. Chaque paire ne sera affichée à l’écran que pendant quelques secondes."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "You will see the series of pairs twice, and then you will be tested on how well you remember which name goes with which face.",
+                                "fr": "La série de paires sera présentée deux fois. Ensuite, vous serez testé sur votre souvenir des noms qui vont avec chaque visage."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to proceed",
+                                "fr": "Cliquez sur \\"SUIVANT\\" pour continuer"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": true,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": ""
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "You will now see the faces and names for the first time. Try to remember the name that goes with each face.",
+                                "fr": "Vous allez maintenant voir les visages et les noms pour la première fois. Essayez de mémoriser le nom associé à chaque visage."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to start",
+                                "fr": "Cliquez sur \\"SUIVANT\\" pour commencer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -48,16 +132,96 @@ UPDATE tasks SET
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Take a break",
+                    "title": "",
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You have been shown the face name pairs."
+                            "textContent": {
+                                "en": "This is a short break before you see the series of pairs again.",
+                                "fr": "Vous avez maintenant une courte pause avant de procéder à la prochaine partie."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You will be shown the face name pairs again in a different random order"
+                            "textContent": {
+                                "en": "While you wait, please do this short keyboard test:",
+                                "fr": "En attendant, veuillez effectuer ce court test de clavier:"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Press 6 on your keyboard:",
+                                "fr": "Appuyez sur le 6 sur votre clavier:"
+                            }
                         }
+                    ],
+                    "buttons": {
+                        "isStart": true,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": "",
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Press 1 on your keyboard:",
+                                "fr": "Appuyez sur le 1 sur votre clavier:"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": true,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": "",
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Press 4 on your keyboard:",
+                                "fr": "Appuyez sur le 4 sur votre clavier:"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": true,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": "",
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Thank you. You will start the second phase soon.",
+                                "fr": "Merci. Vous commencerez bientôt la deuxième phase."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "You will see all the faces and names again. Try to remember the name that goes with each face.",
+                                "fr": "Vous verrez à nouveau les visages et les noms. Essayez de mémoriser le nom associé à chaque visage."
+                            }
+                        },
                     ],
                     "buttons": {
                         "isStart": true,
@@ -84,15 +248,102 @@ UPDATE tasks SET
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Testing phase",
+                    "title": "",
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You have been shown the face name pairs."
+                            "textContent": {
+                                "en": "This is a short break before you start the memory test.",
+                                "fr": "Vous avez maintenant une courte pause avant de procéder au test de mémoire."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "You will now be tested on the different face name pairings"
+                            "textContent": {
+                                "en": "While you wait, please do this short keyboard test:",
+                                "fr": "En attendant, veuillez effectuer ce court test de clavier:"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Press 3 on your keyboard:",
+                                "fr": "Appuyez sur le 3 sur votre clavier:"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": true,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": "",
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Press 8 on your keyboard:",
+                                "fr": "Appuyez sur le 8 sur votre clavier:"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": true,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": "",
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Press 5 on your keyboard:",
+                                "fr": "Appuyez sur le 5 sur votre clavier:"
+                            }
+                        }
+                    ],
+                    "buttons": {
+                        "isStart": true,
+                        "previousDisabled": true,
+                        "nextDisabled": false
+                    }
+                }
+            },
+            {
+                "componentName": "DISPLAYCOMPONENT",
+                "componentConfig": {
+                    "title": "Testing phase"
+                    "sections": [
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Thank you. You will now see all the faces again. This time you will be asked if the person’s name is correct, and you must click ‘Yes’ or ‘No’.",
+                                "fr": "Merci. Vous allez maintenant revoir tous les visages. Cette fois, vous devez déterminer si le nom de la personne est le bon. Vous devez répondre en cliquant ‘Oui’ ou ‘Non’."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "In this case, you would click ‘Yes’.",
+                                "fr": "Dans ce cas, vous devriez cliquer sur ‘Oui’."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"NEXT\\" to start",
+                                "fr": "Cliquez sur \\"SUIVANT\\" pour commencer"
+                            }
                         }
                     ],
                     "buttons": {
@@ -124,11 +375,24 @@ UPDATE tasks SET
                     "sections": [
                         {
                             "sectionType": "text",
-                            "textContent": "You have completed the entire task"
+                            "textContent": {
+                                "en": "Congratulations! You completed the game.",
+                                "fr": "Félicitations! Vous avez terminé le jeu."
+                            }
                         },
                         {
                             "sectionType": "text",
-                            "textContent": "Thank you for your participation"
+                            "textContent": {
+                                "en": "Thank you for your participation.",
+                                "fr": "Merci pour votre participation."
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Click \\"CONTINUE\\"",
+                                "fr": "Cliquez sur \\"CONTINUER\\""
+                            }
                         }
                     ],
                     "buttons": {
