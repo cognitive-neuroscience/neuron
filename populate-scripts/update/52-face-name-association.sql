@@ -7,7 +7,12 @@ UPDATE tasks SET
     description = "Participants learn face name pairs and are then tested on these pairs",
     external_url = "",
     config = '{
-        "taskConfig": {},
+        "taskConfig": {
+            "counterBalanceGroups": {
+                "1": 1,
+                "2": 2
+            }
+        },
         "metadata": [
             {
                 "componentName": "DISPLAYCOMPONENT",
@@ -36,7 +41,6 @@ UPDATE tasks SET
                     "isPractice": true,
                     "phase": "learning-phase",
                     "maxResponseTime": 10000,
-                    "stimulusSet": 1,
                     "interTrialDelay": 500,
                     "durationStimulusPresented": 3000,
                     "stimuliConfig": {
@@ -72,7 +76,6 @@ UPDATE tasks SET
                     "isPractice": true,
                     "phase": "learning-phase",
                     "maxResponseTime": 10000,
-                    "stimulusSet": 1,
                     "interTrialDelay": 500,
                     "durationStimulusPresented": 3000,
                     "stimuliConfig": {
