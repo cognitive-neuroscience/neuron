@@ -113,8 +113,8 @@ UPDATE tasks SET
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Click \\"NEXT\\" to start",
-                                "fr": "Cliquez sur \\"SUIVANT\\" pour commencer"
+                                "en": "Click \\"START\\" to start",
+                                "fr": "Cliquez sur \\"COMMENCER\\" pour commencer"
                             }
                         }
                     ],
@@ -208,6 +208,7 @@ UPDATE tasks SET
                     "phase": "learning-phase",
                     "maxResponseTime": 10000,
                     "interTrialDelay": 500,
+                    "blockNum": 2,
                     "durationStimulusPresented": 3000,
                     "stimuliConfig": {
                         "type": "generated",
@@ -290,6 +291,7 @@ UPDATE tasks SET
                     "phase": "test-phase",
                     "maxResponseTime": 10000,
                     "interTrialDelay": 500,
+                    "blockNum": 3,
                     "durationStimulusPresented": 3000,
                     "stimuliConfig": {
                         "type": "generated",
@@ -319,8 +321,8 @@ UPDATE tasks SET
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Click \\"CONTINUE\\"",
-                                "fr": "Cliquez sur \\"CONTINUER\\""
+                                "en": "Click \\"NEXT\\"",
+                                "fr": "Cliquez sur \\"SUIVANT\\""
                             }
                         }
                     ],
