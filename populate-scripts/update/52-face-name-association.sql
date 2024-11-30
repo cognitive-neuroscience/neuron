@@ -133,7 +133,7 @@ UPDATE tasks SET
                     "maxResponseTime": 10000,
                     "interTrialDelay": 500,
                     "blockNum": 1,
-                    "durationStimulusPresented": 50,
+                    "durationStimulusPresented": 3000,
                     "stimuliConfig": {
                         "type": "generated",
                         "stimuli": null
@@ -171,7 +171,6 @@ UPDATE tasks SET
                 "componentName": "ATTENTIONCHECKCOMPONENT",
                 "componentConfig": {
                     "numbersDisplayed": [ 6, 1, 4 ],
-                    "durationStimulusPresented": 1000,
                     "maxResponseTime": 10000
                 }
             },
@@ -209,7 +208,7 @@ UPDATE tasks SET
                     "phase": "learning-phase",
                     "maxResponseTime": 10000,
                     "interTrialDelay": 500,
-                    "durationStimulusPresented":50,
+                    "durationStimulusPresented": 3000,
                     "stimuliConfig": {
                         "type": "generated",
                         "stimuli": null
@@ -247,7 +246,6 @@ UPDATE tasks SET
                 "componentName": "ATTENTIONCHECKCOMPONENT",
                 "componentConfig": {
                     "numbersDisplayed": [ 3, 8, 5 ],
-                    "durationStimulusPresented": 1000,
                     "maxResponseTime": 10000
                 }
             },
