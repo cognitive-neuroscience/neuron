@@ -20,7 +20,7 @@ UPDATE tasks SET
                     "title": {
                         "en": "Welcome to the Face-Name Memory Game",
                         "fr": "Bienvenue au Jeu de Mémoire des Visages et Noms"
-                        },
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
@@ -45,7 +45,7 @@ UPDATE tasks SET
                         }
                     ],
                     "buttons": {
-                        "isStart": true,
+                        "isStart": false,
                         "previousDisabled": true,
                         "nextDisabled": false
                     }
@@ -54,7 +54,7 @@ UPDATE tasks SET
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": ""
+                    "title": "",
                     "sections": [
                         {
                             "sectionType": "text",
@@ -62,6 +62,12 @@ UPDATE tasks SET
                                 "en": "You will be shown a series of faces and their names, like this:",
                                 "fr": "Une séries de paires de visages et de noms sera affichée à l’écran, comme ceci:"
                             }
+                        },
+                        {
+                            "sectionType": "image-horizontal",
+                            "imageAlignment": "center",
+                            "injection": "counterbalance",
+                            "imagePath": "/assets/images/instructions/face-name-association/???/instructions.jpg"
                         },
                         {
                             "sectionType": "text",
@@ -86,8 +92,8 @@ UPDATE tasks SET
                         }
                     ],
                     "buttons": {
-                        "isStart": true,
-                        "previousDisabled": true,
+                        "isStart": false,
+                        "previousDisabled": false,
                         "nextDisabled": false
                     }
                 }
@@ -95,7 +101,7 @@ UPDATE tasks SET
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": ""
+                    "title": "",
                     "sections": [
                         {
                             "sectionType": "text",
@@ -114,7 +120,7 @@ UPDATE tasks SET
                     ],
                     "buttons": {
                         "isStart": true,
-                        "previousDisabled": true,
+                        "previousDisabled": false,
                         "nextDisabled": false
                     }
                 }
@@ -126,7 +132,8 @@ UPDATE tasks SET
                     "phase": "learning-phase",
                     "maxResponseTime": 10000,
                     "interTrialDelay": 500,
-                    "durationStimulusPresented": 3000,
+                    "blockNum": 1,
+                    "durationStimulusPresented": 50,
                     "stimuliConfig": {
                         "type": "generated",
                         "stimuli": null
@@ -148,15 +155,8 @@ UPDATE tasks SET
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "While you wait, please do this short keyboard test:",
-                                "fr": "En attendant, veuillez effectuer ce court test de clavier:"
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Press 6 on your keyboard:",
-                                "fr": "Appuyez sur le 6 sur votre clavier:"
+                                "en": "While you wait, please do this short keyboard test.",
+                                "fr": "En attendant, veuillez effectuer ce court test de clavier."
                             }
                         }
                     ],
@@ -168,43 +168,11 @@ UPDATE tasks SET
                 }
             },
             {
-                "componentName": "DISPLAYCOMPONENT",
+                "componentName": "ATTENTIONCHECKCOMPONENT",
                 "componentConfig": {
-                    "title": "",
-                    "sections": [
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Press 1 on your keyboard:",
-                                "fr": "Appuyez sur le 1 sur votre clavier:"
-                            }
-                        }
-                    ],
-                    "buttons": {
-                        "isStart": true,
-                        "previousDisabled": true,
-                        "nextDisabled": false
-                    }
-                }
-            },
-            {
-                "componentName": "DISPLAYCOMPONENT",
-                "componentConfig": {
-                    "title": "",
-                    "sections": [
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Press 4 on your keyboard:",
-                                "fr": "Appuyez sur le 4 sur votre clavier:"
-                            }
-                        }
-                    ],
-                    "buttons": {
-                        "isStart": true,
-                        "previousDisabled": true,
-                        "nextDisabled": false
-                    }
+                    "numbersDisplayed": [ 6, 1, 4 ],
+                    "durationStimulusPresented": 1000,
+                    "maxResponseTime": 10000
                 }
             },
             {
@@ -225,7 +193,7 @@ UPDATE tasks SET
                                 "en": "You will see all the faces and names again. Try to remember the name that goes with each face.",
                                 "fr": "Vous verrez à nouveau les visages et les noms. Essayez de mémoriser le nom associé à chaque visage."
                             }
-                        },
+                        }
                     ],
                     "buttons": {
                         "isStart": true,
@@ -241,7 +209,7 @@ UPDATE tasks SET
                     "phase": "learning-phase",
                     "maxResponseTime": 10000,
                     "interTrialDelay": 500,
-                    "durationStimulusPresented": 3000,
+                    "durationStimulusPresented":50,
                     "stimuliConfig": {
                         "type": "generated",
                         "stimuli": null
@@ -266,13 +234,6 @@ UPDATE tasks SET
                                 "en": "While you wait, please do this short keyboard test:",
                                 "fr": "En attendant, veuillez effectuer ce court test de clavier:"
                             }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Press 3 on your keyboard:",
-                                "fr": "Appuyez sur le 3 sur votre clavier:"
-                            }
                         }
                     ],
                     "buttons": {
@@ -283,49 +244,17 @@ UPDATE tasks SET
                 }
             },
             {
-                "componentName": "DISPLAYCOMPONENT",
+                "componentName": "ATTENTIONCHECKCOMPONENT",
                 "componentConfig": {
-                    "title": "",
-                    "sections": [
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Press 8 on your keyboard:",
-                                "fr": "Appuyez sur le 8 sur votre clavier:"
-                            }
-                        }
-                    ],
-                    "buttons": {
-                        "isStart": true,
-                        "previousDisabled": true,
-                        "nextDisabled": false
-                    }
+                    "numbersDisplayed": [ 3, 8, 5 ],
+                    "durationStimulusPresented": 1000,
+                    "maxResponseTime": 10000
                 }
             },
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "",
-                    "sections": [
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Press 5 on your keyboard:",
-                                "fr": "Appuyez sur le 5 sur votre clavier:"
-                            }
-                        }
-                    ],
-                    "buttons": {
-                        "isStart": true,
-                        "previousDisabled": true,
-                        "nextDisabled": false
-                    }
-                }
-            },
-            {
-                "componentName": "DISPLAYCOMPONENT",
-                "componentConfig": {
-                    "title": "Testing phase"
+                    "title": "Testing phase",
                     "sections": [
                         {
                             "sectionType": "text",
@@ -344,8 +273,8 @@ UPDATE tasks SET
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Click \\"NEXT\\" to start",
-                                "fr": "Cliquez sur \\"SUIVANT\\" pour commencer"
+                                "en": "Click \\"START\\" to start",
+                                "fr": "Cliquez sur \\"Commencer\\" pour commencer"
                             }
                         }
                     ],
@@ -362,7 +291,6 @@ UPDATE tasks SET
                     "isPractice": false,
                     "phase": "test-phase",
                     "maxResponseTime": 10000,
-                    "stimulusSet": 1,
                     "interTrialDelay": 500,
                     "durationStimulusPresented": 3000,
                     "stimuliConfig": {
