@@ -133,7 +133,7 @@ UPDATE tasks SET
                     "maxResponseTime": 10000,
                     "interTrialDelay": 500,
                     "blockNum": 1,
-                    "durationStimulusPresented": 3000,
+                    "durationStimulusPresented": 50,
                     "stimuliConfig": {
                         "type": "generated",
                         "stimuli": null
@@ -178,6 +178,12 @@ UPDATE tasks SET
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
                     "title": "",
+                    "timerConfig": {
+                        "timer": 10000,
+                        "showTimer": true,
+                        "canSkipTimer": false,
+                        "countDown": true
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
@@ -193,12 +199,7 @@ UPDATE tasks SET
                                 "fr": "Vous verrez à nouveau les visages et les noms. Essayez de mémoriser le nom associé à chaque visage."
                             }
                         }
-                    ],
-                    "buttons": {
-                        "isStart": true,
-                        "previousDisabled": true,
-                        "nextDisabled": false
-                    }
+                    ]
                 }
             },
             {
@@ -209,7 +210,7 @@ UPDATE tasks SET
                     "maxResponseTime": 10000,
                     "interTrialDelay": 500,
                     "blockNum": 2,
-                    "durationStimulusPresented": 3000,
+                    "durationStimulusPresented": 50,
                     "stimuliConfig": {
                         "type": "generated",
                         "stimuli": null
@@ -253,7 +254,13 @@ UPDATE tasks SET
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Testing phase",
+                    "title": "",
+                    "timerConfig": {
+                        "timer": 10000,
+                        "showTimer": true,
+                        "canSkipTimer": false,
+                        "countDown": true
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
@@ -268,20 +275,8 @@ UPDATE tasks SET
                                 "en": "In this case, you would click ‘Yes’.",
                                 "fr": "Dans ce cas, vous devriez cliquer sur ‘Oui’."
                             }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Click \\"START\\" to start",
-                                "fr": "Cliquez sur \\"Commencer\\" pour commencer"
-                            }
                         }
-                    ],
-                    "buttons": {
-                        "isStart": true,
-                        "previousDisabled": true,
-                        "nextDisabled": false
-                    }
+                    ]
                 }
             },
             {
@@ -292,7 +287,7 @@ UPDATE tasks SET
                     "maxResponseTime": 10000,
                     "interTrialDelay": 500,
                     "blockNum": 3,
-                    "durationStimulusPresented": 3000,
+                    "durationStimulusPresented": 50,
                     "stimuliConfig": {
                         "type": "generated",
                         "stimuli": null
