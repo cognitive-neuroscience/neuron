@@ -14,8 +14,8 @@ INSERT INTO tasks (id, from_platform, task_type, name, description, external_url
     NULL,
     "PSHARPLAB",
     "EXPERIMENTAL",
-    "SDMT",
-    "Symbol Digit Modalities Task",
+    "Lines And Angles Game",
+    "Participants must judge and match the angle of a line",
     "",
     '{}'
 );

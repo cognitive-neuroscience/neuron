@@ -178,6 +178,12 @@ UPDATE tasks SET
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
                     "title": "",
+                    "timerConfig": {
+                        "timer": 10000,
+                        "showTimer": true,
+                        "canSkipTimer": false,
+                        "countDown": true
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
@@ -193,12 +199,7 @@ UPDATE tasks SET
                                 "fr": "Vous verrez à nouveau les visages et les noms. Essayez de mémoriser le nom associé à chaque visage."
                             }
                         }
-                    ],
-                    "buttons": {
-                        "isStart": true,
-                        "previousDisabled": true,
-                        "nextDisabled": false
-                    }
+                    ]
                 }
             },
             {
@@ -253,7 +254,13 @@ UPDATE tasks SET
             {
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
-                    "title": "Testing phase",
+                    "title": "",
+                    "timerConfig": {
+                        "timer": 10000,
+                        "showTimer": true,
+                        "canSkipTimer": false,
+                        "countDown": true
+                    },
                     "sections": [
                         {
                             "sectionType": "text",
@@ -263,25 +270,22 @@ UPDATE tasks SET
                             }
                         },
                         {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "In this case, you would click ‘Yes’.",
-                                "fr": "Dans ce cas, vous devriez cliquer sur ‘Oui’."
+                            "sectionType": "image-horizontal",
+                            "imageAlignment": "center",
+                            "injection": "counterbalance",
+                            "imagePath": {
+                                "en": "/assets/images/instructions/face-name-association/???/instructions-2_en.jpg",
+                                "fr": "/assets/images/instructions/face-name-association/???/instructions-2_fr.jpg"
                             }
                         },
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Click \\"START\\" to start",
-                                "fr": "Cliquez sur \\"Commencer\\" pour commencer"
+                                "en": "In this case, you would click ‘Yes’.",
+                                "fr": "Dans ce cas, vous devriez cliquer sur ‘Oui’."
                             }
                         }
-                    ],
-                    "buttons": {
-                        "isStart": true,
-                        "previousDisabled": true,
-                        "nextDisabled": false
-                    }
+                    ]
                 }
             },
             {
