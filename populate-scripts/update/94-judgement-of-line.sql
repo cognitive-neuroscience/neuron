@@ -125,8 +125,8 @@ UPDATE tasks SET
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Click \\"CONTINUE\\"",
-                                "fr": "Cliquez sur \\"CONTINUER\\""
+                                "en": "Click \\"NEXT\\"",
+                                "fr": "Cliquez sur \\"SUIVANT\\""
                             }
                         }
                     ],

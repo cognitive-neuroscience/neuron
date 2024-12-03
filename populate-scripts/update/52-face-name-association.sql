@@ -133,7 +133,7 @@ UPDATE tasks SET
                     "maxResponseTime": 10000,
                     "interTrialDelay": 500,
                     "blockNum": 1,
-                    "durationStimulusPresented": 50,
+                    "durationStimulusPresented": 3000,
                     "stimuliConfig": {
                         "type": "generated",
                         "stimuli": null
@@ -210,7 +210,7 @@ UPDATE tasks SET
                     "maxResponseTime": 10000,
                     "interTrialDelay": 500,
                     "blockNum": 2,
-                    "durationStimulusPresented": 50,
+                    "durationStimulusPresented": 3000,
                     "stimuliConfig": {
                         "type": "generated",
                         "stimuli": null
@@ -270,6 +270,15 @@ UPDATE tasks SET
                             }
                         },
                         {
+                            "sectionType": "image-horizontal",
+                            "imageAlignment": "center",
+                            "injection": "counterbalance",
+                            "imagePath": {
+                                "en": "/assets/images/instructions/face-name-association/???/instructions-2_en.jpg",
+                                "fr": "/assets/images/instructions/face-name-association/???/instructions-2_fr.jpg"
+                            }
+                        },
+                        {
                             "sectionType": "text",
                             "textContent": {
                                 "en": "In this case, you would click ‘Yes’.",
@@ -287,7 +296,7 @@ UPDATE tasks SET
                     "maxResponseTime": 10000,
                     "interTrialDelay": 500,
                     "blockNum": 3,
-                    "durationStimulusPresented": 50,
+                    "durationStimulusPresented": 3000,
                     "stimuliConfig": {
                         "type": "generated",
                         "stimuli": null
