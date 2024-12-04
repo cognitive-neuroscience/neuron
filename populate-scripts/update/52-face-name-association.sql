@@ -256,7 +256,7 @@ UPDATE tasks SET
                 "componentConfig": {
                     "title": "",
                     "timerConfig": {
-                        "timer": 10000,
+                        "timer": 15000,
                         "showTimer": true,
                         "canSkipTimer": false,
                         "countDown": true
