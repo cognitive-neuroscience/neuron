@@ -51,7 +51,7 @@ UPDATE tasks SET
                             }
                         },
                         {
-                            "sectionType": "image-horizontal",
+                            "sectionType": "image-square",
                             "imageAlignment": "center",
                             "imagePath": "/assets/images/instructions/judgement-of-line/instructions-1.png"
                         },
@@ -63,7 +63,7 @@ UPDATE tasks SET
                             }
                         },
                         {
-                            "sectionType": "image-horizontal",
+                            "sectionType": "image-square",
                             "imageAlignment": "center",
                             "imagePath": "/assets/images/instructions/judgement-of-line/instructions-2.png"
                         },

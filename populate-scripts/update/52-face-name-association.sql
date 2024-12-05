@@ -64,7 +64,7 @@ UPDATE tasks SET
                             }
                         },
                         {
-                            "sectionType": "image-horizontal",
+                            "sectionType": "image-square",
                             "imageAlignment": "center",
                             "injection": "counterbalance",
                             "imagePath": "/assets/images/instructions/face-name-association/???/instructions.jpg"
@@ -134,6 +134,7 @@ UPDATE tasks SET
                     "interTrialDelay": 500,
                     "blockNum": 1,
                     "durationStimulusPresented": 3000,
+                    "durationOfFeedback": 3000,
                     "stimuliConfig": {
                         "type": "generated",
                         "stimuli": null
@@ -155,8 +156,8 @@ UPDATE tasks SET
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "While you wait, please do this short keyboard test.",
-                                "fr": "En attendant, veuillez effectuer ce court test de clavier."
+                                "en": "While you are waiting, please complete this short keyboard task. Press \\"Start\\" to begin.",
+                                "fr": "En attendant, veuillez effectuer ce court test de clavier. Cliquez sur \\"Commencer\\" pour commencer."
                             }
                         }
                     ],
@@ -182,7 +183,8 @@ UPDATE tasks SET
                         "timer": 10000,
                         "showTimer": true,
                         "canSkipTimer": false,
-                        "countDown": true
+                        "countDown": true,
+                        "placement": "bottom-right"
                     },
                     "sections": [
                         {
@@ -211,6 +213,7 @@ UPDATE tasks SET
                     "interTrialDelay": 500,
                     "blockNum": 2,
                     "durationStimulusPresented": 3000,
+                    "durationOfFeedback": 3000,
                     "stimuliConfig": {
                         "type": "generated",
                         "stimuli": null
@@ -256,21 +259,22 @@ UPDATE tasks SET
                 "componentConfig": {
                     "title": "",
                     "timerConfig": {
-                        "timer": 15000,
+                        "timer": 30000,
                         "showTimer": true,
                         "canSkipTimer": false,
-                        "countDown": true
+                        "countDown": true,
+                        "placement": "bottom-right"
                     },
                     "sections": [
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Thank you. You will now see all the faces again. This time you will be asked if the person’s name is correct, and you must click ‘Yes’ or ‘No’.",
-                                "fr": "Merci. Vous allez maintenant revoir tous les visages. Cette fois, vous devez déterminer si le nom de la personne est le bon. Vous devez répondre en cliquant ‘Oui’ ou ‘Non’."
+                                "en": "Thank you. The next phase will start in 30 seconds. You will now see all the faces again. This time you will be asked if the person’s name is correct, and you must click ‘Yes’ or ‘No’.",
+                                "fr": "Merci. La prochaine phase commencera dans 30 secondes. Vous allez maintenant revoir tous les visages. Cette fois, vous devez déterminer si le nom de la personne est le bon. Vous devez répondre en cliquant ‘Oui’ ou ‘Non’."
                             }
                         },
                         {
-                            "sectionType": "image-horizontal",
+                            "sectionType": "image-square",
                             "imageAlignment": "center",
                             "injection": "counterbalance",
                             "imagePath": {
@@ -297,6 +301,7 @@ UPDATE tasks SET
                     "interTrialDelay": 500,
                     "blockNum": 3,
                     "durationStimulusPresented": 3000,
+                    "durationOfFeedback": 3000,
                     "stimuliConfig": {
                         "type": "generated",
                         "stimuli": null
