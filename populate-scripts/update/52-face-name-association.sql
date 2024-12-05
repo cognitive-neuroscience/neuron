@@ -235,8 +235,8 @@ UPDATE tasks SET
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "While you wait, please do this short keyboard test:",
-                                "fr": "En attendant, veuillez effectuer ce court test de clavier:"
+                                "en": "While you are waiting, please complete this short keyboard task. Press \\"Start\\" to begin",
+                                "fr": "En attendant, veuillez effectuer ce court test de clavier. Cliquez sur \\"Commencer\\" pour commencer."
                             }
                         }
                     ],
