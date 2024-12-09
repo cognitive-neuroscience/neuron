@@ -64,7 +64,7 @@ UPDATE tasks SET
                             }
                         },
                         {
-                            "sectionType": "image-square",
+                            "sectionType": "image-medium",
                             "imageAlignment": "center",
                             "injection": "counterbalance",
                             "imagePath": "/assets/images/instructions/face-name-association/???/instructions.jpg"
@@ -274,7 +274,7 @@ UPDATE tasks SET
                             }
                         },
                         {
-                            "sectionType": "image-square",
+                            "sectionType": "image-horizontal",
                             "imageAlignment": "center",
                             "injection": "counterbalance",
                             "imagePath": {
