@@ -77,7 +77,7 @@ func CreateServer() {
 
 	// CORS handling
 	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
-		AllowOrigins: []string{"https://psharplab.campus.mcgill.ca"},
+		AllowOrigins: []string{"https://wecog.research.mcgill.ca"},
 	}))
 
 	// Register app routes

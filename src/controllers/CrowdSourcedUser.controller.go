@@ -60,7 +60,7 @@ func (c *CrowdSourcedUserController) CreateCrowdSourcedUserAndLogin(e echo.Conte
 		if env == "DEV" {
 			cookie.Domain = "localhost"
 		} else if env == "PROD" {
-			cookie.Domain = "psharplab.campus.mcgill.ca"
+			cookie.Domain = "wecog.research.mcgill.ca"
 		}
 	}
 

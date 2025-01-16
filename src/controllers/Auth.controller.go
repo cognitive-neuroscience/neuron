@@ -61,7 +61,7 @@ func (l *AuthController) Login(e echo.Context) error {
 		if env == "DEV" {
 			cookie.Domain = "localhost"
 		} else if env == "PROD" {
-			cookie.Domain = "psharplab.campus.mcgill.ca"
+			cookie.Domain = "wecog.research.mcgill.ca"
 		}
 	}
 
@@ -89,7 +89,7 @@ func (l *AuthController) Logout(e echo.Context) error {
 		if env == "DEV" {
 			cookie.Domain = "localhost"
 		} else if env == "PROD" {
-			cookie.Domain = "psharplab.campus.mcgill.ca"
+			cookie.Domain = "wecog.research.mcgill.ca"
 		}
 	}
 
