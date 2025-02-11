@@ -3,7 +3,7 @@ UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "NAB",
     name = "Trail Making",
-    description = "The participant clicks different buttons in sequential order as fast as possible",
+    description = "The participant clicks different buttons in sequential order as fast as possible.",
     external_url = "",
     config = '{
         "taskConfig": {},
@@ -19,21 +19,21 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Read the instructions carefully",
+                                "en": "Read the instructions carefully.",
                                 "fr": "Lisez attentivement les instructions."
                             }
                         },
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "In this task, you will be shown numbered circles on the screen",
+                                "en": "In this task, you will be shown numbered circles on the screen.",
                                 "fr": "Des cercles numérotés seront affichés à l''écran."
                             }
                         },
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "You must start by clicking the number 1, then 2, and then continue in ascending order as fast as possible",
+                                "en": "You must start by clicking the number 1, then 2, and then continue in ascending order as fast as possible.",
                                 "fr": "Vous devez relier les cercles en cliquant dessus avec la souris, en suivant l’ordre croissant des numéros (1, 2, 3, etc.). Vous devez le faire le plus vite possible."
                             }
                         },
@@ -63,14 +63,14 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Let''s practice",
+                                "en": "Let''s practice.",
                                 "fr": "Vous aurez maintenant la chance de vous pratiquer."
                             }
                         },
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "The game will launch in full-screen",
+                                "en": "The game will launch in full-screen.",
                                 "fr": "Le jeu se lancera en plein écran."
                             }
                         },
@@ -114,14 +114,14 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "You will now play the actual game",
+                                "en": "You will now play the actual game.",
                                 "fr": "Vous allez maintenant commencer le jeu."
                             }
                         },
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "You must start by clicking the number 1, then 2, and then continue in ascending order as fast as possible",
+                                "en": "You must start by clicking the number 1, then 2, and then continue in ascending order as fast as possible.",
                                 "fr": "Rappel: vous devez relier les chiffres en ordre croissant le plus vite possible."
                             }
                         },
@@ -165,14 +165,14 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Read the instructions carefully",
-                                "fr": "Lisez attentivement les instructions"
+                                "en": "Read the instructions carefully.",
+                                "fr": "Lisez attentivement les instructions."
                             }
                         },
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "In this task, you will be shown circles with numbers and letters",
+                                "en": "In this task, you will be shown circles with numbers and letters.",
                                 "fr": "Il y aura maintenant des numéros ET des lettres."
                             }
                         },
@@ -220,7 +220,7 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Let''s practice",
+                                "en": "Let''s practice.",
                                 "fr": "Vous aurez maintenant la chance de vous pratiquer."
                             }
                         },
@@ -231,8 +231,8 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "The game will launch in full-screen",
-                                "fr": "Le jeu se lancera en plein écran"
+                                "en": "The game will launch in full-screen.",
+                                "fr": "Le jeu se lancera en plein écran."
                             }
                         },
                         {
@@ -275,14 +275,14 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "You will now play the actual game",
+                                "en": "You will now play the actual game.",
                                 "fr": "Vous allez maintenant commencer le jeu."
                             }
                         },
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Starting with number 1, you must click the circles ALTERNATING between numbers and letters in ascending order as fast as possible",
+                                "en": "Starting with number 1, you must click the circles ALTERNATING between numbers and letters in ascending order as fast as possible.",
                                 "fr": "Rappel: vous devez cliquer les cercles en suivant cet ordre et vous devez le faire le plus vite possible."
                             }
                         },
@@ -330,14 +330,14 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "You finished the game successfully",
+                                "en": "You finished the game successfully.",
                                 "fr": "Vous avez terminé le jeu avec succès."
                             }
                         },
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Thank you for your participation",
+                                "en": "Thank you for your participation.",
                                 "fr": "Merci pour votre participation."
                             }
                         },

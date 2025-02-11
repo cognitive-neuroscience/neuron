@@ -26,7 +26,7 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Read the instructions carefully",
+                                "en": "Read the instructions carefully.",
                                 "fr": "Lisez attentivement les instructions."
                             }
                         },
@@ -70,7 +70,7 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "For each letter, you have to decide if it is the <b>same letter</b> that was presented <b>2 letters ago</b>",
+                                "en": "For each letter, you have to decide if it is the <b>same letter</b> that was presented <b>2 letters ago</b>.",
                                 "fr": "Votre objectif est de déterminer si la lettre présentée à l’écran est <b>la même lettre</b> que celle qui a été affichée <b>2 lettres plus tôt</b>."
                             }
                         },
@@ -107,7 +107,7 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "⬅️ (Left arrow) for <b>not the same</b>, if the letter is <b>not the same</b> as the one that was presented 2 letters ago",
+                                "en": "⬅️ (Left arrow) for <b>not the same</b>, if the letter is <b>not the same</b> as the one that was presented 2 letters ago.",
                                 "fr": "⬅️ (clé pour flèche gauche) si <b>la lettre est différente</b> que celle qui a été présentée <b>il y a 2 lettres</b>."
                             }
                         },
@@ -118,7 +118,7 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "➡️ (Right arrow) for <b>the same</b> if the letter is <b>the same</b> as the one that was presented 2 letters ago",
+                                "en": "➡️ (Right arrow) for <b>the same</b> if the letter is <b>the same</b> as the one that was presented 2 letters ago.",
                                 "fr": "➡️ (clé pour flèche droite) si <b>la lettre est pareille</b> que celle qui a été présentée <b>il y a 2 lettres</b>."
                             }
                         },
@@ -141,7 +141,7 @@ UPDATE tasks set
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
                     "title": {
-                        "en": "Here is an example",
+                        "en": "Here is an example:",
                         "fr": "Voici un exemple:"
                     },
                     "sections": [
@@ -198,7 +198,7 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Now, you press ➡️ because a K was also <b>presented</b> two letters ago",
+                                "en": "Now, you press ➡️ because a K was also <b>presented</b> two letters ago.",
                                 "fr": "Dans cet exemple, la 5ième lettre présentée (K) correspond à celle qui a été présentée 2 places plus tôt. Donc, vous appuyez sur ➡️."
                             }
                         },
@@ -273,7 +273,7 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "(the game will launch in fullscreen)",
+                                "en": "(The game will launch in fullscreen)",
                                 "fr": "(Le jeu se lancera en plein écran)"
                             }
                         },
@@ -287,14 +287,14 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "⬅️ (left arrow) if the letter is <b>NOT THE SAME</b> as 2 letters ago",
+                                "en": "⬅️ (left arrow) if the letter is <b>NOT THE SAME</b> as 2 letters ago.",
                                 "fr": "⬅️ (clé flèche gauche) si la lettre <b>n''est pas la même</b> que celle qui a été présentée <b>2 lettres plus tôt</b>."
                             }
                         },
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "➡️ (right arrow) if the letter is <b>THE SAME</b> as 2 letters ago",
+                                "en": "➡️ (right arrow) if the letter is <b>THE SAME</b> as 2 letters ago.",
                                 "fr": "➡️ (clé flèche de droite) si la lettre <b>est la même</b> que celle qui a été présentée <b>2 lettres plus tôt</b>."
                             }
                         },
@@ -429,14 +429,14 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "⬅️ (left arrow) if the letter is <b>NOT THE SAME</b> as 2 letters ago",
+                                "en": "⬅️ (left arrow) if the letter is <b>NOT THE SAME</b> as 2 letters ago.",
                                 "fr": "⬅️ (clé flèche gauche) si la lettre <b>n''est pas la même</b> que celle qui a été présentée <b>2 lettres plus tôt</b>."
                             }
                         },
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "➡️ (right arrow) if the letter is <b>THE SAME</b> as 2 letters ago",
+                                "en": "➡️ (right arrow) if the letter is <b>THE SAME</b> as 2 letters ago.",
                                 "fr": "➡️ (clé flèche de droite) si la lettre <b>est la même</b> que celle qui a été présentée <b>2 lettres plus tôt</b>."
                             }
                         },
@@ -576,14 +576,14 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "⬅️ (left arrow) if the letter is <b>NOT THE SAME</b> as 2 letters ago",
+                                "en": "⬅️ (left arrow) if the letter is <b>NOT THE SAME</b> as 2 letters ago.",
                                 "fr": "⬅️ (clé flèche gauche) si la lettre <b>n''est pas la même</b> que celle qui a été présentée <b>2 lettres plus tôt</b>."
                             }
                         },
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "➡️ (right arrow) if the letter is <b>THE SAME</b> as 2 letters ago",
+                                "en": "➡️ (right arrow) if the letter is <b>THE SAME</b> as 2 letters ago.",
                                 "fr": "➡️ (clé flèche de droite) si la lettre <b>est la même</b> que celle qui a été présentée <b>2 lettres plus tôt</b>."
                             }
                         },
@@ -700,21 +700,21 @@ UPDATE tasks set
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
                     "title": {
-                        "en": "Practice round is now complete",
+                        "en": "Practice round is now complete!",
                         "fr": "Bon travail!"
                     },
                     "sections": [
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "You will now play the actual game",
+                                "en": "You will now play the actual game.",
                                 "fr": "Vous allez maintenant commencer le jeu."
                             }
                         },
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "You will earn 10 points for every right answer",
+                                "en": "You will earn 10 points for every right answer.",
                                 "fr": "Vous gagnerez 10 points pour chaque bonne réponse."
                             }
                         },
@@ -728,14 +728,14 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "⬅️ (left arrow) if the letter is <b>NOT THE SAME</b> as 2 letters ago",
+                                "en": "⬅️ (left arrow) if the letter is <b>NOT THE SAME</b> as 2 letters ago.",
                                 "fr": "⬅️ (clé flèche gauche) si la lettre <b>n''est pas la même</b> que celle qui a été présentée <b>2 lettres plus tôt</b>."
                             }
                         },
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "➡️ (right arrow) if the letter is <b>THE SAME</b> as 2 letters ago",
+                                "en": "➡️ (right arrow) if the letter is <b>THE SAME</b> as 2 letters ago.",
                                 "fr": "➡️ (clé flèche de droite) si la lettre <b>est la même</b> que celle qui a été présentée <b>2 lettres plus tôt</b>."
                             }
                         },
@@ -783,15 +783,15 @@ UPDATE tasks set
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
                     "title": {
-                        "en": "Game has finished",
+                        "en": "Game has finished!",
                         "fr": "Félicitations!"
                     },
                     "sections": [
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Congratulations! You have finished the game successfully",
-                                "fr": "Vous avez terminé le jeu avec succès."
+                                "en": "Congratulations! You have finished the game successfully.",
+                                "fr": "Vous avez terminé le jeu avec succès!"
                             }
                         },
                         {

@@ -34,7 +34,7 @@ UPDATE tasks set
                             "sectionType": "text",
                             "textContent": {
                                 "en": "In this task, different words for colors (Ex. \\"BLUE\\") will be presented in different colored ink:",
-                                "fr": "Dans ce jeu, différents noms de couleurs (ex. \\"Bleu\\") apparaîtront à l’écran, et seront imprimés avec différentes couleurs d’encre."
+                                "fr": "Dans ce jeu, différents noms de couleurs (ex. \\"Bleu\\") apparaîtront à l’écran, et seront imprimés avec différentes couleurs d’encre:"
                             }
                         },
                         {
@@ -47,7 +47,7 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "You have to response to the <b>COLOR</b> of the ink that the word is printed in, <b>NOT</b> the word itself.",
+                                "en": "You have to respond to the <b>COLOR</b> of the ink that the word is printed in, <b>NOT</b> the word itself.",
                                 "fr": "Vous devrez indiquer <b>la couleur de l’encre</b> sans tenir compte du nom de couleur qui est écrit."
                             }
                         },
@@ -77,8 +77,8 @@ UPDATE tasks set
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
                     "title": {
-                        "en": "Here are some examples",
-                        "fr": "Voici quelques exemples"
+                        "en": "Here are some examples:",
+                        "fr": "Voici quelques exemples:"
                     },
                     "sections": [
                         {
@@ -106,14 +106,14 @@ UPDATE tasks set
                             "sectionType": "text",
                             "textContent": {
                                 "en": "Again, only the COLOR of the ink matters, NOT the word itself.",
-                                "fr": "N''oubliez pas: seule la COULEUR de l''encre compte, PAS le mot lui-même"
+                                "fr": "N''oubliez pas: seule la COULEUR de l''encre compte, PAS le mot lui-même."
                             }
                         },
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Please use the number keys \\"1\\", \\"2\\", \\"3\\" on your keyboard to respond",
-                                "fr": "Veuillez utiliser les touches numériques \\"1\\", \\"2\\", \\"3\\" sur votre clavier pour répondre"
+                                "en": "Please use the number keys \\"1\\", \\"2\\", \\"3\\" on your keyboard to respond.",
+                                "fr": "Veuillez utiliser les touches numériques \\"1\\", \\"2\\", \\"3\\" sur votre clavier pour répondre."
                             }
                         },
                         {
@@ -156,7 +156,7 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Good luck! You will have very little time to respond, so be ready",
+                                "en": "Good luck! You will have very little time to respond, so be ready.",
                                 "fr": "Vous aurez très peu de temps pour répondre, alors soyez prêts! Bonne chance!"
                             }
                         },
@@ -204,22 +204,22 @@ UPDATE tasks set
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
                     "title": {
-                        "en": "Practice round is now complete",
+                        "en": "Practice round is now complete!",
                         "fr": "Bon travail!"
                     },
                     "sections": [
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "You will now play the actual game",
-                                "fr": "Vous allez maintenant commencer le vrai jeu"
+                                "en": "You will now play the actual game.",
+                                "fr": "Vous allez maintenant commencer le vrai jeu."
                             }
                         },
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "You will earn 10 points for every right answer",
-                                "fr": "Vous gagnerez 10 points pour chaque bonne réponse"
+                                "en": "You will earn 10 points for every right answer.",
+                                "fr": "Vous gagnerez 10 points pour chaque bonne réponse."
                             }
                         },
                         {
@@ -273,7 +273,7 @@ UPDATE tasks set
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
                     "title": {
-                        "en": "Congratulations! You finished the game successfully",
+                        "en": "Congratulations! You finished the game successfully.",
                         "fr": "Félicitations! Vous avez terminé le jeu avec succès."
                     },
                     "sections": [

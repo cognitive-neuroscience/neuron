@@ -21,15 +21,15 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Please read the instructions carefully",
-                                "fr": "Lisez attentivement les instructions"
+                                "en": "Please read the instructions carefully.",
+                                "fr": "Lisez attentivement les instructions."
                             }
                         },
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "This is a memory test",
-                                "fr": "Ceci est un test de mémoire"
+                                "en": "This is a memory test.",
+                                "fr": "Ceci est un test de mémoire."
                             }
                         },
                         {
@@ -55,8 +55,8 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "A sequence of numbers appear on the screen <b>one at a time</b>. (Ex: 3, 9, 2)",
-                                "fr": "Une séquence de chiffres apparaîtra sur l''écran <b>un à la fois</b>. (Eg: 3, 9, 2)"
+                                "en": "A sequence of numbers appear on the screen <b>one at a time</b>. (Ex: 3, 9, 2).",
+                                "fr": "Une séquence de chiffres apparaîtra sur l''écran <b>un à la fois</b>. (Eg: 3, 9, 2)."
 
                             }
                         },
@@ -70,7 +70,7 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "You must click the \\"Submit\\" key to record your answer",
+                                "en": "You must click the \\"Submit\\" key to record your answer.",
                                 "fr": "Vous devez cliquer sur \\"SUBMIT\\" pour enregistrer votre réponse."
                             }
                         },
@@ -114,7 +114,7 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "If you don''t remember, press skip",
+                                "en": "If you don''t remember, press skip.",
                                 "fr": "Si vous ne vous en souvenez pas, cliquez sur \\"SKIP\\" pour passer au prochain."
                             }
                         },
@@ -228,8 +228,8 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "A sequence of numbers appear on the screen <b>one at a time</b>. (Ex: 3, 9, 2)",
-                                "fr": "Une séquence de chiffres apparaîtra sur l''écran <b>un à la fois</b>. (Ex: 3, 9, 2)"
+                                "en": "A sequence of numbers appear on the screen <b>one at a time</b>. (Ex: 3, 9, 2).",
+                                "fr": "Une séquence de chiffres apparaîtra sur l''écran <b>un à la fois</b>. (Ex: 3, 9, 2)."
                             }
                         },
                         {
@@ -272,14 +272,14 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Rememebr when the keypad is shown, you need to enter the numbers <b>in reverse order</b> as they were shown and click submit",
+                                "en": "Rememebr when the keypad is shown, you need to enter the numbers <b>in reverse order</b> as they were shown and click submit.",
                                 "fr": "Rappelez-vous: quand le clavier est affiché, vous devez saisir les chiffres <b>dans l''ordre inverse</b> que celui dans lequel ils ont été présentés. Ensuite, cliquez sur submit."
                             }
                         },
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "If you don''t remember, press skip",
+                                "en": "If you don''t remember, press skip.",
                                 "fr": "Si vous ne vous en souvenez pas, cliquez sur \\"SKIP\\" pour passer au prochain."
                             }
                         },
@@ -329,21 +329,21 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "You will now play the actual game",
-                                "fr": "Vous allez maintenant commencer le vrai tour"
+                                "en": "You will now play the actual game.",
+                                "fr": "Vous allez maintenant commencer le vrai jeu."
                             }
                         },
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Remember when the keypad is shown, you need to enter the numbers <b>in reverse order</b> as they were shown and click the <b>submit</b> button",
+                                "en": "Remember when the keypad is shown, you need to enter the numbers <b>in reverse order</b> as they were shown and click the <b>submit</b> button.",
                                 "fr": "Rappelez-vous que quand le clavier est affiché, vous devez saisir les chiffres <b>dans l''ordre inverse</b> que celui dans lequel ils ont été présentés. Ensuite, cliquez sur <b>Submit</b>."
                             }
                         },
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "If you don''t remember, press skip",
+                                "en": "If you don''t remember, press skip.",
                                 "fr": "Si vous ne vous en souvenez pas, cliquez sur \\"SKIP\\" pour passer au prochain."
                             }
                         },
@@ -393,15 +393,15 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "You finished the game successfully",
-                                "fr": "Vous avez terminé le jeu avec succès"
+                                "en": "You finished the game successfully.",
+                                "fr": "Vous avez terminé le jeu avec succès."
                             }
                         },
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Thank you for your participation",
-                                "fr": "Merci pour votre participation"
+                                "en": "Thank you for your participation!",
+                                "fr": "Merci pour votre participation!"
                             }
                         },
                         {

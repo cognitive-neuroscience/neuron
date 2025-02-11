@@ -440,8 +440,8 @@ UPDATE tasks set
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
                     "title": {
-                        "en": "1st Practice round is now complete",
-                        "fr": "Le premier tour de pratique est maintenant terminé"
+                        "en": "1st Practice round is now complete.",
+                        "fr": "Le premier tour de pratique est maintenant terminé."
                     },
                     "sections": [
                         {
@@ -479,7 +479,7 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "en": "Remember, the number''s color tells you what you must identify about the number.",
                                 "fr": "Rappel:"
                             }
                         },
@@ -595,8 +595,8 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "We will repeat this round so you can get more practice",
-                                "fr": "Nous allons répéter ce tour pour que vous puissiez vous entraîner davantage"
+                                "en": "We will repeat this round so you can get more practice.",
+                                "fr": "Nous allons répéter ce tour pour que vous puissiez vous entraîner davantage."
                             }
                         },
                         {
@@ -627,7 +627,7 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "en": "Remember, the number''s color tells you what you must identify about the number.",
                                 "fr": "Rappel:"
                             }
                         },
@@ -730,7 +730,7 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "This time we won''t give you feedback after each answer",
+                                "en": "This time we won''t give you feedback after each answer.",
                                 "fr": "Cette fois, nous ne vous dirons pas si vous avez répondu correctement ou incorrectement après chaque réponse."
                             }
                         },
@@ -767,7 +767,7 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "en": "Remember, the number''s color tells you what you must identify about the number.",
                                 "fr": "Rappel:"
                             }
                         },
@@ -899,7 +899,7 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Remember, the number''s color tells you what you must identify about the number",
+                                "en": "Remember, the number''s color tells you what you must identify about the number.",
                                 "fr": "Rappel:"
                             }
                         },
@@ -994,7 +994,7 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "You finished the game successfully",
+                                "en": "You finished the game successfully.",
                                 "fr": "Vous avez terminé le jeu avec succès."
 							}
                         },
