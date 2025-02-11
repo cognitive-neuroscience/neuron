@@ -4,7 +4,7 @@ UPDATE tasks SET
     from_platform = "PSHARPLAB",
     task_type = "EXPERIMENTAL",
     name = "Probabilistic Learning Task (VERSION 1)",
-    description = "This task is a probablistic learning task based on the reinforcement learning model. The current version is based on the paper by Frank, Woroch and Curran. (2005). Neuron, 47(4), 495-501. To see the image set associated with this version of the PLT, visit this link: https://github.com/cognitive-neuroscience/axon/tree/master/src/assets/images/stimuli/version1/plt",
+    description = "This task is a probabilistic learning task based on the reinforcement learning model. The current version is based on the paper by Frank, Woroch and Curran. (2005). Neuron, 47(4), 495-501. To see the image set associated with this version of the PLT, visit this link: https://github.com/cognitive-neuroscience/axon/tree/master/src/assets/images/stimuli/version1/plt",
     external_url = "",
     config = '{
         "taskConfig": {
@@ -150,7 +150,7 @@ UPDATE tasks SET
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "You will begin with a practice session",
+                                "en": "You will begin with a practice session.",
                                 "fr": "Vous commencerez par une session d’entraînement."
                             }
                         },
@@ -354,7 +354,7 @@ UPDATE tasks SET
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Reminder: pick the symbol that is the most <b>LIKELY</b> to <b>give you points</b>",
+                                "en": "Reminder: pick the symbol that is the most <b>LIKELY</b> to <b>give you points</b>.",
                                 "fr": "N’oubliez pas: choisissez le symbole le plus susceptible d’offrir de des points."
                             }
                         },
