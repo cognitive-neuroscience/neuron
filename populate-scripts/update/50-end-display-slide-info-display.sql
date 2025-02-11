@@ -34,15 +34,15 @@ UPDATE tasks SET
                         {
                             "header": "",
                             "textContent": {
-                                "en": "If you reside in the region of <b>Montreal</b>, and might be interested in participating in part two of this study which takes place in person, please also contact us (sharplab.neuro@mcgill.ca).",
-                                "fr": "Si vous habitez dans la région de <b>Montréal</b>, et que vous seriez peut-être intéressé.e de participer à une deuxième session en personne, veuillez également nous contacter (sharplab.neuro@mcgill.ca)."
+                                "en": "Furthermore, we would love to hear your feedback and your experience using our platform, as this project is still a work in progress. Please feel free to contact us (sharplab.neuro@mcgill.ca).",
+                                "fr": "De plus, nous aimerions entendre vos commentaires et votre expérience d''utilisation de notre plateforme, car ce projet est toujours en cours. N''hésitez pas à nous contacter (sharplab.neuro@mcgill.ca)."
                             }
                         },
                         {
                             "header": "",
                             "textContent": {
-                                "en": "Furthermore, we would love to hear your feedback and your experience using our platform, as this project is still a work in progress.",
-                                "fr": "De plus, nous aimerions entendre vos commentaires et votre expérience d''utilisation de notre plateforme, car ce projet est toujours en cours."
+                                "en": "If you are interested in our previous research, please visit our website www.sharplab.ca for blog posts describing past studies.",
+                                "fr": "Si vous êtes intéressé par nos recherches précédentes, veuillez visiter notre site web www.sharplab.ca pour consulter des articles de blog décrivant des études passées."
                             }
                         },
                         {
