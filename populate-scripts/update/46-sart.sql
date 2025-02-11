@@ -85,7 +85,7 @@ UPDATE tasks SET
                             "sectionType": "text",
                             "textContent": {
                                 "en": "The numbers will appear very quickly, so be ready!",
-                                "fr": "Les chiffres vont apparaître très rapidement, alors soyez prête!"
+                                "fr": "Les chiffres vont apparaître très rapidement, alors soyez prêts!"
                             }
                         },
                         {
