@@ -70,8 +70,8 @@ UPDATE tasks SET
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Remember, press the ( ⬅️ ) for all numbers except for 3",
-                                "fr": "N''oubliez pas d''appuyer sur ( ⬅️ ) pour tous les chiffres sauf pour le 3"
+                                "en": "Remember, press the ( ⬅️ ) for all numbers except for 3.",
+                                "fr": "N''oubliez pas d''appuyer sur ( ⬅️ ) pour tous les chiffres sauf pour le 3."
                             }
                         },
                         {
@@ -85,7 +85,7 @@ UPDATE tasks SET
                             "sectionType": "text",
                             "textContent": {
                                 "en": "The numbers will appear very quickly, so be ready!",
-                                "fr": "Les chiffres vont apparaître très rapidement, alors soyez prêt.e!"
+                                "fr": "Les chiffres vont apparaître très rapidement, alors soyez prête!"
                             }
                         },
                         {
@@ -137,14 +137,14 @@ UPDATE tasks SET
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Remember, press the ( ⬅️ ) key for all numbers except for 3",
-                                "fr": "N''oubliez pas d''appuyer sur ( ⬅️ ) pour tous les chiffres sauf pour le 3"
+                                "en": "Remember, press the ( ⬅️ ) key for all numbers except for 3.",
+                                "fr": "N''oubliez pas d''appuyer sur ( ⬅️ ) pour tous les chiffres sauf pour le 3."
                                 }
                         },
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "When you see 3, don''t press anything and wait for the next number to appear",
+                                "en": "When you see 3, don''t press anything and wait for the next number to appear.",
                                 "fr": "Quand vous voyez le chiffre 3, vous ne devez pas appuyer sur aucune touche, attendez simplement le chiffre suivant."
                                 }
                         },
@@ -184,8 +184,8 @@ UPDATE tasks SET
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
                     "title": {
-                        "en": "It''s break time",
-                        "fr": "C''est l''heure de la pause"
+                        "en": "It''s break time.",
+                        "fr": "C''est l''heure de la pause."
                     },
                     "timerConfig": {
                         "timer": 35000,
@@ -197,8 +197,8 @@ UPDATE tasks SET
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "You have to wait for at least 20 seconds before being able to continue",
-                                "fr": "Vous devez attendre au moins 20 secondes avant de pouvoir continuer"
+                                "en": "You have to wait for at least 20 seconds before being able to continue.",
+                                "fr": "Vous devez attendre au moins 20 secondes avant de pouvoir continuer."
                             }
                         },
                         {
