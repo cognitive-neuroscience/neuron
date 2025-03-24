@@ -56,15 +56,6 @@ func (s *StudyUserRepository) GetAllStudyUsersByStudyId(studyId uint) ([]models.
 		`,
 		studyId,
 	)
-
-	// return baseGetStudyUsersById(
-	// 	`
-	// 		SELECT user_id, study_id, completion_code, register_date, due_date, current_task_index, has_accepted_consent, lang, data 
-	// 		FROM study_users 
-	// 		WHERE study_id = ?;
-	// 	`,
-	// 	studyId,
-	// )
 }
 
 // GetAllStudyUsersByUserId retrieves all study users associated with the given user id from the database.
