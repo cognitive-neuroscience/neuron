@@ -61,8 +61,8 @@ func (s *StudyUserService) UpdateStudyUser(userId string, studyId string, studyU
 		return models.StudyUser{}, models.HTTPStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)}
 	}
 
-	if parsedUserId != studyUser.User.ID || parsedStudyId != studyUser.Study.ID {
-		axonlogger.WarningLogger.Println("Given id is not equivalent. User ID Param:", userId, "StudyUser User ID:", studyUser.User.ID, "Study ID Param:", studyId, "StudyUser Study ID:", studyUser.Study.ID)
+	if parsedUserId != studyUser.UserID || parsedStudyId != studyUser.StudyID {
+		axonlogger.WarningLogger.Println("Given id is not equivalent. User ID Param:", userId, "StudyUser User ID:", studyUser.UserID, "Study ID Param:", studyId, "StudyUser Study ID:", studyUser.StudyID)
 		return models.StudyUser{}, models.HTTPStatus{Status: http.StatusForbidden, Message: http.StatusText(http.StatusForbidden)}
 	}
 
@@ -96,10 +96,10 @@ func (s *StudyUserService) UpdateStudyUser(userId string, studyId string, studyU
 // i.e. ParticipantData.Data[studyUser.currentTaskIndex] should exist.
 // This function also returns false if it encounters an error.
 func allowStudyUserCurrentTaskIndexIncrement(studyUser models.StudyUser) bool {
-	userIdAsString := common.ConvertUintToString(studyUser.User.ID)
+	userIdAsString := common.ConvertUintToString(studyUser.UserID)
 
 	_, httpStatus := participantDataRepositoryImpl.GetParticipantDataByStudyAndUserIdAndTaskOrder(
-		studyUser.Study.ID,
+		studyUser.StudyID,
 		userIdAsString,
 		studyUser.CurrentTaskIndex,
 	)
