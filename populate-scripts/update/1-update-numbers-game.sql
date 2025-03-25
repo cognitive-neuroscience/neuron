@@ -272,7 +272,7 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Rememebr when the keypad is shown, you need to enter the numbers <b>in reverse order</b> as they were shown and click submit.",
+                                "en": "Remember when the keypad is shown, you need to enter the numbers <b>in reverse order</b> as they were shown and click submit.",
                                 "fr": "Rappelez-vous: quand le clavier est affiché, vous devez saisir les chiffres <b>dans l''ordre inverse</b> que celui dans lequel ils ont été présentés. Ensuite, cliquez sur submit."
                             }
                         },

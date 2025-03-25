@@ -67,7 +67,7 @@ UPDATE tasks set
                                 "fr": "Droitier"
                             },
                             "value": "RIGHT"
-                        
+                        }
                     ]
                 }
             },
