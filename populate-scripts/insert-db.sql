@@ -13,9 +13,9 @@ INSERT INTO tasks (id, from_platform, task_type, name, description, external_url
 (
     NULL,
     "PSHARPLAB",
-    "EXPERIMENTAL",
-    "Lines And Angles Game",
-    "Participants must judge and match the angle of a line",
+    "INFO_DISPLAY",
+    "Longitudinal Welcome Display Slide",
+    "",
     "",
     '{}'
 );

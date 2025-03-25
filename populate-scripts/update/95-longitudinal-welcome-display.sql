@@ -1,9 +1,9 @@
 
--- Welcome Display Slide INFO DISPLAY
+-- Longitudinal Welcome Display Slide INFO DISPLAY
 UPDATE tasks SET
     from_platform = "PSHARPLAB",
     task_type = "INFO_DISPLAY",
-    name = "Welcome Display Slide",
+    name = "Longitudinal Welcome Display Slide",
     description = "",
     external_url = "",
     config = '{
@@ -27,7 +27,7 @@ UPDATE tasks SET
                         {
                             "header": "",
                             "textContent": {
-                                "en": "You're here because in the last two years you completed some of our brain games. We are now asking you to complete them again as part of our longitudinal study.",
+                                "en": "You''re here because in the last two years you completed some of our brain games. We are now asking you to complete them again as part of our longitudinal study.",
                                 "fr": "Vous êtes ici parce que, au cours des deux dernières années, vous avez complété certains de nos jeux cognitifs. Nous vous demandons maintenant de les compléter à nouveau dans le cadre de notre étude longitudinale."
                             }
                         },
@@ -35,7 +35,7 @@ UPDATE tasks SET
                             "header": "",
                             "textContent": {
                                 "en": "Your participation will allow us to understand how cognition evolves over time, and help us expand online testing which allows us to significantly increase the number of people that can participate in research.",
-                                "fr": "Votre participation nous permettra de comprendre comment la cognition évolue au fil du temps et de nous aider à développer les tests en ligne, ce qui nous permet d'augmenter considérablement le nombre de personnes pouvant participer à la recherche."
+                                "fr": "Votre participation nous permettra de comprendre comment la cognition évolue au fil du temps et de nous aider à développer les tests en ligne, ce qui nous permet d''augmenter considérablement le nombre de personnes pouvant participer à la recherche."
                             }
                         },
                         {
@@ -120,4 +120,4 @@ UPDATE tasks SET
             }
         ]
     }'
-WHERE id = 49;
+WHERE id = 95;
