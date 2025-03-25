@@ -23,45 +23,19 @@ func baseGetStudyUsersById(query string, args ...interface{}) ([]models.StudyUse
 		}
 	}()
 
-	dbStudyUsers := []models.DBStudyUser{}
-	studyUsers := []models.StudyUser{}
+	retrievedStudyUsers := []models.StudyUser{}
 
 	httpStatus := baseRepositoryImpl.GetAllBy(
-		&dbStudyUsers,
+		&retrievedStudyUsers,
 		query,
 		args...,
 	)
 
 	if !common.HTTPRequestIsSuccessful(httpStatus.Status) {
-		return studyUsers, httpStatus
+		return retrievedStudyUsers, httpStatus
 	}
 
-	for _, dbStudyUser := range dbStudyUsers {
-		study, getStudyHttpStatus := studyRepositoryImpl.GetStudyById(dbStudyUser.StudyID)
-		if !common.HTTPRequestIsSuccessful(getStudyHttpStatus.Status) {
-			return []models.StudyUser{}, getStudyHttpStatus
-		}
-		user, getUserHttpStatus := userRepositoryImpl.GetUserById(dbStudyUser.UserID)
-		if !common.HTTPRequestIsSuccessful(getUserHttpStatus.Status) {
-			return studyUsers, getUserHttpStatus
-		}
-
-		studyUser := models.StudyUser{
-			User:               user,
-			Study:              study,
-			CompletionCode:     dbStudyUser.CompletionCode,
-			RegisterDate:       dbStudyUser.RegisterDate,
-			DueDate:            dbStudyUser.DueDate,
-			CurrentTaskIndex:   dbStudyUser.CurrentTaskIndex,
-			HasAcceptedConsent: dbStudyUser.HasAcceptedConsent,
-			Lang:               dbStudyUser.Lang,
-			Data:               dbStudyUser.Data,
-		}
-
-		studyUsers = append(studyUsers, studyUser)
-	}
-
-	return studyUsers, models.HTTPStatus{Status: http.StatusOK, Message: http.StatusText(http.StatusOK)}
+	return retrievedStudyUsers, models.HTTPStatus{Status: http.StatusOK, Message: http.StatusText(http.StatusOK)}
 }
 
 // GetAllStudyUsersByStudyId retrieves all study users associated with the given user id from the database.
@@ -76,9 +50,9 @@ func (s *StudyUserRepository) GetAllStudyUsersByStudyId(studyId uint) ([]models.
 
 	return baseGetStudyUsersById(
 		`
-			SELECT user_id, study_id, completion_code, register_date, due_date, current_task_index, has_accepted_consent, lang, data 
-			FROM study_users 
-			WHERE study_id = ?;
+	 		SELECT user_id, study_id, completion_code, register_date, due_date, current_task_index, has_accepted_consent, lang, data 
+	 		FROM study_users 
+	 		WHERE study_id = ?;
 		`,
 		studyId,
 	)
@@ -121,8 +95,8 @@ func (s *StudyUserRepository) CreateStudyUser(studyUser *models.StudyUser) model
 			(user_id, study_id, completion_code, current_task_index, register_date, due_date, has_accepted_consent, lang, data) 
 			VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);
 		`,
-		studyUser.User.ID,
-		studyUser.Study.ID,
+		studyUser.UserID,
+		studyUser.StudyID,
 		studyUser.CompletionCode,
 		studyUser.CurrentTaskIndex,
 		time.Now().UTC(),
@@ -163,11 +137,10 @@ func (s *StudyUserRepository) GetStudyUserByUserAndStudyId(userId uint, studyId 
 		}
 	}()
 
-	dbStudyUser := models.DBStudyUser{}
 	studyUser := models.StudyUser{}
 
 	if httpStatus := baseRepositoryImpl.GetOneBy(
-		&dbStudyUser,
+		&studyUser,
 		`
 			SELECT user_id, study_id, completion_code, register_date, due_date, current_task_index, has_accepted_consent, lang, data 
 			FROM study_users 
@@ -179,24 +152,6 @@ func (s *StudyUserRepository) GetStudyUserByUserAndStudyId(userId uint, studyId 
 		return studyUser, httpStatus
 	}
 
-	userForStudyUser, getUserHttpStatus := userRepositoryImpl.GetUserById(userId)
-	if !common.HTTPRequestIsSuccessful(getUserHttpStatus.Status) {
-		return models.StudyUser{}, getUserHttpStatus
-	}
-	studyForStudyUser, getStudyHttpStatus := studyRepositoryImpl.GetStudyById(studyId)
-	if !common.HTTPRequestIsSuccessful(getUserHttpStatus.Status) {
-		return models.StudyUser{}, getStudyHttpStatus
-	}
-
-	studyUser.User = userForStudyUser
-	studyUser.Study = studyForStudyUser
-	studyUser.CompletionCode = dbStudyUser.CompletionCode
-	studyUser.RegisterDate = dbStudyUser.RegisterDate
-	studyUser.DueDate = dbStudyUser.DueDate
-	studyUser.CurrentTaskIndex = dbStudyUser.CurrentTaskIndex
-	studyUser.HasAcceptedConsent = dbStudyUser.HasAcceptedConsent
-	studyUser.Lang = dbStudyUser.Lang
-	studyUser.Data = dbStudyUser.Data
 	return studyUser, models.HTTPStatus{Status: http.StatusOK, Message: http.StatusText(http.StatusOK)}
 }
 
@@ -224,8 +179,8 @@ func (s *StudyUserRepository) UpdateStudyUser(studyUser *models.StudyUser) model
 		studyUser.HasAcceptedConsent,
 		studyUser.Lang,
 		studyUser.Data,
-		studyUser.Study.ID,
-		studyUser.User.ID,
+		studyUser.StudyID,
+		studyUser.UserID,
 	); err != nil {
 		httpStatus := models.HTTPStatus{
 			Status:  http.StatusInternalServerError,
@@ -246,7 +201,7 @@ func (s *StudyUserRepository) UpdateStudyUser(studyUser *models.StudyUser) model
 
 // GetAllStudyUsers gets all study users for the database. This is used for the summary.
 // It returns a 200 or 500 status code.
-func (u *StudyUserRepository) GetAllStudyUsers() ([]models.DBStudyUser, models.HTTPStatus) {
+func (u *StudyUserRepository) GetAllStudyUsers() ([]models.StudyUser, models.HTTPStatus) {
 	axonlogger.InfoLogger.Println("STUDYUSER DATABASE: GetAllStudyUsers()")
 	defer func() {
 		if err := recover(); err != nil {
@@ -254,7 +209,7 @@ func (u *StudyUserRepository) GetAllStudyUsers() ([]models.DBStudyUser, models.H
 		}
 	}()
 
-	dbStudyUsers := []models.DBStudyUser{}
+	dbStudyUsers := []models.StudyUser{}
 	httpStatus := baseRepositoryImpl.GetAllBy(
 		&dbStudyUsers,
 		`SELECT user_id, study_id, completion_code, register_date, due_date, current_task_index, has_accepted_consent, lang, data 

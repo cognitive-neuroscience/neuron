@@ -23,22 +23,8 @@ var StudyUserSchema = `
 	);
 `
 
-// StudyUser represents a join table between studys and users keeping track of the progress
-// for that user in each study that the user is part of
+// StudyUser represents a join table between studies and users, tracking the progress and registration of users within a study
 type StudyUser struct {
-	User               User               `json:"user"`
-	Study              Study              `json:"study"`
-	CompletionCode     string             `json:"completionCode"`
-	RegisterDate       time.Time          `json:"registerDate"`
-	DueDate            sql.NullTime       `json:"dueDate"`
-	CurrentTaskIndex   int                `json:"currentTaskIndex"`
-	HasAcceptedConsent bool               `json:"hasAcceptedConsent"`
-	Lang               string             `json:"lang"`
-	Data               MapStringInterface `json:"data"`
-}
-
-// DBStudyUser is the internal database representation of the study user
-type DBStudyUser struct {
 	UserID             uint               `json:"userId"`
 	StudyID            uint               `json:"studyId"`
 	CompletionCode     string             `json:"completionCode"`
