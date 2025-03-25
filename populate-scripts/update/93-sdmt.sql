@@ -1218,15 +1218,15 @@ UPDATE tasks SET
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "You finished the game successfully",
-                                "fr": "Vous avez terminé le jeu avec succès"
+                                "en": "You finished the game successfully.",
+                                "fr": "Vous avez terminé le jeu avec succès."
                             }
                         },
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Thank you for your participation",
-                                "fr": "Merci pour votre participation"
+                                "en": "Thank you for your participation!",
+                                "fr": "Merci pour votre participation!"
                             }
                         },
                         {

@@ -19,15 +19,15 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Read the instructions carefully",
-                                "fr": "Lisez attentivement les instructions"
+                                "en": "Read the instructions carefully.",
+                                "fr": "Lisez attentivement les instructions."
                             }
                         },
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "This is a test of finger tapping speed",
-                                "fr": "Ceci est un test de vitesse de des doigts"
+                                "en": "This is a test of finger tapping speed.",
+                                "fr": "Ceci est un test de vitesse de des doigts."
                             }
                         },
                         {
@@ -67,7 +67,7 @@ UPDATE tasks set
                                 "fr": "Droitier"
                             },
                             "value": "RIGHT"
-                        
+                        }
                     ]
                 }
             },
@@ -86,8 +86,8 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "You will have to <b>alternatively tap</b> the <b>P</b> and <b>Q</b> keys of the keyboard <b>as fast as you can</b>",
-                                "fr": "Avec un de vos index, vous devrez taper les clés P et Q du clavier <b>en alternance et le plus vite possible</b>"
+                                "en": "You will have to <b>alternatively tap</b> the <b>P</b> and <b>Q</b> keys of the keyboard <b>as fast as you can</b>.",
+                                "fr": "Avec un de vos index, vous devrez taper les clés P et Q du clavier <b>en alternance et le plus vite possible</b>."
                             }
                         },
                         {
@@ -100,8 +100,8 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "We will tell you which hand to use right before each round",
-                                "fr": "Avant chaque tour, nous indiquerons si vous devez utiliser l’index droit ou gauche"
+                                "en": "We will tell you which hand to use right before each round.",
+                                "fr": "Avant chaque tour, nous indiquerons si vous devez utiliser l’index droit ou gauche."
                             }
                         },
                         {
@@ -134,7 +134,7 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Please go ahead and find these keys now",
+                                "en": "Please go ahead and find these keys now.",
                                 "fr": "Prenez un moment pour localiser ces touches sur le clavier."
                             }
                         },
@@ -164,15 +164,15 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "First, let''s practice",
+                                "en": "First, let''s practice!",
                                 "fr": "Commençons par un tour d’entraînement!"
                             }
                         },
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "For the practice, please use your <b>RIGHT</b> index finger",
-                                "fr": "Veuillez utiliser votre index <b>DROIT</b>"
+                                "en": "For the practice, please use your <b>RIGHT</b> index finger.",
+                                "fr": "Veuillez utiliser votre index <b>DROIT</b>."
                             }
                         },
                         {
@@ -194,8 +194,8 @@ UPDATE tasks set
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
                     "title": {
-                        "en": "Remember, you must use a SINGLE hand, and tap as fast as you can",
-                        "fr": "N''oubliez pas que vous devez utiliser une SEULE main et taper aussi vite que vous le pouvez"
+                        "en": "Remember, you must use a SINGLE hand, and tap as fast as you can.",
+                        "fr": "N''oubliez pas que vous devez utiliser une SEULE main et taper aussi vite que vous le pouvez."
                     },
                     "timerConfig": {
                         "timer": 5000,
@@ -233,7 +233,7 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "You will be doing 3 rounds",
+                                "en": "You will be doing 3 rounds.",
                                 "fr": "Vous ferez 3 tours."
                             }
                         },
@@ -267,21 +267,21 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "In the <b>first two rounds</b>, you have to tap <b>as fast as you can</b> with a <b>SINGLE</b> index finger for 1 full minute",
+                                "en": "In the <b>first two rounds</b>, you have to tap <b>as fast as you can</b> with a <b>SINGLE</b> index finger for 1 full minute.",
                                 "fr": "Pour <b>les deux premiers tours</b>, vous devrez taper le \\"P\\" et \\"Q\\" en alternance avec <b>UN SEUL</b> index pendant 1 minute, <b>le plus vite possible</b>, comme pendant l’entraînement."
                             }
                         },
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "We will tell you which hand to use before each round",
+                                "en": "We will tell you which hand to use before each round.",
                                 "fr": "Nous vous dirons quelle main utiliser avant chaque tour."
                             }
                         },
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "In the <b>third round</b>, you have to use <b>BOTH</b> index fingers, one for each key, and keep tapping <b>as fast as you can</b> for 20 seconds",
+                                "en": "In the <b>third round</b>, you have to use <b>BOTH</b> index fingers, one for each key, and keep tapping <b>as fast as you can</b> for 20 seconds.",
                                 "fr": "Pour <b>le troisième tour</b>, vous devrez utiliser les <b>DEUX</b> index, un pour \\"Q\\" et un pour \\"P\\", et taper les touches en alternance <b>aussi vite que possible</b> pendant 20 secondes."
                             }
                         },
@@ -311,8 +311,8 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Please use the index finger of your <b>DOMINANT HAND</b> for this round",
-                                "fr": "Veuillez utiliser l''index de votre <b>MAIN DOMINANTE</b> pour ce tour"
+                                "en": "Please use the index finger of your <b>DOMINANT HAND</b> for this round.",
+                                "fr": "Veuillez utiliser l''index de votre <b>MAIN DOMINANTE</b> pour ce tour."
                             }
                         },
                         {
@@ -332,8 +332,8 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Tap the \\"P\\" and \\"Q\\" keys as fast as you can",
-                                "fr": "Tapez les clés \\"P\\" et \\"Q\\" en alternance aussi vite que possible"
+                                "en": "Tap the \\"P\\" and \\"Q\\" keys as fast as you can.",
+                                "fr": "Tapez les clés \\"P\\" et \\"Q\\" en alternance aussi vite que possible."
                             }
                         },
                         {
@@ -355,8 +355,8 @@ UPDATE tasks set
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
                     "title": {
-                        "en": "Remember, you must use a SINGLE hand and tap as fast as you can",
-                        "fr": "N''oubliez pas que vous devez utiliser une SEULE main et taper aussi vite que vous le pouvez"
+                        "en": "Remember, you must use a SINGLE hand and tap as fast as you can.",
+                        "fr": "N''oubliez pas que vous devez utiliser une SEULE main et taper aussi vite que vous le pouvez."
                     },
                     "timerConfig": {
                         "timer": 5000,
@@ -408,14 +408,14 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "You have to wait for <b>at least 30 seconds</b> before being able to continue",
-                                "fr": "Vous devrez attendre <b>au moins 30 secondes</b> avant de cliquer \\"Start\\" pour continuer"
+                                "en": "You have to wait for <b>at least 30 seconds</b> before being able to continue.",
+                                "fr": "Vous devrez attendre <b>au moins 30 secondes</b> avant de cliquer \\"Start\\" pour continuer."
                             }
                         },
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "The next round will automatically start in 2 minutes unless you choose to continue sooner",
+                                "en": "The next round will automatically start in 2 minutes unless you choose to continue sooner.",
                                 "fr": "Le prochain tour commencera automatiquement dans 2 minutes à moins que vous ne choisissiez de continuer plus tôt."
                             }
                         },
@@ -433,8 +433,8 @@ UPDATE tasks set
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
                     "title": {
-                        "en": "Remember, you must use a SINGLE hand and tap as fast as you can",
-                        "fr": "N''oubliez pas que vous devez utiliser une SEULE main et taper aussi vite que vous le pouvez"
+                        "en": "Remember, you must use a SINGLE hand and tap as fast as you can.",
+                        "fr": "N''oubliez pas que vous devez utiliser une SEULE main et taper aussi vite que vous le pouvez."
                     },
                     "timerConfig": {
                         "timer": 5000,
@@ -480,21 +480,21 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "This means you must use your LEFT finger to tap \\"Q\\" and your RIGHT finger to tap \\"P\\", and alternate between the two",
+                                "en": "This means you must use your LEFT finger to tap \\"Q\\" and your RIGHT finger to tap \\"P\\", and alternate between the two.",
                                 "fr": "Vous devez utiliser l’index de la main GAUCHE pour appuyer sur \\"Q\\" et l’index de la main DROITE pour appuyer sur \\"P\\", et alterner entre les deux."
                             }
                         },
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "You have to wait <b> at least 30 seconds</b> before being able to continue",
+                                "en": "You have to wait <b> at least 30 seconds</b> before being able to continue.",
                                 "fr": "Vous devez attendre <b>au moins 30 secondes</b> avant de pouvoir continuer."
                             }
                         },
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "The next round will automatically start in 2 minutes unless you choose to continue sooner",
+                                "en": "The next round will automatically start in 2 minutes unless you choose to continue sooner.",
                                 "fr": "Le prochain tour commencera automatiquement dans 2 minutes à moins que vous ne choisissiez de continuer plus tôt."
                             }
                         },
@@ -512,7 +512,7 @@ UPDATE tasks set
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
                     "title": {
-                        "en": "You must use BOTH your index fingers, and tap as fast as you can",
+                        "en": "You must use BOTH your index fingers, and tap as fast as you can.",
                         "fr": "Vous devez utiliser les index des DEUX mains et taper en alternance aussi vite que possible."
                     },
                     "timerConfig": {
@@ -538,7 +538,7 @@ UPDATE tasks set
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
                     "title": {
-                        "en": "Congratulations! You finished the game successfully",
+                        "en": "Congratulations! You finished the game successfully.",
                         "fr": "Félicitations! Vous avez terminé le jeu avec succès."
                     },
                     "sections": [
