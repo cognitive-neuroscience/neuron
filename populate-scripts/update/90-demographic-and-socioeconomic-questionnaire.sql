@@ -486,48 +486,49 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "options": [{
-                                "label": {
-                                    "en": "Less than $20,000",
-                                    "fr": "Moins de 20 000$"
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Less than $20,000",
+                                        "fr": "Moins de 20 000$"
+                                    },
+                                    "value": "Less than $20,000"
                                 },
-                                "value": "Less than $20,000"
-                            },
-                            {
-                                "label": {
-                                    "en": "$20,000 or more, but less than $50,000",
-                                    "fr": "20 000$ ou plus, mais moins de 50 000$"
+                                {
+                                    "label": {
+                                        "en": "$20,000 or more, but less than $50,000",
+                                        "fr": "20 000$ ou plus, mais moins de 50 000$"
+                                    },
+                                    "value": "$20,000 or more, but less than $50,000"
                                 },
-                                "value": "$20,000 or more, but less than $50,000"
-                            },
-                            {
-                                "label": {
-                                    "en": "$50,000 or more, but less than $100,000",
-                                    "fr": "50 000$ ou plus, mais moins de 100 000$"
+                                {
+                                    "label": {
+                                        "en": "$50,000 or more, but less than $100,000",
+                                        "fr": "50 000$ ou plus, mais moins de 100 000$"
+                                    },
+                                    "value": "$50,000 or more, but less than $100,000"
                                 },
-                                "value": "$50,000 or more, but less than $100,000"
-                            },
-                            {
-                                "label": {
-                                    "en": "$150,000 or more",
-                                    "fr": "150 000$ ou plus"
+                                {
+                                    "label": {
+                                        "en": "$150,000 or more",
+                                        "fr": "150 000$ ou plus"
+                                    },
+                                    "value": "$150,000 or more"
                                 },
-                                "value": "$150,000 or more"
-                            },
-                            {
-                                "label": {
-                                    "en": "Do not know",
-                                    "fr": "Je ne sais pas"
+                                {
+                                    "label": {
+                                        "en": "Do not know",
+                                        "fr": "Je ne sais pas"
+                                    },
+                                    "value": "Do not know"
                                 },
-                                "value": "Do not know"
-                            },
-                            {
-                                "label": {
-                                    "en": "Do not wish to answer",
-                                    "fr": "Je préfère ne pas répondre"
-                                },
-                                "value": "Do not wish to answer"
-                            }
+                                {
+                                    "label": {
+                                        "en": "Do not wish to answer",
+                                        "fr": "Je préfère ne pas répondre"
+                                    },
+                                    "value": "Do not wish to answer"
+                                }
                             ]
                         },
                         {
