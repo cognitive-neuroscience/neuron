@@ -19,8 +19,8 @@ UPDATE tasks SET
                     "sections": [
                         {
                             "header": {
-                                "en": "Thank you for participating in our study! You will be entered in a draw to win a $100 Amazon gift card.",
-                                "fr": "Merci d''avoir participé à notre étude! Vous serez inscrit à un tirage au sort pour gagner une carte-cadeau Amazon de 100$."
+                                "en": "Thank you for participating in our study! You will be entered in a draw to win a $100 e-gift card from a retailer of your choice that offers e-gift cards.",
+                                "fr": "Merci d''avoir participé à notre étude! Vous serez inscrit à un tirage au sort pour gagner une carte-cadeau électroniques de 100$ auprès du détaillant de votre choix proposant des cartes-caudeaux électroniques."
                             },
                             "textContent": ""
                         },
