@@ -317,8 +317,11 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "input",
+                            "title": {
+                                "en": "How many years of education do you have (completing high school equals 12 years)?",
+                                "fr": "Combien d''années d''éducation avez-vous completé (avoir complété le secondaire équivaut à 12 années)?"
+                            },
                             "key": "how-many-years-of-education-do-you-have",
-                            "title": "How many years of education do you have (completing high school equals 12 years)?",
                             "validation": {
                                 "isNumeric": true,
                                 "required": true
@@ -388,44 +391,75 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
+                             "title": {
+                                "en": "What is your current employment status?",
+                                "fr": "Quel est votre statut professionnel actuel?"
+                            },
                             "key": "what-is-your-current-employment-status",
-                            "title": "What is your current employment status?",
-                            "options": [{
-                                "label": "Employed Full-time (30+ hours a week)",
-                                "value": "Full-time"
-                            },
-                            {
-                                "label": "Employed Part-time",
-                                "value": "Part-time"
-                            },
-                            {
-                                "label": "Unemployed",
-                                "value": "Unemployed"
-                            },
-                            {
-                                "label": "Disability Leave",
-                                "value": "Disability Leave"
-                            },
-                            {
-                                "label": "Homemaker",
-                                "value": "Homemaker"
-                            },
-                            {
-                                "label": "Student",
-                                "value": "Student"
-                            },
-                            {
-                                "label": "Volunteer",
-                                "value": "Volunteer"
-                            },
-                            {
-                                "label": "Retired",
-                                "value": "Retired"
-                            },
-                            {
-                                "label": "Do not wish to answer",
-                                "value": "Do not wish to answer"
-                            }
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Employed Full-time (30+ hours a week)",
+                                        "fr": "Employé à temps plein (30+ d''heures chaque semaine)"
+                                    },
+                                    "value": "Full-time"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Employed Part-time",
+                                        "fr": "Employé à temps partiel"
+                                    },
+                                    "value": "Part-time"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Unemployed",
+                                        "fr": "Au chômage"
+                                    },
+                                    "value": "Unemployed"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Disability Leave",
+                                        "fr": "Congé de maladie"
+                                    },
+                                    "value": "Disability Leave"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Homemaker",
+                                        "fr": "Au foyer"
+                                    },
+                                    "value": "Homemaker"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Student",
+                                        "fr": "Étudiant(e)"
+                                    },
+                                    "value": "Student"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Volunteer",
+                                        "fr": "Bénévole"
+                                    },
+                                    "value": "Volunteer"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Retired",
+                                        "fr": "Retraité(e)"
+                                    },
+                                    "value": "Retired"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Do not wish to answer",
+                                        "fr": "Je préfère ne pas répondre"
+                                    },
+                                    "value": "Do not wish to answer"
+                                }
                             ],
                             "validation": {
                                 "required": true
@@ -444,105 +478,174 @@ UPDATE tasks SET
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "What is your best estimate of the total household income received by all household members, from all sources, before taxes and deductions, in the past 12 months?",
+                            "title": {
+                                "en": "What is your best estimate of the total household income received by all household members, from all sources, before taxes and deductions, in the past 12 months?",
+                                "fr": "Quelle est votre meilleure du revenu total de votre ménage, reçu par tous les membres du ménage, toutes sources confondues, avant impôts et déductions, au cours des 12 derniers mois?"
+                            },
                             "key": "householdIncome",
                             "validation": {
                                 "required": true
                             },
-                            "options": [{
-                                "label": "Less than $20,000",
-                                "value": "Less than $20,000"
-                            },
-                            {
-                                "label": "$20,000 or more, but less than $50,000",
-                                "value": "$20,000 or more, but less than $50,000"
-                            },
-                            {
-                                "label": "$50,000 or more, but less than $100,000",
-                                "value": "$50,000 or more, but less than $100,000"
-                            },
-                            {
-                                "label": "$150,000 or more",
-                                "value": "$150,000 or more"
-                            },
-                            {
-                                "label": "Do not know",
-                                "value": "Do not know"
-                            },
-                            {
-                                "label": "Do not wish to answer",
-                                "value": "Do not wish to answer"
-                            }
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Less than $20,000",
+                                        "fr": "Moins de 20 000$"
+                                    },
+                                    "value": "Less than $20,000"
+                                },
+                                {
+                                    "label": {
+                                        "en": "$20,000 or more, but less than $50,000",
+                                        "fr": "20 000$ ou plus, mais moins de 50 000$"
+                                    },
+                                    "value": "$20,000 or more, but less than $50,000"
+                                },
+                                {
+                                    "label": {
+                                        "en": "$50,000 or more, but less than $100,000",
+                                        "fr": "50 000$ ou plus, mais moins de 100 000$"
+                                    },
+                                    "value": "$50,000 or more, but less than $100,000"
+                                },
+                                {
+                                    "label": {
+                                        "en": "$150,000 or more",
+                                        "fr": "150 000$ ou plus"
+                                    },
+                                    "value": "$150,000 or more"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Do not know",
+                                        "fr": "Je ne sais pas"
+                                    },
+                                    "value": "Do not know"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Do not wish to answer",
+                                        "fr": "Je préfère ne pas répondre"
+                                    },
+                                    "value": "Do not wish to answer"
+                                }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "What is your current marital/partner status?",
+                            "title": {
+                                "en": "What is your current marital/partner status?",
+                                "fr": "Quel est votre statut matrimonial ou situation conjugale actuelle?"
+                            },
                             "key": "marital",
                             "validation": {
                                 "required": true
                             },
-                            "options": [{
-                                "label": "Single, never married, or never lived with a partner",
-                                "value": "Single, never married, or never lived with a partner"
-                            },
-                            {
-                                "label": "Married/Living with a partner in a domestic relationship",
-                                "value": "Married/Living with a partner in a domestic relationship"
-                            },
-                            {
-                                "label": "Widowed",
-                                "value": "Widowed"
-                            },
-                            {
-                                "label": "Divorced/Separated",
-                                "value": "Divorced/Separated"
-                            },
-                            {
-                                "label": "Do not wish to disclose",
-                                "value": "Do not wish to disclose"
-                            }
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Single, never married, or never lived with a partner",
+                                        "fr": "Célibataire, jamais marié(e), ou n''a jamais vécu avec un(e) partenaire"
+                                    },
+                                    "value": "Single, never married, or never lived with a partner"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Married/Living with a partner in a domestic relationship",
+                                        "fr": "Marié(e)/Je vis avec un(e) partenaire dans une relation familiale"
+                                    },
+                                    "value": "Married/Living with a partner in a domestic relationship"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Widowed",
+                                        "fr": "Veuf/Veuve"
+                                    },
+                                    "value": "Widowed"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Divorced/Separated",
+                                        "fr": "Divorcé(e)/Séparé(e)"
+                                    },
+                                    "value": "Divorced/Separated"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Do not wish to disclose",
+                                        "fr": "Je préfère ne pas répondre"
+                                    },
+                                    "value": "Do not wish to disclose"
+                                }
                             ]
                         },
                         {
                             "questionType": "multipleChoiceSelect",
-                            "title": "Which best describes your living situation?",
+                            "title": {
+                                "en": "Which best describes your living situation?",
+                                "fr": "Quelle affirmation décrit le mieux votre situation de logement?"
+                            },
                             "key": "living",
                             "validation": {
                                 "required": true
                             },
-                            "options": [{
-                                "label": "Living alone",
-                                "value": "Living alone"
-                            },
-                            {
-                                "label": "Living with spouse/partner/significant other",
-                                "value": "Living with spouse/partner/significant other"
-                            },
-                            {
-                                "label": "Living with adult child/children",
-                                "value": "Living with adult child/children"
-                            },
-                            {
-                                "label": "Living with other family",
-                                "value": "Living with other family"
-                            },
-                            {
-                                "label": "Living with paid in-home care provider/aide",
-                                "value": "Living with paid in-home care provider/aide"
-                            },
-                            {
-                                "label": "Living in assisted living facility",
-                                "value": "Living in assisted living facility"
-                            },
-                            {
-                                "label": "Living in nursing home",
-                                "value": "Living in nursing home"
-                            },
-                            {
-                                "label": "Other",
-                                "value": "Other"
-                            }
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Living alone",
+                                        "fr": "Je vis seul(e)"
+                                    },
+                                    "value": "Living alone"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Living with spouse/partner/significant other",
+                                        "fr": "Je vis avec mon/ma conjoint(e)/partenaire/autre personne chère"
+                                    },
+                                    "value": "Living with spouse/partner/significant other"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Living with adult child/children",
+                                        "fr": "Je vis avec enfant(s) adulte(s)"
+                                    },
+                                    "value": "Living with adult child/children"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Living with other family",
+                                        "fr": "Je vis avec un autre membre de ma famille"
+                                    },
+                                    "value": "Living with other family"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Living with paid in-home care provider/aide",
+                                        "fr": "Je vis avec un prestataire de soins à domicile"
+                                    },
+                                    "value": "Living with paid in-home care provider/aide"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Living in assisted living facility",
+                                        "fr": "Je vis en résidence, ex. de retraités"
+                                    },
+                                    "value": "Living in assisted living facility"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Living in nursing home",
+                                        "fr": "Je vis en hébergement médicalisé/CHSLD"
+                                    },
+                                    "value": "Living in nursing home"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": "Autre"
+                                    },
+                                    "value": "Other"
+                                }
                             ]
                         },
                         {
