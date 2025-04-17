@@ -396,69 +396,70 @@ UPDATE tasks SET
                                 "fr": "Quel est votre statut professionnel actuel?"
                             },
                             "key": "what-is-your-current-employment-status",
-                            "options": [{
-                                "label": {
-                                    "en": "Employed Full-time (30+ hours a week)",
-                                    "fr": "Employé à temps plein (30+ d''heures chaque semaine)"
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Employed Full-time (30+ hours a week)",
+                                        "fr": "Employé à temps plein (30+ d''heures chaque semaine)"
+                                    },
+                                    "value": "Full-time"
                                 },
-                                "value": "Full-time"
-                            },
-                            {
-                                "label": {
-                                    "en": "Employed Part-time",
-                                    "fr": "Employé à temps partiel"
+                                {
+                                    "label": {
+                                        "en": "Employed Part-time",
+                                        "fr": "Employé à temps partiel"
+                                    },
+                                    "value": "Part-time"
                                 },
-                                "value": "Part-time"
-                            },
-                            {
-                                "label": {
-                                    "en": "Unemployed",
-                                    "fr": "Au chômage"
+                                {
+                                    "label": {
+                                        "en": "Unemployed",
+                                        "fr": "Au chômage"
+                                    },
+                                    "value": "Unemployed"
                                 },
-                                "value": "Unemployed"
-                            },
-                            {
-                                "label": {
-                                    "en": "Disability Leave",
-                                    "fr": "Congé de maladie"
+                                {
+                                    "label": {
+                                        "en": "Disability Leave",
+                                        "fr": "Congé de maladie"
+                                    },
+                                    "value": "Disability Leave"
                                 },
-                                "value": "Disability Leave"
-                            },
-                            {
-                                "label": {
-                                    "en": "Homemaker",
-                                    "fr": "Au foyer"
+                                {
+                                    "label": {
+                                        "en": "Homemaker",
+                                        "fr": "Au foyer"
+                                    },
+                                    "value": "Homemaker"
                                 },
-                                "value": "Homemaker"
-                            },
-                            {
-                                "label": {
-                                    "en": "Student",
-                                    "fr": "Étudiant(e)"
+                                {
+                                    "label": {
+                                        "en": "Student",
+                                        "fr": "Étudiant(e)"
+                                    },
+                                    "value": "Student"
                                 },
-                                "value": "Student"
-                            },
-                            {
-                                "label": {
-                                    "en": "Volunteer",
-                                    "fr": "Bénévole"
+                                {
+                                    "label": {
+                                        "en": "Volunteer",
+                                        "fr": "Bénévole"
+                                    },
+                                    "value": "Volunteer"
                                 },
-                                "value": "Volunteer"
-                            },
-                            {
-                                "label": {
-                                    "en": "Retired",
-                                    "fr": "Retraité(e)"
+                                {
+                                    "label": {
+                                        "en": "Retired",
+                                        "fr": "Retraité(e)"
+                                    },
+                                    "value": "Retired"
                                 },
-                                "value": "Retired"
-                            },
-                            {
-                                "label": {
-                                    "en": "Do not wish to answer",
-                                    "fr": "Je préfère ne pas répondre"
-                                },
-                                "value": "Do not wish to answer"
-                            }
+                                {
+                                    "label": {
+                                        "en": "Do not wish to answer",
+                                        "fr": "Je préfère ne pas répondre"
+                                    },
+                                    "value": "Do not wish to answer"
+                                }
                             ],
                             "validation": {
                                 "required": true
@@ -539,41 +540,42 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "options": [{
-                                "label": {
-                                    "en": "Single, never married, or never lived with a partner",
-                                    "fr": "Célibataire, jamais marié(e), ou n''a jamais vécu avec un(e) partenaire"
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Single, never married, or never lived with a partner",
+                                        "fr": "Célibataire, jamais marié(e), ou n''a jamais vécu avec un(e) partenaire"
+                                    },
+                                    "value": "Single, never married, or never lived with a partner"
                                 },
-                                "value": "Single, never married, or never lived with a partner"
-                            },
-                            {
-                                "label": {
-                                    "en": "Married/Living with a partner in a domestic relationship",
-                                    "fr": "Marié(e)/Je vis avec un(e) partenaire dans une relation familiale"
+                                {
+                                    "label": {
+                                        "en": "Married/Living with a partner in a domestic relationship",
+                                        "fr": "Marié(e)/Je vis avec un(e) partenaire dans une relation familiale"
+                                    },
+                                    "value": "Married/Living with a partner in a domestic relationship"
                                 },
-                                "value": "Married/Living with a partner in a domestic relationship"
-                            },
-                            {
-                                "label": {
-                                    "en": "Widowed",
-                                    "fr": "Veuf/Veuve"
+                                {
+                                    "label": {
+                                        "en": "Widowed",
+                                        "fr": "Veuf/Veuve"
+                                    },
+                                    "value": "Widowed"
                                 },
-                                "value": "Widowed"
-                            },
-                            {
-                                "label": {
-                                    "en": "Divorced/Separated",
-                                    "fr": "Divorcé(e)/Séparé(e)"
+                                {
+                                    "label": {
+                                        "en": "Divorced/Separated",
+                                        "fr": "Divorcé(e)/Séparé(e)"
+                                    },
+                                    "value": "Divorced/Separated"
                                 },
-                                "value": "Divorced/Separated"
-                            },
-                            {
-                                "label": {
-                                    "en": "Do not wish to disclose",
-                                    "fr": "Je préfère ne pas répondre"
-                                },
-                                "value": "Do not wish to disclose"
-                            }
+                                {
+                                    "label": {
+                                        "en": "Do not wish to disclose",
+                                        "fr": "Je préfère ne pas répondre"
+                                    },
+                                    "value": "Do not wish to disclose"
+                                }
                             ]
                         },
                         {
@@ -586,62 +588,63 @@ UPDATE tasks SET
                             "validation": {
                                 "required": true
                             },
-                            "options": [{
-                                "label": {
-                                    "en": "Living alone",
-                                    "fr": "Je vis seul(e)"
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Living alone",
+                                        "fr": "Je vis seul(e)"
+                                    },
+                                    "value": "Living alone"
                                 },
-                                "value": "Living alone"
-                            },
-                            {
-                                "label": {
-                                    "en": "Living with spouse/partner/significant other",
-                                    "fr": "Je vis avec mon/ma conjoint(e)/partenaire/autre personne chère"
+                                {
+                                    "label": {
+                                        "en": "Living with spouse/partner/significant other",
+                                        "fr": "Je vis avec mon/ma conjoint(e)/partenaire/autre personne chère"
+                                    },
+                                    "value": "Living with spouse/partner/significant other"
                                 },
-                                "value": "Living with spouse/partner/significant other"
-                            },
-                            {
-                                "label": {
-                                    "en": "Living with adult child/children",
-                                    "fr": "Je vis avec enfant(s) adulte(s)"
+                                {
+                                    "label": {
+                                        "en": "Living with adult child/children",
+                                        "fr": "Je vis avec enfant(s) adulte(s)"
+                                    },
+                                    "value": "Living with adult child/children"
                                 },
-                                "value": "Living with adult child/children"
-                            },
-                            {
-                                "label": {
-                                    "en": "Living with other family",
-                                    "fr": "Je vis avec un autre membre de ma famille"
+                                {
+                                    "label": {
+                                        "en": "Living with other family",
+                                        "fr": "Je vis avec un autre membre de ma famille"
+                                    },
+                                    "value": "Living with other family"
                                 },
-                                "value": "Living with other family"
-                            },
-                            {
-                                "label": {
-                                    "en": "Living with paid in-home care provider/aide",
-                                    "fr": "Je vis avec un prestataire de soins à domicile"
+                                {
+                                    "label": {
+                                        "en": "Living with paid in-home care provider/aide",
+                                        "fr": "Je vis avec un prestataire de soins à domicile"
+                                    },
+                                    "value": "Living with paid in-home care provider/aide"
                                 },
-                                "value": "Living with paid in-home care provider/aide"
-                            },
-                            {
-                                "label": {
-                                    "en": "Living in assisted living facility",
-                                    "fr": "Je vis en résidence, ex. de retraités"
+                                {
+                                    "label": {
+                                        "en": "Living in assisted living facility",
+                                        "fr": "Je vis en résidence, ex. de retraités"
+                                    },
+                                    "value": "Living in assisted living facility"
                                 },
-                                "value": "Living in assisted living facility"
-                            },
-                            {
-                                "label": {
-                                    "en": "Living in nursing home",
-                                    "fr": "Je vis en hébergement médicalisé/CHSLD"
+                                {
+                                    "label": {
+                                        "en": "Living in nursing home",
+                                        "fr": "Je vis en hébergement médicalisé/CHSLD"
+                                    },
+                                    "value": "Living in nursing home"
                                 },
-                                "value": "Living in nursing home"
-                            },
-                            {
-                                "label": {
-                                    "en": "Other",
-                                    "fr": "Autre"
-                                },
-                                "value": "Other"
-                            }
+                                {
+                                    "label": {
+                                        "en": "Other",
+                                        "fr": "Autre"
+                                    },
+                                    "value": "Other"
+                                }
                             ]
                         },
                         {
