@@ -42,3 +42,16 @@ func (s *StudyUserController) UpdateStudyUser(e echo.Context) error {
 	}
 	return common.SendHTTPOkWithBody(e, result)
 }
+
+func (s *StudyUserController) GetStudyUserByUserAndStudyId(e echo.Context) error {
+	axonlogger.InfoLogger.Println("============= STUDYUSER CONTROLLER: GetStudyUserByUserAndStudyId() =============")
+
+	userParamId := e.Param("userId")
+	studyParamId := e.Param("studyId")
+	result, httpStatus := studyUserServiceImpl.GetStudyUserByUserAndStudyId(userParamId, studyParamId)
+	if !common.HTTPRequestIsSuccessful(httpStatus.Status) {
+		axonlogger.InfoLogger.Println("GetStudyUserByUserAndStudyId() failed")
+		return e.JSON(httpStatus.Status, httpStatus)
+	}
+	return common.SendHTTPOkWithBody(e, result)
+}

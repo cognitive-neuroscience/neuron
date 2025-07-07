@@ -38,6 +38,21 @@ func (s *StudyUserService) GetAllStudyUsersByStudyId(studyId string) ([]models.S
 	return studyUserRepositoryImpl.GetAllStudyUsersByStudyId(parsedId)
 }
 
+// GetStudyUserByUserAndStudyId retrieves a study user by the given user ID and study ID
+// It returns a 200, 404, or 500 status code
+func (s *StudyUserService) GetStudyUserByUserAndStudyId(studyId string, userId string) (models.StudyUser, models.HTTPStatus) {
+	axonlogger.InfoLogger.Println("STUDYUSER SERVICE: GetStudyUserByUserAndStudyId()")
+
+	parsedUserId, parseUserIdErr := convertStringToUint8(userId)
+	parsedStudyId, parseStudyIdErr := convertStringToUint8(studyId)
+	if parseUserIdErr != nil || parseStudyIdErr != nil {
+		axonlogger.WarningLogger.Println("Could not parse id", parseUserIdErr, parseStudyIdErr)
+		return models.StudyUser{}, models.HTTPStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)}
+	}
+
+	return studyUserRepositoryImpl.GetStudyUserByUserAndStudyId(parsedUserId, parsedStudyId)
+}
+
 // CreateStudyUser creates the given study user in the database.
 // It returns a 201, 409, or 500 status code
 func (s *StudyUserService) CreateStudyUser(studyUser *models.StudyUser) models.HTTPStatus {

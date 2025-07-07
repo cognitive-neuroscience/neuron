@@ -49,6 +49,7 @@ func setUpStudyUserRoutes(group *echo.Group) {
 	studyUsers := group.Group("/studyusers")
 
 	studyUsers.POST("", studyUserControllerImpl.CreateStudyUser)
+	studyUsers.GET("/:userId/:studyId", studyUserControllerImpl.GetStudyUserByUserAndStudyId)
 	studyUsers.PATCH("/:userId/:studyId", studyUserControllerImpl.UpdateStudyUser)
 }
 

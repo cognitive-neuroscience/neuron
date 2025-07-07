@@ -21,6 +21,10 @@ p, ADMIN,               /api/studyusers/{userId}/{studyId},                     
 p, ORGANIZATION_MEMBER, /api/studyusers/{userId}/{studyId},                             PATCH
 p, PARTICIPANT,         /api/studyusers/{userId}/{studyId},                             PATCH
 p, GUEST,               /api/studyusers/{userId}/{studyId},                             PATCH
+p, ADMIN,               /api/studyusers/{userId}/{studyId},                             GET
+p, ORGANIZATION_MEMBER, /api/studyusers/{userId}/{studyId},                             GET
+p, PARTICIPANT,         /api/studyusers/{userId}/{studyId},                             GET
+p, GUEST,               /api/studyusers/{userId}/{studyId},                             GET
 p, ADMIN,               /api/studyusers,                                                POST
 p, ORGANIZATION_MEMBER, /api/studyusers,                                                POST
 p, PARTICIPANT,         /api/studyusers,                                                POST
