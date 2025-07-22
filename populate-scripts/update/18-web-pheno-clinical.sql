@@ -48,8 +48,8 @@ UPDATE tasks set
                             },
                             "words": [
                                 {
-                                    "en": "Parkinson Foundation",
-                                    "fr": "Parkinson Foundation"
+                                    "en": "CIHR",
+                                    "fr": "CIHR"
                                 }
                             ]
                         },
@@ -60,8 +60,8 @@ UPDATE tasks set
                             },
                             "words": [
                                 {
-                                    "en": "2020-6045, version 2",
-                                    "fr": "2020-6045, version 2"
+                                    "en": "2020-6045, version 4",
+                                    "fr": "2020-6045, version 4"
                                 }
                             ]
                         }
@@ -83,8 +83,8 @@ UPDATE tasks set
                             },
                             "words": [
                                 {
-                                    "en": "Cognitive symptoms in Parkinson’s disease vary immensely. Some patients develop significant apathy or difficulty multi-tasking, others take up boxing or plan local support groups. Current tools used to identify symptoms fall short of being able to help us understand this variability because they don’t provide clues about the underlying brain mechanisms. The purpose of this study is to use computer tests of cognitive function, inspired by the tests used in laboratory animals, to arrive at a better understanding of the mechanisms underlying cognitive symptoms in Parkinson’s disease. For this research study, we will recruit a total of 1000 participants, men and women, aged between 50 and 90.",
-                                    "fr": "Les symptômes cognitifs associés à la maladie de Parkinson varient énormément. Certains patients développent une apathie significative ou des problèmes de concentration tandis que d''autres s''adonnent à la boxe ou planifient des groupes de soutien locaux. Présentement, les outils disponibles pour identifier ces symptômes ne permettent pas de comprendre leur mécanisme au niveau du cerveau. Cette étude vise à utiliser des tests informatiques de la fonction cognitive pour mieux comprendre les mécanismes de dysfonctionnement cognitif chez les patients atteints de la maladie de Parkinson. Pour cette étude, nous recrutons un total de 1000 participants, hommes et femmes, âgés entre 50 et 90 ans."
+                                    "en": "Cognitive symptoms in Parkinson’s disease vary immensely. Some patients develop significant apathy or difficulty multi-tasking, others take up boxing or plan local support groups. Current tools used to identify symptoms fall short of being able to help us understand this variability because they don’t provide clues about the underlying brain mechanisms. The purpose of this study is to use computer tests of cognitive function, inspired by the tests used in laboratory animals, to arrive at a better understanding of the mechanisms underlying cognitive symptoms in Parkinson’s disease. For this research study, we will recruit a total of 2000 participants, men and women, aged between 50 and 90.",
+                                    "fr": "Les symptômes cognitifs associés à la maladie de Parkinson varient énormément. Certains patients développent une apathie significative ou des problèmes de concentration tandis que d''autres s''adonnent à la boxe ou planifient des groupes de soutien locaux. Présentement, les outils disponibles pour identifier ces symptômes ne permettent pas de comprendre leur mécanisme au niveau du cerveau. Cette étude vise à utiliser des tests informatiques de la fonction cognitive pour mieux comprendre les mécanismes de dysfonctionnement cognitif chez les patients atteints de la maladie de Parkinson. Pour cette étude, nous recrutons un total de 2000 participants, hommes et femmes, âgés entre 50 et 90 ans."
                                 }
                             ]
                         },
@@ -111,8 +111,8 @@ UPDATE tasks set
                                     "fr": "2. &nbsp;&nbsp;&nbsp;&nbsp; Nous fournir des informations démographiques et sur votre santé (âge, sexe, éducation, médicaments, antécédents de troubles psychiatriques et neurologiques), et, le cas échéant, sur votre maladie de Parkinson (durée, principaux symptômes moteurs et cognitifs)."
                                 },
                                 {
-                                    "en": "3. &nbsp;&nbsp;&nbsp;&nbsp; Complete seven questionnaires about your mood and cognition, and play four ‘brain games’, designed to examine different aspects of cognition.",
-                                    "fr": "3. &nbsp;&nbsp;&nbsp;&nbsp; Compléter sept questionnaires à propos de votre humeur et votre cognition et jouer à quatre jeux conçus pour investiguer les différents aspects de la cognition."
+                                    "en": "3. &nbsp;&nbsp;&nbsp;&nbsp; Complete questionnaires about your mood and cognition, and play ‘brain games’, designed to examine different aspects of cognition.",
+                                    "fr": "3. &nbsp;&nbsp;&nbsp;&nbsp; Compléter questionnaires à propos de votre humeur et votre cognition et jouer à des jeux conçus pour investiguer les différents aspects de la cognition."
                                 },
                                 {
                                     "en": "This will take under 2 hours and you will have the opportunity to pause part-way through and to return to it later.",
@@ -120,8 +120,8 @@ UPDATE tasks set
                                     "fr": "Ceci prendra moins de 2 heures et vous aurez l''opportunité de prendre une pause et d''y revenir plus tard."
                                 },
                                 {
-                                    "en": "4. &nbsp;&nbsp;&nbsp;&nbsp; Every year, for a maximum of 5 years, you will receive an email from the study website asking you to participate again. At these follow-up sessions, testing will be similar but not identical to the first session.",
-                                    "fr": "4. &nbsp;&nbsp;&nbsp;&nbsp; Chaque année, pour un maximum de 5 ans, vous recevrez un courriel du site web de l''étude vous demandant de participer à nouveau. Lors de ces suivis, les tests seront similaires mais pas identiques à la première session."
+                                    "en": "4. &nbsp;&nbsp;&nbsp;&nbsp; Every year, for a maximum of 5 years, you will receive an email from the study website asking you if you are willing to participate again. At these follow-up sessions, testing will be similar but not identical to the first session.",
+                                    "fr": "4. &nbsp;&nbsp;&nbsp;&nbsp; Chaque année, pour un maximum de 5 ans, vous recevrez un courriel du site web de l''étude vous demandant si vous souhaitez participer à nouveau. Lors de ces suivis, les tests seront similaires mais pas identiques à la première session."
                                 },
                                 {
                                     "en": "In addition, we will ask you whether you are interested in receiving offers to participate in other online research. If you are, you can check the appropriate box at the end of this consent form.",
@@ -157,13 +157,41 @@ UPDATE tasks set
                         },
                         {
                             "caption": {
+                                "en": "STORAGE AND SHARING OF DE-IDENTIFIED DATA FOR UNSPECIFIED FUTURE RESEARCH",
+                                "fr": "STOCKAGE ET PARTAGE DE DONNÉES DÉ-IDENTIFIÉES POUR DES RECHERCHES FUTURES NON SPÉCIFIÉES"
+                            },
+                            "words": [
+                                {
+                                    "en": "If you choose to agree below, we will share de-identified data on an online repository such that they may be re-used for future research by anyone outside the study team. Any personal identifying information (e.g., email) and information that may help someone to identify you (e.g., date of participation) will be removed from the data before being shared on the online repository. All other data collected in this study will be shared.",
+                                    "fr": "Si vous acceptez ci-dessous, nous partagerons des données dé-identifiées dans un dépôt en ligne afin qu’elles puissent être réutilisées pour de futures recherches par des personnes extérieures à l’équipe de l’étude. Toute information personnelle permettant de vous identifier (ex., courriel) ainsi que toute donnée pouvant faciliter votre identification (ex., date de participation) seront supprimées avant le partage. Toutes les autres données collectées dans cette étude seront partagées."
+                                },
+                                {
+                                    "en": "",
+                                    "fr": ""
+                                },
+                                {
+                                    "en": "Anyone accessing the data on the repository will have agreed to protect participants privacy by avoiding to intentionally re-identify individuals. The risk of re-identification is minimal given the nature of the shared information. Nevertheless, it may be possible to re-identify individuals in some circumstances.",
+                                    "fr": "Toute personne accédant aux données via le dépôt s’engage à protéger la confidentialité des participants en évitant de tenter intentionnellement de les ré-identifier. Le risque de ré-identification est minimal, compte tenu de la nature des informations partagées. Toutefois, il reste possible, dans certaines circonstances, qu’une ré-identification se produise."
+                                },
+                                {
+                                    "en": "",
+                                    "fr": ""
+                                },
+                                {
+                                    "en": "Data shared on the repository may be used in future projects focusing on any topic that might be unrelated to the goals of this particular study. It is possible that some of the research conducted using your data eventually could lead to the development of new methods for studying the brain, new diagnostic tests, new drugs or other commercial products. Should this occur, there is no plan to provide you with any part of the profits generated from such products and you will not have any ownership rights in the products. Future research might be conducted outside of Quebec and Canada. Data may be shared with researchers who are not subject to the same legislation(s) and research ethics board(s).",
+                                    "fr": "Les données partagées dans le dépôt pourraient être utilisées dans le cadre de projets futurs portant sur des sujets potentiellement sans lien avec les objectifs de cette étude. Il est possible que certaines recherches menées à partir de vos données aboutissent à de nouvelles méthodes d’étude du cerveau, à de nouveaux tests de diagnostic, à de nouveaux médicaments ou à d’autres produits commerciaux. Si cela se produit, il n’est pas prévu que vous receviez une part des bénéfices générés par ces produits, et vous ne disposerez d’aucun droit de propriété sur ceux-ci. Les recherches futures pourraient être menées à l’extérieur du Québec et du Canada. Les données pourraient être partagées avec des chercheurs soumis à des législations et des comités d’éthique différents."
+                                }
+                            ]
+                        },
+                        {
+                            "caption": {
                                 "en": "BENEFITS",
                                 "fr": "AVANTAGES ASSOCIÉS AU PROJET DE RECHERCHE"
                             },
                             "words": [
                                 {
-                                    "en": "There is no direct benefit to you for participating in this research. However, we hope that the study results will contribute to the advancement of scientific knowledge in this field and help us find better treatments for cognitive changes experienced by Parkinson’s patients.",
-                                    "fr": "Vous ne retirerez pas de bénéfices de votre participation à ce projet de recherche. Nous espérons que les résultats obtenus contribueront à l''avancement des connaissances scientifiques dans ce domaine et au développement de meilleurs traitements pour les patients."
+                                    "en": "There is no direct benefit to you for participating in this research. However, we hope that the study results will contribute to the advancement of scientific knowledge in this field and help us find better treatments for cognitive changes experienced by Parkinson’s patients. If you agree to the “Sharing of research data for unspecified future research”, you will increase these potential benefits by enabling other research teams to re-use the data and make additional discoveries.",
+                                    "fr": "Vous ne retirerez pas de bénéfices de votre participation à ce projet de recherche. Nous espérons que les résultats obtenus contribueront à l''avancement des connaissances scientifiques dans ce domaine et au développement de meilleurs traitements pour les patients. Si vous acceptez le «Partage des données de recherche pour des recherches futures non spécifiées», vous augmenterez ces bénéfices potentiels en permettant à d’autres équipes de recherche de réutiliser les données et de faire de nouvelles découvertes."
                                 }
                             ]
                         },
@@ -196,6 +224,14 @@ UPDATE tasks set
                                 {
                                     "en": "If you withdraw from the study, the information already collected for the study will be stored, analyzed and used to ensure the integrity of the study.",
                                     "fr": "Si vous décidez de vous retirer de l''étude, l''information déjà recueillie dans le cadre de ce projet sera néanmoins conservée, analysée ou utilisée pour assurer l''intégrité du projet."
+                                },
+                                {
+                                    "en": "",
+                                    "fr": ""
+                                },
+                                {
+                                    "en": "You may withdraw your consent to have your data shared for future research without affecting your ability to participate in the study. You may withdraw data sharing before data are deposited on the repository. However, any data and research results already deposited on the repository may have already been shared with others and cannot be destroyed, withdrawn or recalled.",
+                                    "fr": "Vous pouvez retirer votre consentement au partage de vos données pour de futures recherches sans que cela n’affecte votre participation à l’étude. Vous pouvez retirer votre consentement avant que les données ne soient déposées dans le dépôt. Toutefois, toute donnée ou tout résultat de recherche déjà déposé dans le dépôt peut avoir été partagé avec d’autres personnes et ne pourra donc pas être détruit, retiré ou récupéré."
                                 }
                             ]
                         },
@@ -206,8 +242,8 @@ UPDATE tasks set
                             },
                             "words": [
                                 {
-                                    "en": "You will be entered to win one of ten $100 Amazon e-gift cards.",
-                                    "fr": "En participant vous courrez la chance de gagner l''une des dix cartes-cadeaux électroniques Amazon de $100."
+                                    "en": "You will be entered to win one of ten $100 e-gift cards from a retailer of your choice that offers e-gift cards.",
+                                    "fr": "En participant, vous serez inscrit au tirage pour gagner l’une des dix cartes-cadeaux électroniques de 100 $ auprès du détaillant de votre choix proposant des cartes-cadeaux électroniques."
                                 }
                             ]
                         },
@@ -245,29 +281,6 @@ UPDATE tasks set
                         }
                     ],
                     "inputs": [
-                        {
-                            "label": {
-                                "en": "Do you accept to be contacted yearly (max. 5 years) for a follow-up online testing session? (you can always decline at that time)",
-                                "fr": "Acceptez-vous d''être contacté annuellement (max. 5 années) pour un suivi en ligne? (vous pourrez toujours décliner à ce moment-là)"
-                            },
-                            "key": "agree to be contacted yearly",
-                            "options": [
-                                {
-                                    "textContent": {
-                                        "en": "Yes",
-                                        "fr": "Oui"
-                                    },
-                                    "value": "yes"
-                                },
-                                {
-                                    "textContent": {
-                                        "en": "No",
-                                        "fr": "Non"
-                                    },
-                                    "value": "no"
-                                }
-                            ]
-                        },
                         {
                             "label": {
                                 "en": "Please indicate whether you would like to be contacted by email for future online research opportunities.",
@@ -313,7 +326,30 @@ UPDATE tasks set
                                     "value": "no"
                                 }
                             ]
-                        }
+                        },
+                        {
+                            "label": {
+                                "en": "Please indicate whether you consent to the storage and sharing of de-identified data for unspecified future research.",
+                                "fr": "Veuillez indiquer si vous consentez au stockage et au partage de données dé-identifiées pour des recherches futures non spécifiées."
+                            },
+                            "key": "agree to storage and sharing of data",
+                            "options": [
+                                {
+                                    "textContent": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "yes"
+                                },
+                                {
+                                    "textContent": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "no"
+                                }
+                            ]
+                        },
                     ],
                     "endMessage": {
                         "en": "By clicking \\"Accept\\", you are confirming that you reviewed the information and consent form and that you agree to participate in the study in accordance with the conditions stated above.",
