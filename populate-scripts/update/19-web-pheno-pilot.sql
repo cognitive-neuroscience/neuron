@@ -29,7 +29,7 @@ UPDATE tasks set
                         },
                         {
                             "caption": "Protocol:",
-                            "words": ["2020-6045, version 2"]
+                            "words": ["2020-6045, version 3"]
                         }
                     ],
                     "secondTitle": ["** You must be over the age of 18 to participate in the following research study. **"],
