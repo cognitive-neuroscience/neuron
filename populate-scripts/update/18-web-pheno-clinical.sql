@@ -349,7 +349,7 @@ UPDATE tasks set
                                     "value": "no"
                                 }
                             ]
-                        },
+                        }
                     ],
                     "endMessage": {
                         "en": "By clicking \\"Accept\\", you are confirming that you reviewed the information and consent form and that you agree to participate in the study in accordance with the conditions stated above.",
