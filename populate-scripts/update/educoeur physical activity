@@ -1,0 +1,410 @@
+-- Educoeur Physical Activity Questionnaire
+UPDATE tasks set
+    from_platform = "PSHARPLAB",
+    task_type = "QUESTIONNAIRE",
+    name = "Educoeur Physical Activity Questionnaire",
+    description = "Educoeur Physical Activity Questionnaire",
+    external_url = "",
+    config = '{
+        "taskConfig": {},
+        "metadata": [
+            {
+                "componentName": "QUESTIONNAIRECOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "Questionnaire",
+                        "fr": "Questionnaire"
+                    },
+                    "questions":[
+                        {
+                            "questionType": "displayText",
+                            "key": "displayText1",
+                            "title": {
+                                "en": "Instructions: Here are some final questions related to physical activity. Some of the questions might be a bit similar to previous ones, but it is important that you answer all of them to the best of your abilities. For each question, choose the answer that best reflects your current lifestyle.",
+                                "fr": "Instructions: Voici une liste de questions supplémentaires qui tentent dévaluer votre mode de vie. Pour chacune d’entre elles, choisissez la réponse qui représente le mieux vos habitudes actuelles."
+                            }
+                        },
+                        {
+                            "questionType": "radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "How often do you get around on foot or by bicycle?",
+                                "fr": "À quelle fréquence vous déplacez-vous à pied ou à vélo?"
+                            },
+                            "validation": {
+                                "required":true
+                            },
+                            "key": "How often do you get around on foot or by bicycle?",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Most of the time",
+                                        "fr": "La plupart du temps"
+                                    },
+                                    "value": "Most of the time"
+                                },
+                                {
+                                    "label": {
+                                        "en": "More than 3 times a week",
+                                        "fr": "Plus de 3 fois par semaine"
+                                    },
+                                    "value": "More than 3 times a week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "1-2 times a week",
+                                        "fr": "Une à deux fois par semaine"
+                                    },
+                                    "value": "1-2 times a week"
+                                },
+                                { 
+                                    "label": {
+                                        "en": "Rarely",
+                                        "fr": "Rarement"
+                                    },
+                                    "value": "rarely"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "How often do you take the stairs instead of using the elevator?",
+                                "fr": "À quelle fréquence choisissez-vous demprunter les escaliers plutôt que l’ascenseur?"
+                            },
+                            "validation":{
+                                "required":true
+                            },
+                            "key": "How often do you take the stairs instead of using the elevator?",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Always",
+                                        "fr": "Toujours"
+                                    },
+                                    "value": "always"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Often",
+                                        "fr": "Souvent"
+                                    },
+                                    "value": "often"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sometimes",
+                                        "fr": "Parfois"
+                                    },
+                                    "value": "sometimes"
+                                },
+                                { 
+                                    "label": {
+                                        "en": "Never",
+                                        "fr": "Jamais"
+                                    },
+                                    "value": "never"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType":"radiobuttons",
+                            "radiobuttonPresentation": "horizontal",
+                            "title": {
+                                "en": "How many times a week do you exercise for at least 30 minutes?",
+                                "fr": "Combien de fois par semaine faites-vous de l’activité physique pour au moins 30 minutes?"
+                            },
+                            "validation":{
+                                "required":true
+                            },
+                            "key": "How many times a week do you exercise for at least 30 minutes",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "5-7 times a week",
+                                        "fr": "5-7 fois par semaine"
+                                    },
+                                    "value": "5-7 times a week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "4 times a week",
+                                        "fr": "4 fois par semaine"
+                                    },
+                                    "value": "4 times a week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "2-3 times a week",
+                                        "fr": "2-3 fois par semaine"
+                                    },
+                                    "value": "2-3 times a week"
+                                },
+                                { 
+                                    "label": {
+                                        "en": "Less than once a week",
+                                        "fr": "Moins d’une fois par semaine"
+                                    },
+                                    "value": "less than 1 a week"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType":"radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "Do you usually feel motivated to exercise?",
+                                "fr": "Habituellement, vous sentez-vous motivé pour faire de l’activité physique?"
+                            },
+                            "validation":{
+                                "required":true
+                            },
+                            "key": "I am interested in having new experiences",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Always",
+                                        "fr": "Toujours"
+                                    },
+                                    "value": "always"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Often",
+                                        "fr": "Souvent"
+                                    },
+                                    "value": "often"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sometimes",
+                                        "fr": "Parfois"
+                                    },
+                                    "value": "sometimes"
+                                },
+                                { 
+                                    "label": {
+                                        "en": "Never",
+                                        "fr": "Jamais"
+                                    },
+                                    "value": "never"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType":"radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "Are you too tired to exercise?",
+                                "fr": "Êtes-vous trop fatigué pour faire de l’activité physique?"
+                            },
+                            "validation":{
+                                "required":true
+                            },
+                            "key": "are you too tired to exercise",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Never",
+                                        "fr": "Jamais"
+                                    },
+                                    "value": "never"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sometimes",
+                                        "fr": "Parfois"
+                                    },
+                                    "value": "sometimes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Often",
+                                        "fr": "Souvent"
+                                    },
+                                    "value": "often"
+                                },
+                                { 
+                                    "label": {
+                                        "en": "Always",
+                                        "fr": "Toujours"
+                                    },
+                                    "value": "always"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType":"radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "Do you enjoy exercise?",
+                                "fr": "JAimez-vous faire de l’activité physique?"
+                            },
+                            "validation":{
+                                "required":true
+                            },
+                            "key": "do you enjoy exercise?",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Completely",
+                                        "fr": "Complètement"
+                                    },
+                                    "value": "completely"
+                                },
+                                {
+                                    "label": {
+                                        "en": "A lot",
+                                        "fr": "Beaucoup"
+                                    },
+                                    "value": "a lot"
+                                },
+                                {
+                                    "label": {
+                                        "en": "A little",
+                                        "fr": "Un peu"
+                                    },
+                                    "value": "a little"
+                                },
+                                { 
+                                    "label": {
+                                        "en": "Not at all",
+                                        "fr": "Pas du tout"
+                                    },
+                                    "value": "not at all"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType":"radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "Do you organize your time so as to include exercise?",
+                                "fr": "Organisez-vous votre emploi du temps de façon à y inclure des périodes d’activité physique?"
+                            },
+                            "validation":{
+                                "required":true
+                            },
+                            "key": " Do you organize your time so as to include exercise?",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Always",
+                                        "fr": "Toujours"
+                                    },
+                                    "value": "always"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Often",
+                                        "fr": "Souvent"
+                                    },
+                                    "value": "often"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sometimes",
+                                        "fr": "Parfois"
+                                    },
+                                    "value": "sometimes"
+                                },
+                                { 
+                                    "label": {
+                                        "en": "Never",
+                                        "fr": "Jamais"
+                                    },
+                                    "value": "never"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType":"radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "Do you find alternative ways of staying active when the weather is bad and you don’t want to go outside to exercise?",
+                                "fr": "Trouvez-vous des solutions alternatives pour demeurer actif lorsque la température extérieure n’est pas clémente et que vous ne désirez pas sortir faire votre activité physique?"
+                            },
+                            "validation":{
+                                "required":true
+                            },
+                            "key": "Do you find alternative ways of staying active when the weather is bad?",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Always",
+                                        "fr": "Toujours"
+                                    },
+                                    "value": "always"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Often",
+                                        "fr": "Souvent"
+                                    },
+                                    "value": "often"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sometimes",
+                                        "fr": "Parfois"
+                                    },
+                                    "value": "sometimes"
+                                },
+                                { 
+                                    "label": {
+                                        "en": "Never",
+                                        "fr": "Jamais"
+                                    },
+                                    "value": "never"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType":"radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "Does the following statement apply to you: "I don’t exercise because I’m afraid of getting hurt."",
+                                "fr": "JVous reconnaissez-vous dans l’affirmation suivante: "Je ne fais pas d’activité physique par crainte de me blesser.""
+                            },
+                            "validation":{
+                                "required":true
+                            },
+                            "key": "I don’t exercise because I’m afraid of getting hurt",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Not at all",
+                                        "fr": "Pas du tout"
+                                    },
+                                    "value": "not at all"
+                                },
+                                {
+                                    "label": {
+                                        "en": "A little",
+                                        "fr": "Un peu"
+                                    },
+                                    "value": "a little"
+                                },
+                                {
+                                    "label": {
+                                        "en": "A lot",
+                                        "fr": "Beaucoup"
+                                    },
+                                    "value": "a lot"
+                                },
+                                { 
+                                    "label": {
+                                        "en": "Completely",
+                                        "fr": "Complètement"
+                                    },
+                                    "value": "completely"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    }'
+WHERE id = 20;
