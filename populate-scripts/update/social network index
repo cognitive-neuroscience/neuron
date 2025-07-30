@@ -1,0 +1,668 @@
+
+-- Social Network Index
+UPDATE tasks SET
+    from_platform = "PSHARPLAB",
+    task_type = "QUESTIONNAIRE",
+    name = "Social Network Index",
+    description = "Social Network Index.",
+    external_url = "",
+    config = '{
+        "taskConfig": {},
+        "metadata": [
+            {
+                "componentName": "QUESTIONNAIRECOMPONENT",
+                "componentConfig": {
+                    "title": "Questionnaire",
+                    "questions": [
+                      {
+                            "questionType": "displayText",
+                            "key": "displayText1",
+                            "title": {
+                                "en": "Instructions: This questionnaire is concerned with how many people you see or talk to on a regular basis including family, friends, workmates, neighbours, etc. Please read and answer each question carefully. Answer follow-up questions where appropriate.",
+                                "fr": "Instructions: Le présent questionnaire concerne le nombre de personnes que vous voyez ou avec qui vous communiquez régulièrement, dont les membres de votre famille, les amis, les collègues de travail, les voisins, etc. Veuillez lire les questions et y répondre attentivement. Répondez aux questions complémentaires s'il y a lieu."
+                            }
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "Which of the following best describes your marital status?",
+                                "fr": "Lequel des énoncés suivants décrit le mieux votre état matrimonial?"
+                            },
+                            "key": "marital",
+                            "validation": {
+                                "required": true
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Currently married and living together, or living with someone in a marital-like relationship",
+                                        "fr": "Actuellement marié(e) et vivant ensemble, ou vivant avec quelqu'un dans une relation matrimoniale"
+                                    },
+                                    "value": "Currently married and living together, or living with someone in a marital-like relationship"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Never married and never lived with someone in amarital-like relationship",
+                                        "fr": "Jamais marié(e) et jamais vécu avec quelqu'un dans une relation matrimoniale"
+                                    },
+                                    "value": "Never married and never lived with someone in amarital-like relationship"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Separated",
+                                        "fr": "Séparé(e)"
+                                    },
+                                    "value": "Separated"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Divorced or formerly lived with someone in a marital-like relationship",
+                                        "fr": "Divorcé(e) ou ayant vécu avec quelqu'un dans une relation matrimoniale"
+                                    },
+                                    "value": "Divorced or formerly lived with someone in a marital-like relationship"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Widowed",
+                                        "fr": "Veuf(ve)"
+                                    },
+                                    "value": "Widowed"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "input",
+                            "title": {
+                                "en": "How many children do you have?",
+                                "fr": "Combien d'enfants avez-vous?"
+                            },
+                            "validation": {
+                                "required": true,
+                                "isNumeric": true,
+                                "min": 0
+                            },
+                            "key": "how-many-children"
+                        },
+                        {
+                            "questionType": "input",
+                            "title": {
+                                "en": "If applicable, how many of your children do you see or talk to on the phone at least once every two weeks?",
+                                "fr": "Si applicable, combien de vos enfants voyez-vous ou à combien d'entre eux parlez-vous au téléphone au moins une fois toutes les deux semaines?"
+                            },
+                            "validation": {
+                                "required": false,
+                                "isNumeric": true,
+                                "min": 0
+                            },
+                            "key": "how-many-children-talk-or-see"
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "Are either of your parents living?",
+                                "fr": "Est-ce que vos parents sont en vie?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "living-parents",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Neither",
+                                        "fr": "Aucun"
+                                    },
+                                    "value": "neither"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Mother only",
+                                        "fr": "Mère seulement"
+                                    },
+                                    "value": "mother-only"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Father only",
+                                        "fr": "Père seulement"
+                                    },
+                                    "value": "father-only"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Both",
+                                        "fr": "Les deux"
+                                    },
+                                    "value": "both"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "If applicable, do you see or talk on the phone to either of your parents at least once every 2 weeks?",
+                                "fr": "Si applicable, voyez-vous l'un ou l'autre de vos  parents, ou leur parlez-vous au téléphone au moins une fois toutes les deux semaines?"
+                            },
+                            "validation": {
+                                "required": false
+                            },
+                            "key": "talk-to-parents",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Neither",
+                                        "fr": "Aucun"
+                                    },
+                                    "value": "neither"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Mother only",
+                                        "fr": "Mère seulement"
+                                    },
+                                    "value": "mother-only"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Father only",
+                                        "fr": "Père seulement"
+                                    },
+                                    "value": "father-only"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Both",
+                                        "fr": "Les deux"
+                                    },
+                                    "value": "both"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "Are either of your in-laws (or partner’s parents) living?",
+                                "fr": "Est-ce que l'un de vos beaux-parents (ou les parents de votre partenaire) est en vie?"
+                            },
+                            "validation": {
+                                "required": true
+                            },
+                            "key": "in-laws-living-parents",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Neither",
+                                        "fr": "Aucun"
+                                    },
+                                    "value": "neither"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Mother only",
+                                        "fr": "Mère seulement"
+                                    },
+                                    "value": "mother-only"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Father only",
+                                        "fr": "Père seulement"
+                                    },
+                                    "value": "father-only"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Both",
+                                        "fr": "Les deux"
+                                    },
+                                    "value": "both"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "If applicable, do you see or talk on the phone to either of your partner’s parents at least once every two weeks?",
+                                "fr": "Si applicable, voyez-vous l'un ou l'autre des parents  de votre conjoint ou partenaire, ou leur parlez-vous au téléphone au moins une fois toutes les deux semaines?"
+                            },
+                            "validation": {
+                                "required": false
+                            },
+                            "key": "talk-to-in-laws-parents",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Neither",
+                                        "fr": "Aucun"
+                                    },
+                                    "value": "neither"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Mother only",
+                                        "fr": "Mère seulement"
+                                    },
+                                    "value": "mother-only"
+                                },
+                                                       {
+                                    "label": {
+                                        "en": "Father only",
+                                        "fr": "Père seulement"
+                                    },
+                                    "value": "father-only"
+                                },
+                                                       {
+                                    "label": {
+                                        "en": "Both",
+                                        "fr": "Les deux"
+                                    },
+                                    "value": "both"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "input",
+                            "title": {
+                                "en": "How many other relatives (other than your spouse, parents and children) do you feel close to?",
+                                "fr": "De combien de membres de votre famille (à part votre conjoint(e), vos parents et vos enfants) vous sentez-vous proche?"
+                            },
+                            "validation": {
+                                "required": true,
+                                "isNumeric": true,
+                                "min": 0
+                            },
+                            "key": "how-many-relatives"
+                        },
+                        {
+                            "questionType": "input",
+                            "title": {
+                                "en": "If applicable, how many of these relatives do you see or talk to on the phone at least once every two weeks?",
+                                "fr": "Si applicable, combien de ces membres de la famille voyez-vous ou à combien d'entre eux parlez-vous au téléphone au moins une fois toutes les deux semaines?"
+                            },
+                            "validation": {
+                                "required": false,
+                                "isNumeric": true,
+                                "min": 0
+                            },
+                            "key": "how-many-relatives-talk-or-see"
+                        },
+                        {
+                            "questionType": "input",
+                            "title": {
+                                "en": "How many close friends do you have?(meaning people that you feel at ease with, can talk to about private matters, and call on for help).",
+                                "fr": "Combien d'ami(e)s proches avez-vous ? (C'est-à-dire les personnes avec lesquelles vous vous sentez à l'aise pour parler de choses personnelles ou que vous pouvez contacter pour demander de l'aide)."
+                            },
+                            "validation": {
+                                "required": true,
+                                "isNumeric": true,
+                                "min": 0
+                            },
+                            "key": "how-many-close-friends"
+                        },
+                        {
+                            "questionType": "input",
+                            "title": {
+                                "en": "If applicable, how many of these friends do you see or talk to at least once every 2 weeks?",
+                                "fr": "Si applicable, combien de ces ami(e)s proches voyez-vous ou à combien d'entre eux parlez-vous au moins une fois toutes les deux semaines?"
+                            },
+                            "validation": {
+                                "required": false,
+                                "isNumeric": true,
+                                "min": 0
+                            },
+                            "key": "how-many-friends-talk-or-see"
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "Do you belong to a church, temple, or other religious group?",
+                                "fr": "Êtes-vous membre d'une église, d'un temple, ou d'un autre groupe religieux?"
+                            },
+                            "key": "do-you-have-belong-to-church",
+                            "validation": {
+                                "required": true
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "input",
+                            "title": {
+                                "en": "If applicable, how many members of your church or religious group do you talk to at least once every 2 weeks? (This includes at group meetings and services.).",
+                                "fr": "Si applicable, à combien de membres de votre église ou de votre groupe religieux parlez-vous au moins une fois toutes les deux semaines ? (Cela comprend les réunions de groupe et les services religieux.)."
+                            },
+                            "validation": {
+                                "required": false,
+                                "isNumeric": true,
+                                "min": 0
+                            },
+                            "key": "how-many-members-church"
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "Do you attend any classes (school, university, technical training, or adult education) on a regular basis?",
+                                "fr": "Suivez-vous des cours (école, université, formation technique ou éducation des adultes) régulièrement?"
+                            },
+                            "key": "do-you-attend-classes",
+                            "validation": {
+                                "required": true
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "input",
+                            "title": {
+                                "en": "If applicable, how many fellow students or teachers do you talk to at least once every 2 weeks? (This includes at class meetings.).",
+                                "fr": "Si applicable, à combien de camarades de classe ou de professeurs parlez-vous au moins une fois toutes les deux semaines (Cela comprend les rencontres en classe.)."
+                            },
+                            "validation": {
+                                "required": false,
+                                "isNumeric": true,
+                                "min": 0
+                            },
+                            "key": "how-many-classmates-talk"
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "Are you currently employed either full or part-time? (Do not include volunteer activities here).",
+                                "fr": "Suivez-vous des cours (école, université, formation technique ou éducation des adultes) régulièrement?"
+                            },
+                            "key": "are-you-employed",
+                            "validation": {
+                                "required": true
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Yes, self employed",
+                                        "fr": "Oui, comme travailleur(se) autonome"
+                                    },
+                                    "value": "Self Employed"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Yes, employed by others",
+                                        "fr": "Oui, comme employé(e)"
+                                    },
+                                    "value": "Employed by others"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "input",
+                            "title": {
+                                "en": "If applicable, how many people do you supervise at work?",
+                                "fr": "Si applicable, combien de personnes supervisez-vous?"
+                            },
+                            "validation": {
+                                "required": false,
+                                "isNumeric": true,
+                                "min": 0
+                            },
+                            "key": "how-many-people-supervise"
+                        },
+                        {
+                            "questionType": "input",
+                            "title": {
+                                "en": "If applicable, how many people at work (other than those you supervise) do you talk to at least once every 2 weeks?",
+                                "fr": "Si applicable, à combien de personnes au travail (autres que celles que vous supervisez) parlez-vous au moins une fois toutes les deux semaines?"
+                            },
+                            "validation": {
+                                "required": false,
+                                "isNumeric": true,
+                                "min": 0
+                            },
+                            "key": "how-many-people-at-work-talk"
+                        },
+                        {
+                            "questionType": "input",
+                            "title": {
+                                "en": "How many of your neighbors do you visit or talk to at least once every 2 weeks?",
+                                "fr": "À combien de vos voisins rendez-vous visite ou à combien d'entre eux parlez-vous au moins une fois toutes les deux semaines?"
+                            },
+                            "validation": {
+                                "required": true,
+                                "isNumeric": true,
+                                "min": 0
+                            },
+                            "key": "how-many-neighbors-talk"
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "Are you currently involved in regular volunteer work?",
+                                "fr": "Participez-vous régulièrement à des actions de bénévolat?"
+                            },
+                            "key": "do-you-volunteer",
+                            "validation": {
+                                "required": true
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "input",
+                            "title": {
+                                "en": "If applicable, how many people involved in this volunteer work do you talk to about volunteering-related issues at least once every 2 weeks?",
+                                "fr": "Si applicable, à combien de personnes impliquées dans ces actions de bénévolat parlez-vous de problèmes liés au bénévolat au moins une fois toutes les deux semaines?"
+                            },
+                            "validation": {
+                                "required": false,
+                                "isNumeric": true,
+                                "min": 0
+                            },
+                            "key": "how-many-volunteers-talk"
+                        },
+                        {
+                            "questionType": "multipleChoiceSelect",
+                            "title": {
+                                "en": "Do you belong to any groups in which you talk to one or more members of the group about group related issues at least once every 2 weeks? Examples include social clubs, recreational groups, trade unions, commercial groups, professional organizations, groups concerned with children like the PTA or Boy Scouts, groups concerned with community service, etc.",
+                                "fr": "Appartenez-vous à un groupe au sein duquel vous parlez à un ou plusieurs membres des problèmes du groupe au moins une fois toutes les deux semaines ? Voici quelques exemples : les clubs sociaux, les groupes de loisirs, les syndicats, les organisations professionnelles, les groupes concernant les enfants comme les associations de parents ou les scouts, les groupes de service communautaire, etc."
+                            },
+                            "key": "do-you-belong-to-any-groups",
+                            "validation": {
+                                "required": true
+                            },
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "displayText",
+                            "key": "displayText1",
+                            "title": {
+                                "en": "Instructions: If applicable, consider those groups in which you talk to a fellow group member at least once every 2 weeks. Please provide the following information for each such group: the name or type of group and the total number of members in that group that you talk to at least once every 2 weeks.",
+                                "fr": "Instructions: Citez les groupes auxquels vous appartenez. Veuillez fournir les renseignements suivants pour chacun des groupes : le nom ou le type de groupe, et le nombre total de membres auxquels vous parlez au moins une fois toutes les deux semaines."
+                            }
+                        },
+                        {
+                            "questionType": "input",
+                            "title": {
+                                "en": "Name of Group #1:",
+                                "fr": "Nom du groupe #1:"
+                            },
+                            "validation": {
+                                "required": false
+                            },
+                            "key": "group-one"
+                        },
+                        {
+                            "questionType": "input",
+                            "title": {
+                                "en": "Number of members of Group #1 you're speaking to at least once every 2 weeks:",
+                                "fr": "Nombre de membres du groupe #1 à qui vous parlez au moins une fois à toutes les 2 semaines:"
+                            },
+                            "validation": {
+                                "required": false,
+                                "isNumeric": true,
+                                "min": 0
+                            },
+                            "key": "group-one-speaking"
+                        },
+                        {
+                            "questionType": "input",
+                            "title": {
+                                "en": "Name of Group #2:",
+                                "fr": "Nom du groupe #2:"
+                            },
+                            "validation": {
+                                "required": false
+                            },
+                            "key": "group-two"
+                        },
+                        {
+                            "questionType": "input",
+                            "title": {
+                                "en": "Number of members of Group #2 you're speaking to at least once every 2 weeks:",
+                                "fr": "Nombre de membres du groupe #2 à qui vous parlez au moins une fois à toutes les 2 semaines:"
+                            },
+                            "validation": {
+                                "required": false,
+                                "isNumeric": true,
+                                "min": 0
+                            },
+                            "key": "group-two-speaking"
+                        },
+                        {
+                            "questionType": "input",
+                            "title": {
+                                "en": "Name of Group #3:",
+                                "fr": "Nom du groupe #3:"
+                            },
+                            "validation": {
+                                "required": false
+                            },
+                            "key": "group-three"
+                        },
+                        {
+                            "questionType": "input",
+                            "title": {
+                                "en": "Number of members of Group #3 you're speaking to at least once every 2 weeks:",
+                                "fr": "Nombre de membres du groupe #3 à qui vous parlez au moins une fois à toutes les 2 semaines:"
+                            },
+                            "validation": {
+                                "required": false,
+                                "isNumeric": true,
+                                "min": 0
+                            },
+                            "key": "group-three-speaking"
+                        },
+                        {
+                            "questionType": "input",
+                            "title": {
+                                "en": "Name of Group #4:",
+                                "fr": "Nom du groupe #4:"
+                            },
+                            "validation": {
+                                "required": false
+                            },
+                            "key": "group-one"
+                        },
+                        {
+                            "questionType": "input",
+                            "title": {
+                                "en": "Number of members of Group #4 you're speaking to at least once every 2 weeks:",
+                                "fr": "Nombre de membres du groupe #4 à qui vous parlez au moins une fois à toutes les 2 semaines:"
+                            },
+                            "validation": {
+                                "required": false,
+                                "isNumeric": true,
+                                "min": 0
+                            },
+                            "key": "group-four-speaking"
+                        },
+                        {
+                            "questionType": "input",
+                            "title": {
+                                "en": "Name of Group #5:",
+                                "fr": "Nom du groupe #5:"
+                            },
+                            "validation": {
+                                "required": false
+                            },
+                            "key": "group-five"
+                        },
+                        {
+                            "questionType": "input",
+                            "title": {
+                                "en": "Number of members of Group #5 you're speaking to at least once every 2 weeks:",
+                                "fr": "Nombre de membres du groupe #5 à qui vous parlez au moins une fois à toutes les 2 semaines:"
+                            },
+                            "validation": {
+                                "required": false,
+                                "isNumeric": true,
+                                "min": 0
+                            },
+                            "key": "group-five-speaking"
+                        }
+                    ]
+                }
+            }
+        ]
+    }'
+WHERE id = 90;
