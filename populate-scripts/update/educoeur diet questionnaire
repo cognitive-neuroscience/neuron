@@ -1,0 +1,802 @@
+-- Educoeur Diet Questionnaire
+UPDATE tasks set
+    from_platform = "PSHARPLAB",
+    task_type = "QUESTIONNAIRE",
+    name = "Educoeur Diet Questionnaire",
+    description = "Educoeur Diet Questionnaire",
+    external_url = "",
+    config = '{
+        "taskConfig": {},
+        "metadata": [
+            {
+                "componentName": "QUESTIONNAIRECOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "Questionnaire",
+                        "fr": "Questionnaire"
+                    },
+                    "questions":[
+                        {
+                            "questionType": "displayText",
+                            "key": "displayText1",
+                            "title": {
+                                "en": "Instructions: This questionnaire will ask you about your diet and eating habits. Please choose the response that applies most closely to what you would typically eat, thinking of the LAST YEAR.",
+                                "fr": "Instructions: PCe questionnaire porte sur vos habitudes alimentaires. S’il vous plait, choisissez la réponse la plus proche de ce que vous mangez habituellement en vous référant à la DERNIÈRE ANNÉE."
+                            }
+                        },
+                        {
+                            "questionType": "radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "How many meals do you eat a day?",
+                                "fr": "Combien de repas prenez-vous par jour?"
+                            },
+                            "validation": {
+                                "required":true
+                            },
+                            "key": "How many meals do you eat a day?",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "1-2 meals per day",
+                                        "fr": "1-2 repas par jour"
+                                    },
+                                    "value": "1-2 meals per day"
+                                },
+                                {
+                                    "label": {
+                                        "en": "3 meals per day",
+                                        "fr": "3 repas par jour"
+                                    },
+                                    "value": "3 meals per day"
+                                },
+                                {
+                                    "label": {
+                                        "en": "I often eat a 4th meal",
+                                        "fr": "Je mange souvent un quatrième repas"
+                                    },
+                                    "value": "I often eat a 4th meal"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "Do you eat between meals?",
+                                "fr": "Mangez-vous entre les repas?"
+                            },
+                            "validation":{
+                                "required":true
+                            },
+                            "key": "Do you eat between meals",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "No/I have a snack when I need it",
+                                        "fr": "Non/Je mange une collation au besoin"
+                                    },
+                                    "value": "No/I have a snack when I need it"
+                                },
+                                {
+                                    "label": {
+                                        "en": "I generally eat during the evening",
+                                        "fr": "Je mange généralement durant la soirée"
+                                    },
+                                    "value": "I generally eat during the evening"
+                                },
+                                {
+                                    "label": {
+                                        "en": "I often nibble between meals",
+                                        "fr": "Je grignote souvent entre les repas"
+                                    },
+                                    "value": "I often nibble between meals"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType":"radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "How often do you eat out? (sandwiches, fast food, pizza, barbecue, Chinese food...)",
+                                "fr": "À quelle fréquence mangez-vous au restaurant ? (sandwicheries, fast food, pizza, rôtisserie, mets chinois...)"
+                            },
+                            "validation":{
+                                "required":true
+                            },
+                            "key": "How often do you eat out",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Less than once per week",
+                                        "fr": "Moins d’une fois par semaine"
+                                    },
+                                    "value": "less than once per week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Once or twice per week",
+                                        "fr": "Une fois ou deux par semaine"
+                                    },
+                                    "value": "once or twice per week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Three or more times per week",
+                                        "fr": "Trois fois ou plus par semaine"
+                                    },
+                                    "value": "three or more per week"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType":"radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "How often do you eat prepared foods? (frozen foods, pizza, Italian or Chinese food, packaged rice and pasta sides...)",
+                                "fr": "À quelle fréquence mangez-vous des mets prêt-à-servir? (mets congelés, pizza, mets italiens ou chinois, riz et pâtes alimentaires assaisonnés...)"
+                            },
+                            "validation":{
+                                "required":true
+                            },
+                            "key": "How often do you eat prepared foods",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Less than once per week",
+                                        "fr": "Moins d’une fois par semaine"
+                                    },
+                                    "value": "less than once per week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Once or twice per week",
+                                        "fr": "Une ou deux fois par semaine"
+                                    },
+                                    "value": "once or twice per week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Three or more times per week",
+                                        "fr": "Trois fois ou plus par semaine"
+                                    },
+                                    "value": "three or more per week"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType":"radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "How many vegetables do you eat? (1 portion = 1 average vegetable, 1⁄2 cup fresh, frozen or canned vegetables, 1 cup lettuce, 1⁄2 cup vegetable juice)",
+                                "fr": "Combien de légumes consommez-vous par jour? (1 portion = 1 légume moyen, 1⁄2 tasse légumes frais,  surgelés ou en conserve, 1 tasse de laitue, 1⁄2 tasse jus de légumes)"
+                            },
+                            "validation":{
+                                "required":true
+                            },
+                            "key": "How many vegetables do you eat",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "4 or more per day",
+                                        "fr": "4 ou plus par jour"
+                                    },
+                                    "value": "4 or more per day"
+                                },
+                                {
+                                    "label": {
+                                        "en": "2-3 per day",
+                                        "fr": "2-3 par jour"
+                                    },
+                                    "value": "2-3 per day"
+                                },
+                                {
+                                    "label": {
+                                        "en": "One or less per day",
+                                        "fr": "Un ou moins par jour"
+                                    },
+                                    "value": "one or less per day"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType":"radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "How much fruit do you eat? (1 portion = 1 average fruit, 1⁄2 cup fresh, frozen, canned or pureed fruit, 1⁄2 cup fruit juice)",
+                                "fr": "JCombien de fruits consommez-vous par jour? (1 portion = 1 fruit moyen, 1⁄2 tasse fruits frais, surgelés, en conserve ou en purée, 1⁄2 tasse jus)"
+                            },
+                            "validation":{
+                                "required":true
+                            },
+                            "key": "How much fruit do you eat",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "3 or more per day",
+                                        "fr": "3 ou plus par jour"
+                                    },
+                                    "value": "3 or more per day"
+                                },
+                                {
+                                    "label": {
+                                        "en": "2 per day",
+                                        "fr": "2 par jour"
+                                    },
+                                    "value": "2 per day"
+                                },
+                                {
+                                    "label": {
+                                        "en": "1 or less per day",
+                                        "fr": "1 ou moins par jour"
+                                    },
+                                    "value": "1 or less per day"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType":"radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "How big is your meat portion per meal? (1 portion = 100 g or 3 ounces or the equivalent of a deck of 52 cards)",
+                                "fr": "Quelle est la grosseur de votre portion de viande par repas? (1 portion = 100g ou 3 onces ou l’équivalent d’un paquet de 52 cartes à jouer) "
+                            },
+                            "validation":{
+                                "required":true
+                            },
+                            "key": "How big is your meat portion per meal",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "1 deck of cards or less",
+                                        "fr": "1 paquet de cartes ou moins"
+                                    },
+                                    "value": "1 deck of cards or less"
+                                },
+                                {
+                                    "label": {
+                                        "en": "1-2 decks of cards",
+                                        "fr": "Entre 1 et 2 paquets de cartes"
+                                    },
+                                    "value": "1-2 decks of cards"
+                                },
+                                {
+                                    "label": {
+                                        "en": "2 decks of cards or more",
+                                        "fr": "2 paquets de cartes ou plus"
+                                    },
+                                    "value": "2 decks of cards or more"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType":"radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "Do you eat chicken skin or visible fat on meat?",
+                                "fr": "Mangez-vous la peau du poulet ou le gras visible des viandes ?"
+                            },
+                            "validation":{
+                                "required":true
+                            },
+                            "key": "Do you eat chicken skin or visible fat on meat",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Never",
+                                        "fr": "Jamais"
+                                    },
+                                    "value": "never"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sometimes",
+                                        "fr": "Parfois"
+                                    },
+                                    "value": "sometimes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Always",
+                                        "fr": "Toujours"
+                                    },
+                                    "value": "always"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType":"radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "Do you eat deli meat or fatty meat? (bacon, sausages, baloney, salami, pepperoni, liver pâté, cretons, chicken wings, patties, ribs, ground meat).",
+                                "fr": "Mangez-vous des charcuteries ou des viandes grasses ? (bacon, saucisse, saucisson de Bologne, salami, pepperoni, pâté de foie, cretons, ailes de poulet, croquettes, côtes levées, viandes hachées, etc.)"
+                            },
+                            "validation":{
+                                "required":true
+                            },
+                            "key": "Do you eat deli meat or fatty meat",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Less than once per week",
+                                        "fr": "Moins d’une fois par semaine"
+                                    },
+                                    "value": "Less than once per week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Once or twice per week",
+                                        "fr": "Une fois ou deux par semaine"
+                                    },
+                                    "value": "Once or twice per week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Three or more times per week",
+                                        "fr": "Trois fois ou plus par semaine"
+                                    },
+                                    "value": "Three or more times per wee"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType":"radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "Do you eat unbreaded fish?",
+                                "fr": "Mangez-vous du poisson non pané?"
+                            },
+                            "validation":{
+                                "required":true
+                            },
+                            "key": "Do you eat unbreaded fish",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Twice or more per week",
+                                        "fr": "Deux fois ou plus par semaine"
+                                    },
+                                    "value": "twice or more per week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Once per week",
+                                        "fr": "Une fois par semaine"
+                                    },
+                                    "value": "once per week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Rarely",
+                                        "fr": "Rarement"
+                                    },
+                                    "value": "rarely"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType":"radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "Do you eat cheese? (1 portion = 30 g or 1 oz, 1-2 pieces of sliced cheese, 30ml or 2 tablespoons of cream cheese. Do not count skim milk cheese or cottage cheese.)",
+                                "fr": "Mangez-vous du fromage? (1 portion = 30g ou 1 once, 1 à 2 fromage en tranches, 30ml ou 2 c. à soupe de fromage à la crème. Exclure le fromage écrémé ou le cottage.)"
+                            },
+                            "validation":{
+                                "required":true
+                            },
+                            "key": "Do you eat cheese",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Twice or less per week",
+                                        "fr": "Deux fois ou moins par semaine"
+                                    },
+                                    "value": "twice or less per week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "3-4 times per week",
+                                        "fr": "3-4 fois par semaine"
+                                    },
+                                    "value": "3-4 times per week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "5 or more times per week",
+                                        "fr": "5 fois ou plus par semaine"
+                                    },
+                                    "value": "5 or more times per week"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType":"radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "What kinds of dairy products (milk and yogurt) do you eat? (b.f. = butterfat / milk fat)",
+                                "fr": "Quel type de produits laitiers (lait et yogourt) consommez-vous? (m.g. = matières grasses)"
+                            },
+                            "validation":{
+                                "required":true
+                            },
+                            "key": "What kinds of dairy products (milk and yogurt) do you eat",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Less than 2% b.f.",
+                                        "fr": "Moins de 2% de m.g."
+                                    },
+                                    "value": "Less than 2% b.f"
+                                },
+                                {
+                                    "label": {
+                                        "en": "2% b.f.",
+                                        "fr": "2% de m.g."
+                                    },
+                                    "value": "2% b.f."
+                                },
+                                {
+                                    "label": {
+                                        "en": "3% or more b.f.",
+                                        "fr": "3% ou plus de m.g."
+                                    },
+                                    "value": "3% or more b.f."
+                                }
+                            ]
+                        },
+                        {
+                            "questionType":"radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "What percentage of your plate is filled by grain or starches? (pasta, rice, couscous, potatoes...)",
+                                "fr": "Quelle proportion les produits céréaliers ou les féculents occupent-ils dans votre assiette? (pâtes alimentaires, riz, couscous, pomme de terre...)"
+                            },
+                            "validation":{
+                                "required":true
+                            },
+                            "key": "What percentage of your plate is filled by grain or starches",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "1/4 of the plate or less",
+                                        "fr": "Quart de l’assiette ou moins"
+                                    },
+                                    "value": "1/4 of the plate or less"
+                                },
+                                {
+                                    "label": {
+                                        "en": "1/2 of the plate",
+                                        "fr": "Moitié de l’assiette"
+                                    },
+                                    "value": "1/2 of the plate"
+                                },
+                                {
+                                    "label": {
+                                        "en": "More than 1/2 of the plate",
+                                        "fr": "Plus que la moitié de l’assiette"
+                                    },
+                                    "value": "More than 1/2 of the plate"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType":"radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "Do you select whole grain products? (whole grain bread, high-fibre breakfast cereals, brown rice...)",
+                                "fr": "Choisissez-vous des produits céréaliers faits de grains entiers? (pain de blé entier, céréales à déjeuner riches en fibres, riz brun...)"
+                            },
+                            "validation":{
+                                "required":true
+                            },
+                            "key": "Do you select whole grain products",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Yes, always",
+                                        "fr": "Toujours"
+                                    },
+                                    "value": "yes, always"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Sometimes",
+                                        "fr": "Parfois"
+                                    },
+                                    "value": "sometimes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Rarely",
+                                        "fr": "Rarement"
+                                    },
+                                    "value": "rarely"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType":"radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "À quelle fréquence consommez-vous des produits de boulangerie ? (Beignes, brioches, croissants, danoises, muffins). Exclure les muffins maison.",
+                                "fr": "Quand quelque chose de bien m’arrive, je suis excité(e)."
+                            },
+                            "validation":{
+                                "required":true
+                            },
+                            "key": "How often do you eat baked products",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Un fois ou moins par semaine",
+                                        "fr": "Pas du tout"
+                                    },
+                                    "value": "once a week or less"
+                                },
+                                {
+                                    "label": {
+                                        "en": "2-3 times per week",
+                                        "fr": "2-3 fois par semaine"
+                                    },
+                                    "value": "2-3 times per week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "4 times or more per week",
+                                        "fr": "4 fois ou plus par semaine"
+                                    },
+                                    "value": "4 times or more per week"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType":"radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "How often do you eat store-bought desserts? (as a snack or after a meal: chewy bars, cookies, regular ice cream, cakes, pastries, pies...)",
+                                "fr": "À quelle fréquence consommez-vous des desserts commerciaux ? (en collation ou au repas : barres tendres, biscuits, crème glacée régulière, gâteaux, pâtisseries, tartes...)"
+                            },
+                            "validation":{
+                                "required":true
+                            },
+                            "key": "How often do you eat store-bought desserts",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Twice a week or less",
+                                        "fr": "Deux fois ou moins par semaine"
+                                    },
+                                    "value": "twice a week or less"
+                                },
+                                {
+                                    "label": {
+                                        "en": "3-4 times per week",
+                                        "fr": "3-4 fois par semaine"
+                                    },
+                                    "value": "3-4 times per week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "5 or more times per week",
+                                        "fr": "5 fois ou plus par semaine"
+                                    },
+                                    "value": "5 or more times per week"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType":"radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "How often do you eat sweets? (candies, chocolate, table sugar, honey, jam...)",
+                                "fr": "À quelle fréquence consommez-vous des sucreries ?(Bonbons, chocolat, sucre de table, miel, confiture...)"
+                            },
+                            "validation":{
+                                "required":true
+                            },
+                            "key": "How often do you eat sweets",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "3 time per week or less",
+                                        "fr": "3 fois ou moins par semaine"
+                                    },
+                                    "value": "3 times per week or less"
+                                },
+                                {
+                                    "label": {
+                                        "en": "4-5 times per week",
+                                        "fr": "4-5 fois par semaine"
+                                    },
+                                    "value": "slightly"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Every day",
+                                        "fr": "Tous les jours"
+                                    },
+                                    "value": "every day"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType":"radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "Do you drink sweet drinks? (fruit juice or fruit drinks, soft drinks or energizing drinks, iced tea, lemonade...)",
+                                "fr": "Buvez-vous des breuvages sucrés? (jus ou boisson aux fruits, boisson gazeuse ou énergisante, thé glacé, limonade...)"
+                            },
+                            "validation":{
+                                "required":true
+                            },
+                            "key": "Do you drink sweet drinks?",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Less than 1 cup per day",
+                                        "fr": "Moins d’une tasse par jour"
+                                    },
+                                    "value": "less than 1 cup per day"
+                                },
+                                {
+                                    "label": {
+                                        "en": "1-2 cups per day",
+                                        "fr": "1-2 tasses par jour"
+                                    },
+                                    "value": "1-2 cups per day"
+                                },
+                                {
+                                    "label": {
+                                        "en": "2 or more cups per day",
+                                        "fr": "2 tasses ou plus par jour"
+                                    },
+                                    "value": "2 or more cups per day"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType":"radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "What is your average alcohol consumption? (1 drink = 5 oz/150ml of wine, 1 beer, 1.5 oz/45ml of spirits)",
+                                "fr": "Quelle est votre consommation moyenne d’alcool? (1 consommation = 5 onces/150ml de vin, 1 bière, 1.5 once/45ml de spiritueux) ."
+                            },
+                            "validation":{
+                                "required":true
+                            },
+                            "key": "What is your average alcohol consumption",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "One or less per day",
+                                        "fr": "Une ou moins par jour"
+                                    },
+                                    "value": "one or less per day"
+                                },
+                                {
+                                    "label": {
+                                        "en": "2 per day",
+                                        "fr": "2 par jour"
+                                    },
+                                    "value": "2 per day"
+                                },
+                                {
+                                    "label": {
+                                        "en": "More than 2 per day",
+                                        "fr": "Plus que 2 par jour"
+                                    },
+                                    "value": "more than 2 per day"
+                                },
+                            ]
+                        },
+                                                {
+                            "questionType":"radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "Do you eat soups, broth or sauces, in pouches or canned?",
+                                "fr": "Consommez-vous des soupes, bouillons ou sauces, en sachet ou en conserve?"
+                            },
+                            "validation":{
+                                "required":true
+                            },
+                            "key": "Do you eat soups, broth or sauces, in pouches or canned?",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Less than once per week",
+                                        "fr": "Moins d’une fois par semaine"
+                                    },
+                                    "value": "less than once per week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Once or twice per week",
+                                        "fr": "Une fois ou deux par semaine"
+                                    },
+                                    "value": "once or twice per week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "3 or more times per week",
+                                        "fr": "Trois fois ou plus par semaine"
+                                    },
+                                    "value": "3 or more times per week"
+                                }
+                            ]
+                        },
+                                                {
+                            "questionType":"radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "Do you eat salted foods? (crackers, chips, popcorn, pretzels, salted nuts or seeds...)",
+                                "fr": "Consommez-vous des aliments enrobés de sel? (craquelins, croustilles, pop-corn, bretzels, noix ou graines salées...)"
+                            },
+                            "validation":{
+                                "required":true
+                            },
+                            "key": "Do you eat salted foods",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Once or less per week",
+                                        "fr": "Une fois ou moins par semaine"
+                                    },
+                                    "value": "once or less per week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "2-3 times per week",
+                                        "fr": "2-3 fois par semaine"
+                                    },
+                                    "value": "2-3 times per week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "4 or more times per week",
+                                        "fr": "4 fois ou plus par semaine"
+                                    },
+                                    "value": "4 or more times per week"
+                                }
+                            ]
+                        },
+                                                {
+                            "questionType":"radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "Do you add salt to your food?",
+                                "fr": "Ajoutez-vous du sel à vos aliments?"
+                            },
+                            "validation":{
+                                "required":true
+                            },
+                            "key": "Do you add salt to your food?",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Rarely",
+                                        "fr": "Rarement"
+                                    },
+                                    "value": "rarely"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Often or with certain foods",
+                                        "fr": "Souvent ou avec certains aliments"
+                                    },
+                                    "value": "often or with certain foods"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Usually",
+                                        "fr": "Normalement"
+                                    },
+                                    "value": "usually"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    }'
+WHERE id = 20;
