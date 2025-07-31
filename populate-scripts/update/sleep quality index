@@ -1,0 +1,757 @@
+-- Pittsburgh Sleep Quality Index
+UPDATE tasks set
+    from_platform = "PSHARPLAB",
+    task_type = "QUESTIONNAIRE",
+    name = "Pittsburgh Sleep Quality Index",
+    description = "Pittsburgh Sleep Quality Index",
+    external_url = "",
+    config = '{
+        "taskConfig": {},
+        "metadata": [
+            {
+                "componentName": "QUESTIONNAIRECOMPONENT",
+                "componentConfig": {
+                    "title": {
+                        "en": "Questionnaire",
+                        "fr": "Questionnaire"
+                    },
+                    "questions":[
+                        {
+                            "questionType": "displayText",
+                            "key": "displayText1",
+                            "title": {
+                                "en": "The following questions relate to your usual sleep habits during the past month only. Your answers should indicate the most accurate reply for the majority of days and nights in the past month. Please answer all questions.",
+                                "fr": "Les questions suivantes font référence à vos habitudes de sommeil au cours du dernier mois seulement. Vos réponses devraient correspondre aux meilleures estimations possibles pour la majorité des jours et des nuits au cours du dernier mois. Veuillez répondre à toutes les questions."
+                            }
+                        },
+                        {
+                            "questionType": "input",
+                            "title": {
+                                "en": "During the past month, what time have you usually gone to bed at night?",
+                                "fr": "Durant le dernier mois, à quelle heure vous êtes-vous couché?"
+                            },
+                            "validation": {
+                                "required": true,
+                            },
+                            "key": "During the past month, what time have you usually gone to bed at night?"
+                        },
+                        {
+                            "questionType": "input",
+                            "title": {
+                                "en": "During the past month, how long (in minutes) has it usually taken you to fall asleep each night?",
+                                "fr": "Durant le dernier mois, combien de temps (en minutes) avez-vous pris pour vous endormir à chaque soir?"
+                            },
+                            "validation": {
+                                "required": true,
+                                "isNumeric": true,
+                                "min": 0
+                            },
+                            "key": "During the past month, how long (in minutes) has it usually taken you to fall asleep each night?"
+                        },
+                        {
+                            "questionType": "input",
+                            "title": {
+                                "en": "During the past month, what time have you usually gotten up in the morning?",
+                                "fr": "Durant le dernier mois, à quelle heure vous êtes-vous levé le matin?"
+                            },
+                            "validation": {
+                                "required": true,
+                            },
+                            "key": "During the past month, what time have you usually gotten up in the morning?"
+                        },
+                        {
+                            "questionType": "input",
+                            "title": {
+                                "en": "During the past month, how many hours of actual sleep did you get at night? (This may be different than the number of hours you spent in bed.)",
+                                "fr": "Durant le dernier mois, combien d'heures de sommeil avez-vous eu par nuit (ceci peut être différent du nombre d'heures passées au lit)?"
+                            },
+                            "validation": {
+                                "required": true,
+                                "isNumeric": true,
+                                "min": 0
+                            },
+                            "key": "During the past month, how many hours of actual sleep did you get at night? (This may be different than the number of hours you spent in bed.)"
+                        },
+                        {
+                            "questionType": "displayText",
+                            "key": "displayText1",
+                            "title": {
+                                "en": "During the past month, how often have you had trouble sleeping because you…",
+                                "fr": "Durant le dernier mois, combien de fois avez-vous eu de la difficulté à dormir parce que vous..."
+                            }
+                        },
+                        {
+                            "questionType": "radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "Cannot get to sleep within 30 minutes",
+                                "fr": "Ne pouviez pas vous endormir au bout de 30 minutes."
+                            },
+                            "validation": {
+                                "required":true
+                            },
+                            "key": "Cannot get to sleep within 30 minutes",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Not during the past month",
+                                        "fr": "Pas durant le dernier mois"
+                                    },
+                                    "value": "not during the past month"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Less than once a week",
+                                        "fr": "Moins d'une fois par semaine"
+                                    },
+                                    "value": "less than once a week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Once or twice a week",
+                                        "fr": "Une ou deux fois par semaine"
+                                    },
+                                    "value": "once or twice a week"
+                                },
+                                { 
+                                    "label": {
+                                        "en": "Three or more times a week",
+                                        "fr": "Trois fois ou plus par semaine"
+                                    },
+                                    "value": "three or more times a week"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "Wake up in the middle of th  night or early morning",
+                                "fr": "Vous réveilliez au milieu de la nuit ou tôt le matin"
+                            },
+                            "validation": {
+                                "required":true
+                            },
+                            "key": "Wake up in the middle of the night or early morning",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Not during the past month",
+                                        "fr": "Pas durant le dernier mois"
+                                    },
+                                    "value": "not during the past month"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Less than once a week",
+                                        "fr": "Moins d'une fois par semaine"
+                                    },
+                                    "value": "less than once a week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Once or twice a week",
+                                        "fr": "Une ou deux fois par semaine"
+                                    },
+                                    "value": "once or twice a week"
+                                },
+                                { 
+                                    "label": {
+                                        "en": "Three or more times a week",
+                                        "fr": "Trois fois ou plus par semaine"
+                                    },
+                                    "value": "three or more times a week"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "Have to get up to use the bathroom.",
+                                "fr": "Deviez vous lever pour aller à la salle de bain."
+                            },
+                            "validation": {
+                                "required":true
+                            },
+                            "key": "Have to get up to use the bathroom.",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Not during the past month",
+                                        "fr": "Pas durant le dernier mois"
+                                    },
+                                    "value": "not during the past month"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Less than once a week",
+                                        "fr": "Moins d'une fois par semaine"
+                                    },
+                                    "value": "less than once a week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Once or twice a week",
+                                        "fr": "Une ou deux fois par semaine"
+                                    },
+                                    "value": "once or twice a week"
+                                },
+                                { 
+                                    "label": {
+                                        "en": "Three or more times a week",
+                                        "fr": "Trois fois ou plus par semaine"
+                                    },
+                                    "value": "three or more times a week"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "Cannot breathe comfortably",
+                                "fr": "Ne pouviez pas respirer facilement."
+                            },
+                            "validation": {
+                                "required":true
+                            },
+                            "key": "Cannot breathe comfortably",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Not during the past month",
+                                        "fr": "Pas durant le dernier mois"
+                                    },
+                                    "value": "not during the past month"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Less than once a week",
+                                        "fr": "Moins d'une fois par semaine"
+                                    },
+                                    "value": "less than once a week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Once or twice a week",
+                                        "fr": "Une ou deux fois par semaine"
+                                    },
+                                    "value": "once or twice a week"
+                                },
+                                { 
+                                    "label": {
+                                        "en": "Three or more times a week",
+                                        "fr": "Trois fois ou plus par semaine"
+                                    },
+                                    "value": "three or more times a week"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "Cough or snore loudly",
+                                "fr": "Toussiez ou ronfliez bruyamment."
+                            },
+                            "validation": {
+                                "required":true
+                            },
+                            "key": "Cough or snore loudly",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Not during the past month",
+                                        "fr": "Pas durant le dernier mois"
+                                    },
+                                    "value": "not during the past month"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Less than once a week",
+                                        "fr": "Moins d'une fois par semaine"
+                                    },
+                                    "value": "less than once a week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Once or twice a week",
+                                        "fr": "Une ou deux fois par semaine"
+                                    },
+                                    "value": "once or twice a week"
+                                },
+                                { 
+                                    "label": {
+                                        "en": "Three or more times a week",
+                                        "fr": "Trois fois ou plus par semaine"
+                                    },
+                                    "value": "three or more times a week"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "Feel too cold",
+                                "fr": "Aviez trop froid."
+                            },
+                            "validation": {
+                                "required":true
+                            },
+                            "key": "Feel too cold",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Not during the past month",
+                                        "fr": "Pas durant le dernier mois"
+                                    },
+                                    "value": "not during the past month"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Less than once a week",
+                                        "fr": "Moins d'une fois par semaine"
+                                    },
+                                    "value": "less than once a week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Once or twice a week",
+                                        "fr": "Une ou deux fois par semaine"
+                                    },
+                                    "value": "once or twice a week"
+                                },
+                                { 
+                                    "label": {
+                                        "en": "Three or more times a week",
+                                        "fr": "Trois fois ou plus par semaine"
+                                    },
+                                    "value": "three or more times a week"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "Feel too hot",
+                                "fr": "Aviez trop chaud."
+                            },
+                            "validation": {
+                                "required":true
+                            },
+                            "key": "Feel too hot",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Not during the past month",
+                                        "fr": "Pas durant le dernier mois"
+                                    },
+                                    "value": "not during the past month"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Less than once a week",
+                                        "fr": "Moins d'une fois par semaine"
+                                    },
+                                    "value": "less than once a week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Once or twice a week",
+                                        "fr": "Une ou deux fois par semaine"
+                                    },
+                                    "value": "once or twice a week"
+                                },
+                                { 
+                                    "label": {
+                                        "en": "Three or more times a week",
+                                        "fr": "Trois fois ou plus par semaine"
+                                    },
+                                    "value": "three or more times a week"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "Have bad dreams",
+                                "fr": "Aviez fait de mauvais rêves."
+                            },
+                            "validation": {
+                                "required":true
+                            },
+                            "key": "Have bad dreams",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Not during the past month",
+                                        "fr": "Pas durant le dernier mois"
+                                    },
+                                    "value": "not during the past month"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Less than once a week",
+                                        "fr": "Moins d'une fois par semaine"
+                                    },
+                                    "value": "less than once a week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Once or twice a week",
+                                        "fr": "Une ou deux fois par semaine"
+                                    },
+                                    "value": "once or twice a week"
+                                },
+                                { 
+                                    "label": {
+                                        "en": "Three or more times a week",
+                                        "fr": "Trois fois ou plus par semaine"
+                                    },
+                                    "value": "three or more times a week"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "Have pain",
+                                "fr": "Ressentiez de la douleur."
+                            },
+                            "validation": {
+                                "required":true
+                            },
+                            "key": "Have pain",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Not during the past month",
+                                        "fr": "Pas durant le dernier mois"
+                                    },
+                                    "value": "not during the past month"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Less than once a week",
+                                        "fr": "Moins d'une fois par semaine"
+                                    },
+                                    "value": "less than once a week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Once or twice a week",
+                                        "fr": "Une ou deux fois par semaine"
+                                    },
+                                    "value": "once or twice a week"
+                                },
+                                { 
+                                    "label": {
+                                        "en": "Three or more times a week",
+                                        "fr": "Trois fois ou plus par semaine"
+                                    },
+                                    "value": "three or more times a week"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "Other reason(s)",
+                                "fr": "JAutre(s) raison(s)."
+                            },
+                            "validation": {
+                                "required":true
+                            },
+                            "key": "Other reason(s)",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Not during the past month",
+                                        "fr": "Pas durant le dernier mois"
+                                    },
+                                    "value": "not during the past month"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Less than once a week",
+                                        "fr": "Moins d'une fois par semaine"
+                                    },
+                                    "value": "less than once a week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Once or twice a week",
+                                        "fr": "Une ou deux fois par semaine"
+                                    },
+                                    "value": "once or twice a week"
+                                },
+                                { 
+                                    "label": {
+                                        "en": "Three or more times a week",
+                                        "fr": "Trois fois ou plus par semaine"
+                                    },
+                                    "value": "three or more times a week"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "input",
+                            "title": {
+                                "en": "If applicable please describe the other(s) reason(s):",
+                                "fr": "Si applicable, décrivez les raisons autres:"
+                            },
+                            "validation": {
+                                "required": true,
+                            },
+                            "key": "If applicable please describe the other(s) reason(s):"
+                        },
+                        {
+                            "questionType": "radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "During the past month, how often have you taken medicine to help you sleep (prescribed or 'over the counter')",
+                                "fr": "Durant le dernier mois, combien de fois avez-vous pris une médication (avec ou sans ordonnance) pour vous aider à dormir?"
+                            },
+                            "validation": {
+                                "required":true
+                            },
+                            "key": "During the past month, how often have you taken medicine to help you sleep",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Not during the past month",
+                                        "fr": "Pas durant le dernier mois"
+                                    },
+                                    "value": "not during the past month"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Less than once a week",
+                                        "fr": "Moins d'une fois par semaine"
+                                    },
+                                    "value": "less than once a week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Once or twice a week",
+                                        "fr": "Une ou deux fois par semaine"
+                                    },
+                                    "value": "once or twice a week"
+                                },
+                                { 
+                                    "label": {
+                                        "en": "Three or more times a week",
+                                        "fr": "Trois fois ou plus par semaine"
+                                    },
+                                    "value": "three or more times a week"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "During the past month, how often have you had trouble staying awake while driving, eating meals, or engaging in social activity?",
+                                "fr": "Durant le dernier mois, combien de fois avez-vous eu de la difficulté à rester éveillé pendant que vous conduisiez, mangiez ou vous engagiez dans une activité sociale?"
+                            },
+                            "validation": {
+                                "required":true
+                            },
+                            "key": "During the past month, how often have you had trouble staying awake",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Not during the past month",
+                                        "fr": "Pas durant le dernier mois"
+                                    },
+                                    "value": "not during the past month"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Less than once a week",
+                                        "fr": "Moins d'une fois par semaine"
+                                    },
+                                    "value": "less than once a week"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Once or twice a week",
+                                        "fr": "Une ou deux fois par semaine"
+                                    },
+                                    "value": "once or twice a week"
+                                },
+                                { 
+                                    "label": {
+                                        "en": "Three or more times a week",
+                                        "fr": "Trois fois ou plus par semaine"
+                                    },
+                                    "value": "three or more times a week"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "During the past month, how much of a problem has it been for you to keep up enough enthusiasm to get things done?",
+                                "fr": "Durant le dernier mois, jusqu'à quel point avez-vous eu de la difficulté à maintenir suffisamment d'enthousiasme pour compléter vos activités?"
+                            },
+                            "validation": {
+                                "required":true
+                            },
+                            "key": "how much of a problem has it been for you to keep up enough enthusiasm to get things done",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "No problem at all",
+                                        "fr": "Aucun problèmes"
+                                    },
+                                    "value": "No problem at all"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Only a very slight problem",
+                                        "fr": "Légers problèmes"
+                                    },
+                                    "value": "only a very slight problem"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Somewhat of a problem",
+                                        "fr": "Quelque peu problématique"
+                                    },
+                                    "value": "somewhat of a problem"
+                                },
+                                { 
+                                    "label": {
+                                        "en": "A very big problem",
+                                        "fr": "Gros problème"
+                                    },
+                                    "value": "a very big problem"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "During the past month, how would you rate your sleep quality overall?",
+                                "fr": "Durant le dernier mois, comment évalueriez-vous la qualité globale de votre sommeil?"
+                            },
+                            "validation": {
+                                "required":true
+                            },
+                            "key": "During the past month, how would you rate your sleep quality overall?",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Very good",
+                                        "fr": "Très bonne"
+                                    },
+                                    "value": "very good"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Fairly good",
+                                        "fr": "Plutôt bonne"
+                                    },
+                                    "value": "fairly good"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Fairly bad",
+                                        "fr": "Plutôt mauvaise"
+                                    },
+                                    "value": "fairly bad"
+                                },
+                                { 
+                                    "label": {
+                                        "en": "Very bad",
+                                        "fr": "Très mauvaise"
+                                    },
+                                    "value": "very bad"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "Do you have a bed partner or room mate?",
+                                "fr": "JAvez-vous un partenaire de lit ou de chambre?"
+                            },
+                            "validation": {
+                                "required":true
+                            },
+                            "key": "Do you have a bed partner or room mate?",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "No bed partner or room mate",
+                                        "fr": "Pas de partenaire de lit ou de chambre"
+                                    },
+                                    "value": "No bed partner or room mate"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Partner/room mate in other room",
+                                        "fr": "Partenaire ou colocataire dans une autre chambre"
+                                    },
+                                    "value": "Partner/room mate in other room"
+                                },
+                                {
+                                    "label": {
+                                        "en": "Partner in same room, but not same bed",
+                                        "fr": "Partenaire dans la même chambre, mais pas le même lit"
+                                    },
+                                    "value": "Partner in same room, but not same bed"
+                                },
+                                { 
+                                    "label": {
+                                        "en": "Partner in same bed",
+                                        "fr": "Partenaire dans le même lit"
+                                    },
+                                    "value": "Partner in same bed"
+                                }
+                            ]
+                        },
+                        {
+                            "questionType": "radiobuttons",
+                            "radiobuttonPresentation": "vertical",
+                            "title": {
+                                "en": "Have you ever been diagnosed with sleep apnea?",
+                                "fr": "Avez-vous déjà reçu un diagnostic d'apnée du sommeil?"
+                            },
+                            "validation": {
+                                "required":true
+                            },
+                            "key": "Have you ever been diagnosed with sleep apnea??",
+                            "options": [
+                                {
+                                    "label": {
+                                        "en": "Yes",
+                                        "fr": "Oui"
+                                    },
+                                    "value": "Yes"
+                                },
+                                {
+                                    "label": {
+                                        "en": "No",
+                                        "fr": "Non"
+                                    },
+                                    "value": "No"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            }
+        ]
+    }'
+WHERE id = 20;
