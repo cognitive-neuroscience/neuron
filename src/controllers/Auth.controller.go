@@ -2,7 +2,6 @@ package controllers
 
 import (
 	"net/http"
-	"os"
 	"strconv"
 	"time"
 
@@ -49,23 +48,7 @@ func (l *AuthController) Login(e echo.Context) error {
 	}
 
 	// 5: set the cookie
-	cookie := new(http.Cookie)
-	cookie.Name = "token"
-	cookie.Value = tokenString
-	cookie.Path = "/api"
-	cookie.HttpOnly = true // not accessible by javascript
-	cookie.Secure = true   // sent over https only
-
-	env, exists := os.LookupEnv("ENV")
-	if exists {
-		if env == "DEV" {
-			cookie.Domain = "localhost"
-		} else if env == "PROD" {
-			cookie.Domain = "wecog.research.mcgill.ca"
-		}
-	}
-
-	cookie.SameSite = http.SameSiteStrictMode
+	cookie := common.CreateAuthCookie(tokenString, time.Now().Add(72*time.Minute))
 	e.SetCookie(cookie)
 	axonlogger.InfoLogger.Println("user logged in with set cookie", dbUser.Email)
 	return common.SendHTTPOkWithBody(e, dbUser)
@@ -77,23 +60,7 @@ func (l *AuthController) Logout(e echo.Context) error {
 
 	email := e.Get("email")
 	id := e.Get("id")
-	cookie := new(http.Cookie)
-	cookie.Name = "token"
-	cookie.Value = ""
-	cookie.HttpOnly = true // not accessible by javascript
-	cookie.Secure = true   // sent over https only
-	cookie.Expires = time.Unix(0, 0)
-
-	env, exists := os.LookupEnv("ENV")
-	if exists {
-		if env == "DEV" {
-			cookie.Domain = "localhost"
-		} else if env == "PROD" {
-			cookie.Domain = "wecog.research.mcgill.ca"
-		}
-	}
-
-	cookie.SameSite = http.SameSiteStrictMode
+	cookie := common.CreateAuthCookie("", time.Unix(0, 0))
 	e.SetCookie(cookie)
 	axonlogger.InfoLogger.Println("clearing cookie and logging out", email, id)
 	return common.SendHTTPOk(e)

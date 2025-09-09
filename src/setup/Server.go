@@ -3,6 +3,7 @@ package setup
 import (
 	"errors"
 	"os"
+	"time"
 
 	"github.com/cognitive-neuroscience/neuron/src/common"
 	"github.com/cognitive-neuroscience/neuron/src/logger"
@@ -106,6 +107,10 @@ func validateCookieMiddleware(next echo.HandlerFunc) echo.HandlerFunc {
 			claims, err := tokenServiceImpl.ValidateToken(jwt)
 			if err != nil {
 				role = common.NONE
+				// Clear expired/invalid cookie to prevent repeated validation failures
+				expiredCookie := common.CreateAuthCookie("", time.Unix(0, 0))
+				e.SetCookie(expiredCookie)
+				logger.InfoLogger.Println("Cleared expired JWT cookie")
 			} else {
 				role = claims.Role
 				email = claims.Email
