@@ -48,7 +48,7 @@ func (l *AuthController) Login(e echo.Context) error {
 	}
 
 	// 5: set the cookie
-	cookie := common.CreateAuthCookie(tokenString, time.Now().Add(72*time.Minute))
+	cookie := common.CreateAuthCookie(tokenString, time.Now().Add(72*time.Hour))
 	e.SetCookie(cookie)
 	axonlogger.InfoLogger.Println("user logged in with set cookie", dbUser.Email)
 	return common.SendHTTPOkWithBody(e, dbUser)
