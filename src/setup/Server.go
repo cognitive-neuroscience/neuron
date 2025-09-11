@@ -110,7 +110,6 @@ func validateCookieMiddleware(next echo.HandlerFunc) echo.HandlerFunc {
 				// Clear expired/invalid cookie to prevent repeated validation failures
 				expiredCookie := common.CreateAuthCookie("", time.Unix(0, 0))
 				e.SetCookie(expiredCookie)
-				logger.InfoLogger.Println("Cleared expired JWT cookie")
 			} else {
 				role = claims.Role
 				email = claims.Email
