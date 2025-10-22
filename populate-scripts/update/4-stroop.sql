@@ -2,7 +2,7 @@
 UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "NAB",
-    name = "Stroop Task",
+    name = "Stroop Task 2.0",
     description = "The participant sees either the word RED, BLUE, or GREEN. The participant has to press 1 if the word is colored red, 2 if the word is colored blue, or 3 if the word is colored green",
     external_url = "",
     config = '{
