@@ -18,7 +18,7 @@ UPDATE tasks SET
                 "componentName": "DISPLAYCOMPONENT",
                 "componentConfig": {
                     "title": {
-                        "en": "Welcome to the Spot The Number Game!",
+                        "en": "This is my new title",
                         "fr": "Bienvenue au jeu Recherche des Chiffres!"
                     },
                     "sections": [
