@@ -358,31 +358,6 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
-                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Odd: Left arrow key ⬅️",
-                                "fr": "Impair: touche flèche gauche ⬅"
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Even: Right arrow key ➡️",
-                                "fr": "Pair: touche fléche droite ➡️"
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "<br />"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
                                 "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
                                 "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il inférieur ou supérieur à 5?"
                             }
@@ -399,6 +374,31 @@ UPDATE tasks set
                             "textContent": {
                                 "en": "Greater than 5: Right arrow key ➡️",
                                 "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": "<br />"
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite ➡️"
                             }
                         },
                         {
@@ -486,31 +486,6 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
-                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Odd: Left arrow key ⬅️",
-                                "fr": "Impair: touche flèche gauche ⬅"
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Even: Right arrow key ➡️",
-                                "fr": "Pair: touche fléche droite"
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "<br />"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
                                 "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
                                 "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
                             }
@@ -527,6 +502,31 @@ UPDATE tasks set
                             "textContent": {
                                 "en": "Greater than 5: Right arrow key ➡️",
                                 "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": "<br />"
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite"
                             }
                         },
                         {
@@ -634,31 +634,6 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
-                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Odd: Left arrow key ⬅️",
-                                "fr": "Impair: touche flèche gauche ⬅"
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Even: Right arrow key ➡️",
-                                "fr": "Pair: touche fléche droite"
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "<br />"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
                                 "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
                                 "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
                             }
@@ -675,6 +650,31 @@ UPDATE tasks set
                             "textContent": {
                                 "en": "Greater than 5: Right arrow key ➡️",
                                 "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": "<br />"
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite"
                             }
                         },
                         {
@@ -774,31 +774,6 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
-                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Odd: Left arrow key ⬅️",
-                                "fr": "Impair: touche flèche gauche ⬅"
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Even: Right arrow key ➡️",
-                                "fr": "Pair: touche fléche droite"
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "<br />"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
                                 "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
                                 "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
                             }
@@ -815,6 +790,31 @@ UPDATE tasks set
                             "textContent": {
                                 "en": "Greater than 5: Right arrow key ➡️",
                                 "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": "<br />"
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite"
                             }
                         },
                         {
@@ -906,31 +906,6 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
-                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Odd: Left arrow key ⬅️",
-                                "fr": "Impair: touche flèche gauche ⬅"
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
-                                "en": "Even: Right arrow key ➡️",
-                                "fr": "Pair: touche fléche droite"
-                            }
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": "<br />"
-                        },
-                        {
-                            "sectionType": "text",
-                            "textContent": {
                                 "en": "<b>ORANGE NUMBER</b>: is number greater or less than 5?",
                                 "fr": "<b>CHIFFRE ORANGE</b>: le chiffre est-il ou 5?"
                             }
@@ -947,6 +922,31 @@ UPDATE tasks set
                             "textContent": {
                                 "en": "Greater than 5: Right arrow key ➡️",
                                 "fr": "Supérieur à 5: touche fléche droite ➡"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": "<br />"
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "<b>BLUE NUMBER</b>: is number odd or even?",
+                                "fr": "<b>CHIFFRE BLEU</b>: le chiffre est-il pair ou impair?"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Odd: Left arrow key ⬅️",
+                                "fr": "Impair: touche flèche gauche ⬅"
+                            }
+                        },
+                        {
+                            "sectionType": "text",
+                            "textContent": {
+                                "en": "Even: Right arrow key ➡️",
+                                "fr": "Pair: touche fléche droite"
                             }
                         },
                         {
