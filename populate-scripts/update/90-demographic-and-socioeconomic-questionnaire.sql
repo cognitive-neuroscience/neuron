@@ -510,6 +510,13 @@ UPDATE tasks SET
                                 },
                                 {
                                     "label": {
+                                        "en": "$100,000 or more, but less than $150,000",
+                                        "fr": "100 000$ ou plus, mais moins de 150 000$"
+                                    },
+                                    "value": "$100,000 or more, but less than $150,000"
+                                },
+                                {
+                                    "label": {
                                         "en": "$150,000 or more",
                                         "fr": "150 000$ ou plus"
                                     },
