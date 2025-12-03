@@ -17,6 +17,7 @@ func (s *StudyUserController) CreateStudyUser(e echo.Context) error {
 	if err := e.Bind(&studyUser); err != nil {
 		return common.SendHTTPBadRequest(e)
 	}
+
 	httpStatus := studyUserServiceImpl.CreateStudyUser(studyUser)
 	if !common.HTTPRequestIsSuccessful(httpStatus.Status) {
 		axonlogger.InfoLogger.Println("CreateStudyUser() failed")
