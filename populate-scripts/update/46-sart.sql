@@ -32,8 +32,8 @@ UPDATE tasks SET
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Your job is to press the LEFT arrow ( ⬅️ ) for every number <b>EXCEPT</b> for the <b>number 3</b>.",
-                                "fr": "Votre travail consiste à appuyer sur la flèche GAUCHE ( ⬅️ ) pour chaque chiffre <b>SAUF</b> pour le <b>chiffre 3</b>."
+                                "en": "Your job is to press the LEFT arrow on your keyboard ( ⬅️ ) for every number <b>EXCEPT</b> for the <b>number 3</b>.",
+                                "fr": "Votre travail consiste à appuyer sur la flèche GAUCHE sur votre clavier ( ⬅️ ) pour chaque chiffre <b>SAUF</b> pour le <b>chiffre 3</b>."
                             }
                         },
                         {
@@ -70,8 +70,8 @@ UPDATE tasks SET
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Remember, press the ( ⬅️ ) for all numbers except for 3.",
-                                "fr": "N''oubliez pas d''appuyer sur ( ⬅️ ) pour tous les chiffres sauf pour le 3."
+                                "en": "Remember, press the  LEFT arrow on your keyboard ( ⬅️ ) for all numbers except for 3.",
+                                "fr": "N''oubliez pas d''appuyer sur la flèche GAUCHE sur votre clavier ( ⬅️ ) pour tous les chiffres sauf pour le 3."
                             }
                         },
                         {
@@ -137,8 +137,8 @@ UPDATE tasks SET
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Remember, press the ( ⬅️ ) key for all numbers except for 3.",
-                                "fr": "N''oubliez pas d''appuyer sur ( ⬅️ ) pour tous les chiffres sauf pour le 3."
+                                "en": "Remember, press the LEFT arrow on your keyboard ( ⬅️ ) key for all numbers except for 3.",
+                                "fr": "N''oubliez pas d''appuyer sur la flèche GAUCHE sur votre clavier ( ⬅️ ) pour tous les chiffres sauf pour le 3."
                                 }
                         },
                         {
