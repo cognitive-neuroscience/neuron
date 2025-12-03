@@ -22,6 +22,15 @@ func (c *CrowdSourcedUserService) CreateCrowdSourcedUser(crowdSourcedUser models
 
 	crowdSourcedUser.CompletionCode = ""
 
+	study, httpStatus := studyRepositoryImpl.GetStudyById(crowdSourcedUser.StudyID)
+	if !common.HTTPRequestIsSuccessful(httpStatus.Status) {
+		return httpStatus
+	}
+
+	if !study.Started || study.DeletedAt.Valid {
+		return models.HTTPStatus{Status: http.StatusForbidden, Message: http.StatusText(http.StatusForbidden)}
+	}
+
 	return crowdSourcedUserRepositoryImpl.CreateCrowdSourcedUser(crowdSourcedUser)
 }
 

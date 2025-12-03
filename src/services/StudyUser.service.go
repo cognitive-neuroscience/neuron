@@ -49,7 +49,7 @@ func (s *StudyUserService) CreateStudyUser(studyUser *models.StudyUser) models.H
 	}
 
 	// do not allow registration for a study that was either deleted or not started
-	if !study.Started || !study.DeletedAt.Valid {
+	if !study.Started || study.DeletedAt.Valid {
 		return models.HTTPStatus{Status: http.StatusForbidden, Message: http.StatusText(http.StatusForbidden)}
 	}
 
