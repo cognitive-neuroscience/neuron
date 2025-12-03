@@ -184,7 +184,7 @@ func (u *UserService) UpdateUserPassword(email string, passwordAttempt string, n
 	}
 
 	if isCorrect := passwordIsCorrect(user.Password, passwordAttempt); !isCorrect {
-		return models.HTTPStatus{Status: http.StatusUnauthorized, Message: http.StatusText(http.StatusUnauthorized)}
+		return models.HTTPStatus{Status: http.StatusUnauthorized, Message: "password is incorrect"}
 	}
 
 	hashedPassword, err := hashAndSalt(newPassword)

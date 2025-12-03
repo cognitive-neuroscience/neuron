@@ -43,6 +43,16 @@ func (s *StudyUserService) GetAllStudyUsersByStudyId(studyId string) ([]models.S
 func (s *StudyUserService) CreateStudyUser(studyUser *models.StudyUser) models.HTTPStatus {
 	axonlogger.InfoLogger.Println("STUDYUSER SERVICE: CreateStudyUser()")
 
+	study, httpStatus := studyRepositoryImpl.GetStudyById(studyUser.StudyID)
+	if !common.HTTPRequestIsSuccessful(httpStatus.Status) {
+		return httpStatus
+	}
+
+	// do not allow registration for a study that was either deleted or not started
+	if !study.Started || !study.DeletedAt.Valid {
+		return models.HTTPStatus{Status: http.StatusForbidden, Message: http.StatusText(http.StatusForbidden)}
+	}
+
 	studyUser.CompletionCode = ""
 	studyUser.CurrentTaskIndex = 0
 
