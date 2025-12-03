@@ -14,7 +14,8 @@ type OrganizationRepository struct{}
 // GetOrganizationById retrieves the given organization by id.
 // It returns a 200, 404, or 500 status code.
 func (o *OrganizationRepository) GetOrganizationById(organizationId uint) (models.Organization, models.HTTPStatus) {
-	axonlogger.InfoLogger.Println("ORGANIZATION DATABASE: GetOrganizationById()")
+	// commented this out because it spams the logs
+	// axonlogger.InfoLogger.Println("ORGANIZATION DATABASE: GetOrganizationById()")
 	defer func() {
 		if err := recover(); err != nil {
 			axonlogger.ErrorLogger.Println("there was an error getting the organization by id", err)

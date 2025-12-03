@@ -20,6 +20,7 @@ type ParticipantDataRepository struct{}
 // It returns a 200, or 500 status code
 func (s *ParticipantDataRepository) CreateParticipantData(participantData models.ParticipantData) models.HTTPStatus {
 	axonlogger.InfoLogger.Println("PARTICIPANTDATA DATABASE: CreateParticipantData()")
+	axonlogger.InfoLogger.Printf("%+v", participantData)
 	defer func() {
 		if err := recover(); err != nil {
 			axonlogger.ErrorLogger.Println("there was an error creating the participant data", err)
@@ -80,7 +81,7 @@ func (s *ParticipantDataRepository) CreateParticipantData(participantData models
 
 	}
 
-	axonlogger.InfoLogger.Println("Successfully uploaded task data:", participantData.UserID, participantData.StudyID, participantData.TaskOrder)
+	axonlogger.InfoLogger.Println("Successfully uploaded task data [studyId, userId, taskOrder]:", participantData.StudyID, participantData.UserID, participantData.TaskOrder)
 	// Printed JSON. Uncomment this to add user data to the logs. This makes the log files quite large.
 	// marshalledJSON, _ := json.MarshalIndent(participantData, "", "\t")
 	// axonlogger.InfoLogger.Println(string(marshalledJSON))
@@ -91,7 +92,8 @@ func (s *ParticipantDataRepository) CreateParticipantData(participantData models
 // Crowdsourced users have user IDs stored as strings, so the userId parameter must be a string. Accountholding userIDs should be converted to strings.
 // It returns a 200, 404, or 500 status code
 func (s *ParticipantDataRepository) GetParticipantDataByStudyAndUserIdAndTaskOrder(studyId uint, userId string, taskOrder int) (models.ParticipantData, models.HTTPStatus) {
-	axonlogger.InfoLogger.Println("PARTICIPANTDATA DATABASE: GetParticipantDataByStudyAndUserIdAndTaskOrder()")
+	// commented this out because it spams the logs
+	// axonlogger.InfoLogger.Println("PARTICIPANTDATA DATABASE: GetParticipantDataByStudyAndUserIdAndTaskOrder()")
 	defer func() {
 		if err := recover(); err != nil {
 			axonlogger.ErrorLogger.Println("there was an error getting the participant data", err)
@@ -117,7 +119,8 @@ func (s *ParticipantDataRepository) GetParticipantDataByStudyAndUserIdAndTaskOrd
 // GetAllParticipantDataByStudyIdAndTaskOrder gets all the participant data for the given study id and task order
 // It returns a 200 or 500 status code
 func (s *ParticipantDataRepository) GetAllParticipantDataByStudyIdAndTaskOrder(studyId uint, taskOrder uint) ([]models.ParticipantData, models.HTTPStatus) {
-	axonlogger.InfoLogger.Println("PARTICIPANTDATA DATABASE: GetAllParticipantDataByStudyIdAndTaskOrder()")
+	// commented this out because it spams the logs
+	// axonlogger.InfoLogger.Println("PARTICIPANTDATA DATABASE: GetAllParticipantDataByStudyIdAndTaskOrder()")
 	defer func() {
 		if err := recover(); err != nil {
 			axonlogger.ErrorLogger.Println("there was an error getting the participant data list", err)

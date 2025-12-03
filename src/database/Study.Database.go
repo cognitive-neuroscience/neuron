@@ -21,6 +21,7 @@ type StudyRepository struct{}
 // It returns a 201 or 500 status code.
 func (s *StudyRepository) CreateStudy(study *models.Study) models.HTTPStatus {
 	axonlogger.InfoLogger.Println("STUDY DATABASE: CreateStudy()")
+	axonlogger.InfoLogger.Printf("%+v", study)
 	defer func() {
 		if err := recover(); err != nil {
 			axonlogger.ErrorLogger.Println("there was an error getting the study by id", err)
@@ -92,7 +93,8 @@ func (s *StudyRepository) CreateStudy(study *models.Study) models.HTTPStatus {
 // GetStudyById retrieves a study from the database given the study id.
 // It returns a 200, 404, or 500 status code.
 func (s *StudyRepository) GetStudyById(studyId uint) (models.Study, models.HTTPStatus) {
-	axonlogger.InfoLogger.Println("STUDY DATABASE: GetStudyById()")
+	// commented this out because it spams the logs
+	// axonlogger.InfoLogger.Println("STUDY DATABASE: GetStudyById()")
 	defer func() {
 		if err := recover(); err != nil {
 			axonlogger.ErrorLogger.Println("there was an error getting the study by id", err)
@@ -156,7 +158,8 @@ func (s *StudyRepository) GetStudyById(studyId uint) (models.Study, models.HTTPS
 // GetStudiesByOrganizationId gets all studies for the organization.
 // It returns a 200, 404, or 500 status code.
 func (s *StudyRepository) GetStudiesByOrganizationId(organizationId uint) ([]models.Study, models.HTTPStatus) {
-	axonlogger.InfoLogger.Println("STUDY DATABASE: GetStudiesByOrganizationId()")
+	// commented this out because it spams the logs
+	// axonlogger.InfoLogger.Println("STUDY DATABASE: GetStudiesByOrganizationId()")
 	defer func() {
 		if err := recover(); err != nil {
 			axonlogger.ErrorLogger.Println("there was an error getting the study by id", err)
@@ -194,6 +197,7 @@ func (s *StudyRepository) GetStudiesByOrganizationId(organizationId uint) ([]mod
 // It returns a 200 or 500
 func (s *StudyRepository) UpdateStudy(study *models.Study) models.HTTPStatus {
 	axonlogger.InfoLogger.Println("STUDY DATABASE: UpdateStudy()")
+	axonlogger.InfoLogger.Printf("%+v", study)
 	defer func() {
 		if err := recover(); err != nil {
 			axonlogger.ErrorLogger.Println("there was an error getting the study by id", err)
@@ -252,6 +256,7 @@ func (s *StudyRepository) UpdateStudy(study *models.Study) models.HTTPStatus {
 // It returns a 200 or 500 status code.
 func (s *StudyRepository) UpdateStudyWithoutTaskUpdate(study *models.Study) models.HTTPStatus {
 	axonlogger.InfoLogger.Println("STUDY DATABASE: UpdateStudyWithoutTaskUpdate()")
+	axonlogger.InfoLogger.Printf("%+v", study)
 	defer func() {
 		if err := recover(); err != nil {
 			axonlogger.ErrorLogger.Println("there was an error getting the study by id", err)

@@ -15,7 +15,8 @@ type CrowdSourcedUserRepository struct{}
 // CreateCrowdSourcedUser saves a crowdsourced user within the database.
 // It returns a 201, 409, or 500 status code
 func (c *CrowdSourcedUserRepository) CreateCrowdSourcedUser(crowdSourcedUser models.CrowdSourcedUser) models.HTTPStatus {
-	axonlogger.InfoLogger.Println("CROWDSOURCEDUSER DATABASE: CreateCrowdSourcedUser()")
+	// commented this out because it spams the logs
+	// axonlogger.InfoLogger.Println("CROWDSOURCEDUSER DATABASE: CreateCrowdSourcedUser()")
 	defer func() {
 		if err := recover(); err != nil {
 			axonlogger.ErrorLogger.Println("there was an error creating the crowdsourced user", err)
@@ -54,7 +55,8 @@ func (c *CrowdSourcedUserRepository) CreateCrowdSourcedUser(crowdSourcedUser mod
 // GetCrowdSourcedUserByCrowdSourcedUserAndStudyId gets a CrowdSourcedUser by the given id.
 // It returns a 200, 404, or 500 status code
 func (c *CrowdSourcedUserRepository) GetCrowdSourcedUserByCrowdSourcedUserAndStudyId(crowdSourcedUserId string, studyId uint) (models.CrowdSourcedUser, models.HTTPStatus) {
-	axonlogger.InfoLogger.Println("CROWDSOURCEDUSER DATABASE: GetCrowdSourcedUserByCrowdSourcedUserAndStudyId()")
+	// commented this out because it spams the logs
+	// axonlogger.InfoLogger.Println("CROWDSOURCEDUSER DATABASE: GetCrowdSourcedUserByCrowdSourcedUserAndStudyId()")
 	defer func() {
 		if err := recover(); err != nil {
 			axonlogger.ErrorLogger.Println("there was an error creating the crowdsourced user", err)
@@ -78,7 +80,8 @@ func (c *CrowdSourcedUserRepository) GetCrowdSourcedUserByCrowdSourcedUserAndStu
 // UpdateCrowdSourcedUser updates a crowdsourced user with the given details.
 // It returns a 200 or 500 status code.
 func (c *CrowdSourcedUserRepository) UpdateCrowdSourcedUser(crowdSourcedUser models.CrowdSourcedUser) models.HTTPStatus {
-	axonlogger.InfoLogger.Println("CROWDSOURCEDUSER DATABASE: UpdateCrowdSourcedUser()")
+	// commented this out because it spams the logs
+	// axonlogger.InfoLogger.Println("CROWDSOURCEDUSER DATABASE: UpdateCrowdSourcedUser()")
 	defer func() {
 		if err := recover(); err != nil {
 			axonlogger.ErrorLogger.Println("there was an error creating the crowdsourced user", err)
@@ -113,7 +116,8 @@ func (c *CrowdSourcedUserRepository) UpdateCrowdSourcedUser(crowdSourcedUser mod
 // GetAllCrowdSourcedUsersByStudyId retrieves all crowdsourced users for the given study id
 // It returns a 200 or 500 status code.
 func (c *CrowdSourcedUserRepository) GetAllCrowdSourcedUsersByStudyId(studyId uint) ([]models.CrowdSourcedUser, models.HTTPStatus) {
-	axonlogger.InfoLogger.Println("CROWDSOURCEDUSER DATABASE: GetAllCrowdSourcedUsersByStudyId()")
+	// commented this out because it spams the logs
+	// axonlogger.InfoLogger.Println("CROWDSOURCEDUSER DATABASE: GetAllCrowdSourcedUsersByStudyId()")
 
 	crowdsourcedUsers := []models.CrowdSourcedUser{}
 	httpStatus := baseRepositoryImpl.GetAllBy(

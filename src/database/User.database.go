@@ -24,6 +24,7 @@ type UserRepository struct {
 // It returns a 201, 409, or 500 status code.
 func (u *UserRepository) CreateUser(user *models.User) (httpStatus models.HTTPStatus) {
 	axonlogger.InfoLogger.Println("USER DATABASE: CreateUser()")
+	axonlogger.InfoLogger.Println(user.Email, user.ID, user.Role, user.CreatedAt)
 	defer func() {
 		if err := recover(); err != nil {
 			axonlogger.ErrorLogger.Println("there was an error creating the user", err)
@@ -65,14 +66,14 @@ func (u *UserRepository) CreateUser(user *models.User) (httpStatus models.HTTPSt
 		}
 		return status
 	}
-	axonlogger.InfoLogger.Println("Successfully created user:", user.Email, user.ID, user.Role, user.CreatedAt)
 	return models.HTTPStatus{Status: http.StatusCreated, Message: http.StatusText(http.StatusCreated)}
 }
 
 // GetUserById searches the db for a user with the given the id.
 // It returns a 200, 404, or 500 status code.
 func (u *UserRepository) GetUserById(id uint) (models.User, models.HTTPStatus) {
-	axonlogger.InfoLogger.Println("USER DATABASE: GetUserById()")
+	// commented this out because it spams the logs
+	// axonlogger.InfoLogger.Println("USER DATABASE: GetUserById()")
 	defer func() {
 		if err := recover(); err != nil {
 			axonlogger.ErrorLogger.Println("there was an error getting user by id", err)
@@ -122,7 +123,8 @@ func (u *UserRepository) GetUserById(id uint) (models.User, models.HTTPStatus) {
 // GetUserByEmail searches for a user given the email.
 // It returns a 200, 404, or 500 status code
 func (u *UserRepository) GetUserByEmail(email string) (models.User, models.HTTPStatus) {
-	axonlogger.InfoLogger.Println("USER DATABASE: GetUserByEmail()")
+	// commented this out because it spams the logs
+	// axonlogger.InfoLogger.Println("USER DATABASE: GetUserByEmail()")
 	defer func() {
 		if err := recover(); err != nil {
 			axonlogger.ErrorLogger.Println("there was an error getting user by email", err)
@@ -174,7 +176,8 @@ func (u *UserRepository) GetUserByEmail(email string) (models.User, models.HTTPS
 // GetUsersByOrganizationId retrieves all members and guests for a given organization.
 // It returns a 200, 404, or 500 status code.
 func (u *UserRepository) GetUsersByOrganizationId(organizationId uint) ([]models.User, models.HTTPStatus) {
-	axonlogger.InfoLogger.Println("USER DATABASE: GetUsersByOrganizationId()")
+	// commented this out because it spams the logs
+	// axonlogger.InfoLogger.Println("USER DATABASE: GetUsersByOrganizationId()")
 	defer func() {
 		if err := recover(); err != nil {
 			axonlogger.ErrorLogger.Println("there was an error getting users by organization id", err)
@@ -224,6 +227,7 @@ func (u *UserRepository) GetUsersByOrganizationId(organizationId uint) ([]models
 // It returns a 200 or 500 status code.
 func (u *UserRepository) UpdateUser(user *models.User) (httpStatus models.HTTPStatus) {
 	axonlogger.InfoLogger.Println("USER DATABASE: UpdateUser()")
+	axonlogger.InfoLogger.Println(user.Email, user.ID, user.Role, user.CreatedAt, user.Lang, user.ChangePasswordRequired, user.Name)
 	defer func() {
 		if err := recover(); err != nil {
 			axonlogger.ErrorLogger.Println("there was an error updating the user", err)
@@ -252,7 +256,8 @@ func (u *UserRepository) UpdateUser(user *models.User) (httpStatus models.HTTPSt
 // DeleteUserByID deletes a user with the given Id.
 // It returns a 200, or 500 status code
 func (u *UserRepository) DeleteUserByID(userId uint) models.HTTPStatus {
-	axonlogger.InfoLogger.Println("USER DATABASE: DeleteUserByID()")
+	// commented this out because it spams the logs
+	// axonlogger.InfoLogger.Println("USER DATABASE: DeleteUserByID()")
 	defer func() {
 		if err := recover(); err != nil {
 			axonlogger.ErrorLogger.Println("there was an error updating the user", err)

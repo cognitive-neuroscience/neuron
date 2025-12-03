@@ -14,7 +14,9 @@ type StudyTaskRepository struct{}
 // CreateStudyTaskAsTransaction takes a given transaction and attempts to save studyTasks within the db, rolling back if an error is encountered.
 // It returns a 201 or 500 status code.
 func (s *StudyTaskRepository) CreateStudyTaskAsTransaction(studyTask models.StudyTask, tx *sqlx.Tx) models.HTTPStatus {
-	axonlogger.InfoLogger.Println("STUDYUSER DATABASE: CreateStudyTaskAsTransaction()")
+	// commented this out because it spams the logs
+	// axonlogger.InfoLogger.Println("STUDYUSER DATABASE: CreateStudyTaskAsTransaction()")
+	axonlogger.InfoLogger.Printf("%+v", studyTask)
 
 	if _, err := tx.Exec(
 		`
@@ -38,7 +40,8 @@ func (s *StudyTaskRepository) CreateStudyTaskAsTransaction(studyTask models.Stud
 // GetStudyTasksByStudyId retrieves all the study tasks given the study id.
 // It returns a 200, 404, or 500 status code.
 func (s *StudyTaskRepository) GetStudyTasksByStudyId(studyId uint) ([]models.StudyTask, models.HTTPStatus) {
-	axonlogger.InfoLogger.Println("STUDYUSER DATABASE: GetStudyTasksByStudyId()")
+	// commented this out because it spams the logs
+	// axonlogger.InfoLogger.Println("STUDYUSER DATABASE: GetStudyTasksByStudyId()")
 	defer func() {
 		if err := recover(); err != nil {
 			axonlogger.ErrorLogger.Println("there was an error getting the study tasks by study id", err)

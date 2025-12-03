@@ -41,7 +41,8 @@ func baseGetStudyUsersById(query string, args ...interface{}) ([]models.StudyUse
 // GetAllStudyUsersByStudyId retrieves all study users associated with the given user id from the database.
 // It returns a 200, 404, or 500 status code.
 func (s *StudyUserRepository) GetAllStudyUsersByStudyId(studyId uint) ([]models.StudyUser, models.HTTPStatus) {
-	axonlogger.InfoLogger.Println("STUDYUSER DATABASE: GetAllStudyUsersByStudyId()")
+	// commented this out because it spams the logs
+	// axonlogger.InfoLogger.Println("STUDYUSER DATABASE: GetAllStudyUsersByStudyId()")
 	defer func() {
 		if err := recover(); err != nil {
 			axonlogger.ErrorLogger.Println("there was an error getting the study users by user id", err)
@@ -61,7 +62,8 @@ func (s *StudyUserRepository) GetAllStudyUsersByStudyId(studyId uint) ([]models.
 // GetAllStudyUsersByUserId retrieves all study users associated with the given user id from the database.
 // It returns a 200, 404, or 500 status code.
 func (s *StudyUserRepository) GetAllStudyUsersByUserId(userId uint) ([]models.StudyUser, models.HTTPStatus) {
-	axonlogger.InfoLogger.Println("STUDYUSER DATABASE: GetAllStudyUsersByUserId()")
+	// commented this out because it spams the logs
+	// axonlogger.InfoLogger.Println("STUDYUSER DATABASE: GetAllStudyUsersByUserId()")
 	defer func() {
 		if err := recover(); err != nil {
 			axonlogger.ErrorLogger.Println("there was an error getting the study users by user id", err)
@@ -82,6 +84,7 @@ func (s *StudyUserRepository) GetAllStudyUsersByUserId(userId uint) ([]models.St
 // It returns a 201, 409, or 500 status code
 func (s *StudyUserRepository) CreateStudyUser(studyUser *models.StudyUser) models.HTTPStatus {
 	axonlogger.InfoLogger.Println("STUDYUSER DATABASE: CreateStudyUser()")
+	axonlogger.InfoLogger.Printf("%+v", studyUser)
 	defer func() {
 		if err := recover(); err != nil {
 			axonlogger.ErrorLogger.Println("there was an error creating the study user", err)
@@ -130,7 +133,8 @@ func (s *StudyUserRepository) CreateStudyUser(studyUser *models.StudyUser) model
 // GetStudyUserByUserAndStudyId retrieves the study user by its associated study id and user id
 // It returns a 200, 404, or 500 status code
 func (s *StudyUserRepository) GetStudyUserByUserAndStudyId(userId uint, studyId uint) (models.StudyUser, models.HTTPStatus) {
-	axonlogger.InfoLogger.Println("STUDYUSER DATABASE: GetStudyUserByUserAndStudyId()")
+	// commented this out because it spams the logs
+	// axonlogger.InfoLogger.Println("STUDYUSER DATABASE: GetStudyUserByUserAndStudyId()")
 	defer func() {
 		if err := recover(); err != nil {
 			axonlogger.ErrorLogger.Println("there was an error getting the study users by user and study id", err)
@@ -159,6 +163,7 @@ func (s *StudyUserRepository) GetStudyUserByUserAndStudyId(userId uint, studyId 
 // It returns a 200 or 500 status code
 func (s *StudyUserRepository) UpdateStudyUser(studyUser *models.StudyUser) models.HTTPStatus {
 	axonlogger.InfoLogger.Println("STUDYUSER DATABASE: UpdateStudyUser()")
+	axonlogger.InfoLogger.Printf("%+v", studyUser)
 	defer func() {
 		if err := recover(); err != nil {
 			axonlogger.ErrorLogger.Println("there was an error getting the study users by user and study id", err)
@@ -202,7 +207,8 @@ func (s *StudyUserRepository) UpdateStudyUser(studyUser *models.StudyUser) model
 // GetAllStudyUsers gets all study users for the database. This is used for the summary.
 // It returns a 200 or 500 status code.
 func (u *StudyUserRepository) GetAllStudyUsers() ([]models.StudyUser, models.HTTPStatus) {
-	axonlogger.InfoLogger.Println("STUDYUSER DATABASE: GetAllStudyUsers()")
+	// commented this out because it spams the logs
+	// axonlogger.InfoLogger.Println("STUDYUSER DATABASE: GetAllStudyUsers()")
 	defer func() {
 		if err := recover(); err != nil {
 			axonlogger.ErrorLogger.Println("there was an error updating the user", err)

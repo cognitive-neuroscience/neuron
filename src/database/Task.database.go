@@ -42,7 +42,8 @@ func (t *TaskRepository) GetTaskById(taskID uint) (models.Task, models.HTTPStatu
 // GetAllTasks retrieves all tasks from the database.
 // It returns a 200 or 500 status code.
 func (t *TaskRepository) GetAllTasks() ([]models.Task, models.HTTPStatus) {
-	axonlogger.InfoLogger.Println("TASK DATABASE: GetAllTasks()")
+	// commented this out because it spams the logs
+	// axonlogger.InfoLogger.Println("TASK DATABASE: GetAllTasks()")
 	defer func() {
 		if err := recover(); err != nil {
 			axonlogger.ErrorLogger.Println("there was an error getting all tasks", err)
@@ -62,7 +63,8 @@ func (t *TaskRepository) GetAllTasks() ([]models.Task, models.HTTPStatus) {
 // GetAllTasksByStudyId gets all tasks for a given study id. Currently unused.
 // It returns a 200 or 500 status code
 func (t *TaskRepository) GetAllTasksByStudyId(studyId uint) ([]models.Task, models.HTTPStatus) {
-	axonlogger.InfoLogger.Println("TASK DATABASE: GetAllTasksByStudyId")
+	// commented this out because it spams the logs
+	// axonlogger.InfoLogger.Println("TASK DATABASE: GetAllTasksByStudyId")
 	defer func() {
 		if err := recover(); err != nil {
 			axonlogger.ErrorLogger.Println("there was an error getting all tasks", err)
