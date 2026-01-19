@@ -39,6 +39,7 @@ type StudyUser struct {
 // StudyUserSummary
 type StudyUserSummary struct {
 	UserId  uint   `json:"userId"`
+	Email   string `json:"email"`
 	Studies []uint `json:"studies"`
 }
 

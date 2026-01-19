@@ -149,7 +149,13 @@ func (s *StudyUserService) GetStudyUserSummary() ([]models.StudyUserSummary, mod
 	var studyUserSummary = make([]models.StudyUserSummary, len(studyUsersMap))
 	index := 0
 	for key, studiesSlice := range studyUsersMap {
+		user, httpStatus := userRepositoryImpl.GetUserById(key)
+		if !common.HTTPRequestIsSuccessful(httpStatus.Status) {
+			axonlogger.ErrorLogger.Println("encountered an error while getting user by id", httpStatus)
+			continue
+		}
 		studyUserSummary[index].UserId = key
+		studyUserSummary[index].Email = user.Email
 		studyUserSummary[index].Studies = studiesSlice
 		index++
 	}

@@ -78,7 +78,6 @@ func (s *ParticipantDataRepository) CreateParticipantData(participantData models
 			axonlogger.ErrorLogger.Println("could not save participant data", err)
 			return models.HTTPStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)}
 		}
-
 	}
 
 	axonlogger.InfoLogger.Println("Successfully uploaded task data [studyId, userId, taskOrder]:", participantData.StudyID, participantData.UserID, participantData.TaskOrder)
@@ -137,6 +136,49 @@ func (s *ParticipantDataRepository) GetAllParticipantDataByStudyIdAndTaskOrder(s
 		`,
 		studyId,
 		taskOrder,
+	); !common.HTTPRequestIsSuccessful(httpStatus.Status) {
+		return participantData, httpStatus
+	}
+
+	return participantData, models.HTTPStatus{Status: http.StatusOK, Message: http.StatusText(http.StatusOK)}
+}
+
+// GetParticipantDataByStudyIdWithFilters gets all participant data for the given study id with optional metadata filters
+// It returns a 200 or 500 status code
+// The filters parameter is a map of JSON path keys to values (e.g., map["wasSkipped"]="true")
+func (s *ParticipantDataRepository) GetParticipantDataByStudyIdWithFilters(studyId uint, filters map[string]string) ([]models.ParticipantData, models.HTTPStatus) {
+	axonlogger.InfoLogger.Println("PARTICIPANTDATA DATABASE: GetParticipantDataByStudyIdWithFilters()")
+
+	defer func() {
+		if err := recover(); err != nil {
+			axonlogger.ErrorLogger.Println("there was an error getting the participant data list with filters", err)
+		}
+	}()
+
+	participantData := []models.ParticipantData{}
+	
+	// Build the base query
+	query := `
+		SELECT user_id, study_id, task_order, participant_type, submitted_at, metadata, data 
+		FROM participant_data 
+		WHERE study_id = ?`
+	
+	// Create slice to hold query arguments
+	args := []interface{}{studyId}
+	
+	// Handle specific filter: wasSkipped
+	if skippedValue, exists := filters["wasSkipped"]; exists {
+		// Use CAST(... AS CHAR) to convert JSON boolean to string for comparison
+		query += ` AND metadata->>'$.wasSkipped' = ?`
+		args = append(args, skippedValue)
+	}
+	
+	query += ";"
+	
+	if httpStatus := baseRepositoryImpl.GetAllBy(
+		&participantData,
+		query,
+		args...,
 	); !common.HTTPRequestIsSuccessful(httpStatus.Status) {
 		return participantData, httpStatus
 	}

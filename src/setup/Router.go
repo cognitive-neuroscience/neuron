@@ -79,6 +79,7 @@ func setUpParticipantDataRoutes(group *echo.Group) {
 	studyData := group.Group("/participantdata")
 	studyData.POST("", participantDataControllerImpl.CreateParticipantData)
 	studyData.GET("/:studyId/:taskOrder", participantDataControllerImpl.GetParticipantDataByStudyIdAndTaskOrder)
+	studyData.GET("/:studyId", participantDataControllerImpl.GetParticipantDataByStudyIdWithFilters)
 }
 
 func setUpSummaryRoutes(group *echo.Group) {

@@ -51,3 +51,36 @@ func (s *ParticipantDataService) GetParticipantDataByStudyIdAndTaskOrder(studyId
 	return participantDataRepositoryImpl.GetAllParticipantDataByStudyIdAndTaskOrder(studyId, taskOrder)
 
 }
+
+// GetParticipantDataByStudyIdWithFilters gets participant data for a given study id with optional metadata filters.
+// It returns a 200, 403, or 500 status code
+func (s *ParticipantDataService) GetParticipantDataByStudyIdWithFilters(studyIdFromPath string, userId string, filters map[string]string) ([]models.ParticipantData, models.HTTPStatus) {
+	axonlogger.InfoLogger.Println("PARTICIPANTDATA SERVICE: GetParticipantDataByStudyIdWithFilters()")
+	studyId, convertStudyIdErr := convertStringToUint8(studyIdFromPath)
+	if convertStudyIdErr != nil {
+		axonlogger.WarningLogger.Println(convertStudyIdErr)
+		return []models.ParticipantData{}, models.HTTPStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)}
+	}
+
+	parsedUserId, getUserIdError := convertStringToUint8(userId)
+	if getUserIdError != nil {
+		axonlogger.WarningLogger.Println(getUserIdError)
+		return []models.ParticipantData{}, models.HTTPStatus{Status: http.StatusInternalServerError, Message: http.StatusText(http.StatusInternalServerError)}
+	}
+
+	user, getUserHttpStatus := userRepositoryImpl.GetUserById(parsedUserId)
+	if !common.HTTPRequestIsSuccessful(getUserHttpStatus.Status) {
+		return []models.ParticipantData{}, getUserHttpStatus
+	}
+
+	study, getStudyHttpStatus := studyRepositoryImpl.GetStudyById(studyId)
+	if !common.HTTPRequestIsSuccessful(getStudyHttpStatus.Status) {
+		return []models.ParticipantData{}, getStudyHttpStatus
+	}
+
+	if user.Organization.ID != study.Owner.Organization.ID && (user.Role != common.ADMIN && user.Role != common.ORGANIZATION_MEMBER) {
+		return []models.ParticipantData{}, models.HTTPStatus{Status: http.StatusForbidden, Message: http.StatusText(http.StatusForbidden)}
+	}
+
+	return participantDataRepositoryImpl.GetParticipantDataByStudyIdWithFilters(studyId, filters)
+}

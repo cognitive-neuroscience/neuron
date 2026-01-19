@@ -32,6 +32,8 @@ p, PARTICIPANT,         /api/participantdata,                                   
 p, GUEST,               /api/participantdata,                                           POST
 p, ADMIN,               /api/participantdata/{studyId}/{taskOrder},                     GET
 p, ORGANIZATION_MEMBER, /api/participantdata/{studyId}/{taskOrder},                     GET
+p, ADMIN,               /api/participantdata/{studyId},                                 GET
+p, ORGANIZATION_MEMBER, /api/participantdata/{studyId},                                 GET
 
 p, ADMIN,               /api/tasks,                                                     GET
 p, ORGANIZATION_MEMBER, /api/tasks,                                                     GET
