@@ -157,20 +157,18 @@ func (s *ParticipantDataRepository) GetParticipantDataByStudyIdWithFilters(study
 
 	participantData := []models.ParticipantData{}
 	
-	// Build the base query
 	query := `
 		SELECT user_id, study_id, task_order, participant_type, submitted_at, metadata, data 
 		FROM participant_data 
 		WHERE study_id = ?`
 	
-	// Create slice to hold query arguments
 	args := []interface{}{studyId}
 	
 	// Handle specific filter: wasSkipped
-	if skippedValue, exists := filters["wasSkipped"]; exists {
-		// Use CAST(... AS CHAR) to convert JSON boolean to string for comparison
-		query += ` AND metadata->>'$.wasSkipped' = ?`
-		args = append(args, skippedValue)
+	// Note: in the future, we can make this more generic by using a map of JSON path keys to values.
+	if wasSkipped, exists := filters["wasSkipped"]; exists {
+		query += ` AND JSON_UNQUOTE(JSON_EXTRACT(metadata, '$.wasSkipped')) = ?`
+		args = append(args, wasSkipped)
 	}
 	
 	query += ";"
