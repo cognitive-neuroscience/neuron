@@ -793,3 +793,75 @@ VALUES
     "",
     '{}'
 );
+-- 89 Modified General Health Questionnaire
+(
+    89,
+    "PSHARPLAB",
+    "QUESTIONNAIRE",
+    "Modified General Health Questionnaire",
+    "",
+    "",
+    '{}'
+);
+-- 90 Demographic and Socioeconomic Questionnaire
+(
+    90,
+    "PSHARPLAB",
+    "QUESTIONNAIRE",
+    "Demographic and Socioeconomic Questionnaire",
+    "",
+    "",
+    '{}'
+);
+-- 91 Parkinson Clinical and Medication Questionnaire
+(
+    91,
+    "PSHARPLAB",
+    "QUESTIONNAIRE",
+    "Parkinson Clinical and Medication Questionnaire",
+    "",
+    "",
+    '{}'
+
+);
+-- 92 Reward Mood Display Slide
+(
+    92,
+    "PSHARPLAB",
+    "INFO_DISPLAY",
+    "Reward Mood Display Slide",
+    "",
+    "",
+    '{}'
+);
+-- 93 SDMT
+(
+    93,
+    "PSHARPLAB",
+    "EXPERIMENTAL",
+    "SDMT",
+    "Symbol Digit Modalities Task",
+    "",
+    "",
+    '{}'
+);
+-- 94 Judgement Of Line
+(
+    94,
+    "PSHARPLAB",
+    "EXPERIMENTAL",
+    "Judgement Of Line",
+    "",
+    "",
+    '{}'
+);
+-- 95 Longitudinal Welcome Display
+(
+    95,
+    "PSHARPLAB",
+    "INFO_DISPLAY",
+    "Longitudinal Welcome Display",
+    "",
+    "",
+    '{}'
+);
