@@ -210,6 +210,7 @@ UPDATE tasks set
                     "numTrials": 2,
                     "isPractice": true,
                     "maxResponseTime": 150000,
+                    "resetCache": true,
                     "interTrialDelay": 100,
                     "interActivityDelay": 1000,
                     "delayToShowHelpMessage": 10000,
