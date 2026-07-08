@@ -178,7 +178,7 @@ UPDATE tasks set
                             "sectionType": "text",
                             "textContent": {
                                 "en": "Click <b>START</b> to practice.",
-                                "fr": "Cliquez sur <b>START</b> pour vous entraîner."
+                                "fr": "Cliquez sur <b>COMMENCER</b> pour vous entraîner."
                             }
                         }
                     ],
@@ -255,7 +255,7 @@ UPDATE tasks set
                             "sectionType": "text",
                             "textContent": {
                                 "en": "Click <b>START</b> when you are ready.",
-                                "fr": "Cliquez sur <b>START</b> lorsque vous serez prêt(e)."
+                                "fr": "Cliquez sur <b>COMMENCER</b> lorsque vous serez prêt(e)."
                             }
                         }
                     ],
@@ -306,7 +306,7 @@ UPDATE tasks set
                             "sectionType": "text",
                             "textContent": {
                                 "en": "Click <b>START</b> when you are ready to continue.",
-                                "fr": "Cliquez sur <b>START</b> lorsque vous serez prêt(e) à continuer."
+                                "fr": "Cliquez sur <b>COMMENCER</b> lorsque vous serez prêt(e) à continuer."
                             }
                         }
                     ],
@@ -441,7 +441,7 @@ UPDATE tasks set
                             "sectionType": "text",
                             "textContent": {
                                 "en": "Click <b>START</b> to practice",
-                                "fr": "Cliquez sur <b>START</b> pour vous entraîner"
+                                "fr": "Cliquez sur <b>COMMENCER</b> pour vous entraîner"
                             }
                         }
                     ],
@@ -505,7 +505,7 @@ UPDATE tasks set
                             "sectionType": "text",
                             "textContent": {
                                 "en": "Click START when you are ready.",
-                                "fr": "Cliquez sur <b>START</b> lorsque vous êtes prêt(e)."
+                                "fr": "Cliquez sur <b>COMMENCER</b> lorsque vous êtes prêt(e)."
                             }
                         }
                     ],
@@ -653,7 +653,7 @@ UPDATE tasks set
                             "sectionType": "text",
                             "textContent": {
                                 "en": "Click <b>START</b> to practice.",
-                                "fr": "Cliquez sur <b>START</b> pour vous entraîner."
+                                "fr": "Cliquez sur <b>COMMENCER</b> pour vous entraîner."
                             }
                         }
                     ],
@@ -730,7 +730,7 @@ UPDATE tasks set
                             "sectionType": "text",
                             "textContent": {
                                 "en": "Click <b>START</b> when you are ready.",
-                                "fr": "Cliquez sur <b>START</b> lorsque vous serez prêt(e)."
+                                "fr": "Cliquez sur <b>COMMENCER</b> lorsque vous serez prêt(e)."
                             }
                         }
                     ],
@@ -781,7 +781,7 @@ UPDATE tasks set
                             "sectionType": "text",
                             "textContent": {
                                 "en": "Click <b>START</b> when you are ready to continue.",
-                                "fr": "Cliquez sur <b>START</b> lorsque vous serez prêt(e) à continuer."
+                                "fr": "Cliquez sur <b>COMMENCER</b> lorsque vous serez prêt(e) à continuer."
                             }
                         }
                     ],
@@ -909,7 +909,7 @@ UPDATE tasks set
                             "sectionType": "text",
                             "textContent": {
                                 "en": "Click <b>START</b> to practice",
-                                "fr": "Cliquez sur <b>START</b> pour vous entraîner"
+                                "fr": "Cliquez sur <b>COMMENCER</b> pour vous entraîner"
                             }
                         }
                     ],
@@ -973,7 +973,7 @@ UPDATE tasks set
                             "sectionType": "text",
                             "textContent": {
                                 "en": "Click <b>START</b> when you are ready.",
-                                "fr": "Cliquez sur <b>START</b> lorsque vous êtes prêt(e)."
+                                "fr": "Cliquez sur <b>COMMENCER</b> lorsque vous êtes prêt(e)."
                             }
                         }
                     ],
