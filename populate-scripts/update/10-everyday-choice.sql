@@ -565,6 +565,7 @@ UPDATE tasks set
                     "durationHelpMessageShown": 5000,
                     "durationOutOftimeMessageShown": 2000,
                     "delayToShowRatingInput": 0,
+                    "addSecondStimuliSet": true,
                     "stimuliConfig": {
                         "type": "generated",
                         "stimuli": null
