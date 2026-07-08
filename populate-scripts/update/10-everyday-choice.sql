@@ -319,6 +319,7 @@ UPDATE tasks set
                     "numTrials": 13,
                     "isPractice": false,
                     "maxResponseTime": 15000,
+                    "resetCache": true,
                     "interTrialDelay": 100,
                     "interActivityDelay": 1000,
                     "delayToShowHelpMessage": 10000,
@@ -564,6 +565,7 @@ UPDATE tasks set
                     "durationHelpMessageShown": 5000,
                     "durationOutOftimeMessageShown": 2000,
                     "delayToShowRatingInput": 0,
+                    "addSecondStimuliSet": true,
                     "stimuliConfig": {
                         "type": "generated",
                         "stimuli": null
