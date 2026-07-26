@@ -25,7 +25,7 @@ var UserSchema = `
 var CrowdSourcedUserSchema = `
 	CREATE TABLE IF NOT EXISTS crowdsourced_users (
 		participant_id VARCHAR(255) NOT NULL CHECK(participant_id != ""),
-		study_id INT UNSIGNED NOT NULL CHECK(study_id != ""),
+		study_id INT UNSIGNED NOT NULL,
 		register_date DATETIME NOT NULL,
 		completion_code VARCHAR(255) DEFAULT "",
 		lang VARCHAR(100) NOT NULL DEFAULT '',
