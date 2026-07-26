@@ -4,7 +4,7 @@ UPDATE tasks set
     from_platform = "PSHARPLAB",
     task_type = "EXPERIMENTAL",
     name = "Everyday Choice Counterbalanced With Short Version",
-    description = "This is just like the original Everyday Choice task, but with a counterbalance between the two versions. Half of the participants will see the original versionm, and the other half will see the short version where they only rate 3 questions",
+    description = "This is just like the original Everyday Choice task, but with a counterbalance between the two versions. Half of the participants will see the original version, and the other half will see the short version where they only rate 3 questions",
     external_url = "",
     config = '{
         "taskConfig": {
@@ -41,7 +41,7 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "There are four parts to this task:<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;1) Answering question about different activities;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;2) Indicating your preference between different activities;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;3) Again, answering questions about different activities;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;4) Again, indicating your preference between different activities.",
+                                "en": "There are four parts to this task:<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;1) Answering questions about different activities;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;2) Indicating your preference between different activities;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;3) Again, answering questions about different activities;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;4) Again, indicating your preference between different activities.",
                                 "fr": "Il y a quatre parties à cette tâche :<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;1) Répondre à des questions sur différentes activités ;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;2) Indiquer vos préférences entre différentes activités ;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;3) Répondre à nouveau à des questions sur différentes activités ;<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;4) Indiquer à nouveau vos préférences entre différentes activités."
                             }
                         },
@@ -146,18 +146,18 @@ UPDATE tasks set
                             "counterbalanceStringMapping": {
                                 "1": {
                                     "en": "How much do you look forward to the outcome of it? How mentally effortful does this activity feel to you?",
-                                    "fr": "À quel point avez-vous hâte au résultat de cette activité ? À quel point cette activité vous demande-t-elle un effort mental ?"
+                                    "fr": "À quel point avez-vous hâte du résultat de cette activité ? À quel point cette activité vous demande-t-elle un effort mental ?"
                                 },
                                 "2": {
                                     "en": "How much do you look forward to the outcome of it? How mentally effortful does this activity feel to you?",
-                                    "fr": "À quel point avez-vous hâte au résultat de cette activité ? À quel point cette activité vous demande-t-elle un effort mental ?"
+                                    "fr": "À quel point avez-vous hâte du résultat de cette activité ? À quel point cette activité vous demande-t-elle un effort mental ?"
                                 },
                                 "3": {
-                                    "en": "How effortful is this activity for your? How enjoyable is this activity for you?",
+                                    "en": "How effortful is this activity for you? How enjoyable is this activity for you?",
                                     "fr": "À quel point cette activité vous demande-t-elle de l''effort ? À quel point cette activité vous plaît-elle ?"
                                 },
                                 "4": {
-                                    "en": "How effortful is this activity for your? How enjoyable is this activity for you?",
+                                    "en": "How effortful is this activity for you? How enjoyable is this activity for you?",
                                     "fr": "À quel point cette activité vous demande-t-elle de l''effort ? À quel point cette activité vous plaît-elle ?"
                                 }
                             },
@@ -227,7 +227,7 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "We will show you a total of 26 activities and ask you a series of questions about each activity. Please take a moment to picture yourself doing erach activity before answering the questions.",
+                                "en": "We will show you a total of 26 activities and ask you a series of questions about each activity. Please take a moment to picture yourself doing each activity before answering the questions.",
                                 "fr": "Nous allons vous présenter 26 activités et vous poser des questions sur chacune d''elles. Prenez un instant pour vous imaginer en train de réaliser chaque activité avant de répondre aux questions."
                             }
                         },
@@ -236,11 +236,11 @@ UPDATE tasks set
                             "injection": "counterbalance-string-mapping",
                             "counterbalanceStringMapping": {
                                 "1": {
-                                    "en": "<b>Again, this is the longest part, and it may feel repetitive, but please be patient. There will be a break in the middle.<b/>",
+                                    "en": "<b>Again, this is the longest part, and it may feel repetitive, but please be patient. There will be a break in the middle.</b>",
                                     "fr": "<b>Cette partie est la plus longue de l''expérience et peut paraître répétitive, mais soyez patient(e). Une pause est prévue au milieu.</b>"
                                 },
                                 "2": {
-                                   "en": "<b>Again, this is the longest part, and it may feel repetitive, but please be patient. There will be a break in the middle.<b/>",
+                                   "en": "<b>Again, this is the longest part, and it may feel repetitive, but please be patient. There will be a break in the middle.</b>",
                                     "fr": "<b>Cette partie est la plus longue de l''expérience et peut paraître répétitive, mais soyez patient(e). Une pause est prévue au milieu.</b>"
                                 },
                                 "3": { "en": "", "fr": "" },
@@ -622,18 +622,18 @@ UPDATE tasks set
                             "counterbalanceStringMapping": {
                                 "3": {
                                     "en": "How much do you look forward to the outcome of it? How mentally effortful does this activity feel to you?",
-                                    "fr": "À quel point avez-vous hâte au résultat de cette activité ? À quel point cette activité vous demande-t-elle un effort mental ?"
+                                    "fr": "À quel point avez-vous hâte du résultat de cette activité ? À quel point cette activité vous demande-t-elle un effort mental ?"
                                 },
                                 "4": {
                                     "en": "How much do you look forward to the outcome of it? How mentally effortful does this activity feel to you?",
-                                    "fr": "À quel point avez-vous hâte au résultat de cette activité ? À quel point cette activité vous demande-t-elle un effort mental ?"
+                                    "fr": "À quel point avez-vous hâte du résultat de cette activité ? À quel point cette activité vous demande-t-elle un effort mental ?"
                                 },
                                 "1": {
-                                    "en": "How effortful is this activity for your? How enjoyable is this activity for you?",
+                                    "en": "How effortful is this activity for you? How enjoyable is this activity for you?",
                                     "fr": "À quel point cette activité vous demande-t-elle de l''effort ? À quel point cette activité vous plaît-elle ?"
                                 },
                                 "2": {
-                                    "en": "How effortful is this activity for your? How enjoyable is this activity for you?",
+                                    "en": "How effortful is this activity for you? How enjoyable is this activity for you?",
                                     "fr": "À quel point cette activité vous demande-t-elle de l''effort ? À quel point cette activité vous plaît-elle ?"
                                 }
                             },
@@ -710,7 +710,7 @@ UPDATE tasks set
                             "sectionType": "text",
                             "injection": "counterbalance-string-mapping",
                             "counterbalanceStringMapping": {
-                                "1": { "en": "???", "fr": "???" },
+                                "1": { "en": "", "fr": "" },
                                 "2": { "en": "", "fr": "" },
                                 "3": {
                                     "en": "<b>This is the longest part of the experiment, and it may feel repetitive, but please be patient. There will be a break in the middle.</b>",
