@@ -497,8 +497,8 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Now, please picture yourself doing the activity for each of the following activities, and rate which activity you would MOST LIKELY spend time doing.",
-                                "fr": "À présent, veuillez vous imaginer en train de réaliser chacune des activités suivantes et indiquez celle à laquelle vous seriez LE PLUS SUSCEPTIBLE de consacrer du temps."
+                                "en": "Now, please picture yourself doing the activities that are presented, and indicate which activity you would MOST LIKELY choose to do in your everyday life.",
+                                "fr": "À présent, veuillez vous imaginer en train de réaliser les activités présentées, et indiquez celle que vous seriez LE PLUS SUSCEPTIBLE de choisir de faire dans votre vie quotidienne."
                             }
                         },
                         {
@@ -575,15 +575,15 @@ UPDATE tasks set
                         
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Again, we will ask you a series of questions about how you feel about different activities, but the questions will be slightly different.",
-                                "fr": "Nous allons vous poser une série de questions sur votre ressenti concernant différentes activités, mais elles seront légèrement différentes."
+                                "en": "The next parts of the game will be similar to the parts you just completed. Please continue to answer each question truthfully. Again, we will ask you a series of questions about how you feel about different activities, but the questions will be slightly different",
+                                "fr": "Les prochaines étapes du jeu seront similaires à celles que vous venez de terminer. Veuillez continuer à répondre honnêtement à chaque question. Nous allons vous poser une série de questions sur votre ressenti concernant différentes activités, mais elles seront légèrement différentes."
                             }
                         },
                         {
                             "sectionType": "text",
                             "textContent": {
                                 "en": "You will have to provide your response using your mouse.",
-                                "fr": "Vous devrez répondre à l''aide de votre souris."
+                                "fr": "Vous devrez donner vos réponses à l''aide de votre souris d''ordinateur"
                             }
                         },
                         {
@@ -965,8 +965,8 @@ UPDATE tasks set
                         {
                             "sectionType": "text",
                             "textContent": {
-                                "en": "Now, please picture yourself doing the activity for each of the following activities, and rate which activity you would MOST LIKELY spend time doing.",
-                                "fr": "À présent, veuillez vous imaginer en train de réaliser chacune des activités suivantes et indiquez celle à laquelle vous seriez LE PLUS SUSCEPTIBLE de consacrer du temps."
+                                "en": "Now, please picture yourself doing the activities that are presented, and indicate which activity you would MOST LIKELY choose to do in your everyday life.",
+                                "fr": "À présent, veuillez vous imaginer en train de réaliser les activités présentées, et indiquez celle que vous seriez LE PLUS SUSCEPTIBLE de choisir de faire dans votre vie quotidienne."
                             }
                         },
                         {
