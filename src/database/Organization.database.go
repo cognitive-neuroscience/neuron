@@ -26,7 +26,7 @@ func (o *OrganizationRepository) GetOrganizationById(organizationId uint) (model
 	httpStatus := baseRepositoryImpl.GetOneBy(
 		&organization,
 		`
-			SELECT id, name, logo_path
+			SELECT id, name, logo_path, supported_langs
 			FROM organizations
 			WHERE id = ?
 			LIMIT 1

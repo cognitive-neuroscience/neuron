@@ -17,6 +17,7 @@ func MakeTables() {
 
 	axonlogger.InfoLogger.Println("Setting up Organizations Table")
 	DB.MustExec(models.OrganizationSchema)
+	migrateOrganizationSupportedLangs()
 	axonlogger.InfoLogger.Println("Setting up Task Table")
 	DB.MustExec(models.TaskSchema)
 	axonlogger.InfoLogger.Println("Setting up Study Table") // REF organization id
@@ -35,4 +36,27 @@ func MakeTables() {
 	DB.MustExec(models.FeedbackQuestionnaireResponseSchema)
 
 	log.Println("MySQL migrations complete")
+}
+
+func migrateOrganizationSupportedLangs() {
+	var columnCount int
+	err := DB.Get(&columnCount, `
+		SELECT COUNT(*)
+		FROM information_schema.COLUMNS
+		WHERE TABLE_SCHEMA = DATABASE()
+			AND TABLE_NAME = 'organizations'
+			AND COLUMN_NAME = 'supported_langs'
+	`)
+	if err != nil {
+		axonlogger.ErrorLogger.Panic("could not check organizations.supported_langs column", err)
+	}
+	if columnCount > 0 {
+		return
+	}
+
+	axonlogger.InfoLogger.Println("Adding supported_langs column to organizations")
+	DB.MustExec(`
+		ALTER TABLE organizations
+		ADD COLUMN supported_langs JSON NOT NULL DEFAULT (JSON_ARRAY('en', 'fr'))
+	`)
 }
