@@ -172,7 +172,15 @@ UPDATE tasks set
                     "durationHelpMessageShown": 5000,
                     "durationOutOftimeMessageShown": 2000,
                     "delayToShowRatingSlider": 0,
-                    "numDoSomethingActivities": 21,
+                    "numHHHActivities": 5,
+                    "numHHLActivities": 6,
+                    "numHLHActivities": 5,
+                    "numHLLActivities": 2,
+                    "numLHHActivities": 2,
+                    "numLHLActivities": 4,
+                    "numLLHActivities": 5,
+                    "numLLLActivities": 5,
+                    "numAMBActivities": 6,
                     "stimuliConfig": {
                         "type": "hardcoded",
                         "stimuli": [
@@ -181,12 +189,13 @@ UPDATE tasks set
                                     "en": "Bring the car to the mechanic",
                                     "nl": "Breng jouw auto naar de garage"
                                 },
-                                "type": "DoSomething",
+                                "type": "non_social_activity",
                                 "questions": [
                                     {
+                                        "isMultiPartQuestion": false,
                                         "question": {
-                                            "en": "How much do you look forward to the outcome of it?",
-                                            "nl": "In welke mate kijk je uit naar de uitkomst van deze activiteit?"
+                                            "en": "How much do you enjoy carrying out this activity?",
+                                            "nl": "In welke mate geniet je van het uitvoeren van deze activiteit?"
                                         },
                                         "legend": [
                                             {
@@ -200,6 +209,7 @@ UPDATE tasks set
                                         ]
                                     },
                                     {
+                                        "isMultiPartQuestion": false,
                                         "question": {
                                             "en": "How mentally effortful does this activity feel to you?",
                                             "nl": " Hoe mentaal inspannend voelt deze activiteit voor jou? "
@@ -270,9 +280,9 @@ UPDATE tasks set
                 }
             },
             {
-                "componentName": "CHOICECOMPONENTDUTCH",
+                "componentName": "RATINGCOMPONENTDUTCH",
                 "componentConfig": {
-                    "numTrials": 13,
+                    "numTrials": 20,
                     "isPractice": false,
                     "maxResponseTime": 15000,
                     "interTrialDelay": 100,
@@ -281,7 +291,15 @@ UPDATE tasks set
                     "durationHelpMessageShown": 5000,
                     "durationOutOftimeMessageShown": 2000,
                     "delayToShowRatingSlider": 0,
-                    "numDoSomethingActivities": 21,
+                    "numHHHActivities": 5,
+                    "numHHLActivities": 6,
+                    "numHLHActivities": 5,
+                    "numHLLActivities": 2,
+                    "numLHHActivities": 2,
+                    "numLHLActivities": 4,
+                    "numLLHActivities": 5,
+                    "numLLLActivities": 5,
+                    "numAMBActivities": 6,
                     "stimuliConfig": {
                         "type": "generated",
                         "stimuli": null
@@ -319,9 +337,9 @@ UPDATE tasks set
                 }
             },
             {
-                "componentName": "CHOICECOMPONENTDUTCH",
+                "componentName": "RATINGCOMPONENTDUTCH",
                 "componentConfig": {
-                    "numTrials": 13,
+                    "numTrials": 20,
                     "isPractice": false,
                     "maxResponseTime": 15000,
                     "interTrialDelay": 100,
@@ -330,7 +348,15 @@ UPDATE tasks set
                     "durationHelpMessageShown": 5000,
                     "durationOutOftimeMessageShown": 2000,
                     "delayToShowRatingSlider": 0,
-                    "numDoSomethingActivities": 21,
+                    "numHHHActivities": 5,
+                    "numHHLActivities": 6,
+                    "numHLHActivities": 5,
+                    "numHLLActivities": 2,
+                    "numLHHActivities": 2,
+                    "numLHLActivities": 4,
+                    "numLLHActivities": 5,
+                    "numLLLActivities": 5,
+                    "numAMBActivities": 6,
                     "stimuliConfig": {
                         "type": "generated",
                         "stimuli": null
