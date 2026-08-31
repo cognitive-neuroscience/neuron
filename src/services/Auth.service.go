@@ -2,9 +2,7 @@ package services
 
 import (
 	"errors"
-	"net"
 	"net/http"
-	"strings"
 	"time"
 
 	"github.com/cognitive-neuroscience/neuron/src/common"
@@ -59,19 +57,7 @@ func isEmailValid(email string) bool {
 	if len(email) < 3 || len(email) > 254 {
 		return false
 	}
-	if !emailRegex.MatchString(email) {
-		return false
-	}
-	// if it passed the regex test, it must have an "@" sign so this is safe
-	emailSections := strings.Split(email, "@")
-
-	mx, err := net.LookupMX(emailSections[1])
-
-	if err != nil || len(mx) == 0 {
-		return false
-	}
-
-	return true
+	return emailRegex.MatchString(email)
 }
 
 func hashAndSalt(password string) (string, error) {
